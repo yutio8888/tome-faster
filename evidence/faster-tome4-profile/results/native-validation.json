@@ -1,0 +1,44 @@
+[
+  {
+    "effect": "notice",
+    "density": 0,
+    "equal_keyframes": 22,
+    "particle_and_vertex_state_equal": true,
+    "fixed_stops": true
+  },
+  {
+    "effect": "notice",
+    "density": 25,
+    "equal_keyframes": 22,
+    "particle_and_vertex_state_equal": true,
+    "fixed_stops": true
+  },
+  {
+    "effect": "notice",
+    "density": 100,
+    "equal_keyframes": 22,
+    "particle_and_vertex_state_equal": true,
+    "fixed_stops": true
+  },
+  {
+    "effect": "dreamhammer",
+    "density": 0,
+    "equal_keyframes": 11,
+    "particle_and_vertex_state_equal": true,
+    "fixed_stops": true
+  },
+  {
+    "effect": "dreamhammer",
+    "density": 25,
+    "equal_keyframes": 11,
+    "particle_and_vertex_state_equal": true,
+    "fixed_stops": true
+  },
+  {
+    "effect": "dreamhammer",
+    "density": 100,
+    "equal_keyframes": 11,
+    "particle_and_vertex_state_equal": true,
+    "fixed_stops": true
+  }
+]

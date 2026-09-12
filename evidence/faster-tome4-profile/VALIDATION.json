@@ -1,0 +1,165 @@
+{
+  "date": "2026-09-12",
+  "addon_version": "0.2.1-experimental",
+  "engine_commit": "624a67329fe2ad440c5b344785a9c73fcf22ae63",
+  "runtime": "Lua 5.1 / LuaJIT 2.1.1761786044",
+  "tests": {
+    "existing_assertions": 20790,
+    "save_load_checks": 71,
+    "status": "passed",
+    "runtime_checks": 162,
+    "profile_checks": 22,
+    "native_particle_lifetime_cases": 6
+  },
+  "algorithmic_fixture": {
+    "delayed_objects": 2001,
+    "original_head_shifted_elements": 2001000,
+    "optimized_head_insertions": 0,
+    "callback_order_equal": true
+  },
+  "git_diff_check": "passed",
+  "full_game_tested": false,
+  "real_player_saves_accessed": true,
+  "steam_tested": false,
+  "engine_sources": [
+    {
+      "path": "game/engines/default/engine/Game.lua",
+      "sha256": "7c8c458c142289fe8b4e59e5c16376303f9a10d34e858fabc48d84c6aa04e523"
+    },
+    {
+      "path": "game/engines/default/engine/Savefile.lua",
+      "sha256": "1eca1669f3469544a9e561e86fa8b657bc743ef20cc04fd7ff820a9b5862c37a"
+    },
+    {
+      "path": "game/engines/default/engine/SavefilePipe.lua",
+      "sha256": "f1fe572b414dc9626c33fd71a7891d8cfaed2741a1cea405cc30e12dc0376e70"
+    },
+    {
+      "path": "game/engines/default/engine/class.lua",
+      "sha256": "e65f81d273090e02c29855d1d5b0b0452878399f7d6a8bd024ef3ec6fc498928"
+    },
+    {
+      "path": "game/engines/default/engine/Module.lua",
+      "sha256": "40ded1b049c1e3072bda90bd49697c17bfc5ba58afdba7adb60fddaac8f24cbc"
+    },
+    {
+      "path": "game/engines/default/engine/Zone.lua",
+      "sha256": "6e0a596b91acd8a89bc01ecec0efc99d87612ac35702610d925cab8ed53e9faa"
+    },
+    {
+      "path": "game/engines/default/engine/Entity.lua",
+      "sha256": "4c9eb3873ad9f99ffd01ab75a44faaf219a6dc1393dbf0a30584a9288f2141d2"
+    },
+    {
+      "path": "game/engines/default/engine/HighScores.lua",
+      "sha256": "be9d3b457ab5d2b59fc2df6a03f9d0f78f38f8e13ddfd4e14c1e674ecd6bbd51"
+    },
+    {
+      "path": "game/engines/default/engine/PlayerProfile.lua",
+      "sha256": "76aed7396aca0f90ad6dd5998f3553d8855b1effbd2e4ef086a45a3ee4e936d3"
+    },
+    {
+      "path": "game/modules/tome/class/Game.lua",
+      "sha256": "dcd6dc85d9b2cf74741e82ac9156128b782193d23a459d53f7cda324b099092a"
+    },
+    {
+      "path": "game/engines/default/modules/boot/dialogs/LoadGame.lua",
+      "sha256": "22a3bc0abe805ad0e823c98a2ff7c3138dae1e325a60c1c03d07e0da67dedde4"
+    },
+    {
+      "path": "game/engines/default/modules/boot/init.lua",
+      "sha256": "82aaf0eb5d2160c303003d11e83c5a703ce68c45393ef571b45f4ccee23abdd9"
+    },
+    {
+      "path": "game/engines/default/engine/Map.lua",
+      "sha256": "6fdf0294ab835d06cf1186a47a2222b266bd71bfc53b3ba3a423cbb3e41ba315"
+    }
+  ],
+  "runtime_fixtures": {
+    "map": {
+      "updates": 2000,
+      "source_builds_before": 2000,
+      "source_builds_after": 1,
+      "sort_and_compile_counts_unchanged": true
+    },
+    "ashes": {
+      "effect_entry_visits_before": 300,
+      "effect_entry_visits_after": 0,
+      "ordered_event_trace_equal": true
+    },
+    "spiderbot_rejected_prototype": {
+      "visits_before": 488,
+      "visits_after": 210,
+      "ordered_trace_equal": true,
+      "shipped": false,
+      "reason": "Both nested and flat temporary occupancy indexes were slower in the tested warm-JIT membership fixture."
+    }
+  },
+  "synthetic_cpu_benchmark": {
+    "runtime": "LuaJIT 2.1.1761786044",
+    "unit": "CPU seconds",
+    "full_game_or_gpu": false,
+    "map_updates": 150000,
+    "map_jit_before": [
+      0.074575,
+      0.075206,
+      0.075007
+    ],
+    "map_jit_after": [
+      0.021429,
+      0.021344,
+      0.021205
+    ],
+    "map_interpreter_before": [
+      0.163149,
+      0.158392,
+      0.158663
+    ],
+    "map_interpreter_after": [
+      0.120044,
+      0.119448,
+      0.119184
+    ],
+    "can_see_prototype_jit_ratio": [
+      0.998797,
+      1.014794,
+      0.99211
+    ],
+    "can_see_shipped": false,
+    "spiderbot_nested_index_jit_ratio": [
+      4.258283,
+      4.191732,
+      4.190063
+    ],
+    "spiderbot_flat_index_jit_ratio": [
+      2.462067,
+      3.049291,
+      3.031776
+    ]
+  },
+  "dlc_source": {
+    "component": "ashes-urhrok",
+    "declared_game_version": "1.7.4",
+    "declared_addon_version": "1.1.4",
+    "source_commit": null,
+    "path": "data/talents/corruptions/heart-of-fire.lua",
+    "sha256": "9169ec6910a96af6ce469ef88c4b257165955f96ce7828c8508e2d36372a92b5",
+    "method": "T_INFERNO_NEXUS.callbackOnActBase",
+    "source_not_globally_pinned": true
+  },
+  "real_player_saves_modified": false,
+  "save_bytecode_executed": false,
+  "local_profile": {
+    "native_kernels": "verbatim extracted particles.c worker kernels; real SDL mutexes, SFMT and Lua callbacks; no GL rendering or thread contention",
+    "graph": "sanitized serialized graph with inert saved functions; pinned cloneForSave; no game loaded callbacks",
+    "native_repetitions": 5,
+    "graph_process_repetitions": 3,
+    "graph_samples_per_process": 25,
+    "native_world_notice_us_per_keyframe": 10.588083,
+    "native_orphan_us_per_keyframe": 453.719609,
+    "clone_baseline_ms": 21.534,
+    "clone_both_cleanups_ms": 21.548,
+    "clone_allocation_reduction_percent": 5.605863248938691,
+    "stable_clone_speedup_demonstrated": false
+  }
+}

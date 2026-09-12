@@ -1,0 +1,215 @@
+--- a/overload/engine/FasterRuntime.lua
++++ b/overload/engine/FasterRuntime.lua
+@@ -150,6 +150,82 @@
+ 		return true
+ 	end
+ 
++local function spiderbotDamage(self, t, p)
++		local dam = t.getDamage(self, t)
++		local tgts = {}
++		for _, bot in ipairs(p.bots) do
++			local target = game.level.map(bot.x, bot.y, Map.ACTOR)
++			-- No target, lets find one!
++			local nb_bots = t.countBots(self, t, p, bot.x, bot.y)
++			if not target or self:reactionToward(target) >= 0 or nb_bots > 1 then
++				local tgts = self:projectCollect({type="ball", radius=10, x=bot.x, y=bot.y}, bot.x, bot.y, Map.ACTOR, function(target) return self:reactionToward(target) < 0 end)
++				local tx, ty = nil, nil
++
++				-- First look for the one we had before, only if we are alone here
++				if nb_bots == 1 then for target, _ in pairs(tgts) do
++					if target.uid == bot.last_uid_target then
++						tx, ty = target.x, target.y
++						break
++					end
++				end end
++
++				-- Ok find the closest, in the direction of the player if possible
++				if not tx then
++					local range = self:getTalentRange(t)
++					local possibles = {}
++                    -- Projected callbacks and earlier bot moves may alter bots.
++                    -- Build lazily AFTER projectCollect and getTalentRange, and
++                    -- discard this index before the next bot/projection.
++                    local occupied
++                    local function hasBot(x, y)
++                        if not occupied then
++                            occupied = {}
++                            for _, current in ipairs(p.bots) do
++                                local bx, by = current.x, current.y
++                                if bx ~= nil and by ~= nil and bx == bx and by == by then
++                                    occupied[bx] = occupied[bx] or {}
++                                    occupied[bx][by] = true
++                                end
++                            end
++                        end
++                        return occupied[x] and occupied[x][y]
++                    end
++					for target, d in pairs(tgts) do
++						local pdist = core.fov.distance(self.x, self.y, target.x, target.y)
++						if pdist < range then
++							-- Add in pdist / range which is always < 1 to automaticalyl sort the equidistant ones to finsd the ones closest to the player side
++							possibles[#possibles+1] = {target=target, dist=d.dist + pdist / range + (hasBot(target.x, target.y) and 20 or 0)}
++						end
++					end
++					if #possibles > 0 then
++						table.sort(possibles, "dist")
++						tx, ty = possibles[1].target.x, possibles[1].target.y
++					end
++				end
++
++				if tx then t.moveBot(self, t, bot, tx, ty) end
++			end
++
++			-- And now?
++			local target = game.level.map(bot.x, bot.y, Map.ACTOR)
++			if target and self:reactionToward(target) < 0 then
++				tgts[target] = tgts[target] or {cnt=0, bots={}}
++				tgts[target].cnt = tgts[target].cnt + 1
++				tgts[target].bots[bot] = true
++			end
++		end
++
++		for target, data in pairs(tgts) do
++			if target.x and self:hasLOS(target.x, target.y) then
++				DamageType:get(DamageType.TERRENE).projector(self, target.x, target.y, DamageType.TERRENE, dam * data.cnt ^ 0.7)
++				if rng.percent(25) and target:canBe("pin") and not target:attr("fly") and not target:attr("levitation") then
++					target:setEffect(target.EFF_FROZEN_FEET, 5, {apply_power=self:combatSpellpower()})
++				end
++				for bot, _ in pairs(data.bots) do bot.last_uid_target = target.uid end
++			end
++		end
++	end
++
+ function M.installMap(Map, options)
+     if options and options.map_checker_source == false then return false end
+     if not upstream(Map.updateMap, "@/engine/Map.lua", 469, 551) then return false end
+@@ -166,6 +242,19 @@
+         inferno.callbackOnActBase = setfenv(infernoNexus, getfenv(inferno.callbackOnActBase))
+         installed.inferno_nexus = true
+     end
++    local spider = Talents.talents_def.T_MICRO_SPIDERBOT
++    if options.spiderbot_candidates ~= false and spider
++        and upstream(spider.doDamage, "@/data-orcs/talents/spells/terrene-technomancy.lua", 91, 148)
++        and upstream(spider.hasBot, "@/data-orcs/talents/spells/terrene-technomancy.lua", 83, 85) then
++        local original, hasBot = spider.doDamage, spider.hasBot
++        local damage = setfenv(spiderbotDamage, getfenv(original))
++        spider.doDamage = function(self, t, p)
++            -- A later addon may add observable work to this helper.
++            if t.hasBot ~= hasBot then return original(self, t, p) end
++            return damage(self, t, p)
++        end
++        installed.spiderbot_candidates = true
++    end
+     return installed
+ end
+ 
+--- a/tests/test_runtime.lua
++++ b/tests/test_runtime.lua
+@@ -135,6 +135,7 @@
+     return read(real)
+ end
+ local ashes = dlcSource("ashes-urhrok", "data/talents/corruptions/heart-of-fire.lua", "9169ec6910a96af6ce469ef88c4b257165955f96ce7828c8508e2d36372a92b5")
++local orcs = dlcSource("orcs", "data/talents/spells/terrene-technomancy.lua", "3d48fdd5bf72d4c2c6f1479172acc0cfe1e8dae7a3e64b776a398e386cf9f252")
+ local function talents(source, path, e)
+     local definitions = {talents_def = {}}
+     e.require = function(name)
+@@ -193,5 +194,98 @@
+     if roll then print("PASS Ashes: effect-entry visits " .. av .. " -> " .. bv .. "; full ordered event trace identical") end
+ end
+ 
+-check(not next(helper().installTalents({talents_def = {}})), "absent DLCs safely ignored")
++-- Deterministic actor-key iteration allows exact cross-world RNG/callback traces.
++-- Selection still uses the engine's original pairs traversal, insertion and sort.
++local function orderedPairs(t)
++    local keys = {}; local actorKeys = false
++    for k in pairs(t) do keys[#keys + 1] = k; if type(k) == "table" and k.uid then actorKeys = true end end
++    if not actorKeys then return pairs(t) end
++    table.sort(keys, function(a, b) return a.uid < b.uid end)
++    local i = 0
++    return function() i = i + 1; local k = keys[i]; if k then return k, t[k] end end
++end
++local function spiderScenario(optimized, settings)
++    local events, record = trace(); local bots = {}; local visits = 0
++    local targetList, byX = {}, {}
++    for i = 1, 8 do
++        local a = {uid = i, id = i, x = i, y = 1, EFF_FROZEN_FEET = "frozen", hostile = i ~= 8}
++        function a:canBe(what) record("canBe", self, what); return true end
++        function a:attr(what) record("attr", self, what); return false end
++        function a:setEffect(kind, dur, params) record("effect", self, kind, dur, params.apply_power) end
++        targetList[i], byX[i] = a, a
++    end
++    local function bot(i, x)
++        return {uid = i + 100, id = i, x = x, y = 1, dur = i == 1 and 1 or 4, particle = {id = i, x = x, y = 1}, last_uid_target = settings.previous and 7 or nil}
++    end
++    for i = 1, settings.count do bots[i] = bot(i, settings.shared and 1 or ((i - 1) % 8 + 1)) end
++    local store = {bots = bots}
++    local map = setmetatable({}, {__call = function(_, x, y) record("map", x, y); return byX[x] end})
++    function map:particleEmitter(x, y, radius, kind, params, shader, depth) record("particle", x, y, kind, params.tx, params.ty, depth) end
++    function map:removeParticleEmitter(p) record("remove", p) end
++    local e = env{Map = {ACTOR = 100}, game = {level = {map = map}}, pairs = orderedPairs,
++        ripairs = function(t) local i = #t + 1; return function() i = i - 1; if i > 0 then return i, t[i] end end end,
++        ipairs = function(t)
++            local iter, state, key = ipairs(t)
++            return function(s, k) local nk, v = iter(s, k); if nk and t == bots then visits = visits + 1 end; return nk, v end, state, key
++        end,
++        table = setmetatable({sort = function(t, f)
++            record("sort", #t)
++            if type(f) == "string" then local key = f; f = function(a, b) return a[key] < b[key] end end
++            return table.sort(t, f)
++        end}, {__index = table}),
++        core = {fov = {distance = function(x, y, tx, ty) return math.sqrt((x - tx)^2 + (y - ty)^2) end}},
++    }
++    local rngCalls = 0
++    e.rng = {percent = function(n) rngCalls = rngCalls + 1; local result = rngCalls % 2 == 1; record("rng", n, result); return result end}
++    e.DamageType = {TERRENE = "terrene", get = function(_, kind)
++        return {projector = function(src, x, y, typ, damage) record("damage", x, y, typ, damage) end}
++    end}
++    local all = talents(orcs, "/data-orcs/talents/spells/terrene-technomancy.lua", e)
++    local t = all.talents_def.T_MICRO_SPIDERBOT
++    t.getDamage = function() record("base-damage"); return 19 end
++    local actor = {x = 0, y = 0, micro_spiderbots_store = store, T_CRYOGENIC_DIGS = "cryo"}
++    function actor:reactionToward(target) record("reaction", target); return target.hostile and -1 or 1 end
++    function actor:getTalentRange() record("range"); return 10 end
++    function actor:hasLOS(x, y) local visible = x ~= 6; record("LOS", x, y, visible); return visible end
++    function actor:combatSpellpower() return 42 end
++    function actor:isTalentActive() return true end
++    function actor:callTalent(id, method, x, y) record("cryo", id, method, x, y) end
++    local projections = 0
++    function actor:projectCollect(tg, x, y, layer, filter)
++        projections = projections + 1; record("project", x, y, tg.radius)
++        if settings.mutate and projections == 1 and #bots > 1 then
++            bots[#bots].x = 7 -- A synchronous projected callback changes occupancy.
++            record("projected-mutation", bots[#bots].id, 7)
++        end
++        local targets = {}
++        for _, target in ipairs(targetList) do
++            record("projected", target)
++            if filter(target) and not settings.emptyTargets then targets[target] = {dist = math.abs(target.x - x)} end
++        end
++        return targets
++    end
++    if optimized then check(helper().installTalents(all).spiderbot_candidates, "install inspected Spiderbot method") end
++    if settings.override then
++        local previous = t.hasBot
++        t.hasBot = function(...) record("custom-hasBot"); return previous(...) end
++    end
++    if settings.expire then t.updateBotsSystem(actor, t, -1) else t.doDamage(actor, t, store) end
++    for _, b in ipairs(bots) do record("final", b.id, b.x, b.y, b.last_uid_target, b.dur, b.particle.x, b.particle.y) end
++    return table.concat(events, "\n"), visits
++end
++for _, settings in ipairs{
++    {count = 0}, {count = 1}, {count = 10, shared = true}, {count = 10, shared = true, mutate = true},
++    {count = 10, shared = true, previous = true}, {count = 10, shared = true, expire = true},
++    {count = 10, shared = true, emptyTargets = true}, {count = 10, shared = true, override = true},
++} do
++    local a, av = spiderScenario(false, settings); local b, bv = spiderScenario(true, settings)
++    check(a == b, "Spiderbot ordered targets, projected mutations, moves, particles, damage/RNG, expiry and helper overrides")
++end
++do
++    local _, av = spiderScenario(false, {count = 10, shared = true})
++    local _, bv = spiderScenario(true, {count = 10, shared = true})
++    check(bv < av, "Spiderbot candidate occupancy reduces bot-entry visits")
++    print("PASS Spiderbot: 10-bot fixture visits " .. av .. " -> " .. bv .. "; projections, movement and damage order preserved")
++    check(not next(helper().installTalents({talents_def = {}})), "absent DLCs safely ignored")
++end
+ print("PASS all " .. checks .. " runtime checks; " .. _VERSION .. " / " .. jit.version)

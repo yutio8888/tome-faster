@@ -1,12 +1,19 @@
-# Faster ToME4 — local profiling experiment
+# Faster ToME4 — performance review and profiling experiment
 
 Version **0.2.1 (experimental)**, modified 12 September 2026. This fork fixes defects in
 [Yutio888's Faster ToME4 0.0.1](https://te4.org/games/addons/tome/faster) and adds
 conservative save/load and runtime optimizations for **ToME 1.7.6**.
 
-This local branch adds finite `notice_enemy` / `dreamhammer` lifetimes and an
+This experimental branch adds finite `notice_enemy` / `dreamhammer` lifetimes and an
 opt-in diagnostic timer. It does not migrate Fearscape or inventory data in a live
 save. See [profiling instructions and measured limits](docs/profiling.md).
+
+中文说明：[性能问题、修复方案、测量指标与文件清单](docs/faster-tome4-performance-report.md)。
+Published evidence: [profile results](evidence/faster-tome4-profile/README.md).
+Historical installable packages: [releases](releases/README.md).
+This branch includes the earlier fixes and the 0.2.1 experiment; live save migration
+and full-game validation remain pending. Player archives and generated save graphs
+are kept local.
 
 ## Changes
 

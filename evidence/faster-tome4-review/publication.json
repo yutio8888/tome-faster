@@ -1,0 +1,34 @@
+{
+  "status": "published_verified",
+  "github_account": "yutio8888",
+  "intended_repository": "yutio8888/tome-faster",
+  "intended_visibility": "public",
+  "remote_creation_confirmed": true,
+  "upload_confirmed": true,
+  "prepared_commit": "ded93e38c34af1584224717250c7015295249dd2",
+  "source_files_modified": false,
+  "prepared_file_count": 9,
+  "attempts": [
+    {
+      "interface": "gh repo create / GraphQL createRepository",
+      "result": "Resource not accessible by personal access token"
+    },
+    {
+      "interface": "POST /user/repos",
+      "http_status": 403,
+      "result": "Resource not accessible by personal access token"
+    },
+    {
+      "interface": "git push -u origin main",
+      "result": "success; remote commit and all 9 blob identities verified"
+    }
+  ],
+  "remote_created_by": "user",
+  "repository_url": "https://github.com/yutio8888/tome-faster",
+  "remote_commit": "ded93e38c34af1584224717250c7015295249dd2",
+  "remote_branch": "main",
+  "remote_tree_sha": "7bb3220bb7950d6350beccb1c67c341dbec03d27",
+  "verified_remote_file_count": 9,
+  "remote_files_match_prepared_commit": true,
+  "scope": "Historical verification of the original main-branch import, not the later performance branch."
+}

@@ -1,0 +1,3120 @@
+{
+  "ashes-urhrok": {
+    "source_commit": null,
+    "provenance": "User-provided local public GPL source; version not pinned by translation manifest. Exact Lua content hashed for this review.",
+    "files": [
+      {
+        "path": "data/achievements/all.lua",
+        "sha256": "9dac1c92bd16c04a0f5521fd497a09aa363103720888fcbffeba32b458bc456c"
+      },
+      {
+        "path": "data/birth/corrupted.lua",
+        "sha256": "a61a4733cfc00ff66cb9ccd9def1ccad04f0796cdf327baffee1a4cb3c56de1f"
+      },
+      {
+        "path": "data/birth/doomelf.lua",
+        "sha256": "d770eea753fb3cec5793e5ce9c171ebc5c25006d385ea7760b80541c351cb7f3"
+      },
+      {
+        "path": "data/birth/races_cosmetic.lua",
+        "sha256": "5b5af97f949ff009a1520c6b048cd62676da9d60713a5107a05aa42246f1a3ac"
+      },
+      {
+        "path": "data/general/events/demon-statue.lua",
+        "sha256": "a061598fb34481be5892a150206827053790cca9de770efd6fad31408683c71a"
+      },
+      {
+        "path": "data/general/events/fire-haven.lua",
+        "sha256": "aef4b3f0052b583578489cfa21f36051cc4ffeaf1d562d2fa74a76c5661caf36"
+      },
+      {
+        "path": "data/general/grids/demon_statues.lua",
+        "sha256": "27ca64627382993e9585c4b2400db9d943ee946ef5eca843d762a48e429d99b1"
+      },
+      {
+        "path": "data/general/npcs/aquatic-demon.lua",
+        "sha256": "c9d1e7a2f2249a18e4dda7bbe68a16ded4d3ad4282a7c89f605f756f9c57bce6"
+      },
+      {
+        "path": "data/general/npcs/major-demon.lua",
+        "sha256": "52dd4d14f552ddcafc6bf6f8fd5ea48018adfb393169b9dd10ea8381b66827cc"
+      },
+      {
+        "path": "data/general/objects/world-artifacts.lua",
+        "sha256": "b8a9216d5dbd9d523b526f233ce985d2fc1104534a63b55e1c4a72c44a9ef6fa"
+      },
+      {
+        "path": "data/locales/ja_JP.lua",
+        "sha256": "216eecd2fbc07ab3b0e2e51c0ae9ff0ee90b8ef8886d57e80b5635d29eef2cba"
+      },
+      {
+        "path": "data/locales/ko_KR.lua",
+        "sha256": "233e237983b2ec111046f3ed9fdabff819961377245afbc533f9df04575d36c9"
+      },
+      {
+        "path": "data/locales/zh_hans.lua",
+        "sha256": "dae5cb246eefd60031fd01ce4f5200dd1b28a290e78949c7e9e4629fafa260bd"
+      },
+      {
+        "path": "data/locales/zh_hant.lua",
+        "sha256": "d09d48b3848844e9cf0334d162c731ef01efdf78e9a1b70d9aab0bfa17996e3e"
+      },
+      {
+        "path": "data/lore/demon.lua",
+        "sha256": "d3adada58124ab822393a43a8ec21060a5d465bfca69ff02d4b46df31b92e142"
+      },
+      {
+        "path": "data/maps/anteroom-agony-start.lua",
+        "sha256": "ab609789b467144db61ca664eb25429e6730e9d97129cf8657dc6b4d8c87c4f8"
+      },
+      {
+        "path": "data/maps/searing-halls-start.lua",
+        "sha256": "3e5d238f238eccc9bc5cd26059efb5866fa9a967b951da2bfbdf9412d73d2589"
+      },
+      {
+        "path": "data/quests/re-abducted.lua",
+        "sha256": "1fc684b547df34429b0eee4eb11fadb6cd8384d052e3c884927cf386b643a1ad"
+      },
+      {
+        "path": "data/quests/start-ashes.lua",
+        "sha256": "8d6636df8f5c3a36a27cea49412bd9f38ae23d17c336db2e1fb33392c6648ac2"
+      },
+      {
+        "path": "data/talents/corruptions/black-magic.lua",
+        "sha256": "c54c2fb09bd09dd3437df50c2f2a6b5e48d8c700335d1f0212169e7ea8b6d4e9"
+      },
+      {
+        "path": "data/talents/corruptions/brutality.lua",
+        "sha256": "98445e8d729b25a81d276add49387ac07a1ce10b7cc8c5feae4a62e645c2552d"
+      },
+      {
+        "path": "data/talents/corruptions/corruptions.lua",
+        "sha256": "4257ab1552e9252b763e865291b86582706d2a7ef79d974cd602c9168b22527a"
+      },
+      {
+        "path": "data/talents/corruptions/demon-seeds.lua",
+        "sha256": "555c11932fb3f3849788f8d0313ade0e6d50cb86a41bac23696993f448eb266a"
+      },
+      {
+        "path": "data/talents/corruptions/demonic-pact.lua",
+        "sha256": "5fc8f608455bd2075970c895df394ddd6d7d7c2a333d41c53e7fe478db346b5a"
+      },
+      {
+        "path": "data/talents/corruptions/demonic-strength.lua",
+        "sha256": "cc3daff1eb60ecbb48a2dde25106a4ff82673aa25fa8f94db822e437d0aef8f8"
+      },
+      {
+        "path": "data/talents/corruptions/doom-covenant.lua",
+        "sha256": "e7f8cb9df054127c61aef84b1d215c067a2e87ed9c7cb9ef9a428e3196fa3053"
+      },
+      {
+        "path": "data/talents/corruptions/doom-shield.lua",
+        "sha256": "f1a7dc7a6f111f9c5d9d3448fd16797aef05cec7838b79a5209e57106277e59d"
+      },
+      {
+        "path": "data/talents/corruptions/fearfire.lua",
+        "sha256": "c2faeddb2325d81dc87a1c4d591c0f8788c9c227d140fd6764d59258bd1f45d8"
+      },
+      {
+        "path": "data/talents/corruptions/heart-of-fire.lua",
+        "sha256": "9169ec6910a96af6ce469ef88c4b257165955f96ce7828c8508e2d36372a92b5"
+      },
+      {
+        "path": "data/talents/corruptions/infernal-combat.lua",
+        "sha256": "8de1db047d8a879585ef1a99e08039c4c9a664880fc18c51a8aaa0144a49ec55"
+      },
+      {
+        "path": "data/talents/corruptions/npcs.lua",
+        "sha256": "881a27574041694eee633be9c24dc4e065092ed936d11e351acc9ba2d8dd107e"
+      },
+      {
+        "path": "data/talents/corruptions/oppression.lua",
+        "sha256": "4df44bc89ced7fc9fdd1e5daeec8ac83cf106c835fb2faf25c175316ff5cc3b3"
+      },
+      {
+        "path": "data/talents/corruptions/spellblaze.lua",
+        "sha256": "7121480755bd462ee8d5b57b26f762a2d5db0098bd42be4c7ed348ba69b59d3b"
+      },
+      {
+        "path": "data/talents/corruptions/torture.lua",
+        "sha256": "c9845ad5482c45ab0c2c5832950e9868bea5b9af7d4f0d1f3b31b4f03179bb66"
+      },
+      {
+        "path": "data/talents/corruptions/wrath.lua",
+        "sha256": "f2297854dd2c61863ac86812563e4f4021602df017ef56414fe8a3de224d93c0"
+      },
+      {
+        "path": "data/talents/misc/races.lua",
+        "sha256": "66694c6705237debcb294c93b961f88711ac365f840f2b6fc5603ea65635e544"
+      },
+      {
+        "path": "data/timed_effects.lua",
+        "sha256": "eb183d02dba83a010aac5c7938cf590307b9f99a88de9b7222be7e58f4863f8d"
+      },
+      {
+        "path": "data/zones/anteroom-agony/events.lua",
+        "sha256": "966b7a1b2bfddc3bf0b865fc67d7f703538413609dcc396c7fdeccf233d37209"
+      },
+      {
+        "path": "data/zones/anteroom-agony/generatorMap.lua",
+        "sha256": "c64e428a954d3e071140a7c5a6b4ace3b627b6cb9554d3d0fb1f9eb159a8fe5f"
+      },
+      {
+        "path": "data/zones/anteroom-agony/grids.lua",
+        "sha256": "367b650dd4c30d59453fae8c3ae0bcbfb625cc2d05f8aace89015a09ac3e734f"
+      },
+      {
+        "path": "data/zones/anteroom-agony/npcs.lua",
+        "sha256": "d442f72477b5434fde3bf4622e435d3baa3d077d52d4f247003b9d3d9f1e4f38"
+      },
+      {
+        "path": "data/zones/anteroom-agony/objects.lua",
+        "sha256": "a94514bbfe5d514d91a6b9ce34bd7237c672f91b636a37d289a535dd3d958219"
+      },
+      {
+        "path": "data/zones/anteroom-agony/traps.lua",
+        "sha256": "809f799782f1cb67a08c38aba57bacfac83038b35bd74d84debc29d99c158b08"
+      },
+      {
+        "path": "data/zones/anteroom-agony/zone.lua",
+        "sha256": "c0c6b49d1cfc9fd83f5a9b7c23d19409f0d1e2cbaea8c9a36060c04e702bcd26"
+      },
+      {
+        "path": "data/zones/searing-halls/events.lua",
+        "sha256": "afca6404bfe43b27fcf09b76f46ebb98aa9d3af51a4646721ec70f54aa945955"
+      },
+      {
+        "path": "data/zones/searing-halls/generatorMap.lua",
+        "sha256": "790d87975b098a3b4e1904a9c93c02853ef767c2f399e4f12f20b59d21c59dda"
+      },
+      {
+        "path": "data/zones/searing-halls/grids.lua",
+        "sha256": "a9653c7dd758a74e64fe3f9e7bd3d7b5534c19adca4713179380c1f95f1bec58"
+      },
+      {
+        "path": "data/zones/searing-halls/npcs.lua",
+        "sha256": "0c85510caf3e389ead82100abbc02de9caa259fc4fa1bac1ed7bd5e0cdd85023"
+      },
+      {
+        "path": "data/zones/searing-halls/objects.lua",
+        "sha256": "3a749077488f6029ef0901c25ab590f7a2a7c464ddd3c03059078f6db3f41a92"
+      },
+      {
+        "path": "data/zones/searing-halls/traps.lua",
+        "sha256": "809f799782f1cb67a08c38aba57bacfac83038b35bd74d84debc29d99c158b08"
+      },
+      {
+        "path": "data/zones/searing-halls/zone.lua",
+        "sha256": "174b311cc9f1d1242c79ef34c6bb2f6a4ee3d9815c21bfcb4e17d6d4e736b9dc"
+      },
+      {
+        "path": "hooks/load.lua",
+        "sha256": "558254d324ce48376422dcb0cb07184e691768ef14c94b2f1cc517025b468fc2"
+      },
+      {
+        "path": "init.lua",
+        "sha256": "6455aebad70e32db818749cba5d16f7b92500e7c267dcc7f6191156b0924db4d"
+      },
+      {
+        "path": "overload/data/chats/ashes-urhrok-walrog-pop.lua",
+        "sha256": "d8d68f63296dd921e733e28ec52f54ca4f97ebda4b0ca42b409b14be8575b44e"
+      },
+      {
+        "path": "overload/data/gfx/particles/blood_shield.lua",
+        "sha256": "0130a3614ece5dc34a36c6aa083e31daf09baaa10f079dccc824e0f010853282"
+      },
+      {
+        "path": "overload/data/gfx/particles/corrosive_slashes.lua",
+        "sha256": "1d92f15113c0e0b696090e801ced7a7aa3d08ff9b327550812221542653b6fa3"
+      },
+      {
+        "path": "overload/data/gfx/particles/demonic_madness.lua",
+        "sha256": "f5f9ae9e37eaee3559248b8ab09d186134248efbc2a7f6786ac81908172cbd51"
+      },
+      {
+        "path": "overload/data/gfx/particles/destroyer.lua",
+        "sha256": "1fd592fbbe3a5d8fd9a12009cae69148f58ef996c09929245a5efdaa64fafb3d"
+      },
+      {
+        "path": "overload/data/gfx/particles/detonating_charge.lua",
+        "sha256": "62448049f7635a43f7776371e48e057af1116dd6ae540e842e991bedf5ac9b80"
+      },
+      {
+        "path": "overload/data/gfx/particles/doom_tendrils.lua",
+        "sha256": "41a47e0eae57023f5ba71098413dda19c0c7896ea43993dd2f8121612cdfbf4d"
+      },
+      {
+        "path": "overload/data/gfx/particles/fiery_portal_link.lua",
+        "sha256": "c983be2c0ed820edc8e82b443b0ee726a82a3d0820bd07e8cf23f8b8bc3ccc51"
+      },
+      {
+        "path": "overload/data/gfx/particles/fire_blast.lua",
+        "sha256": "dc1ba0c3b577ad6dc85fe147c28ebaab036b69f6f939c25d0ca1f4eb54fa57f3"
+      },
+      {
+        "path": "overload/data/gfx/particles/flame_leash.lua",
+        "sha256": "36f91a21eaa5d43713248b4b04647cf2725b167da210255a685503a093159677"
+      },
+      {
+        "path": "overload/data/gfx/particles/grim_future.lua",
+        "sha256": "b6e5a865ffd592f625a48c0e44827ead4aad57351edadbe4f2df60b52001be37"
+      },
+      {
+        "path": "overload/data/gfx/particles/link_of_pain.lua",
+        "sha256": "df84c28f58b8812b072f5aa99d9a393bf1686d9ef01f4aacfc5a695540c69ae5"
+      },
+      {
+        "path": "overload/data/gfx/particles/obliterating_smash.lua",
+        "sha256": "9aeac2f2232ae2d468e17385dc00f3e0eefd903bef179a1cf186e23829c1b4e4"
+      },
+      {
+        "path": "overload/data/gfx/particles/tale_of_destruction.lua",
+        "sha256": "917bd4b13374f76f67e42b6461124f9c3c36acb4506d925f3377d8216d5925dd"
+      },
+      {
+        "path": "overload/data/gfx/shaders/black_artifacts.lua",
+        "sha256": "5000ac82427c6e9ece5d5896c168d1a4f52fb9a1bbaf92b64ab4523ed0a8be8e"
+      },
+      {
+        "path": "overload/data/gfx/shaders/greyscale.lua",
+        "sha256": "0f0157f5971a37db0a58239a2113b54906d7bb798143505d275d17f29e1c6a44"
+      },
+      {
+        "path": "overload/data/gfx/shaders/osmosis_shield.lua",
+        "sha256": "810e64873e5d72438952b66193c9869b0a74ae5ac0ebf63079d19ec1dcc70eb7"
+      },
+      {
+        "path": "overload/data/texts/intro-ashes-urhrok.lua",
+        "sha256": "313846d367490a70929a228528ee3279541ae6f9cafbcef941a4daa2bb577974"
+      },
+      {
+        "path": "overload/data/texts/unlock-corrupter_demonologist.lua",
+        "sha256": "dd01f3f48059a31958cc80da7d683d2abfbce87f00f63cd6b8e3901b9fb5d0b7"
+      },
+      {
+        "path": "overload/data/texts/unlock-cosmetic_doomhorns.lua",
+        "sha256": "3d6df0d40f8ed7bdde7f11027c3e1b0460875c6f07f2ba20f018ab37a7734112"
+      },
+      {
+        "path": "overload/data/texts/unlock-cosmetic_red_skin.lua",
+        "sha256": "9c206eb8df5cf72de4e8cd6e16a7bb704d139ad979f70a68c29bd89d953b8421"
+      },
+      {
+        "path": "overload/data/texts/unlock-race_doomelf.lua",
+        "sha256": "df3f2677517a38cb8897194e86494b1da375dad83c1ac03902affaaa2cd94b3c"
+      },
+      {
+        "path": "overload/mod/class/DemonologistsDLC.lua",
+        "sha256": "58acfdf3794fe325d4e6cb82b084558ab15d99309311bd2010ff33c61ecfc139"
+      },
+      {
+        "path": "superload/mod/class/Actor.lua",
+        "sha256": "aac9ea24be23ed228353cad42b119ba56e83cdf9cc7333484ff98a0d440db346"
+      },
+      {
+        "path": "superload/mod/class/Game.lua",
+        "sha256": "2c13fb633d4ecfbf50db3fa8f794887c82abebb9de21cf1bb3eb65bd7470a480"
+      },
+      {
+        "path": "superload/mod/class/Object.lua",
+        "sha256": "87fedbb4fa91049e88eda2256fa7a0b8be89be8c4f2a8e30e8f75930d83dc435"
+      },
+      {
+        "path": "superload/mod/class/Player.lua",
+        "sha256": "c1ff052ff54a42a1cd4a7163eb6d3b00ab15d2927a24acd936f73a479a0d6b77"
+      },
+      {
+        "path": "superload/mod/class/interface/Combat.lua",
+        "sha256": "ffbb51a675963b05283ac8ad5cf324c506b7e9f9fdd1195ef61de5bb560e8b6b"
+      },
+      {
+        "path": "superload/mod/dialogs/Birther.lua",
+        "sha256": "1bc015a862034ad584188cdb9e5a7dd66842a02aa65ded8999e94be68d7260da"
+      }
+    ]
+  },
+  "cults": {
+    "source_commit": null,
+    "provenance": "User-provided local public GPL source; version not pinned by translation manifest. Exact Lua content hashed for this review.",
+    "files": [
+      {
+        "path": "data/achievements/all.lua",
+        "sha256": "d3350e91ecf9e5b55aa8b9dc0b055899a587f2f3e09e019dfb1e93f9128fc10c"
+      },
+      {
+        "path": "data/ai/grung.lua",
+        "sha256": "42c6eb3fc36a1144cfc1891a74fb6a77355fe273d45306ab169237927c3844fb"
+      },
+      {
+        "path": "data/birth/demented.lua",
+        "sha256": "22fa8c409878c6280bf8992e92bcb5a6e6f984ec64851474929592d1d998f5df"
+      },
+      {
+        "path": "data/birth/drem.lua",
+        "sha256": "a42cea275f0a3b063c75fdc050becadc5a6086821cdeb0544e68167d836a0f23"
+      },
+      {
+        "path": "data/birth/krog.lua",
+        "sha256": "5c802aa76867f106119c796519e8960177708f835c0730eb0f67cd4a000b35ba"
+      },
+      {
+        "path": "data/birth/misc.lua",
+        "sha256": "0c228e9fc79384871038a05beea547ff99324dca7049c73865f574c59c4822e5"
+      },
+      {
+        "path": "data/birth/wilder.lua",
+        "sha256": "0ef52ac76fb5c8bfa456c75c06dab7f137f980bc73fae4f027f85e3f066353dd"
+      },
+      {
+        "path": "data/chats/fanged-collar.lua",
+        "sha256": "8e9c2fa06aa4b821723ee51df32a67733199c66d9c6e6f9231caa3fca08359b3"
+      },
+      {
+        "path": "data/chats/godfeaster-malyu-escaped.lua",
+        "sha256": "05dcccab3e37de621ebaf8b5b0ce9865bbbd45bf2d988ce17fe8643dedaceec9"
+      },
+      {
+        "path": "data/chats/godfeaster-malyu.lua",
+        "sha256": "2d1e6af998666320d7d2de9433e78f427c60b458f131b475443c0601d2412347"
+      },
+      {
+        "path": "data/chats/space-dwarf-trinket.lua",
+        "sha256": "a13e3fcfef2cf14583841454696d007394ce4cd04bc4036db2d6faec34920a10"
+      },
+      {
+        "path": "data/damage_types.lua",
+        "sha256": "6ec5f1659e6093030542048cc08a1f67063763db6b8c102bf5d103e2339a992c"
+      },
+      {
+        "path": "data/factions.lua",
+        "sha256": "f3f00912319302b0d2cab3d0d44779541c8f9945d44bb505c33d9193b4f224bc"
+      },
+      {
+        "path": "data/general/encounters/maj-eyal.lua",
+        "sha256": "0d14023f098d3b3473e90c2b37605811835904728d0080b57474ef70b26b4e8d"
+      },
+      {
+        "path": "data/general/encounters/tar-eyal.lua",
+        "sha256": "8e2b677355361a0b4f6cd1cf5cddf9c8f6aa0dee57d8d1cd9f75b862fb070bc7"
+      },
+      {
+        "path": "data/general/encounters/var-eyal.lua",
+        "sha256": "4f83e22b48931bae68cbfc9468f8dd83a46ae63a1381719101de3e9d8909f434"
+      },
+      {
+        "path": "data/general/events/digestive-sack.lua",
+        "sha256": "e5ac894d8b7413e95578cadde773fcee6834d3eda09820ad0f3637d4fbde5152"
+      },
+      {
+        "path": "data/general/events/font-knowledge.lua",
+        "sha256": "f6552a387baed58d179b066f75ceb7fce1c0c82e5c14e17a6a2d1ecacc3a5460"
+      },
+      {
+        "path": "data/general/events/glyphs-sequence.lua",
+        "sha256": "c3fd56ac102d97781b125e66d1185618420c436f122b85195cc4a64e9e5a480f"
+      },
+      {
+        "path": "data/general/events/scourged-pits.lua",
+        "sha256": "f0ed170c03522a7259c3cb28aa46f8d0d7e22099dc108179fbd9e31a18cf340d"
+      },
+      {
+        "path": "data/general/events/space-dwarf-ship.lua",
+        "sha256": "803471b404dade4c665b32084a56c49db24df1e44e06bb9c36d49257d30f0cfc"
+      },
+      {
+        "path": "data/general/events/tentacle-tree.lua",
+        "sha256": "60109b4d2bf4f7308ab66d6e4f821854a146c5acbbe994b802c11d2515af3e3d"
+      },
+      {
+        "path": "data/general/grids/fonts.lua",
+        "sha256": "284d1e44d2fafa79e29cff42de6ed33b6901c4b078bc472517bd20d5fc39fe84"
+      },
+      {
+        "path": "data/general/grids/fortress-ancient.lua",
+        "sha256": "e42e7bc02aaa7c5aaf3fad39c47095e41b153948fa6e8cc401938fd7351f39d9"
+      },
+      {
+        "path": "data/general/grids/fortress-multiverse.lua",
+        "sha256": "fb675dc3b7cbc39a6f0f9664b3ffa5ea12a0cf4f1b2bbe32426ce4c32130ce19"
+      },
+      {
+        "path": "data/general/grids/godfeaster.lua",
+        "sha256": "5fa06a43bf9f1c5ec0461aca1f5729e07f93ec4e4865fac042c5c5335b1030ac"
+      },
+      {
+        "path": "data/general/grids/maggot.lua",
+        "sha256": "080d9cf7759669061ae84950c7dabe1fb2d851767962bfaeb06131a661033ec2"
+      },
+      {
+        "path": "data/general/grids/scourge.lua",
+        "sha256": "cf4756b26b9e81710d66319339eef519265858fe9f07b3942bb21dbd91726349"
+      },
+      {
+        "path": "data/general/grids/slimy_godfeaster.lua",
+        "sha256": "94ce5eaaac73d623f3b28a9674709549b6fa006421c3d3cb09e1e37a7b4fb6c0"
+      },
+      {
+        "path": "data/general/grids/spacedwarf-creep.lua",
+        "sha256": "466f2ce5f8d83da254ff286e3946b70fe44fd19becb29146cdfcf6ef05aba456"
+      },
+      {
+        "path": "data/general/grids/spacedwarf.lua",
+        "sha256": "bb0e5b892dfe362e221236583b9ee10978f4c1e994257c5a81bfd3b1e53fd16b"
+      },
+      {
+        "path": "data/general/grids/special-cave.lua",
+        "sha256": "4f245af77045e4cb8c192c8634696b732fab287abc851388dc77f42140d2fbae"
+      },
+      {
+        "path": "data/general/grids/tentacle-tree.lua",
+        "sha256": "1c780f4a144b508c72235780a1358d74020dabb0131a5c22c9c525480955146b"
+      },
+      {
+        "path": "data/general/npcs/blobs.lua",
+        "sha256": "d0a17902a9a0c081aec7942d1cf83d82b16950967eff0b53ca4c81b218483e2d"
+      },
+      {
+        "path": "data/general/npcs/corrupted_blobs.lua",
+        "sha256": "76cbc59be306a63bfa17d81904820c3838543a9b8b074554190bca408bbfbec4"
+      },
+      {
+        "path": "data/general/npcs/horror-special-test.lua",
+        "sha256": "7414217377dbec6392e86922c9fb4c5bfd44753494b13a5290c0f5ef29040a3e"
+      },
+      {
+        "path": "data/general/npcs/horror-special.lua",
+        "sha256": "2c0915a9fd64177e57dc9d0a5e014e160e64c903eddf1fe79872a2920e1f12bc"
+      },
+      {
+        "path": "data/general/npcs/horror.lua",
+        "sha256": "8d63e86d5eb6f7552ec2cdfe598b45618460028236190f246202809c045f461d"
+      },
+      {
+        "path": "data/general/npcs/humanoid_random_boss.lua",
+        "sha256": "d8fb18e40d7f5155f7997178460788a44642803c79083a2189e20a24edddf88e"
+      },
+      {
+        "path": "data/general/npcs/scourge-drake.lua",
+        "sha256": "7cf5afe9dd1e68dc29eb2cb389331991786eba42418aa45f0cee2dfca982a471"
+      },
+      {
+        "path": "data/general/npcs/tentacle-tree.lua",
+        "sha256": "e72061f1566d42639ee2fd7ea4b39488899791b871c0833c82016018894fc7a0"
+      },
+      {
+        "path": "data/general/objects/forbidden-tomes-base.lua",
+        "sha256": "d57efbaa87c259d02361b80457fc4326cfc1b982a2ff02cdbaa47e51f87fc2f4"
+      },
+      {
+        "path": "data/general/objects/lore/eyal.lua",
+        "sha256": "d2c29dcd44ff2cc192a4be23d7faa40d3945f86855c525fdf6947d22124d9e9a"
+      },
+      {
+        "path": "data/general/objects/special-misc.lua",
+        "sha256": "05d80c62ca2fb4b83f08519b9e33ed30d64a40c7b77d00838028288875e70865"
+      },
+      {
+        "path": "data/general/objects/world-artifacts.lua",
+        "sha256": "27af5b2ae30c5b2db7f1d585b8334bc28ee1284e771a8a9f5c198f892edbc92a"
+      },
+      {
+        "path": "data/general/stores/addons.lua",
+        "sha256": "8fe58cc0e36ddd607990ef6bcc3832d0cf073cd1740e12645f460930aac0ca69"
+      },
+      {
+        "path": "data/general/stores/cults.lua",
+        "sha256": "26bf50cc0e14f64fca496ae376168f8b72cf6ceaddbd093999c9b3a4053ff76e"
+      },
+      {
+        "path": "data/general/zones-alters/dreadfell.lua",
+        "sha256": "693cddea39b85bd89066560d6a76e1dd506ffa41a1b7ad3f825dc7b46ea4f83d"
+      },
+      {
+        "path": "data/general/zones-alters/elvala.lua",
+        "sha256": "44edbf540af1894e9e44b6ab1a0ae087746c01f8185b5ad3f1f3a497f8c24a7a"
+      },
+      {
+        "path": "data/general/zones-alters/zigur.lua",
+        "sha256": "e9f660ebf572ded0ad1b13a4445d06cb2a57d7dcca70ef884b78bab8ec3d2fc1"
+      },
+      {
+        "path": "data/glyph_sequences/cults.lua",
+        "sha256": "9d3b29fd6a91fb9ced64581b760fc0026b0fb0bcf9cc687a55399aed76faaabf"
+      },
+      {
+        "path": "data/glyph_sequences/orcs.lua",
+        "sha256": "291aaf10b675b0180eb317288cdfa61c0b06e2d27c9b356b7e59d8e40ce24616"
+      },
+      {
+        "path": "data/locales/ja_JP.lua",
+        "sha256": "04be335e0f9d5989478d8702e147debb71260594eaad6edcb8010bc2136f1a0d"
+      },
+      {
+        "path": "data/locales/ko_KR.lua",
+        "sha256": "5cbb6187e113ceb003478d095c29b939f0d61327f3dca688916522793a42ae90"
+      },
+      {
+        "path": "data/locales/zh_hans.lua",
+        "sha256": "4c322f7d6636e8a5306007ac90f21dd3006b45c1021e398b5156d0210e2be197"
+      },
+      {
+        "path": "data/locales/zh_hant.lua",
+        "sha256": "44dc9c8c5095f0cb557ecd9e23beadf53f6d544756afa7c5fee30132b7278ca4"
+      },
+      {
+        "path": "data/lore/dremwarves.lua",
+        "sha256": "0b8133e8ef00f5b0ca5fcb2f7df1ebec355873ac5dfac9454a85a48084b326e9"
+      },
+      {
+        "path": "data/lore/fay-willows.lua",
+        "sha256": "05a3f93c9f5cd5baf52429155fcd4a09b6045ef45fbf3472562d55f5da0e4c6f"
+      },
+      {
+        "path": "data/lore/kroshkkur.lua",
+        "sha256": "00147ee5b29fdd6dd764ff07a77f7dce1c42634dc5673cbde9341312a50927d2"
+      },
+      {
+        "path": "data/lore/misc.lua",
+        "sha256": "ab9cf8e70d666816d79d0c4fddec2ce573072d5644f737d450b7731cbc42a0b3"
+      },
+      {
+        "path": "data/lore/zones.lua",
+        "sha256": "8b8dfe318f657f397aee0c608d95f551ce868e027e5404da6d2e56670c755f76"
+      },
+      {
+        "path": "data/quests/grung.lua",
+        "sha256": "47215be9967f9524bf42a8de943f1d2edc5ac8579529696f401079c3b6720b72"
+      },
+      {
+        "path": "data/quests/illusory-castle.lua",
+        "sha256": "6d6f714c1f5ef68a6742b67895c1bb0960fb9e5a548d94dee764ad09534bec9d"
+      },
+      {
+        "path": "data/quests/krogs-rescue.lua",
+        "sha256": "eeaf4e211c8f17ebd8a2afa8b498d0aefd16edcc77e6f717fb70b69d96ef6b77"
+      },
+      {
+        "path": "data/quests/start-cults.lua",
+        "sha256": "373b5adf81365eee7be96ab148d319c055e2ca328aacb3f36073d1c4c0010dc4"
+      },
+      {
+        "path": "data/resolvers.lua",
+        "sha256": "08b7342e9107664905df4a7d5684d2570bfcb91f4954edd508300e8be98652d5"
+      },
+      {
+        "path": "data/talents/demented/beyond-sanity.lua",
+        "sha256": "413bd311b854a8c4b13b67dc6cb9a4433acb768ab6f865f14a75d2d904a19e97"
+      },
+      {
+        "path": "data/talents/demented/calamity.lua",
+        "sha256": "7a65b4d2d7a91f83f32472a330aeff48e7ac983914fd672dc09673a812a06d80"
+      },
+      {
+        "path": "data/talents/demented/chronophage.lua",
+        "sha256": "6b669e4e3cbec766a6b37b3b3b8998b52a6ce6127996a247cfb16bfb9034e4b5"
+      },
+      {
+        "path": "data/talents/demented/controlled-horrors.lua",
+        "sha256": "a123514fa090c6d4d714dfb3ff977ade6c62d079aac1e7e4a101035bc3ee1399"
+      },
+      {
+        "path": "data/talents/demented/demented.lua",
+        "sha256": "a7c57bd23a0e367d8664e4120c301cd41d1c1e3c5fec0001796ae445833a1467"
+      },
+      {
+        "path": "data/talents/demented/disfigured-face.lua",
+        "sha256": "92e1c785090559761bc7cbc0b3542816a1c0a1f3c91b2e4cd421302a2caa6c36"
+      },
+      {
+        "path": "data/talents/demented/doom.lua",
+        "sha256": "e68880092dbc5bfa5b8624f75b26297b163dca4b33d6dac38aba3760d6dd5b7e"
+      },
+      {
+        "path": "data/talents/demented/entropy.lua",
+        "sha256": "e8046402a99f3611d9f63cbc57bc060c9ce1039461e5bdfcbf5a64598fbcb69c"
+      },
+      {
+        "path": "data/talents/demented/friend-of-the-worm.lua",
+        "sha256": "e8c4508aa632de865c89ae398406cc6cad34b49349142c43bdf06fb8b68a1ed1"
+      },
+      {
+        "path": "data/talents/demented/horrific-body.lua",
+        "sha256": "a3cfef7315f72cbd3957346e9194a906f93e3e25b242690e20f09727e14d57b9"
+      },
+      {
+        "path": "data/talents/demented/madness.lua",
+        "sha256": "33e274b4e1f155bf677dae8d8cf29c61b9f2b99920a0a4ec80ab0f043f62dac4"
+      },
+      {
+        "path": "data/talents/demented/nether.lua",
+        "sha256": "4ee9687b048c9f911046444d2de07ce39515094dc7829ef5a9ab17e9b75c2688"
+      },
+      {
+        "path": "data/talents/demented/oblivion.lua",
+        "sha256": "3242012a234a5b9a8c9ebfdb57556803619c8b752954e150d2b653806cb1d44b"
+      },
+      {
+        "path": "data/talents/demented/path-of-horror.lua",
+        "sha256": "e688d681d04434c01cf5246a35de54b0a91aa8e9df43243fded8732f5e72ad7f"
+      },
+      {
+        "path": "data/talents/demented/rift.lua",
+        "sha256": "23ca78691a34de2e7cc9b589d19f244cf85596d15947688dddfd376e04455bde"
+      },
+      {
+        "path": "data/talents/demented/scourge-drake.lua",
+        "sha256": "4dfe91fbc940619caf2b6d5c3b1c8004f96c042c70a96f3f931d1caf6c89b874"
+      },
+      {
+        "path": "data/talents/demented/slow-death.lua",
+        "sha256": "469dd52ed0413b59395dc7ae46a0a8a0e4eaca5ce8c85e430df6e489e899a3d3"
+      },
+      {
+        "path": "data/talents/demented/tentacles.lua",
+        "sha256": "038841bc39a9c1ca209651fb5c8cbe248ef0abab6596c528407063eefbe25906"
+      },
+      {
+        "path": "data/talents/demented/timethief.lua",
+        "sha256": "d93d99fd05b45f16cb730c6bf46f7b0bf305e157de21513d539c0e648faa231f"
+      },
+      {
+        "path": "data/talents/demented/void.lua",
+        "sha256": "19cb982e3487d52626f46c5e0623f5f75b4ad2e126c7580e000672c74ce934b1"
+      },
+      {
+        "path": "data/talents/demented/writhing-body.lua",
+        "sha256": "37c7c1f3ebe52ca6e8b339ac909de51c0aeaa5b3b79d61ada37ce4499a1d833c"
+      },
+      {
+        "path": "data/talents/misc/misc.lua",
+        "sha256": "3b37fe925ecba44b1931c740c085a00425eeeeaae2ff47c0b646cf7fe4d1976b"
+      },
+      {
+        "path": "data/talents/misc/races.lua",
+        "sha256": "59b9b67cb0a3752d9e66dc28f587dcaa40a6ffd16bfdc85bdd17ab803c80b05f"
+      },
+      {
+        "path": "data/talents/spell/necro.lua",
+        "sha256": "ce66bb866ec86fa2573e9111bb4d679f3e3cdef6038c58fbeb3e534e20575baf"
+      },
+      {
+        "path": "data/talents.lua",
+        "sha256": "771428f2235dfb241965f1e3cd67212842cbde3a1801515e36db3739cb289c80"
+      },
+      {
+        "path": "data/timed_effects.lua",
+        "sha256": "0d3139ebf8a4b1add13f340c166f42efbd90c26c901b7999eb0608f82d76ac9c"
+      },
+      {
+        "path": "data/zones/dremshor-tunnel/events.lua",
+        "sha256": "879e7e685f2a80346f43ba865d7b1b2adf09498a903b0268669b77ddbc0964d7"
+      },
+      {
+        "path": "data/zones/dremshor-tunnel/grids.lua",
+        "sha256": "438abf02ae6f951be9cdb993c3e3eef58ec696b8762938545ab44a09997fb384"
+      },
+      {
+        "path": "data/zones/dremshor-tunnel/npcs.lua",
+        "sha256": "174711694416752813828500176e35ad1a42280504158beb43d445a971aa6c7d"
+      },
+      {
+        "path": "data/zones/dremshor-tunnel/objects.lua",
+        "sha256": "19b53ffa31a5b0907d1a5bb13e7d999ca8f9f8219398cec43528d6d765c19c6a"
+      },
+      {
+        "path": "data/zones/dremshor-tunnel/traps.lua",
+        "sha256": "764352e1f697c219af1edbe7292e46b563cf42459d512bbc492853034d3b0692"
+      },
+      {
+        "path": "data/zones/dremshor-tunnel/zone.lua",
+        "sha256": "a14ad2d9332f6a2814ecba64b0b9836f73b49965003df2cf66d18bec0417e192"
+      },
+      {
+        "path": "data/zones/entropic-void/grids.lua",
+        "sha256": "76362709d59c745b16b25b49d27c22bc316cfef967662890e8c01465fe6f8d1e"
+      },
+      {
+        "path": "data/zones/entropic-void/npcs.lua",
+        "sha256": "1fd9c7d31b90e91edae6fa991aab66ab30892e0f838078dcd8d3c9d04a717d40"
+      },
+      {
+        "path": "data/zones/entropic-void/objects.lua",
+        "sha256": "44f8104cc1c9057c8c9e723ff8e00e93120814ee78e8d8bbdab39c281f0ce508"
+      },
+      {
+        "path": "data/zones/entropic-void/traps.lua",
+        "sha256": "7282e2b78058f0901d9893f688de9c160fe9df05fb2abac76bd85e19a6c04659"
+      },
+      {
+        "path": "data/zones/entropic-void/zone.lua",
+        "sha256": "ee3e2615a8e78ec849115691b3134470884e040cc749a12bee7c0a916eff21e2"
+      },
+      {
+        "path": "data/zones/fortress-arena/grids.lua",
+        "sha256": "6289bac0fdebc621236e80e9d914d2c8639c83c50eff3ec497d4cabbfbf3cb94"
+      },
+      {
+        "path": "data/zones/fortress-arena/npcs.lua",
+        "sha256": "31513777f9a094ebe0b4410c1ef2c754c48d13600129eb3b8093a7ba4a39bfba"
+      },
+      {
+        "path": "data/zones/fortress-arena/objects.lua",
+        "sha256": "0b542ae1ea53b2cffb2211dd5d867b85f947d591b9b5f5a92aef30ca75ba341f"
+      },
+      {
+        "path": "data/zones/fortress-arena/traps.lua",
+        "sha256": "31513777f9a094ebe0b4410c1ef2c754c48d13600129eb3b8093a7ba4a39bfba"
+      },
+      {
+        "path": "data/zones/fortress-arena/zone.lua",
+        "sha256": "5414e4f96f387e04d798c7529c0863942ee6ef1a9813b083983cbccd3d319f3f"
+      },
+      {
+        "path": "data/zones/ft-cultist/events.lua",
+        "sha256": "19d746fddb7a4c7de3a0623d4e3f618fe96d780c1a5cdf83b280556fe2e9232e"
+      },
+      {
+        "path": "data/zones/ft-cultist/grids.lua",
+        "sha256": "5ccc0978cc8b4b62f5edf9372af8a4243512f51662d6571f9889761dbd7efe7a"
+      },
+      {
+        "path": "data/zones/ft-cultist/npcs.lua",
+        "sha256": "427cfbeb535d7393e920318f5256dce14a950596a52b8e3ae669f1b8234d2a20"
+      },
+      {
+        "path": "data/zones/ft-cultist/objects.lua",
+        "sha256": "ab200dd4058a33179b2fffc87049b78538d6dd5f39d3dbc9375ea60e885e1ae0"
+      },
+      {
+        "path": "data/zones/ft-cultist/traps.lua",
+        "sha256": "53afd48d746f5561753171086bced0eff0323889ed8ceb1faa03796cb82b76ab"
+      },
+      {
+        "path": "data/zones/ft-cultist/zone.lua",
+        "sha256": "acaff959d40480d57cd550cee6d0e8e64e6198fae60e6d4cd73fb9c41da9ec48"
+      },
+      {
+        "path": "data/zones/ft-haze-cave/events.lua",
+        "sha256": "19d746fddb7a4c7de3a0623d4e3f618fe96d780c1a5cdf83b280556fe2e9232e"
+      },
+      {
+        "path": "data/zones/ft-haze-cave/generatorActor.lua",
+        "sha256": "f0d8acb2c8c5042a6a4a0e79f81e3695e99b84b9a406f72d8dd5c9859a98e430"
+      },
+      {
+        "path": "data/zones/ft-haze-cave/grids.lua",
+        "sha256": "0daf23150cc2c4564e623ffc902155dd89fc81d9774c4a752a55aab11c9b2758"
+      },
+      {
+        "path": "data/zones/ft-haze-cave/npcs.lua",
+        "sha256": "a635f2db02f25e5fe1a06c8a4686b36fadcda2575e7d42989436d2b0cab581aa"
+      },
+      {
+        "path": "data/zones/ft-haze-cave/objects.lua",
+        "sha256": "8cbf54cc8d8e26e06a46b926fec6a3323ad5653774f0e24664aade5e0d3c4e85"
+      },
+      {
+        "path": "data/zones/ft-haze-cave/traps.lua",
+        "sha256": "53afd48d746f5561753171086bced0eff0323889ed8ceb1faa03796cb82b76ab"
+      },
+      {
+        "path": "data/zones/ft-haze-cave/zone.lua",
+        "sha256": "b6e63611a7005a746147a62ac4c10fd6c329f9d795d5462df1cbe0a4b36b00c4"
+      },
+      {
+        "path": "data/zones/ft-home/grids.lua",
+        "sha256": "9b603cd0aff28a5c36e73163da495d3e0c90f1fa6ef72437fecc13d571575bcf"
+      },
+      {
+        "path": "data/zones/ft-home/npcs.lua",
+        "sha256": "31513777f9a094ebe0b4410c1ef2c754c48d13600129eb3b8093a7ba4a39bfba"
+      },
+      {
+        "path": "data/zones/ft-home/objects.lua",
+        "sha256": "44f8104cc1c9057c8c9e723ff8e00e93120814ee78e8d8bbdab39c281f0ce508"
+      },
+      {
+        "path": "data/zones/ft-home/zone.lua",
+        "sha256": "9b8e39d039739f7e346d03d4023b179c08b0be3f61bcce6164c865d368bb422d"
+      },
+      {
+        "path": "data/zones/ft-horrors/events.lua",
+        "sha256": "b24920c78047fc136428ff1a5253c6ee6ab019921c0f50eded8acaf3803ce156"
+      },
+      {
+        "path": "data/zones/ft-horrors/generatorMap.lua",
+        "sha256": "792f33762354a045c6567e206663d669ea037f90434d4c4e7b41e39b2e5d4c37"
+      },
+      {
+        "path": "data/zones/ft-horrors/grids.lua",
+        "sha256": "d6bf7469fdc2ebc22e7177b0acc41a6b8c00b895e591426c7e93f12f360eec92"
+      },
+      {
+        "path": "data/zones/ft-horrors/npcs.lua",
+        "sha256": "271be50c362d4a6855d21f292d2afb9af7bcf96666b1a728f42a6acf07c0c693"
+      },
+      {
+        "path": "data/zones/ft-horrors/objects.lua",
+        "sha256": "3ee604b7acc5d71b35296563acde6e5a1328743ff05a81b7e72a92212880a3cb"
+      },
+      {
+        "path": "data/zones/ft-horrors/traps.lua",
+        "sha256": "53afd48d746f5561753171086bced0eff0323889ed8ceb1faa03796cb82b76ab"
+      },
+      {
+        "path": "data/zones/ft-horrors/zone.lua",
+        "sha256": "103240e6b7405074f26659db54698cf76edd78eade260c22aa6ef3cedde19320"
+      },
+      {
+        "path": "data/zones/ft-illusory-castle/events.lua",
+        "sha256": "19d746fddb7a4c7de3a0623d4e3f618fe96d780c1a5cdf83b280556fe2e9232e"
+      },
+      {
+        "path": "data/zones/ft-illusory-castle/generatorMap.lua",
+        "sha256": "d7b6157a1824d8229ebd8b7a1bd4d2b7a8ed9c454019f9fd356cccd44eb61a3f"
+      },
+      {
+        "path": "data/zones/ft-illusory-castle/grids.lua",
+        "sha256": "f076d7d31115a888c513895af6a219c9a8187c5399126d247174f72621a6997f"
+      },
+      {
+        "path": "data/zones/ft-illusory-castle/npcs.lua",
+        "sha256": "e3cd37e5e2424552f2f103ed06512ae49a3d51f00c735e5678ff6574e45f4683"
+      },
+      {
+        "path": "data/zones/ft-illusory-castle/objects.lua",
+        "sha256": "c201481c70316e629361540fbdc8e57339590837ac2191b628c41f5bf965285d"
+      },
+      {
+        "path": "data/zones/ft-illusory-castle/traps.lua",
+        "sha256": "53afd48d746f5561753171086bced0eff0323889ed8ceb1faa03796cb82b76ab"
+      },
+      {
+        "path": "data/zones/ft-illusory-castle/zone.lua",
+        "sha256": "5aaa62fc2e0145ad1b50b34a1543cdefce34acdfdc43f234ce72b2bd88ac9b22"
+      },
+      {
+        "path": "data/zones/ft-yaech/events.lua",
+        "sha256": "b24920c78047fc136428ff1a5253c6ee6ab019921c0f50eded8acaf3803ce156"
+      },
+      {
+        "path": "data/zones/ft-yaech/generatorMap.lua",
+        "sha256": "a298d62bf13becf39adf8fd5828d2a0a2a6f74ba89cf7350b2de8400c964c361"
+      },
+      {
+        "path": "data/zones/ft-yaech/grids.lua",
+        "sha256": "65a1552e02a0fd8e298872a3179cef161de6f162a20e2a47159da0af05a7336b"
+      },
+      {
+        "path": "data/zones/ft-yaech/npcs.lua",
+        "sha256": "528e92324ad5dbe7af8f21647d5ea481925bdb7a7b8c54e8bd09abbe7fd035a7"
+      },
+      {
+        "path": "data/zones/ft-yaech/objects.lua",
+        "sha256": "14549c9c8488c62ee971404195a05f555daa7818f547608e02cde09eab7e4d15"
+      },
+      {
+        "path": "data/zones/ft-yaech/traps.lua",
+        "sha256": "53afd48d746f5561753171086bced0eff0323889ed8ceb1faa03796cb82b76ab"
+      },
+      {
+        "path": "data/zones/ft-yaech/zone.lua",
+        "sha256": "0512ae6dd7509c45b219670b559cbe9935a6e7ec136caff35a2cff051403d9db"
+      },
+      {
+        "path": "data/zones/godfeaster/events.lua",
+        "sha256": "23f6f00bb2077d694ca189325949b392e0422994e710e69b8a77325e1c88ed04"
+      },
+      {
+        "path": "data/zones/godfeaster/generatorMap.lua",
+        "sha256": "7f0e7b7859ccace2375d5314a276f89e40c2697145670beae458b7e784ccc1f1"
+      },
+      {
+        "path": "data/zones/godfeaster/grids.lua",
+        "sha256": "0f0e5357ae258e23b5245ddcf5a30a15877a0be7938e3dc0d258b106ae083ecc"
+      },
+      {
+        "path": "data/zones/godfeaster/npcs.lua",
+        "sha256": "f0b80f8100265fa6e99d7fad41c29a372b12b4bae4eef11109db99b01c5d0c24"
+      },
+      {
+        "path": "data/zones/godfeaster/objects.lua",
+        "sha256": "eff1486af1573c706d06930443c55ecb4337b15dbb623bffc28e520c185de643"
+      },
+      {
+        "path": "data/zones/godfeaster/traps.lua",
+        "sha256": "809f799782f1cb67a08c38aba57bacfac83038b35bd74d84debc29d99c158b08"
+      },
+      {
+        "path": "data/zones/godfeaster/zone.lua",
+        "sha256": "546167c07fb37a6df5f86b27dc16398bfc423ee546db36d1128ae860bd48e6e0"
+      },
+      {
+        "path": "data/zones/maggot/events.lua",
+        "sha256": "23f6f00bb2077d694ca189325949b392e0422994e710e69b8a77325e1c88ed04"
+      },
+      {
+        "path": "data/zones/maggot/generatorMap.lua",
+        "sha256": "3d82605f041029e15d5aca34112ff94e92963ac46b72b78b71240c92f098c025"
+      },
+      {
+        "path": "data/zones/maggot/grids.lua",
+        "sha256": "964d697822f7d61e6962741366f7970acbea199307ffe8170149f5a3eef38c84"
+      },
+      {
+        "path": "data/zones/maggot/npcs.lua",
+        "sha256": "05a58af1f0a874ddee6305fdcaa971e790cfe06bca0c5e3f5a57836b2479e0a4"
+      },
+      {
+        "path": "data/zones/maggot/objects.lua",
+        "sha256": "8da5826f784914fb26797112df01db08a035203981f770f6a79d879a71ea4174"
+      },
+      {
+        "path": "data/zones/maggot/traps.lua",
+        "sha256": "809f799782f1cb67a08c38aba57bacfac83038b35bd74d84debc29d99c158b08"
+      },
+      {
+        "path": "data/zones/maggot/zone.lua",
+        "sha256": "dc41d3d14196e4c14d5b903ad14e3d15999464af0d0149b5be06869a76f168c5"
+      },
+      {
+        "path": "data/zones/necromancers-ruins/grids.lua",
+        "sha256": "35e7365b5b72a0a6aef0cd16ede1054de54a687c9864a49c16a0f388faa6c64c"
+      },
+      {
+        "path": "data/zones/necromancers-ruins/npcs.lua",
+        "sha256": "eea4c781be745e162e9fb8d2fbf5b43363d1ddeaa22d7bd613f46a4aa78783fa"
+      },
+      {
+        "path": "data/zones/necromancers-ruins/objects.lua",
+        "sha256": "7bc6ea1a7724a616f56acb3e2c345cdfa46d35a0706c95c062cfa16de320bacc"
+      },
+      {
+        "path": "data/zones/necromancers-ruins/traps.lua",
+        "sha256": "8fc0c6d2ee175f759308e17f9d0dbfdb817773f9486600502d2a347cf15bdc02"
+      },
+      {
+        "path": "data/zones/necromancers-ruins/zone.lua",
+        "sha256": "e1d631746ce7d3ec9272da9abe58327b1a03483787e3b2a734a5f59f072b8cfe"
+      },
+      {
+        "path": "data/zones/occult-egress/events.lua",
+        "sha256": "19d746fddb7a4c7de3a0623d4e3f618fe96d780c1a5cdf83b280556fe2e9232e"
+      },
+      {
+        "path": "data/zones/occult-egress/grids.lua",
+        "sha256": "3bd2141797d136f59dbd960aad538b4536ad3a705c348ee9b2ccfcc08ad0a9ab"
+      },
+      {
+        "path": "data/zones/occult-egress/npcs.lua",
+        "sha256": "5a1e09df4a78d91c17801f5f73ba1e8d3bdea3edb5ff00b7a3d136005617d5d0"
+      },
+      {
+        "path": "data/zones/occult-egress/objects.lua",
+        "sha256": "b4bf8c96f801be22a2f4b9578b9d8ff65865caf6bba6c5aa60fd3e6c04af005e"
+      },
+      {
+        "path": "data/zones/occult-egress/traps.lua",
+        "sha256": "809f799782f1cb67a08c38aba57bacfac83038b35bd74d84debc29d99c158b08"
+      },
+      {
+        "path": "data/zones/occult-egress/zone.lua",
+        "sha256": "572d5c4511d4ab43c9efb3f2a399e617667f2d038296687782426eeaf99a765e"
+      },
+      {
+        "path": "data/zones/scourged-pits/events.lua",
+        "sha256": "44a576ac4671ee3dfcd1aae81a94a62b39e8752a8930a1b18dc7cc6c214501e8"
+      },
+      {
+        "path": "data/zones/scourged-pits/grids.lua",
+        "sha256": "040d0352f4168e8d580d070fb67cf8e4c66887e029b9f13a8276dda596ee75d3"
+      },
+      {
+        "path": "data/zones/scourged-pits/npcs.lua",
+        "sha256": "006939d722fc43c98bc76db4d8fdc4f686c674f49cf2840e11f268af7b99a6a2"
+      },
+      {
+        "path": "data/zones/scourged-pits/objects.lua",
+        "sha256": "0a54d7684950548ad75669e8ae546afc9fd42ce2f2c2f764d92411465d190825"
+      },
+      {
+        "path": "data/zones/scourged-pits/traps.lua",
+        "sha256": "809f799782f1cb67a08c38aba57bacfac83038b35bd74d84debc29d99c158b08"
+      },
+      {
+        "path": "data/zones/scourged-pits/zone.lua",
+        "sha256": "00e92ca9313575dbd4c231136e1a53efb5b34fccf4d62b16a15d568af1d97313"
+      },
+      {
+        "path": "data/zones/test/grids.lua",
+        "sha256": "ea64ab67bc19eee843275948eb6c4539695c9ed57369ef367e2d298d9aa00935"
+      },
+      {
+        "path": "data/zones/test/npcs.lua",
+        "sha256": "6cc08be3041889e6e7223c27b056f6d8db173e75108e881fb20aea64234b5cb9"
+      },
+      {
+        "path": "data/zones/test/objects.lua",
+        "sha256": "0b542ae1ea53b2cffb2211dd5d867b85f947d591b9b5f5a92aef30ca75ba341f"
+      },
+      {
+        "path": "data/zones/test/traps.lua",
+        "sha256": "fb291aa06e540f31fc71e0d33fef70ce4aff147650c7b1308c39e1bac9d88577"
+      },
+      {
+        "path": "data/zones/test/zone.lua",
+        "sha256": "dcfd3787c5d3e42d7a56d19e5471f284425b2b83853a7c9ee50cd867b85d7436"
+      },
+      {
+        "path": "data/zones/town-kroshkkur/grids.lua",
+        "sha256": "1506e0993166dd9afbd183eaba771e9092eb9dff16464d8476c061797aad875d"
+      },
+      {
+        "path": "data/zones/town-kroshkkur/npcs.lua",
+        "sha256": "4ea5435705bd938d1d5b7d047806670126aadc5cc148810bb97c91b6efdb61e2"
+      },
+      {
+        "path": "data/zones/town-kroshkkur/objects.lua",
+        "sha256": "ee915715e945a67a34bf50a75f997b805d0ecffe5ee4ebdc037994e13d10b896"
+      },
+      {
+        "path": "data/zones/town-kroshkkur/traps.lua",
+        "sha256": "fb291aa06e540f31fc71e0d33fef70ce4aff147650c7b1308c39e1bac9d88577"
+      },
+      {
+        "path": "data/zones/town-kroshkkur/zone.lua",
+        "sha256": "0bf7e058305f5cdca551b8777743361428836d095059bbe466c77a5e0ef95fbc"
+      },
+      {
+        "path": "hooks/bonestaff.lua",
+        "sha256": "20d404c6af4e0548526239461831ee4967082b826e20c5827b1bf296d5d65dfb"
+      },
+      {
+        "path": "hooks/load.lua",
+        "sha256": "5d58a01b2436f769d43f076b8e9664a020fee3b47346ea056488e8c84226bfd7"
+      },
+      {
+        "path": "init.lua",
+        "sha256": "a26acc6da3bdc154fe21434f771ca9c54b190fda1c96b201b63eafc6cd3cc726"
+      },
+      {
+        "path": "overload/data/font/packages/cults-dlc.lua",
+        "sha256": "d9bd18300913d153570d210476cd1b21842b7c89e3f23822f7be08ea67f919ed"
+      },
+      {
+        "path": "overload/data/gfx/particles/all_is_dust_vortex.lua",
+        "sha256": "302d6926bd9de9ae07b3fec4b609f205af48f7d6d48c64b73eb923d8eef566a2"
+      },
+      {
+        "path": "overload/data/gfx/particles/bursting_entropic_shader.lua",
+        "sha256": "a669e0f94d7d164c9efed77a568848763291354014d8a8e2266c2563ebd133ed"
+      },
+      {
+        "path": "overload/data/gfx/particles/decaying_ground.lua",
+        "sha256": "3aa06c839031bb7b3e10f127a2ebe53df3658caca00d3a87ad8b9129cb8ec888"
+      },
+      {
+        "path": "overload/data/gfx/particles/decaying_guts.lua",
+        "sha256": "a39391a65a770c02a1b811820d9e9d7ec134b1940d20ec32aa09e8a69733cb09"
+      },
+      {
+        "path": "overload/data/gfx/particles/digesting_foe.lua",
+        "sha256": "acb803853d3b9305f1b56cb312610e3da2b32b972e3d52552feac534f8f37be9"
+      },
+      {
+        "path": "overload/data/gfx/particles/entropic_wormhole.lua",
+        "sha256": "2bbe36231a8fdb9d073bda1e19b248a37e4c3b1625de6f98e78133da524946b6"
+      },
+      {
+        "path": "overload/data/gfx/particles/fatebreaker.lua",
+        "sha256": "d4653f16bcd0258aedc6f50b703d8cb0b13cff677af725b845fca229930ed93b"
+      },
+      {
+        "path": "overload/data/gfx/particles/grung_civil_war_flash.lua",
+        "sha256": "495db8fd4ab7462545d898dc76ee537e056174598c02c5e0f06536d84eebd691"
+      },
+      {
+        "path": "overload/data/gfx/particles/house_orbcontrol_red.lua",
+        "sha256": "b42def857d53083e0ef0de96e83c19711b31b006d11decd80bd3b5e423e9ff55"
+      },
+      {
+        "path": "overload/data/gfx/particles/hypostasis_entropy.lua",
+        "sha256": "38288a9825c8cd339f24806fe0e9d2f29bf3cc537a07853a387bdbae29fa1adc"
+      },
+      {
+        "path": "overload/data/gfx/particles/maggot_breath.lua",
+        "sha256": "ed6f959bb816b3749df3636520fd65a64cd4c5c8860fa09b4bd3a56ccdc91942"
+      },
+      {
+        "path": "overload/data/gfx/particles/nether_teleport_in.lua",
+        "sha256": "46c4f16cbd1935009d0e2f418ef2374a9291aef8d2bbdabb29029ff6777ed89f"
+      },
+      {
+        "path": "overload/data/gfx/particles/nether_teleport_out.lua",
+        "sha256": "051ae80e9ca77635b4ec4d1b50ce7096ef7439f4f85c6b4f2fc6bbe6d6f8a914"
+      },
+      {
+        "path": "overload/data/gfx/particles/netherblast.lua",
+        "sha256": "23117d6d13bf6717d3bf29713dcff9bd3507bbcb7ca0289647d18087cde188eb"
+      },
+      {
+        "path": "overload/data/gfx/particles/nethergate_shader.lua",
+        "sha256": "8f9e995440a31b819d2331e7d98d46a48a0e4e81433cb833ba91d4efad3813fc"
+      },
+      {
+        "path": "overload/data/gfx/particles/netherlance.lua",
+        "sha256": "d7ae0f9d92fc678a901593f9eb77b8d4d878947c2e8b7713a7fe3899d13b4995"
+      },
+      {
+        "path": "overload/data/gfx/particles/occult_egress_activator.lua",
+        "sha256": "c784d07d2925a1e35b6d2fc713e89aa3c551bc2fe5d75c4b1e9707d91f73c1a4"
+      },
+      {
+        "path": "overload/data/gfx/particles/occult_egress_portal.lua",
+        "sha256": "848fabdb13664cebf93acb87a50e5b89bb1777827d4936a01f9136bfb1235b77"
+      },
+      {
+        "path": "overload/data/gfx/particles/occult_egress_rings.lua",
+        "sha256": "53fc9cbd5249b1a0dbca01a69d10d9eb1f7168730533ae8547f43f0eec7539cd"
+      },
+      {
+        "path": "overload/data/gfx/particles/power_overwhelming.lua",
+        "sha256": "b342822ab417e237ae2eb6e81b6adbea600709d3b3af646916338f3f4d736d77"
+      },
+      {
+        "path": "overload/data/gfx/particles/rift_alert.lua",
+        "sha256": "393bca2935dacb606efaa6835a4ae5d6baa9d9e28c6c572e5e7d306e2be12ed7"
+      },
+      {
+        "path": "overload/data/gfx/particles/tentacle_field.lua",
+        "sha256": "1393440965e511577ea20f7e4da3b41c8399410ec1ce94ffbc88d75130d120b5"
+      },
+      {
+        "path": "overload/data/gfx/particles/tentacle_ground.lua",
+        "sha256": "309c36b6152d85d7f0fc9cbc56dfb601e33080205b6f573cd4c8e3ee0a10fb31"
+      },
+      {
+        "path": "overload/data/gfx/particles/tentacle_lash.lua",
+        "sha256": "8bfaece52c99f93acc16016f58e8c3c12a79b3ef5dcdf9ef6583fd0c049c1db4"
+      },
+      {
+        "path": "overload/data/gfx/particles/tentacle_pull.lua",
+        "sha256": "39067e35d16a7c787b6612d3144c9fdc0fa0606c272ac04ecace636252197fe6"
+      },
+      {
+        "path": "overload/data/gfx/particles/tentacle_tree.lua",
+        "sha256": "dd92209f8f9c4f4c2a69aaf4539cec0fdb0b157c47dd7b97181c4b26bd0954f0"
+      },
+      {
+        "path": "overload/data/gfx/particles/tentacle_tree2.lua",
+        "sha256": "99a6422f2df0e5ae70d03eb4c1c7d603d5f024799c0f0ef12d9a83fe3baae65a"
+      },
+      {
+        "path": "overload/data/gfx/particles/terminus.lua",
+        "sha256": "b6dd570bb752a71af375388d55b6e828745efcdee7989e745b0a7fd5c7b1012d"
+      },
+      {
+        "path": "overload/data/gfx/particles/unstable_rift_explosion.lua",
+        "sha256": "5302aa3d3b321ccfcda8c27beb928a7462d11afe4907140441b6ca0e20439625"
+      },
+      {
+        "path": "overload/data/gfx/particles/worm_nest.lua",
+        "sha256": "b9c6d365cb841c47382172a44595d2f5befb17d4e05e9f9dadfbb57dee77e3a7"
+      },
+      {
+        "path": "overload/data/gfx/shaders/cults_book.lua",
+        "sha256": "8f37d0a722dff9526ee4bd110e4bd3ecde3e18eae0a8711495f36cd0111b7e18"
+      },
+      {
+        "path": "overload/data/gfx/shaders/cults_book_seens.lua",
+        "sha256": "a6f5f885484b273beb7b7f79882c17da6c890df248d5060ed59789344466071d"
+      },
+      {
+        "path": "overload/data/gfx/shaders/entropic_starfield.lua",
+        "sha256": "6fb70675da6f604336061e01dacacfc405132aec268888e9b60872d794e2d930"
+      },
+      {
+        "path": "overload/data/gfx/shaders/godfeaster.lua",
+        "sha256": "fbb7421e9deb2de09d3d4d70f4654fb57250ffb59e4b9dbe58966fc474db4d89"
+      },
+      {
+        "path": "overload/data/gfx/shaders/maggot.lua",
+        "sha256": "759b2f55068921c2bbbef8371f18062b92d79d5da231065ef92980e0e4acb640"
+      },
+      {
+        "path": "overload/data/gfx/ts-gfx-cults.lua",
+        "sha256": "42f2d2cafa657e07928c2c3969f22633e73b24badd2354ab1cb0bd745b9f9727"
+      },
+      {
+        "path": "overload/data/sound/actions/tentacle_attack.lua",
+        "sha256": "879d78d084255c16bbf2d4a79a47963b684f301ea0320353d42292a21c426ce7"
+      },
+      {
+        "path": "overload/data/sound/talents/netherblast.lua",
+        "sha256": "114f1bbd1a9f472be8eb95ab082eefaf34b3cb6031da315d8056a7254a54ea32"
+      },
+      {
+        "path": "overload/data/sound/talents/prophecy.lua",
+        "sha256": "af946d92124a027295366ad3c020ba78a488a104c745c418e23d037011a5da56"
+      },
+      {
+        "path": "overload/data/sound/talents/vile_breath.lua",
+        "sha256": "71b218ef7b199f2482575f076539f022f98e7e13c00ee1093473aa1f47616dc3"
+      },
+      {
+        "path": "overload/data/texts/intro-cults.lua",
+        "sha256": "e68e7487d6155fd2b50b9fd7502352ffb5b9db9cb68acf62b267565fca42ffac"
+      },
+      {
+        "path": "overload/data/texts/intro-krog.lua",
+        "sha256": "6d176a8cfaba9f998250227e60c40f5d784a4a3c9ecaf876343dbad210adb3cb"
+      },
+      {
+        "path": "overload/data/texts/unlock-cosmetic_class_alchemist_glass_golem.lua",
+        "sha256": "6716fffb1a24c22c8e438ac4977267dc4d11ab45313400c2ffee767c936ea5fb"
+      },
+      {
+        "path": "overload/data/texts/unlock-demented_cultist_entropy.lua",
+        "sha256": "8889d2265fe0a39c147bc98bbc337c3634f7b106e8bfbce7b7a21baafee9de66"
+      },
+      {
+        "path": "overload/data/texts/unlock-race_drem.lua",
+        "sha256": "9fbe2c05a7bf75c2e052569ea4a6dce9f0942ce9b19c40df32cb49c279fdbbb8"
+      },
+      {
+        "path": "overload/data/texts/unlock-race_krog.lua",
+        "sha256": "a42188562c2979f381e558f2a75a1fd5686041ac5554cab2d39234392f740de1"
+      },
+      {
+        "path": "overload/data/texts/unlock-wyrmic_scourge.lua",
+        "sha256": "295374bc6f4aaf5749f6621dbc3beb2e3a55315af08f9fb275e1eec9628d5b42"
+      },
+      {
+        "path": "overload/mod/class/CultsDLC.lua",
+        "sha256": "80e2fe3b8550f162cc04e60212746897864394741074dda096ce4c2a89c67bcd"
+      },
+      {
+        "path": "overload/mod/class/generator/map/DremshorTunnels.lua",
+        "sha256": "e45efaf202a8d32b9fe8378b5e24d0e0c3ae47a198d9f825555bd6a7a5c4aa36"
+      },
+      {
+        "path": "overload/mod/dialogs/EntropicWormhole.lua",
+        "sha256": "ce0e6d7f81b05e8ce19ab979dac895998a639e462b61bcb44e4bc17aecafc4d7"
+      },
+      {
+        "path": "overload/mod/dialogs/FangedCollarDeath.lua",
+        "sha256": "5e728cf178c30db8321a3f69eb4f8b93130695227b027e8c844f2e00c9399c79"
+      },
+      {
+        "path": "overload/mod/dialogs/FontSacrifice.lua",
+        "sha256": "d599bf6b283a9055f6cf24fc811eb58ef7fcb95aeb11ad22862aa163339b2b3c"
+      },
+      {
+        "path": "overload/mod/dialogs/ForbiddenTome.lua",
+        "sha256": "8f01f826b78cda474da812bd46e33384e0ed0a2f139fcf4491835e3b70c461c2"
+      },
+      {
+        "path": "overload/mod/dialogs/RingOfTheHunter.lua",
+        "sha256": "2894023dcca501a035239c74a9873ff4df4e1433f2513c6203e352a6705d33fa"
+      },
+      {
+        "path": "superload/engine/Birther.lua",
+        "sha256": "7f50dd7edcd4354f87fe52e52071d8c67885dd961d380e71729ae61fcee59c12"
+      },
+      {
+        "path": "superload/engine/Map.lua",
+        "sha256": "f9d81e4567c3d0766927eb0db9be17561e020d74fafbbb338601d56ad383ce1e"
+      },
+      {
+        "path": "superload/engine/dialogs/ShowErrorStack.lua",
+        "sha256": "41bbd9c26d2989eb2e99d200e30c439ee6505c5ee53e24465f56273609c9afd7"
+      },
+      {
+        "path": "superload/mod/class/Actor.lua",
+        "sha256": "36dbca08111b6a7e111ff3c5f9ebceebf8d3931c73258e953cdd6c9c670cb64f"
+      },
+      {
+        "path": "superload/mod/class/Game.lua",
+        "sha256": "765df32782249dfb0d2db6a80a30c81052b40494456332815d95052ee0aef008"
+      },
+      {
+        "path": "superload/mod/class/NicerTiles.lua",
+        "sha256": "479b0490a13be523209e37a7f8994e6fab252894a8c6789513a310262bae16a3"
+      },
+      {
+        "path": "superload/mod/class/Object.lua",
+        "sha256": "fa852fcbc19c59a11bfafe1fbb1966b9deb2b6b40e83848e86ba9108888de493"
+      },
+      {
+        "path": "superload/mod/class/interface/Combat.lua",
+        "sha256": "286287389763a7390b141216378c81c762124043deef6bff45b479470d01cf60"
+      },
+      {
+        "path": "superload/mod/dialogs/Birther.lua",
+        "sha256": "3fc5685ba01df7c4ba1bd050b1fd881e238d1945fa45c9b77487ef390dceb542"
+      },
+      {
+        "path": "superload/mod/dialogs/LevelupDialog.lua",
+        "sha256": "a8c4c4c02f58369294fd765ed0eaa730219f3e6cf1794f0fe89fe45be0a5ac87"
+      },
+      {
+        "path": "superload/mod/dialogs/ProphecyGrandOration.lua",
+        "sha256": "d6c9d0301aa6c1724afc1b2c1324ee702ec589122df1c68b4775895dfa500c41"
+      },
+      {
+        "path": "superload/mod/dialogs/ProphecyRevelation.lua",
+        "sha256": "a4c4d09d52ec20f23edac9f001e0d38ddb04af6d4c1798361c89584347bb4248"
+      },
+      {
+        "path": "superload/mod/dialogs/ProphecyTwofoldCurse.lua",
+        "sha256": "0735da74c170544cddf7891ac4d11cdc653a3e86415aa82edad7657c5962187a"
+      }
+    ]
+  },
+  "orcs": {
+    "source_commit": null,
+    "provenance": "User-provided local public GPL source; version not pinned by translation manifest. Exact Lua content hashed for this review.",
+    "files": [
+      {
+        "path": "data/achievements/special.lua",
+        "sha256": "8d66841101e7d248caa48d7a7ffe8ec7c442139f1e2ace345d830b1fd7c512ed"
+      },
+      {
+        "path": "data/achievements/story.lua",
+        "sha256": "7e784faf8140f6280c5c96543540e676d9e43e28c75c48d548be55e781da36bd"
+      },
+      {
+        "path": "data/ai/aeryn.lua",
+        "sha256": "d9abdd0e9ef89f3e25f9c6a2ddcdd26fb889a593b36aedcab795468400455202"
+      },
+      {
+        "path": "data/ai/specialheal.lua",
+        "sha256": "c1e5bba2e103b596e54ba8486a11634492bb661241354f4c1f011d21f6dda66d"
+      },
+      {
+        "path": "data/birth/classes/empyreal.lua",
+        "sha256": "b43c98aa728096cddd9c21b110f01062d2257111f64d3c35671a4015d5ede716"
+      },
+      {
+        "path": "data/birth/classes/tinker.lua",
+        "sha256": "861b8e9bc8ff8ccb64a86a5f9b62f38ac654854a78f4f4004bdc0dace84aecda"
+      },
+      {
+        "path": "data/birth/classes/wilder.lua",
+        "sha256": "178ad2ecfc89705bf2be9b30d2400e2ac15c786e91b32d8ffcdac46938afd428"
+      },
+      {
+        "path": "data/birth/races/orc.lua",
+        "sha256": "ca16dcf53d966d9370f0d8eb4ce2be7274baa4a529a2dd53047b1cdbea357349"
+      },
+      {
+        "path": "data/birth/races/whitehooves.lua",
+        "sha256": "cd8b76bbf482ee7fee50bb8f725a37bc6312ac1f9620f15870f3fa59a8e32249"
+      },
+      {
+        "path": "data/birth/races/yeti.lua",
+        "sha256": "7b14b94d81eee194a0cba526ad44af8153d9d1a20a4f2786faf36b9ef9a44718"
+      },
+      {
+        "path": "data/birth/worlds.lua",
+        "sha256": "b0a74b2e0cf417bf151a2cafad4f73d59cbf5106c0814bd63c6dbb3063cc1eb6"
+      },
+      {
+        "path": "data/chats/aaa.lua",
+        "sha256": "a6ba39c8ae976f34acae047b4452d91560f7d25d5456c305c35af621b526ec94"
+      },
+      {
+        "path": "data/chats/aaf.lua",
+        "sha256": "d69c885524b0d58c49d7155f0df83041452feb5c9d89befe6ec04a42ea9a7725"
+      },
+      {
+        "path": "data/chats/destructicus-lead.lua",
+        "sha256": "7993d608092641c94db0e1d037ab97ed6ddb21ecd6c7296f932b7d777a044d6c"
+      },
+      {
+        "path": "data/chats/destructicus.lua",
+        "sha256": "ecf3e77e122a0e3b8321f71ad93355fa284519c4dcb24cba23b50ab05524fc98"
+      },
+      {
+        "path": "data/chats/john-surrender.lua",
+        "sha256": "06d44429189f8d5a9e3d7c783fcb0b4e0fd32e11c59874f4d540446abc8c341d"
+      },
+      {
+        "path": "data/chats/john-worldmap.lua",
+        "sha256": "b645caec0ff82570b1f98a02cff5254ec88813cec8a49419ca52d949b026c213"
+      },
+      {
+        "path": "data/chats/kaltor-entry.lua",
+        "sha256": "ec2bf741cb12a2bbe690338a0ba04c6f74d6be0674d81e407b3d3aeb68cf1884"
+      },
+      {
+        "path": "data/chats/kaltor-shop.lua",
+        "sha256": "1012ca4c496b61747f5aa45d8e7938d22ade3b27678ecdd0018b7c9577b41a76"
+      },
+      {
+        "path": "data/chats/kruk-tinker-shop.lua",
+        "sha256": "7d5f56f118818c2307f2839d9c1f967945a4add967113253b6bee6ce7f3c3162"
+      },
+      {
+        "path": "data/chats/metash.lua",
+        "sha256": "3fc7895e851e1a3dd1ca6941387ddf9dbfa7cd9a5a532346e9f2431100ff9300"
+      },
+      {
+        "path": "data/chats/phonograph.lua",
+        "sha256": "1dc82e914b4389852e0a50dabebbeaf0100f0631c139155ac436f15e91eb493d"
+      },
+      {
+        "path": "data/chats/shertul-priest.lua",
+        "sha256": "55852b8feff7dd06e68a016c6b4bc809bcc3cdb984e8a8161b797ba8899e2a89"
+      },
+      {
+        "path": "data/chats/weissi-machine.lua",
+        "sha256": "f7bd1c9adb4c83192eefcf06ea4068ac9e27791ed063feab279a730bacc9dc9d"
+      },
+      {
+        "path": "data/damage_types.lua",
+        "sha256": "19256d2673432e01a92db25a320a4a24c66f034dca35de82bcb8e42cdec91c45"
+      },
+      {
+        "path": "data/factions.lua",
+        "sha256": "045ab80db195f9fb89df89b95f4604919b3a3702f18350a47431824e00ee5bd1"
+      },
+      {
+        "path": "data/general/encounters/fareast-npcs.lua",
+        "sha256": "a6c15771741406276e34d021ed0fc5efa063e78f36dc7832733c4c752aa733b9"
+      },
+      {
+        "path": "data/general/encounters/fareast.lua",
+        "sha256": "5872355b00b562938913bf45f5793de2b4828bd26e8831969c165dbb5027a677"
+      },
+      {
+        "path": "data/general/encounters/maj-eyal.lua",
+        "sha256": "1581707dae55b6df3c95c375099d90960bc313f915583c1a600fcb7ee7d91c38"
+      },
+      {
+        "path": "data/general/events/AAA.lua",
+        "sha256": "18f2c4d7f1f7657db55cd05c5f3fdb77197395629c207182777387745984d065"
+      },
+      {
+        "path": "data/general/events/campfire.lua",
+        "sha256": "7b64db5cae738250859adaaa2cb75948318977778f50a1862885e7895aa1a5ec"
+      },
+      {
+        "path": "data/general/events/celestial-well.lua",
+        "sha256": "2ca189d70bc66e6b933c342167fb6fcd861ac7c7c8d2d1c65d22741c505d714c"
+      },
+      {
+        "path": "data/general/events/drills.lua",
+        "sha256": "5c62423227cc4f956e97fef03ceeac223d5b4416de335e45b8b7714d1aa5b41c"
+      },
+      {
+        "path": "data/general/events/herbs.lua",
+        "sha256": "3cd6a959767314bc46487341d99b28f924eb4cb29f6d9db85a1c044e88cf2415"
+      },
+      {
+        "path": "data/general/events/merchant-stall.lua",
+        "sha256": "a31e63f8d7c76af5e5e82857fd231ceeb3ca2d9d6a9784456b189240f3a993c9"
+      },
+      {
+        "path": "data/general/events/sewer-alligator-nest.lua",
+        "sha256": "64d7e7b2d0b783fd3e442bcc8fb8f5ba9941ee17177ac6d1f0dc01528f6f8a84"
+      },
+      {
+        "path": "data/general/grids/manacave.lua",
+        "sha256": "a9119ba9d4fc1bb0a76491979c1eb872ce5f1cc184d1bbf0bc2a228f99de3a11"
+      },
+      {
+        "path": "data/general/grids/mechstone.lua",
+        "sha256": "a9828d1164494c24c50d37db4147d81ecc9d5aa9bb400c733d301d52143ec8d6"
+      },
+      {
+        "path": "data/general/grids/mechwall.lua",
+        "sha256": "1178b72d8e3f3eee8a133c4b8d35b409a4b4f088fba5ac5622f80c7ec22aa88f"
+      },
+      {
+        "path": "data/general/grids/primal_trunk.lua",
+        "sha256": "9aa6e0def00fd092d5c7deed8352dc3a04cb535424ee2c220575d782c8935b43"
+      },
+      {
+        "path": "data/general/grids/slumbering_cave.lua",
+        "sha256": "ef56dbe78590ea606ad0b4be726f4461b224b8f556f1fed7348a02ab8f371f09"
+      },
+      {
+        "path": "data/general/grids/snow_mountains.lua",
+        "sha256": "f2bbe53ce8f8dcc51a2e49686b3c2ec8b3010aca13956ce84e9f9d9a97dbbdc4"
+      },
+      {
+        "path": "data/general/npcs/alligator.lua",
+        "sha256": "f113be39303521a859f2266c9efd4c1ba8893b84d23999312b52585378315990"
+      },
+      {
+        "path": "data/general/npcs/domestic-yeti.lua",
+        "sha256": "6ba69955048886d22d0022d8427d3ef3f9ce176d98e8eb5fd0300c8187a033b0"
+      },
+      {
+        "path": "data/general/npcs/hethugoroth.lua",
+        "sha256": "a24a0c370c2f5256264fafd5089cbcb93330e96b9a84da78d982d42184cc9f6b"
+      },
+      {
+        "path": "data/general/npcs/horror.lua",
+        "sha256": "f3746a6badb901ce4ba528b6a69329018db0912a9bcaf33c0f984696268da7e0"
+      },
+      {
+        "path": "data/general/npcs/plant-add.lua",
+        "sha256": "def6c540d8bd128166bd04eefe32de9e38544a1abda4bb3349906f3200279521"
+      },
+      {
+        "path": "data/general/npcs/ritch-extended.lua",
+        "sha256": "689b559b1f6d41d87a9b1d1fd18bcef13a9ecd7a7763f65b4e730d820f4010ed"
+      },
+      {
+        "path": "data/general/npcs/snake-add.lua",
+        "sha256": "a3f0bd33e80cb2fb7bcac2401540bbfe483231a9af1cbfecadb1726ef82f3290"
+      },
+      {
+        "path": "data/general/npcs/steam-drone.lua",
+        "sha256": "babb5e29618368207dced9fd2ddc3439708a593375a66f50e34292e7cabcaac3"
+      },
+      {
+        "path": "data/general/npcs/steam-giant-arcane.lua",
+        "sha256": "aaa8066ebe2403ca796c92e524a2257e9f69cbfb02d96507d505f9a7cf408bdf"
+      },
+      {
+        "path": "data/general/npcs/steam-giant-gunner.lua",
+        "sha256": "be9f8db2607fac0f6886a85fd1e9d3bb9511abed7cd47e9afd1670d8fb4c31fb"
+      },
+      {
+        "path": "data/general/npcs/steam-giant-warrior.lua",
+        "sha256": "8353ffdafbff220a30917de72303550e4ce8c80c90cbf8bf05dcbb256e9ed23c"
+      },
+      {
+        "path": "data/general/npcs/steam-spiders.lua",
+        "sha256": "fd4e0d050c9b647444d5f8afc8dd52735ae91739ed3e3cb2406c9e500d5727bd"
+      },
+      {
+        "path": "data/general/npcs/sunwall-mage.lua",
+        "sha256": "e2c2dcc9032322557162ee405340f79983c74a90d441598fdd9badc668de8d38"
+      },
+      {
+        "path": "data/general/npcs/sunwall-warrior.lua",
+        "sha256": "11f12f5021eb0b0893d99b707cf72d4c669e75fed0727a62db0193582f6ec82a"
+      },
+      {
+        "path": "data/general/npcs/titan.lua",
+        "sha256": "04ed7282e4a6c9a97797c65374ecc4217c48d211a2626b5d71de84b9ba11b5ff"
+      },
+      {
+        "path": "data/general/npcs/troll-pirates.lua",
+        "sha256": "8df72e63faaaa83e71b6e22d8203f8c2b200331068e32b5e1b351bf7c4ff6436"
+      },
+      {
+        "path": "data/general/npcs/undead-drake.lua",
+        "sha256": "f43023906cbfbb411d418a1c5ef075400f2d9300de4882cc8059931712fdd663"
+      },
+      {
+        "path": "data/general/npcs/whitehooves.lua",
+        "sha256": "b55b195ec5469c0750d5d6aa4aa2e3bdda4524c4d9eade51dd2185df1c65b61a"
+      },
+      {
+        "path": "data/general/npcs/yeti.lua",
+        "sha256": "bea5a71590958346e2a3bce8f42efeed28a2083fbe772cd06b4e6266e936f993"
+      },
+      {
+        "path": "data/general/objects/boss-artifacts.lua",
+        "sha256": "36df9dd238870ae38eb0031eca88284db37f7f855144b8cd373a4e3286514827"
+      },
+      {
+        "path": "data/general/objects/egos/steamgun.lua",
+        "sha256": "5d2bb97093477c0eb1ffe67323b383b7929777ba7fb8d05ecdcfa5aaa5b1d7c7"
+      },
+      {
+        "path": "data/general/objects/egos/steamsaw.lua",
+        "sha256": "eab0d628503d4c3eaa48f2e45def9bbf6cb1c21cd995f2075f40ef9e5964db80"
+      },
+      {
+        "path": "data/general/objects/generic-world-artifacts.lua",
+        "sha256": "07e4e0898b9cdfd6fdcf5700039221466d899f30a83d1df06a706e8800eb7542"
+      },
+      {
+        "path": "data/general/objects/generic.lua",
+        "sha256": "00e5a884a2b21b69de173c6b49a29319f81ebabfbeb730b8f72147ce4289cc7a"
+      },
+      {
+        "path": "data/general/objects/inscriptions.lua",
+        "sha256": "fd666991fdc49b7ec8da885ba07338c97e57a1c6c57bfdbd32893cf1112abdd8"
+      },
+      {
+        "path": "data/general/objects/leather-hats.lua",
+        "sha256": "62b833d929011db0cec78a9e2bce16a82fd7107173d1b112329343b419cf40b9"
+      },
+      {
+        "path": "data/general/objects/lore.lua",
+        "sha256": "c9c6531a90a934bc1a87fcf7b989bc75d8e3fa69d7a40f22eb0558ffb7250dad"
+      },
+      {
+        "path": "data/general/objects/objects.lua",
+        "sha256": "7613e19d57abcf6e3a2db29cd05b5987277fb1e8c1088f2cb1c7e86aec9e5542"
+      },
+      {
+        "path": "data/general/objects/quest-artifacts.lua",
+        "sha256": "176a9edc178cbefa9ac3dfa0c9baa05079ebf85d79d1e89fc7a5b1d9ca3f8dfc"
+      },
+      {
+        "path": "data/general/objects/random-artifacts/steamsaw.lua",
+        "sha256": "fb4dd661800156552d3b8bf9b43dfdd4fd519b9705f6166c2a4dca1d92d90cee"
+      },
+      {
+        "path": "data/general/objects/schematics.lua",
+        "sha256": "50b6773344e9eef7ea948d850a252b4697ada6cc478a86d0f1bead127c9c0459"
+      },
+      {
+        "path": "data/general/objects/special-misc.lua",
+        "sha256": "b3b5303cb83530a1e345625e911ab3185f23baa441c1712e9d90c7796019554a"
+      },
+      {
+        "path": "data/general/objects/steamgun.lua",
+        "sha256": "ec31d31e88ad60683a8556316a9efa29c2897c8fb7dc02ce9d543166a2ea8726"
+      },
+      {
+        "path": "data/general/objects/steamsaw.lua",
+        "sha256": "d356147892be7253c871e411512d1a9f1d91d495f84ad5b0321e0068898198b5"
+      },
+      {
+        "path": "data/general/objects/tinker.lua",
+        "sha256": "3b9f8934a74f16c31ff94447274a2372adc9fabc78c05d9875fcb0fac45befc3"
+      },
+      {
+        "path": "data/general/objects/tinkers/chemistry.lua",
+        "sha256": "5edcb9e4d027fa3dce70c3c32d9f5363546e2d4a89ed6ae52b9e54e3b7ae98ec"
+      },
+      {
+        "path": "data/general/objects/tinkers/electricity.lua",
+        "sha256": "9f681becf935fab0f48918afe9ea1e68d6a2bb935e12227d8e7d8ca91741a88b"
+      },
+      {
+        "path": "data/general/objects/tinkers/explosive.lua",
+        "sha256": "57f60e297aacc842d85c46efb405296c3de966cf30d8c429109653b75b46d596"
+      },
+      {
+        "path": "data/general/objects/tinkers/mechanical.lua",
+        "sha256": "11ceae3916a5945c7f655d606a2d7fc882e11e790cf46689c27e58980898db46"
+      },
+      {
+        "path": "data/general/objects/tinkers/smith.lua",
+        "sha256": "f3bef5246737c0b052dc544df65f5f899dbaaa54ace6357297e7afae41559dc9"
+      },
+      {
+        "path": "data/general/objects/tinkers/therapeutics.lua",
+        "sha256": "3b910e0879a793467a96401c189593f044221dd4ad12f717a2f72aa3ca83ef1b"
+      },
+      {
+        "path": "data/general/objects/world-artifacts.lua",
+        "sha256": "4d1225a3e95750fde970a5c6610d5e8a24b690c329f86c866e8a2074de70248c"
+      },
+      {
+        "path": "data/general/stores/orcs.lua",
+        "sha256": "7d453377ecb2ecde1515f295aff64fa8bf1f32a5c90dd24faa69f3377de862b1"
+      },
+      {
+        "path": "data/general/traps/ritch.lua",
+        "sha256": "6cf998689dfb3fdeea590a9ee6f8ed88abaea2c0d6f45fbbef55c8141aff4f8b"
+      },
+      {
+        "path": "data/ingredients.lua",
+        "sha256": "45a12c683701af967591f26004de4df080f965bc3ac7c4480ad4a68cd3b86ddb"
+      },
+      {
+        "path": "data/locales/ja_JP.lua",
+        "sha256": "7cbe8bef2b74857d11e4858882f5639c25cb7c11d89df0bb054bc5f5aa910d54"
+      },
+      {
+        "path": "data/locales/ko_KR.lua",
+        "sha256": "de55ffa3d430d60b5fbd4e7a70f696e05fc9415544a7462378d2d36ee8dfea7c"
+      },
+      {
+        "path": "data/locales/zh_hans.lua",
+        "sha256": "51003a67022fade62b0fa2744362b3023e5ceaf2649210a6bb1a16dd7aa2a0b9"
+      },
+      {
+        "path": "data/locales/zh_hant.lua",
+        "sha256": "95de2fc7d67ee68ee667fdc971c82761d62c731e9346a9b86b1472d45e1d6a9d"
+      },
+      {
+        "path": "data/lore/destructicus.lua",
+        "sha256": "9291383a8807e25982b95c7f3dfbb1149592942114f980ad11ca7d655eacade0"
+      },
+      {
+        "path": "data/lore/dominion-port.lua",
+        "sha256": "cb3293ba2ff29166abbf459511f2f1604a1e515d38022ad62c063f06b5ca01fd"
+      },
+      {
+        "path": "data/lore/emporium.lua",
+        "sha256": "0d5842ad1fcf42199dfcc2606f0dfb7036d8e8687698cb98abd145f73283344b"
+      },
+      {
+        "path": "data/lore/gem.lua",
+        "sha256": "556355e204d6760cbb5e378a17c5fe601ce79fb689c4c8a74e337a78d5eb3186"
+      },
+      {
+        "path": "data/lore/internment-camp.lua",
+        "sha256": "11fb9bc3a1b951d7e4ff74aad440f54734603b4c7f51de9d7277af55e79d61bb"
+      },
+      {
+        "path": "data/lore/krimbul.lua",
+        "sha256": "e0123bf37358aaa4a5dcbded131aca403bf8383501c606e2d3259670fcd2a8db"
+      },
+      {
+        "path": "data/lore/lore.lua",
+        "sha256": "c5a2ef6987f22d1749d08cc3bb363c35bc18078bd2534bc7eb6666319b89376e"
+      },
+      {
+        "path": "data/lore/misc.lua",
+        "sha256": "0f33aa795edeebd717c42cb2ec844eb8e8aebdefbd906c1f79f697a254de33ef"
+      },
+      {
+        "path": "data/lore/orcs.lua",
+        "sha256": "658594985ebc49a65679a21e8fc6396ab0c49c0e28053440dbbf187282f3fabc"
+      },
+      {
+        "path": "data/lore/palace-fumes.lua",
+        "sha256": "b57c1122b56037bd86ca9815e8a59700db548755d9c401e5ee17959a5cf3fc2a"
+      },
+      {
+        "path": "data/lore/pocket-time.lua",
+        "sha256": "a5f2acd61ec4a5ac80bdd6ae7481d6ec55d8973e496a273e19a922ed7f2782ab"
+      },
+      {
+        "path": "data/lore/primal-forest.lua",
+        "sha256": "225ddfc5c71f3a6c03e04e6871072cbbd0b8542cc5031003e1bfc437c86ae51c"
+      },
+      {
+        "path": "data/lore/quarry.lua",
+        "sha256": "2e1ae944fa684c1a79382d651d024fe6db3df631247a1355c4e05cc7f1eddfb5"
+      },
+      {
+        "path": "data/lore/slumbering-caves.lua",
+        "sha256": "736deaf70eeb464e36dfcc67f6e74f64e88c9639ae6bb94ce86fc1d9c529b192"
+      },
+      {
+        "path": "data/lore/sunwall.lua",
+        "sha256": "e80b0cf896d7160ed3e69b411ae4a9b375a813e3b6ba61803d98e46d573d85e1"
+      },
+      {
+        "path": "data/lore/weissi.lua",
+        "sha256": "b486ccb67333e4e1ae9ad00aecd528df45dc92e280dc15421dc1b40c1333ffa8"
+      },
+      {
+        "path": "data/lore/yeti.lua",
+        "sha256": "bb1d3ab46c38c60272fa37af4c5b6949611454e535e8d19a18caeffab5433b67"
+      },
+      {
+        "path": "data/maps/towns/kruk.lua",
+        "sha256": "3570156e30ae936d10aef74468f5e94deb60225e5bc2e69f492f09e4ef4d7ad9"
+      },
+      {
+        "path": "data/maps/zones/dominion-port.lua",
+        "sha256": "dc75519e320daf4f048d68faa76b0ad95cc6adf08c2b90bef53053c59849eab6"
+      },
+      {
+        "path": "data/maps/zones/internment-camp.lua",
+        "sha256": "b5da586863fac308a72bed726cf1f1ae110c76549e750cfcb2015ec76d751992"
+      },
+      {
+        "path": "data/maps/zones/worldmap.lua",
+        "sha256": "8281567293498d7011bb49510a0f74f844456568d50fd614930f5aafe13d5368"
+      },
+      {
+        "path": "data/quests/amakthel.lua",
+        "sha256": "76dc82f285f2f59de94cf39c99e7b91ada241a8550909a779b7ea622bda32f5a"
+      },
+      {
+        "path": "data/quests/annihilator.lua",
+        "sha256": "3357205cbe2abe6dc87b6ca995423e96cd462b36d61c7e1c7029f19119c147cb"
+      },
+      {
+        "path": "data/quests/destroy-sunwall.lua",
+        "sha256": "b40919ef90db5f178873ebb0b6a93011bde41113fc304719a490a8c0fda999da"
+      },
+      {
+        "path": "data/quests/free-prides.lua",
+        "sha256": "116e0eb6cac0269e7560f94e0f72817c49412a3ca0991c92fb3d0aa979933837"
+      },
+      {
+        "path": "data/quests/gem.lua",
+        "sha256": "5b107b0f6925e389a409c09e18666283040ccc9e0989e4d4e0645ce12cb636e8"
+      },
+      {
+        "path": "data/quests/kaltor-shop.lua",
+        "sha256": "cd0b4dd9de060a1b4dfa788209dbdd19d8c6c286b08d01d60ee4d1c0ada11497"
+      },
+      {
+        "path": "data/quests/kill-dominion.lua",
+        "sha256": "be5363c25c6b04069fc49c62c16b38e1dc9240d5d2cb2a1f16d4d996ade1a947"
+      },
+      {
+        "path": "data/quests/krimbul.lua",
+        "sha256": "69ede8c86f79b5c48c74681cff0f3a6960407c1d19db614cfe396f694c2a18f8"
+      },
+      {
+        "path": "data/quests/kruk-invasion.lua",
+        "sha256": "998724b8b5fbaa661c8c70f7d8c7ba897b649a57f43f8af6cd2f2cd43d72e3bd"
+      },
+      {
+        "path": "data/quests/palace.lua",
+        "sha256": "5b2a7be92e2acf6d8c73d083ee43a6a41c2880be07aad13c2c8fc5d3a5718716"
+      },
+      {
+        "path": "data/quests/quarry.lua",
+        "sha256": "00549119c346ad54aa6758ee48c48c130432bc59bffd4d44fb947cc48cf788c8"
+      },
+      {
+        "path": "data/quests/ritch-hive.lua",
+        "sha256": "5aa192075a245905bc1193e51f6fdb0b6c4174e772ef82b349acd53ba5bd4e02"
+      },
+      {
+        "path": "data/quests/start-orc.lua",
+        "sha256": "0ade131f8e712303a5648c5c3dbecd32bbd1ddd5336848a8330c753571d4172d"
+      },
+      {
+        "path": "data/quests/sunwall-observatory.lua",
+        "sha256": "c70e7c1b9c5275119c7e1fa21c96074f68c66d96d05b363737ffba37898d24cf"
+      },
+      {
+        "path": "data/quests/to-mainland.lua",
+        "sha256": "770212cd6651a1a55ccae142328aa6571c14fce05ad864c2086e605403cd48e3"
+      },
+      {
+        "path": "data/quests/voyage.lua",
+        "sha256": "5c0cb6cc3dc00f1a16ae560fed99124758a1e4fa9c4260a27c75994f5eebac31"
+      },
+      {
+        "path": "data/quests/weissi.lua",
+        "sha256": "96ec9b942b415968b29dcaba26409614ef079a1ac7b2142d2ef2d5bc34b17881"
+      },
+      {
+        "path": "data/quests/yeti-abduction.lua",
+        "sha256": "1deae3b1d5b6065ec074778a7bce7266fbefdfafec5140e2450591a2d9c1e42b"
+      },
+      {
+        "path": "data/resolvers.lua",
+        "sha256": "f79bb9dac7f9d0a7b91301528a1bf7f23f92a25cfb0889f5b61f19fa3dbeae90"
+      },
+      {
+        "path": "data/talents/celestial/celestial-empyreal.lua",
+        "sha256": "b783e450260033c8bd2fabfb716bedd02042b525dafa56e8623f976bacc20edd"
+      },
+      {
+        "path": "data/talents/celestial/cosmic.lua",
+        "sha256": "58e81b71d6c0a26b1da120f0e94892c00d2791569c06482bc5c32e44b356219c"
+      },
+      {
+        "path": "data/talents/celestial/crepescula.lua",
+        "sha256": "1cd8e04cd0e589e7fdb7cb62119b2a4c2df8937785b367fd81df3150a385a9b6"
+      },
+      {
+        "path": "data/talents/celestial/energies.lua",
+        "sha256": "2439377daeeb689c7373bd980352e347002e6a724881c0d6236f0cf78b651340"
+      },
+      {
+        "path": "data/talents/celestial/reflection.lua",
+        "sha256": "972f949d6cab2c8040bf554bb944d96ecc4ca79d4b25363ba43a1c980bf04eff"
+      },
+      {
+        "path": "data/talents/celestial/sol.lua",
+        "sha256": "8e0734044266aa280c07f2f34b2dd3243e2a5a56db1a0e8ba42dcc7f7fd0dda5"
+      },
+      {
+        "path": "data/talents/celestial/void.lua",
+        "sha256": "b6c361dedd503e479b8c16c872338a49887aa50742e3f4cade7dca4dc254d305"
+      },
+      {
+        "path": "data/talents/misc/npcs.lua",
+        "sha256": "0e62db4f0a047dd5b335e2bd40ffed4b5a45bf74425c43d4dfadd1421b3f7898"
+      },
+      {
+        "path": "data/talents/misc/objects.lua",
+        "sha256": "da286e18579a9bf18abcec6686a97aa7de055786182e5923c1a4b4823113dba2"
+      },
+      {
+        "path": "data/talents/misc/races.lua",
+        "sha256": "f4c50d76acf3466c75f743bfe9ba09c84019dfaa071e536873f70f45a01907d8"
+      },
+      {
+        "path": "data/talents/psionic/action-at-a-distance.lua",
+        "sha256": "dd6a1ba6bfb4de89349a71150a80432f1ab5c8aa1ca102b071ee9c26be09f42f"
+      },
+      {
+        "path": "data/talents/psionic/gestalt.lua",
+        "sha256": "a9467b5e48458013d77dce1a687e79ec9eccad178746db4efe086075a0d57184"
+      },
+      {
+        "path": "data/talents/psionic/psionic-fog.lua",
+        "sha256": "6bda2c01ed42866462a028bbb2c54b0d45e0dfdbfd459f1439bc16d44b5704cc"
+      },
+      {
+        "path": "data/talents/psionic/psionic.lua",
+        "sha256": "c9005372048f4c70da18e96329c34b4b442aaa70904bdfeee95e4f3a5b84c29a"
+      },
+      {
+        "path": "data/talents/spells/galvanic-technomancy.lua",
+        "sha256": "51cf4356acf382f485bdbcee4fe8a42fc330985889c98b64c7922a43f57bb749"
+      },
+      {
+        "path": "data/talents/spells/occult-technomancy.lua",
+        "sha256": "e918b169766311f8991527fa57fc5018df065fef723d47a5fff6805d37e0d122"
+      },
+      {
+        "path": "data/talents/spells/other-technomancy.lua",
+        "sha256": "2c409f3f3df7d8a40037b0a8afba3239791b38859b59d079945d672812d4b2af"
+      },
+      {
+        "path": "data/talents/spells/spells.lua",
+        "sha256": "f4d02243c9c5d477ef2b7a1c01826026953a855beabfe512d765d12b18486c7b"
+      },
+      {
+        "path": "data/talents/spells/terrene-technomancy.lua",
+        "sha256": "3d48fdd5bf72d4c2c6f1479172acc0cfe1e8dae7a3e64b776a398e386cf9f252"
+      },
+      {
+        "path": "data/talents/spells/undead-drake.lua",
+        "sha256": "bd12aaee8dded0a470023adc12ee748947a1458fc285ea24badc625271478d63"
+      },
+      {
+        "path": "data/talents/steam/artillery.lua",
+        "sha256": "ac57d7e21377d333c198f9259ad576a25f8e4b42658cf92e1333b78473b06db3"
+      },
+      {
+        "path": "data/talents/steam/automated-butchery.lua",
+        "sha256": "a429d63fbf7d283ff2e0c23f8bc9667ee2f4c2a31811612ef89cb479dcb5d6f1"
+      },
+      {
+        "path": "data/talents/steam/automation.lua",
+        "sha256": "a6a503ad9f3f8fd9a72539d8dbfa39d015002d678d54f7497a3911af1258b441"
+      },
+      {
+        "path": "data/talents/steam/avoidance.lua",
+        "sha256": "1c30987300f12e9c1b0056c95d7765d985c80f85adf2fca9bd6121f6fbb2d3f0"
+      },
+      {
+        "path": "data/talents/steam/battle-machinery.lua",
+        "sha256": "c213a3c5b3d968fd0d6fe23b7427d1aeba965157923639faa04a377e1e9d465b"
+      },
+      {
+        "path": "data/talents/steam/battlefield-management.lua",
+        "sha256": "2799a7df70a5fc5ef6cd71fd77b9813b1fbc75e67e36426bc10f3f3c33378e28"
+      },
+      {
+        "path": "data/talents/steam/blacksmith.lua",
+        "sha256": "0ec9dc9025bb72d3017c4ab18950a7e35950de7819ebc5385e8e327bf055b772"
+      },
+      {
+        "path": "data/talents/steam/bullets-mastery.lua",
+        "sha256": "a2d50b662791d71a2343aa175f71383b1d4e9d24031ed5c70084a3ee2214f31c"
+      },
+      {
+        "path": "data/talents/steam/butchery.lua",
+        "sha256": "bfa25b61b72b50db05c1488b8c62b8d9c4a3222a2b822a97dd1e964e6a8ea603"
+      },
+      {
+        "path": "data/talents/steam/chemical-warfare.lua",
+        "sha256": "f03404a27dfa0fd5e0f7a8cbf0d6ab93234f69d23e4d4a09abfec09c34c50af0"
+      },
+      {
+        "path": "data/talents/steam/chemistry.lua",
+        "sha256": "33acbb97f40b0ef14685c64a30cfe7225f68940b80bb7907436d658092030ed0"
+      },
+      {
+        "path": "data/talents/steam/demolition.lua",
+        "sha256": "66e61a2898f55d9b4ab85cf6284022701c3dc70c7c0bd318e26e9dd5e3712f32"
+      },
+      {
+        "path": "data/talents/steam/dread.lua",
+        "sha256": "b23cf87ff058cb74d4673ce4ba68bcbca28b86b229c91864dbb07e7e534ecb8b"
+      },
+      {
+        "path": "data/talents/steam/elusiveness.lua",
+        "sha256": "a32a2aa6489e4aae99d2daa9f055435cc049a7a7b21bd84e39927c7c2cafa424"
+      },
+      {
+        "path": "data/talents/steam/engineering.lua",
+        "sha256": "0e458f7a23ac86b2935f2d448491acdfb44f6fb828286f2438b90eca5bf82689"
+      },
+      {
+        "path": "data/talents/steam/furnace.lua",
+        "sha256": "66df49a75a14a56ea59ee37babb5a41886e714e508cdb65016238841695e6450"
+      },
+      {
+        "path": "data/talents/steam/gadgets.lua",
+        "sha256": "98a8e098a8139165186936596609f00a843578667a01233588489d9f3941848a"
+      },
+      {
+        "path": "data/talents/steam/gunner-training.lua",
+        "sha256": "658bc432e31d805e5eadb0795ac7ae35ecf5d3dbf2c2b7d63eca3397a10a4c69"
+      },
+      {
+        "path": "data/talents/steam/gunslinging.lua",
+        "sha256": "eaff2729974d971d8affd69162efcbbc1d93acfcc5175eb8ebc9cc5460ba2824"
+      },
+      {
+        "path": "data/talents/steam/heavy-weapons.lua",
+        "sha256": "0b4f50fb9226192436c2c2d6265cb7c6237c3cff4bb9e07d55e37faaa04fb1dd"
+      },
+      {
+        "path": "data/talents/steam/inscriptions.lua",
+        "sha256": "7b2ad7cfe14bf5582642401861f87ac086d2e847b3b8601767c17b59b015b398"
+      },
+      {
+        "path": "data/talents/steam/magnetism.lua",
+        "sha256": "b14b2da4ec659318e895a5bbcbb3bf56c68e66636afe1228a34c249ec0f1abed"
+      },
+      {
+        "path": "data/talents/steam/mecharachnid.lua",
+        "sha256": "d4a229c033179400bfeecdf22a6d8c7d8b890754f25cecd82908d413c3fa5102"
+      },
+      {
+        "path": "data/talents/steam/mechstar.lua",
+        "sha256": "e6e5f57a088fe6f750d2ef8daeef2b37f4dd255ba5bdcb81f24a04f67e23229b"
+      },
+      {
+        "path": "data/talents/steam/other.lua",
+        "sha256": "4a12c05410e5f47e466f2ba9f110c9346964a83a2812bad062dc4650c1992970"
+      },
+      {
+        "path": "data/talents/steam/physics.lua",
+        "sha256": "a764c59d985d26651b6c3684914112650123a30794532f70a59e99e00bce8d0f"
+      },
+      {
+        "path": "data/talents/steam/psytech-gunnery.lua",
+        "sha256": "2e07b81a9c273d5b8b2ce0fcdbdfcbf4f11090ea65d23210d12446f8a4ec3523"
+      },
+      {
+        "path": "data/talents/steam/sawmaiming.lua",
+        "sha256": "eb7b701da0502dfd685dff66912bd41839dca9fb9b0b7276c4507b186125f169"
+      },
+      {
+        "path": "data/talents/steam/steam.lua",
+        "sha256": "ff1c3fd79174b935332f62e063968de7d14d9f46a182abe9417600f05e2d6eff"
+      },
+      {
+        "path": "data/talents/steam/thoughts-of-iron.lua",
+        "sha256": "84a1bba9651083af029928e78000a3d053ac5fa758824e6518b146897d899468"
+      },
+      {
+        "path": "data/talents/steam/turrets.lua",
+        "sha256": "14dbc643e66d9916ea2bdf257053c3e0870addf2ebfb3bc58bb593258dcd5e1c"
+      },
+      {
+        "path": "data/talents/uber/const.lua",
+        "sha256": "cd4ca74d798a334b8de94f4aeaac1940602dbfb3c92f2bbf3f8035bf63a8e65c"
+      },
+      {
+        "path": "data/talents/uber/cun.lua",
+        "sha256": "5ceb8d4c9c3fccc3a71240fa9b27d8cd29416fe6d303eca9ebe66b495f658cd8"
+      },
+      {
+        "path": "data/talents/uber/dex.lua",
+        "sha256": "d367750ee3b9ff3976a5d79d7d3a97bd81e6ba861f57387035744ad710294a8a"
+      },
+      {
+        "path": "data/talents/uber/mag.lua",
+        "sha256": "f66debe2fe113ec88810ebaabc9a1c5674085445bc25a84a4f6175623ebd527b"
+      },
+      {
+        "path": "data/talents/uber/str.lua",
+        "sha256": "675153b28c453e9bf0f58fd440c2886d4ac998c251dfbf181074bb968d0bf8fa"
+      },
+      {
+        "path": "data/talents/uber/uber.lua",
+        "sha256": "e21622bad08f59f5ac8df78b631b1dbb1b335472bf7136e592bf01f1f5d422b4"
+      },
+      {
+        "path": "data/talents/uber/wil.lua",
+        "sha256": "f4d21540ee6110093a06fc4738629ff29dabb2b02abb837a702d37fe2293cc40"
+      },
+      {
+        "path": "data/talents.lua",
+        "sha256": "bfe0e2458288de3fc5b1f5de158e856f73ab52846f80c81d4b2ff0e7dde1dc53"
+      },
+      {
+        "path": "data/timed_effects/floor.lua",
+        "sha256": "8f49d4ad2ca8c612c20caee40d99fdce6609f5af4bce4b3e631b6b6de77c0007"
+      },
+      {
+        "path": "data/timed_effects/magical.lua",
+        "sha256": "6b62a43d6712f6fb221bef24db8ee339a249824f4670540ace77fc439a7bb081"
+      },
+      {
+        "path": "data/timed_effects/mental.lua",
+        "sha256": "518309d26c58a23c42944841c340b96f4b5263f32a79fdddb52f2ac66d773b87"
+      },
+      {
+        "path": "data/timed_effects/other.lua",
+        "sha256": "78dd56833a21a4e633506394ce3042f794a6818244259066d192e5246ed33c8c"
+      },
+      {
+        "path": "data/timed_effects/physical.lua",
+        "sha256": "d3332099148953cd03cb1d14c2bdd2390e091905144fd49311d9bd8c33b6e37e"
+      },
+      {
+        "path": "data/tinkers/chemistry.lua",
+        "sha256": "2a9128614857fff050f827c2d5c25906c36a403d1a04d0d13e62761c82bd5fd5"
+      },
+      {
+        "path": "data/tinkers/electricity.lua",
+        "sha256": "495edeff7292d136ca87a1be02ac126d1dbc9166b9b897e260484732787445e6"
+      },
+      {
+        "path": "data/tinkers/explosive.lua",
+        "sha256": "93dec33cd5d2a953c450da9f4ef058f9453a2fbfe35a05705ca13652ac141f71"
+      },
+      {
+        "path": "data/tinkers/mechanical.lua",
+        "sha256": "0d61ef7b7beebf973fb860b5939c9fa90447ff5dcf90cbe66eef0f66484850ab"
+      },
+      {
+        "path": "data/tinkers/smith.lua",
+        "sha256": "06314e2c53f9ec7fd441d7227086768ca63a96bd3f5f531632acc6f3d6448b6c"
+      },
+      {
+        "path": "data/tinkers/therapeutics.lua",
+        "sha256": "d24b6e7c98482fec620a07b982b669eae5bc4a1ec6b1f094ecf1ba4a514f86e9"
+      },
+      {
+        "path": "data/tinkers.lua",
+        "sha256": "fa2b5435ba3e1448db128806f695d626dec0af1fb18020098fe00808fcb2f679"
+      },
+      {
+        "path": "data/wda/orcs.lua",
+        "sha256": "8f200feda33034fceff4a84b1a18215b6192aed9c07f74827c032aab7f71b273"
+      },
+      {
+        "path": "data/zones/cave-hatred/events.lua",
+        "sha256": "1ae28dc9b054f8f5828dcb51e8a956b54ad6ca098a12a922b63b2be45b81f856"
+      },
+      {
+        "path": "data/zones/cave-hatred/generatorMap.lua",
+        "sha256": "d9f91b9b480fa15430a73088bfd5e3ea5f94184e6ce3c356e1e6c00ad607a21e"
+      },
+      {
+        "path": "data/zones/cave-hatred/grids.lua",
+        "sha256": "08dff6d6f9db63586f975ea399f7c36d680856ce4c840a0abebe945e1d34e7e9"
+      },
+      {
+        "path": "data/zones/cave-hatred/npcs.lua",
+        "sha256": "e4b1b588e8c66ede5b71ba4cb21a9e68366d77ea7e56a01c97bb6055079c8f62"
+      },
+      {
+        "path": "data/zones/cave-hatred/objects.lua",
+        "sha256": "3a68f3d92ae9f3c004adcde0a9ab5fb1bd22da2ec07c002ebc3dd1dc4d4a1a31"
+      },
+      {
+        "path": "data/zones/cave-hatred/traps.lua",
+        "sha256": "809f799782f1cb67a08c38aba57bacfac83038b35bd74d84debc29d99c158b08"
+      },
+      {
+        "path": "data/zones/cave-hatred/zone.lua",
+        "sha256": "cc8519695ed281a04225d0a67bb88c6f0f15bdd531d63128610dcca1acf26427"
+      },
+      {
+        "path": "data/zones/dominion-port/events.lua",
+        "sha256": "4bde6bd6525402537315a3d06d8f084d2bd8486d9da1082c49d282830cd0c07a"
+      },
+      {
+        "path": "data/zones/dominion-port/generatorObject.lua",
+        "sha256": "d6cc8cd50087dc8d9bae103eb810ab79c399625c8635eaa74b4a78083d280209"
+      },
+      {
+        "path": "data/zones/dominion-port/grids.lua",
+        "sha256": "50e2a03fd0a33eb5ee7aa66d2d731df28fc47a1d08ec2fac623508f60740fbbc"
+      },
+      {
+        "path": "data/zones/dominion-port/npcs.lua",
+        "sha256": "7f02af419ebde7a4373b6c1d347693b9874e905212dc9e7fef7e86ba48accf2b"
+      },
+      {
+        "path": "data/zones/dominion-port/objects.lua",
+        "sha256": "16d11810bd37150e6939aa75b211608b36a1cd04a04fac79847352ed5d6e9fa5"
+      },
+      {
+        "path": "data/zones/dominion-port/traps.lua",
+        "sha256": "809f799782f1cb67a08c38aba57bacfac83038b35bd74d84debc29d99c158b08"
+      },
+      {
+        "path": "data/zones/dominion-port/zone.lua",
+        "sha256": "b53a40989b5c2c5275611e693c78b270c9ef51e27963016450d15624f05731c0"
+      },
+      {
+        "path": "data/zones/gates-of-morning/events.lua",
+        "sha256": "93320748271bf79e8182be2d0eb73ff70df7023d92e3fa868036e11a2abcf738"
+      },
+      {
+        "path": "data/zones/gates-of-morning/generatorActor.lua",
+        "sha256": "33486fcb415a5b114c7307498a67943da33c4da76af9af1b7e997e38d7800b79"
+      },
+      {
+        "path": "data/zones/gates-of-morning/grids.lua",
+        "sha256": "7a58724ed1c1ee0a80a314e646f77f5cfc92625ed0e4f367c170ea160bc5adb5"
+      },
+      {
+        "path": "data/zones/gates-of-morning/npcs.lua",
+        "sha256": "ec9bd053ed31a21bf479a4e97a57fe367ff6a7f6dbf7e38caa16e407ebf95693"
+      },
+      {
+        "path": "data/zones/gates-of-morning/objects.lua",
+        "sha256": "dab3bb571a01b17b0067ffc579f97a91577a6982e6bae03cd135cce8c09748dd"
+      },
+      {
+        "path": "data/zones/gates-of-morning/rooms/final.lua",
+        "sha256": "2dca4a8d22794d7efa7099106fb1ca6db7bf1e6098b25a3919186152d712e8ca"
+      },
+      {
+        "path": "data/zones/gates-of-morning/traps.lua",
+        "sha256": "b8bbebee9b090ee150a0d81c5d0723eba9ab48f0a41061118be02304bcf528c2"
+      },
+      {
+        "path": "data/zones/gates-of-morning/zone.lua",
+        "sha256": "4125216832ff316f7f9ef78c6dfb467feac6a2fd5387c934e347ef0f8baae129"
+      },
+      {
+        "path": "data/zones/gem/events.lua",
+        "sha256": "7d2e3f4ebc570c35963236de6640400f4291b9617ca80ae728e042a32f03f445"
+      },
+      {
+        "path": "data/zones/gem/generatorMap.lua",
+        "sha256": "86794b75e1285aa083f98af9dbb66540cee70cfe353c020aba2da2a00fa53a3c"
+      },
+      {
+        "path": "data/zones/gem/grids.lua",
+        "sha256": "4f5839cc23aee65b3f3167bb1872bf89837bc5df80a6e8942185a5fd5110d915"
+      },
+      {
+        "path": "data/zones/gem/maps/mountaintop.lua",
+        "sha256": "23038b26540a27a3d262a701bebcb66cc250015b3f246574af32c2d5854e7397"
+      },
+      {
+        "path": "data/zones/gem/npcs.lua",
+        "sha256": "9173bc4634e029fc6183246326580e9d842b5efb81f3a735e22dc3a938e5d43d"
+      },
+      {
+        "path": "data/zones/gem/objects.lua",
+        "sha256": "a3e97e48b8511e90fb04e74186a1a64fd52a13def896eb9bacb853e7cd8f32ca"
+      },
+      {
+        "path": "data/zones/gem/traps.lua",
+        "sha256": "809f799782f1cb67a08c38aba57bacfac83038b35bd74d84debc29d99c158b08"
+      },
+      {
+        "path": "data/zones/gem/zone.lua",
+        "sha256": "fac129c2596d105fb32b0eda8b7f47048da91355ccbf8c2022a25662a30ee2aa"
+      },
+      {
+        "path": "data/zones/internment-camp/events.lua",
+        "sha256": "ee2ee5a2d235cd9002661cdb493273f30ac14f16ee4f1004210b5520e416d21c"
+      },
+      {
+        "path": "data/zones/internment-camp/generatorMap.lua",
+        "sha256": "c52c165c0b192a2267351424f23df51cb68be06e9deed3fbf100ff15cfcdb525"
+      },
+      {
+        "path": "data/zones/internment-camp/grids.lua",
+        "sha256": "1922dffef424de32c0a72e14d2c8fdca2470496d25ba5575e1ba05ae25d2d829"
+      },
+      {
+        "path": "data/zones/internment-camp/npcs.lua",
+        "sha256": "ac0a6621e87b3f5349c62d773fb41c0515c880e75dde05b34e5dbf65c2b9d700"
+      },
+      {
+        "path": "data/zones/internment-camp/objects.lua",
+        "sha256": "853eceaf17916790479535de457c696cec00924924c7db2c89e0bf4c0ffbb611"
+      },
+      {
+        "path": "data/zones/internment-camp/traps.lua",
+        "sha256": "809f799782f1cb67a08c38aba57bacfac83038b35bd74d84debc29d99c158b08"
+      },
+      {
+        "path": "data/zones/internment-camp/zone.lua",
+        "sha256": "a5faf0c117fe599f26adc53fbf5a8e9d459494a644714757a52f7348410812e4"
+      },
+      {
+        "path": "data/zones/kaltor-shop/grids.lua",
+        "sha256": "ff8b3109874e6c8b92c9d16338c2a6d8d37dee51a7198e85d65ec0d145a333b8"
+      },
+      {
+        "path": "data/zones/kaltor-shop/npcs.lua",
+        "sha256": "ef55c2efea78ac883ca64bc92ba9405578986f6bb9ffd1addf61162ff4d80755"
+      },
+      {
+        "path": "data/zones/kaltor-shop/objects.lua",
+        "sha256": "2e912b688ab45b1e1aa694828276ba66d34b13ce5f821a1108e50e1e7cacf318"
+      },
+      {
+        "path": "data/zones/kaltor-shop/traps.lua",
+        "sha256": "809f799782f1cb67a08c38aba57bacfac83038b35bd74d84debc29d99c158b08"
+      },
+      {
+        "path": "data/zones/kaltor-shop/zone.lua",
+        "sha256": "6d63bd9187e595d032564f70b513e1c91850304a6f4fe0e322b7da09bb730c9d"
+      },
+      {
+        "path": "data/zones/krimbul/events.lua",
+        "sha256": "bfb5f06cc80e3f2ddb6de0d3035857b0a04762c52e36cd0324b1c3820a651fae"
+      },
+      {
+        "path": "data/zones/krimbul/grids.lua",
+        "sha256": "1488d6dbf8e6f1fbec7d6e07cddf832ed19d5237874f63f34cbb298e3a23d453"
+      },
+      {
+        "path": "data/zones/krimbul/npcs.lua",
+        "sha256": "63f4888cc886234ac7507f837c9a7809d5705222f2f594b72e3ac87db5b30038"
+      },
+      {
+        "path": "data/zones/krimbul/objects.lua",
+        "sha256": "37a716c4bdaaa714840801782b42f0f6fe6bf760b200fdc1ebfeddc6722340de"
+      },
+      {
+        "path": "data/zones/krimbul/traps.lua",
+        "sha256": "809f799782f1cb67a08c38aba57bacfac83038b35bd74d84debc29d99c158b08"
+      },
+      {
+        "path": "data/zones/krimbul/zone.lua",
+        "sha256": "f992759c9528afd001db030504f875138dfdd579657da8e42a733db5640c18c7"
+      },
+      {
+        "path": "data/zones/lost-city/events.lua",
+        "sha256": "c1bfb2fc324068cc52bb48903d1cf736664ab97d4ad535e7841b2ce96a3c7d13"
+      },
+      {
+        "path": "data/zones/lost-city/grids.lua",
+        "sha256": "7d051bfcd4c4f3c76381b93dcfc1c80f16b560ae5a4185f439fe98b563609bd4"
+      },
+      {
+        "path": "data/zones/lost-city/npcs.lua",
+        "sha256": "3f4c0daeffb7032d80698989c92fd1e7c60354bcc4c5bdc12cb173bd9d9f487d"
+      },
+      {
+        "path": "data/zones/lost-city/objects.lua",
+        "sha256": "4a5ddaab273f6698e3cf4f79d4f7768777097b35727a27d49222a538739f0a5d"
+      },
+      {
+        "path": "data/zones/lost-city/traps.lua",
+        "sha256": "809f799782f1cb67a08c38aba57bacfac83038b35bd74d84debc29d99c158b08"
+      },
+      {
+        "path": "data/zones/lost-city/zone.lua",
+        "sha256": "9bb1c05b2df57784e0b4dea216b307f61e7bf3280eff75c3d1690633bc31acd4"
+      },
+      {
+        "path": "data/zones/palace-fumes/events.lua",
+        "sha256": "6184688655f5f3b37dfaa3f87720a947d2f86a9735cdb0085a7dd164ccb03c75"
+      },
+      {
+        "path": "data/zones/palace-fumes/generatorActor.lua",
+        "sha256": "5e7c403478936facbde708e8089ae26e3a74f5dfd85f7af78bc478be9300c5f1"
+      },
+      {
+        "path": "data/zones/palace-fumes/grids.lua",
+        "sha256": "1ccf36a973a7aac9214acc5f5e7d28809da58372791fa2a87e2ce561570971f5"
+      },
+      {
+        "path": "data/zones/palace-fumes/npcs.lua",
+        "sha256": "568901c2976fc20555ca8105c657ad5073b6dbec55d0814ccf4f94930afe9707"
+      },
+      {
+        "path": "data/zones/palace-fumes/objects.lua",
+        "sha256": "2a61a088e05fecd710d0c88f5f12c8656983bf419f30fdf1aa6da3b45203c86a"
+      },
+      {
+        "path": "data/zones/palace-fumes/rooms/phonograph.lua",
+        "sha256": "54842e0b1852bfa82c7b9a6afba2d9fbe8324e482963cb514231fe2ec8822cc8"
+      },
+      {
+        "path": "data/zones/palace-fumes/traps.lua",
+        "sha256": "809f799782f1cb67a08c38aba57bacfac83038b35bd74d84debc29d99c158b08"
+      },
+      {
+        "path": "data/zones/palace-fumes/zone.lua",
+        "sha256": "7aab6627ecc3d15cdd1d143d9f30fa979977a918577958fd605e69e71e466217"
+      },
+      {
+        "path": "data/zones/pocket-time/events.lua",
+        "sha256": "d8d089a0ac33c28d656d5e009a691e23f0e223134bc7ea172c8b9f02407013e4"
+      },
+      {
+        "path": "data/zones/pocket-time/grids.lua",
+        "sha256": "37dc6fed04dc92dd16f27b9f0938f6baa7612fbc006047423a367db77867fb85"
+      },
+      {
+        "path": "data/zones/pocket-time/maps/final.lua",
+        "sha256": "b7fd04891f262768d199885cbc113fafdf87ec62468da85057db192aaa29c51d"
+      },
+      {
+        "path": "data/zones/pocket-time/npcs.lua",
+        "sha256": "2b8bd40d42420fecf1082c60d3d7a512caacc9074860fb5cac377866fe000c9b"
+      },
+      {
+        "path": "data/zones/pocket-time/objects.lua",
+        "sha256": "5393cad9beb3459b275f4532ebe99bc041ec0fec0b50e165f838296c1642f2bc"
+      },
+      {
+        "path": "data/zones/pocket-time/traps.lua",
+        "sha256": "deff3e05344ae7203bfa5f6f329471091b600fc1bc7def0c97f83f7941f3e761"
+      },
+      {
+        "path": "data/zones/pocket-time/zone.lua",
+        "sha256": "e9f0b03ecbcd41ea12f4d06689e3ab945a909f7033aed3fc4eb2b83d545aa67e"
+      },
+      {
+        "path": "data/zones/primal-forest/events.lua",
+        "sha256": "9b3365653a553b2ad4aa1ccc76ef90eb777bf514b4e71d512b719fb7d137b8d7"
+      },
+      {
+        "path": "data/zones/primal-forest/generatorMap.lua",
+        "sha256": "9f56fe10a36d1b08bd2f58aab77a650617fe186b14b226c671232b5630357549"
+      },
+      {
+        "path": "data/zones/primal-forest/grids.lua",
+        "sha256": "4a304f3361ae39fccff2950c293181b91947ec2070869c679ce751e8af81ac41"
+      },
+      {
+        "path": "data/zones/primal-forest/npcs.lua",
+        "sha256": "12da6ac7bf78c26280d4af327476dc21511682bddaa56579c9f527adc95d2bd7"
+      },
+      {
+        "path": "data/zones/primal-forest/objects.lua",
+        "sha256": "5a92634107980482523195771c2f5554283b86b6e8e1193f0c0b35a956ef9cd1"
+      },
+      {
+        "path": "data/zones/primal-forest/traps.lua",
+        "sha256": "809f799782f1cb67a08c38aba57bacfac83038b35bd74d84debc29d99c158b08"
+      },
+      {
+        "path": "data/zones/primal-forest/zone.lua",
+        "sha256": "baaadca309858d0a498e25097915ec8f8a1be924f0017c5df418896c4ebf4604"
+      },
+      {
+        "path": "data/zones/ritch-hive/events.lua",
+        "sha256": "56ab4d8c274b211a9303d6f67062d202159139d10bc1ab65ba543bbc6c984470"
+      },
+      {
+        "path": "data/zones/ritch-hive/generatorMap.lua",
+        "sha256": "0fa1ee798f767e35fb81757195bf29fed6cc026fd9c44c3d09da356e461ff2e1"
+      },
+      {
+        "path": "data/zones/ritch-hive/grids.lua",
+        "sha256": "0faa4f46112f577adcdf9f06f7dff8f396991649f52f2b39790e0866ddd3a080"
+      },
+      {
+        "path": "data/zones/ritch-hive/npcs.lua",
+        "sha256": "990e2190f7d70ba758185c60ca5e465393f92af25935d7fca5667f58f1189a91"
+      },
+      {
+        "path": "data/zones/ritch-hive/objects.lua",
+        "sha256": "5b8d171e8b2896fd7a5032ce0f139582c273b2f2463c1ba91d24308df3a2f50e"
+      },
+      {
+        "path": "data/zones/ritch-hive/rooms/gems.lua",
+        "sha256": "f34332396fe843dfcf789b211754ef64c0a4d224bcaeb4188316d4d33f85f197"
+      },
+      {
+        "path": "data/zones/ritch-hive/rooms/mother.lua",
+        "sha256": "13708ea97443f7dae3378ba4d6ade4ad98b9f1e7d51b8520bb591237c1ea14d3"
+      },
+      {
+        "path": "data/zones/ritch-hive/rooms/pit.lua",
+        "sha256": "56a904c504535b41749036795bc36a3fd4d2b60ac984c110f5a0db8dc6bc2c55"
+      },
+      {
+        "path": "data/zones/ritch-hive/traps.lua",
+        "sha256": "809f799782f1cb67a08c38aba57bacfac83038b35bd74d84debc29d99c158b08"
+      },
+      {
+        "path": "data/zones/ritch-hive/zone.lua",
+        "sha256": "97ad1922731ec9589cf651958ee57f3ed4d9739bbf3836da9ec4d8cc595bb6e5"
+      },
+      {
+        "path": "data/zones/shertul-cave/grids.lua",
+        "sha256": "b4718192038e321c373da31cd5b806216c3d6fb9317f92a2d507c5c88af22e0b"
+      },
+      {
+        "path": "data/zones/shertul-cave/npcs.lua",
+        "sha256": "9d185b59cd283026064105d56330524e4f4bae53f8eec00adfb023df67d33771"
+      },
+      {
+        "path": "data/zones/shertul-cave/objects.lua",
+        "sha256": "5b56547208548b210e07217e6a05350d2d683c84962f41f4bad5f57ff913ccff"
+      },
+      {
+        "path": "data/zones/shertul-cave/traps.lua",
+        "sha256": "809f799782f1cb67a08c38aba57bacfac83038b35bd74d84debc29d99c158b08"
+      },
+      {
+        "path": "data/zones/shertul-cave/zone.lua",
+        "sha256": "9812bd88161a365df252e5831230100a348cd1264ad0bb8e5dbca0623a92a66b"
+      },
+      {
+        "path": "data/zones/slumbering-caves/events.lua",
+        "sha256": "171516441f959960f9a85f4c1c88cde7ea4e4d4daf833ab65f824314663f3f6a"
+      },
+      {
+        "path": "data/zones/slumbering-caves/grids.lua",
+        "sha256": "d4fcd2c1953f559256e291db82febd1e32e82179af2041778f0be589218f7f45"
+      },
+      {
+        "path": "data/zones/slumbering-caves/npcs.lua",
+        "sha256": "8833be87b250426579319bb7177e0e33a6b5108f64db45103c5045562ad47556"
+      },
+      {
+        "path": "data/zones/slumbering-caves/objects.lua",
+        "sha256": "bc991d5aa9d3c12a3c7b723498e981cea4cf80e0b8502d40f170000108734342"
+      },
+      {
+        "path": "data/zones/slumbering-caves/rooms/valve1.lua",
+        "sha256": "cd9aa7d88f43100e0c0b54a28c84b9a0edc3558c186d7a19ae307e8300725457"
+      },
+      {
+        "path": "data/zones/slumbering-caves/rooms/valve2.lua",
+        "sha256": "b63c6daae9dbe9f7d16abb4dec3b54bf2d976bf949331add16302bc1b636dd61"
+      },
+      {
+        "path": "data/zones/slumbering-caves/rooms/valve3.lua",
+        "sha256": "334abe43704a8ef04033a6ccfa5b7b02c6c4e42b21e854262f84fbc6acbb3a89"
+      },
+      {
+        "path": "data/zones/slumbering-caves/traps.lua",
+        "sha256": "809f799782f1cb67a08c38aba57bacfac83038b35bd74d84debc29d99c158b08"
+      },
+      {
+        "path": "data/zones/slumbering-caves/zone.lua",
+        "sha256": "adca9e058fa71ef087bab4152795763d252f691bad71baa932ce82543682b550"
+      },
+      {
+        "path": "data/zones/steam-quarry/events.lua",
+        "sha256": "071ec81bc27cd9860b5114d226f6321e5be0571f676458457ddb92dc4cff5a5f"
+      },
+      {
+        "path": "data/zones/steam-quarry/grids.lua",
+        "sha256": "1d8e7742c95715d1f8a5ebd56bec68ebedfe739a43691537df56e35f0bb66c92"
+      },
+      {
+        "path": "data/zones/steam-quarry/npcs.lua",
+        "sha256": "324f3709d9f154a71905ac20e03b8d20fd9d290b3c9e9c2b2072a2bd6b12c4c7"
+      },
+      {
+        "path": "data/zones/steam-quarry/objects.lua",
+        "sha256": "b25ec47ea50573fbe199485b9ca2ab1e35af2b8a42fd8ae17093a6406700cdb1"
+      },
+      {
+        "path": "data/zones/steam-quarry/rooms/valve1.lua",
+        "sha256": "cd9aa7d88f43100e0c0b54a28c84b9a0edc3558c186d7a19ae307e8300725457"
+      },
+      {
+        "path": "data/zones/steam-quarry/rooms/valve2.lua",
+        "sha256": "b63c6daae9dbe9f7d16abb4dec3b54bf2d976bf949331add16302bc1b636dd61"
+      },
+      {
+        "path": "data/zones/steam-quarry/rooms/valve3.lua",
+        "sha256": "334abe43704a8ef04033a6ccfa5b7b02c6c4e42b21e854262f84fbc6acbb3a89"
+      },
+      {
+        "path": "data/zones/steam-quarry/traps.lua",
+        "sha256": "809f799782f1cb67a08c38aba57bacfac83038b35bd74d84debc29d99c158b08"
+      },
+      {
+        "path": "data/zones/steam-quarry/zone.lua",
+        "sha256": "a3ff2698ba118609aeefaf236e4ea592489bd5aee52f9e8ab65e960af911525b"
+      },
+      {
+        "path": "data/zones/sunwall-observatory/events.lua",
+        "sha256": "47d3250b8847833caddbb369756f9fc96a495c79e23fbaa719b59ea8770ca560"
+      },
+      {
+        "path": "data/zones/sunwall-observatory/generatorMap.lua",
+        "sha256": "58f9d6ece070795b04cf5b751c971e392ead6c390be6da472c1f3e5c17eebb68"
+      },
+      {
+        "path": "data/zones/sunwall-observatory/grids.lua",
+        "sha256": "ab333ba71fca546af448b35cc85b56f422298e3db0a039cdbf20b7e10a40f060"
+      },
+      {
+        "path": "data/zones/sunwall-observatory/npcs.lua",
+        "sha256": "8b07ee49a48e19a19dec27cfaae2bb09a01fded27d1eda848002d72b4d2ee137"
+      },
+      {
+        "path": "data/zones/sunwall-observatory/objects.lua",
+        "sha256": "23de29466cb8e235fb855ab342da0a3328116886507de3c856b739d218c87a3d"
+      },
+      {
+        "path": "data/zones/sunwall-observatory/rooms/astral-yeti.lua",
+        "sha256": "a30d3130182c405dd53d475e704f40eb41c1f045884d60176f2ef490fb0fb636"
+      },
+      {
+        "path": "data/zones/sunwall-observatory/traps.lua",
+        "sha256": "809f799782f1cb67a08c38aba57bacfac83038b35bd74d84debc29d99c158b08"
+      },
+      {
+        "path": "data/zones/sunwall-observatory/zone.lua",
+        "sha256": "8ece33c590667d3bb4a44b410c2d72fa897092702e327e4656570b8de0f9afd5"
+      },
+      {
+        "path": "data/zones/sunwall-outpost/events.lua",
+        "sha256": "d22f5b660da0a669b1a360f15277384c57aa99eabff204c3acef913a6d3e3c83"
+      },
+      {
+        "path": "data/zones/sunwall-outpost/generatorMap.lua",
+        "sha256": "7c7974f126fa35abb50c108be43bbcee5734057cd4601e50d83332724c893c16"
+      },
+      {
+        "path": "data/zones/sunwall-outpost/grids.lua",
+        "sha256": "ec340e49b0e2cd3ae6a3d3a8e878556d7cf2c7c44a976c8e0760a0b2799adf52"
+      },
+      {
+        "path": "data/zones/sunwall-outpost/npcs.lua",
+        "sha256": "05a23741af8d9c59528669ae9cd02d3a9eff1c4938656d0f1fde2e10008f6b3c"
+      },
+      {
+        "path": "data/zones/sunwall-outpost/objects.lua",
+        "sha256": "f2e124e4730c0d3c3e772200c8d693c17485f85a287d54782b999a761eec5688"
+      },
+      {
+        "path": "data/zones/sunwall-outpost/traps.lua",
+        "sha256": "809f799782f1cb67a08c38aba57bacfac83038b35bd74d84debc29d99c158b08"
+      },
+      {
+        "path": "data/zones/sunwall-outpost/zone.lua",
+        "sha256": "23a9cef0ca4968d3cfcfecb7d99ab7026ca55a8b75a5014525db1f4d4a297c06"
+      },
+      {
+        "path": "data/zones/tinker-master/grids.lua",
+        "sha256": "ec1a3026b759055d70623cff1a546481d19bc86fa2f4a577c0b465ae67cceb68"
+      },
+      {
+        "path": "data/zones/tinker-master/npcs.lua",
+        "sha256": "4f42325b53e1d5863ea2302da9359326b9de04322b30c3b6bb03d6548b087a30"
+      },
+      {
+        "path": "data/zones/tinker-master/objects.lua",
+        "sha256": "5393cad9beb3459b275f4532ebe99bc041ec0fec0b50e165f838296c1642f2bc"
+      },
+      {
+        "path": "data/zones/tinker-master/traps.lua",
+        "sha256": "809f799782f1cb67a08c38aba57bacfac83038b35bd74d84debc29d99c158b08"
+      },
+      {
+        "path": "data/zones/tinker-master/zone.lua",
+        "sha256": "214defc667111b3b8297f80248245c6c1da89c1bbf7ec0cb20dcb152c2e894fa"
+      },
+      {
+        "path": "data/zones/town-kruk/grids.lua",
+        "sha256": "6eb32a59fd99fdd6a08fd34335cb72235d3176f73b76122db95f72f7ccff0b8c"
+      },
+      {
+        "path": "data/zones/town-kruk/npcs.lua",
+        "sha256": "9807d5328531a39d66a0d5f2eb460611b7c70694cd543ad6a53381652f9042c7"
+      },
+      {
+        "path": "data/zones/town-kruk/objects.lua",
+        "sha256": "51e714663d2e6712198767f32f9b7308b87ec840758440b4d5c8530760ab91f1"
+      },
+      {
+        "path": "data/zones/town-kruk/traps.lua",
+        "sha256": "fcd11277a6c8f7c5d87f3d9969ccff6912bd5b2d13ec8aeccaff370fd093d306"
+      },
+      {
+        "path": "data/zones/town-kruk/zone.lua",
+        "sha256": "15b9e3532612bebb719eb42947f921158e183e8d83a30b7b8f055e2ffcf96127"
+      },
+      {
+        "path": "data/zones/ureslak-host/events.lua",
+        "sha256": "a69c0387a43c7e5bdb70e8db75ee2869ee3215af02ae0136b244787a68455651"
+      },
+      {
+        "path": "data/zones/ureslak-host/grids.lua",
+        "sha256": "181f39052796e32af880eb636894545d28cc453385fe9b3838081d7d62a61622"
+      },
+      {
+        "path": "data/zones/ureslak-host/npcs.lua",
+        "sha256": "c4c904a48618457019658b0a49c3686df7048f8dcf5ae3b15235ab27ae182878"
+      },
+      {
+        "path": "data/zones/ureslak-host/objects.lua",
+        "sha256": "b522715c522a0647b61aa697f6f2789412f9a95c6fd7cbbc2da0b59fc719b0a4"
+      },
+      {
+        "path": "data/zones/ureslak-host/traps.lua",
+        "sha256": "644410a26c9bad1f52f525656d72315774532884d141c25c2e8b7c72cd262589"
+      },
+      {
+        "path": "data/zones/ureslak-host/zone.lua",
+        "sha256": "d07a17db045cad3dd245a43cc880c075209547265a7baba6a490e59cdaa2a75b"
+      },
+      {
+        "path": "data/zones/vaporous-emporium/events.lua",
+        "sha256": "d3e74242acd8dac86e8ae7872f0d532ca878468fe922d0dd9f253d69ed5b4531"
+      },
+      {
+        "path": "data/zones/vaporous-emporium/generatorMap.lua",
+        "sha256": "11c99cf7dcac1e31d181f07b9a3137385e41c9e498995ce83b59291cb65785c7"
+      },
+      {
+        "path": "data/zones/vaporous-emporium/grids.lua",
+        "sha256": "58e0c62bda9bb548322777c6d3a934bfce675322ecc7de974c4b7804f2946066"
+      },
+      {
+        "path": "data/zones/vaporous-emporium/npcs.lua",
+        "sha256": "fe480fb6ba40b054c0fa6593ea0c2d7289865d1317bee14c8c0d937e55e5606e"
+      },
+      {
+        "path": "data/zones/vaporous-emporium/objects.lua",
+        "sha256": "55f0642fe3f8622f0f570c0df3ac58b9e4d12813ccd8e6b8b05812a2ddab240b"
+      },
+      {
+        "path": "data/zones/vaporous-emporium/traps.lua",
+        "sha256": "809f799782f1cb67a08c38aba57bacfac83038b35bd74d84debc29d99c158b08"
+      },
+      {
+        "path": "data/zones/vaporous-emporium/zone.lua",
+        "sha256": "b10952b7de1235758fd401810d10d3bcad451056967e331e63f8519b2d23a776"
+      },
+      {
+        "path": "data/zones/wilderness-add/grids.lua",
+        "sha256": "05d9051bc97b840fab09d2ab864277a591a92b5526fd3b778f3a8ac573601b01"
+      },
+      {
+        "path": "data/zones/yeti-caves/events.lua",
+        "sha256": "a357f6a1d359efd93954f17893a4714053ed4e7cbfb2bf878bb67551680a984a"
+      },
+      {
+        "path": "data/zones/yeti-caves/generatorMap.lua",
+        "sha256": "1964ab93afbc6674cfbff366c09a2755e8bad1e9e6015546c23c1ad71a95d7d3"
+      },
+      {
+        "path": "data/zones/yeti-caves/grids.lua",
+        "sha256": "6a54230d672c18acd227049613a66cf4e62df5577230991050398c97815574b5"
+      },
+      {
+        "path": "data/zones/yeti-caves/npcs.lua",
+        "sha256": "b0e4d2ed25fa2891de03f3207e1ba890e930f53be5c64752480490e4d906414b"
+      },
+      {
+        "path": "data/zones/yeti-caves/objects.lua",
+        "sha256": "29f57cfa2a7ff05a125929f2860680c3dd3ba1379d9897531333e5a1a9793cd4"
+      },
+      {
+        "path": "data/zones/yeti-caves/traps.lua",
+        "sha256": "809f799782f1cb67a08c38aba57bacfac83038b35bd74d84debc29d99c158b08"
+      },
+      {
+        "path": "data/zones/yeti-caves/zone.lua",
+        "sha256": "c58ee1ab4816ec8702cbe3b34bb1762eec5a32b8c2e5087d275794cccd252db5"
+      },
+      {
+        "path": "hooks/load.lua",
+        "sha256": "7e99c73c583e537d73eaa0384056ab03308e1fcf18088c2072d28dfec577fedd"
+      },
+      {
+        "path": "init.lua",
+        "sha256": "861fcb6c297112535bd7fef24237f9de27ea4b4bb5884c794114d7455f154881"
+      },
+      {
+        "path": "overload/data/calendar_orc.lua",
+        "sha256": "b73f109203b950ea399b0107aeb21638b85f2003d36815d93288aa1f0a3a1caa"
+      },
+      {
+        "path": "overload/data/gfx/particles/astral_orb.lua",
+        "sha256": "2a4f9c49cfb1440f636dc0c7684f9bbf8f99cb971a7218f21d0f387000a3bec0"
+      },
+      {
+        "path": "overload/data/gfx/particles/ball_plasma.lua",
+        "sha256": "950d61a64c91819faca320b4c704d4e4e445b930fefb2f8db091dcfd236dcc11"
+      },
+      {
+        "path": "overload/data/gfx/particles/bloodstar_tendrils.lua",
+        "sha256": "22836e27c342a7def4979d6773a9d0ab086f49d70e8c594b40d281c779e8e37b"
+      },
+      {
+        "path": "overload/data/gfx/particles/burning-steam.lua",
+        "sha256": "f05f3e26cc4409e89909b9076328d2544f75eada9460ebe7f48a53e2d1696ac6"
+      },
+      {
+        "path": "overload/data/gfx/particles/cogstorm.lua",
+        "sha256": "0d45a85b7bcfd1f03d39983f77938fbe8247bf8ef62e2b4ba36b61265ff7d096"
+      },
+      {
+        "path": "overload/data/gfx/particles/dark_collapse.lua",
+        "sha256": "75fbeb160f7658a7ba67108a22ef1832823f4bd4a5084e12445e48e79f3a66ec"
+      },
+      {
+        "path": "overload/data/gfx/particles/dark_teleport.lua",
+        "sha256": "9de0271ace004f4812a5f9d4c47d36e4f13b52ba57c6861e246d92910dcedb00"
+      },
+      {
+        "path": "overload/data/gfx/particles/electron_incantation.lua",
+        "sha256": "04b4d4ea7310afc525a6e623be2a4603782ae2f277fc6955c914270bdac09b65"
+      },
+      {
+        "path": "overload/data/gfx/particles/ethereal_steam.lua",
+        "sha256": "8668fcec6aed355741fcca4455d4c3413e8abff09ca1b92ddc8159540707c086"
+      },
+      {
+        "path": "overload/data/gfx/particles/flying_sawblade.lua",
+        "sha256": "32255fc771f5ec92117fe22bce881deae74ba84ff5176f2af29e1b79481a9d8a"
+      },
+      {
+        "path": "overload/data/gfx/particles/galactic_pulse.lua",
+        "sha256": "04ab1f42396331e1d9d6c70c7ebf9c293788d554231729f8c91bd0ccba26ecc2"
+      },
+      {
+        "path": "overload/data/gfx/particles/galvanic_ball.lua",
+        "sha256": "a54ca6445d2e945e40a867f13e11a2cbed90e883f2f302ca0146b41ff0bd122d"
+      },
+      {
+        "path": "overload/data/gfx/particles/galvanic_field.lua",
+        "sha256": "74e50287d274350205f9455e12c2eee914b90e396ec0f50e44d5f671355f79eb"
+      },
+      {
+        "path": "overload/data/gfx/particles/galvanic_link.lua",
+        "sha256": "059992b6b9164e9743dfa8fd13579b017c22199d6357805e3c9c910841469d14"
+      },
+      {
+        "path": "overload/data/gfx/particles/lunar_orb.lua",
+        "sha256": "0e1c541822675e3de4f45db8f1c49fb44617b9ae563814f14a5667195515cf77"
+      },
+      {
+        "path": "overload/data/gfx/particles/mechanical_arms.lua",
+        "sha256": "43be061fb50b7dd9ef401e0e600178cfa9ab1452dfc2098ef0ddb81ebcfd6547"
+      },
+      {
+        "path": "overload/data/gfx/particles/mirror_wall.lua",
+        "sha256": "a74fab5cc1df804398cde15936cd5693cf63b021e8ec948b9fbc29e5d04da221"
+      },
+      {
+        "path": "overload/data/gfx/particles/nebula_spear.lua",
+        "sha256": "e945be5e7eacb4b9453263c5668d994c60f0af58a8b80c95484cc4014c08bfdf"
+      },
+      {
+        "path": "overload/data/gfx/particles/plasma_bolt.lua",
+        "sha256": "345dfb696d18bb5a29385aa9cbb2b67bc4aa07dd5323279dff309c96d4c49188"
+      },
+      {
+        "path": "overload/data/gfx/particles/ramming_bot.lua",
+        "sha256": "8c743831b5d81d306e56f457518ec9ab01fbdf9467c3f7ff51fdaab5657d5d57"
+      },
+      {
+        "path": "overload/data/gfx/particles/sawstorm.lua",
+        "sha256": "a49e0bfbcabc9a074c69316d1236740cf1eadaf15484789b7e7b1f3dc47ea6ce"
+      },
+      {
+        "path": "overload/data/gfx/particles/solar_orb.lua",
+        "sha256": "b7c28eb9b40dbb9443b5f17a8de6253ee54ffd44728f23167aa9fdff6a6ea07a"
+      },
+      {
+        "path": "overload/data/gfx/particles/spiderbot.lua",
+        "sha256": "95d54d1edc57efc3e90dc46f75b837239581e49c0069ee355fa6780da35e8a10"
+      },
+      {
+        "path": "overload/data/gfx/particles/spiderbot_move.lua",
+        "sha256": "519f65e024ab36343aa6c24e69a2d01869ba7e6745f875c50e8c01323b2713f7"
+      },
+      {
+        "path": "overload/data/gfx/particles/steam_generator_fumes.lua",
+        "sha256": "0211180ed7cb84ed79bce93b746733f3390f240f90fed737a1366c5d31677173"
+      },
+      {
+        "path": "overload/data/gfx/particles/steamgun_spin.lua",
+        "sha256": "9fe29bceade6af89af1611a9706ed2ec70251abd8a2c91045b812e877cfcf5da"
+      },
+      {
+        "path": "overload/data/gfx/particles/steamui_vapour.lua",
+        "sha256": "3403e1fde96a101cf582e53140f772582a3eeb8e1b71f4cf5ad63c67057aacb9"
+      },
+      {
+        "path": "overload/data/gfx/particles/stormstrike.lua",
+        "sha256": "9aeac2f2232ae2d468e17385dc00f3e0eefd903bef179a1cf186e23829c1b4e4"
+      },
+      {
+        "path": "overload/data/gfx/particles/structural_tower_weakness.lua",
+        "sha256": "7b5b7aeb91507f26f04cff9c9de735e999fd7e7115112793298a7d1868b65016"
+      },
+      {
+        "path": "overload/data/gfx/particles/sunstrike_warning.lua",
+        "sha256": "3e2a6f09c71fc576a709c805a5ccd922d89b649186ee323e70ffe97f774d1354"
+      },
+      {
+        "path": "overload/data/gfx/particles/thunder_grenade.lua",
+        "sha256": "d4b69347a5e20a33cab6010ba8a4ae63115eb246e5cecc813d11ed7e8f31a0ed"
+      },
+      {
+        "path": "overload/data/gfx/particles/time_breach.lua",
+        "sha256": "98ee156a23e923c0d5a2b5be2a9156edce0a6f928a9494f19ba5b029a9145a23"
+      },
+      {
+        "path": "overload/data/gfx/particles/time_breach2.lua",
+        "sha256": "a4d32af09d31ef8fa7c6b1a9208ed2a3190c9d8cf89dad03f6f4b91693658bdc"
+      },
+      {
+        "path": "overload/data/gfx/particles/time_breach3.lua",
+        "sha256": "4582cb994e79cfba0d034a3fecdc9b1cfee71221f667117189665d314e6934eb"
+      },
+      {
+        "path": "overload/data/gfx/particles/time_breach_distort.lua",
+        "sha256": "76a982c93c8591560d635e0e02275c528e5e546d8da2c3e7a31f16fa442d085f"
+      },
+      {
+        "path": "overload/data/gfx/particles/time_breach_small.lua",
+        "sha256": "88d61b936abf1723a3a6ebdfb5d1be188f561b829a6f99a86d603102366dc539"
+      },
+      {
+        "path": "overload/data/gfx/particles/time_breach_small3.lua",
+        "sha256": "c0038f9cd500184431ab1a0227aa4ff63825b9c3fdc1fcb1b65553d1941eedb9"
+      },
+      {
+        "path": "overload/data/gfx/particles/vapour_explosion.lua",
+        "sha256": "0aab096a04922a2801a74483a834137b8efe6f334997a89aa1886e4a44217809"
+      },
+      {
+        "path": "overload/data/gfx/particles/vapour_spin.lua",
+        "sha256": "224c039b6199ab51f9d19241acfa01743d741bbd9d692f08f1646d5805dfe8b3"
+      },
+      {
+        "path": "overload/data/gfx/shaders/metaphasic_spin.lua",
+        "sha256": "35feae959ea8733428d84affb7d32e56e8fc4e3af85c44fc5e438959cfd9137d"
+      },
+      {
+        "path": "overload/data/gfx/shockbolt/attachements-orcs.lua",
+        "sha256": "1c7e71f469fe62ca12558265260daa7639ca433a04a59102a340eda77f98d789"
+      },
+      {
+        "path": "overload/data/gfx/shockbolt/facings-orcs.lua",
+        "sha256": "da148c5c12c9e2c8899832a4cbb8f4f2d81d7d7faa0008fe3ca3c7626c683582"
+      },
+      {
+        "path": "overload/data/gfx/ui/definitions/steamtech.lua",
+        "sha256": "a0cd32e27d1a37d2df3a123e91be964e8a632e01f17de82bf9d4667e47886739"
+      },
+      {
+        "path": "overload/data/texts/intro-orc-whitehooves.lua",
+        "sha256": "c28e188e28175d34acf55b2c673b4ff3bfe590aa26bc6203554c53831ce9843b"
+      },
+      {
+        "path": "overload/data/texts/intro-orc-yeti.lua",
+        "sha256": "3e5c06bb04db1b48ca4140bbe66340e64164ed9c3e7943d6ee5f2742caa9dbd0"
+      },
+      {
+        "path": "overload/data/texts/intro-orc.lua",
+        "sha256": "71810e6b2c76c0ff8a58448fd72b3df36eb5a65909b18b3a4a45083ce6acbfce"
+      },
+      {
+        "path": "overload/data/texts/unlock-cosmetic_race_orc.lua",
+        "sha256": "324b0d65b28fceb66469576e263a0a5e8a65758f644ef5656088d4c8af4f4bc6"
+      },
+      {
+        "path": "overload/data/texts/unlock-mage_technomancer.lua",
+        "sha256": "9696b39dd002bb2cedb9844c7b0eff4f8c426bf388f4f56f2fb951bcfc52fd2f"
+      },
+      {
+        "path": "overload/data/texts/unlock-orcs_campaign_all_classes.lua",
+        "sha256": "fdcbb3e1cf8d182cb367627f0199282b27f882b75c229595ef7d1fdfa7fb8a88"
+      },
+      {
+        "path": "overload/data/texts/unlock-orcs_campaign_mage.lua",
+        "sha256": "a3fde0bcf4342983ffa926351f9c4c27e4f77a736832d0c5d2a4d5616901fb17"
+      },
+      {
+        "path": "overload/data/texts/unlock-orcs_campaign_rogue.lua",
+        "sha256": "7eebdad4dc9ea134809d47fa60f256b0d145d9d5da5f1bf7664824d3e05154fc"
+      },
+      {
+        "path": "overload/data/texts/unlock-orcs_tinker_eyal.lua",
+        "sha256": "5fef7bd58c70b40dd69fd6979b286aa58d62c611beefb1b3eb11b8151bb53898"
+      },
+      {
+        "path": "overload/data/texts/unlock-race_whitehooves.lua",
+        "sha256": "4ddf42e15c1da30e5ff63eb02485012261b2356952490d2395a4ec95e725cc6c"
+      },
+      {
+        "path": "overload/data/texts/unlock-race_yeti.lua",
+        "sha256": "789dc4e2c4dfd3f7ef941843e5bc2a9e7a816e580f49781f7c255c0fc092f1cc"
+      },
+      {
+        "path": "overload/data/texts/unlock-tinker_annihilator.lua",
+        "sha256": "6ebf44a13ab0ebd68e925cf9e2ac9e8f139dc2fa18f1abeec59f43f74fb2bd9c"
+      },
+      {
+        "path": "overload/data/texts/unlock-tinker_psyshot.lua",
+        "sha256": "6d253bbe0466af0052c8cfe679972cca4d540743e6804d7ed70dc970bcd9563f"
+      },
+      {
+        "path": "overload/data/texts/unlock-wyrmic_undead.lua",
+        "sha256": "0c9b9be37083c53815ee9cb42a2abdbbf56e519954fe0aa1e5b5e3770a2f7022"
+      },
+      {
+        "path": "overload/mod/class/OrcCampaign.lua",
+        "sha256": "68709132d1d4675e1ee49f1f7227a639d1cdc12bda1f68eb6fa63ea185658a7c"
+      },
+      {
+        "path": "overload/mod/class/generator/map/orc/Sewers.lua",
+        "sha256": "dc5a274b714fc8e1127df8298eb796b7d8ebc4fc959d13b87388682c6d53d53a"
+      },
+      {
+        "path": "overload/mod/class/interface/PartyTinker.lua",
+        "sha256": "719808907832f6a22a8e296d30cb7e590603a5e03912bc185937d19109dbb258"
+      },
+      {
+        "path": "overload/mod/dialogs/CreateTinker.lua",
+        "sha256": "46f0e97ee89600431a359123f987535b3957e73268c1490c2e32defdf03513a3"
+      },
+      {
+        "path": "superload/mod/class/Actor.lua",
+        "sha256": "2b332d29bf6015e3cb786f2990071437e560b551a53db470deb3ff997f4c5717"
+      },
+      {
+        "path": "superload/mod/class/Game.lua",
+        "sha256": "da8a41f298eed21cb889fbb38b439a288da1266463cb64cb48d3c2b4f8eff8d8"
+      },
+      {
+        "path": "superload/mod/class/NicerTiles.lua",
+        "sha256": "1d45a1edf9edbf2a485264d4641eaadeb3ed22c3f81439f97a0701e7a524902d"
+      },
+      {
+        "path": "superload/mod/class/Object.lua",
+        "sha256": "581c4f1a1144f3a3f88a458ebc52fa053ac3cf2a6067e97d644e0e8a2d003dff"
+      },
+      {
+        "path": "superload/mod/class/Party.lua",
+        "sha256": "0badb18096d4eaa80696cc7d25ba6090c4cbef9be20d05e89336a35c3d420fb7"
+      },
+      {
+        "path": "superload/mod/class/Projectile.lua",
+        "sha256": "644654a35e33b265b6b9a34b2a955853eb0161e137c2240689305ec937ad476d"
+      },
+      {
+        "path": "superload/mod/class/generator/actor/KrukInvasion.lua",
+        "sha256": "42b6e213a985470096f4c89176477f6f3f475c6a1c5b1df747c711050e76407c"
+      },
+      {
+        "path": "superload/mod/class/interface/Archery.lua",
+        "sha256": "27dd73133f11c6e3a9ac8b84a1097ea098b0b442a0e40bd035a215f3afac0f8a"
+      },
+      {
+        "path": "superload/mod/class/interface/Combat.lua",
+        "sha256": "bc9bc76cd217c8a661082bfc75bf8d258d66e5d9fa9e34732664e7f17eeb6b3f"
+      },
+      {
+        "path": "superload/mod/class/interface/TooltipsData.lua",
+        "sha256": "e3208b64ffcd67cb5e51b34e9d79c3d01f3fefadd1cc08dc768481b0f4e0495c"
+      },
+      {
+        "path": "superload/mod/dialogs/Birther.lua",
+        "sha256": "fa667ce5401f3702061a8963546cea3132bceb03d41651c23fba54c8d219dd8e"
+      },
+      {
+        "path": "superload/mod/dialogs/LevelupDialog.lua",
+        "sha256": "2a7a4e202f41b41c80bbb830b6309fc3a442b05f13a4ad382be01da852efb1d0"
+      },
+      {
+        "path": "superload/mod/dialogs/debug/DebugMain.lua",
+        "sha256": "2787c9bf9441350c61156cb6fa7097b57b7eccdbcb9c63cb87d8f3fbc047096b"
+      }
+    ]
+  }
+}

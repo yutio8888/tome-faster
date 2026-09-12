@@ -1,0 +1,22 @@
+In file included from <ADDON_ROOT>/tests/profile/particles.c:33:
+<PROFILE_DATA>/kernels.inc: In function ‘thread_particle_init’:
+<PROFILE_DATA>/kernels.inc:384:82: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+  384 |                                 printf("Particle args init error %x (%s): %s\n", (int)l, ps->args, lua_tostring(L, -1));
+      |                                                                                  ^
+<PROFILE_DATA>/kernels.inc:432:68: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+  432 |                         printf("Particle run error %x (%s): %s\n", (int)l, ps->args, lua_tostring(L, -1));
+      |                                                                    ^
+<PROFILE_DATA>/kernels.inc: In function ‘thread_particle_die’:
+<PROFILE_DATA>/kernels.inc:614:40: warning: passing argument 1 of ‘free’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  614 |                 if (ps->args) { free(ps->args); ps->args = NULL; }
+      |                                      ~~^~~~~~
+In file included from <ADDON_ROOT>/tests/profile/particles.c:6:
+/usr/include/stdlib.h:691:25: note: expected ‘void *’ but argument is of type ‘const char *’
+  691 | extern void free (void *__ptr) __THROW;
+      |                   ~~~~~~^~~~~
+<PROFILE_DATA>/kernels.inc:615:44: warning: passing argument 1 of ‘free’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  615 |                 if (ps->name_def) { free(ps->name_def); ps->name_def = NULL; }
+      |                                          ~~^~~~~~~~~~
+/usr/include/stdlib.h:691:25: note: expected ‘void *’ but argument is of type ‘const char *’
+  691 | extern void free (void *__ptr) __THROW;
+      |                   ~~~~~~^~~~~

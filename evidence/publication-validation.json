@@ -1,0 +1,51 @@
+{
+  "date": "2026-09-12",
+  "repository": "https://github.com/yutio8888/tome-faster",
+  "branch": "perf-review-profile-20260912",
+  "code_base": "070d3dc174ca84e841ebddc3c8df9ba4261f6b04",
+  "scope": "Earlier addon fixes, 0.2.1 experiment, public report and aggregate evidence",
+  "implementation_changed_in_publication_commit": false,
+  "regression_rerun": {
+    "existing_assertions": 20790,
+    "save_load_checks": 71,
+    "runtime_checks": 162,
+    "profile_checks": 22,
+    "status": "passed"
+  },
+  "native_cases": {
+    "count": 6,
+    "source": "Prior verified run; kernels unchanged, timings not rerun for documentation publication"
+  },
+  "local_markdown_links_checked": 67,
+  "numeric_result_files_unchanged": true,
+  "public_copy_transformations": [
+    "Replace machine paths in environment and compiler log with named placeholders",
+    "Replace native process addresses in stack samples with placeholders",
+    "Adapt documentation links to standalone repository"
+  ],
+  "excluded": [
+    "Player save archives",
+    "Generated player graph and particle configurations",
+    "Full per-object observations",
+    "Local binaries",
+    "Agent workspace and orchestration state"
+  ],
+  "historical_packages": [
+    {
+      "path": "releases/tome-faster-0.1.0.teaa",
+      "sha256": "7e57245a44c9aca46d29c8f9532fbe1a0f8aead3fd9539d64995b80ae5511869"
+    },
+    {
+      "path": "releases/tome-faster-0.2.0.teaa",
+      "sha256": "52c05a31a569ab650e1862cf3af824efff52b81f2b0ef86d5471df51d0878d01"
+    },
+    {
+      "path": "releases/tome-faster-0.2.1-profile.teaa",
+      "sha256": "3a2f67df5d904db994219cddcc379dd36aa6e723b1d0339da5dd7b08bb82c126"
+    },
+    {
+      "path": "upstream/tome-faster-0.0.1.teaa",
+      "sha256": "030d9d4c86c98986e09ac8864991b7948a84263d9c8e23020ddae266b63882ea"
+    }
+  ]
+}

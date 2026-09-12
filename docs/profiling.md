@@ -66,6 +66,8 @@ profile 中 GC 的占比也不能当作正常游玩时的 GC 占比。
 
 需要本体 Git clone、Python 3、GCC、SDL2 开发文件及本机 LuaJIT 5.1 ABI 库。
 下面的工具会把生成输入放在指定目录，原存档只读。生成图含玩家数据，保留本地使用。
+当前准备脚本针对本次案例结构，含固定 yron 目录和捕获者链假设；不是任意存档的通用工具。
+公开仓库提供[聚合测量结果](../evidence/faster-tome4-profile/README.md)，不提供玩家输入。
 
 ```sh
 python3 -B tests/profile/prepare.py --engine /path/to/t-engine4 \

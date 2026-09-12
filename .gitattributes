@@ -1,2 +1,4 @@
 # Preserve the original upstream Lua files, including line endings.
 *.lua -text
+# Archived unified-diff context retains its leading space and original tabs.
+evidence/faster-tome4-runtime-review/experiments/spiderbot-candidates.patch -whitespace
