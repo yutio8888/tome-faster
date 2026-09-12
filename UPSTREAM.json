@@ -1,0 +1,43 @@
+{
+  "name": "Faster ToME4",
+  "upstream_author": "yutio888",
+  "upstream_addon_version": "0.0.1",
+  "declared_game_version": "1.7.3",
+  "release_date": "2021-06-20",
+  "release_page": "https://te4.org/games/addons/tome/faster",
+  "download_url": "https://te4.org/download-addon/7426/tome/faster",
+  "archive_filename": "tome-faster.teaa",
+  "archive_bytes": 6260,
+  "archive_sha256": "030d9d4c86c98986e09ac8864991b7948a84263d9c8e23020ddae266b63882ea",
+  "source_commit": null,
+  "imported_on": "2026-09-12",
+  "source_files_modified": false,
+  "license": "GPL-3.0-or-later",
+  "files": [
+    {
+      "path": "hooks/load.lua",
+      "sha256": "c7b6e5ac6bdae1cbe30f4a7dba2be2fd5c74c8983b4df8a92f600050addd87e7",
+      "bytes": 1068
+    },
+    {
+      "path": "init.lua",
+      "sha256": "db0490b195e2ab76e8ce1dd5a627d0ce8fdb59a2c75638808e16f9a40984b74c",
+      "bytes": 1129
+    },
+    {
+      "path": "overload/engine/CacheList.lua",
+      "sha256": "0a1e5139c37c3ab74403d4dae06ccbee110d60e45686ea70466c73533cabbb79",
+      "bytes": 1177
+    },
+    {
+      "path": "superload/engine/Map.lua",
+      "sha256": "7b030adcb6bcb0815ce999cdad1aadab7789757d4857086f6c8fa1f0f524716d",
+      "bytes": 284
+    },
+    {
+      "path": "superload/mod/dialogs/ShowChatLog.lua",
+      "sha256": "6c468dc012cc333a8251ceb681cabf169beef7ccd55adc1af2586bd5ff6149b0",
+      "bytes": 1976
+    }
+  ]
+}

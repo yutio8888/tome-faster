@@ -1,0 +1,2 @@
+# Preserve the original upstream Lua files, including line endings.
+*.lua -text
