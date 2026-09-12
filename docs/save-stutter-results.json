@@ -1,0 +1,954 @@
+{
+  "date": "2026-09-12",
+  "addon_version": "0.2.2",
+  "engine_commit": "624a67329fe2ad440c5b344785a9c73fcf22ae63",
+  "baseline_addon_commit": "bdc63e355c03280cda06f088563830a91df8d17e",
+  "environment": {
+    "game": "ToME 1.7.6",
+    "runtime": "LuaJIT 2.0.2",
+    "cpu": "AMD Ryzen 7 9800X3D",
+    "graphics": "Mesa 22.3.6 llvmpipe, Xvfb, 1280x800, approximately 30 FPS cap",
+    "offline": true,
+    "save_count": 1
+  },
+  "save_ab": {
+    "method": "Three independent paired processes; fresh copies of the same original save; 2 s warmup; both save_clone and offline_chardump toggled; original upload_charsheet and graphics settings retained. Order: before/after, after/before, before/after. detail=false prevents description wrappers from disabling conservative guards.",
+    "samples": [
+      {
+        "session": "stutter-opt-before-pair1-01",
+        "optimized": false,
+        "completed": true,
+        "exit_code": 0,
+        "turn_delta": 0,
+        "synchronous_ms": 497.68367600441,
+        "save_flow_ms": 911.49887701869,
+        "max_display_callback_interval_ms": 511.28720599413
+      },
+      {
+        "session": "stutter-opt-before-pair2-01",
+        "optimized": false,
+        "completed": true,
+        "exit_code": 0,
+        "turn_delta": 0,
+        "synchronous_ms": 458.49188899994,
+        "save_flow_ms": 864.72433900833,
+        "max_display_callback_interval_ms": 472.06378701329
+      },
+      {
+        "session": "stutter-opt-before-pair3-01",
+        "optimized": false,
+        "completed": true,
+        "exit_code": 0,
+        "turn_delta": 0,
+        "synchronous_ms": 459.18238300085,
+        "save_flow_ms": 913.39601901174,
+        "max_display_callback_interval_ms": 469.95229500532
+      },
+      {
+        "session": "stutter-opt-after-pair1-01",
+        "optimized": true,
+        "completed": true,
+        "exit_code": 0,
+        "turn_delta": 0,
+        "synchronous_ms": 202.02723401785,
+        "save_flow_ms": 619.96772602201,
+        "max_display_callback_interval_ms": 212.00416600704
+      },
+      {
+        "session": "stutter-opt-after-pair2-01",
+        "optimized": true,
+        "completed": true,
+        "exit_code": 0,
+        "turn_delta": 0,
+        "synchronous_ms": 205.08499699831,
+        "save_flow_ms": 610.37733900547,
+        "max_display_callback_interval_ms": 215.43883401155
+      },
+      {
+        "session": "stutter-opt-after-pair3-01",
+        "optimized": true,
+        "completed": true,
+        "exit_code": 0,
+        "turn_delta": 0,
+        "synchronous_ms": 209.50814598799,
+        "save_flow_ms": 640.54787299037,
+        "max_display_callback_interval_ms": 219.03050100803
+      }
+    ],
+    "before_medians_ms": {
+      "synchronous_ms": 459.18238300085,
+      "save_flow_ms": 911.49887701869,
+      "max_display_callback_interval_ms": 472.06378701329
+    },
+    "after_medians_ms": {
+      "synchronous_ms": 205.08499699831,
+      "save_flow_ms": 619.96772602201,
+      "max_display_callback_interval_ms": 215.43883401155
+    }
+  },
+  "loaded_graph_clone": {
+    "equivalence": {
+      "copied_tables": 127833,
+      "original_table_values": 22115,
+      "turn_delta": 0,
+      "counted_objects": 27373,
+      "passed": true,
+      "entries": 509503
+    },
+    "jit": "LuaJIT 2.0.2",
+    "counts_match": true,
+    "pairs": 10,
+    "valid": true,
+    "turn_delta": 0,
+    "candidate": {
+      "wall_ms": {
+        "median": 73.084257006645,
+        "min": 70.795929014683,
+        "max": 78.280160993338
+      },
+      "samples": [
+        {
+          "wall_ms": 75.437275975943,
+          "position": 2,
+          "pair": 1,
+          "counted_objects": 27373,
+          "heap_delta_kib": 20811.859375,
+          "thread_cpu_ms": 75.261086
+        },
+        {
+          "wall_ms": 72.614481002092,
+          "position": 1,
+          "pair": 2,
+          "counted_objects": 27373,
+          "heap_delta_kib": 20812.2109375,
+          "thread_cpu_ms": 72.436806
+        },
+        {
+          "wall_ms": 72.004893988371,
+          "position": 2,
+          "pair": 3,
+          "counted_objects": 27373,
+          "heap_delta_kib": 20813.265625,
+          "thread_cpu_ms": 71.802155
+        },
+        {
+          "wall_ms": 70.795929014683,
+          "position": 1,
+          "pair": 4,
+          "counted_objects": 27373,
+          "heap_delta_kib": 20813.6171875,
+          "thread_cpu_ms": 70.564845
+        },
+        {
+          "wall_ms": 78.280160993338,
+          "position": 2,
+          "pair": 5,
+          "counted_objects": 27373,
+          "heap_delta_kib": 20809.21875,
+          "thread_cpu_ms": 78.078396999999
+        },
+        {
+          "wall_ms": 73.496262013912,
+          "position": 1,
+          "pair": 6,
+          "counted_objects": 27373,
+          "heap_delta_kib": 20810.9453125,
+          "thread_cpu_ms": 73.308988
+        },
+        {
+          "wall_ms": 74.649946987629,
+          "position": 2,
+          "pair": 7,
+          "counted_objects": 27373,
+          "heap_delta_kib": 20812,
+          "thread_cpu_ms": 74.441316
+        },
+        {
+          "wall_ms": 72.382948994637,
+          "position": 1,
+          "pair": 8,
+          "counted_objects": 27373,
+          "heap_delta_kib": 20812.3515625,
+          "thread_cpu_ms": 72.210201
+        },
+        {
+          "wall_ms": 72.672251999378,
+          "position": 2,
+          "pair": 9,
+          "counted_objects": 27373,
+          "heap_delta_kib": 20813.40625,
+          "thread_cpu_ms": 72.500577999999
+        },
+        {
+          "wall_ms": 75.101262003183,
+          "position": 1,
+          "pair": 10,
+          "counted_objects": 27373,
+          "heap_delta_kib": 20813.7578125,
+          "thread_cpu_ms": 74.923082
+        }
+      ],
+      "thread_cpu_ms": {
+        "median": 72.904782999999,
+        "min": 70.564845,
+        "max": 78.078396999999
+      },
+      "heap_delta_kib": {
+        "median": 20812.28125,
+        "min": 20809.21875,
+        "max": 20813.7578125
+      },
+      "counted_objects": {
+        "median": 27373,
+        "min": 27373,
+        "max": 27373
+      }
+    },
+    "paired_wall_reduction_ms": {
+      "median": 35.575431495905,
+      "min": 29.981913000345,
+      "max": 39.004633009434
+    },
+    "baseline": {
+      "wall_ms": {
+        "median": 109.35392799973,
+        "min": 106.69539499283,
+        "max": 112.33470398188
+      },
+      "samples": [
+        {
+          "wall_ms": 109.46555900574,
+          "position": 1,
+          "pair": 1,
+          "counted_objects": 27373,
+          "heap_delta_kib": 20811.5078125,
+          "thread_cpu_ms": 109.213121
+        },
+        {
+          "wall_ms": 106.79128599167,
+          "position": 2,
+          "pair": 2,
+          "counted_objects": 27373,
+          "heap_delta_kib": 20812.5625,
+          "thread_cpu_ms": 106.536543
+        },
+        {
+          "wall_ms": 106.69539499283,
+          "position": 1,
+          "pair": 3,
+          "counted_objects": 27373,
+          "heap_delta_kib": 20812.9140625,
+          "thread_cpu_ms": 106.45261
+        },
+        {
+          "wall_ms": 109.24229699373,
+          "position": 2,
+          "pair": 4,
+          "counted_objects": 27373,
+          "heap_delta_kib": 20813.96875,
+          "thread_cpu_ms": 108.976529
+        },
+        {
+          "wall_ms": 108.26207399368,
+          "position": 1,
+          "pair": 5,
+          "counted_objects": 27373,
+          "heap_delta_kib": 20814.3203125,
+          "thread_cpu_ms": 108.017182
+        },
+        {
+          "wall_ms": 112.33470398188,
+          "position": 2,
+          "pair": 6,
+          "counted_objects": 27373,
+          "heap_delta_kib": 20811.296875,
+          "thread_cpu_ms": 112.058507
+        },
+        {
+          "wall_ms": 108.81165102124,
+          "position": 1,
+          "pair": 7,
+          "counted_objects": 27373,
+          "heap_delta_kib": 20811.6484375,
+          "thread_cpu_ms": 108.546019
+        },
+        {
+          "wall_ms": 110.17534700036,
+          "position": 2,
+          "pair": 8,
+          "counted_objects": 27373,
+          "heap_delta_kib": 20812.703125,
+          "thread_cpu_ms": 109.907347
+        },
+        {
+          "wall_ms": 111.67688500881,
+          "position": 1,
+          "pair": 9,
+          "counted_objects": 27373,
+          "heap_delta_kib": 20813.0546875,
+          "thread_cpu_ms": 111.382683
+        },
+        {
+          "wall_ms": 111.56162399054,
+          "position": 2,
+          "pair": 10,
+          "counted_objects": 27373,
+          "heap_delta_kib": 20814.109375,
+          "thread_cpu_ms": 111.282135
+        }
+      ],
+      "thread_cpu_ms": {
+        "median": 109.094825,
+        "min": 106.45261,
+        "max": 112.058507
+      },
+      "heap_delta_kib": {
+        "median": 20812.80859375,
+        "min": 20811.296875,
+        "max": 20814.3203125
+      },
+      "counted_objects": {
+        "median": 27373,
+        "min": 27373,
+        "max": 27373
+      }
+    },
+    "baseline_source": "@/engine/class.lua",
+    "warmup_pairs": 3,
+    "gc": "full collection before each sample excluded; automatic GC enabled during cloning",
+    "kind": "clone_benchmark",
+    "baseline_line": 362,
+    "turn_start": 1933440
+  },
+  "regression": {
+    "runtime": "LuaJIT 2.1.0-beta3",
+    "existing_assertions": 20790,
+    "save_load_checks": 71,
+    "runtime_checks": 162,
+    "profile_checks": 22,
+    "clone_graphs": 91,
+    "clone_assertions_this_run": 73284,
+    "clone_assertion_count_note": "Exact count varies with hash iteration; all graph equivalence checks must pass.",
+    "character_export_checks": 175,
+    "status": "passed",
+    "clone_also_passed_in_embedded_luajit_2_0_2": true
+  },
+  "save_integrity": {
+    "original_sha256_unchanged": true,
+    "crc": [
+      {
+        "session": "stutter-opt-before-pair1-01",
+        "archives": [
+          {
+            "file": "game.teag",
+            "entries": 2853
+          },
+          {
+            "file": "zone-ashes-urhrok+searing-halls.teaz",
+            "entries": 253
+          },
+          {
+            "file": "zone-daikara.teaz",
+            "entries": 213
+          },
+          {
+            "file": "zone-heart-gloom.teaz",
+            "entries": 870
+          },
+          {
+            "file": "zone-lake-nur.teaz",
+            "entries": 1194
+          },
+          {
+            "file": "zone-mark-spellblaze.teaz",
+            "entries": 1375
+          },
+          {
+            "file": "zone-maze.teaz",
+            "entries": 103
+          },
+          {
+            "file": "zone-norgos-lair.teaz",
+            "entries": 266
+          },
+          {
+            "file": "zone-old-forest.teaz",
+            "entries": 1165
+          },
+          {
+            "file": "zone-rhaloren-camp.teaz",
+            "entries": 715
+          },
+          {
+            "file": "zone-ruins-kor-pul.teaz",
+            "entries": 1004
+          },
+          {
+            "file": "zone-sandworm-lair.teaz",
+            "entries": 1421
+          },
+          {
+            "file": "zone-scintillating-caves.teaz",
+            "entries": 587
+          },
+          {
+            "file": "zone-shertul-fortress.teaz",
+            "entries": 1131
+          },
+          {
+            "file": "zone-town-angolwen.teaz",
+            "entries": 1099
+          },
+          {
+            "file": "zone-town-derth.teaz",
+            "entries": 686
+          },
+          {
+            "file": "zone-town-elvala.teaz",
+            "entries": 407
+          },
+          {
+            "file": "zone-town-last-hope.teaz",
+            "entries": 1697
+          },
+          {
+            "file": "zone-town-shatur.teaz",
+            "entries": 1132
+          },
+          {
+            "file": "zone-town-zigur.teaz",
+            "entries": 1313
+          },
+          {
+            "file": "zone-trollmire.teaz",
+            "entries": 442
+          },
+          {
+            "file": "zone-wilderness.teaz",
+            "entries": 1136
+          }
+        ]
+      },
+      {
+        "session": "stutter-opt-before-pair2-01",
+        "archives": [
+          {
+            "file": "game.teag",
+            "entries": 2853
+          },
+          {
+            "file": "zone-ashes-urhrok+searing-halls.teaz",
+            "entries": 253
+          },
+          {
+            "file": "zone-daikara.teaz",
+            "entries": 213
+          },
+          {
+            "file": "zone-heart-gloom.teaz",
+            "entries": 870
+          },
+          {
+            "file": "zone-lake-nur.teaz",
+            "entries": 1194
+          },
+          {
+            "file": "zone-mark-spellblaze.teaz",
+            "entries": 1375
+          },
+          {
+            "file": "zone-maze.teaz",
+            "entries": 103
+          },
+          {
+            "file": "zone-norgos-lair.teaz",
+            "entries": 266
+          },
+          {
+            "file": "zone-old-forest.teaz",
+            "entries": 1165
+          },
+          {
+            "file": "zone-rhaloren-camp.teaz",
+            "entries": 715
+          },
+          {
+            "file": "zone-ruins-kor-pul.teaz",
+            "entries": 1004
+          },
+          {
+            "file": "zone-sandworm-lair.teaz",
+            "entries": 1421
+          },
+          {
+            "file": "zone-scintillating-caves.teaz",
+            "entries": 587
+          },
+          {
+            "file": "zone-shertul-fortress.teaz",
+            "entries": 1131
+          },
+          {
+            "file": "zone-town-angolwen.teaz",
+            "entries": 1099
+          },
+          {
+            "file": "zone-town-derth.teaz",
+            "entries": 686
+          },
+          {
+            "file": "zone-town-elvala.teaz",
+            "entries": 407
+          },
+          {
+            "file": "zone-town-last-hope.teaz",
+            "entries": 1697
+          },
+          {
+            "file": "zone-town-shatur.teaz",
+            "entries": 1132
+          },
+          {
+            "file": "zone-town-zigur.teaz",
+            "entries": 1313
+          },
+          {
+            "file": "zone-trollmire.teaz",
+            "entries": 442
+          },
+          {
+            "file": "zone-wilderness.teaz",
+            "entries": 1136
+          }
+        ]
+      },
+      {
+        "session": "stutter-opt-before-pair3-01",
+        "archives": [
+          {
+            "file": "game.teag",
+            "entries": 2853
+          },
+          {
+            "file": "zone-ashes-urhrok+searing-halls.teaz",
+            "entries": 253
+          },
+          {
+            "file": "zone-daikara.teaz",
+            "entries": 213
+          },
+          {
+            "file": "zone-heart-gloom.teaz",
+            "entries": 870
+          },
+          {
+            "file": "zone-lake-nur.teaz",
+            "entries": 1194
+          },
+          {
+            "file": "zone-mark-spellblaze.teaz",
+            "entries": 1375
+          },
+          {
+            "file": "zone-maze.teaz",
+            "entries": 103
+          },
+          {
+            "file": "zone-norgos-lair.teaz",
+            "entries": 266
+          },
+          {
+            "file": "zone-old-forest.teaz",
+            "entries": 1165
+          },
+          {
+            "file": "zone-rhaloren-camp.teaz",
+            "entries": 715
+          },
+          {
+            "file": "zone-ruins-kor-pul.teaz",
+            "entries": 1004
+          },
+          {
+            "file": "zone-sandworm-lair.teaz",
+            "entries": 1421
+          },
+          {
+            "file": "zone-scintillating-caves.teaz",
+            "entries": 587
+          },
+          {
+            "file": "zone-shertul-fortress.teaz",
+            "entries": 1131
+          },
+          {
+            "file": "zone-town-angolwen.teaz",
+            "entries": 1099
+          },
+          {
+            "file": "zone-town-derth.teaz",
+            "entries": 686
+          },
+          {
+            "file": "zone-town-elvala.teaz",
+            "entries": 407
+          },
+          {
+            "file": "zone-town-last-hope.teaz",
+            "entries": 1697
+          },
+          {
+            "file": "zone-town-shatur.teaz",
+            "entries": 1132
+          },
+          {
+            "file": "zone-town-zigur.teaz",
+            "entries": 1313
+          },
+          {
+            "file": "zone-trollmire.teaz",
+            "entries": 442
+          },
+          {
+            "file": "zone-wilderness.teaz",
+            "entries": 1136
+          }
+        ]
+      },
+      {
+        "session": "stutter-opt-after-pair1-01",
+        "archives": [
+          {
+            "file": "game.teag",
+            "entries": 2853
+          },
+          {
+            "file": "zone-ashes-urhrok+searing-halls.teaz",
+            "entries": 253
+          },
+          {
+            "file": "zone-daikara.teaz",
+            "entries": 213
+          },
+          {
+            "file": "zone-heart-gloom.teaz",
+            "entries": 870
+          },
+          {
+            "file": "zone-lake-nur.teaz",
+            "entries": 1194
+          },
+          {
+            "file": "zone-mark-spellblaze.teaz",
+            "entries": 1375
+          },
+          {
+            "file": "zone-maze.teaz",
+            "entries": 103
+          },
+          {
+            "file": "zone-norgos-lair.teaz",
+            "entries": 266
+          },
+          {
+            "file": "zone-old-forest.teaz",
+            "entries": 1165
+          },
+          {
+            "file": "zone-rhaloren-camp.teaz",
+            "entries": 715
+          },
+          {
+            "file": "zone-ruins-kor-pul.teaz",
+            "entries": 1004
+          },
+          {
+            "file": "zone-sandworm-lair.teaz",
+            "entries": 1421
+          },
+          {
+            "file": "zone-scintillating-caves.teaz",
+            "entries": 587
+          },
+          {
+            "file": "zone-shertul-fortress.teaz",
+            "entries": 1131
+          },
+          {
+            "file": "zone-town-angolwen.teaz",
+            "entries": 1099
+          },
+          {
+            "file": "zone-town-derth.teaz",
+            "entries": 686
+          },
+          {
+            "file": "zone-town-elvala.teaz",
+            "entries": 407
+          },
+          {
+            "file": "zone-town-last-hope.teaz",
+            "entries": 1697
+          },
+          {
+            "file": "zone-town-shatur.teaz",
+            "entries": 1132
+          },
+          {
+            "file": "zone-town-zigur.teaz",
+            "entries": 1313
+          },
+          {
+            "file": "zone-trollmire.teaz",
+            "entries": 442
+          },
+          {
+            "file": "zone-wilderness.teaz",
+            "entries": 1136
+          }
+        ]
+      },
+      {
+        "session": "stutter-opt-after-pair2-01",
+        "archives": [
+          {
+            "file": "game.teag",
+            "entries": 2853
+          },
+          {
+            "file": "zone-ashes-urhrok+searing-halls.teaz",
+            "entries": 253
+          },
+          {
+            "file": "zone-daikara.teaz",
+            "entries": 213
+          },
+          {
+            "file": "zone-heart-gloom.teaz",
+            "entries": 870
+          },
+          {
+            "file": "zone-lake-nur.teaz",
+            "entries": 1194
+          },
+          {
+            "file": "zone-mark-spellblaze.teaz",
+            "entries": 1375
+          },
+          {
+            "file": "zone-maze.teaz",
+            "entries": 103
+          },
+          {
+            "file": "zone-norgos-lair.teaz",
+            "entries": 266
+          },
+          {
+            "file": "zone-old-forest.teaz",
+            "entries": 1165
+          },
+          {
+            "file": "zone-rhaloren-camp.teaz",
+            "entries": 715
+          },
+          {
+            "file": "zone-ruins-kor-pul.teaz",
+            "entries": 1004
+          },
+          {
+            "file": "zone-sandworm-lair.teaz",
+            "entries": 1421
+          },
+          {
+            "file": "zone-scintillating-caves.teaz",
+            "entries": 587
+          },
+          {
+            "file": "zone-shertul-fortress.teaz",
+            "entries": 1131
+          },
+          {
+            "file": "zone-town-angolwen.teaz",
+            "entries": 1099
+          },
+          {
+            "file": "zone-town-derth.teaz",
+            "entries": 686
+          },
+          {
+            "file": "zone-town-elvala.teaz",
+            "entries": 407
+          },
+          {
+            "file": "zone-town-last-hope.teaz",
+            "entries": 1697
+          },
+          {
+            "file": "zone-town-shatur.teaz",
+            "entries": 1132
+          },
+          {
+            "file": "zone-town-zigur.teaz",
+            "entries": 1313
+          },
+          {
+            "file": "zone-trollmire.teaz",
+            "entries": 442
+          },
+          {
+            "file": "zone-wilderness.teaz",
+            "entries": 1136
+          }
+        ]
+      },
+      {
+        "session": "stutter-opt-after-pair3-01",
+        "archives": [
+          {
+            "file": "game.teag",
+            "entries": 2853
+          },
+          {
+            "file": "zone-ashes-urhrok+searing-halls.teaz",
+            "entries": 253
+          },
+          {
+            "file": "zone-daikara.teaz",
+            "entries": 213
+          },
+          {
+            "file": "zone-heart-gloom.teaz",
+            "entries": 870
+          },
+          {
+            "file": "zone-lake-nur.teaz",
+            "entries": 1194
+          },
+          {
+            "file": "zone-mark-spellblaze.teaz",
+            "entries": 1375
+          },
+          {
+            "file": "zone-maze.teaz",
+            "entries": 103
+          },
+          {
+            "file": "zone-norgos-lair.teaz",
+            "entries": 266
+          },
+          {
+            "file": "zone-old-forest.teaz",
+            "entries": 1165
+          },
+          {
+            "file": "zone-rhaloren-camp.teaz",
+            "entries": 715
+          },
+          {
+            "file": "zone-ruins-kor-pul.teaz",
+            "entries": 1004
+          },
+          {
+            "file": "zone-sandworm-lair.teaz",
+            "entries": 1421
+          },
+          {
+            "file": "zone-scintillating-caves.teaz",
+            "entries": 587
+          },
+          {
+            "file": "zone-shertul-fortress.teaz",
+            "entries": 1131
+          },
+          {
+            "file": "zone-town-angolwen.teaz",
+            "entries": 1099
+          },
+          {
+            "file": "zone-town-derth.teaz",
+            "entries": 686
+          },
+          {
+            "file": "zone-town-elvala.teaz",
+            "entries": 407
+          },
+          {
+            "file": "zone-town-last-hope.teaz",
+            "entries": 1697
+          },
+          {
+            "file": "zone-town-shatur.teaz",
+            "entries": 1132
+          },
+          {
+            "file": "zone-town-zigur.teaz",
+            "entries": 1313
+          },
+          {
+            "file": "zone-trollmire.teaz",
+            "entries": 442
+          },
+          {
+            "file": "zone-wilderness.teaz",
+            "entries": 1136
+          }
+        ]
+      }
+    ],
+    "roundtrip_source_sha256": "4799eca430a120eeb35c336298c986e7ca560b5851652cf60ce79d2c9b4c1ba3"
+  },
+  "roundtrip": {
+    "exit_code": 0,
+    "wall_s": 7.815039107983466,
+    "completed": true,
+    "idle_observation_s": 4.997524245001841,
+    "cpu_tick_hz": 100,
+    "method": "Load an after-pair3 generated save with addon 0.2.2, idle 5 s, then save again.",
+    "turn_delta": 0,
+    "archive_crc_passed": [
+      "game.teag",
+      "zone-ashes-urhrok+searing-halls.teaz",
+      "zone-daikara.teaz",
+      "zone-heart-gloom.teaz",
+      "zone-lake-nur.teaz",
+      "zone-mark-spellblaze.teaz",
+      "zone-maze.teaz",
+      "zone-norgos-lair.teaz",
+      "zone-old-forest.teaz",
+      "zone-rhaloren-camp.teaz",
+      "zone-ruins-kor-pul.teaz",
+      "zone-sandworm-lair.teaz",
+      "zone-scintillating-caves.teaz",
+      "zone-shertul-fortress.teaz",
+      "zone-town-angolwen.teaz",
+      "zone-town-derth.teaz",
+      "zone-town-elvala.teaz",
+      "zone-town-last-hope.teaz",
+      "zone-town-shatur.teaz",
+      "zone-town-zigur.teaz",
+      "zone-trollmire.teaz",
+      "zone-wilderness.teaz"
+    ]
+  },
+  "limits": [
+    "One save on software rendering; no hardware GPU or Steam test.",
+    "Offline export reduction does not apply to valid online exports.",
+    "Clone benchmark is warmed local copying, not end-to-end save timing.",
+    "General custom description hooks are not individually guarded.",
+    "Movement/combat rendering was not changed."
+  ],
+  "full_character_export_check": {
+    "selected_state_unchanged": true,
+    "offline_optimized_encodes": 0,
+    "captured_online_orders": 2,
+    "online_equal": true,
+    "offline_original_encodes": 1,
+    "uid_delta": 0,
+    "online_json_bytes": 263388,
+    "lua_rng_calls": 0,
+    "real_network_calls": 0,
+    "normalization": "Decoded JSON and metadata compared; only unordered effects, ESP, subsheets and addon tags sorted. Inventory, log and talent ordering retained.",
+    "session": "stutter-opt-chardump-final-01"
+  },
+  "diagnostic_development": "Two preliminary diagnostic runs failed on decompression API / small gzip test fixture, before final successful run; production changes were unaffected. One reload launch met occupied test lock and was rerun successfully."
+}

@@ -1,15 +1,18 @@
 {
   "date": "2026-09-12",
-  "addon_version": "0.2.1-experimental",
+  "addon_version": "0.2.2",
   "engine_commit": "624a67329fe2ad440c5b344785a9c73fcf22ae63",
-  "runtime": "Lua 5.1 / LuaJIT 2.1.1761786044",
+  "runtime": "Unit fixtures: LuaJIT 2.1.0-beta3; full game: embedded LuaJIT 2.0.2",
   "tests": {
     "existing_assertions": 20790,
     "save_load_checks": 71,
     "status": "passed",
     "runtime_checks": 162,
     "profile_checks": 22,
-    "native_particle_lifetime_cases": 6
+    "historical_native_particle_lifetime_cases": 6,
+    "clone_differential_graphs": 91,
+    "clone_assertions_this_run": 73284,
+    "character_export_checks": 175
   },
   "algorithmic_fixture": {
     "delayed_objects": 2001,
@@ -18,7 +21,7 @@
     "callback_order_equal": true
   },
   "git_diff_check": "passed",
-  "full_game_tested": false,
+  "full_game_tested": true,
   "real_player_saves_accessed": true,
   "steam_tested": false,
   "engine_sources": [
@@ -147,9 +150,9 @@
     "method": "T_INFERNO_NEXUS.callbackOnActBase",
     "source_not_globally_pinned": true
   },
-  "real_player_saves_modified": false,
-  "save_bytecode_executed": false,
-  "local_profile": {
+  "real_player_saves_modified": "Disposable copies only; original archive SHA256 unchanged",
+  "save_bytecode_executed": true,
+  "historical_local_profile_0_2_1": {
     "native_kernels": "verbatim extracted particles.c worker kernels; real SDL mutexes, SFMT and Lua callbacks; no GL rendering or thread contention",
     "graph": "sanitized serialized graph with inert saved functions; pinned cloneForSave; no game loaded callbacks",
     "native_repetitions": 5,
@@ -161,5 +164,15 @@
     "clone_both_cleanups_ms": 21.548,
     "clone_allocation_reduction_percent": 5.605863248938691,
     "stable_clone_speedup_demonstrated": false
+  },
+  "full_game_save_optimization": {
+    "results": "docs/save-stutter-results.json",
+    "save_ab_processes": 6,
+    "completed": true,
+    "original_archive_unchanged": true,
+    "loaded_graph_equivalence": true,
+    "save_reload_save_roundtrip": true,
+    "hardware_gpu_tested": false,
+    "online_character_export_equal": true
   }
 }

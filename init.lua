@@ -18,16 +18,16 @@
 -- darkgod@te4.org
 
 -- Modified 2026-09-12 by yutio8888: maintained fork, original authorship retained.
-long_name = "Faster ToME4 (profiling experiment)"
+long_name = "Faster ToME4"
 short_name = "faster"
 for_module = "tome"
 version = {1,7,6}
-addon_version = {0,2,1}
+addon_version = {0,2,2}
 tags = { "fast" }
 weight = 100000
 author = { "Yutio888", "yutio888@qq.com" }
 homepage = "http://te4.org/"
-description = [[Local profiling experiment: finite notice_enemy/dreamhammer emitters and optional coarse timing. Includes the 0.2.0 improvements. No automatic Fearscape or inventory migration.]]
+description = [[Conservative save optimizations for ToME 1.7.6: faster equivalent snapshot cloning and avoiding offline character sheets that the engine would discard. Retains online exports, save format, game rules and graphics settings. Includes previous fixes and optional profiling.]]
 overload = true
 superload = true
 hooks = true

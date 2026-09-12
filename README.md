@@ -1,21 +1,29 @@
-# Faster ToME4 — performance review and profiling experiment
+# Faster ToME4 — conservative save optimizations
 
-Version **0.2.1 (experimental)**, modified 12 September 2026. This fork fixes defects in
+Version **0.2.2**, modified 12 September 2026. This fork fixes defects in
 [Yutio888's Faster ToME4 0.0.1](https://te4.org/games/addons/tome/faster) and adds
 conservative save/load and runtime optimizations for **ToME 1.7.6**.
 
-This experimental branch adds finite `notice_enemy` / `dreamhammer` lifetimes and an
-opt-in diagnostic timer. It does not migrate Fearscape or inventory data in a live
-save. See [profiling instructions and measured limits](docs/profiling.md).
+This release adds equivalent snapshot cloning and skips character-sheet generation
+when the stock offline consumer would discard it. Online exports, party cleanup,
+game rules, graphics settings and GC behavior are retained. See the
+[design and full-game results](docs/save-stutter.md). The earlier finite
+`notice_enemy` / `dreamhammer` lifetimes and opt-in timer remain included.
 
 中文说明：[性能问题、修复方案、测量指标与文件清单](docs/faster-tome4-performance-report.md)。
 Published evidence: [profile results](evidence/faster-tome4-profile/README.md).
-Historical installable packages: [releases](releases/README.md).
-This branch includes the earlier fixes and the 0.2.1 experiment; live save migration
-and full-game validation remain pending. Player archives and generated save graphs
-are kept local.
+Installable 0.2.2 and historical packages: [releases](releases/README.md).
+Full-game save A/B and complete loaded-graph equivalence have now been tested on
+one supplied save. GPU/Steam testing and automatic old-save reference migration
+remain outside this release. Player archives and generated save graphs stay local.
 
 ## Changes
+
+- Avoid clone memo lookups for primitive keys/values, while copying the same graph,
+  in the same traversal order, with the same aliases, replacements and metadata.
+- Skip dead character-sheet output only for an existing UUID, a stock logged-out
+  or hash-invalid consumer, and recognized export methods without custom export
+  hooks. Real charballs, late UUID registration and online exports keep their path.
 
 - Use all 5,000 debug-log slots and honor explicit log truncation.
 - Restore ranged-hit direction indicators (`hit_warning`).
@@ -52,7 +60,8 @@ Save/load installers check source paths and function line boundaries of the
 verified 1.7.6 methods. Unknown earlier overrides or other source layouts are
 left intact, with a `[Faster ToME4] ... skipped` log message. These checks are
 compatibility guards, not cryptographic verification of installed game code.
-Later addons can still replace the methods; full multi-addon testing is pending.
+Later addons can still replace the methods. The supplied save's nine-addon
+combination was tested; arbitrary additional addons remain unverified.
 
 For an A/B run, these optional engine configuration values are read at addon
 startup (restart after changing them):
@@ -63,6 +72,8 @@ config.settings.faster_tome = {
     load_queue = false,
     map_checker_source = false,
     inferno_nexus = false,
+    save_clone = false,
+    offline_chardump = false,
 }
 ```
 
@@ -84,8 +95,10 @@ python3 tools/package.py
 ```
 
 The package is written to `dist/tome-faster.teaa`. Tests validate behavior and
-algorithmic work reduction. This branch also profiles native particle work and a
-safely decoded save graph; full-game, GPU and Steam-cloud timings remain unmeasured. See [VALIDATION.json](VALIDATION.json).
+algorithmic work reduction, including differential clone graphs and character
+export compatibility. Full-game save measurements and earlier native/static
+profiles are recorded in [VALIDATION.json](VALIDATION.json); hardware GPU and
+Steam-cloud timings remain unmeasured.
 Omitting the DLC path skips the Ashes fixture explicitly. The supplied DLC tree
 uses `<component>/tome-<component>/`; fixture hashes are checked before execution.
 For optional synthetic timing, run `tests/bench_runtime.lua` through the same
