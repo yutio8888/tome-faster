@@ -2,4 +2,7 @@
 local Game = loadPrevious(...)
 local ok, reason = require("engine.FasterSave").installGame(Game, config.settings.faster_tome)
 if not ok then print("[Faster ToME4] Save coalescing skipped:", reason) end
+if config.settings.faster_tome and config.settings.faster_tome.profile then
+    require('engine.FasterProfile').attachGame(Game)
+end
 return Game

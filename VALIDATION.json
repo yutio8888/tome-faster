@@ -1,13 +1,15 @@
 {
   "date": "2026-09-12",
-  "addon_version": "0.2.0",
+  "addon_version": "0.2.1-experimental",
   "engine_commit": "624a67329fe2ad440c5b344785a9c73fcf22ae63",
   "runtime": "Lua 5.1 / LuaJIT 2.1.1761786044",
   "tests": {
     "existing_assertions": 20790,
     "save_load_checks": 71,
     "status": "passed",
-    "runtime_checks": 162
+    "runtime_checks": 162,
+    "profile_checks": 22,
+    "native_particle_lifetime_cases": 6
   },
   "algorithmic_fixture": {
     "delayed_objects": 2001,
@@ -17,7 +19,7 @@
   },
   "git_diff_check": "passed",
   "full_game_tested": false,
-  "real_player_saves_accessed": false,
+  "real_player_saves_accessed": true,
   "steam_tested": false,
   "engine_sources": [
     {
@@ -144,5 +146,20 @@
     "sha256": "9169ec6910a96af6ce469ef88c4b257165955f96ce7828c8508e2d36372a92b5",
     "method": "T_INFERNO_NEXUS.callbackOnActBase",
     "source_not_globally_pinned": true
+  },
+  "real_player_saves_modified": false,
+  "save_bytecode_executed": false,
+  "local_profile": {
+    "native_kernels": "verbatim extracted particles.c worker kernels; real SDL mutexes, SFMT and Lua callbacks; no GL rendering or thread contention",
+    "graph": "sanitized serialized graph with inert saved functions; pinned cloneForSave; no game loaded callbacks",
+    "native_repetitions": 5,
+    "graph_process_repetitions": 3,
+    "graph_samples_per_process": 25,
+    "native_world_notice_us_per_keyframe": 10.588083,
+    "native_orphan_us_per_keyframe": 453.719609,
+    "clone_baseline_ms": 21.534,
+    "clone_both_cleanups_ms": 21.548,
+    "clone_allocation_reduction_percent": 5.605863248938691,
+    "stable_clone_speedup_demonstrated": false
   }
 }

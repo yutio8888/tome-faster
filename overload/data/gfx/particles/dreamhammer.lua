@@ -1,4 +1,5 @@
--- ToME - Tales of Maj'Eyal:
+-- Faster ToME4 experiment: finite burst; preserve generator and initial animation.
+-- ToME - Tales of Maj'Eyal
 -- Copyright (C) 2009 - 2019 Nicolas Casalini
 --
 -- This program is free software: you can redistribute it and/or modify
@@ -17,17 +18,29 @@
 -- Nicolas Casalini "DarkGod"
 -- darkgod@te4.org
 
--- Modified 2026-09-12 by yutio8888: maintained fork, original authorship retained.
-long_name = "Faster ToME4 (profiling experiment)"
-short_name = "faster"
-for_module = "tome"
-version = {1,7,6}
-addon_version = {0,2,1}
-tags = { "fast" }
-weight = 100000
-author = { "Yutio888", "yutio888@qq.com" }
-homepage = "http://te4.org/"
-description = [[Local profiling experiment: finite notice_enemy/dreamhammer emitters and optional coarse timing. Includes the 0.2.0 improvements. No automatic Fearscape or inventory migration.]]
-overload = true
-superload = true
-hooks = true
+base_size = 64
+local nb = 1
+
+return {
+	system_rotation = 225 + math.deg(math.atan2(ty-sy, tx-sx)), system_rotationv = 0,
+
+	base = 1000,
+
+	angle = { 0, 0 }, anglev = { 0, 0 }, anglea = { 0, 0 },
+
+	life = { 10, 10 },
+	size = { 64, 64 }, sizev = {0, 0}, sizea = {0, 0},
+
+	r = {255, 255}, rv = {0, 0}, ra = {0, 0},
+	g = {255, 255}, gv = {0, 0}, ga = {0, 0},
+	b = {255, 255}, bv = {0, 0}, ba = {0, 0},
+	a = {255, 255}, av = {0, 0}, aa = {0, 0},
+
+},
+ function(self)
+	if nb == 1 then
+		self.ps:emit(1)
+		nb = nb -1
+	end
+end,
+ 1, tile, false

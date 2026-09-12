@@ -100,3 +100,8 @@ class:bindHook("ToME:load", function()
     Runtime.installMap(require "engine.Map", config.settings.faster_tome)
     Runtime.installTalents(require "engine.interface.ActorTalents", config.settings.faster_tome)
 end)
+
+-- Explicit opt-in only. Game superload attaches once that class becomes available.
+if config.settings.faster_tome and config.settings.faster_tome.profile then
+    require('engine.FasterProfile').start()
+end

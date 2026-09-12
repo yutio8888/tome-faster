@@ -1,8 +1,12 @@
-# Faster ToME4 — maintained fork
+# Faster ToME4 — local profiling experiment
 
-Version **0.2.0**, modified 12 September 2026. This fork fixes defects in
+Version **0.2.1 (experimental)**, modified 12 September 2026. This fork fixes defects in
 [Yutio888's Faster ToME4 0.0.1](https://te4.org/games/addons/tome/faster) and adds
 conservative save/load and runtime optimizations for **ToME 1.7.6**.
+
+This local branch adds finite `notice_enemy` / `dreamhammer` lifetimes and an
+opt-in diagnostic timer. It does not migrate Fearscape or inventory data in a live
+save. See [profiling instructions and measured limits](docs/profiling.md).
 
 ## Changes
 
@@ -20,7 +24,7 @@ conservative save/load and runtime optimizations for **ToME 1.7.6**.
 - Remove an unused effect scan in Ashes' Devouring Flames callback, when the
   inspected DLC definition is present.
 
-The save format, save-version tokens, explicit manual saves, garbage collector,
+With diagnostics disabled, the save format, save-version tokens, explicit manual saves, garbage collector,
 scores, Steam cloud handling, and actual archive writer retain engine behavior.
 This addon targets the `tome` module; it does **not** accelerate the initial boot
 module's load-game menu. See [known fixes](docs/known-fixes.md) and
@@ -73,8 +77,8 @@ python3 tools/package.py
 ```
 
 The package is written to `dist/tome-faster.teaa`. Tests validate behavior and
-algorithmic work reduction; no full-game, real-save timing, GPU, or Steam-cloud
-benchmark has been performed. See [VALIDATION.json](VALIDATION.json).
+algorithmic work reduction. This branch also profiles native particle work and a
+safely decoded save graph; full-game, GPU and Steam-cloud timings remain unmeasured. See [VALIDATION.json](VALIDATION.json).
 Omitting the DLC path skips the Ashes fixture explicitly. The supplied DLC tree
 uses `<component>/tome-<component>/`; fixture hashes are checked before execution.
 For optional synthetic timing, run `tests/bench_runtime.lua` through the same
