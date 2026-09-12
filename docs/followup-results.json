@@ -1,0 +1,494 @@
+{
+  "date": "2026-09-12",
+  "production_addon_commit": "d4dbf77",
+  "production_changes_in_followup": false,
+  "game": "ToME 1.7.6",
+  "runtime": "LuaJIT 2.0.2",
+  "environment": "Same Ryzen 7 9800X3D, llvmpipe/Xvfb offline setup as save-stutter-results.json",
+  "save_detail": {
+    "samples": [
+      {
+        "session": "stutter-next-save-detail-01",
+        "completed": true,
+        "turn_delta": 0,
+        "save_flow_ms": 692.39316999912,
+        "records": {
+          "mod.class.Game.saveGame": {
+            "calls": 1,
+            "wall_ms": 212.83352801204,
+            "max_ms": 212.83352801204,
+            "cpu_ms": 204.509788
+          },
+          "mod.class.Game.cloneForSave": {
+            "calls": 1,
+            "wall_ms": 114.49727198482,
+            "clone_objects": 27385,
+            "cpu_ms": 114.248641,
+            "max_ms": 114.49727198482
+          },
+          "mod.class.Game.takeScreenshot": {
+            "calls": 1,
+            "wall_ms": 50.818195015192,
+            "max_ms": 50.818195015192,
+            "cpu_ms": 46.276858
+          },
+          "mod.class.Party.cloneFull": {
+            "calls": 1,
+            "wall_ms": 39.671640008688,
+            "max_ms": 39.671640008688,
+            "cpu_ms": 39.584769
+          },
+          "mod.class.Player.stripForExport": {
+            "calls": 1,
+            "wall_ms": 1.6101860105991,
+            "max_ms": 1.6101860105991,
+            "cpu_ms": 1.6095250000003
+          },
+          "mod.class.Player.saveUUID": {
+            "calls": 1,
+            "wall_ms": 0.012261003255844,
+            "max_ms": 0.012261003255844,
+            "cpu_ms": 0.012321000000156
+          },
+          "GC.full": {
+            "calls": 3,
+            "wall_ms": 106.57764098048,
+            "max_ms": 44.305247992277,
+            "cpu_ms": 106.26997
+          },
+          "engine.Savefile.saveObject": {
+            "calls": 2,
+            "wall_ms": 126.10582098365,
+            "max_ms": 117.81664597988,
+            "cpu_ms": 100.175711
+          },
+          "engine.Savefile.saveGame": {
+            "calls": 1,
+            "wall_ms": 171.10421600938,
+            "max_ms": 171.10421600938,
+            "cpu_ms": 134.161578
+          },
+          "engine.Savefile.checkValidity": {
+            "calls": 2,
+            "wall_ms": 9.986692994833,
+            "max_ms": 9.9539420008659,
+            "cpu_ms": 9.3329090000002
+          }
+        },
+        "display_intervals_ms": {
+          "count": 12,
+          "median": 33.28248898685,
+          "p95": 222.44094699621,
+          "p99": 222.44094699621,
+          "max": 222.44094699621,
+          "over_50_ms": 4,
+          "over_100_ms": 1
+        }
+      },
+      {
+        "session": "stutter-next-save-detail-02",
+        "completed": true,
+        "turn_delta": 0,
+        "save_flow_ms": 657.93620100617,
+        "records": {
+          "mod.class.Game.saveGame": {
+            "calls": 1,
+            "wall_ms": 206.54518201947,
+            "max_ms": 206.54518201947,
+            "cpu_ms": 198.168093
+          },
+          "mod.class.Game.cloneForSave": {
+            "calls": 1,
+            "wall_ms": 112.87272498012,
+            "clone_objects": 27378,
+            "cpu_ms": 112.60798,
+            "max_ms": 112.87272498012
+          },
+          "mod.class.Game.takeScreenshot": {
+            "calls": 1,
+            "wall_ms": 50.269678980112,
+            "max_ms": 50.269678980112,
+            "cpu_ms": 45.617757
+          },
+          "mod.class.Party.cloneFull": {
+            "calls": 1,
+            "wall_ms": 35.67786899209,
+            "max_ms": 35.67786899209,
+            "cpu_ms": 35.605947
+          },
+          "mod.class.Player.stripForExport": {
+            "calls": 1,
+            "wall_ms": 1.6877569854259,
+            "max_ms": 1.6877569854259,
+            "cpu_ms": 1.6862970000002
+          },
+          "mod.class.Player.saveUUID": {
+            "calls": 1,
+            "wall_ms": 0.012769997119904,
+            "max_ms": 0.012769997119904,
+            "cpu_ms": 0.01281999999992
+          },
+          "GC.full": {
+            "calls": 3,
+            "wall_ms": 96.373364001513,
+            "max_ms": 42.285746008158,
+            "cpu_ms": 96.116444
+          },
+          "engine.Savefile.saveObject": {
+            "calls": 2,
+            "wall_ms": 128.43637600541,
+            "max_ms": 120.46373400092,
+            "cpu_ms": 99.454571
+          },
+          "engine.Savefile.saveGame": {
+            "calls": 1,
+            "wall_ms": 158.7248480022,
+            "max_ms": 158.7248480022,
+            "cpu_ms": 124.863622
+          },
+          "engine.Savefile.checkValidity": {
+            "calls": 2,
+            "wall_ms": 9.9009619951248,
+            "max_ms": 9.8659919798374,
+            "cpu_ms": 9.310277
+          }
+        },
+        "display_intervals_ms": {
+          "count": 14,
+          "median": 32.963890001177504,
+          "p95": 216.42776399851,
+          "p99": 216.42776399851,
+          "max": 216.42776399851,
+          "over_50_ms": 4,
+          "over_100_ms": 1
+        }
+      },
+      {
+        "session": "stutter-next-save-detail-03",
+        "completed": true,
+        "turn_delta": 0,
+        "save_flow_ms": 671.01813298464,
+        "records": {
+          "mod.class.Game.saveGame": {
+            "calls": 1,
+            "wall_ms": 193.33812499046,
+            "max_ms": 193.33812499046,
+            "cpu_ms": 185.06251
+          },
+          "mod.class.Game.cloneForSave": {
+            "calls": 1,
+            "wall_ms": 103.91945201159,
+            "clone_objects": 27386,
+            "cpu_ms": 103.662771,
+            "max_ms": 103.91945201159
+          },
+          "mod.class.Game.takeScreenshot": {
+            "calls": 1,
+            "wall_ms": 49.49417001009,
+            "max_ms": 49.49417001009,
+            "cpu_ms": 44.993069
+          },
+          "mod.class.Party.cloneFull": {
+            "calls": 1,
+            "wall_ms": 31.970730006695,
+            "max_ms": 31.970730006695,
+            "cpu_ms": 31.886479
+          },
+          "mod.class.Player.stripForExport": {
+            "calls": 1,
+            "wall_ms": 1.8039290010929,
+            "max_ms": 1.8039290010929,
+            "cpu_ms": 1.8034990000001
+          },
+          "mod.class.Player.saveUUID": {
+            "calls": 1,
+            "wall_ms": 0.015850007534027,
+            "max_ms": 0.015850007534027,
+            "cpu_ms": 0.015879999999925
+          },
+          "GC.full": {
+            "calls": 3,
+            "wall_ms": 107.70322200656,
+            "max_ms": 42.925323009491,
+            "cpu_ms": 107.361277
+          },
+          "engine.Savefile.saveObject": {
+            "calls": 2,
+            "wall_ms": 129.73284801841,
+            "max_ms": 121.95485800505,
+            "cpu_ms": 100.483633
+          },
+          "engine.Savefile.saveGame": {
+            "calls": 1,
+            "wall_ms": 165.67985999584,
+            "max_ms": 165.67985999584,
+            "cpu_ms": 130.955579
+          },
+          "engine.Savefile.checkValidity": {
+            "calls": 2,
+            "wall_ms": 9.8091209828854,
+            "max_ms": 9.7783510088921,
+            "cpu_ms": 9.2666669999999
+          }
+        },
+        "display_intervals_ms": {
+          "count": 14,
+          "median": 32.8379185050725,
+          "p95": 202.9509139955,
+          "p99": 202.9509139955,
+          "max": 202.9509139955,
+          "over_50_ms": 4,
+          "over_100_ms": 1
+        }
+      }
+    ],
+    "median_record_wall_ms": {
+      "mod.class.Game.saveGame": 206.54518201947,
+      "mod.class.Game.cloneForSave": 112.87272498012,
+      "mod.class.Game.takeScreenshot": 50.269678980112,
+      "mod.class.Party.cloneFull": 35.67786899209,
+      "mod.class.Player.stripForExport": 1.6877569854259,
+      "mod.class.Player.saveUUID": 0.012769997119904,
+      "GC.full": 106.57764098048,
+      "engine.Savefile.saveObject": 128.43637600541,
+      "engine.Savefile.saveGame": 165.67985999584,
+      "engine.Savefile.checkValidity": 9.9009619951248
+    },
+    "measurement_limits": [
+      "Nested records overlap; do not sum parent and child durations.",
+      "saveObject and saveGame in engine.Savefile yield; their wall/thread-CPU timers include intervening main-thread work.",
+      "Detailed wrappers add overhead; export_guard_preserving=true keeps dumpToJSON unwrapped so offline shortcut remains active.",
+      "First save clone timing differs from warmed clone benchmark; do not assume 73 ms on first save.",
+      "Full GC occurs after synchronous Game.saveGame, inside coroutine pipeline."
+    ]
+  },
+  "actions": {
+    "session": "stutter-next-actions-01",
+    "completed": true,
+    "phases": {
+      "move": {
+        "reason": null,
+        "turn_delta": 600,
+        "frames_ms": {
+          "count": 61,
+          "median": 32.949683994055,
+          "p95": 35.009365022182,
+          "p99": 43.270782023668,
+          "max": 43.270782023668,
+          "over_50_ms": 0,
+          "over_100_ms": 0
+        },
+        "actions_ms": {
+          "count": 60,
+          "median": 32.143834486604,
+          "p95": 34.220087021589,
+          "p99": 42.504454016685,
+          "max": 42.504454016685,
+          "over_50_ms": 0,
+          "over_100_ms": 0
+        },
+        "action_cpu_ms": {
+          "count": 60,
+          "median": 4.444131,
+          "p95": 9.746506,
+          "p99": 14.397959,
+          "max": 14.397959,
+          "over_50_ms": 0,
+          "over_100_ms": 0
+        },
+        "records": {
+          "mod.class.Game.tick": {
+            "calls": 660,
+            "wall_ms": 54.851104289293,
+            "max_ms": 0.75666800141335,
+            "cpu_ms": 54.439033999999
+          },
+          "mod.class.Game.display": {
+            "calls": 61,
+            "wall_ms": 542.76585298777,
+            "max_ms": 18.224830001593,
+            "cpu_ms": 254.437145
+          },
+          "mod.class.Game.displayMap": {
+            "calls": 61,
+            "wall_ms": 255.77515387535,
+            "max_ms": 5.2083859741688,
+            "cpu_ms": 80.754423000002
+          },
+          "mod.class.uiset.Minimalist.displayHotkeys": {
+            "calls": 61,
+            "wall_ms": 122.65518090129,
+            "max_ms": 10.739551007748,
+            "cpu_ms": 121.661298
+          }
+        }
+      },
+      "combat": {
+        "reason": "low_life_stop",
+        "turn_delta": 471,
+        "frames_ms": {
+          "count": 58,
+          "median": 33.141405493021,
+          "p95": 49.155447989702,
+          "p99": 67.35568100214,
+          "max": 67.35568100214,
+          "over_50_ms": 2,
+          "over_100_ms": 0
+        },
+        "actions_ms": {
+          "count": 51,
+          "median": 31.342896014452,
+          "p95": 73.030295014381,
+          "p99": 102.68208700418,
+          "max": 102.68208700418,
+          "over_50_ms": 6,
+          "over_100_ms": 1
+        },
+        "action_cpu_ms": {
+          "count": 51,
+          "median": 5.4381969999999,
+          "p95": 29.795594,
+          "p99": 56.943209,
+          "max": 56.943209,
+          "over_50_ms": 1,
+          "over_100_ms": 0
+        },
+        "records": {
+          "mod.class.Game.tick": {
+            "calls": 525,
+            "wall_ms": 212.3294351995,
+            "max_ms": 23.402367979288,
+            "cpu_ms": 199.81121899999
+          },
+          "mod.class.Game.display": {
+            "calls": 58,
+            "wall_ms": 838.03992396593,
+            "max_ms": 41.638379007578,
+            "cpu_ms": 349.995685
+          },
+          "mod.class.Game.displayMap": {
+            "calls": 58,
+            "wall_ms": 487.78530728817,
+            "max_ms": 23.420837014914,
+            "cpu_ms": 114.07696
+          },
+          "mod.class.uiset.Minimalist.displayHotkeys": {
+            "calls": 58,
+            "wall_ms": 141.86403203011,
+            "max_ms": 14.901470988989,
+            "cpu_ms": 141.512471
+          }
+        }
+      }
+    }
+  },
+  "gzip": {
+    "parameters": {
+      "level": 9,
+      "method": 8,
+      "memLevel": 8,
+      "windowBits": 31,
+      "strategy": 0
+    },
+    "runtime": "LuaJIT 2.0.2",
+    "memory_method": "glibc mallinfo2 uordblks+hblkhd before/after batch, full Lua GC before each reading",
+    "turn": 1933440,
+    "network_calls": 0,
+    "cases": [
+      {
+        "original_ok": false,
+        "bytes": 0,
+        "candidate_ok": true
+      },
+      {
+        "original_ok": false,
+        "bytes": 1,
+        "candidate_ok": true
+      },
+      {
+        "original_ok": false,
+        "bytes": 2,
+        "candidate_ok": true
+      },
+      {
+        "original_ok": false,
+        "bytes": 8,
+        "candidate_ok": true
+      },
+      {
+        "original_ok": false,
+        "bytes": 16,
+        "candidate_ok": true
+      },
+      {
+        "original_ok": false,
+        "bytes": 64,
+        "candidate_ok": true
+      },
+      {
+        "original_ok": true,
+        "equal_when_original_succeeds": true,
+        "bytes": 256,
+        "candidate_ok": true
+      },
+      {
+        "original_ok": true,
+        "equal_when_original_succeeds": true,
+        "bytes": 4096,
+        "candidate_ok": true
+      },
+      {
+        "original_ok": true,
+        "equal_when_original_succeeds": true,
+        "bytes": 262144,
+        "candidate_ok": true
+      }
+    ],
+    "installed_overrides": false,
+    "batches": [
+      {
+        "calls": 100,
+        "method": "candidate",
+        "native_allocated_delta_bytes": 0,
+        "wall_ms": 52.961937010288,
+        "input_bytes": 262144
+      },
+      {
+        "calls": 100,
+        "method": "original",
+        "native_allocated_delta_bytes": 26817600,
+        "wall_ms": 53.72649499774,
+        "input_bytes": 262144
+      },
+      {
+        "calls": 100,
+        "method": "candidate",
+        "native_allocated_delta_bytes": 0,
+        "wall_ms": 52.693336009979,
+        "input_bytes": 262144
+      },
+      {
+        "calls": 100,
+        "method": "original",
+        "native_allocated_delta_bytes": 26817600,
+        "wall_ms": 54.732135981321,
+        "input_bytes": 262144
+      }
+    ],
+    "interpretation": "Source confirms absent deflateEnd in core.zlib.compress; malloc counters show 268176 bytes retained per call on this build. lzlib uses matching gzip parameters and frees deflate state. Timing fixture is synthetic; this is primarily memory retention, not a large per-call CPU improvement.",
+    "development_note": "An initial diagnostic run failed because its FFI clock type conflicted with the existing timer; corrected script passed. No production override was installed."
+  },
+  "real_character_gzip": {
+    "replacement_gzip_byte_equal": true,
+    "selected_state_unchanged": true,
+    "offline_optimized_encodes": 0,
+    "captured_online_orders": 2,
+    "online_equal": true,
+    "offline_original_encodes": 1,
+    "uid_delta": 0,
+    "online_json_bytes": 263388,
+    "lua_rng_calls": 0,
+    "real_network_calls": 0
+  },
+  "original_archive_sha256_unchanged": true
+}

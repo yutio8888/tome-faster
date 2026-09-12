@@ -9,6 +9,8 @@ when the stock offline consumer would discard it. Online exports, party cleanup,
 game rules, graphics settings and GC behavior are retained. See the
 [design and full-game results](docs/save-stutter.md). The earlier finite
 `notice_enemy` / `dreamhammer` lifetimes and opt-in timer remain included.
+Further measured hotspots and addon candidates are described in the
+[follow-up plan](docs/followup-plan.md); those candidates are not enabled in 0.2.2.
 
 中文说明：[性能问题、修复方案、测量指标与文件清单](docs/faster-tome4-performance-report.md)。
 Published evidence: [profile results](evidence/faster-tome4-profile/README.md).

@@ -4,7 +4,7 @@
 
 | 文件 | 代码基线 | 用途 |
 | --- | --- | --- |
-| [tome-faster-0.2.2.teaa](tome-faster-0.2.2.teaa) | 本提交中的 0.2.2 源码 | 真实存档验证的保存优化；当前交付版 |
+| [tome-faster-0.2.2.teaa](tome-faster-0.2.2.teaa) | d4dbf77 | 真实存档验证的保存优化；当前交付版 |
 | [tome-faster-0.1.0.teaa](tome-faster-0.1.0.teaa) | b8ab0c9 | 第一轮修复历史对照 |
 | [tome-faster-0.2.0.teaa](tome-faster-0.2.0.teaa) | ec0a3d1 | 历史交付版快照 |
 | [tome-faster-0.2.1-profile.teaa](tome-faster-0.2.1-profile.teaa) | 070d3dc | 有限粒子寿命与计时器实验版 |

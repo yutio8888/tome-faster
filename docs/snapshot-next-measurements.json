@@ -1,0 +1,263 @@
+{
+  "kind": "compression_only_proxy_not_game_benchmark",
+  "source_session": "stutter-opt-after-pair3-01",
+  "archive": "game.teag",
+  "entries": 2853,
+  "uncompressed_bytes": 6630308,
+  "archive_bytes": 2657469,
+  "original_deflate_bytes": 2292601,
+  "zlib_version": "1.2.13",
+  "method": "each original uncompressed ZIP entry recompressed using fresh raw-deflate context (wbits=-15,memLevel=8,strategy=default); 2 warmups, 9 alternating measured rounds; preloaded data; no disk I/O/ZIP headers/CRC/serializer included",
+  "groups": {
+    "mod.class.Object": {
+      "entries": 1526,
+      "uncompressed_bytes": 2466381
+    },
+    "engine.Map": {
+      "entries": 10,
+      "uncompressed_bytes": 1937829
+    },
+    "mod.class.NPC": {
+      "entries": 67,
+      "uncompressed_bytes": 585477
+    },
+    "engine.Particles": {
+      "entries": 205,
+      "uncompressed_bytes": 445835
+    },
+    "engine.Entity": {
+      "entries": 593,
+      "uncompressed_bytes": 314426
+    },
+    "mod.class.Grid": {
+      "entries": 375,
+      "uncompressed_bytes": 282934
+    },
+    "mod.class.Player": {
+      "entries": 1,
+      "uncompressed_bytes": 128226
+    },
+    "engine.Quest": {
+      "entries": 23,
+      "uncompressed_bytes": 102732
+    },
+    "mod.class.GameState": {
+      "entries": 1,
+      "uncompressed_bytes": 96361
+    },
+    "engine.Level": {
+      "entries": 9,
+      "uncompressed_bytes": 81097
+    },
+    "mod.class.Trap": {
+      "entries": 29,
+      "uncompressed_bytes": 65310
+    },
+    "main": {
+      "entries": 1,
+      "uncompressed_bytes": 42790
+    },
+    "engine.KeyBind": {
+      "entries": 3,
+      "uncompressed_bytes": 41691
+    },
+    "mod.class.Party": {
+      "entries": 1,
+      "uncompressed_bytes": 23681
+    },
+    "mod.class.Zone": {
+      "entries": 1,
+      "uncompressed_bytes": 7175
+    },
+    "engine.Mouse": {
+      "entries": 3,
+      "uncompressed_bytes": 3139
+    },
+    "engine.ui.Dialog": {
+      "entries": 1,
+      "uncompressed_bytes": 2279
+    },
+    "engine.ui.Button": {
+      "entries": 1,
+      "uncompressed_bytes": 1612
+    },
+    "engine.ui.Textzone": {
+      "entries": 1,
+      "uncompressed_bytes": 601
+    },
+    "engine.Shader": {
+      "entries": 1,
+      "uncompressed_bytes": 512
+    },
+    "engine.Astar": {
+      "entries": 1,
+      "uncompressed_bytes": 220
+    }
+  },
+  "samples": {
+    "1": [
+      {
+        "wall_ms": 53.448447986738756,
+        "cpu_ms": 53.37706799999997,
+        "deflate_bytes": 2398680
+      },
+      {
+        "wall_ms": 53.81677101831883,
+        "cpu_ms": 53.739133999999964,
+        "deflate_bytes": 2398680
+      },
+      {
+        "wall_ms": 53.756031004013494,
+        "cpu_ms": 53.67754799999991,
+        "deflate_bytes": 2398680
+      },
+      {
+        "wall_ms": 53.79637100850232,
+        "cpu_ms": 53.71043499999995,
+        "deflate_bytes": 2398680
+      },
+      {
+        "wall_ms": 53.69577999226749,
+        "cpu_ms": 53.615222999999986,
+        "deflate_bytes": 2398680
+      },
+      {
+        "wall_ms": 53.50408802041784,
+        "cpu_ms": 53.418838999999885,
+        "deflate_bytes": 2398680
+      },
+      {
+        "wall_ms": 53.45041700638831,
+        "cpu_ms": 53.36577899999995,
+        "deflate_bytes": 2398680
+      },
+      {
+        "wall_ms": 53.69108999730088,
+        "cpu_ms": 53.60448900000003,
+        "deflate_bytes": 2398680
+      },
+      {
+        "wall_ms": 53.562309010885656,
+        "cpu_ms": 53.485754999999855,
+        "deflate_bytes": 2398680
+      }
+    ],
+    "4": [
+      {
+        "wall_ms": 62.10848601767793,
+        "cpu_ms": 62.02651499999995,
+        "deflate_bytes": 2292601
+      },
+      {
+        "wall_ms": 62.46039998950437,
+        "cpu_ms": 62.361669999999926,
+        "deflate_bytes": 2292601
+      },
+      {
+        "wall_ms": 62.50904098851606,
+        "cpu_ms": 62.418203999999974,
+        "deflate_bytes": 2292601
+      },
+      {
+        "wall_ms": 62.52862099790946,
+        "cpu_ms": 62.43017399999995,
+        "deflate_bytes": 2292601
+      },
+      {
+        "wall_ms": 62.28286799159832,
+        "cpu_ms": 62.19080699999991,
+        "deflate_bytes": 2292601
+      },
+      {
+        "wall_ms": 62.1359370124992,
+        "cpu_ms": 62.048435000000126,
+        "deflate_bytes": 2292601
+      },
+      {
+        "wall_ms": 62.140087014995515,
+        "cpu_ms": 62.05148400000016,
+        "deflate_bytes": 2292601
+      },
+      {
+        "wall_ms": 62.86088499473408,
+        "cpu_ms": 62.755326,
+        "deflate_bytes": 2292601
+      },
+      {
+        "wall_ms": 62.377678987104446,
+        "cpu_ms": 62.28132399999975,
+        "deflate_bytes": 2292601
+      }
+    ],
+    "6": [
+      {
+        "wall_ms": 79.18646198231727,
+        "cpu_ms": 79.07892499999991,
+        "deflate_bytes": 2231979
+      },
+      {
+        "wall_ms": 79.24089100561105,
+        "cpu_ms": 79.108128,
+        "deflate_bytes": 2231979
+      },
+      {
+        "wall_ms": 79.47111400426365,
+        "cpu_ms": 79.35162800000006,
+        "deflate_bytes": 2231979
+      },
+      {
+        "wall_ms": 79.4244339922443,
+        "cpu_ms": 79.3065879999999,
+        "deflate_bytes": 2231979
+      },
+      {
+        "wall_ms": 79.38641399960034,
+        "cpu_ms": 79.278446,
+        "deflate_bytes": 2231979
+      },
+      {
+        "wall_ms": 79.22237200546078,
+        "cpu_ms": 79.11024499999985,
+        "deflate_bytes": 2231979
+      },
+      {
+        "wall_ms": 79.17777198599651,
+        "cpu_ms": 79.06148300000004,
+        "deflate_bytes": 2231979
+      },
+      {
+        "wall_ms": 79.2307409865316,
+        "cpu_ms": 79.11958699999988,
+        "deflate_bytes": 2231979
+      },
+      {
+        "wall_ms": 79.44389400654472,
+        "cpu_ms": 79.32376799999963,
+        "deflate_bytes": 2231979
+      }
+    ]
+  },
+  "summary": {
+    "1": {
+      "median_wall_ms": 53.69108999730088,
+      "min_wall_ms": 53.448447986738756,
+      "max_wall_ms": 53.81677101831883,
+      "median_cpu_ms": 53.60448900000003,
+      "deflate_bytes": 2398680
+    },
+    "4": {
+      "median_wall_ms": 62.377678987104446,
+      "min_wall_ms": 62.10848601767793,
+      "max_wall_ms": 62.86088499473408,
+      "median_cpu_ms": 62.28132399999975,
+      "deflate_bytes": 2292601
+    },
+    "6": {
+      "median_wall_ms": 79.24089100561105,
+      "min_wall_ms": 79.17777198599651,
+      "max_wall_ms": 79.47111400426365,
+      "median_cpu_ms": 79.11958699999988,
+      "deflate_bytes": 2231979
+    }
+  }
+}

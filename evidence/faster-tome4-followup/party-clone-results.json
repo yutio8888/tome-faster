@@ -1,0 +1,47 @@
+{
+  "scope": "Synthetic graphs only; no game session, player save or production installer modified",
+  "engine_commit": "624a67329fe2ad440c5b344785a9c73fcf22ae63",
+  "runtime": "LuaJIT 2.1.0-beta3",
+  "synthetic_members": 2000,
+  "cloned_callbacks": 2001,
+  "warmup_pairs": 4,
+  "measured_pairs": 15,
+  "clock": "os.clock CPU milliseconds; full GC before each sample excluded; automatic GC enabled during copy",
+  "equivalence": [
+    "exact cloned callback order and UID assignments",
+    "actor table keys",
+    "cycles",
+    "shared references",
+    "retained __threads",
+    "metatables"
+  ],
+  "lookup_only": {
+    "baseline_ms": {
+      "median": 2.419,
+      "min": 2.397,
+      "max": 2.444
+    },
+    "candidate_ms": {
+      "median": 2.661,
+      "min": 2.603,
+      "max": 2.692
+    }
+  },
+  "specialized": {
+    "baseline_ms": {
+      "median": 2.331,
+      "min": 2.321,
+      "max": 2.364
+    },
+    "candidate_ms": {
+      "median": 2.124,
+      "min": 2.098,
+      "max": 2.148
+    }
+  },
+  "limits": [
+    "Warm synthetic CPU timings do not predict cold real Party timings.",
+    "No real callbacks, cleanup, RNG behavior or game save/load tested in this microbenchmark.",
+    "No automatic installation or production candidate included."
+  ]
+}
