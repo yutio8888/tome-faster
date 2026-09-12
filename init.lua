@@ -17,16 +17,17 @@
 -- Nicolas Casalini "DarkGod"
 -- darkgod@te4.org
 
-long_name = "Faster ToME4"
+-- Modified 2026-09-12 by yutio8888: maintained fork, original authorship retained.
+long_name = "Faster ToME4 (maintained fork)"
 short_name = "faster"
 for_module = "tome"
-version = {1,7,3}
-addon_version = {0,0,1}
+version = {1,7,6}
+addon_version = {0,1,0}
 tags = { "fast" }
 weight = 100000
 author = { "Yutio888", "yutio888@qq.com" }
 homepage = "http://te4.org/"
-description = [[Makes ToME4 run faster.]]
+description = [[Bounded resource and log caches, restored hit warnings, and conservative save/load optimizations for ToME 1.7.6. Maintained fork of Yutio888's Faster ToME4.]]
 overload = true
 superload = true
 hooks = true

@@ -39,5 +39,15 @@
       "sha256": "6c468dc012cc333a8251ceb681cabf169beef7ccd55adc1af2586bd5ff6149b0",
       "bytes": 1976
     }
-  ]
+  ],
+  "provenance_scope": "The fields and file hashes above describe the unmodified 0.0.1 import, not the current modified working tree.",
+  "fork": {
+    "addon_version": "0.1.0",
+    "modified_on": "2026-09-12",
+    "maintainer": "yutio8888",
+    "base_commit": "ded93e38c34af1584224717250c7015295249dd2",
+    "source_files_modified": true,
+    "target_game_version": "1.7.6",
+    "engine_commit": "624a67329fe2ad440c5b344785a9c73fcf22ae63"
+  }
 }

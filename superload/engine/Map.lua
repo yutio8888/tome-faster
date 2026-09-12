@@ -1,9 +1,23 @@
-local _M = loadPrevious(...)
+-- ToME - Tales of Maj'Eyal:
+-- Copyright (C) 2009 - 2019 Nicolas Casalini
+--
+-- This program is free software: you can redistribute it and/or modify
+-- it under the terms of the GNU General Public License as published by
+-- the Free Software Foundation, either version 3 of the License, or
+-- (at your option) any later version.
+--
+-- This program is distributed in the hope that it will be useful,
+-- but WITHOUT ANY WARRANTY; without even the implied warranty of
+-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+-- GNU General Public License for more details.
+--
+-- You should have received a copy of the GNU General Public License
+-- along with this program.  If not, see <http://www.gnu.org/licenses/>.
+--
+-- Nicolas Casalini "DarkGod"
+-- darkgod@te4.org
 
-local _particleEmitter = _M.particleEmitter
-function _M:particleEmitter(x, y, radius, def, args, shader, zdepth)
-    if def == "hit_warning" then return end
-    return _particleEmitter(self, x, y, radius, def, args, shader, zdepth)
-end
+-- Modified 2026-09-12: bounded caches and compatibility fixes.
 
-return _M
+-- Keep upstream emission, including the ranged-hit direction indicator.
+return loadPrevious(...)

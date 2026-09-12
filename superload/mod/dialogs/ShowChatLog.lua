@@ -1,8 +1,41 @@
+-- ToME - Tales of Maj'Eyal:
+-- Copyright (C) 2009 - 2019 Nicolas Casalini
+--
+-- This program is free software: you can redistribute it and/or modify
+-- it under the terms of the GNU General Public License as published by
+-- the Free Software Foundation, either version 3 of the License, or
+-- (at your option) any later version.
+--
+-- This program is distributed in the hope that it will be useful,
+-- but WITHOUT ANY WARRANTY; without even the implied warranty of
+-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+-- GNU General Public License for more details.
+--
+-- You should have received a copy of the GNU General Public License
+-- along with this program.  If not, see <http://www.gnu.org/licenses/>.
+--
+-- Nicolas Casalini "DarkGod"
+-- darkgod@te4.org
+
+-- Modified 2026-09-12: bounded caches and compatibility fixes.
+
 local _M = loadPrevious(...)
-local cache = {}
-setmetatable(cache, {__mode="v"})
+-- Strong FIFO cache, bounded to 128 generated text entries per dialog.
+local CACHE_LIMIT = 128
 
 function _M:setScroll(i, do_shifty_thing)
+    local cache = self._faster_text_cache
+    if not cache or cache.font ~= self.font or cache.width ~= self.iw - 10 then
+        if cache then
+            -- Wrapping measurements belong to the previous rendering setup.
+            self.line_size = {}
+            self.max = #self.lines
+            self.scrollbar.max = math.max(0, self.max - self.max_display)
+            self.scroll = nil
+        end
+        cache = {font = self.font, width = self.iw - 10, entries = {}, order = {}, next_slot = 1}
+        self._faster_text_cache = cache
+    end
     local old = self.scroll
     self.scroll = util.bound(i, 0, self.scrollbar.max)
 
@@ -15,11 +48,15 @@ function _M:setScroll(i, do_shifty_thing)
         local size = self.line_size[str] or 1
         if cur + size > self.scroll then
             local gen
-            if cache[str] then
-                gen = cache[str]
+            if cache.entries[str] then
+                gen = cache.entries[str]
             else
                 gen = self.font:draw(str, self.iw - 10, 255, 255, 255, false, true)
-                cache[str] = gen
+                local slot = cache.next_slot
+                if cache.order[slot] then cache.entries[cache.order[slot]] = nil end
+                cache.entries[str] = gen
+                cache.order[slot] = str
+                cache.next_slot = slot % CACHE_LIMIT + 1
             end
             if size ~= #gen then
                 self.line_size[str] = #gen

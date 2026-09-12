@@ -1,0 +1,71 @@
+{
+  "date": "2026-09-12",
+  "addon_version": "0.1.0",
+  "engine_commit": "624a67329fe2ad440c5b344785a9c73fcf22ae63",
+  "runtime": "Lua 5.1 / LuaJIT 2.1.1761786044",
+  "tests": {
+    "existing_assertions": 20790,
+    "save_load_checks": 71,
+    "status": "passed"
+  },
+  "algorithmic_fixture": {
+    "delayed_objects": 2001,
+    "original_head_shifted_elements": 2001000,
+    "optimized_head_insertions": 0,
+    "callback_order_equal": true
+  },
+  "git_diff_check": "passed",
+  "full_game_tested": false,
+  "real_player_saves_accessed": false,
+  "steam_tested": false,
+  "engine_sources": [
+    {
+      "path": "game/engines/default/engine/Game.lua",
+      "sha256": "7c8c458c142289fe8b4e59e5c16376303f9a10d34e858fabc48d84c6aa04e523"
+    },
+    {
+      "path": "game/engines/default/engine/Savefile.lua",
+      "sha256": "1eca1669f3469544a9e561e86fa8b657bc743ef20cc04fd7ff820a9b5862c37a"
+    },
+    {
+      "path": "game/engines/default/engine/SavefilePipe.lua",
+      "sha256": "f1fe572b414dc9626c33fd71a7891d8cfaed2741a1cea405cc30e12dc0376e70"
+    },
+    {
+      "path": "game/engines/default/engine/class.lua",
+      "sha256": "e65f81d273090e02c29855d1d5b0b0452878399f7d6a8bd024ef3ec6fc498928"
+    },
+    {
+      "path": "game/engines/default/engine/Module.lua",
+      "sha256": "40ded1b049c1e3072bda90bd49697c17bfc5ba58afdba7adb60fddaac8f24cbc"
+    },
+    {
+      "path": "game/engines/default/engine/Zone.lua",
+      "sha256": "6e0a596b91acd8a89bc01ecec0efc99d87612ac35702610d925cab8ed53e9faa"
+    },
+    {
+      "path": "game/engines/default/engine/Entity.lua",
+      "sha256": "4c9eb3873ad9f99ffd01ab75a44faaf219a6dc1393dbf0a30584a9288f2141d2"
+    },
+    {
+      "path": "game/engines/default/engine/HighScores.lua",
+      "sha256": "be9d3b457ab5d2b59fc2df6a03f9d0f78f38f8e13ddfd4e14c1e674ecd6bbd51"
+    },
+    {
+      "path": "game/engines/default/engine/PlayerProfile.lua",
+      "sha256": "76aed7396aca0f90ad6dd5998f3553d8855b1effbd2e4ef086a45a3ee4e936d3"
+    },
+    {
+      "path": "game/modules/tome/class/Game.lua",
+      "sha256": "dcd6dc85d9b2cf74741e82ac9156128b782193d23a459d53f7cda324b099092a"
+    },
+    {
+      "path": "game/engines/default/modules/boot/dialogs/LoadGame.lua",
+      "sha256": "22a3bc0abe805ad0e823c98a2ff7c3138dae1e325a60c1c03d07e0da67dedde4"
+    },
+    {
+      "path": "game/engines/default/modules/boot/init.lua",
+      "sha256": "82aaf0eb5d2160c303003d11e83c5a703ce68c45393ef571b45f4ccee23abdd9"
+    }
+  ]
+}
