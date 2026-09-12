@@ -1,8 +1,8 @@
 # Faster ToME4 — maintained fork
 
-Version **0.1.0**, modified 12 September 2026. This fork fixes defects in
+Version **0.2.0**, modified 12 September 2026. This fork fixes defects in
 [Yutio888's Faster ToME4 0.0.1](https://te4.org/games/addons/tome/faster) and adds
-two conservative save/load optimizations for **ToME 1.7.6**.
+conservative save/load and runtime optimizations for **ToME 1.7.6**.
 
 ## Changes
 
@@ -15,12 +15,18 @@ two conservative save/load optimizations for **ToME 1.7.6**.
   retaining the position of the **last** request.
 - Build delayed-load callbacks without repeated array head insertion, preserving
   their original execution order and the public queue table.
+- Reuse generated map-checker source for repeated layer layouts, retaining the
+  engine's sorting, compiled-function cache and live entity checks.
+- Remove an unused effect scan in Ashes' Devouring Flames callback, when the
+  inspected DLC definition is present.
 
 The save format, save-version tokens, explicit manual saves, garbage collector,
 scores, Steam cloud handling, and actual archive writer retain engine behavior.
 This addon targets the `tome` module; it does **not** accelerate the initial boot
 module's load-game menu. See [known fixes](docs/known-fixes.md) and
 [save/load analysis and next steps](docs/save-load.md) (Chinese).
+The [runtime review](docs/runtime-review.md) explains the base-game and three-DLC
+review, adopted changes, and rejected prototypes.
 
 ## Install
 
@@ -44,6 +50,8 @@ startup (restart after changing them):
 config.settings.faster_tome = {
     save_coalescing = false,
     load_queue = false,
+    map_checker_source = false,
+    inferno_nexus = false,
 }
 ```
 
@@ -59,13 +67,18 @@ and filesystem access during engine loading are stubbed.
 
 ```bash
 export TOME_ENGINE_ROOT=/path/to/t-engine4
-bash tests/run.sh "$TOME_ENGINE_ROOT"
+export TOME_DLC_ROOT=/path/to/tome4-dlcs
+bash tests/run.sh "$TOME_ENGINE_ROOT" "$TOME_DLC_ROOT"
 python3 tools/package.py
 ```
 
 The package is written to `dist/tome-faster.teaa`. Tests validate behavior and
 algorithmic work reduction; no full-game, real-save timing, GPU, or Steam-cloud
 benchmark has been performed. See [VALIDATION.json](VALIDATION.json).
+Omitting the DLC path skips the Ashes fixture explicitly. The supplied DLC tree
+uses `<component>/tome-<component>/`; fixture hashes are checked before execution.
+For optional synthetic timing, run `tests/bench_runtime.lua` through the same
+LuaJIT environment. Performance thresholds are not test assertions.
 
 ## Provenance and license
 

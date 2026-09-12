@@ -20,8 +20,9 @@ copyright and GPL-3.0-or-later notices. This work is GPL-3.0-or-later.
   including zero; enumeration is performed only on `get_printlog()`. The pinned
   upstream buffer normally has one entry to clear per call. Importing a large
   startup backlog still uses upstream's potentially quadratic clearing once.
-- `superload/engine/Map.lua`: return the original class directly; ranged-hit
+- `superload/engine/Map.lua`: retain the original particle emitter; ranged-hit
   direction indicators and all emitter arguments/returns work upstream-style.
+  Version 0.2.0 also installs the separately documented map-checker source cache.
 - `superload/mod/dialogs/ShowChatLog.lua`: each dialog owns a strong FIFO cache
   of at most 128 generated text entries. Font identity or rendering width changes
   discard cached textures and old wrapping measurements, even at the same

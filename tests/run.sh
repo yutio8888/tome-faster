@@ -8,4 +8,5 @@ export LUA_PATH="$TOME_LUAROCKS_ROOT/share/lua/5.1/?.lua;$TOME_LUAROCKS_ROOT/sha
 export LUA_CPATH="$TOME_LUAROCKS_ROOT/lib/lua/5.1/?.so;;"
 "$TOME_LUAJIT" tests/test_existing.lua . "$TOME_ENGINE_ROOT"
 "$TOME_LUAJIT" tests/test_save_load.lua . "$TOME_ENGINE_ROOT"
+"$TOME_LUAJIT" tests/test_runtime.lua . "$TOME_ENGINE_ROOT" "${2:-}"
 git diff --check

@@ -1,12 +1,13 @@
 {
   "date": "2026-09-12",
-  "addon_version": "0.1.0",
+  "addon_version": "0.2.0",
   "engine_commit": "624a67329fe2ad440c5b344785a9c73fcf22ae63",
   "runtime": "Lua 5.1 / LuaJIT 2.1.1761786044",
   "tests": {
     "existing_assertions": 20790,
     "save_load_checks": 71,
-    "status": "passed"
+    "status": "passed",
+    "runtime_checks": 162
   },
   "algorithmic_fixture": {
     "delayed_objects": 2001,
@@ -66,6 +67,82 @@
     {
       "path": "game/engines/default/modules/boot/init.lua",
       "sha256": "82aaf0eb5d2160c303003d11e83c5a703ce68c45393ef571b45f4ccee23abdd9"
+    },
+    {
+      "path": "game/engines/default/engine/Map.lua",
+      "sha256": "6fdf0294ab835d06cf1186a47a2222b266bd71bfc53b3ba3a423cbb3e41ba315"
     }
-  ]
+  ],
+  "runtime_fixtures": {
+    "map": {
+      "updates": 2000,
+      "source_builds_before": 2000,
+      "source_builds_after": 1,
+      "sort_and_compile_counts_unchanged": true
+    },
+    "ashes": {
+      "effect_entry_visits_before": 300,
+      "effect_entry_visits_after": 0,
+      "ordered_event_trace_equal": true
+    },
+    "spiderbot_rejected_prototype": {
+      "visits_before": 488,
+      "visits_after": 210,
+      "ordered_trace_equal": true,
+      "shipped": false,
+      "reason": "Both nested and flat temporary occupancy indexes were slower in the tested warm-JIT membership fixture."
+    }
+  },
+  "synthetic_cpu_benchmark": {
+    "runtime": "LuaJIT 2.1.1761786044",
+    "unit": "CPU seconds",
+    "full_game_or_gpu": false,
+    "map_updates": 150000,
+    "map_jit_before": [
+      0.074575,
+      0.075206,
+      0.075007
+    ],
+    "map_jit_after": [
+      0.021429,
+      0.021344,
+      0.021205
+    ],
+    "map_interpreter_before": [
+      0.163149,
+      0.158392,
+      0.158663
+    ],
+    "map_interpreter_after": [
+      0.120044,
+      0.119448,
+      0.119184
+    ],
+    "can_see_prototype_jit_ratio": [
+      0.998797,
+      1.014794,
+      0.99211
+    ],
+    "can_see_shipped": false,
+    "spiderbot_nested_index_jit_ratio": [
+      4.258283,
+      4.191732,
+      4.190063
+    ],
+    "spiderbot_flat_index_jit_ratio": [
+      2.462067,
+      3.049291,
+      3.031776
+    ]
+  },
+  "dlc_source": {
+    "component": "ashes-urhrok",
+    "declared_game_version": "1.7.4",
+    "declared_addon_version": "1.1.4",
+    "source_commit": null,
+    "path": "data/talents/corruptions/heart-of-fire.lua",
+    "sha256": "9169ec6910a96af6ce469ef88c4b257165955f96ce7828c8508e2d36372a92b5",
+    "method": "T_INFERNO_NEXUS.callbackOnActBase",
+    "source_not_globally_pinned": true
+  }
 }

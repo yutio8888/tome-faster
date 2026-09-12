@@ -92,6 +92,8 @@ local function world()
     return w
 end
 local function install(w,p,s)
+    w.class = w.class or {}
+    w.class.bindHook = function() end
     w.require=function(name)
         if name=='engine.Particles' then return p end
         if name=='engine.Shader' then return s end
@@ -219,7 +221,8 @@ print('PASS pinned Particles.loaded and Shader.loaded integration')
 
 local map={particleEmitter=function(self,...) return 'emitter',select('#',...),... end}
 local previous=map.particleEmitter
-local loaded=run('superload/engine/Map.lua',env{loadPrevious=function() return map end})
+local loaded=run('superload/engine/Map.lua',env{loadPrevious=function() return map end, config={settings={}},
+    require=function() return {installMap=function() return true end} end})
 local result=pack(loaded:particleEmitter(1,2,3,'hit_warning',{},nil,7))
 check(loaded.particleEmitter==previous and result[1]=='emitter' and result[2]==7 and result[6]=='hit_warning','hit warning pass-through')
 print('PASS hit warning restored')

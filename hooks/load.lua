@@ -92,3 +92,11 @@ end
 -- Savefile is required by engine.Module before addon superloads are installed.
 local ok, reason = require("engine.FasterSave").installSavefile(require "engine.Savefile", config.settings.faster_tome)
 if not ok then print("[Faster ToME4] Load queue optimization skipped:", reason) end
+
+-- DLC weights are 2/3/10; Faster's 100000 registers this after their loaders.
+class:bindHook("ToME:load", function()
+    local Runtime = require "engine.FasterRuntime"
+    -- Also cover an engine.Map required before addon superloads were registered.
+    Runtime.installMap(require "engine.Map", config.settings.faster_tome)
+    Runtime.installTalents(require "engine.interface.ActorTalents", config.settings.faster_tome)
+end)

@@ -20,4 +20,8 @@
 -- Modified 2026-09-12: bounded caches and compatibility fixes.
 
 -- Keep upstream emission, including the ranged-hit direction indicator.
-return loadPrevious(...)
+local Map = loadPrevious(...)
+if not require("engine.FasterRuntime").installMap(Map, config.settings.faster_tome) then
+    print("[Faster ToME4] Map source cache skipped (disabled or unknown override)")
+end
+return Map

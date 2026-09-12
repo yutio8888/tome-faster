@@ -229,7 +229,7 @@ do
         _M = ring, class = {}, module = function() end,
     })()
     function ring.new(n) local r = setmetatable({}, {__index = ring}); r:init(n); return r end
-    local env = environment{config = {settings = {}}, print = function() end,
+    local env = environment{config = {settings = {}}, print = function() end, class = {bindHook = function() end},
         get_printlog = function() return {} end, truncate_printlog = function() end}
     env._G = env
     env.require = function(name)
