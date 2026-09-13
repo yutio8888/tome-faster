@@ -1,26 +1,33 @@
-# Faster ToME4 — conservative save optimizations
+# Faster ToME4 — save optimizations
 
-Version **0.2.2**, modified 12 September 2026. This fork fixes defects in
+Version **0.2.3**, modified 13 September 2026. This fork fixes defects in
 [Yutio888's Faster ToME4 0.0.1](https://te4.org/games/addons/tome/faster) and adds
 conservative save/load and runtime optimizations for **ToME 1.7.6**.
 
-This release adds equivalent snapshot cloning and skips character-sheet generation
-when the stock offline consumer would discard it. Online exports, party cleanup,
-game rules, graphics settings and GC behavior are retained. See the
-[design and full-game results](docs/save-stutter.md). The earlier finite
+This release removes the unused temporary party built and cleaned before character
+export. The save queue, online export call, player control switches and Cults arena
+save restriction are retained. Its discarded callbacks, RNG consumption and
+temporary UID allocations are intentionally omitted; saving no longer preserves
+the old random sequence. See the [cleanup design and results](docs/export-cleanup.md).
+
+Equivalent snapshot cloning and skipping offline character sheets remain included;
+their earlier results are in the [0.2.2 report](docs/save-stutter.md). The finite
 `notice_enemy` / `dreamhammer` lifetimes and opt-in timer remain included.
 Further measured hotspots and addon candidates are described in the
-[follow-up plan](docs/followup-plan.md); those candidates are not enabled in 0.2.2.
+[follow-up plan](docs/followup-plan.md); rendering, GC and gzip candidates remain unimplemented.
 
 中文说明：[性能问题、修复方案、测量指标与文件清单](docs/faster-tome4-performance-report.md)。
 Published evidence: [profile results](evidence/faster-tome4-profile/README.md).
-Installable 0.2.2 and historical packages: [releases](releases/README.md).
+Installable 0.2.3 and historical packages: [releases](releases/README.md).
 Full-game save A/B and complete loaded-graph equivalence have now been tested on
 one supplied save. GPU/Steam testing and automatic old-save reference migration
 remain outside this release. Player archives and generated save graphs stay local.
 
 ## Changes
 
+- Omit the unused export party, its second object-graph copy and cleanup. Keep the
+  recognized Cults save wrapper intact. Set `unused_party_cleanup=false` to restore
+  the original preparation, including its random calls and temporary callbacks.
 - Avoid clone memo lookups for primitive keys/values, while copying the same graph,
   in the same traversal order, with the same aliases, replacements and metadata.
 - Skip dead character-sheet output only for an existing UUID, a stock logged-out
@@ -76,6 +83,7 @@ config.settings.faster_tome = {
     inferno_nexus = false,
     save_clone = false,
     offline_chardump = false,
+    unused_party_cleanup = false,
 }
 ```
 
@@ -101,7 +109,7 @@ algorithmic work reduction, including differential clone graphs and character
 export compatibility. Full-game save measurements and earlier native/static
 profiles are recorded in [VALIDATION.json](VALIDATION.json); hardware GPU and
 Steam-cloud timings remain unmeasured.
-Omitting the DLC path skips the Ashes fixture explicitly. The supplied DLC tree
+Omitting the DLC path skips the Ashes and Cults fixtures explicitly. The supplied DLC tree
 uses `<component>/tome-<component>/`; fixture hashes are checked before execution.
 For optional synthetic timing, run `tests/bench_runtime.lua` through the same
 LuaJIT environment. Performance thresholds are not test assertions.

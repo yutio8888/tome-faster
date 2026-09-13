@@ -1,5 +1,5 @@
 -- GPL-3.0-or-later. Optional dead-output elimination for ToME 1.7.6.
--- Keep the save pipeline, party cloning/cleanup, UID/RNG use and control switches.
+-- This helper only changes dead JSON output; export preparation is separate.
 local M = {}
 local installed = setmetatable({}, {__mode = "k"})
 

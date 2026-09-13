@@ -1,0 +1,218 @@
+{
+  "date": "2026-09-13",
+  "addon_version": "0.2.3",
+  "base_addon_commit": "308a31d8e0e2fd4e2b40a53c9bec0841279fcd5b",
+  "engine_commit": "624a67329fe2ad440c5b344785a9c73fcf22ae63",
+  "environment": {
+    "game": "ToME 1.7.6",
+    "runtime": "LuaJIT 2.0.2",
+    "cpu": "AMD Ryzen 7 9800X3D",
+    "renderer": "llvmpipe / Xvfb 1280x800, approximately 30 FPS cap",
+    "offline": true,
+    "input_saves": 1
+  },
+  "scope": "Omit unused temporary export Party clone and cleanup; RNG consumption, temporary UID allocation and discarded callbacks intentionally removed. Keep save queue, online export call, player control switches, error boundaries and recognized Cults wrapper.",
+  "save_ab": {
+    "samples": [
+      {
+        "session": "stutter-cleanup-v2-before-pair1-01",
+        "enabled": false,
+        "completed": true,
+        "exit_code": 0,
+        "turn_delta": 0,
+        "synchronous_ms": 216.30665498972,
+        "flow_ms": 672.90024000406,
+        "longest_display_interval_ms": 226.77147901058
+      },
+      {
+        "session": "stutter-cleanup-v2-before-pair2-01",
+        "enabled": false,
+        "completed": true,
+        "exit_code": 0,
+        "turn_delta": 0,
+        "synchronous_ms": 218.7871940136,
+        "flow_ms": 642.8702069819,
+        "longest_display_interval_ms": 228.66409900784
+      },
+      {
+        "session": "stutter-cleanup-v2-before-pair3-01",
+        "enabled": false,
+        "completed": true,
+        "exit_code": 0,
+        "turn_delta": 0,
+        "synchronous_ms": 216.68215897679,
+        "flow_ms": 683.26914301515,
+        "longest_display_interval_ms": 227.94993898273
+      },
+      {
+        "session": "stutter-cleanup-v2-after-pair1-01",
+        "enabled": true,
+        "completed": true,
+        "exit_code": 0,
+        "turn_delta": 0,
+        "synchronous_ms": 166.50555500388,
+        "flow_ms": 579.06707701087,
+        "longest_display_interval_ms": 174.55950400233
+      },
+      {
+        "session": "stutter-cleanup-v2-after-pair2-01",
+        "enabled": true,
+        "completed": true,
+        "exit_code": 0,
+        "turn_delta": 0,
+        "synchronous_ms": 166.69795301557,
+        "flow_ms": 598.97912600636,
+        "longest_display_interval_ms": 174.79293400049
+      },
+      {
+        "session": "stutter-cleanup-v2-after-pair3-01",
+        "enabled": true,
+        "completed": true,
+        "exit_code": 0,
+        "turn_delta": 0,
+        "synchronous_ms": 165.95805698633,
+        "flow_ms": 586.96764400601,
+        "longest_display_interval_ms": 174.03781798482
+      }
+    ],
+    "method": "Three fresh-copy pairs, before/after, after/before, before/after. detail=false, save_only=true. Toggle unused_party_cleanup only; existing 0.2.2 optimizations enabled. Two-second warmup.",
+    "before_medians": {
+      "synchronous_ms": 216.68215897679,
+      "flow_ms": 672.90024000406,
+      "longest_display_interval_ms": 227.94993898273
+    },
+    "after_medians": {
+      "synchronous_ms": 166.50555500388,
+      "flow_ms": 586.96764400601,
+      "longest_display_interval_ms": 174.55950400233
+    },
+    "median_reduction_percent": {
+      "synchronous_ms": 23.156776824567583,
+      "flow_ms": 12.770480806713868,
+      "longest_display_interval_ms": 23.422000119265217
+    }
+  },
+  "detailed_probe": {
+    "session": "stutter-cleanup-v2-probe-01",
+    "synchronous_ms": 167.33621799946,
+    "party_clone_calls": 0,
+    "actor_strip_calls": 0,
+    "gc_calls": 3
+  },
+  "real_online_export": {
+    "live_target_unchanged": true,
+    "captured_online_orders": 2,
+    "without_party_export": {
+      "target_after": {
+        "y": 3,
+        "x": 12,
+        "has_entity": false
+      },
+      "rng_calls": 0,
+      "rng_methods": [],
+      "json_bytes": 263388,
+      "uid_delta_before_export": 0,
+      "selected_state_unchanged": true,
+      "target_changed": false,
+      "target_before": {
+        "y": 3,
+        "x": 12,
+        "has_entity": false
+      },
+      "encodes": 1,
+      "rng_calls_before_export": 0,
+      "uid_delta": 0
+    },
+    "original_party_export": {
+      "target_after": {
+        "has_entity": false
+      },
+      "rng_calls": 136,
+      "rng_methods": {
+        "rng.float": 20,
+        "rng.range": 116
+      },
+      "json_bytes": 263388,
+      "uid_delta_before_export": 1743,
+      "selected_state_unchanged": true,
+      "target_changed": true,
+      "target_before": {
+        "y": 3,
+        "x": 12,
+        "has_entity": false
+      },
+      "encodes": 1,
+      "rng_calls_before_export": 136,
+      "uid_delta": 1743
+    },
+    "online_equal": true,
+    "rng_and_uid_changes_allowed": true,
+    "selected_state_unchanged": true,
+    "real_network_calls": 0
+  },
+  "live_save_state_check": {
+    "equal": true,
+    "actors": 27,
+    "inventory_items": 203,
+    "scope": "Selected existing actor/player/party/quest/resource/talent/effect/inventory state, not full world or RNG equivalence."
+  },
+  "integrity": {
+    "crc": [
+      {
+        "session": "stutter-cleanup-v2-before-pair1-01",
+        "crc_archives": 22
+      },
+      {
+        "session": "stutter-cleanup-v2-before-pair2-01",
+        "crc_archives": 22
+      },
+      {
+        "session": "stutter-cleanup-v2-before-pair3-01",
+        "crc_archives": 22
+      },
+      {
+        "session": "stutter-cleanup-v2-after-pair1-01",
+        "crc_archives": 22
+      },
+      {
+        "session": "stutter-cleanup-v2-after-pair2-01",
+        "crc_archives": 22
+      },
+      {
+        "session": "stutter-cleanup-v2-after-pair3-01",
+        "crc_archives": 22
+      }
+    ],
+    "original_unchanged": true,
+    "roundtrip_source_sha256": "cdc8f60938f192455400e787312c42f933354bbdc1e43dae86c9972817eaedbb"
+  },
+  "regression": {
+    "status": "passed",
+    "runtime": "LuaJIT 2.1.0-beta3",
+    "existing_assertions": 20790,
+    "save_load_checks": 71,
+    "runtime_checks": 162,
+    "profile_checks": 22,
+    "clone_graphs": 91,
+    "clone_assertions_this_run": 73203,
+    "character_export_checks": 175,
+    "export_cleanup_scenarios": 38,
+    "export_cleanup_assertions": 824,
+    "cleanup_jit_off_also_passed": true,
+    "cults_wrapper_fixture_sha256": "765df32782249dfb0d2db6a80a30c81052b40494456332815d95052ee0aef008"
+  },
+  "excluded_probes": "Initial stutter-cleanup-{before,after}-pair* runs exercised conservative fallback because Cults wrapped saveGame. They are not treated as enabled optimization measurements. Final v2 groups support the actual Cults delegate.",
+  "limits": [
+    "One save and current nine-addon combination only.",
+    "No hardware GPU or Steam test.",
+    "RNG sequence and unused temporary clone UID allocation intentionally differ.",
+    "Known game/Cults method sources guarded; arbitrary side effects in custom cloned/stripForExport callbacks are not preserved.",
+    "Saving no longer clears the snapshot targeting coordinates as a discarded Party cleanup side effect; the known save whitelist omits that target and real online JSON remains equal."
+  ],
+  "roundtrip": {
+    "completed": true,
+    "exit_code": 0,
+    "archive_crc_count": 22,
+    "method": "Load optimized after-pair3 save, idle 5 s, save again with 0.2.3."
+  }
+}

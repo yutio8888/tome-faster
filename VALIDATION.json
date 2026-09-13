@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-12",
-  "addon_version": "0.2.2",
+  "date": "2026-09-13",
+  "addon_version": "0.2.3",
   "engine_commit": "624a67329fe2ad440c5b344785a9c73fcf22ae63",
   "runtime": "Unit fixtures: LuaJIT 2.1.0-beta3; full game: embedded LuaJIT 2.0.2",
   "tests": {
@@ -11,8 +11,10 @@
     "profile_checks": 22,
     "historical_native_particle_lifetime_cases": 6,
     "clone_differential_graphs": 91,
-    "clone_assertions_this_run": 73284,
-    "character_export_checks": 175
+    "clone_assertions_this_run": 73203,
+    "character_export_checks": 175,
+    "export_cleanup_scenarios": 38,
+    "export_cleanup_assertions": 824
   },
   "algorithmic_fixture": {
     "delayed_objects": 2001,
@@ -173,6 +175,18 @@
     "loaded_graph_equivalence": true,
     "save_reload_save_roundtrip": true,
     "hardware_gpu_tested": false,
-    "online_character_export_equal": true
+    "online_character_export_equal": true,
+    "addon_version": "0.2.2"
+  },
+  "export_cleanup": {
+    "results": "docs/export-cleanup-results.json",
+    "save_ab_processes": 6,
+    "online_character_export_equal": true,
+    "selected_live_state_equal": true,
+    "rng_sequence_preserved": false,
+    "temporary_uid_allocation_preserved": false,
+    "cults_save_restriction_preserved": true,
+    "original_archive_unchanged": true,
+    "save_reload_save_roundtrip": true
   }
 }

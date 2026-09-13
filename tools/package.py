@@ -14,7 +14,7 @@ with zipfile.ZipFile(output, "w", compression=zipfile.ZIP_DEFLATED, compressleve
     for path in sorted(files):
         if path.is_symlink():
             raise ValueError(f"refusing symlink: {path}")
-        entry = zipfile.ZipInfo(path.relative_to(root).as_posix(), (2026, 9, 12, 0, 0, 0))
+        entry = zipfile.ZipInfo(path.relative_to(root).as_posix(), (2026, 9, 13, 0, 0, 0))
         entry.compress_type = zipfile.ZIP_DEFLATED
         entry.create_system = 3
         entry.external_attr = 0o100644 << 16

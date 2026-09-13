@@ -12,4 +12,5 @@ export LUA_CPATH="$TOME_LUAROCKS_ROOT/lib/lua/5.1/?.so;;"
 "$TOME_LUAJIT" tests/test_profile.lua .
 "$TOME_LUAJIT" tests/test_clone.lua . "$TOME_ENGINE_ROOT"
 "$TOME_LUAJIT" tests/test_chardump.lua . "$TOME_ENGINE_ROOT"
+"$TOME_LUAJIT" tests/test_export_cleanup.lua . "$TOME_ENGINE_ROOT" "${2:-}"
 git diff --check

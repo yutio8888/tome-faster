@@ -1,0 +1,23 @@
+PASS ring capacity, order, truncation (partial/full/wrapped)
+PASS original print stdout, stringification, backlog, capacity, truncation, errors, nesting
+PASS loader environment, fresh closures, returns, retries, eviction, debug bypass
+PASS pinned Particles.loaded and Shader.loaded integration
+PASS hit warning restored
+PASS pinned setScroll parity, font/width invalidation, per-instance cache, GC, eviction
+PASS all 20790 assertions; Lua 5.1 / LuaJIT 2.1.0-beta3
+PASS pinned save scheduler: last request ordering, cancellation, capture, next batch, debug and errors
+PASS 2001 queued objects: baseline 2001000 shifted elements; optimized zero head insertions
+[Faster ToME4] Save clone optimization skipped:	unknown cloneForSave; keeping existing method
+[Faster ToME4] Unused export party cleanup skipped:	unknown saveGame; keeping existing export preparation
+PASS all 71 save/load checks; Lua 5.1 / LuaJIT 2.1.0-beta3
+PASS Map: 2000 repeated layouts; source builds 2000 -> 1, sorts and compilations unchanged
+PASS Ashes: effect-entry visits 300 -> 0; full ordered event trace identical
+PASS all 162 runtime checks; Lua 5.1 / LuaJIT 2.1.0-beta3
+PASS profile instrumentation: 22 checks
+PASS cloneForSave: 91 differential graphs, 73203 assertions; aliases, replacements, threads, metadata and guards
+PASS offline: real pinned dump entry and encoding skipped; context unchanged
+PASS online and charball: original export, payload, callbacks and consumers
+PASS eligibility, late registration and unknown override fallbacks
+PASS all 175 character export checks; Lua 5.1 / LuaJIT 2.1.0-beta3
+PASS Cults: actual hash-verified wrapper; arena popup, callbacks, delegate identity and fallbacks
+PASS export cleanup: 38 differential save scenarios, 824 assertions; gating, online call, context, errors and guards

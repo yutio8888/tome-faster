@@ -17,17 +17,17 @@
 -- Nicolas Casalini "DarkGod"
 -- darkgod@te4.org
 
--- Modified 2026-09-12 by yutio8888: maintained fork, original authorship retained.
+-- Modified 2026-09-13 by yutio8888: maintained fork, original authorship retained.
 long_name = "Faster ToME4"
 short_name = "faster"
 for_module = "tome"
 version = {1,7,6}
-addon_version = {0,2,2}
+addon_version = {0,2,3}
 tags = { "fast" }
 weight = 100000
 author = { "Yutio888", "yutio888@qq.com" }
 homepage = "http://te4.org/"
-description = [[Conservative save optimizations for ToME 1.7.6: faster equivalent snapshot cloning and avoiding offline character sheets that the engine would discard. Retains online exports, save format, game rules and graphics settings. Includes previous fixes and optional profiling.]]
+description = [[Save optimizations for ToME 1.7.6: remove the unused temporary export party, clone snapshots faster, and skip offline character sheets that the engine would discard. Retains online exports, save format and graphics settings. Omitting the temporary party also omits its RNG consumption and temporary UID allocation.]]
 overload = true
 superload = true
 hooks = true

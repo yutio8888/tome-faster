@@ -235,6 +235,7 @@ do
     env.require = function(name)
         if name == "engine.FasterSave" then return helper end
         if name == "engine.FasterClone" then return assert(loadfile(root .. "/overload/engine/FasterClone.lua"))() end
+        if name == "engine.FasterExportCleanup" then return assert(loadfile(root .. "/overload/engine/FasterExportCleanup.lua"))() end
         if name == "engine.Savefile" then return w.class end
         if name == "engine.CacheList" then return ring end
         if name == "engine.Particles" or name == "engine.Shader" then
