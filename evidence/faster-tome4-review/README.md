@@ -1,7 +1,8 @@
 # 原插件来源与缺陷复现
 
 原作者 yutio888，原始包 0.0.1。来源和逐文件 SHA256 见 [provenance.json](provenance.json)，
-原包见 [tome-faster-0.0.1.teaa](../../upstream/tome-faster-0.0.1.teaa)。
+上游下载地址与原包哈希见 [UPSTREAM.json](../../UPSTREAM.json)，归档不由 Git 跟踪。
+离线复现可从初始导入提交 `ded93e38c34af1584224717250c7015295249dd2` 导出原版源码；其五个 Lua 文件与记录的哈希一致。
 [publication.json](publication.json) 仅记录初始 main 分支导入的历史核验。
 后续修复与限制见 [known-fixes.md](../../docs/known-fixes.md)。
 

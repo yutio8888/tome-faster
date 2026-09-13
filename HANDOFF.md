@@ -4,13 +4,15 @@
 
 ## 交付与有效约束
 
+打包产物政策（用户最新要求）：当前源码树已取消跟踪全部 `.teaa` 归档和生成的 release 校验文件，并加入忽略规则。仅在本地 `dist/` 构建，二进制发布使用附件或制品存储。下面的历史包名与 SHA256 保留作验证记录，不再作为仓库内下载入口。本次按普通提交取消跟踪，未重写既有 Git 历史。
+
 当前发布状态：用户已明确“批准发布”；功能提交 `7ab9918` 和状态提交 `1c9093a` 已成功推送到 `origin/perf-save-stutter-20260912`。此前自动审批要求明确批准，获得批准后完成原分支发布。此次发布状态文档更新不改变 0.2.5 安装包及其 SHA256。
 
 - 生产 A：`/workspace/t-engine4/tmp/worktrees/tome-faster-save-20260912`；分支 `perf-save-stutter-20260912`；远端 `https://github.com/yutio8888/tome-faster.git`。本次提交以该分支 Git log 为准，父提交 `6a307b8cd35e6ceb6b6de777bc9c4780d52179ee`。没有合并用户原 checkout；本次远端发布的审批状态见上。
 - 运行 W：`/workspace/t-engine4/tmp/worktrees/yron-profile-20260912`；P 为 `W/tmp/profile`。固定引擎仍为 `624a67329fe2ad440c5b344785a9c73fcf22ae63`。
 - 新生产模块：[FasterHotkeys.lua](overload/engine/FasterHotkeys.lua)、[FasterEffectMask.lua](overload/engine/FasterEffectMask.lua)、[FasterSaveFollowup.lua](overload/engine/FasterSaveFollowup.lua)。独立关闭项 `hotkey_text_cache=false`、`effect_mask_batch=false`、`save_callbacks=false`，改后重启。
 - 用户允许 RNG 消耗不同，不允许随意改游戏规则。新改动未改冷却、伤害、FOV、tick、三个完整 GC、保存格式或后台 worker 协议。
-- 发布包：[tome-faster-0.2.5.teaa](releases/tome-faster-0.2.5.teaa)，SHA256 `39c06d93a6a39c74286c3aa31b446a2d577dc0bfcc319c5131269c3c2a4b1754`，67 个 allowlist 文件。CRC、逐文件内容及生产 Lua 语法通过；旧包没有重写。
+- 最近验证的本地包：`tome-faster-0.2.5.teaa`（历史构建记录，见 [构建说明](releases/README.md)），SHA256 `39c06d93a6a39c74286c3aa31b446a2d577dc0bfcc319c5131269c3c2a4b1754`，67 个 allowlist 文件。CRC、逐文件内容及生产 Lua 语法通过；旧包没有重写。
 - 主报告：[render-save.md](docs/render-save.md)、[render-save-results.json](docs/render-save-results.json)；保存细节：[save-followup.md](docs/save-followup.md)、[save-followup-results.json](docs/save-followup-results.json)。
 
 ## 真实结果与范围
@@ -64,7 +66,7 @@
 - 最新实现：[FasterGzip.lua](overload/engine/FasterGzip.lua)、[Player superload](superload/mod/class/Player.lua)。识别固定 `saveUUID` 本体后仅改 JSON 压缩调用，使用内置 lzlib 同参数 gzip；成功一个返回值，压缩状态失败零个返回值，动态 API 覆盖时回退。
 - `export_gzip=false` 并重启可关闭；与 `offline_chardump` 独立组合。其他优化及“不要求相同 RNG 消耗，但不随意修改游戏规则”的约束不变。
 - gzip 主要修复内存保留，不宣传 CPU/保存加速。短/空输入原先可能压缩失败，现在生成有效 gzip。全局 core API 不变，因此其他调用或未知覆盖回退后仍可能使用旧的泄漏接口。
-- 最新说明：[gzip-export.md](docs/gzip-export.md)、[结构化结果](docs/gzip-export-results.json)。安装包：[tome-faster-0.2.4.teaa](releases/tome-faster-0.2.4.teaa)，SHA256 `e5f34b6c132796665d4607dda1c5beeac1d61902a7e538a7dac21db787acdbb4`，54 个 allowlist 文件。旧包未重写。
+- 最新说明：[gzip-export.md](docs/gzip-export.md)、[结构化结果](docs/gzip-export-results.json)。安装包：`tome-faster-0.2.4.teaa`（历史构建记录，见 [构建说明](releases/README.md)），SHA256 `e5f34b6c132796665d4607dda1c5beeac1d61902a7e538a7dac21db787acdbb4`，54 个 allowlist 文件。旧包未重写。
 
 ## 新验证结果和入口
 
@@ -343,7 +345,7 @@ python3 "$profile_root/run-session.py" "$profile_root/sessions/handoff-next-roun
 
 ## 9. 安装包与接手入口
 
-当前安装包：[releases/tome-faster-0.2.3.teaa](releases/tome-faster-0.2.3.teaa)。SHA256：
+当前安装包：`tome-faster-0.2.3.teaa`（历史构建记录，见 [构建说明](releases/README.md)）。SHA256：
 
 ```text
 b33ca1448702bdbcd3cc9e34da063ccca8c073b0a1bed7c139bf15619984047e

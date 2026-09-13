@@ -37,7 +37,8 @@
         "sha256": "6c468dc012cc333a8251ceb681cabf169beef7ccd55adc1af2586bd5ff6149b0",
         "bytes": 1976
       }
-    ]
+    ],
+    "archive_storage": "Historical download path; archive is no longer tracked. Source files are preserved in fork import ded93e38c34af1584224717250c7015295249dd2; this is not an upstream source commit."
   },
   "engine": {
     "commit": "624a67329fe2ad440c5b344785a9c73fcf22ae63",

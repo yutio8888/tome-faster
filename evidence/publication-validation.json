@@ -47,5 +47,6 @@
       "path": "upstream/tome-faster-0.0.1.teaa",
       "sha256": "030d9d4c86c98986e09ac8864991b7948a84263d9c8e23020ddae266b63882ea"
     }
-  ]
+  ],
+  "historical_package_paths_scope": "Paths at the time of publication; archives are no longer tracked in the current source tree. Hashes remain historical evidence."
 }

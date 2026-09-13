@@ -29,7 +29,7 @@ remain unimplemented; the new report records measured limits and counterexamples
 
 中文说明：[性能问题、修复方案、测量指标与文件清单](docs/faster-tome4-performance-report.md)。
 Published evidence: [profile results](evidence/faster-tome4-profile/README.md).
-Installable 0.2.5 and historical packages: [releases](releases/README.md).
+Package build instructions and version history: [releases](releases/README.md).
 Full-game save A/B and complete loaded-graph equivalence have now been tested on
 one supplied save. GPU/Steam testing and automatic old-save reference migration
 remain outside this release. Player archives and generated save graphs stay local.
@@ -132,7 +132,10 @@ bash tests/run.sh "$TOME_ENGINE_ROOT" "$TOME_DLC_ROOT"
 python3 tools/package.py
 ```
 
-The package is written to `dist/tome-faster.teaa`. Tests validate behavior and
+The package is written to the ignored `dist/tome-faster.teaa`. Build and download
+archives (`*.teaa`) and generated release checksums stay out of Git; use release
+attachments or external artifact storage when distributing packages.
+Tests validate behavior and
 algorithmic work reduction, including differential clone graphs and character
 export compatibility. Full-game save measurements and earlier native/static
 profiles are recorded in [VALIDATION.json](VALIDATION.json); hardware GPU and

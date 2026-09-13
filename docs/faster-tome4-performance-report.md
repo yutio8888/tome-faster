@@ -23,7 +23,7 @@
 | --- | --- | --- | --- |
 | 原包导入 | 0.0.1／`ded93e3` | 保留原作者源码及版权，补充来源记录 | 历史基线；本会话已有 GitHub 上传核验记录 |
 | 第一轮修复 | 0.1.0／`b8ab0c9` | 原插件缺陷、保存请求合并、延迟队列优化 | 已本地提交，包保留供对照 |
-| 默认交付版 | 0.2.0／`ec0a3d1` | 第一轮内容，加地图源码缓存、Ashes 无用扫描修复 | 作为 releases/ 中的默认版历史快照保留 |
+| 默认交付版 | 0.2.0／`ec0a3d1` | 第一轮内容，加地图源码缓存、Ashes 无用扫描修复 | 保留源码基线与历史构建记录 |
 | profile 实验版 | 0.2.1／`070d3dc` | 0.2.0 内容，加两种粒子寿命修复、可关闭计时器及 profile 工具 | 本公开分支的代码基线；默认 0.2.0 快照仍保留 |
 | 存档引用清理 | 无游戏内迁移版本 | 在解码图中解除捕获者引用、规范化背包归属 | 只有测量实验，未加入实际存档迁移流程 |
 
@@ -271,14 +271,14 @@ JIT 和 cheat 状态；区分冷启动与缓存后结果。云维护测试单列
 | 文件／目录 | 用途 |
 | --- | --- |
 | [README.md](../README.md) | 安装与构建入口；当前根目录为 0.2.1 实验版代码 |
-| [releases/](../releases/) | 0.1.0、0.2.0、0.2.1-profile 已生成的历史快照与基线说明 |
-| [原包 0.0.1](../upstream/tome-faster-0.0.1.teaa) | 未修改的下载归档 |
-| [0.1.0 安装包](../releases/tome-faster-0.1.0.teaa) | 第一轮修复快照 b8ab0c9 |
-| [0.2.0 安装包](../releases/tome-faster-0.2.0.teaa) | 默认交付快照 ec0a3d1 |
-| [0.2.1 profile 安装包](../releases/tome-faster-0.2.1-profile.teaa) | 实验快照 070d3dc；尚无实际存档引用迁移 |
+| [releases/](../releases/README.md) | 本地构建说明、历史版本源码基线和校验记录 |
+| [原版 0.0.1 来源](../UPSTREAM.json) | 上游下载地址与哈希；源码见初始导入提交 ded93e38 |
+| 0.1.0 安装包（历史构建） | 第一轮修复快照 b8ab0c9 |
+| 0.2.0 安装包（历史构建） | 默认交付快照 ec0a3d1 |
+| 0.2.1 profile 安装包（历史构建） | 实验快照 070d3dc；尚无实际存档引用迁移 |
 
 所有版本的 short_name 均为 faster，只启用一个副本。当前分支的公开文档比历史包更新；
-使用 tools/package.py 重建会产生包含新文档的包，因此哈希不同。已生成的历史包保持不变。
+使用 tools/package.py 重建会产生包含新文档的包，因此哈希不同。历史哈希记录保持不变；安装包不再由 Git 跟踪。
 
 ### 7.2 核心实现与工具
 
@@ -339,7 +339,7 @@ python3 -B tests/profile/prepare.py --engine "$TOME_ENGINE_ROOT" \
 python3 -B tests/profile/run.py --engine "$TOME_ENGINE_ROOT" \
   --data /tmp/tome-profile-next-data --results /tmp/tome-profile-next-results
 
-# 生成当前分支的实验包到 dist/；releases/ 中的历史包不受影响。
+# 生成当前分支的实验包到已忽略的 dist/；安装包不提交到 Git。
 python3 -B tools/package.py
 ```
 
