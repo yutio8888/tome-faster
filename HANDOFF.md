@@ -1,4 +1,28 @@
-# Faster ToME4 当前交接：0.2.6
+# Faster ToME4 当前交接：0.2.7
+
+2026-09-13。用户最新要求“远程受击提示过于频繁，请增加限速”。当前生产目录仍为
+`/workspace/t-engine4/tmp/worktrees/tome-faster-save-20260912`，分支 `perf-save-stutter-20260912`，
+本轮父提交 `d353f0188d17d18fa66645e0e8651ff6979ca821`。**本节为最新状态，下方版本均为历史记录。**
+
+- `superload/engine/Map.lua` 仅限速 `hit_warning`：每张 Map 每500ms最多一次，首个立即；
+  抑制请求不延长间隔，移动和方向变化不重置。其他粒子调用与放行提示透传全部参数及返回值。
+- `config.settings.faster_tome.hit_warning_interval_ms` 可自定义，1000为每秒一次，0关闭限速；
+  无效配置使用500，重启生效。使用SDL毫秒时间并处理2^32回绕，弱键旁表不写Map存档字段。
+- 固定本体Player调用不消费emitter返回值；抑制提示不创建emitter且无返回。减少视觉粒子会
+  减少共享RNG消耗，符合此前用户允许RNG不同的约束；不补抽随机数，不改伤害处理或其他粒子入口。
+- 完整tests/run.sh通过，既有test_existing新增35项限速回归，JIT开关各20825断言通过。
+  覆盖时序边界、不同方向/坐标、Map独立性/回收、SDL回绕、自定义和关闭设置及参数/返回值。
+  [验证入口](evidence/faster-tome4-hit-warning/README.md)。独立复核无阻断缺陷。
+- 本轮没有启动真实游戏、操作玩家存档或新增FPS计时；不能把功能限速当作已测得整局提速。
+- 0.2.6功能与测量保留。完整异步快照、GC切片等仍未实现，见下方记录。
+- `.teaa` 仍仅在本地忽略的dist目录构建，不提交安装包或生成的校验文件。
+- 本地 `dist/tome-faster-0.2.7.teaa`：307465 bytes、81个allowlist文件，SHA256
+  `3024b011cfdc96e573635b5e824a08d7bf7715d67e9e7c7ce262fb62d81f3c9d`。
+  ZIP CRC、逐文件字节、Lua语法及版本检查通过；旧版本本地包保留。
+
+---
+
+# Faster ToME4 历史交接：0.2.6
 
 更新：2026-09-13 UTC。用户最新要求“请你继续处理”，并要求 `.teaa` 不再永久存放在 Git
 代码仓。本轮实现无损保存截图编码和同步快照等待画面刷新，保留 0.2.5 所有优化。

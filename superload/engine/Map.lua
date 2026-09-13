@@ -17,10 +17,31 @@
 -- Nicolas Casalini "DarkGod"
 -- darkgod@te4.org
 
--- Modified 2026-09-12: bounded caches and compatibility fixes.
+-- Modified 2026-09-13: bounded caches and ranged-hit warning rate limiting.
 
--- Keep upstream emission, including the ranged-hit direction indicator.
 local Map = loadPrevious(...)
+local interval = (config.settings.faster_tome or {}).hit_warning_interval_ms
+local clock = core and core.game and core.game.getTime
+local tick_period = 4294967296 -- SDL_GetTicks returns unsigned 32-bit milliseconds.
+if type(interval) ~= "number" or interval ~= interval or interval < 0 or interval >= tick_period then
+    interval = 500
+end
+if interval > 0 and type(clock) == "function" and type(Map.particleEmitter) == "function" then
+    local emit = Map.particleEmitter
+    -- Keep transient timestamps outside the saved Map; values cannot retain owners.
+    local last_warning = setmetatable({}, {__mode = "k"})
+    function Map:particleEmitter(...)
+        if select(4, ...) == "hit_warning" then
+            local now = clock()
+            if type(now) == "number" and now >= 0 and now < tick_period then
+                local last = last_warning[self]
+                if last and (now - last) % tick_period < interval then return end
+                last_warning[self] = now
+            end
+        end
+        return emit(self, ...)
+    end
+end
 if not require("engine.FasterRuntime").installMap(Map, config.settings.faster_tome) then
     print("[Faster ToME4] Map source cache skipped (disabled or unknown override)")
 end

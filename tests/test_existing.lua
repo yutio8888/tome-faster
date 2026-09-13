@@ -226,8 +226,65 @@ local previous=map.particleEmitter
 local loaded=run('superload/engine/Map.lua',env{loadPrevious=function() return map end, config={settings={}},
     require=function() return {installMap=function() return true end, install=function() return true end} end})
 local result=pack(loaded:particleEmitter(1,2,3,'hit_warning',{},nil,7))
-check(loaded.particleEmitter==previous and result[1]=='emitter' and result[2]==7 and result[6]=='hit_warning','hit warning pass-through')
-print('PASS hit warning restored')
+check(loaded.particleEmitter==previous and result[1]=='emitter' and result[2]==7 and result[6]=='hit_warning','hit warning pass-through without clock')
+
+-- Exercise the actual superload with a controllable SDL millisecond clock.
+local function warningMap(interval)
+    local now, clock_calls, emitted = 0, 0, {}
+    local methods={particleEmitter=function(self,...)
+        emitted[#emitted+1]=pack(...)
+        return 'emitter',nil,select('#',...),...
+    end}
+    local old=methods.particleEmitter
+    run('superload/engine/Map.lua',env{
+        loadPrevious=function() return methods end,
+        core={game={getTime=function() clock_calls=clock_calls+1; return now end}},
+        config={settings={faster_tome={hit_warning_interval_ms=interval}}},
+        require=function() return {installMap=function() return true end,install=function() return true end} end,
+    })
+    return methods,emitted,function(value) now=value end,function() return clock_calls end,old
+end
+local limited,emitted,setTime,clockCalls=warningMap()
+local first=pack(limited:particleEmitter(1,2,3,'hit_warning',{angle=90},nil,7))
+check(first.n==10 and first[1]=='emitter' and first[2]==nil and first[3]==7 and first[7]=='hit_warning','first warning preserves return arity and nils')
+for i=1,20 do check(select('#',limited:particleEmitter(i,i,1,'hit_warning',{angle=i}))==0,'burst warning suppressed across positions/directions') end
+setTime(499); limited:particleEmitter(1,2,1,'hit_warning',{})
+check(#emitted==1,'warning remains suppressed before deadline; suppressed attempts do not extend it')
+setTime(500); limited:particleEmitter(1,2,1,'hit_warning',{})
+check(#emitted==2,'warning resumes at exact default deadline')
+local calls=clockCalls()
+local ordinary=pack(limited:particleEmitter(1,2,3,'fireball',{},nil,7))
+check(ordinary.n==10 and ordinary[7]=='fireball' and clockCalls()==calls,'other particles bypass clock and preserve returns')
+local empty=pack(limited:particleEmitter())
+check(empty.n==3 and empty[3]==0,'empty argument list is forwarded exactly')
+local secondMap=setmetatable({}, {__index=limited})
+secondMap:particleEmitter(1,2,1,'hit_warning',{})
+check(#emitted==5 and next(secondMap)==nil,'maps have independent limits and no saved timestamp fields')
+local weak=setmetatable({secondMap}, {__mode='v'}); secondMap=nil
+collectgarbage('collect'); collectgarbage('collect')
+check(weak[1]==nil,'warning timestamps do not retain discarded maps')
+local wrapped,wrapEmits,wrapTime=warningMap(500)
+wrapTime(4294967196); wrapped:particleEmitter(1,2,1,'hit_warning',{})
+wrapTime(0); wrapped:particleEmitter(1,2,1,'hit_warning',{})
+check(#wrapEmits==1,'SDL tick wrap retains remaining cooldown')
+wrapTime(400); wrapped:particleEmitter(1,2,1,'hit_warning',{})
+check(#wrapEmits==2,'SDL tick wrap expires at exact deadline')
+local custom,customEmits,customTime=warningMap(1000)
+custom:particleEmitter(1,2,1,'hit_warning',{})
+customTime(500); custom:particleEmitter(1,2,1,'hit_warning',{})
+customTime(1000); custom:particleEmitter(1,2,1,'hit_warning',{})
+check(#customEmits==2,'configured warning interval is honored')
+local unlimited,unlimitedEmits,_,unlimitedClock,unlimitedOriginal=warningMap(0)
+for i=1,3 do unlimited:particleEmitter(1,2,1,'hit_warning',{}) end
+check(unlimited.particleEmitter==unlimitedOriginal and #unlimitedEmits==3 and unlimitedClock()==0,'zero disables rate limiting entirely')
+for _,invalid in ipairs{-1,math.huge,0/0,'500'} do
+    local fallback,fallbackEmits,fallbackTime=warningMap(invalid)
+    fallback:particleEmitter(1,2,1,'hit_warning',{})
+    fallbackTime(499); fallback:particleEmitter(1,2,1,'hit_warning',{})
+    fallbackTime(500); fallback:particleEmitter(1,2,1,'hit_warning',{})
+    check(#fallbackEmits==2,'invalid configuration uses default interval')
+end
+print('PASS hit warning default/custom/disabled rate limits, independent weak maps, SDL wrap and particle pass-through')
 
 local util={bound=function(i,lo,hi) return math.max(lo,math.min(i,hi)) end}
 local chat={}

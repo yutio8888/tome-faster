@@ -1,10 +1,16 @@
 # Faster ToME4 — rendering and save optimizations
 
-Version **0.2.6**, modified 13 September 2026. This fork fixes defects in
+Version **0.2.7**, modified 13 September 2026. This fork fixes defects in
 [Yutio888's Faster ToME4 0.0.1](https://te4.org/games/addons/tome/faster) and adds
 conservative save/load and runtime optimizations for **ToME 1.7.6**.
 
-This release refreshes a native wait screen at checkpoints during synchronous
+This release limits ranged-hit direction indicators to **one every 500 ms per
+map**. The first warning appears immediately; suppressed hits do not extend the
+interval, and moving or changing attack direction does not reset it. Other
+particle calls pass through. Set `hit_warning_interval_ms=1000` for one per second
+or `0` to disable the limit, then restart.
+
+Version 0.2.6 refreshes a native wait screen at checkpoints during synchronous
 snapshot copying and encodes save screenshots as lossless PNG with less
 compression work. Input still waits for copying to return, and GC policy and
 the three full GC barriers are unchanged. See the
@@ -68,7 +74,8 @@ Player archives and generated save graphs stay local.
   hooks. Real charballs, late UUID registration and online exports keep their path.
 
 - Use all 5,000 debug-log slots and honor explicit log truncation.
-- Restore ranged-hit direction indicators (`hit_warning`).
+- Restore ranged-hit direction indicators (`hit_warning`), with a configurable
+  500 ms interval to reduce repeated indicators during rapid attacks.
 - Bound log-text caches per window, invalidating on font or width changes.
 - Bound particle/shader bytecode caches, preserving original method environments
   and creating separate closures for independently parameterized effects.
@@ -113,6 +120,13 @@ state; unsupported cases use the original capture. The Windows resolver uses onl
 already-loaded `SDL2.dll` and `opengl32.dll`. Its Linux fixture checks have passed,
 but Windows runtime correctness and performance have not been measured.
 
+The warning interval uses the engine's real-time millisecond clock, including
+its 32-bit wraparound. Timestamps are weakly held outside Map fields and are not
+saved. A missing clock leaves emission unchanged. Suppressed warnings create no
+emitter and return no values; the stock player caller ignores that return.
+Direction changes inside the interval are also suppressed. Fewer visual emitters
+consume fewer particle random draws; the old RNG sequence is not preserved.
+
 For an A/B run, these optional engine configuration values are read at addon
 startup (restart after changing them):
 
@@ -131,11 +145,13 @@ config.settings.faster_tome = {
     save_callbacks = false,
     snapshot_refresh = false,
     screenshot_png = false,
+    hit_warning_interval_ms = 0,
 }
 ```
 
-Omitting a field enables that optimization. These are developer configuration
-values, not new menu controls.
+Omitting a boolean field enables that optimization. The warning interval defaults
+to 500 milliseconds; zero disables its limit, and invalid values use the default.
+These are developer configuration values, not new menu controls.
 
 ## Verify and package
 
@@ -175,6 +191,10 @@ checks and 1,229 screenshot checks. All five new suites also passed with JIT off
 The final Linux same-frame session compared 12 PNG pairs containing 9,216,000
 decoded RGB bytes, all equal. Formal save timing and screenshot file-size results
 are in the [0.2.6 report](docs/snapshot-refresh.md).
+
+The 0.2.7 full regression passed, including 35 additional warning-limit checks
+in the existing suite. That suite passed 20,825 assertions with JIT on and off;
+see the [warning-limit verification](evidence/faster-tome4-hit-warning/README.md).
 
 Omitting the DLC path skips the Ashes and Cults fixtures explicitly. The supplied DLC tree
 uses `<component>/tome-<component>/`; fixture hashes are checked before execution.

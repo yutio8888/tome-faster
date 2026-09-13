@@ -20,8 +20,14 @@ copyright and GPL-3.0-or-later notices. This work is GPL-3.0-or-later.
   including zero; enumeration is performed only on `get_printlog()`. The pinned
   upstream buffer normally has one entry to clear per call. Importing a large
   startup backlog still uses upstream's potentially quadratic clearing once.
-- `superload/engine/Map.lua`: retain the original particle emitter; ranged-hit
-  direction indicators and all emitter arguments/returns work upstream-style.
+- `superload/engine/Map.lua`: retain ranged-hit direction indicators. Since 0.2.7,
+  only `hit_warning` is limited to one call every 500 ms per map by default;
+  `hit_warning_interval_ms=0` restores unlimited emission. The first warning is
+  immediate and suppressed requests do not postpone the next one. Weak per-map
+  timestamps stay outside saves, and elapsed time handles SDL's 32-bit wrap.
+  Other particle calls and allowed warnings preserve all arguments/returns;
+  suppressed warnings create no emitter and return no values. Reducing visual
+  emitters also reduces their RNG consumption.
   Version 0.2.0 also installs the separately documented map-checker source cache.
 - `superload/mod/dialogs/ShowChatLog.lua`: each dialog owns a strong FIFO cache
   of at most 128 generated text entries. Font identity or rendering width changes

@@ -1,17 +1,17 @@
 {
   "date": "2026-09-13",
-  "addon_version": "0.2.6",
+  "addon_version": "0.2.7",
   "engine_commit": "624a67329fe2ad440c5b344785a9c73fcf22ae63",
   "runtime": "Unit fixtures: LuaJIT 2.1.0-beta3; full game: embedded LuaJIT 2.0.2",
   "tests": {
-    "existing_assertions": 20790,
+    "existing_assertions": 20825,
     "save_load_checks": 71,
     "status": "passed",
     "runtime_checks": 162,
     "profile_checks": 22,
     "historical_native_particle_lifetime_cases": 6,
     "clone_differential_graphs": 91,
-    "clone_assertions_this_run": 73424,
+    "clone_assertions_this_run": 73185,
     "character_export_checks": 176,
     "export_cleanup_scenarios": 38,
     "export_cleanup_assertions": 824,
@@ -430,5 +430,26 @@
       },
       "scope": "Selected bounded projection and reference aliases only; hidden fields of {uid,class} references not compared. Raw process-local UID equality is intentionally not a cross-reload invariant."
     }
+  },
+  "hit_warning_rate_limit_0_2_7": {
+    "default_interval_ms": 500,
+    "scope": "Per Map, all hit_warning directions and positions share one interval",
+    "configuration": "config.settings.faster_tome.hit_warning_interval_ms; 0 disables, invalid values default to 500",
+    "first_warning_immediate": true,
+    "suppressed_requests_extend_interval": false,
+    "normal_particle_arguments_and_returns_preserved": true,
+    "suppressed_return_values": 0,
+    "clock": "core.game.getTime / SDL_GetTicks unsigned 32-bit milliseconds",
+    "tick_wraparound_handled": true,
+    "timestamps_in_save_graph": false,
+    "weak_map_keys": true,
+    "visual_rng_consumption_reduced": true,
+    "full_regression": "passed",
+    "full_regression_log": "evidence/faster-tome4-hit-warning/regression.log",
+    "existing_jit_off_log": "evidence/faster-tome4-hit-warning/existing-jit-off.log",
+    "existing_assertions_each_jit_mode": 20825,
+    "additional_warning_checks": 35,
+    "checkpoint_clone_assertions_in_full_suite": 385979,
+    "new_full_game_timing_or_visual_benchmark": false
   }
 }
