@@ -1,6 +1,6 @@
 {
   "date": "2026-09-13",
-  "addon_version": "0.2.7",
+  "addon_version": "0.2.8",
   "engine_commit": "624a67329fe2ad440c5b344785a9c73fcf22ae63",
   "runtime": "Unit fixtures: LuaJIT 2.1.0-beta3; full game: embedded LuaJIT 2.0.2",
   "tests": {
@@ -451,5 +451,55 @@
     "additional_warning_checks": 35,
     "checkpoint_clone_assertions_in_full_suite": 385979,
     "new_full_game_timing_or_visual_benchmark": false
+  },
+  "fbo_gc_guard_0_2_8": {
+    "implementation": "Pure Lua deferral of native FBO destruction until immediately before the next normal use() binding",
+    "helper_sha256": "89091eb5321fe5a345dab559ed78b4e3bc1db7d879aed9bbf590a899b5c7493a",
+    "prototype_helper_byte_identical": true,
+    "configuration": "config.settings.faster_tome.fbo_gc_guard=false; restart to disable",
+    "default_enabled": true,
+    "native_binary_bundled": false,
+    "global_gc_parameters_changed": false,
+    "fbo_release_timing_changed": true,
+    "save_format_changed": false,
+    "framebuffer_destructor_skipped": false,
+    "queue_lifetime": "Until the next use() call, or Lua state close if no more use() calls occur",
+    "tests": {
+      "full_regression": "passed",
+      "full_regression_log": "evidence/faster-tome4-fbo-gc/regression.log",
+      "jit_on_checks": 25,
+      "jit_off_checks": 25,
+      "jit_off_log": "evidence/faster-tome4-fbo-gc/fbo-gc-jit-off.log",
+      "actual_pinned_native_gl_binding_and_pixel_tests": true,
+      "lifetime_model_resources": 533,
+      "reentrant_model_resources": 3,
+      "model_duplicate_destructions": 0,
+      "model_resources_retained_after_lua_close": 0,
+      "checkpoint_clone_assertions_in_full_suite": 385214,
+      "clone_assertions_in_full_suite": 73243
+    },
+    "prototype_pilot": {
+      "results": "docs/fbo-gc-results.json",
+      "valid_restores": 12,
+      "waits": 60,
+      "frame_intervals": 6878,
+      "buffer_loss": 0,
+      "timer_overruns": 0,
+      "population_rate_claimed": false,
+      "rare_400ms_stall_reproduced_in_pilot": false
+    },
+    "scope": {
+      "windows_runtime_tested": false,
+      "hardware_gpu_tested": false,
+      "long_session_tested": false,
+      "all_stutters_eliminated_claimed": false
+    },
+    "integrated_game_smoke": {
+      "results": "evidence/faster-tome4-fbo-gc/integration.json",
+      "enabled_and_disabled_passed": true,
+      "waits_each": 5,
+      "lua_errors": 0,
+      "source_hashes_match": true
+    }
   }
 }

@@ -1,0 +1,4 @@
+FBO GC renderer: llvmpipe (LLVM 15.0.6, 256 bits)
+FBO GC lifetime: {"created":533,"destroyed":533,"double_destruction":0,"passed":true}
+FBO GC reentrant: {"created":3,"destroyed":3,"double_destruction":0,"passed":true}
+PASS FBO GC guard: 25 checks

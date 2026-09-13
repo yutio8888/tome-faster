@@ -235,6 +235,7 @@ do
     env.require = function(name)
         if name == "engine.FasterSave" then return helper end
         if name == "engine.FasterSaveFollowup" then return {installClass=function() return true end} end
+        if name == "engine.FBOGCGuard" then return assert(loadfile(root .. "/overload/engine/FBOGCGuard.lua"))() end
         if name == "engine.class" then return env.class end
         if name == "engine.FasterClone" then return assert(loadfile(root .. "/overload/engine/FasterClone.lua"))() end
         if name == "engine.FasterSnapshotRefresh" then return {installGame=function() return false, "test environment has no native display" end} end

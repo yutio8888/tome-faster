@@ -1,0 +1,350 @@
+{
+  "scope": "Independent prototype feasibility pilot, not a population-rate estimate; no Windows runtime measurement",
+  "engine_commit": "624a67329fe2ad440c5b344785a9c73fcf22ae63",
+  "platform": "Linux Xvfb, Mesa llvmpipe, 1280x800, 30 FPS",
+  "prototype_helper_sha256": "89091eb5321fe5a345dab559ed78b4e3bc1db7d879aed9bbf590a899b5c7493a",
+  "groups": [
+    {
+      "phase": "clean",
+      "guard": false,
+      "scheduled": 4,
+      "valid": 4,
+      "frames": 2289,
+      "waits": 20,
+      "max_frame_ms": 88.08051899075508,
+      "ordinary_mean_of_run_medians_ms": 3.757427249999864,
+      "visual_mean_of_run_medians_ms": 1459.6983247548342,
+      "llvm_draw_long_frames": 4,
+      "timer_overruns": 0,
+      "thresholds": {
+        "50": {
+          "frames": 9,
+          "runs": 4
+        },
+        "100": {
+          "frames": 0,
+          "runs": 0
+        },
+        "250": {
+          "frames": 0,
+          "runs": 0
+        }
+      }
+    },
+    {
+      "phase": "clean",
+      "guard": true,
+      "scheduled": 4,
+      "valid": 4,
+      "frames": 2297,
+      "waits": 20,
+      "max_frame_ms": 54.17711099982262,
+      "ordinary_mean_of_run_medians_ms": 3.786415625000245,
+      "visual_mean_of_run_medians_ms": 1464.6052367463708,
+      "llvm_draw_long_frames": 0,
+      "timer_overruns": 0,
+      "thresholds": {
+        "50": {
+          "frames": 2,
+          "runs": 2
+        },
+        "100": {
+          "frames": 0,
+          "runs": 0
+        },
+        "250": {
+          "frames": 0,
+          "runs": 0
+        }
+      }
+    },
+    {
+      "phase": "mechanism",
+      "guard": false,
+      "scheduled": 2,
+      "valid": 2,
+      "frames": 1144,
+      "waits": 10,
+      "max_frame_ms": 95.66040298342705,
+      "ordinary_mean_of_run_medians_ms": 3.8359552499999836,
+      "visual_mean_of_run_medians_ms": 1471.4867899864912,
+      "llvm_draw_long_frames": 3,
+      "timer_overruns": 0,
+      "thresholds": {
+        "50": {
+          "frames": 5,
+          "runs": 2
+        },
+        "100": {
+          "frames": 0,
+          "runs": 0
+        },
+        "250": {
+          "frames": 0,
+          "runs": 0
+        }
+      }
+    },
+    {
+      "phase": "mechanism",
+      "guard": true,
+      "scheduled": 2,
+      "valid": 2,
+      "frames": 1148,
+      "waits": 10,
+      "max_frame_ms": 49.25262701511383,
+      "ordinary_mean_of_run_medians_ms": 3.842158999999924,
+      "visual_mean_of_run_medians_ms": 1455.4023440033197,
+      "llvm_draw_long_frames": 0,
+      "timer_overruns": 0,
+      "thresholds": {
+        "50": {
+          "frames": 0,
+          "runs": 0
+        },
+        "100": {
+          "frames": 0,
+          "runs": 0
+        },
+        "250": {
+          "frames": 0,
+          "runs": 0
+        }
+      }
+    }
+  ],
+  "paired": [
+    {
+      "phase": "clean",
+      "pairs": 4,
+      "ordinary_cpu_delta_ms": 0.028988375000380984,
+      "ordinary_cpu_delta_percent": 0.7714953097330636,
+      "visual_delta_ms": 4.906911991536617
+    },
+    {
+      "phase": "mechanism",
+      "pairs": 2,
+      "ordinary_cpu_delta_ms": 0.006203749999940555,
+      "ordinary_cpu_delta_percent": 0.16172633921995264,
+      "visual_delta_ms": -16.084445983171463
+    }
+  ],
+  "runs": [
+    {
+      "name": "pilot-clean-001-addon",
+      "phase": "clean",
+      "block": 1,
+      "guard": true,
+      "frames": 575,
+      "waits": 5,
+      "max_frame_ms": 44.661222994327545,
+      "counts": {
+        "50": 0,
+        "100": 0,
+        "250": 0
+      },
+      "ordinary_frame_cpu_median_ms": 3.7221590000003744,
+      "wait_visual_median_ms": 1473.0034559965134,
+      "llvm_draw_long_frames": 0,
+      "timer_overruns": 0
+    },
+    {
+      "name": "pilot-clean-001-control",
+      "phase": "clean",
+      "block": 1,
+      "guard": false,
+      "frames": 572,
+      "waits": 5,
+      "max_frame_ms": 88.08051899075508,
+      "counts": {
+        "50": 2,
+        "100": 0,
+        "250": 0
+      },
+      "ordinary_frame_cpu_median_ms": 3.6986699999997654,
+      "wait_visual_median_ms": 1452.4042209982872,
+      "llvm_draw_long_frames": 1,
+      "timer_overruns": 0
+    },
+    {
+      "name": "pilot-clean-002-control",
+      "phase": "clean",
+      "block": 2,
+      "guard": false,
+      "frames": 573,
+      "waits": 5,
+      "max_frame_ms": 85.75090000033379,
+      "counts": {
+        "50": 1,
+        "100": 0,
+        "250": 0
+      },
+      "ordinary_frame_cpu_median_ms": 3.7302599999998165,
+      "wait_visual_median_ms": 1462.7812049984932,
+      "llvm_draw_long_frames": 1,
+      "timer_overruns": 0
+    },
+    {
+      "name": "pilot-clean-002-addon",
+      "phase": "clean",
+      "block": 2,
+      "guard": true,
+      "frames": 575,
+      "waits": 5,
+      "max_frame_ms": 42.77199801802635,
+      "counts": {
+        "50": 0,
+        "100": 0,
+        "250": 0
+      },
+      "ordinary_frame_cpu_median_ms": 3.800912000000153,
+      "wait_visual_median_ms": 1472.8702249825,
+      "llvm_draw_long_frames": 0,
+      "timer_overruns": 0
+    },
+    {
+      "name": "pilot-clean-003-addon",
+      "phase": "clean",
+      "block": 3,
+      "guard": true,
+      "frames": 574,
+      "waits": 5,
+      "max_frame_ms": 53.69426202774048,
+      "counts": {
+        "50": 1,
+        "100": 0,
+        "250": 0
+      },
+      "ordinary_frame_cpu_median_ms": 3.831151000000318,
+      "wait_visual_median_ms": 1455.482603996992,
+      "llvm_draw_long_frames": 0,
+      "timer_overruns": 0
+    },
+    {
+      "name": "pilot-clean-003-control",
+      "phase": "clean",
+      "block": 3,
+      "guard": false,
+      "frames": 570,
+      "waits": 5,
+      "max_frame_ms": 87.8067959845066,
+      "counts": {
+        "50": 4,
+        "100": 0,
+        "250": 0
+      },
+      "ordinary_frame_cpu_median_ms": 3.8246839999997064,
+      "wait_visual_median_ms": 1469.7308920025826,
+      "llvm_draw_long_frames": 1,
+      "timer_overruns": 0
+    },
+    {
+      "name": "pilot-clean-004-addon",
+      "phase": "clean",
+      "block": 4,
+      "guard": true,
+      "frames": 573,
+      "waits": 5,
+      "max_frame_ms": 54.17711099982262,
+      "counts": {
+        "50": 1,
+        "100": 0,
+        "250": 0
+      },
+      "ordinary_frame_cpu_median_ms": 3.791440500000135,
+      "wait_visual_median_ms": 1457.0646620094776,
+      "llvm_draw_long_frames": 0,
+      "timer_overruns": 0
+    },
+    {
+      "name": "pilot-clean-004-control",
+      "phase": "clean",
+      "block": 4,
+      "guard": false,
+      "frames": 574,
+      "waits": 5,
+      "max_frame_ms": 72.2771919965744,
+      "counts": {
+        "50": 2,
+        "100": 0,
+        "250": 0
+      },
+      "ordinary_frame_cpu_median_ms": 3.7760950000001685,
+      "wait_visual_median_ms": 1453.8769810199738,
+      "llvm_draw_long_frames": 1,
+      "timer_overruns": 0
+    },
+    {
+      "name": "pilot-mechanism-001-control",
+      "phase": "mechanism",
+      "block": 1,
+      "guard": false,
+      "frames": 571,
+      "waits": 5,
+      "max_frame_ms": 76.41677498817444,
+      "counts": {
+        "50": 4,
+        "100": 0,
+        "250": 0
+      },
+      "ordinary_frame_cpu_median_ms": 3.851259499999969,
+      "wait_visual_median_ms": 1476.4419589936733,
+      "llvm_draw_long_frames": 2,
+      "timer_overruns": 0
+    },
+    {
+      "name": "pilot-mechanism-001-addon",
+      "phase": "mechanism",
+      "block": 1,
+      "guard": true,
+      "frames": 574,
+      "waits": 5,
+      "max_frame_ms": 47.109847009181976,
+      "counts": {
+        "50": 0,
+        "100": 0,
+        "250": 0
+      },
+      "ordinary_frame_cpu_median_ms": 3.9243699999999535,
+      "wait_visual_median_ms": 1456.202146023512,
+      "llvm_draw_long_frames": 0,
+      "timer_overruns": 0
+    },
+    {
+      "name": "pilot-mechanism-002-control",
+      "phase": "mechanism",
+      "block": 2,
+      "guard": false,
+      "frames": 573,
+      "waits": 5,
+      "max_frame_ms": 95.66040298342705,
+      "counts": {
+        "50": 1,
+        "100": 0,
+        "250": 0
+      },
+      "ordinary_frame_cpu_median_ms": 3.820650999999998,
+      "wait_visual_median_ms": 1466.531620979309,
+      "llvm_draw_long_frames": 1,
+      "timer_overruns": 0
+    },
+    {
+      "name": "pilot-mechanism-002-addon",
+      "phase": "mechanism",
+      "block": 2,
+      "guard": true,
+      "frames": 574,
+      "waits": 5,
+      "max_frame_ms": 49.25262701511383,
+      "counts": {
+        "50": 0,
+        "100": 0,
+        "250": 0
+      },
+      "ordinary_frame_cpu_median_ms": 3.759947999999895,
+      "wait_visual_median_ms": 1454.6025419831276,
+      "llvm_draw_long_frames": 0,
+      "timer_overruns": 0
+    }
+  ]
+}

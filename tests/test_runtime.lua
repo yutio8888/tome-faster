@@ -216,6 +216,7 @@ do
         if name == "engine.FasterRuntime" then return runtime end
         if name == "engine.FasterEffectMask" then return {install=function() return true end} end
         if name == "engine.FasterSaveFollowup" then return {installClass=function() return true end} end
+        if name == "engine.FBOGCGuard" then return assert(loadfile(root .. "/overload/engine/FBOGCGuard.lua"))() end
         if name == "engine.class" then return e.class end
         if name == "engine.Map" then return w.class end
         if name == "engine.interface.ActorTalents" then return definitions end

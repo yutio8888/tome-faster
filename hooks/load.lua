@@ -95,6 +95,17 @@ if not ok then print("[Faster ToME4] Load queue optimization skipped:", reason) 
 local callbacks_ok, callbacks_reason = require("engine.FasterSaveFollowup").installClass(require "engine.class", config.settings.faster_tome)
 if not callbacks_ok then print("[Faster ToME4] Save callback reuse skipped:", callbacks_reason) end
 
+-- The 1.7.6 native FBO finalizer leaves framebuffer 0 bound. Release queued
+-- objects immediately before a normal use() establishes the next drawing target.
+if not config.settings.faster_tome or config.settings.faster_tome.fbo_gc_guard ~= false then
+    local fbo_ok, fbo_reason = require("engine.FBOGCGuard").install()
+    if fbo_ok then
+        print("[Faster ToME4] FBO GC guard enabled")
+    else
+        print("[Faster ToME4] FBO GC guard skipped:", fbo_reason)
+    end
+end
+
 -- DLC weights are 2/3/10; Faster's 100000 registers this after their loaders.
 class:bindHook("ToME:load", function()
     local Runtime = require "engine.FasterRuntime"

@@ -1,10 +1,17 @@
 # Faster ToME4 — rendering and save optimizations
 
-Version **0.2.7**, modified 13 September 2026. This fork fixes defects in
+Version **0.2.8**, modified 13 September 2026. This fork fixes defects in
 [Yutio888's Faster ToME4 0.0.1](https://te4.org/games/addons/tome/faster) and adds
 conservative save/load and runtime optimizations for **ToME 1.7.6**.
 
-This release limits ranged-hit direction indicators to **one every 500 ms per
+Version 0.2.8 defers framebuffer destruction until immediately before the next
+normal FBO binding. This avoids the 1.7.6 native finalizer leaving framebuffer 0
+bound in the middle of rendering, using pure Lua and the existing engine methods.
+Set `fbo_gc_guard=false` and restart to disable it. Linux binding/pixel tests and
+a small combat pilot passed; Windows and long-session behavior remain unmeasured.
+See the [FBO design, tests and limitations](docs/fbo-gc.md).
+
+Version 0.2.7 limits ranged-hit direction indicators to **one every 500 ms per
 map**. The first warning appears immediately; suppressed hits do not extend the
 interval, and moving or changing attack direction does not reset it. Other
 particle calls pass through. Set `hit_warning_interval_ms=1000` for one per second
@@ -36,7 +43,7 @@ Equivalent snapshot cloning and skipping offline character sheets remain include
 their earlier results are in the [0.2.2 report](docs/save-stutter.md). The finite
 `notice_enemy` / `dreamhammer` lifetimes and opt-in timer remain included.
 Further measured hotspots and addon candidates are described in the
-[follow-up plan](docs/followup-plan.md). Asynchronous snapshot slicing and GC
+[follow-up plan](docs/followup-plan.md). Asynchronous snapshot slicing and full-collector
 rescheduling remain unimplemented; checkpoint drawing keeps the copy synchronous.
 
 中文说明：[性能问题、修复方案、测量指标与文件清单](docs/faster-tome4-performance-report.md)。
@@ -49,6 +56,9 @@ Player archives and generated save graphs stay local.
 
 ## Changes
 
+- Queue obsolete FBOs until the next normal `use()` call, then release them before
+  that call establishes its drawing target. A Lua shutdown guard drains pending
+  resources when returning to the main menu. No native library is added.
 - Refresh the native wait screen and activity bar at snapshot checkpoints while
   retaining synchronous copying. Input, quit handling and game ticks wait for the
   original call to return. Existing GC pauses can still interrupt drawing.
@@ -88,8 +98,10 @@ Player archives and generated save graphs stay local.
 - Remove an unused effect scan in Ashes' Devouring Flames callback, when the
   inspected DLC definition is present.
 
-With diagnostics disabled, the save format, save-version tokens, explicit manual saves, GC policy,
-scores, Steam cloud handling, and actual archive writer retain engine behavior.
+With diagnostics disabled, the save format, save-version tokens, explicit manual
+saves, global collector settings, scores, Steam cloud handling and archive writer
+retain engine behavior. The FBO guard changes native framebuffer release timing;
+it does not change the collector pause/step settings or full-GC save barriers.
 This addon targets the `tome` module; it does **not** accelerate the initial boot
 module's load-game menu. See [known fixes](docs/known-fixes.md) and
 [save/load analysis and next steps](docs/save-load.md) (Chinese).
@@ -120,6 +132,12 @@ state; unsupported cases use the original capture. The Windows resolver uses onl
 already-loaded `SDL2.dll` and `opengl32.dll`. Its Linux fixture checks have passed,
 but Windows runtime correctness and performance have not been measured.
 
+The FBO guard installs only when the existing FBO destructor and `use` methods
+are native C functions. A prior Lua replacement leaves them intact with a skipped
+message. Pending resources wait until the next `use`; if none follows, they stay
+until the Lua state closes. It targets the verified finalizer binding defect and
+does not eliminate every shader-compilation or waiting stall.
+
 The warning interval uses the engine's real-time millisecond clock, including
 its 32-bit wraparound. Timestamps are weakly held outside Map fields and are not
 saved. A missing clock leaves emission unchanged. Suppressed warnings create no
@@ -146,6 +164,7 @@ config.settings.faster_tome = {
     snapshot_refresh = false,
     screenshot_png = false,
     hit_warning_interval_ms = 0,
+    fbo_gc_guard = false,
 }
 ```
 
@@ -156,7 +175,8 @@ These are developer configuration values, not new menu controls.
 ## Verify and package
 
 Requires LuaJIT with FFI, a C compiler, Lua 5.1-compatible development headers,
-zlib, libpng, SDL2, OpenGL and EGL development files, `pkg-config`, and a local
+zlib, libpng, SDL2, OpenGL and EGL development files, a Lua 5.1-compatible
+link library for the shutdown fixture, `pkg-config`, and a local
 engine Git clone containing commit
 `624a67329fe2ad440c5b344785a9c73fcf22ae63`. Tests read that commit with `git show`;
 they do not use or change player saves. Gzip fixtures compile and execute the

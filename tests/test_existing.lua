@@ -82,7 +82,9 @@ print('PASS ring capacity, order, truncation (partial/full/wrapped)')
 
 local pre = section(pinned('game/loader/pre-init.lua'), 'local printlog = {}', 'local rngavg =')
 local function world()
-    local w = env{config={settings={}}, stdout={}, fail_stdout=false}
+    -- Isolate print/cache behavior from the FBO installer's startup message.
+    -- FBO installation and its configuration are covered by test_fbo_gc.lua.
+    local w = env{config={settings={faster_tome={fbo_gc_guard=false}}}, stdout={}, fail_stdout=false}
     w._G = w
     w.print = function(...)
         w.stdout[#w.stdout+1] = {n=select('#',...), ...}

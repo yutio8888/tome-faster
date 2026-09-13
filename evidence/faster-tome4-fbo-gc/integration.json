@@ -1,0 +1,24 @@
+{
+  "scope": "Two isolated loaded-game smoke checks; not appended to the prototype performance pilot",
+  "original_save_used_directly": false,
+  "results": [
+    {
+      "condition": "enabled",
+      "complete": true,
+      "lua_errors": false,
+      "waits": 5,
+      "guard_enabled_log": true,
+      "production_source_matches": true,
+      "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7"
+    },
+    {
+      "condition": "disabled",
+      "complete": true,
+      "lua_errors": false,
+      "waits": 5,
+      "guard_enabled_log": false,
+      "production_source_matches": true,
+      "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7"
+    }
+  ]
+}
