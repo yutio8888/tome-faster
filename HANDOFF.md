@@ -4,7 +4,9 @@
 
 ## 交付与有效约束
 
-- 生产 A：`/workspace/t-engine4/tmp/worktrees/tome-faster-save-20260912`；分支 `perf-save-stutter-20260912`；远端 `https://github.com/yutio8888/tome-faster.git`。本次提交以该分支 Git log 为准，父提交 `6a307b8cd35e6ceb6b6de777bc9c4780d52179ee`。提交、推送继续沿用此前授权；没有合并用户原 checkout。
+当前发布状态：功能提交 `7ab9918` 已在本地完成，远端仍为 `6a307b8`。自动审批两次拒绝推送；第二次已承认 GitHub API 验证的账号/仓库所有权和 push 权限，但仍要求用户明确批准这次源码、测试、汇总报告和安装包的对外发布。未绕过拒绝，等待用户批准后再执行同一分支 push。后续状态文档提交不改变安装包。
+
+- 生产 A：`/workspace/t-engine4/tmp/worktrees/tome-faster-save-20260912`；分支 `perf-save-stutter-20260912`；远端 `https://github.com/yutio8888/tome-faster.git`。本次提交以该分支 Git log 为准，父提交 `6a307b8cd35e6ceb6b6de777bc9c4780d52179ee`。没有合并用户原 checkout；本次远端发布的审批状态见上。
 - 运行 W：`/workspace/t-engine4/tmp/worktrees/yron-profile-20260912`；P 为 `W/tmp/profile`。固定引擎仍为 `624a67329fe2ad440c5b344785a9c73fcf22ae63`。
 - 新生产模块：[FasterHotkeys.lua](overload/engine/FasterHotkeys.lua)、[FasterEffectMask.lua](overload/engine/FasterEffectMask.lua)、[FasterSaveFollowup.lua](overload/engine/FasterSaveFollowup.lua)。独立关闭项 `hotkey_text_cache=false`、`effect_mask_batch=false`、`save_callbacks=false`，改后重启。
 - 用户允许 RNG 消耗不同，不允许随意改游戏规则。新改动未改冷却、伤害、FOV、tick、三个完整 GC、保存格式或后台 worker 协议。
