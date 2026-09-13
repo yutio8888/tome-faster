@@ -1,6 +1,6 @@
 {
   "date": "2026-09-13",
-  "addon_version": "0.2.5",
+  "addon_version": "0.2.6",
   "engine_commit": "624a67329fe2ad440c5b344785a9c73fcf22ae63",
   "runtime": "Unit fixtures: LuaJIT 2.1.0-beta3; full game: embedded LuaJIT 2.0.2",
   "tests": {
@@ -285,5 +285,150 @@
     "stable_cpu_or_long_frame_improvement": false,
     "full_character_and_world_reload_resave": true,
     "output_zip_crc_checks": 184
+  },
+  "snapshot_refresh_and_screenshot_0_2_6": {
+    "results": "docs/snapshot-refresh.md",
+    "native_boundary_audit": "docs/snapshot-refresh-audit.md",
+    "earlier_test_and_baseline_fields_preserved": true,
+    "full_regression": {
+      "status": "passed",
+      "jit_enabled": true,
+      "log": "evidence/faster-tome4-snapshot-refresh/tests-jit-on.log",
+      "existing_assertions": 20790,
+      "save_load_checks": 71,
+      "runtime_checks": 162,
+      "profile_checks": 22,
+      "clone_differential_graphs": 91,
+      "clone_assertions_this_run": 73205,
+      "character_export_checks": 176,
+      "gzip_export_checks": 262,
+      "hotkey_checks": 799,
+      "effect_mask_checks": 876,
+      "save_callback_checks": 562,
+      "export_cleanup_scenarios": 38,
+      "export_cleanup_assertions": 824,
+      "native_wait_checks": 65,
+      "checkpoint_clone_differential_graphs": 91,
+      "checkpoint_clone_assertions": 384684,
+      "snapshot_runner_checks": 41,
+      "native_snapshot_installation_checks": 622,
+      "screenshot_checks": 1229
+    },
+    "screenshot_jit_off": {
+      "status": "passed",
+      "checks": 1229,
+      "log": "evidence/faster-tome4-snapshot-refresh/screenshot-jit-off.log"
+    },
+    "snapshot_refresh": {
+      "synchronous_copy_retained": true,
+      "checkpoint_action": "Refresh the native wait screen and activity bar only",
+      "input_and_quit_dispatch": "Deferred until the original synchronous call returns",
+      "game_ticks_during_copy": false,
+      "gc_policy_modified": false,
+      "three_full_gc_barriers_retained": true,
+      "gc_reduction_claimed": false,
+      "hard_refresh_interval_guaranteed": false,
+      "fallback_conditions": [
+        "Steam or webview service present",
+        "Existing debug hook or native wait",
+        "Unknown clone provenance or changed native binding",
+        "save_clone or snapshot_refresh disabled"
+      ],
+      "steam_callbacks_validated": false
+    },
+    "screenshot_png": {
+      "same_original_redraw_and_crop": true,
+      "global_capture_api_modified": false,
+      "format": "PNG RGB8, noninterlaced, IHDR/IDAT/IEND, filter None, zlib level 1",
+      "compressed_png_byte_identity_required": false,
+      "user_screenshot_gamma_path_retained": true,
+      "files_may_be_larger": true,
+      "native_binary_bundled": false,
+      "linux_actual_pixel_validation": {
+        "session": "stutter-screenshot-pixels-v3-01",
+        "same_frame_pairs": 12,
+        "decoded_rgb_bytes_compared": 9216000,
+        "decoded_rgb_and_dimensions_equal": true,
+        "independent_decoder": "libpng",
+        "optimized_path_verified_without_fallback": true
+      },
+      "windows": {
+        "resolver": "GetModuleHandleA/GetProcAddress for already-loaded SDL2.dll and opengl32.dll",
+        "loads_new_dlls": false,
+        "resolver_and_missing_symbol_fixtures_passed": true,
+        "fixture_platform": "Linux",
+        "windows_loader_or_abi_validated": false,
+        "windows_real_runtime_tested": false,
+        "windows_performance_claimed": false
+      },
+      "capability_scope": "Linux/Windows x86 or x64; desktop GL 3+; unchanged window, save redraw mode and native bindings; safe framebuffer and pixel-pack state"
+    },
+    "formal_save_ab": {
+      "completed_sessions": 18,
+      "metrics_report": "docs/snapshot-refresh.md",
+      "presentation_measure": "SDL_GL_SwapWindow submission intervals including scope endpoints; not GPU completion",
+      "metrics_json": "docs/snapshot-refresh-results.json",
+      "integrity_json": "evidence/faster-tome4-snapshot-refresh/save-integrity.json",
+      "all_input_and_production_hashes_matched": true,
+      "selected_actor_count": 27,
+      "selected_item_count": 203,
+      "all_selected_state_equal": true,
+      "all_save_turn_delta_zero": true,
+      "zip_crc_checks": 414,
+      "zip_entries_checked": 379134,
+      "png_independent_decodes": 18,
+      "png_chunks_crc_checked": 525,
+      "selected_state_scope": "Legacy actors count includes entities with talents. Reload sample: 1 Player, 12 NPCs, 14 Objects. inventory_items counts entries, not necessarily unique objects."
+    },
+    "new_options": [
+      "snapshot_refresh",
+      "screenshot_png"
+    ],
+    "test_dependencies": [
+      "LuaJIT with FFI and Lua 5.1-compatible development headers",
+      "C compiler and pkg-config",
+      "zlib, libpng and SDL2 development files",
+      "OpenGL and EGL development files",
+      "Local engine Git clone containing the pinned commit"
+    ],
+    "all_new_suites_jit_off": {
+      "status": "passed",
+      "checkpoint_clone_graphs": 91,
+      "checkpoint_clone_assertions": 385724,
+      "snapshot_runner_checks": 41,
+      "native_wait_checks": 65,
+      "native_snapshot_checks": 622,
+      "screenshot_checks": 1229,
+      "logs": [
+        "evidence/faster-tome4-snapshot-refresh/clone-refresh-jitoff-final-review.log",
+        "evidence/faster-tome4-snapshot-refresh/snapshot-runner-jit-off.log",
+        "evidence/faster-tome4-snapshot-refresh/tests-native-jit-off.txt",
+        "evidence/faster-tome4-snapshot-refresh/screenshot-jit-off.log"
+      ]
+    },
+    "reload_and_repeated_save": {
+      "roundtrip": "snapshot-png-full-roundtrip-v2-20260913",
+      "repeated_save": "stutter-snapshot-png-repeat-save-01",
+      "normal_moves_between_saves": 6,
+      "full_character_and_world_reload": true,
+      "input_files_all_match_source": true,
+      "idle_before_resave_ms": 5006.286,
+      "force_wait_path_exercised": true,
+      "extra_output_zip_crc_checks_including_graph_session": 69,
+      "extra_png_decodes": 3,
+      "integrity_json": "evidence/faster-tome4-snapshot-refresh/roundtrip-integrity.json",
+      "uid_aware_selected_comparison": "evidence/faster-tome4-snapshot-refresh/reload-state-validation.json",
+      "mapped_uids": 220,
+      "uid_fields_checked": 253,
+      "uid_field_numbers_changed": 36,
+      "unmapped_uid_fields": 0,
+      "selected_content_differences_after_uid_mapping": 0,
+      "selected_entity_classes": {
+        "mod.class.Player": 1,
+        "mod.class.NPC": 12,
+        "mod.class.Object": 14
+      },
+      "scope": "Selected bounded projection and reference aliases only; hidden fields of {uid,class} references not compared. Raw process-local UID equality is intentionally not a cross-reload invariant."
+    }
   }
 }

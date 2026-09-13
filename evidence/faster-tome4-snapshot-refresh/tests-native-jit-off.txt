@@ -1,0 +1,4 @@
+$ luajit -joff tests/test_wait_refresh.lua . "$TOME_ENGINE_ROOT"
+native wait refresh: 65 checks passed (JIT off)
+$ luajit -joff tests/test_snapshot_refresh_native.lua . "$TOME_ENGINE_ROOT"
+native snapshot refresh install: 622 checks passed (JIT off)

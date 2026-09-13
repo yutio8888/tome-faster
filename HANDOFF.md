@@ -1,4 +1,96 @@
-# Faster ToME4 当前交接：0.2.5
+# Faster ToME4 当前交接：0.2.6
+
+更新：2026-09-13 UTC。用户最新要求“请你继续处理”，并要求 `.teaa` 不再永久存放在 Git
+代码仓。本轮实现无损保存截图编码和同步快照等待画面刷新，保留 0.2.5 所有优化。
+**本节是最新状态；下方 0.2.5 / 0.2.4 / 0.2.3 均为历史记录。**
+
+## 当前源码与约束
+
+- A：`/workspace/t-engine4/tmp/worktrees/tome-faster-save-20260912`，分支
+  `perf-save-stutter-20260912`，远端 `https://github.com/yutio8888/tome-faster.git`。
+  本轮父提交 `51c249a`，0.2.6 功能提交以该分支 Git log 为准。用户此前明确批准发布；不需要
+  重复请求同一源码分支的常规提交推送授权。没有 force push、改写历史或合并其他 checkout。
+- W：`/workspace/t-engine4/tmp/worktrees/yron-profile-20260912`；P：`W/tmp/profile`。
+  固定引擎 `624a67329fe2ad440c5b344785a9c73fcf22ae63`，Linux 嵌入 LuaJIT 2.0.2、Xvfb、llvmpipe。
+- 新生产模块 `FasterCloneRefresh.lua`、`FasterSnapshotRefresh.lua`、`FasterScreenshot.lua`；
+  修改 `FasterClone.lua` 的安装来源查询与弱引用记录，以及 Game superload 的集成顺序。
+  独立关闭项 `snapshot_refresh=false`、`screenshot_png=false`；`save_clone=false` 同时关闭刷新。
+- 继续允许 RNG 消耗差异，但不随意修改游戏规则。本轮不改变三个 full GC、游戏 tick、输入分发、
+  普通截图 gamma、原保存队列/worker 协议。PNG 像素相同，压缩字节和文件大小改变。
+- 安装包只在忽略的 `dist/` 构建；不跟踪 `.teaa` 或生成校验文件。旧历史没有改写。
+- 最终本地构建为 `dist/tome-faster-0.2.6.teaa`（另有同字节通用文件名），304924 bytes、
+  81 个 allowlist 文件，SHA256 `4dc424c1d99cd30266b170107fa2e8c0c6782279e70d4d14c6e641e09b41ada1`。
+  ZIP CRC、逐文件字节、Lua 语法及与正式实验生产文件哈希一致性全部通过；没有打入证据、图片、
+  存档或原生二进制。全部 `.teaa` 与 release `.sha256` 的 git ls-files 结果仍为空。
+- 主报告：[snapshot-refresh.md](docs/snapshot-refresh.md)、[结果 JSON](docs/snapshot-refresh-results.json)；
+  [原生边界审计](docs/snapshot-refresh-audit.md)、[诊断入口](evidence/faster-tome4-snapshot-refresh/README.md)。
+
+## 最终验证与结果
+
+- 正式 18 场为 `P/sessions/stutter-save-refresh-v1-{snapshot,png,combined}-{before,after}-pair{1,2,3}-01`，
+  三对顺序后/前、前/后、后/前，每场原始 ZIP 新副本，`detail=false`，全部生产文件和驱动冻结。
+  snapshot 单项只启用刷新，png 单项只启用截图，combined 同时启用两项；两项关闭即 0.2.5 行为。
+- 组合中位数保存 wall **560.44 → 533.47 ms**，主线程 CPU **457.47 → 425.47 ms**，
+  同步 saveGame wall **163.36 → 144.72 ms**，最长 SDL swap 入口间隔 **171.40 → 70.49 ms**。
+  最长普通 Game.display 间隔仍 **152.49 ms**；没有证明输入响应或真实 GPU 完成时间。
+- 仅刷新使保存 wall **542.85 → 571.90 ms**、同步 saveGame **159.86 → 180.87 ms**，有额外成本；
+  最长画面提交间隔 **167.68 → 70.92 ms**。仅 PNG 的 takeScreenshot **50.03 → 24.26 ms**，
+  cur.png 大小中位数 **326894 → 415443 bytes**。不要把仅刷新宣传为总保存加速。
+- `stutter-screenshot-pixels-v3-01`：12 对同帧、9216000 RGB bytes 独立 libpng 解码完全一致，
+  非 IDAT 元数据一致、所有 chunk CRC 通过；原截图只重绘一次再读取两种编码。v1/v2 是输出 API
+  诊断失败，不计成功。所有原始图片只留在本地。
+- `stutter-snapshot-refresh-final-graph-01`：127813 表 / 509376 条目 / 27374 计数对象，
+  全图键值、元表、别名一致，真实 native wait 刷新命中。仅该图对比停止 GC 稳定弱引用，结束恢复。
+- 全部正式保存的选定实体状态相等、turn_delta=0；414 ZIP / 379134 entries 和 18 PNG / 525 chunks
+  校验通过。诊断的历史 `actors=27` 名称包含带 talents 的物品；重载样本为 1 Player、12 NPC、
+  14 Object，另有 203 inventory 条目，不能称作 27 个角色。
+- 完整套件通过：既有功能与新增 91 clone 图 / 384684 断言、41 runner、65 native wait、
+  622 native snapshot、1229 PNG 检查。新增套件 JIT-off 均通过，clone 为 385724 断言。
+  差分断言数受 hash 顺序影响；日志均在本次 evidence。三项生产代码独立复核未发现阻断缺陷。
+- 原始 ZIP SHA256 最终仍为 `eac52e4bd612b2ec6477f71bae12b7844c3e8031813df2ad89fe6fac2c1915a7`。
+- `stutter-snapshot-png-repeat-save-01` 两次保存之间正常移动 6 步，两次状态检查均过；其完整
+  save 目录输入 `P/snapshot-png-full-roundtrip-20260913.zip` SHA256
+  `74525d9d9c1f399f942df56668c0901533c111cc16ac851579a5cfb2d1982e06`，逐文件字节与来源一致。
+  `snapshot-png-full-roundtrip-v2-20260913` 重载、空闲五秒、forceWait 保存通过；连同图差分场
+  的额外输出为 69 ZIP / 3 PNG 通过。不要把同场被后续保存覆盖的输出重复计数。
+- 跨重载状态严格 UID 归一通过：220 UID 双射 / 253 字段 / 36 数值变化，party key/order
+  各一处归一，未映射引用0、选定内容差异0。Entity.loaded 原生重分 UID，旧的 raw UID 比较
+  会把不同物品/NPC 配到一起；使用本次 evidence 的独立解析器，不能简单忽略 UID 字段。
+  `{uid,class}` 投影外实体只验证角色与别名，不能推导其隐藏内容一致。
+- 本轮所有游戏已结束，独自启动的 Xvfb `:97` 已按 PID、命令、工作目录确认后停止。
+  下轮需要重新启动，不能复用任何历史 PID/session。
+
+## 不可丢失的实现边界
+
+1. 每 512 条目检查约 16 ms 刷新预算；每次 enable 自带一次原生 redraw，立即 disable 后再复制。
+   原生 wait 不跨越复制，不能改回最初整个 clone 持有 wait 的原型。不要用 manualTick，它的
+   SDL PumpEvents 可直接触发 quit filter 并修改 Game 图；也不要调用普通 Game.display。
+2. on_redraw 在 wait 后仍分发 web/Steam 回调；存在这些服务、debug hook、未知 clone 或原生 API
+   身份变化时回退。复制中的 __index/最终器新建 wait/hook 保留其语义；绘制内新增 Lua hook 会
+   恢复，任意 C hook 无公开重建方法。GC 时点不能完全隔离，16 ms 不是硬上限。
+3. FasterClone provenance 的弱键表值不能强持有 copy：Lua 5.1 缺少 ephemeron 语义，会形成
+   method/environment/Class 保留环。当前嵌套弱值 record 已由实际 GC 回收测试验证。
+4. PNG 只改私有零 upvalue 原 takeScreenshot 方法的 capture 查找，保留原 redraw/crop。
+   使用公开 SDL/GL、内置 lzlib，RGB8/filter None/level1。检查 desktop GL3+、默认 read FBO、
+   PBO0、pack offset0、原窗口和 save redraw mode；缓冲分配后再检查，重入/未知覆盖回退。
+5. Windows 只从已加载 SDL2.dll/opengl32.dll 解析符号，未运行 Windows 实机。Linux fixture 中
+   的 Win32 解析器模拟不等于 Windows ABI/驱动/性能验收。Steam 环境可能只启用 PNG 项。
+6. 正式探针只能启用 screenshot_profile 的 swap-only 模式；包装 native getScreenshot 或
+   forceRedraw 会使 PNG guard 回退。旧 snapshot-v1 整段 wait 和 v2 中途生产变更数据不能混用。
+7. W 含本地诊断 hooks，不能整体复制回 A。正式 driver 精确副本为 evidence 内
+   `FasterStutterSession-formal.lua`；后续重复保存/重载 driver 是 `FasterStutterSession.lua`。
+   后者每次 save 阶段重置 save_requested，并支持本地状态导出、重载采集和 forceWait。
+
+## 仍未交付
+
+完整异步快照/根裁剪、GC 切片或屏障替代、后台导出事务和新 writer、最终地图遮罩像素缓存、
+FBO 背景复制省略及硬件 GPU/Windows 归因仍未实现。本轮只是同步快照期间重绘，并未让玩家
+在复制中继续行动。继续沿用下方 0.2.5 的 GC/weak/finalizer、worker CREATE 及根图消费者反例，
+先建立冻结事务、BEGIN/ENTRY/END/ABORT 和异常/退出协议，再考虑这些更大改动。
+
+---
+
+# Faster ToME4 历史交接：0.2.5
 
 更新：2026-09-13 UTC。用户本轮要求“请你继续完成handoff内列出的待优化项”。已完成三项可集成优化和真实验证；完整快照切片、GC 重调度及新保存事务仍未实现，不能把候选反例分析称为这些功能已经交付。**本节是最新状态，后面的 0.2.4 / 0.2.3 内容只作历史索引。**
 

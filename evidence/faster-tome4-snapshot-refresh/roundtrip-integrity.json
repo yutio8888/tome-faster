@@ -1,0 +1,261 @@
+{
+  "sessions": [
+    {
+      "session": "stutter-snapshot-refresh-final-graph-01",
+      "completed": true,
+      "selected_state_checks": 1,
+      "phases": [
+        {
+          "phase": "snapshot_refresh_check",
+          "wall_ms": 323.75181397796,
+          "turn_delta": 0,
+          "actions": 0
+        },
+        {
+          "phase": "save",
+          "wall_ms": 571.61092698574,
+          "turn_delta": 0,
+          "actions": 0,
+          "screenshot_stats": {
+            "captures": 1,
+            "max_pixels": 2097152,
+            "failures": 0,
+            "buffer_bytes": 1536400,
+            "raw_bytes": 768000,
+            "png_bytes": 417674,
+            "bypasses": 0,
+            "max_buffer_bytes": 12587008
+          },
+          "snapshot_refresh_stats": {
+            "fallback": false,
+            "total_ms": 143,
+            "counted_objects": 27374,
+            "max_copy_interval_ms": 16,
+            "refresh_stopped": false,
+            "completed": true,
+            "refreshes": 8,
+            "checkpoints": 994,
+            "cleanup_failed": false,
+            "redraw_failed": false
+          }
+        }
+      ],
+      "archives": {
+        "regular_files_scanned": 27,
+        "character_archives": 22,
+        "world_archives": 1,
+        "total_archives": 23,
+        "total_entries": 21063,
+        "uncompressed_bytes_checked": 52494821,
+        "compression_methods": {
+          "8": 21063
+        },
+        "all_entries_crc_passed": true
+      },
+      "png": {
+        "files": 1,
+        "bytes": 417674,
+        "width": 640,
+        "height": 400,
+        "bit_depth": 8,
+        "color_type": 2,
+        "interlace": 0,
+        "chunk_count": 3,
+        "chunk_types": {
+          "IDAT": 1,
+          "IEND": 1,
+          "IHDR": 1
+        },
+        "all_chunk_crcs_passed": true,
+        "structure_passed": true,
+        "independent_libpng_decode_passed": true,
+        "decoded_rgb_bytes": 768000
+      }
+    },
+    {
+      "session": "stutter-snapshot-png-repeat-save-01",
+      "completed": true,
+      "selected_state_checks": 2,
+      "phases": [
+        {
+          "phase": "save",
+          "wall_ms": 538.89478099346,
+          "turn_delta": 0,
+          "actions": 0,
+          "screenshot_stats": {
+            "captures": 1,
+            "max_pixels": 2097152,
+            "failures": 0,
+            "buffer_bytes": 1536400,
+            "raw_bytes": 768000,
+            "png_bytes": 417966,
+            "bypasses": 0,
+            "max_buffer_bytes": 12587008
+          },
+          "snapshot_refresh_stats": {
+            "fallback": false,
+            "total_ms": 119,
+            "counted_objects": 27378,
+            "max_copy_interval_ms": 16,
+            "refresh_stopped": false,
+            "completed": true,
+            "refreshes": 6,
+            "checkpoints": 995,
+            "cleanup_failed": false,
+            "redraw_failed": false
+          }
+        },
+        {
+          "phase": "move",
+          "wall_ms": 226.38086500764,
+          "turn_delta": 60,
+          "actions": 6
+        },
+        {
+          "phase": "save",
+          "wall_ms": 526.95858100057,
+          "turn_delta": 0,
+          "actions": 0,
+          "screenshot_stats": {
+            "captures": 2,
+            "max_pixels": 2097152,
+            "failures": 0,
+            "buffer_bytes": 1536400,
+            "raw_bytes": 1536000,
+            "png_bytes": 841106,
+            "bypasses": 0,
+            "max_buffer_bytes": 12587008
+          },
+          "snapshot_refresh_stats": {
+            "fallback": false,
+            "total_ms": 118,
+            "counted_objects": 27378,
+            "max_copy_interval_ms": 16,
+            "refresh_stopped": false,
+            "completed": true,
+            "refreshes": 6,
+            "checkpoints": 995,
+            "cleanup_failed": false,
+            "redraw_failed": false
+          }
+        }
+      ],
+      "archives": {
+        "regular_files_scanned": 27,
+        "character_archives": 22,
+        "world_archives": 1,
+        "total_archives": 23,
+        "total_entries": 21063,
+        "uncompressed_bytes_checked": 52494943,
+        "compression_methods": {
+          "8": 21063
+        },
+        "all_entries_crc_passed": true
+      },
+      "png": {
+        "files": 1,
+        "bytes": 423140,
+        "width": 640,
+        "height": 400,
+        "bit_depth": 8,
+        "color_type": 2,
+        "interlace": 0,
+        "chunk_count": 3,
+        "chunk_types": {
+          "IDAT": 1,
+          "IEND": 1,
+          "IHDR": 1
+        },
+        "all_chunk_crcs_passed": true,
+        "structure_passed": true,
+        "independent_libpng_decode_passed": true,
+        "decoded_rgb_bytes": 768000
+      }
+    },
+    {
+      "session": "snapshot-png-full-roundtrip-v2-20260913",
+      "completed": true,
+      "selected_state_checks": 1,
+      "phases": [
+        {
+          "phase": "idle",
+          "wall_ms": 5006.2857070267,
+          "turn_delta": 0,
+          "actions": 0
+        },
+        {
+          "phase": "save",
+          "wall_ms": 508.90737000108,
+          "turn_delta": 0,
+          "actions": 0,
+          "screenshot_stats": {
+            "captures": 1,
+            "max_pixels": 2097152,
+            "failures": 0,
+            "buffer_bytes": 1536400,
+            "raw_bytes": 768000,
+            "png_bytes": 421224,
+            "bypasses": 0,
+            "max_buffer_bytes": 12587008
+          },
+          "snapshot_refresh_stats": {
+            "fallback": false,
+            "total_ms": 118,
+            "counted_objects": 27399,
+            "max_copy_interval_ms": 16,
+            "refresh_stopped": false,
+            "completed": true,
+            "refreshes": 6,
+            "checkpoints": 997,
+            "cleanup_failed": false,
+            "redraw_failed": false
+          }
+        }
+      ],
+      "archives": {
+        "regular_files_scanned": 27,
+        "character_archives": 22,
+        "world_archives": 1,
+        "total_archives": 23,
+        "total_entries": 21068,
+        "uncompressed_bytes_checked": 52498880,
+        "compression_methods": {
+          "8": 21068
+        },
+        "all_entries_crc_passed": true
+      },
+      "png": {
+        "files": 1,
+        "bytes": 421224,
+        "width": 640,
+        "height": 400,
+        "bit_depth": 8,
+        "color_type": 2,
+        "interlace": 0,
+        "chunk_count": 3,
+        "chunk_types": {
+          "IDAT": 1,
+          "IEND": 1,
+          "IHDR": 1
+        },
+        "all_chunk_crcs_passed": true,
+        "structure_passed": true,
+        "independent_libpng_decode_passed": true,
+        "decoded_rgb_bytes": 768000
+      },
+      "reload_input": {
+        "input_sha256": "74525d9d9c1f399f942df56668c0901533c111cc16ac851579a5cfb2d1982e06",
+        "input_source": "stutter-snapshot-png-repeat-save-01",
+        "input_files": 27,
+        "all_input_files_match_source": true,
+        "includes_world_teaw": true
+      },
+      "force_wait_path_exercised": true,
+      "cross_reload_selected_comparison": "Separate UID-aware comparison is required; see reload-state-validation.json"
+    }
+  ],
+  "total_output_zip_crcs": 69,
+  "total_output_png_decodes": 3,
+  "selected_state_checks": 4,
+  "limit": "Repeated saves replace output files; only the final 23 archives of that session are counted. Timing is not formal A/B."
+}

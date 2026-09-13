@@ -1,0 +1,7 @@
+PNG fixture 640x400: native=3595 bytes, level1/filter0=15073 bytes, ratio=4.193 (synthetic gradient)
+PASS screenshot: pinned RGB equality, odd widths, vertical orientation, crop edges, buffer reuse and PNG metadata
+PASS screenshot: save/user gamma distinction and platform/GL/geometry fallback
+PASS screenshot: encoding failure cleanup, dynamic override fallback and exact return arity
+PASS screenshot: allocation-driven GL changes, reentry isolation and memory errors
+PASS screenshot: Windows loaded-module resolver, every missing export, explicit ABI declarations and shared guards (Linux fixture)
+PASS screenshot: 1229 checks

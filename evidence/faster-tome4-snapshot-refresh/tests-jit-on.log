@@ -1,0 +1,46 @@
+PASS ring capacity, order, truncation (partial/full/wrapped)
+PASS original print stdout, stringification, backlog, capacity, truncation, errors, nesting
+PASS loader environment, fresh closures, returns, retries, eviction, debug bypass
+PASS pinned Particles.loaded and Shader.loaded integration
+PASS hit warning restored
+PASS pinned setScroll parity, font/width invalidation, per-instance cache, GC, eviction
+PASS all 20790 assertions; Lua 5.1 / LuaJIT 2.1.0-beta3
+PASS pinned save scheduler: last request ordering, cancellation, capture, next batch, debug and errors
+PASS 2001 queued objects: baseline 2001000 shifted elements; optimized zero head insertions
+[Faster ToME4] Save clone optimization skipped:	unknown cloneForSave; keeping existing method
+[Faster ToME4] Snapshot refresh skipped:	test environment has no native display
+[Faster ToME4] Screenshot PNG optimization skipped:	test environment has no native display
+[Faster ToME4] Unused export party cleanup skipped:	unknown saveGame; keeping existing export preparation
+PASS all 71 save/load checks; Lua 5.1 / LuaJIT 2.1.0-beta3
+PASS Map: 2000 repeated layouts; source builds 2000 -> 1, sorts and compilations unchanged
+PASS Ashes: effect-entry visits 300 -> 0; full ordered event trace identical
+PASS all 162 runtime checks; Lua 5.1 / LuaJIT 2.1.0-beta3
+PASS profile instrumentation: 22 checks
+PASS cloneForSave: 91 differential graphs, 73205 assertions; aliases, replacements, threads, metadata and guards
+PASS offline: real pinned dump entry and encoding skipped; context unchanged
+PASS online and charball: original export, payload, callbacks and consumers
+PASS eligibility, late registration and unknown override fallbacks
+PASS all 176 character export checks; Lua 5.1 / LuaJIT 2.1.0-beta3
+PASS gzip: pinned native codecs, gzip bytes, empty/short/random round trips and no core preflight
+PASS gzip: online/offline, charball, late UUID, original JSON helpers and early returns
+PASS gzip: strict native status/arity, errors, scope and dynamic compressor/environment fallback
+PASS gzip: real Player superload, independent settings and conservative startup fallback
+PASS all 262 gzip export checks; Lua 5.1 / LuaJIT 2.1.0-beta3
+PASS 799 hotkey checks: pinned display, business/style/draw parity, bounded cache, lifecycle and override fallback
+EGL mask renderer: llvmpipe (LLVM 15.0.6, 256 bits)
+PASS effect mask: 876 checks; actual pinned native GL masks/state and ordered animation calls
+GC_STEP_COUNTEREXAMPLE partial_steps=173
+PASS save followup: 562 checks; pinned C bytes/filtering, ordering/yields, callbacks, weak lifetime, errors/retry, GC/worker/root counterexamples
+PASS Cults: actual hash-verified wrapper; arena popup, callbacks, delegate identity and fallbacks
+PASS export cleanup: 38 differential save scenarios, 824 assertions; gating, online call, context, errors and guards
+native wait refresh: 65 checks passed (JIT on)
+PASS clone refresh: 91 differential graphs, 384684 assertions; traversal/checkpoint order, weak GC, finalizers, reentry and errors
+PASS snapshot refresh: 41 checks; synchronous ownership, returns, failures, reentry and graph integrity
+native snapshot refresh install: 622 checks passed (JIT on)
+PNG fixture 640x400: native=3595 bytes, level1/filter0=15073 bytes, ratio=4.193 (synthetic gradient)
+PASS screenshot: pinned RGB equality, odd widths, vertical orientation, crop edges, buffer reuse and PNG metadata
+PASS screenshot: save/user gamma distinction and platform/GL/geometry fallback
+PASS screenshot: encoding failure cleanup, dynamic override fallback and exact return arity
+PASS screenshot: allocation-driven GL changes, reentry isolation and memory errors
+PASS screenshot: Windows loaded-module resolver, every missing export, explicit ABI declarations and shared guards (Linux fixture)
+PASS screenshot: 1229 checks

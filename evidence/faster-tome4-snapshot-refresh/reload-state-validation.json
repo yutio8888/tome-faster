@@ -1,0 +1,83 @@
+{
+  "parsed_expected_sections": 29,
+  "parsed_actual_sections": 29,
+  "raw_sections_removed": 9,
+  "raw_sections_added": 9,
+  "raw_sections_changed_at_same_key": 6,
+  "actor_pairs": 27,
+  "ambiguous_actor_pairs": 0,
+  "inventory_occurrences_paired": 203,
+  "actor_pair_methods": {
+    "stable_player_class_location": 13,
+    "inventory_slot_index_uid_link": 13,
+    "single_remaining_in_stable_group": 1
+  },
+  "unique_uid_pairs": 220,
+  "projected_reference_anchor_paths": [
+    "actor[player].inventory[1][55].combat.self",
+    "actor[player].inventory[1][56].combat.self",
+    "actor[player].inventory[2][1].combat.self"
+  ],
+  "selected_entity_classes_expected": {
+    "mod.class.Object": 14,
+    "mod.class.Player": 1,
+    "mod.class.NPC": 12
+  },
+  "selected_entity_classes_actual": {
+    "mod.class.Object": 14,
+    "mod.class.Player": 1,
+    "mod.class.NPC": 12
+  },
+  "uid_mapping": {
+    "actor_unique": 27,
+    "actor_changed": 13,
+    "inventory_unique": 203,
+    "inventory_changed": 14,
+    "projected_reference_unique": 22,
+    "projected_reference_changed": 8
+  },
+  "normalization": {
+    "uid_fields_seen": 253,
+    "uid_fields_changed": 36,
+    "party_member_keys_seen": 1,
+    "party_member_keys_changed": 1,
+    "party_order_uids_seen": 1,
+    "party_order_uids_changed": 1
+  },
+  "unmapped_uid_field_count": 0,
+  "unmapped_uid_field_paths": [],
+  "remaining_difference_count": 0,
+  "remaining_difference_kinds": {},
+  "remaining_differences": [],
+  "selected_content_equal_after_uid_normalization": true,
+  "canonical_byte_roundtrip_passed": true,
+  "canonical_key_types_expected": {
+    "string": 6468,
+    "number": 918,
+    "boolean": 0
+  },
+  "canonical_key_types_actual": {
+    "string": 6468,
+    "number": 918,
+    "boolean": 0
+  },
+  "all_uid_relationships_bijective": true,
+  "individual_pairing_uses_multiset_only": false,
+  "comparison_passed": true,
+  "session": "snapshot-png-full-roundtrip-v2-20260913",
+  "process": {
+    "completed": true,
+    "exit_code": 0
+  },
+  "count_as_successful_reload_session": true,
+  "expected_capture_matches_source_bytes": true,
+  "scope": [
+    "Entity.loaded assigns a fresh next_uid. Raw actor:N section names are not persistent identities; raw section inequality is expected after reload.",
+    "The capture calls every selected entity actor when it has a talents table. Class counts distinguish Player, NPC and Object; inventory count is item occurrences, not distinct actors.",
+    "Pair by player/class/location, then inventory actor+slot+index UID links, then a sole remaining member of an otherwise stable group. Never pair by equal UID alone.",
+    "Only uid/player_uid fields, actor section identities, party member UID keys and party order UID values are normalized. Other numeric values and all other selected content are compared exactly.",
+    "Opaque {uid,class} references outside those roots are anchored by the already-paired entity/inventory path and equal class. Bidirectional UID constraints preserve aliases and distinct references; their hidden entity contents are outside this projection.",
+    "Truly indistinguishable selected entities can support only a multiset statement. This checker rejects unresolved identity groups rather than claiming individual matches; these captures require no multiset-only pairing.",
+    "A successful capture comparison alone does not make a deliberately stopped probe a successful reload session. Only --require-complete plus completed=true/exit_code=0 allows that session flag."
+  ]
+}

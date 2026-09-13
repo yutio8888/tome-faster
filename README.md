@@ -1,10 +1,16 @@
 # Faster ToME4 — rendering and save optimizations
 
-Version **0.2.5**, modified 13 September 2026. This fork fixes defects in
+Version **0.2.6**, modified 13 September 2026. This fork fixes defects in
 [Yutio888's Faster ToME4 0.0.1](https://te4.org/games/addons/tome/faster) and adds
 conservative save/load and runtime optimizations for **ToME 1.7.6**.
 
-This release adds bounded hotkey text caching, ordered effect-mask geometry
+This release refreshes a native wait screen at checkpoints during synchronous
+snapshot copying and encodes save screenshots as lossless PNG with less
+compression work. Input still waits for copying to return, and GC policy and
+the three full GC barriers are unchanged. See the
+[0.2.6 design, compatibility limits and measured results](docs/snapshot-refresh.md).
+
+Version 0.2.5 adds bounded hotkey text caching, ordered effect-mask geometry
 batching, and shared serializer callbacks. The original dynamic UI checks, effect
 shader animation, save format and three full GC barriers are retained.
 See the [0.2.5 design and results](docs/render-save.md).
@@ -24,18 +30,25 @@ Equivalent snapshot cloning and skipping offline character sheets remain include
 their earlier results are in the [0.2.2 report](docs/save-stutter.md). The finite
 `notice_enemy` / `dreamhammer` lifetimes and opt-in timer remain included.
 Further measured hotspots and addon candidates are described in the
-[follow-up plan](docs/followup-plan.md). Snapshot slicing and GC rescheduling
-remain unimplemented; the new report records measured limits and counterexamples.
+[follow-up plan](docs/followup-plan.md). Asynchronous snapshot slicing and GC
+rescheduling remain unimplemented; checkpoint drawing keeps the copy synchronous.
 
 中文说明：[性能问题、修复方案、测量指标与文件清单](docs/faster-tome4-performance-report.md)。
 Published evidence: [profile results](evidence/faster-tome4-profile/README.md).
 Package build instructions and version history: [releases](releases/README.md).
 Full-game save A/B and complete loaded-graph equivalence have now been tested on
-one supplied save. GPU/Steam testing and automatic old-save reference migration
-remain outside this release. Player archives and generated save graphs stay local.
+one supplied save. Hardware GPU, Steam callback and Windows runtime testing,
+and automatic old-save reference migration remain outside this release.
+Player archives and generated save graphs stay local.
 
 ## Changes
 
+- Refresh the native wait screen and activity bar at snapshot checkpoints while
+  retaining synchronous copying. Input, quit handling and game ticks wait for the
+  original call to return. Existing GC pauses can still interrupt drawing.
+- Preserve the original save screenshot redraw, crop and decoded RGB8 pixels,
+  using a standard PNG stream with level-1 compression. Files can be larger;
+  the public capture API and user-screenshot gamma path remain intact.
 - Cache only stable hotkey text rasterization, with 512-entry / 4 MiB global
   limits and font, display and interface invalidation. Dynamic UI logic runs normally.
 - Batch ordered effect-mask quads using the built-in vertex API. Rebuild the public
@@ -68,7 +81,7 @@ remain outside this release. Player archives and generated save graphs stay loca
 - Remove an unused effect scan in Ashes' Devouring Flames callback, when the
   inspected DLC definition is present.
 
-With diagnostics disabled, the save format, save-version tokens, explicit manual saves, garbage collector,
+With diagnostics disabled, the save format, save-version tokens, explicit manual saves, GC policy,
 scores, Steam cloud handling, and actual archive writer retain engine behavior.
 This addon targets the `tome` module; it does **not** accelerate the initial boot
 module's load-game menu. See [known fixes](docs/known-fixes.md) and
@@ -92,6 +105,14 @@ compatibility guards, not cryptographic verification of installed game code.
 Later addons can still replace the methods. The supplied save's nine-addon
 combination was tested; arbitrary additional addons remain unverified.
 
+Snapshot refresh falls back when Steam or webview services are present, a debug
+hook or existing wait is active, or required native bindings change. It requires
+the recognized `save_clone` path. Screenshot encoding requires supported public
+GL/SDL APIs on Linux or Windows x86/x64, a desktop GL 3+ context and safe pixel-pack
+state; unsupported cases use the original capture. The Windows resolver uses only
+already-loaded `SDL2.dll` and `opengl32.dll`. Its Linux fixture checks have passed,
+but Windows runtime correctness and performance have not been measured.
+
 For an A/B run, these optional engine configuration values are read at addon
 startup (restart after changing them):
 
@@ -108,6 +129,8 @@ config.settings.faster_tome = {
     hotkey_text_cache = false,
     effect_mask_batch = false,
     save_callbacks = false,
+    snapshot_refresh = false,
+    screenshot_png = false,
 }
 ```
 
@@ -116,13 +139,18 @@ values, not new menu controls.
 
 ## Verify and package
 
-Requires LuaJIT/Lua 5.1, a C compiler, Lua 5.1-compatible development headers,
-zlib, OpenGL and EGL development files, `pkg-config`, and a local engine Git clone containing commit
+Requires LuaJIT with FFI, a C compiler, Lua 5.1-compatible development headers,
+zlib, libpng, SDL2, OpenGL and EGL development files, `pkg-config`, and a local
+engine Git clone containing commit
 `624a67329fe2ad440c5b344785a9c73fcf22ae63`. Tests read that commit with `git show`;
 they do not use or change player saves. Gzip fixtures compile and execute the
 two pinned native compressors in a temporary directory. Effect-mask fixtures execute
 the pinned GL bindings in a surfaceless EGL context (Mesa software rendering);
 serializer fixtures execute the pinned C writer with an in-memory ZIP sink.
+Screenshot fixtures execute the pinned native capture and lzlib code and compare
+independently decoded libpng pixels. Wait fixtures compile the pinned redraw,
+wait and callback paths with controlled SDL/GL endpoints. These are test
+dependencies; the addon contains Lua code and uses the engine's existing libraries.
 Steam and engine-loading filesystem dependencies remain stubbed.
 
 ```bash
@@ -140,6 +168,14 @@ algorithmic work reduction, including differential clone graphs and character
 export compatibility. Full-game save measurements and earlier native/static
 profiles are recorded in [VALIDATION.json](VALIDATION.json); hardware GPU and
 Steam-cloud timings remain unmeasured.
+
+The 0.2.6 regression passed 384,684 checkpoint clone assertions over 91 graphs,
+41 snapshot runner checks, 65 native wait checks, 622 native snapshot installation
+checks and 1,229 screenshot checks. All five new suites also passed with JIT off.
+The final Linux same-frame session compared 12 PNG pairs containing 9,216,000
+decoded RGB bytes, all equal. Formal save timing and screenshot file-size results
+are in the [0.2.6 report](docs/snapshot-refresh.md).
+
 Omitting the DLC path skips the Ashes and Cults fixtures explicitly. The supplied DLC tree
 uses `<component>/tome-<component>/`; fixture hashes are checked before execution.
 For optional synthetic timing, run `tests/bench_runtime.lua` through the same

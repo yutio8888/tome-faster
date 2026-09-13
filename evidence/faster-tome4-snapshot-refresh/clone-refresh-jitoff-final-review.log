@@ -1,0 +1,6 @@
+Pinned engine: 624a67329fe2ad440c5b344785a9c73fcf22ae63
+Command: luajit -joff tests/test_clone_refresh.lua . /workspace/t-engine4/tmp/worktrees/yron-profile-20260912
+c7d05a159ebf4b1cd13cf2b4fb689eb62e828f8f5ca60eca59d1e2ae483038e8  overload/engine/FasterCloneRefresh.lua
+8602d7d98a0409bf0730e31908dbae19c7498ff0a20707af4234c3675f65b20e  tests/test_clone_refresh.lua
+PASS clone refresh: 91 differential graphs, 385724 assertions; traversal/checkpoint order, weak GC, finalizers, reentry and errors
+Exit status: 0

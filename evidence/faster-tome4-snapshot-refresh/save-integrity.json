@@ -1,0 +1,1122 @@
+{
+  "schema_version": 1,
+  "scope": "Final 18-session snapshot/PNG/combined formal A/B saves",
+  "privacy": "Metadata only; no save contents, archive member names, local home paths, PNG payloads or pixels retained.",
+  "methods": {
+    "zip_detection": "zipfile.is_zipfile on every regular file beneath each session save directory",
+    "zip_crc": "Read every ZipInfo member to EOF with Python zipfile, including duplicate names",
+    "png": "Validate signature, chunk framing/order, every chunk CRC, RGB8 IHDR, and independent libpng decode",
+    "libpng_decode": "Compile public diagnostic compare-png.c; decode each image twice and compare it with itself",
+    "decoder_source_sha256": "c9624e2c0f768373e8be56a6ea308ff5d647516a6c096fd386df15140d0e8786",
+    "selected_state": "Require one successful FasterSaveState assertion, unchanged turn, and later session completion"
+  },
+  "production_sha256": {
+    "init.lua": "8c287fbe76ce713ff2a56b89fe1af2308d909f7d88803c0a16f65ab7d1a2e086",
+    "overload/engine/FasterClone.lua": "e9a897b8f63a790bfb42e33371b377a21039578a3cf07e8341de7527b09bf18c",
+    "overload/engine/FasterCloneRefresh.lua": "c7d05a159ebf4b1cd13cf2b4fb689eb62e828f8f5ca60eca59d1e2ae483038e8",
+    "overload/engine/FasterSnapshotRefresh.lua": "18670b6dbe5cf81f3fadd7f44df690354b7c25aca32dc2a38603b3fbdd59e783",
+    "overload/engine/FasterScreenshot.lua": "8e75c9c89d84ba9e502dc3f3b29f82841a0659f60d616c3e5044526115b8737d",
+    "superload/mod/class/Game.lua": "191fe266d58df42bf30c2cc1da25bc0d104394dd917c1e629d30f031ea5a96eb"
+  },
+  "totals": {
+    "sessions": 18,
+    "completed_processes": 18,
+    "selected_state_assertions_passed": 18,
+    "character_archives": 396,
+    "world_archives": 18,
+    "all_archives": 414,
+    "all_entries": 379134,
+    "uncompressed_bytes_checked": 944906778,
+    "png_files": 18,
+    "png_chunks": 525,
+    "independent_libpng_decodes_passed": 18,
+    "all_checks_passed": true
+  },
+  "sessions": [
+    {
+      "session": "stutter-save-refresh-v1-snapshot-before-pair1-01",
+      "scenario": "snapshot",
+      "arm": "before",
+      "pair": 1,
+      "passed": true,
+      "checks": {
+        "process_completed": true,
+        "process_exit_zero": true,
+        "session_complete_marker": true,
+        "complete_event": true,
+        "save_turn_unchanged": true,
+        "selected_state_equal": true,
+        "no_lua_error_reports": true,
+        "driver_hash_matches": true,
+        "production_manifest_consistent": true,
+        "production_matches_current_addon": true,
+        "snapshot_setting_matches_arm": true,
+        "png_setting_matches_arm": true
+      },
+      "selected_state": {
+        "equal": true,
+        "actors": 27,
+        "inventory_items": 203,
+        "changed_sections": 0,
+        "added_sections": 0,
+        "removed_sections": 0
+      },
+      "archives": {
+        "regular_files_scanned": 27,
+        "character_archives": 22,
+        "world_archives": 1,
+        "total_archives": 23,
+        "total_entries": 21063,
+        "uncompressed_bytes_checked": 52494821,
+        "compression_methods": {
+          "8": 21063
+        },
+        "all_entries_crc_passed": true
+      },
+      "png": {
+        "files": 1,
+        "bytes": 326613,
+        "width": 640,
+        "height": 400,
+        "bit_depth": 8,
+        "color_type": 2,
+        "interlace": 0,
+        "chunk_count": 42,
+        "chunk_types": {
+          "IDAT": 40,
+          "IEND": 1,
+          "IHDR": 1
+        },
+        "all_chunk_crcs_passed": true,
+        "structure_passed": true,
+        "independent_libpng_decode_passed": true,
+        "decoded_rgb_bytes": 768000
+      }
+    },
+    {
+      "session": "stutter-save-refresh-v1-snapshot-after-pair1-01",
+      "scenario": "snapshot",
+      "arm": "after",
+      "pair": 1,
+      "passed": true,
+      "checks": {
+        "process_completed": true,
+        "process_exit_zero": true,
+        "session_complete_marker": true,
+        "complete_event": true,
+        "save_turn_unchanged": true,
+        "selected_state_equal": true,
+        "no_lua_error_reports": true,
+        "driver_hash_matches": true,
+        "production_manifest_consistent": true,
+        "production_matches_current_addon": true,
+        "snapshot_setting_matches_arm": true,
+        "png_setting_matches_arm": true
+      },
+      "selected_state": {
+        "equal": true,
+        "actors": 27,
+        "inventory_items": 203,
+        "changed_sections": 0,
+        "added_sections": 0,
+        "removed_sections": 0
+      },
+      "archives": {
+        "regular_files_scanned": 27,
+        "character_archives": 22,
+        "world_archives": 1,
+        "total_archives": 23,
+        "total_entries": 21063,
+        "uncompressed_bytes_checked": 52494821,
+        "compression_methods": {
+          "8": 21063
+        },
+        "all_entries_crc_passed": true
+      },
+      "png": {
+        "files": 1,
+        "bytes": 325591,
+        "width": 640,
+        "height": 400,
+        "bit_depth": 8,
+        "color_type": 2,
+        "interlace": 0,
+        "chunk_count": 42,
+        "chunk_types": {
+          "IDAT": 40,
+          "IEND": 1,
+          "IHDR": 1
+        },
+        "all_chunk_crcs_passed": true,
+        "structure_passed": true,
+        "independent_libpng_decode_passed": true,
+        "decoded_rgb_bytes": 768000
+      }
+    },
+    {
+      "session": "stutter-save-refresh-v1-snapshot-before-pair2-01",
+      "scenario": "snapshot",
+      "arm": "before",
+      "pair": 2,
+      "passed": true,
+      "checks": {
+        "process_completed": true,
+        "process_exit_zero": true,
+        "session_complete_marker": true,
+        "complete_event": true,
+        "save_turn_unchanged": true,
+        "selected_state_equal": true,
+        "no_lua_error_reports": true,
+        "driver_hash_matches": true,
+        "production_manifest_consistent": true,
+        "production_matches_current_addon": true,
+        "snapshot_setting_matches_arm": true,
+        "png_setting_matches_arm": true
+      },
+      "selected_state": {
+        "equal": true,
+        "actors": 27,
+        "inventory_items": 203,
+        "changed_sections": 0,
+        "added_sections": 0,
+        "removed_sections": 0
+      },
+      "archives": {
+        "regular_files_scanned": 27,
+        "character_archives": 22,
+        "world_archives": 1,
+        "total_archives": 23,
+        "total_entries": 21063,
+        "uncompressed_bytes_checked": 52494821,
+        "compression_methods": {
+          "8": 21063
+        },
+        "all_entries_crc_passed": true
+      },
+      "png": {
+        "files": 1,
+        "bytes": 322110,
+        "width": 640,
+        "height": 400,
+        "bit_depth": 8,
+        "color_type": 2,
+        "interlace": 0,
+        "chunk_count": 42,
+        "chunk_types": {
+          "IDAT": 40,
+          "IEND": 1,
+          "IHDR": 1
+        },
+        "all_chunk_crcs_passed": true,
+        "structure_passed": true,
+        "independent_libpng_decode_passed": true,
+        "decoded_rgb_bytes": 768000
+      }
+    },
+    {
+      "session": "stutter-save-refresh-v1-snapshot-after-pair2-01",
+      "scenario": "snapshot",
+      "arm": "after",
+      "pair": 2,
+      "passed": true,
+      "checks": {
+        "process_completed": true,
+        "process_exit_zero": true,
+        "session_complete_marker": true,
+        "complete_event": true,
+        "save_turn_unchanged": true,
+        "selected_state_equal": true,
+        "no_lua_error_reports": true,
+        "driver_hash_matches": true,
+        "production_manifest_consistent": true,
+        "production_matches_current_addon": true,
+        "snapshot_setting_matches_arm": true,
+        "png_setting_matches_arm": true
+      },
+      "selected_state": {
+        "equal": true,
+        "actors": 27,
+        "inventory_items": 203,
+        "changed_sections": 0,
+        "added_sections": 0,
+        "removed_sections": 0
+      },
+      "archives": {
+        "regular_files_scanned": 27,
+        "character_archives": 22,
+        "world_archives": 1,
+        "total_archives": 23,
+        "total_entries": 21063,
+        "uncompressed_bytes_checked": 52494821,
+        "compression_methods": {
+          "8": 21063
+        },
+        "all_entries_crc_passed": true
+      },
+      "png": {
+        "files": 1,
+        "bytes": 325442,
+        "width": 640,
+        "height": 400,
+        "bit_depth": 8,
+        "color_type": 2,
+        "interlace": 0,
+        "chunk_count": 42,
+        "chunk_types": {
+          "IDAT": 40,
+          "IEND": 1,
+          "IHDR": 1
+        },
+        "all_chunk_crcs_passed": true,
+        "structure_passed": true,
+        "independent_libpng_decode_passed": true,
+        "decoded_rgb_bytes": 768000
+      }
+    },
+    {
+      "session": "stutter-save-refresh-v1-snapshot-before-pair3-01",
+      "scenario": "snapshot",
+      "arm": "before",
+      "pair": 3,
+      "passed": true,
+      "checks": {
+        "process_completed": true,
+        "process_exit_zero": true,
+        "session_complete_marker": true,
+        "complete_event": true,
+        "save_turn_unchanged": true,
+        "selected_state_equal": true,
+        "no_lua_error_reports": true,
+        "driver_hash_matches": true,
+        "production_manifest_consistent": true,
+        "production_matches_current_addon": true,
+        "snapshot_setting_matches_arm": true,
+        "png_setting_matches_arm": true
+      },
+      "selected_state": {
+        "equal": true,
+        "actors": 27,
+        "inventory_items": 203,
+        "changed_sections": 0,
+        "added_sections": 0,
+        "removed_sections": 0
+      },
+      "archives": {
+        "regular_files_scanned": 27,
+        "character_archives": 22,
+        "world_archives": 1,
+        "total_archives": 23,
+        "total_entries": 21063,
+        "uncompressed_bytes_checked": 52494821,
+        "compression_methods": {
+          "8": 21063
+        },
+        "all_entries_crc_passed": true
+      },
+      "png": {
+        "files": 1,
+        "bytes": 322226,
+        "width": 640,
+        "height": 400,
+        "bit_depth": 8,
+        "color_type": 2,
+        "interlace": 0,
+        "chunk_count": 42,
+        "chunk_types": {
+          "IDAT": 40,
+          "IEND": 1,
+          "IHDR": 1
+        },
+        "all_chunk_crcs_passed": true,
+        "structure_passed": true,
+        "independent_libpng_decode_passed": true,
+        "decoded_rgb_bytes": 768000
+      }
+    },
+    {
+      "session": "stutter-save-refresh-v1-snapshot-after-pair3-01",
+      "scenario": "snapshot",
+      "arm": "after",
+      "pair": 3,
+      "passed": true,
+      "checks": {
+        "process_completed": true,
+        "process_exit_zero": true,
+        "session_complete_marker": true,
+        "complete_event": true,
+        "save_turn_unchanged": true,
+        "selected_state_equal": true,
+        "no_lua_error_reports": true,
+        "driver_hash_matches": true,
+        "production_manifest_consistent": true,
+        "production_matches_current_addon": true,
+        "snapshot_setting_matches_arm": true,
+        "png_setting_matches_arm": true
+      },
+      "selected_state": {
+        "equal": true,
+        "actors": 27,
+        "inventory_items": 203,
+        "changed_sections": 0,
+        "added_sections": 0,
+        "removed_sections": 0
+      },
+      "archives": {
+        "regular_files_scanned": 27,
+        "character_archives": 22,
+        "world_archives": 1,
+        "total_archives": 23,
+        "total_entries": 21063,
+        "uncompressed_bytes_checked": 52494821,
+        "compression_methods": {
+          "8": 21063
+        },
+        "all_entries_crc_passed": true
+      },
+      "png": {
+        "files": 1,
+        "bytes": 321912,
+        "width": 640,
+        "height": 400,
+        "bit_depth": 8,
+        "color_type": 2,
+        "interlace": 0,
+        "chunk_count": 42,
+        "chunk_types": {
+          "IDAT": 40,
+          "IEND": 1,
+          "IHDR": 1
+        },
+        "all_chunk_crcs_passed": true,
+        "structure_passed": true,
+        "independent_libpng_decode_passed": true,
+        "decoded_rgb_bytes": 768000
+      }
+    },
+    {
+      "session": "stutter-save-refresh-v1-png-before-pair1-01",
+      "scenario": "png",
+      "arm": "before",
+      "pair": 1,
+      "passed": true,
+      "checks": {
+        "process_completed": true,
+        "process_exit_zero": true,
+        "session_complete_marker": true,
+        "complete_event": true,
+        "save_turn_unchanged": true,
+        "selected_state_equal": true,
+        "no_lua_error_reports": true,
+        "driver_hash_matches": true,
+        "production_manifest_consistent": true,
+        "production_matches_current_addon": true,
+        "snapshot_setting_matches_arm": true,
+        "png_setting_matches_arm": true
+      },
+      "selected_state": {
+        "equal": true,
+        "actors": 27,
+        "inventory_items": 203,
+        "changed_sections": 0,
+        "added_sections": 0,
+        "removed_sections": 0
+      },
+      "archives": {
+        "regular_files_scanned": 27,
+        "character_archives": 22,
+        "world_archives": 1,
+        "total_archives": 23,
+        "total_entries": 21063,
+        "uncompressed_bytes_checked": 52494821,
+        "compression_methods": {
+          "8": 21063
+        },
+        "all_entries_crc_passed": true
+      },
+      "png": {
+        "files": 1,
+        "bytes": 328256,
+        "width": 640,
+        "height": 400,
+        "bit_depth": 8,
+        "color_type": 2,
+        "interlace": 0,
+        "chunk_count": 43,
+        "chunk_types": {
+          "IDAT": 41,
+          "IEND": 1,
+          "IHDR": 1
+        },
+        "all_chunk_crcs_passed": true,
+        "structure_passed": true,
+        "independent_libpng_decode_passed": true,
+        "decoded_rgb_bytes": 768000
+      }
+    },
+    {
+      "session": "stutter-save-refresh-v1-png-after-pair1-01",
+      "scenario": "png",
+      "arm": "after",
+      "pair": 1,
+      "passed": true,
+      "checks": {
+        "process_completed": true,
+        "process_exit_zero": true,
+        "session_complete_marker": true,
+        "complete_event": true,
+        "save_turn_unchanged": true,
+        "selected_state_equal": true,
+        "no_lua_error_reports": true,
+        "driver_hash_matches": true,
+        "production_manifest_consistent": true,
+        "production_matches_current_addon": true,
+        "snapshot_setting_matches_arm": true,
+        "png_setting_matches_arm": true
+      },
+      "selected_state": {
+        "equal": true,
+        "actors": 27,
+        "inventory_items": 203,
+        "changed_sections": 0,
+        "added_sections": 0,
+        "removed_sections": 0
+      },
+      "archives": {
+        "regular_files_scanned": 27,
+        "character_archives": 22,
+        "world_archives": 1,
+        "total_archives": 23,
+        "total_entries": 21063,
+        "uncompressed_bytes_checked": 52494821,
+        "compression_methods": {
+          "8": 21063
+        },
+        "all_entries_crc_passed": true
+      },
+      "png": {
+        "files": 1,
+        "bytes": 413528,
+        "width": 640,
+        "height": 400,
+        "bit_depth": 8,
+        "color_type": 2,
+        "interlace": 0,
+        "chunk_count": 3,
+        "chunk_types": {
+          "IDAT": 1,
+          "IEND": 1,
+          "IHDR": 1
+        },
+        "all_chunk_crcs_passed": true,
+        "structure_passed": true,
+        "independent_libpng_decode_passed": true,
+        "decoded_rgb_bytes": 768000
+      }
+    },
+    {
+      "session": "stutter-save-refresh-v1-png-before-pair2-01",
+      "scenario": "png",
+      "arm": "before",
+      "pair": 2,
+      "passed": true,
+      "checks": {
+        "process_completed": true,
+        "process_exit_zero": true,
+        "session_complete_marker": true,
+        "complete_event": true,
+        "save_turn_unchanged": true,
+        "selected_state_equal": true,
+        "no_lua_error_reports": true,
+        "driver_hash_matches": true,
+        "production_manifest_consistent": true,
+        "production_matches_current_addon": true,
+        "snapshot_setting_matches_arm": true,
+        "png_setting_matches_arm": true
+      },
+      "selected_state": {
+        "equal": true,
+        "actors": 27,
+        "inventory_items": 203,
+        "changed_sections": 0,
+        "added_sections": 0,
+        "removed_sections": 0
+      },
+      "archives": {
+        "regular_files_scanned": 27,
+        "character_archives": 22,
+        "world_archives": 1,
+        "total_archives": 23,
+        "total_entries": 21063,
+        "uncompressed_bytes_checked": 52494821,
+        "compression_methods": {
+          "8": 21063
+        },
+        "all_entries_crc_passed": true
+      },
+      "png": {
+        "files": 1,
+        "bytes": 326894,
+        "width": 640,
+        "height": 400,
+        "bit_depth": 8,
+        "color_type": 2,
+        "interlace": 0,
+        "chunk_count": 42,
+        "chunk_types": {
+          "IDAT": 40,
+          "IEND": 1,
+          "IHDR": 1
+        },
+        "all_chunk_crcs_passed": true,
+        "structure_passed": true,
+        "independent_libpng_decode_passed": true,
+        "decoded_rgb_bytes": 768000
+      }
+    },
+    {
+      "session": "stutter-save-refresh-v1-png-after-pair2-01",
+      "scenario": "png",
+      "arm": "after",
+      "pair": 2,
+      "passed": true,
+      "checks": {
+        "process_completed": true,
+        "process_exit_zero": true,
+        "session_complete_marker": true,
+        "complete_event": true,
+        "save_turn_unchanged": true,
+        "selected_state_equal": true,
+        "no_lua_error_reports": true,
+        "driver_hash_matches": true,
+        "production_manifest_consistent": true,
+        "production_matches_current_addon": true,
+        "snapshot_setting_matches_arm": true,
+        "png_setting_matches_arm": true
+      },
+      "selected_state": {
+        "equal": true,
+        "actors": 27,
+        "inventory_items": 203,
+        "changed_sections": 0,
+        "added_sections": 0,
+        "removed_sections": 0
+      },
+      "archives": {
+        "regular_files_scanned": 27,
+        "character_archives": 22,
+        "world_archives": 1,
+        "total_archives": 23,
+        "total_entries": 21063,
+        "uncompressed_bytes_checked": 52494821,
+        "compression_methods": {
+          "8": 21063
+        },
+        "all_entries_crc_passed": true
+      },
+      "png": {
+        "files": 1,
+        "bytes": 415682,
+        "width": 640,
+        "height": 400,
+        "bit_depth": 8,
+        "color_type": 2,
+        "interlace": 0,
+        "chunk_count": 3,
+        "chunk_types": {
+          "IDAT": 1,
+          "IEND": 1,
+          "IHDR": 1
+        },
+        "all_chunk_crcs_passed": true,
+        "structure_passed": true,
+        "independent_libpng_decode_passed": true,
+        "decoded_rgb_bytes": 768000
+      }
+    },
+    {
+      "session": "stutter-save-refresh-v1-png-before-pair3-01",
+      "scenario": "png",
+      "arm": "before",
+      "pair": 3,
+      "passed": true,
+      "checks": {
+        "process_completed": true,
+        "process_exit_zero": true,
+        "session_complete_marker": true,
+        "complete_event": true,
+        "save_turn_unchanged": true,
+        "selected_state_equal": true,
+        "no_lua_error_reports": true,
+        "driver_hash_matches": true,
+        "production_manifest_consistent": true,
+        "production_matches_current_addon": true,
+        "snapshot_setting_matches_arm": true,
+        "png_setting_matches_arm": true
+      },
+      "selected_state": {
+        "equal": true,
+        "actors": 27,
+        "inventory_items": 203,
+        "changed_sections": 0,
+        "added_sections": 0,
+        "removed_sections": 0
+      },
+      "archives": {
+        "regular_files_scanned": 27,
+        "character_archives": 22,
+        "world_archives": 1,
+        "total_archives": 23,
+        "total_entries": 21063,
+        "uncompressed_bytes_checked": 52494821,
+        "compression_methods": {
+          "8": 21063
+        },
+        "all_entries_crc_passed": true
+      },
+      "png": {
+        "files": 1,
+        "bytes": 321565,
+        "width": 640,
+        "height": 400,
+        "bit_depth": 8,
+        "color_type": 2,
+        "interlace": 0,
+        "chunk_count": 42,
+        "chunk_types": {
+          "IDAT": 40,
+          "IEND": 1,
+          "IHDR": 1
+        },
+        "all_chunk_crcs_passed": true,
+        "structure_passed": true,
+        "independent_libpng_decode_passed": true,
+        "decoded_rgb_bytes": 768000
+      }
+    },
+    {
+      "session": "stutter-save-refresh-v1-png-after-pair3-01",
+      "scenario": "png",
+      "arm": "after",
+      "pair": 3,
+      "passed": true,
+      "checks": {
+        "process_completed": true,
+        "process_exit_zero": true,
+        "session_complete_marker": true,
+        "complete_event": true,
+        "save_turn_unchanged": true,
+        "selected_state_equal": true,
+        "no_lua_error_reports": true,
+        "driver_hash_matches": true,
+        "production_manifest_consistent": true,
+        "production_matches_current_addon": true,
+        "snapshot_setting_matches_arm": true,
+        "png_setting_matches_arm": true
+      },
+      "selected_state": {
+        "equal": true,
+        "actors": 27,
+        "inventory_items": 203,
+        "changed_sections": 0,
+        "added_sections": 0,
+        "removed_sections": 0
+      },
+      "archives": {
+        "regular_files_scanned": 27,
+        "character_archives": 22,
+        "world_archives": 1,
+        "total_archives": 23,
+        "total_entries": 21063,
+        "uncompressed_bytes_checked": 52494821,
+        "compression_methods": {
+          "8": 21063
+        },
+        "all_entries_crc_passed": true
+      },
+      "png": {
+        "files": 1,
+        "bytes": 415443,
+        "width": 640,
+        "height": 400,
+        "bit_depth": 8,
+        "color_type": 2,
+        "interlace": 0,
+        "chunk_count": 3,
+        "chunk_types": {
+          "IDAT": 1,
+          "IEND": 1,
+          "IHDR": 1
+        },
+        "all_chunk_crcs_passed": true,
+        "structure_passed": true,
+        "independent_libpng_decode_passed": true,
+        "decoded_rgb_bytes": 768000
+      }
+    },
+    {
+      "session": "stutter-save-refresh-v1-combined-before-pair1-01",
+      "scenario": "combined",
+      "arm": "before",
+      "pair": 1,
+      "passed": true,
+      "checks": {
+        "process_completed": true,
+        "process_exit_zero": true,
+        "session_complete_marker": true,
+        "complete_event": true,
+        "save_turn_unchanged": true,
+        "selected_state_equal": true,
+        "no_lua_error_reports": true,
+        "driver_hash_matches": true,
+        "production_manifest_consistent": true,
+        "production_matches_current_addon": true,
+        "snapshot_setting_matches_arm": true,
+        "png_setting_matches_arm": true
+      },
+      "selected_state": {
+        "equal": true,
+        "actors": 27,
+        "inventory_items": 203,
+        "changed_sections": 0,
+        "added_sections": 0,
+        "removed_sections": 0
+      },
+      "archives": {
+        "regular_files_scanned": 27,
+        "character_archives": 22,
+        "world_archives": 1,
+        "total_archives": 23,
+        "total_entries": 21063,
+        "uncompressed_bytes_checked": 52494821,
+        "compression_methods": {
+          "8": 21063
+        },
+        "all_entries_crc_passed": true
+      },
+      "png": {
+        "files": 1,
+        "bytes": 322420,
+        "width": 640,
+        "height": 400,
+        "bit_depth": 8,
+        "color_type": 2,
+        "interlace": 0,
+        "chunk_count": 42,
+        "chunk_types": {
+          "IDAT": 40,
+          "IEND": 1,
+          "IHDR": 1
+        },
+        "all_chunk_crcs_passed": true,
+        "structure_passed": true,
+        "independent_libpng_decode_passed": true,
+        "decoded_rgb_bytes": 768000
+      }
+    },
+    {
+      "session": "stutter-save-refresh-v1-combined-after-pair1-01",
+      "scenario": "combined",
+      "arm": "after",
+      "pair": 1,
+      "passed": true,
+      "checks": {
+        "process_completed": true,
+        "process_exit_zero": true,
+        "session_complete_marker": true,
+        "complete_event": true,
+        "save_turn_unchanged": true,
+        "selected_state_equal": true,
+        "no_lua_error_reports": true,
+        "driver_hash_matches": true,
+        "production_manifest_consistent": true,
+        "production_matches_current_addon": true,
+        "snapshot_setting_matches_arm": true,
+        "png_setting_matches_arm": true
+      },
+      "selected_state": {
+        "equal": true,
+        "actors": 27,
+        "inventory_items": 203,
+        "changed_sections": 0,
+        "added_sections": 0,
+        "removed_sections": 0
+      },
+      "archives": {
+        "regular_files_scanned": 27,
+        "character_archives": 22,
+        "world_archives": 1,
+        "total_archives": 23,
+        "total_entries": 21063,
+        "uncompressed_bytes_checked": 52494821,
+        "compression_methods": {
+          "8": 21063
+        },
+        "all_entries_crc_passed": true
+      },
+      "png": {
+        "files": 1,
+        "bytes": 416252,
+        "width": 640,
+        "height": 400,
+        "bit_depth": 8,
+        "color_type": 2,
+        "interlace": 0,
+        "chunk_count": 3,
+        "chunk_types": {
+          "IDAT": 1,
+          "IEND": 1,
+          "IHDR": 1
+        },
+        "all_chunk_crcs_passed": true,
+        "structure_passed": true,
+        "independent_libpng_decode_passed": true,
+        "decoded_rgb_bytes": 768000
+      }
+    },
+    {
+      "session": "stutter-save-refresh-v1-combined-before-pair2-01",
+      "scenario": "combined",
+      "arm": "before",
+      "pair": 2,
+      "passed": true,
+      "checks": {
+        "process_completed": true,
+        "process_exit_zero": true,
+        "session_complete_marker": true,
+        "complete_event": true,
+        "save_turn_unchanged": true,
+        "selected_state_equal": true,
+        "no_lua_error_reports": true,
+        "driver_hash_matches": true,
+        "production_manifest_consistent": true,
+        "production_matches_current_addon": true,
+        "snapshot_setting_matches_arm": true,
+        "png_setting_matches_arm": true
+      },
+      "selected_state": {
+        "equal": true,
+        "actors": 27,
+        "inventory_items": 203,
+        "changed_sections": 0,
+        "added_sections": 0,
+        "removed_sections": 0
+      },
+      "archives": {
+        "regular_files_scanned": 27,
+        "character_archives": 22,
+        "world_archives": 1,
+        "total_archives": 23,
+        "total_entries": 21063,
+        "uncompressed_bytes_checked": 52494821,
+        "compression_methods": {
+          "8": 21063
+        },
+        "all_entries_crc_passed": true
+      },
+      "png": {
+        "files": 1,
+        "bytes": 333315,
+        "width": 640,
+        "height": 400,
+        "bit_depth": 8,
+        "color_type": 2,
+        "interlace": 0,
+        "chunk_count": 43,
+        "chunk_types": {
+          "IDAT": 41,
+          "IEND": 1,
+          "IHDR": 1
+        },
+        "all_chunk_crcs_passed": true,
+        "structure_passed": true,
+        "independent_libpng_decode_passed": true,
+        "decoded_rgb_bytes": 768000
+      }
+    },
+    {
+      "session": "stutter-save-refresh-v1-combined-after-pair2-01",
+      "scenario": "combined",
+      "arm": "after",
+      "pair": 2,
+      "passed": true,
+      "checks": {
+        "process_completed": true,
+        "process_exit_zero": true,
+        "session_complete_marker": true,
+        "complete_event": true,
+        "save_turn_unchanged": true,
+        "selected_state_equal": true,
+        "no_lua_error_reports": true,
+        "driver_hash_matches": true,
+        "production_manifest_consistent": true,
+        "production_matches_current_addon": true,
+        "snapshot_setting_matches_arm": true,
+        "png_setting_matches_arm": true
+      },
+      "selected_state": {
+        "equal": true,
+        "actors": 27,
+        "inventory_items": 203,
+        "changed_sections": 0,
+        "added_sections": 0,
+        "removed_sections": 0
+      },
+      "archives": {
+        "regular_files_scanned": 27,
+        "character_archives": 22,
+        "world_archives": 1,
+        "total_archives": 23,
+        "total_entries": 21063,
+        "uncompressed_bytes_checked": 52494821,
+        "compression_methods": {
+          "8": 21063
+        },
+        "all_entries_crc_passed": true
+      },
+      "png": {
+        "files": 1,
+        "bytes": 416398,
+        "width": 640,
+        "height": 400,
+        "bit_depth": 8,
+        "color_type": 2,
+        "interlace": 0,
+        "chunk_count": 3,
+        "chunk_types": {
+          "IDAT": 1,
+          "IEND": 1,
+          "IHDR": 1
+        },
+        "all_chunk_crcs_passed": true,
+        "structure_passed": true,
+        "independent_libpng_decode_passed": true,
+        "decoded_rgb_bytes": 768000
+      }
+    },
+    {
+      "session": "stutter-save-refresh-v1-combined-before-pair3-01",
+      "scenario": "combined",
+      "arm": "before",
+      "pair": 3,
+      "passed": true,
+      "checks": {
+        "process_completed": true,
+        "process_exit_zero": true,
+        "session_complete_marker": true,
+        "complete_event": true,
+        "save_turn_unchanged": true,
+        "selected_state_equal": true,
+        "no_lua_error_reports": true,
+        "driver_hash_matches": true,
+        "production_manifest_consistent": true,
+        "production_matches_current_addon": true,
+        "snapshot_setting_matches_arm": true,
+        "png_setting_matches_arm": true
+      },
+      "selected_state": {
+        "equal": true,
+        "actors": 27,
+        "inventory_items": 203,
+        "changed_sections": 0,
+        "added_sections": 0,
+        "removed_sections": 0
+      },
+      "archives": {
+        "regular_files_scanned": 27,
+        "character_archives": 22,
+        "world_archives": 1,
+        "total_archives": 23,
+        "total_entries": 21063,
+        "uncompressed_bytes_checked": 52494821,
+        "compression_methods": {
+          "8": 21063
+        },
+        "all_entries_crc_passed": true
+      },
+      "png": {
+        "files": 1,
+        "bytes": 328852,
+        "width": 640,
+        "height": 400,
+        "bit_depth": 8,
+        "color_type": 2,
+        "interlace": 0,
+        "chunk_count": 43,
+        "chunk_types": {
+          "IDAT": 41,
+          "IEND": 1,
+          "IHDR": 1
+        },
+        "all_chunk_crcs_passed": true,
+        "structure_passed": true,
+        "independent_libpng_decode_passed": true,
+        "decoded_rgb_bytes": 768000
+      }
+    },
+    {
+      "session": "stutter-save-refresh-v1-combined-after-pair3-01",
+      "scenario": "combined",
+      "arm": "after",
+      "pair": 3,
+      "passed": true,
+      "checks": {
+        "process_completed": true,
+        "process_exit_zero": true,
+        "session_complete_marker": true,
+        "complete_event": true,
+        "save_turn_unchanged": true,
+        "selected_state_equal": true,
+        "no_lua_error_reports": true,
+        "driver_hash_matches": true,
+        "production_manifest_consistent": true,
+        "production_matches_current_addon": true,
+        "snapshot_setting_matches_arm": true,
+        "png_setting_matches_arm": true
+      },
+      "selected_state": {
+        "equal": true,
+        "actors": 27,
+        "inventory_items": 203,
+        "changed_sections": 0,
+        "added_sections": 0,
+        "removed_sections": 0
+      },
+      "archives": {
+        "regular_files_scanned": 27,
+        "character_archives": 22,
+        "world_archives": 1,
+        "total_archives": 23,
+        "total_entries": 21063,
+        "uncompressed_bytes_checked": 52494821,
+        "compression_methods": {
+          "8": 21063
+        },
+        "all_entries_crc_passed": true
+      },
+      "png": {
+        "files": 1,
+        "bytes": 419856,
+        "width": 640,
+        "height": 400,
+        "bit_depth": 8,
+        "color_type": 2,
+        "interlace": 0,
+        "chunk_count": 3,
+        "chunk_types": {
+          "IDAT": 1,
+          "IEND": 1,
+          "IHDR": 1
+        },
+        "all_chunk_crcs_passed": true,
+        "structure_passed": true,
+        "independent_libpng_decode_passed": true,
+        "decoded_rgb_bytes": 768000
+      }
+    }
+  ],
+  "limits": [
+    "CRC/decode and selected-state assertions are not a proof of all saved fields' semantic equality.",
+    "Same-image libpng comparison proves decoding succeeds; it does not compare before/after screenshot pixels.",
+    "No real game process is launched by this audit."
+  ]
+}

@@ -39,6 +39,18 @@ end
 -- Direct entry for isolated real-save benchmarks; does not install anything.
 M.cloneForSave = makeClone(_G)
 
+-- Let the optional checkpoint wrapper recognize only methods installed here.
+-- It must inherit the same recursive environment, including known engine helpers.
+function M.getInstalledEnvironment(method)
+    local record = installed[method]
+    if not record then return nil end
+    local name, copy = debug.getupvalue(method, 1)
+    if name ~= "copy" or copy ~= record.copy then return nil end
+    local recursive_name, recursive = debug.getupvalue(copy, 1)
+    if recursive_name ~= "copy" or recursive ~= copy then return nil end
+    return getfenv(copy)
+end
+
 local function upstream(f, first, last)
     if type(f) ~= "function" then return false end
     local info = debug.getinfo(f, "S")
@@ -56,7 +68,8 @@ function M.installGame(Game, options)
     end
     local method = makeClone(getfenv(recursive))
     Game.cloneForSave = method
-    installed[method] = true
+    local _, copy = debug.getupvalue(method, 1)
+    installed[method] = setmetatable({copy = copy}, {__mode = "v"})
     return true
 end
 
