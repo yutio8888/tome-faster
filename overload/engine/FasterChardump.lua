@@ -22,14 +22,17 @@ local function hasExportHook(player)
     return true -- Unknown hook registry: retain the complete export path.
 end
 
-function M.installPlayer(Player, options)
+function M.installPlayer(Player, options, exporter)
     if options and options.offline_chardump == false then return false, "disabled in faster_tome settings" end
-    if installed[Player] then return true end
     local original = Player.saveUUID
+    if installed[original] then return true end
     if not upstream(original, "@/engine/interface/PlayerDumpJSON.lua", 41, 90) then
         return false, "unknown character export method; keeping existing export"
     end
     local environment = getfenv(original)
+    -- An optional prepared gzip exporter retains the original environment and
+    -- export body. Check the original method above before composing either fix.
+    local delegate = exporter or original
     function Player:saveUUID(charball, ...)
         local profile, game = environment.profile, environment.game
         -- The stock consumer discards these sheets; it does not queue them for
@@ -44,9 +47,9 @@ function M.installPlayer(Player, options)
             and not hasExportHook(self) then
             return
         end
-        return original(self, charball, ...)
+        return delegate(self, charball, ...)
     end
-    installed[Player] = true
+    installed[Player.saveUUID] = true
     return true
 end
 

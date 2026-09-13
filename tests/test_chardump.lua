@@ -267,6 +267,10 @@ do
     check(w.helper.installPlayer(w.Player), "install after opt-out")
     local wrapped = w.Player.saveUUID
     check(w.helper.installPlayer(w.Player) and w.Player.saveUUID == wrapped, "repeat installation is idempotent")
+    local later = function() return "later exporter" end
+    w.Player.saveUUID = later
+    check(not w.helper.installPlayer(w.Player) and w.Player.saveUUID == later,
+        "installation record does not hide a later exporter override")
     local custom = world(false)
     local method = function(_, ...) return nil, "custom", select("#", ...) end
     custom.Player.saveUUID = method
@@ -275,7 +279,10 @@ do
     check(result.n == 3 and result[1] == nil and result[2] == "custom" and result[3] == 2, "unknown exporter return arity and arguments retained")
     local startup = world(false)
     startup.env.loadPrevious = function() return startup.Player end
-    startup.env.require = function(name) assert(name == "engine.FasterChardump"); return startup.helper end
+    startup.env.require = function(name)
+        if name == "engine.FasterGzip" then return assert(loadfile(root .. "/overload/engine/FasterGzip.lua"))() end
+        assert(name == "engine.FasterChardump"); return startup.helper
+    end
     local loaded = setfenv(assert(loadfile(root .. "/superload/mod/class/Player.lua")), startup.env)()
     startup.player:saveUUID()
     check(loaded == startup.Player and startup.names == 0, "real Player superload installs optimization")

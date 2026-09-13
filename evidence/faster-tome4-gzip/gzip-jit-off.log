@@ -1,0 +1,5 @@
+PASS gzip: pinned native codecs, gzip bytes, empty/short/random round trips and no core preflight
+PASS gzip: online/offline, charball, late UUID, original JSON helpers and early returns
+PASS gzip: strict native status/arity, errors, scope and dynamic compressor/environment fallback
+PASS gzip: real Player superload, independent settings and conservative startup fallback
+PASS all 262 gzip export checks; Lua 5.1 / LuaJIT 2.1.0-beta3

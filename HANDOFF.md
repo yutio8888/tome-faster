@@ -1,3 +1,44 @@
+# Faster ToME4 当前交接：0.2.4
+
+更新：2026-09-13 UTC。用户本轮要求“请阅读handoff文档，继续跟进tome4优化插件开发工作”；已按此前优先一完成角色导出 gzip 内存修复。**本节是最新状态，下方 0.2.3 原文仅作为历史环境和证据索引。**
+
+## 当前代码及交付
+
+- 生产工作区仍是 `/workspace/t-engine4/tmp/worktrees/tome-faster-save-20260912`，分支 `perf-save-stutter-20260912`；远端 `https://github.com/yutio8888/tome-faster.git`。本次 0.2.4 提交以该分支 Git log 为准，父提交 `036e30c`。未合并用户原分支。
+- 最新实现：[FasterGzip.lua](overload/engine/FasterGzip.lua)、[Player superload](superload/mod/class/Player.lua)。识别固定 `saveUUID` 本体后仅改 JSON 压缩调用，使用内置 lzlib 同参数 gzip；成功一个返回值，压缩状态失败零个返回值，动态 API 覆盖时回退。
+- `export_gzip=false` 并重启可关闭；与 `offline_chardump` 独立组合。其他优化及“不要求相同 RNG 消耗，但不随意修改游戏规则”的约束不变。
+- gzip 主要修复内存保留，不宣传 CPU/保存加速。短/空输入原先可能压缩失败，现在生成有效 gzip。全局 core API 不变，因此其他调用或未知覆盖回退后仍可能使用旧的泄漏接口。
+- 最新说明：[gzip-export.md](docs/gzip-export.md)、[结构化结果](docs/gzip-export-results.json)。安装包：[tome-faster-0.2.4.teaa](releases/tome-faster-0.2.4.teaa)，SHA256 `e5f34b6c132796665d4607dda1c5beeac1d61902a7e538a7dac21db787acdbb4`，54 个 allowlist 文件。旧包未重写。
+
+## 新验证结果和入口
+
+环境仍使用下方定义的 A（生产）、W（运行）和 P（profile）。原始 ZIP 路径及 SHA256 未变；只操作独立副本。
+
+- 正式 A/B：`P/sessions/stutter-gzip-v3-{before,after}-pair{1,2,3}-01`。顺序后/前、前/后、后/前；每侧 300 次计时完整导出，六批各 50 次。配置 `detail=false, export_gzip=false/true, phases={"gzip_check","save"}, validate_save_state=true`。
+- 原接口每 50 次导出 native allocation 中位增量 **13,408,800 bytes（约 12.8 MiB）**；新接口六批均为 **0 bytes**。指标为完整 Lua GC 后 `mallinfo2.uordblks + hblkhd`，不是 RSS。全导出耗时中位数 12,466.50 / 12,562.31 ms，没有稳定 CPU 加速结论。
+- 实际角色 JSON 263,388 bytes、gzip 字节一致，selected live/snapshot 状态 27 个角色、203 件物品一致。模拟认证前双重拦截 profile 发送；真实网络调用 0。
+- 六个进程全部 `exit_code=0, completed=true`，后续正常保存回合增量 0，六份各 22 个 ZIP CRC 通过。这里保存发生在反复导出及诊断 GC 之后，**不能当成新的冷保存基准或与 0.2.3 时间直接比较**。
+- `stutter-gzip-export-compat-{before,after}-01` 分别运行 `chardump_check` 和 `party_export_check`，确认在线 JSON/标题/标签一致，离线仍不编码资料。
+- `P/sessions/gzip-roundtrip-20260913` 已重载优化 after-pair3 存档，空闲后再保存，正常退出；22 个 ZIP CRC 通过。派生输入 `P/gzip-roundtrip-20260913.zip`。
+- 最终回归：[evidence/faster-tome4-gzip/regression.log](evidence/faster-tome4-gzip/regression.log)，包含 Ashes/Cults 固定哈希 fixture。新增 262 个 gzip 检查在 JIT 开/关均通过；角色导出测试现在 176 个（新增后覆盖安装记录边界）。其他套件通过，具体计数见 `VALIDATION.json`。
+- 新 native fixtures 需要 C compiler、Lua 5.1 ABI headers、zlib dev 和 pkg-config（或 `TOME_LUA_INCLUDE`），运行时从固定引擎 Git 提取源码到 /tmp 编译，完成后删除，不发布原生 addon 组件。
+
+## 本轮新发现及诊断兼容
+
+1. 固定 lzlib 的 `luaopen_zlib` 把 `_VERSION` 放进随后丢弃的独立表，实际全局 `zlib._VERSION` 为 nil。当前 guard 接受 nil/已知版本并做真实 gzip 能力预检。不能重新要求必须有版本字段。
+2. `FasterChardump` 的原委托 upvalue 现在叫 `delegate`。旧 evidence 诊断按 `original` 查找，直接复用会失败。W 中两个旧入口已修复；对应可复现新版都在 [evidence/faster-tome4-gzip/diagnostics](evidence/faster-tome4-gzip/README.md)。**不要覆盖回旧版本的 FasterChardumpCheck / FasterPartyExportCheck。**
+3. W 的 `FasterStutterSession` 新增 `gzip_check` 阶段，诊断模块 `FasterGzipCheck`。代码和驱动副本保存在新 evidence；生产包排除整个 evidence。
+4. 初次受限沙箱游戏启动发生 native 退出，Xvfb 和游戏需工具级 escalation；随后完整运行正常。最早 `stutter-gzip-after-pair1-01`、`stutter-gzip-v2-after-pair1-01`、`stutter-gzip-binding-probe-01` 是失败启动/守卫诊断，不能纳入 A/B。
+5. 本轮最终停止自己启动的 Xvfb；下一轮按原文方法重新启动，不复用历史 PID。全局 `.DS_Store` 等无关内容未清理。
+
+## 下一步
+
+gzip 优先项已经交付。继续开发时先推进快捷栏稳定文字光栅化的有界缓存：分离 font draw 成本，覆盖字体/缩放/分辨率/按键/界面变化失效，并验证连续图像序列与真实移动/战斗 A/B。参见 [render-next-analysis.md](docs/render-next-analysis.md)。地图静态遮罩其次；快照/GC 调度仍需要完整冻结和保存协议设计。不要重复实现 gzip 或已删除 Party 的专用复制优化。
+
+---
+
+# 0.2.3 交接原文（历史记录）
+
 # Faster ToME4 性能优化交接
 
 更新：2026-09-13（UTC）。面向没有前文上下文的接手者。本文记录已完成工作、行为边界、复现入口和建议下一步；本次交付仅准备交接文档，没有启动新一轮优化或新的接手代理。

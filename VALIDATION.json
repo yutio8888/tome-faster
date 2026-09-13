@@ -1,6 +1,6 @@
 {
   "date": "2026-09-13",
-  "addon_version": "0.2.3",
+  "addon_version": "0.2.4",
   "engine_commit": "624a67329fe2ad440c5b344785a9c73fcf22ae63",
   "runtime": "Unit fixtures: LuaJIT 2.1.0-beta3; full game: embedded LuaJIT 2.0.2",
   "tests": {
@@ -11,10 +11,12 @@
     "profile_checks": 22,
     "historical_native_particle_lifetime_cases": 6,
     "clone_differential_graphs": 91,
-    "clone_assertions_this_run": 73203,
-    "character_export_checks": 175,
+    "clone_assertions_this_run": 73150,
+    "character_export_checks": 176,
     "export_cleanup_scenarios": 38,
-    "export_cleanup_assertions": 824
+    "export_cleanup_assertions": 824,
+    "gzip_export_checks": 262,
+    "gzip_jit_off_checks": 262
   },
   "algorithmic_fixture": {
     "delayed_objects": 2001,
@@ -78,6 +80,22 @@
     {
       "path": "game/engines/default/engine/Map.lua",
       "sha256": "6fdf0294ab835d06cf1186a47a2222b266bd71bfc53b3ba3a423cbb3e41ba315"
+    },
+    {
+      "path": "src/core_lua.c",
+      "sha256": "9006a07b9ba0581d916e5e2f2e2f2f287aa9964710e82137ddac0039497d8f04"
+    },
+    {
+      "path": "src/lzlib/lzlib.c",
+      "sha256": "603fc592f13c31fe0b1d751ecc68fc64a465b2dc555fd4e5fcbf4f3e3ccafa86"
+    },
+    {
+      "path": "game/engines/default/engine/interface/PlayerDumpJSON.lua",
+      "sha256": "851b3a0c7d7f84654543f59ef8c250df386c1e919b2fbbc0558aa5e86a75513b"
+    },
+    {
+      "path": "game/modules/tome/class/interface/PlayerDumpJSON.lua",
+      "sha256": "1cd6aea431e8b9780b3937f3dd9cc3401cf5cd2a6428b7098c5d97037ce640b7"
     }
   ],
   "runtime_fixtures": {
@@ -188,5 +206,22 @@
     "cults_save_restriction_preserved": true,
     "original_archive_unchanged": true,
     "save_reload_save_roundtrip": true
+  },
+  "gzip_export": {
+    "results": "docs/gzip-export-results.json",
+    "full_export_ab_processes": 6,
+    "measured_exports_per_side": 300,
+    "real_gzip_byte_equal": true,
+    "online_character_export_equal": true,
+    "offline_skip_preserved": true,
+    "selected_live_and_snapshot_state_equal": true,
+    "median_native_retained_bytes_per_50_exports_before": 13408800,
+    "median_native_retained_bytes_per_50_exports_after": 0,
+    "global_compression_api_modified": false,
+    "cults_save_restriction_preserved": true,
+    "original_archive_unchanged": true,
+    "save_reload_save_roundtrip": true,
+    "short_input_behavior": "Empty/short inputs that exhausted the old fixed buffer now yield valid gzip.",
+    "cpu_speedup_claimed": false
   }
 }

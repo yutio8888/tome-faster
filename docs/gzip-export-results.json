@@ -1,0 +1,671 @@
+{
+  "date": "2026-09-13",
+  "addon_version": "0.2.4",
+  "engine_commit": "624a67329fe2ad440c5b344785a9c73fcf22ae63",
+  "environment": {
+    "os": "Debian 12 Linux x86_64",
+    "cpu": "AMD Ryzen 7 9800X3D",
+    "game_lua": "LuaJIT 2.0.2",
+    "fixture_lua": "LuaJIT 2.1.0-beta3",
+    "display": "Xvfb 1280x800 llvmpipe"
+  },
+  "method": "Six independent original-save copies, alternating pairs; installed saveUUID on a snapshot, double network barrier before simulated auth, five warmups then two batches of 50 full exports per process; discard outputs and full Lua GC before/after allocator readings.",
+  "summary": {
+    "before": {
+      "measured_exports": 300,
+      "native_delta_bytes_per_50_exports": [
+        13408800,
+        13408800,
+        13408816,
+        13408800,
+        13408800,
+        13408800
+      ],
+      "median_native_delta_bytes_per_50_exports": 13408800.0,
+      "median_full_export_batch_wall_ms": 12466.496611014001
+    },
+    "after": {
+      "measured_exports": 300,
+      "native_delta_bytes_per_50_exports": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "median_native_delta_bytes_per_50_exports": 0.0,
+      "median_full_export_batch_wall_ms": 12562.3074750005
+    }
+  },
+  "runs": [
+    {
+      "session": "stutter-gzip-v3-after-pair1-01",
+      "side": "after",
+      "pair": 1,
+      "process": {
+        "exit_code": 0,
+        "wall_s": 29.896913679986028,
+        "completed": true,
+        "idle_observation_s": null,
+        "cpu_tick_hz": 100,
+        "idle_thread_cpu": []
+      },
+      "export": {
+        "optimized": true,
+        "selected_live_and_snapshot_state_equal": true,
+        "exporter_source": "@/engine/FasterGzip.lua",
+        "gzip_bytes": 51254,
+        "real_gzip_roundtrip": true,
+        "captured_exports": 106,
+        "real_gzip_byte_equal": true,
+        "batches": [
+          {
+            "calls": 50,
+            "wall_ms": 11722.659628004,
+            "native_allocated_delta_bytes": 0
+          },
+          {
+            "calls": 50,
+            "wall_ms": 11317.432812005,
+            "native_allocated_delta_bytes": 0
+          }
+        ],
+        "memory_method": "glibc mallinfo2 uordblks+hblkhd; full Lua GC before/after each batch, outputs discarded",
+        "runtime": "LuaJIT 2.0.2",
+        "raw_json_bytes": 263388,
+        "real_network_calls": 0
+      },
+      "save": {
+        "turn_delta": 0,
+        "synchronous_ms": 168.32960999012,
+        "flow_ms": 599.19856700301,
+        "max_display_interval_ms": 178.17081099749
+      },
+      "zip_archives_crc_passed": 22,
+      "selected_state_checks_passed": 3
+    },
+    {
+      "session": "stutter-gzip-v3-before-pair1-01",
+      "side": "before",
+      "pair": 1,
+      "process": {
+        "exit_code": 0,
+        "wall_s": 31.815679816994816,
+        "completed": true,
+        "idle_observation_s": null,
+        "cpu_tick_hz": 100,
+        "idle_thread_cpu": []
+      },
+      "export": {
+        "optimized": false,
+        "selected_live_and_snapshot_state_equal": true,
+        "exporter_source": "@/engine/interface/PlayerDumpJSON.lua",
+        "gzip_bytes": 51258,
+        "real_gzip_roundtrip": true,
+        "captured_exports": 106,
+        "real_gzip_byte_equal": true,
+        "batches": [
+          {
+            "calls": 50,
+            "wall_ms": 12063.043844998,
+            "native_allocated_delta_bytes": 13408800
+          },
+          {
+            "calls": 50,
+            "wall_ms": 13116.662799001,
+            "native_allocated_delta_bytes": 13408800
+          }
+        ],
+        "memory_method": "glibc mallinfo2 uordblks+hblkhd; full Lua GC before/after each batch, outputs discarded",
+        "runtime": "LuaJIT 2.0.2",
+        "raw_json_bytes": 263388,
+        "real_network_calls": 0
+      },
+      "save": {
+        "turn_delta": 0,
+        "synchronous_ms": 163.19000801444,
+        "flow_ms": 649.56481799483,
+        "max_display_interval_ms": 173.41913101077
+      },
+      "zip_archives_crc_passed": 22,
+      "selected_state_checks_passed": 3
+    },
+    {
+      "session": "stutter-gzip-v3-before-pair2-01",
+      "side": "before",
+      "pair": 2,
+      "process": {
+        "exit_code": 0,
+        "wall_s": 31.56587321998086,
+        "completed": true,
+        "idle_observation_s": null,
+        "cpu_tick_hz": 100,
+        "idle_thread_cpu": []
+      },
+      "export": {
+        "optimized": false,
+        "selected_live_and_snapshot_state_equal": true,
+        "exporter_source": "@/engine/interface/PlayerDumpJSON.lua",
+        "gzip_bytes": 51254,
+        "real_gzip_roundtrip": true,
+        "captured_exports": 106,
+        "real_gzip_byte_equal": true,
+        "batches": [
+          {
+            "calls": 50,
+            "wall_ms": 12474.472149014,
+            "native_allocated_delta_bytes": 13408816
+          },
+          {
+            "calls": 50,
+            "wall_ms": 12458.521073014,
+            "native_allocated_delta_bytes": 13408800
+          }
+        ],
+        "memory_method": "glibc mallinfo2 uordblks+hblkhd; full Lua GC before/after each batch, outputs discarded",
+        "runtime": "LuaJIT 2.0.2",
+        "raw_json_bytes": 263388,
+        "real_network_calls": 0
+      },
+      "save": {
+        "turn_delta": 0,
+        "synchronous_ms": 176.97033801675,
+        "flow_ms": 594.86525902152,
+        "max_display_interval_ms": 187.13382899761
+      },
+      "zip_archives_crc_passed": 22,
+      "selected_state_checks_passed": 3
+    },
+    {
+      "session": "stutter-gzip-v3-after-pair2-01",
+      "side": "after",
+      "pair": 2,
+      "process": {
+        "exit_code": 0,
+        "wall_s": 32.377723346988205,
+        "completed": true,
+        "idle_observation_s": null,
+        "cpu_tick_hz": 100,
+        "idle_thread_cpu": []
+      },
+      "export": {
+        "optimized": true,
+        "selected_live_and_snapshot_state_equal": true,
+        "exporter_source": "@/engine/FasterGzip.lua",
+        "gzip_bytes": 51254,
+        "real_gzip_roundtrip": true,
+        "captured_exports": 106,
+        "real_gzip_byte_equal": true,
+        "batches": [
+          {
+            "calls": 50,
+            "wall_ms": 12760.798682004,
+            "native_allocated_delta_bytes": 0
+          },
+          {
+            "calls": 50,
+            "wall_ms": 12836.786020994,
+            "native_allocated_delta_bytes": 0
+          }
+        ],
+        "memory_method": "glibc mallinfo2 uordblks+hblkhd; full Lua GC before/after each batch, outputs discarded",
+        "runtime": "LuaJIT 2.0.2",
+        "raw_json_bytes": 263388,
+        "real_network_calls": 0
+      },
+      "save": {
+        "turn_delta": 0,
+        "synchronous_ms": 198.33401101828,
+        "flow_ms": 627.82582497597,
+        "max_display_interval_ms": 208.57727199793
+      },
+      "zip_archives_crc_passed": 22,
+      "selected_state_checks_passed": 3
+    },
+    {
+      "session": "stutter-gzip-v3-after-pair3-01",
+      "side": "after",
+      "pair": 3,
+      "process": {
+        "exit_code": 0,
+        "wall_s": 32.77063319698209,
+        "completed": true,
+        "idle_observation_s": null,
+        "cpu_tick_hz": 100,
+        "idle_thread_cpu": []
+      },
+      "export": {
+        "optimized": true,
+        "selected_live_and_snapshot_state_equal": true,
+        "exporter_source": "@/engine/FasterGzip.lua",
+        "gzip_bytes": 51254,
+        "real_gzip_roundtrip": true,
+        "captured_exports": 106,
+        "real_gzip_byte_equal": true,
+        "batches": [
+          {
+            "calls": 50,
+            "wall_ms": 12363.816267997,
+            "native_allocated_delta_bytes": 0
+          },
+          {
+            "calls": 50,
+            "wall_ms": 13602.193028986,
+            "native_allocated_delta_bytes": 0
+          }
+        ],
+        "memory_method": "glibc mallinfo2 uordblks+hblkhd; full Lua GC before/after each batch, outputs discarded",
+        "runtime": "LuaJIT 2.0.2",
+        "raw_json_bytes": 263388,
+        "real_network_calls": 0
+      },
+      "save": {
+        "turn_delta": 0,
+        "synchronous_ms": 167.94497600198,
+        "flow_ms": 595.89343601465,
+        "max_display_interval_ms": 178.09573498368
+      },
+      "zip_archives_crc_passed": 22,
+      "selected_state_checks_passed": 3
+    },
+    {
+      "session": "stutter-gzip-v3-before-pair3-01",
+      "side": "before",
+      "pair": 3,
+      "process": {
+        "exit_code": 0,
+        "wall_s": 31.665403067017905,
+        "completed": true,
+        "idle_observation_s": null,
+        "cpu_tick_hz": 100,
+        "idle_thread_cpu": []
+      },
+      "export": {
+        "optimized": false,
+        "selected_live_and_snapshot_state_equal": true,
+        "exporter_source": "@/engine/interface/PlayerDumpJSON.lua",
+        "gzip_bytes": 51254,
+        "real_gzip_roundtrip": true,
+        "captured_exports": 106,
+        "real_gzip_byte_equal": true,
+        "batches": [
+          {
+            "calls": 50,
+            "wall_ms": 12272.180250019,
+            "native_allocated_delta_bytes": 13408800
+          },
+          {
+            "calls": 50,
+            "wall_ms": 12688.613056004,
+            "native_allocated_delta_bytes": 13408800
+          }
+        ],
+        "memory_method": "glibc mallinfo2 uordblks+hblkhd; full Lua GC before/after each batch, outputs discarded",
+        "runtime": "LuaJIT 2.0.2",
+        "raw_json_bytes": 263388,
+        "real_network_calls": 0
+      },
+      "save": {
+        "turn_delta": 0,
+        "synchronous_ms": 171.08781298995,
+        "flow_ms": 601.72003298998,
+        "max_display_interval_ms": 182.14662998915
+      },
+      "zip_archives_crc_passed": 22,
+      "selected_state_checks_passed": 3
+    }
+  ],
+  "original_archive_sha256": "eac52e4bd612b2ec6477f71bae12b7844c3e8031813df2ad89fe6fac2c1915a7",
+  "original_archive_unchanged": true,
+  "limitations": [
+    "Native allocation metric is glibc mallinfo2 uordblks+hblkhd, not RSS or Lua heap.",
+    "Wall timings cover full character export, not just compression; no reliable CPU speedup claimed.",
+    "Saves follow intensive export warmup and diagnostic full GC; not comparable to earlier cold save latency experiments.",
+    "Failed initial startup/binding probes are excluded.",
+    "No Windows/macOS, hardware GPU, Steam or real online transport test."
+  ],
+  "compatibility_runs": [
+    {
+      "session": "stutter-gzip-export-compat-before-01",
+      "process": {
+        "exit_code": 0,
+        "wall_s": 8.373018342012074,
+        "completed": true,
+        "idle_observation_s": null,
+        "cpu_tick_hz": 100,
+        "idle_thread_cpu": []
+      },
+      "chardump": {
+        "replacement_gzip_byte_equal": true,
+        "installed_exporter_source": "@/engine/interface/PlayerDumpJSON.lua",
+        "selected_state_unchanged": true,
+        "offline_optimized_encodes": 0,
+        "captured_online_orders": 2,
+        "online_equal": true,
+        "offline_original_encodes": 1,
+        "uid_delta": 0,
+        "online_json_bytes": 263388,
+        "lua_rng_calls": 0,
+        "real_network_calls": 0
+      },
+      "party": {
+        "online_equal": true,
+        "real_network_calls": 0,
+        "selected_state_unchanged": true,
+        "live_target_unchanged": true,
+        "installed_exporter_source": "@/engine/interface/PlayerDumpJSON.lua"
+      }
+    },
+    {
+      "session": "stutter-gzip-export-compat-after-01",
+      "process": {
+        "exit_code": 0,
+        "wall_s": 8.324317018996226,
+        "completed": true,
+        "idle_observation_s": null,
+        "cpu_tick_hz": 100,
+        "idle_thread_cpu": []
+      },
+      "chardump": {
+        "replacement_gzip_byte_equal": true,
+        "installed_exporter_source": "@/engine/FasterGzip.lua",
+        "selected_state_unchanged": true,
+        "offline_optimized_encodes": 0,
+        "captured_online_orders": 2,
+        "online_equal": true,
+        "offline_original_encodes": 1,
+        "uid_delta": 0,
+        "online_json_bytes": 263388,
+        "lua_rng_calls": 0,
+        "real_network_calls": 0
+      },
+      "party": {
+        "online_equal": true,
+        "real_network_calls": 0,
+        "selected_state_unchanged": true,
+        "live_target_unchanged": true,
+        "installed_exporter_source": "@/engine/FasterGzip.lua"
+      }
+    }
+  ],
+  "roundtrip": {
+    "session": "gzip-roundtrip-20260913",
+    "process": {
+      "exit_code": 0,
+      "wall_s": 7.719659350987058,
+      "completed": true,
+      "idle_observation_s": 5.003083674004301,
+      "cpu_tick_hz": 100,
+      "idle_thread_cpu": [
+        {
+          "tid": 822229,
+          "name": "t-engine",
+          "cpu_s": 0.5800000000000001
+        },
+        {
+          "tid": 822254,
+          "name": "llvmpipe-1",
+          "cpu_s": 0.53
+        },
+        {
+          "tid": 822264,
+          "name": "llvmpipe-11",
+          "cpu_s": 0.53
+        },
+        {
+          "tid": 822253,
+          "name": "llvmpipe-0",
+          "cpu_s": 0.52
+        },
+        {
+          "tid": 822262,
+          "name": "llvmpipe-9",
+          "cpu_s": 0.51
+        },
+        {
+          "tid": 822265,
+          "name": "llvmpipe-12",
+          "cpu_s": 0.51
+        },
+        {
+          "tid": 822255,
+          "name": "llvmpipe-2",
+          "cpu_s": 0.5
+        },
+        {
+          "tid": 822257,
+          "name": "llvmpipe-4",
+          "cpu_s": 0.5
+        },
+        {
+          "tid": 822261,
+          "name": "llvmpipe-8",
+          "cpu_s": 0.5
+        },
+        {
+          "tid": 822263,
+          "name": "llvmpipe-10",
+          "cpu_s": 0.5
+        },
+        {
+          "tid": 822256,
+          "name": "llvmpipe-3",
+          "cpu_s": 0.49
+        },
+        {
+          "tid": 822268,
+          "name": "llvmpipe-15",
+          "cpu_s": 0.49
+        },
+        {
+          "tid": 822266,
+          "name": "llvmpipe-13",
+          "cpu_s": 0.48
+        },
+        {
+          "tid": 822259,
+          "name": "llvmpipe-6",
+          "cpu_s": 0.47
+        },
+        {
+          "tid": 822258,
+          "name": "llvmpipe-5",
+          "cpu_s": 0.45999999999999996
+        },
+        {
+          "tid": 822260,
+          "name": "llvmpipe-7",
+          "cpu_s": 0.45999999999999996
+        },
+        {
+          "tid": 822267,
+          "name": "llvmpipe-14",
+          "cpu_s": 0.45999999999999996
+        },
+        {
+          "tid": 822238,
+          "name": "particles",
+          "cpu_s": 0.02
+        },
+        {
+          "tid": 822239,
+          "name": "particles",
+          "cpu_s": 0.02
+        },
+        {
+          "tid": 822240,
+          "name": "particles",
+          "cpu_s": 0.02
+        },
+        {
+          "tid": 822241,
+          "name": "particles",
+          "cpu_s": 0.02
+        },
+        {
+          "tid": 822242,
+          "name": "particles",
+          "cpu_s": 0.02
+        },
+        {
+          "tid": 822243,
+          "name": "particles",
+          "cpu_s": 0.02
+        },
+        {
+          "tid": 822247,
+          "name": "particles",
+          "cpu_s": 0.02
+        },
+        {
+          "tid": 822248,
+          "name": "particles",
+          "cpu_s": 0.02
+        },
+        {
+          "tid": 822249,
+          "name": "particles",
+          "cpu_s": 0.02
+        },
+        {
+          "tid": 822250,
+          "name": "particles",
+          "cpu_s": 0.02
+        },
+        {
+          "tid": 822251,
+          "name": "particles",
+          "cpu_s": 0.02
+        },
+        {
+          "tid": 822252,
+          "name": "particles",
+          "cpu_s": 0.02
+        },
+        {
+          "tid": 822244,
+          "name": "particles",
+          "cpu_s": 0.01
+        },
+        {
+          "tid": 822245,
+          "name": "particles",
+          "cpu_s": 0.01
+        },
+        {
+          "tid": 822246,
+          "name": "particles",
+          "cpu_s": 0.01
+        },
+        {
+          "tid": 822234,
+          "name": "t-engine",
+          "cpu_s": 0.0
+        },
+        {
+          "tid": 822235,
+          "name": "t-engine",
+          "cpu_s": 0.0
+        },
+        {
+          "tid": 822236,
+          "name": "SDLTimer",
+          "cpu_s": 0.0
+        },
+        {
+          "tid": 822237,
+          "name": "save",
+          "cpu_s": 0.0
+        },
+        {
+          "tid": 822269,
+          "name": "t-engine",
+          "cpu_s": 0.0
+        },
+        {
+          "tid": 822270,
+          "name": "t-engine",
+          "cpu_s": 0.0
+        },
+        {
+          "tid": 822271,
+          "name": "t-engine",
+          "cpu_s": 0.0
+        },
+        {
+          "tid": 822272,
+          "name": "t-engine",
+          "cpu_s": 0.0
+        },
+        {
+          "tid": 822273,
+          "name": "t-engine",
+          "cpu_s": 0.0
+        },
+        {
+          "tid": 822274,
+          "name": "t-engine",
+          "cpu_s": 0.0
+        },
+        {
+          "tid": 822275,
+          "name": "t-engine",
+          "cpu_s": 0.0
+        },
+        {
+          "tid": 822276,
+          "name": "t-engine",
+          "cpu_s": 0.0
+        },
+        {
+          "tid": 822277,
+          "name": "t-engine",
+          "cpu_s": 0.0
+        },
+        {
+          "tid": 822278,
+          "name": "t-engine",
+          "cpu_s": 0.0
+        },
+        {
+          "tid": 822279,
+          "name": "t-engine",
+          "cpu_s": 0.0
+        },
+        {
+          "tid": 822280,
+          "name": "t-engine",
+          "cpu_s": 0.0
+        },
+        {
+          "tid": 822281,
+          "name": "t-engine",
+          "cpu_s": 0.0
+        },
+        {
+          "tid": 822282,
+          "name": "t-engine",
+          "cpu_s": 0.0
+        },
+        {
+          "tid": 822283,
+          "name": "t-engine",
+          "cpu_s": 0.0
+        },
+        {
+          "tid": 822284,
+          "name": "t-engine",
+          "cpu_s": 0.0
+        },
+        {
+          "tid": 822285,
+          "name": "t-engin:disk$0",
+          "cpu_s": 0.0
+        }
+      ]
+    },
+    "loaded_optimized_save_and_saved_again": true,
+    "zip_archives_crc_passed": 22
+  }
+}

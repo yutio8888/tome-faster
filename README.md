@@ -1,10 +1,15 @@
 # Faster ToME4 — save optimizations
 
-Version **0.2.3**, modified 13 September 2026. This fork fixes defects in
+Version **0.2.4**, modified 13 September 2026. This fork fixes defects in
 [Yutio888's Faster ToME4 0.0.1](https://te4.org/games/addons/tome/faster) and adds
 conservative save/load and runtime optimizations for **ToME 1.7.6**.
 
-This release removes the unused temporary party built and cleaned before character
+This release fixes retained native gzip allocations in the recognized character
+exporter using the engine's embedded lzlib binding. The compression parameters,
+successful output bytes and export callbacks are retained; empty and short inputs
+also produce valid gzip streams. See the [gzip design and results](docs/gzip-export.md).
+
+The preceding release removes the unused temporary party built and cleaned before character
 export. The save queue, online export call, player control switches and Cults arena
 save restriction are retained. Its discarded callbacks, RNG consumption and
 temporary UID allocations are intentionally omitted; saving no longer preserves
@@ -14,17 +19,20 @@ Equivalent snapshot cloning and skipping offline character sheets remain include
 their earlier results are in the [0.2.2 report](docs/save-stutter.md). The finite
 `notice_enemy` / `dreamhammer` lifetimes and opt-in timer remain included.
 Further measured hotspots and addon candidates are described in the
-[follow-up plan](docs/followup-plan.md); rendering, GC and gzip candidates remain unimplemented.
+[follow-up plan](docs/followup-plan.md); rendering and GC candidates remain unimplemented.
 
 中文说明：[性能问题、修复方案、测量指标与文件清单](docs/faster-tome4-performance-report.md)。
 Published evidence: [profile results](evidence/faster-tome4-profile/README.md).
-Installable 0.2.3 and historical packages: [releases](releases/README.md).
+Installable 0.2.4 and historical packages: [releases](releases/README.md).
 Full-game save A/B and complete loaded-graph equivalence have now been tested on
 one supplied save. GPU/Steam testing and automatic old-save reference migration
 remain outside this release. Player archives and generated save graphs stay local.
 
 ## Changes
 
+- Release gzip compression state after character exports through a local,
+  guarded replacement. Keep global compression APIs and charball archives intact.
+  Set `export_gzip=false` to restore the original character compressor.
 - Omit the unused export party, its second object-graph copy and cleanup. Keep the
   recognized Cults save wrapper intact. Set `unused_party_cleanup=false` to restore
   the original preparation, including its random calls and temporary callbacks.
@@ -84,6 +92,7 @@ config.settings.faster_tome = {
     save_clone = false,
     offline_chardump = false,
     unused_party_cleanup = false,
+    export_gzip = false,
 }
 ```
 
@@ -92,9 +101,11 @@ values, not new menu controls.
 
 ## Verify and package
 
-Requires LuaJIT/Lua 5.1 and a local engine Git clone containing commit
+Requires LuaJIT/Lua 5.1, a C compiler, Lua 5.1-compatible development headers,
+zlib development files, `pkg-config`, and a local engine Git clone containing commit
 `624a67329fe2ad440c5b344785a9c73fcf22ae63`. Tests read that commit with `git show`;
-they do not use or change player saves. Native graphics, ZIP writing, Steam,
+they do not use or change player saves. Gzip fixtures compile and execute the
+two pinned native compressors in a temporary directory. Native graphics, ZIP writing, Steam,
 and filesystem access during engine loading are stubbed.
 
 ```bash
