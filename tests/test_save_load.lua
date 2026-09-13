@@ -234,6 +234,8 @@ do
     env._G = env
     env.require = function(name)
         if name == "engine.FasterSave" then return helper end
+        if name == "engine.FasterSaveFollowup" then return {installClass=function() return true end} end
+        if name == "engine.class" then return env.class end
         if name == "engine.FasterClone" then return assert(loadfile(root .. "/overload/engine/FasterClone.lua"))() end
         if name == "engine.FasterExportCleanup" then return assert(loadfile(root .. "/overload/engine/FasterExportCleanup.lua"))() end
         if name == "engine.Savefile" then return w.class end

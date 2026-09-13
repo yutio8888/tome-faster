@@ -42,7 +42,7 @@
   ],
   "provenance_scope": "The fields and file hashes above describe the unmodified 0.0.1 import, not the current modified working tree.",
   "fork": {
-    "addon_version": "0.2.4",
+    "addon_version": "0.2.5",
     "modified_on": "2026-09-13",
     "maintainer": "yutio8888",
     "base_commit": "ded93e38c34af1584224717250c7015295249dd2",

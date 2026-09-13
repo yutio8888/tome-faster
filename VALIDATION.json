@@ -1,6 +1,6 @@
 {
   "date": "2026-09-13",
-  "addon_version": "0.2.4",
+  "addon_version": "0.2.5",
   "engine_commit": "624a67329fe2ad440c5b344785a9c73fcf22ae63",
   "runtime": "Unit fixtures: LuaJIT 2.1.0-beta3; full game: embedded LuaJIT 2.0.2",
   "tests": {
@@ -11,12 +11,18 @@
     "profile_checks": 22,
     "historical_native_particle_lifetime_cases": 6,
     "clone_differential_graphs": 91,
-    "clone_assertions_this_run": 73150,
+    "clone_assertions_this_run": 73424,
     "character_export_checks": 176,
     "export_cleanup_scenarios": 38,
     "export_cleanup_assertions": 824,
     "gzip_export_checks": 262,
-    "gzip_jit_off_checks": 262
+    "gzip_jit_off_checks": 262,
+    "hotkey_checks": 799,
+    "hotkey_jit_off_checks": 799,
+    "effect_mask_checks": 876,
+    "effect_mask_jit_off_checks": 876,
+    "save_callback_checks": 562,
+    "save_callback_jit_off_checks": 562
   },
   "algorithmic_fixture": {
     "delayed_objects": 2001,
@@ -96,6 +102,30 @@
     {
       "path": "game/modules/tome/class/interface/PlayerDumpJSON.lua",
       "sha256": "1cd6aea431e8b9780b3937f3dd9cc3401cf5cd2a6428b7098c5d97037ce640b7"
+    },
+    {
+      "path": "game/engines/default/engine/HotkeysIconsDisplay.lua",
+      "sha256": "0e5fac6a9116c5a5847eaa162be5ade891cdcddf399c92323b50c873f4f6bb95"
+    },
+    {
+      "path": "game/engines/default/engine/Tiles.lua",
+      "sha256": "b401cd46cc165327142e52e5295cae71f2d2ca7c9be87f68c6e3d6e9c079d9f5"
+    },
+    {
+      "path": "game/engines/default/engine/MapEffect.lua",
+      "sha256": "a6dba2253d5fc8ef97d786d1c811a1fa47d2184513a25dac9eedf51c79bddf7e"
+    },
+    {
+      "path": "src/serial.c",
+      "sha256": "51b9abbffea3a4a0e662dc0e6c27a91c6c063809acf5480d8c628110a9f4476f"
+    },
+    {
+      "path": "src/fov.c",
+      "sha256": "d3bdedc4ce28f0c05ff8a9c2ff9ff709a3752f2fe5baced6a323caece9547dbe"
+    },
+    {
+      "path": "src/tgl.h",
+      "sha256": "8ba121f41d65f6731d266981241ba936e3f9b14f42e4c5a105c65d53b74e9694"
     }
   ],
   "runtime_fixtures": {
@@ -223,5 +253,37 @@
     "save_reload_save_roundtrip": true,
     "short_input_behavior": "Empty/short inputs that exhausted the old fixed buffer now yield valid gzip.",
     "cpu_speedup_claimed": false
+  },
+  "rendering": {
+    "results": "docs/render-save-results.json",
+    "hotkey_ab_processes": 6,
+    "map_ab_processes": 6,
+    "movement_hotkey_cpu_per_call_before_ms": 1.1556705573769999,
+    "movement_hotkey_cpu_per_call_after_ms": 0.8827191639344263,
+    "whole_combat_speedup_claimed": false,
+    "hardware_gpu_tested": false,
+    "map_final_pixel_cache": false,
+    "gc_schedule_modified": false,
+    "hotkey_full_ui_pixel_frames": 120,
+    "hotkey_full_ui_rgba_equal": true,
+    "map_preparation_before_native_fbo_bind": true,
+    "map_full_shader_pixel_frames": 48,
+    "map_full_shader_and_public_mask_rgba_equal": true,
+    "pixel_diagnostics_gc_isolated": true,
+    "controlled_map_cpu_speedup_claimed": false
+  },
+  "save_callbacks": {
+    "results": "docs/save-followup-results.json",
+    "save_ab_processes": 6,
+    "real_calls": 2854,
+    "optimized_calls": 2854,
+    "fallbacks": 0,
+    "callback_pairs": 2,
+    "full_gc_calls": 3,
+    "native_serializer_replaced": false,
+    "save_format_modified": false,
+    "stable_cpu_or_long_frame_improvement": false,
+    "full_character_and_world_reload_resave": true,
+    "output_zip_crc_checks": 184
   }
 }

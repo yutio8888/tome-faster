@@ -1,0 +1,667 @@
+{
+  "date": "2026-09-13",
+  "addon_version": "0.2.5",
+  "baseline_addon_version": "0.2.4",
+  "engine_commit": "624a67329fe2ad440c5b344785a9c73fcf22ae63",
+  "scope": "Share two native serializer callbacks per Savefile to reduce transient Lua closures; retain full snapshots, three full GC barriers, object ordering/yields and stock writer protocol.",
+  "environment": {
+    "game": "ToME 1.7.6",
+    "runtime": "LuaJIT 2.0.2",
+    "cpu": "AMD Ryzen 7 9800X3D",
+    "graphics": "Mesa llvmpipe / Xvfb 1280x800, approximately 30 FPS cap",
+    "offline": true,
+    "input_saves": 1
+  },
+  "save_ab": {
+    "method": "Three independent fresh-input-copy pairs, with order before/after, after/before, before/after; 2 s warmup; detail=false; only save_callbacks toggled, hotkey text cache enabled and effect mask batching disabled.",
+    "samples": [
+      {
+        "session": "stutter-save-callbacks-v1-before-pair1-01",
+        "pair": 1,
+        "enabled": false,
+        "config": "detail=false, effect_mask_batch=false, hotkey_text_cache=true, save_callbacks=false, save_only=true, validate_save_state=true",
+        "driver_sha256": "dfbfd30e8044d936006bccae3bc07d9ba0be935a45f039ebd803691439e36b3d",
+        "completed": true,
+        "exit_code": 0,
+        "turn_delta": 0,
+        "synchronous_ms": 172.82621097565,
+        "synchronous_main_thread_cpu_ms": 164.486833,
+        "save_flow_ms": 602.65775898099,
+        "phase_main_thread_cpu_ms": 484.671432,
+        "max_display_callback_interval_ms": 182.08809199929,
+        "display_intervals": {
+          "count": 14,
+          "max_ms": 182.08809199929,
+          "p95_ms": 182.08809199929,
+          "over_50_ms": 3,
+          "over_100_ms": 1
+        },
+        "functions": {
+          "mod.class.Game.display": {
+            "calls": 15,
+            "wall_ms": 132.57645004988,
+            "max_ms": 24.11437100172,
+            "cpu_ms": 62.368594
+          },
+          "mod.class.Game.tick": {
+            "calls": 17932,
+            "wall_ms": 421.25743824244,
+            "max_ms": 172.84807100892,
+            "cpu_ms": 401.55039100001
+          },
+          "mod.class.Game.saveGame": {
+            "calls": 1,
+            "wall_ms": 172.82621097565,
+            "max_ms": 172.82621097565,
+            "cpu_ms": 164.486833
+          }
+        },
+        "selected_state": {
+          "equal": true,
+          "actors": 27,
+          "inventory_items": 203,
+          "changed_sections": 0,
+          "added_sections": 0,
+          "removed_sections": 0
+        },
+        "integrity": {
+          "detection": "zipfile.is_zipfile on every regular file beneath save directory",
+          "character_archives": 22,
+          "world_archives": 1,
+          "total_archives": 23,
+          "total_entries": 21063,
+          "all_entries_crc_passed": true
+        }
+      },
+      {
+        "session": "stutter-save-callbacks-v1-after-pair1-01",
+        "pair": 1,
+        "enabled": true,
+        "config": "detail=false, effect_mask_batch=false, hotkey_text_cache=true, save_callbacks=true, save_only=true, validate_save_state=true",
+        "driver_sha256": "dfbfd30e8044d936006bccae3bc07d9ba0be935a45f039ebd803691439e36b3d",
+        "completed": true,
+        "exit_code": 0,
+        "turn_delta": 0,
+        "synchronous_ms": 171.84139099717,
+        "synchronous_main_thread_cpu_ms": 165.931465,
+        "save_flow_ms": 582.48266199231,
+        "phase_main_thread_cpu_ms": 488.157895,
+        "max_display_callback_interval_ms": 179.87292200327,
+        "display_intervals": {
+          "count": 12,
+          "max_ms": 179.87292200327,
+          "p95_ms": 179.87292200327,
+          "over_50_ms": 4,
+          "over_100_ms": 1
+        },
+        "functions": {
+          "mod.class.Game.display": {
+            "calls": 13,
+            "wall_ms": 109.87321305275,
+            "max_ms": 17.640464007854,
+            "cpu_ms": 52.185145000001
+          },
+          "mod.class.Game.tick": {
+            "calls": 19299,
+            "wall_ms": 426.57951390743,
+            "max_ms": 171.86566200852,
+            "cpu_ms": 412.48244899997
+          },
+          "mod.class.Game.saveGame": {
+            "calls": 1,
+            "wall_ms": 171.84139099717,
+            "max_ms": 171.84139099717,
+            "cpu_ms": 165.931465
+          }
+        },
+        "selected_state": {
+          "equal": true,
+          "actors": 27,
+          "inventory_items": 203,
+          "changed_sections": 0,
+          "added_sections": 0,
+          "removed_sections": 0
+        },
+        "integrity": {
+          "detection": "zipfile.is_zipfile on every regular file beneath save directory",
+          "character_archives": 22,
+          "world_archives": 1,
+          "total_archives": 23,
+          "total_entries": 21063,
+          "all_entries_crc_passed": true
+        }
+      },
+      {
+        "session": "stutter-save-callbacks-v1-after-pair2-01",
+        "pair": 2,
+        "enabled": true,
+        "config": "detail=false, effect_mask_batch=false, hotkey_text_cache=true, save_callbacks=true, save_only=true, validate_save_state=true",
+        "driver_sha256": "dfbfd30e8044d936006bccae3bc07d9ba0be935a45f039ebd803691439e36b3d",
+        "completed": true,
+        "exit_code": 0,
+        "turn_delta": 0,
+        "synchronous_ms": 171.06338399649,
+        "synchronous_main_thread_cpu_ms": 165.162187,
+        "save_flow_ms": 584.80884999037,
+        "phase_main_thread_cpu_ms": 482.1194,
+        "max_display_callback_interval_ms": 179.12581500411,
+        "display_intervals": {
+          "count": 13,
+          "max_ms": 179.12581500411,
+          "p95_ms": 179.12581500411,
+          "over_50_ms": 4,
+          "over_100_ms": 1
+        },
+        "functions": {
+          "mod.class.Game.display": {
+            "calls": 14,
+            "wall_ms": 115.76293298602,
+            "max_ms": 15.424425005913,
+            "cpu_ms": 53.967773
+          },
+          "mod.class.Game.tick": {
+            "calls": 17836,
+            "wall_ms": 428.95293661952,
+            "max_ms": 171.10172602534,
+            "cpu_ms": 407.41825100001
+          },
+          "mod.class.Game.saveGame": {
+            "calls": 1,
+            "wall_ms": 171.06338399649,
+            "max_ms": 171.06338399649,
+            "cpu_ms": 165.162187
+          }
+        },
+        "selected_state": {
+          "equal": true,
+          "actors": 27,
+          "inventory_items": 203,
+          "changed_sections": 0,
+          "added_sections": 0,
+          "removed_sections": 0
+        },
+        "integrity": {
+          "detection": "zipfile.is_zipfile on every regular file beneath save directory",
+          "character_archives": 22,
+          "world_archives": 1,
+          "total_archives": 23,
+          "total_entries": 21063,
+          "all_entries_crc_passed": true
+        }
+      },
+      {
+        "session": "stutter-save-callbacks-v1-before-pair2-01",
+        "pair": 2,
+        "enabled": false,
+        "config": "detail=false, effect_mask_batch=false, hotkey_text_cache=true, save_callbacks=false, save_only=true, validate_save_state=true",
+        "driver_sha256": "dfbfd30e8044d936006bccae3bc07d9ba0be935a45f039ebd803691439e36b3d",
+        "completed": true,
+        "exit_code": 0,
+        "turn_delta": 0,
+        "synchronous_ms": 168.14111000299,
+        "synchronous_main_thread_cpu_ms": 159.445153,
+        "save_flow_ms": 601.46878799796,
+        "phase_main_thread_cpu_ms": 481.291068,
+        "max_display_callback_interval_ms": 176.78672501445,
+        "display_intervals": {
+          "count": 12,
+          "max_ms": 176.78672501445,
+          "p95_ms": 176.78672501445,
+          "over_50_ms": 4,
+          "over_100_ms": 1
+        },
+        "functions": {
+          "mod.class.Game.display": {
+            "calls": 13,
+            "wall_ms": 107.72402095795,
+            "max_ms": 15.324344009161,
+            "cpu_ms": 48.926059
+          },
+          "mod.class.Game.tick": {
+            "calls": 18253,
+            "wall_ms": 436.39606699347,
+            "max_ms": 168.16317999363,
+            "cpu_ms": 410.80437900005
+          },
+          "mod.class.Game.saveGame": {
+            "calls": 1,
+            "wall_ms": 168.14111000299,
+            "max_ms": 168.14111000299,
+            "cpu_ms": 159.445153
+          }
+        },
+        "selected_state": {
+          "equal": true,
+          "actors": 27,
+          "inventory_items": 203,
+          "changed_sections": 0,
+          "added_sections": 0,
+          "removed_sections": 0
+        },
+        "integrity": {
+          "detection": "zipfile.is_zipfile on every regular file beneath save directory",
+          "character_archives": 22,
+          "world_archives": 1,
+          "total_archives": 23,
+          "total_entries": 21063,
+          "all_entries_crc_passed": true
+        }
+      },
+      {
+        "session": "stutter-save-callbacks-v1-before-pair3-01",
+        "pair": 3,
+        "enabled": false,
+        "config": "detail=false, effect_mask_batch=false, hotkey_text_cache=true, save_callbacks=false, save_only=true, validate_save_state=true",
+        "driver_sha256": "dfbfd30e8044d936006bccae3bc07d9ba0be935a45f039ebd803691439e36b3d",
+        "completed": true,
+        "exit_code": 0,
+        "turn_delta": 0,
+        "synchronous_ms": 163.04760399461,
+        "synchronous_main_thread_cpu_ms": 154.264357,
+        "save_flow_ms": 586.54767301679,
+        "phase_main_thread_cpu_ms": 477.04987,
+        "max_display_callback_interval_ms": 170.87326198816,
+        "display_intervals": {
+          "count": 13,
+          "max_ms": 170.87326198816,
+          "p95_ms": 170.87326198816,
+          "over_50_ms": 4,
+          "over_100_ms": 1
+        },
+        "functions": {
+          "mod.class.Game.display": {
+            "calls": 14,
+            "wall_ms": 111.58604493737,
+            "max_ms": 15.213161975145,
+            "cpu_ms": 52.267268999999
+          },
+          "mod.class.Game.tick": {
+            "calls": 18157,
+            "wall_ms": 427.74187451601,
+            "max_ms": 163.09321501851,
+            "cpu_ms": 403.23634299997
+          },
+          "mod.class.Game.saveGame": {
+            "calls": 1,
+            "wall_ms": 163.04760399461,
+            "max_ms": 163.04760399461,
+            "cpu_ms": 154.264357
+          }
+        },
+        "selected_state": {
+          "equal": true,
+          "actors": 27,
+          "inventory_items": 203,
+          "changed_sections": 0,
+          "added_sections": 0,
+          "removed_sections": 0
+        },
+        "integrity": {
+          "detection": "zipfile.is_zipfile on every regular file beneath save directory",
+          "character_archives": 22,
+          "world_archives": 1,
+          "total_archives": 23,
+          "total_entries": 21063,
+          "all_entries_crc_passed": true
+        }
+      },
+      {
+        "session": "stutter-save-callbacks-v1-after-pair3-01",
+        "pair": 3,
+        "enabled": true,
+        "config": "detail=false, effect_mask_batch=false, hotkey_text_cache=true, save_callbacks=true, save_only=true, validate_save_state=true",
+        "driver_sha256": "dfbfd30e8044d936006bccae3bc07d9ba0be935a45f039ebd803691439e36b3d",
+        "completed": true,
+        "exit_code": 0,
+        "turn_delta": 0,
+        "synchronous_ms": 172.60306799412,
+        "synchronous_main_thread_cpu_ms": 163.305961,
+        "save_flow_ms": 635.38978201151,
+        "phase_main_thread_cpu_ms": 516.802995,
+        "max_display_callback_interval_ms": 181.4794549942,
+        "display_intervals": {
+          "count": 12,
+          "max_ms": 181.4794549942,
+          "p95_ms": 181.4794549942,
+          "over_50_ms": 4,
+          "over_100_ms": 2
+        },
+        "functions": {
+          "mod.class.Game.display": {
+            "calls": 13,
+            "wall_ms": 107.53040903807,
+            "max_ms": 13.011372983456,
+            "cpu_ms": 47.694074000001
+          },
+          "mod.class.Game.tick": {
+            "calls": 17201,
+            "wall_ms": 475.17380586267,
+            "max_ms": 172.64055800438,
+            "cpu_ms": 448.92347299999
+          },
+          "mod.class.Game.saveGame": {
+            "calls": 1,
+            "wall_ms": 172.60306799412,
+            "max_ms": 172.60306799412,
+            "cpu_ms": 163.305961
+          }
+        },
+        "selected_state": {
+          "equal": true,
+          "actors": 27,
+          "inventory_items": 203,
+          "changed_sections": 0,
+          "added_sections": 0,
+          "removed_sections": 0
+        },
+        "integrity": {
+          "detection": "zipfile.is_zipfile on every regular file beneath save directory",
+          "character_archives": 22,
+          "world_archives": 1,
+          "total_archives": 23,
+          "total_entries": 21063,
+          "all_entries_crc_passed": true
+        }
+      }
+    ],
+    "medians": {
+      "before": {
+        "synchronous_ms": 168.14111000299,
+        "synchronous_main_thread_cpu_ms": 159.445153,
+        "save_flow_ms": 601.46878799796,
+        "phase_main_thread_cpu_ms": 481.291068,
+        "max_display_callback_interval_ms": 176.78672501445
+      },
+      "after": {
+        "synchronous_ms": 171.84139099717,
+        "synchronous_main_thread_cpu_ms": 165.162187,
+        "save_flow_ms": 584.80884999037,
+        "phase_main_thread_cpu_ms": 488.157895,
+        "max_display_callback_interval_ms": 179.87292200327
+      }
+    },
+    "interpretation": "No stable improvement in synchronous stall, main-thread CPU or longest display interval. Lower median flow time is not consistent across pairs and does not establish end-to-end speedup."
+  },
+  "installation_and_root_audit": {
+    "session": "stutter-save-followup-audit-01",
+    "completed": true,
+    "exit_code": 0,
+    "included_in_ab": false,
+    "exclusion_reason": "detail=true wraps dumpToJSON, so conservative offline export guard falls back and performs extra export work; only installation/count and hotspot diagnosis are used.",
+    "callback_statistics": {
+      "calls": 2854,
+      "optimized": 2854,
+      "enabled": true,
+      "fallbacks": 0,
+      "callback_pairs": 2
+    },
+    "selected_state": {
+      "equal": true,
+      "actors": 27,
+      "inventory_items": 203,
+      "changed_sections": 0,
+      "added_sections": 0,
+      "removed_sections": 0
+    },
+    "functions": {
+      "mod.class.Game.cloneForSave": {
+        "calls": 1,
+        "wall_ms": 103.63848298788,
+        "clone_objects": 27364,
+        "cpu_ms": 103.397966,
+        "max_ms": 103.63848298788
+      },
+      "mod.class.Game.takeScreenshot": {
+        "calls": 1,
+        "wall_ms": 50.944084018469,
+        "max_ms": 50.944084018469,
+        "cpu_ms": 46.170167
+      },
+      "GC.full": {
+        "calls": 3,
+        "wall_ms": 106.36440703273,
+        "max_ms": 45.566437005997,
+        "cpu_ms": 106.038726
+      },
+      "engine.Savefile.saveObject": {
+        "calls": 2,
+        "wall_ms": 122.48578700423,
+        "max_ms": 114.73484998941,
+        "cpu_ms": 96.847016
+      },
+      "engine.Savefile.saveGame": {
+        "calls": 1,
+        "wall_ms": 152.93428400159,
+        "max_ms": 152.93428400159,
+        "cpu_ms": 123.667824
+      },
+      "engine.Savefile.saveWorld": {
+        "calls": 1,
+        "wall_ms": 65.886144012213,
+        "max_ms": 65.886144012213,
+        "cpu_ms": 55.505297
+      },
+      "mod.class.Player.dumpToJSON": {
+        "calls": 1,
+        "wall_ms": 238.72681099176,
+        "max_ms": 238.72681099176,
+        "cpu_ms": 238.110677
+      },
+      "mod.class.Player.saveUUID": {
+        "calls": 1,
+        "wall_ms": 253.67697098851,
+        "max_ms": 253.67697098851,
+        "cpu_ms": 253.031374
+      }
+    },
+    "timing_note": "Nested spans must not be added; Savefile.saveObject spans include time across coroutine yields.",
+    "root_audit": {
+      "raw_tables": 128179,
+      "kind": "snapshot_root_audit",
+      "special_tables": {
+        "raw_saveinstead": 49,
+        "weak": 1139,
+        "threads": 0,
+        "opaque_index": 9
+      },
+      "candidates": [
+        {
+          "field": "uiset",
+          "exclusive_raw_tables": 694,
+          "value_type": "table",
+          "branch_tables": 36899,
+          "exclusive_raw_table_percent": 0.5414303435040061
+        },
+        {
+          "field": "calendar",
+          "exclusive_raw_tables": 14,
+          "value_type": "table",
+          "branch_tables": 14,
+          "exclusive_raw_table_percent": 0.010922225949648538
+        },
+        {
+          "field": "flyers",
+          "exclusive_raw_tables": 2,
+          "value_type": "table",
+          "branch_tables": 2,
+          "exclusive_raw_table_percent": 0.001560317992806934
+        },
+        {
+          "field": "tooltip",
+          "exclusive_raw_tables": 1039,
+          "value_type": "table",
+          "branch_tables": 1055,
+          "exclusive_raw_table_percent": 0.8105851972632022
+        },
+        {
+          "field": "target",
+          "exclusive_raw_tables": 5,
+          "value_type": "table",
+          "branch_tables": 36206,
+          "exclusive_raw_table_percent": 0.0039007949820173355
+        },
+        {
+          "field": "dialogs",
+          "exclusive_raw_tables": 1,
+          "value_type": "table",
+          "branch_tables": 1,
+          "exclusive_raw_table_percent": 0.000780158996403467
+        },
+        {
+          "field": "key",
+          "exclusive_raw_tables": 0,
+          "value_type": "table",
+          "branch_tables": 209,
+          "exclusive_raw_table_percent": 0.0
+        },
+        {
+          "field": "mouse",
+          "exclusive_raw_tables": 30,
+          "value_type": "table",
+          "branch_tables": 30,
+          "exclusive_raw_table_percent": 0.02340476989210401
+        },
+        {
+          "field": "cults_book_data",
+          "exclusive_raw_tables": 5,
+          "value_type": "table",
+          "branch_tables": 5,
+          "exclusive_raw_table_percent": 0.0039007949820173355
+        }
+      ],
+      "caveat": "Raw reachability only: no clone mutation, no metamethod invocation, no weak/SAVEINSTEAD/threads equivalence claim"
+    }
+  },
+  "fixture": {
+    "functional_checks": 562,
+    "jit_on_passed": true,
+    "jit_off_passed": true,
+    "actual_pinned_native_serializer": true,
+    "actual_pinned_native_worker_controlled_sink": true,
+    "microbenchmark": {
+      "objects": 2853,
+      "warmup_pairs": 2,
+      "measured_pairs": 9,
+      "order": "alternating",
+      "identity_tracking_during_benchmark": false,
+      "gc_during_measurement": "stopped on both sides; restarted afterward",
+      "summary": {
+        "before": {
+          "ms": 4.502,
+          "lua_kib": 2887.445
+        },
+        "after": {
+          "ms": 4.458,
+          "lua_kib": 2489.902
+        }
+      },
+      "interpretation": "Reduces transient Lua allocation; CPU effectively unchanged. Excludes real snapshots, compression, disk, UI and game scheduling."
+    },
+    "counterexamples": {
+      "adjacent_full_gc": {
+        "one_cycle": "A finalized, weak B alive",
+        "two_cycles": "A and B finalized, weak B cleared"
+      },
+      "step_barrier": "finishing old partial cycle can retain weak value that fresh full GC clears",
+      "worker_partial_queue": {
+        "early_wake": {
+          "archive_create": 2,
+          "close": 2,
+          "completion": 2
+        },
+        "enqueue_all": {
+          "archive_create": 1,
+          "close": 1,
+          "completion": 1
+        }
+      },
+      "root_whitelist_only": "pinned PlayerDumpJSON last_messages reads omitted uiset and fails"
+    }
+  },
+  "roundtrips": [
+    {
+      "session": "render-save-roundtrip-20260913",
+      "input_from_session": "stutter-save-callbacks-v1-after-pair3-01",
+      "input_archive_sha256": "96177b6f60d47374147b28fdea984c53ed3101e832b929ef5e9e2a697569cfe9",
+      "input_scope": "Character directory only (22 archives), matching original input layout; prior save-root world.teaw was not included.",
+      "claim_scope": "Character archive reload and subsequent save; this does not prove prior World state was reloaded.",
+      "completed": true,
+      "exit_code": 0,
+      "session_wall_s": 9.93714735598769,
+      "idle_ms": 5026.7643199861,
+      "idle_turn_delta": 0,
+      "save_turn_delta": 0,
+      "selected_state": {
+        "equal": true,
+        "actors": 27,
+        "inventory_items": 203,
+        "changed_sections": 0,
+        "added_sections": 0,
+        "removed_sections": 0
+      },
+      "output_integrity": {
+        "detection": "zipfile.is_zipfile on every regular file beneath save directory",
+        "character_archives": 22,
+        "world_archives": 1,
+        "total_archives": 23,
+        "total_entries": 21068,
+        "all_entries_crc_passed": true
+      },
+      "settings": "detail=false, hotkey_text_cache/effect_mask_batch/save_callbacks enabled; idle 5 s then save"
+    },
+    {
+      "session": "render-save-full-roundtrip-20260913",
+      "input_from_session": "stutter-save-callbacks-v1-after-pair3-01",
+      "input_archive_sha256": "80afc4c8578b30fecf9559fbd85db40fb401b16eb0ed8e24c1cacc48f9fad88b",
+      "input_scope": "Entire save-root archive, including all 22 character archives and prior world.teaw.",
+      "input_archive_bytes_match_source": true,
+      "input_archives_verified": 23,
+      "claim_scope": "Character and prior World archive supplied together, loaded, idled, and saved again.",
+      "completed": true,
+      "exit_code": 0,
+      "session_wall_s": 9.788949454989051,
+      "idle_ms": 5023.7255800068,
+      "idle_turn_delta": 0,
+      "save_turn_delta": 0,
+      "selected_state": {
+        "equal": true,
+        "actors": 27,
+        "inventory_items": 203,
+        "changed_sections": 0,
+        "added_sections": 0,
+        "removed_sections": 0
+      },
+      "output_integrity": {
+        "detection": "zipfile.is_zipfile on every regular file beneath save directory",
+        "character_archives": 22,
+        "world_archives": 1,
+        "total_archives": 23,
+        "total_entries": 21068,
+        "all_entries_crc_passed": true
+      },
+      "settings": "detail=false, hotkey_text_cache/effect_mask_batch/save_callbacks enabled; idle 5 s then save",
+      "input_all_entries_crc_passed": true,
+      "input_outer_archive_crc_passed": true
+    }
+  ],
+  "integrity_totals": {
+    "sessions": 8,
+    "character_archives": 176,
+    "world_archives": 8,
+    "all_archives": 184,
+    "all_entries_crc_passed": true
+  },
+  "remaining_work": {
+    "game_root_pruning": "Not implemented. Actual exporter/UI/hook dependencies and special-reference behavior remain required; largest audited candidate tooltip has 1039 exclusive raw tables (0.81%), not a clone-cost percentage.",
+    "frozen_snapshot_transaction": "Not implemented. Requires frozen rule state, controlled UI writes, weak/finalizer semantics, second-save/exit/error ordering.",
+    "gc_scheduling": "Unchanged. Adjacent-cycle merge and first-true incremental replacement rejected by observable weak/finalizer counterexamples.",
+    "streaming_background_writer": "Unchanged. Actual worker closes and reports complete on queue starvation; new producer/consumer protocol is required."
+  },
+  "limits": [
+    "One input save and installed addon combination on Linux software rendering; no Windows/macOS, hardware GPU, Steam/cloud or actual online transmission validation.",
+    "Selected live-state checks are not complete-world equivalence.",
+    "Raw table counts exclude semantic dependency proof and do not measure cloning CPU cost.",
+    "Synthetic allocation savings do not establish lower real-game peak memory or CPU.",
+    "First roundtrip carries character archives only; a second verified full-input roundtrip also carries prior world.teaw. Selected-state/CRC checks still do not prove every World field is semantically identical."
+  ]
+}

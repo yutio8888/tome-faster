@@ -24,4 +24,7 @@ local Map = loadPrevious(...)
 if not require("engine.FasterRuntime").installMap(Map, config.settings.faster_tome) then
     print("[Faster ToME4] Map source cache skipped (disabled or unknown override)")
 end
+if not require("engine.FasterEffectMask").install(Map, config.settings.faster_tome) then
+    print("[Faster ToME4] Map effect mask batching skipped (disabled or unknown override)")
+end
 return Map

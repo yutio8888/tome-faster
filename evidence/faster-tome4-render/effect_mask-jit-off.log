@@ -1,0 +1,2 @@
+EGL mask renderer: llvmpipe (LLVM 15.0.6, 256 bits)
+PASS effect mask: 876 checks; actual pinned native GL masks/state and ordered animation calls

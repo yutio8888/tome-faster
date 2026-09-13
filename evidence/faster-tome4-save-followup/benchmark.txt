@@ -1,0 +1,19 @@
+BENCH mode=before sample=1 ms=4.276 lua_kib=2887.797 objects=2853
+BENCH mode=after sample=1 ms=4.220 lua_kib=2491.172 objects=2853
+BENCH mode=after sample=2 ms=4.376 lua_kib=2487.023 objects=2853
+BENCH mode=before sample=2 ms=4.610 lua_kib=2889.027 objects=2853
+BENCH mode=before sample=3 ms=4.427 lua_kib=2887.176 objects=2853
+BENCH mode=after sample=3 ms=4.367 lua_kib=2489.902 objects=2853
+BENCH mode=after sample=4 ms=4.465 lua_kib=2487.023 objects=2853
+BENCH mode=before sample=4 ms=4.599 lua_kib=2887.445 objects=2853
+BENCH mode=before sample=5 ms=4.356 lua_kib=2887.473 objects=2853
+BENCH mode=after sample=5 ms=4.453 lua_kib=2489.902 objects=2853
+BENCH mode=after sample=6 ms=4.563 lua_kib=2487.023 objects=2853
+BENCH mode=before sample=6 ms=4.619 lua_kib=2887.445 objects=2853
+BENCH mode=before sample=7 ms=4.310 lua_kib=2886.715 objects=2853
+BENCH mode=after sample=7 ms=4.458 lua_kib=2490.914 objects=2853
+BENCH mode=after sample=8 ms=4.537 lua_kib=2487.023 objects=2853
+BENCH mode=before sample=8 ms=4.762 lua_kib=2888.988 objects=2853
+BENCH mode=before sample=9 ms=4.502 lua_kib=2886.863 objects=2853
+BENCH mode=after sample=9 ms=4.753 lua_kib=2489.902 objects=2853
+PASS save followup: 560 checks; pinned C bytes/filtering, ordering/yields, callbacks, weak lifetime, errors/retry, GC counterexample

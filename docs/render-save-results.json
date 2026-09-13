@@ -1,0 +1,2215 @@
+{
+  "date": "2026-09-13",
+  "addon_version": "0.2.5",
+  "engine_commit": "624a67329fe2ad440c5b344785a9c73fcf22ae63",
+  "environment": {
+    "runtime": "embedded LuaJIT 2.0.2",
+    "display": "Xvfb 1280x800 ~30 FPS",
+    "renderer": "Mesa llvmpipe software rendering",
+    "hardware_gpu": false
+  },
+  "method": "Fresh immutable-save copies, three alternating pairs, detail=false; only named option differs within each experiment.",
+  "combat_caveat": "RNG trajectories and action counts differ. Whole-combat speedup is not established by these samples.",
+  "experiments": {
+    "hotkeys": [
+      {
+        "session": "stutter-hotkeys-v1-after-pair1-01",
+        "pair": 1,
+        "side": "after",
+        "process_completed": true,
+        "phases": [
+          {
+            "phase": "move",
+            "wall_ms": 2019.1273670197,
+            "cpu_ms": 231.757138,
+            "turn_delta": 600,
+            "cache_stats": {
+              "FasterHotkeys": {
+                "invalidations": 1,
+                "max_bytes": 4194304,
+                "max_entries": 512,
+                "bypasses": 0,
+                "evictions": 0,
+                "hits": 1260,
+                "entries": 21,
+                "misses": 21,
+                "bytes": 56324
+              },
+              "FasterEffectMask": {
+                "native_bytes": 0,
+                "max_entries": 32,
+                "entries": 0,
+                "max_grids": 4096,
+                "max_native_bytes": 4194304,
+                "hits": 0,
+                "draws": 0,
+                "extra_fbos": 0,
+                "saved_draws": 0,
+                "misses": 0,
+                "skips": 0
+              }
+            },
+            "records": {
+              "mod.class.Game.display": {
+                "calls": 61,
+                "wall_ms": 462.15352699161,
+                "max_ms": 14.704690009356,
+                "cpu_ms": 196.777143
+              },
+              "mod.class.Game.tick": {
+                "calls": 660,
+                "wall_ms": 26.252355098724,
+                "max_ms": 0.22265201807022,
+                "cpu_ms": 27.590831999996
+              },
+              "engine.HotkeysIconsDisplay.display": {
+                "calls": 61,
+                "wall_ms": 53.159065961838,
+                "max_ms": 7.4183549880981,
+                "cpu_ms": 52.859226000001
+              },
+              "engine.Map.displayEffects": {
+                "calls": 1220,
+                "wall_ms": 1.4870221912861,
+                "max_ms": 0.016050010919571,
+                "cpu_ms": 2.8740919999996
+              }
+            },
+            "actions": 60,
+            "frames": 61,
+            "frame_p50_ms": 33.029971003532,
+            "frame_p95_ms": 34.868777006865,
+            "frame_max_ms": 37.405759990215
+          },
+          {
+            "phase": "combat",
+            "reason": "low_life_stop",
+            "wall_ms": 1830.4728440046,
+            "cpu_ms": 477.029089,
+            "turn_delta": 413,
+            "cache_stats": {
+              "FasterHotkeys": {
+                "invalidations": 1,
+                "max_bytes": 4194304,
+                "max_entries": 512,
+                "bypasses": 0,
+                "evictions": 0,
+                "hits": 2240,
+                "entries": 27,
+                "misses": 27,
+                "bytes": 154628
+              },
+              "FasterEffectMask": {
+                "native_bytes": 0,
+                "max_entries": 32,
+                "entries": 0,
+                "max_grids": 4096,
+                "max_native_bytes": 4194304,
+                "hits": 0,
+                "draws": 0,
+                "extra_fbos": 0,
+                "saved_draws": 0,
+                "misses": 0,
+                "skips": 0
+              }
+            },
+            "records": {
+              "mod.class.Game.display": {
+                "calls": 50,
+                "wall_ms": 701.64647692442,
+                "max_ms": 50.981148988008,
+                "cpu_ms": 279.428847
+              },
+              "mod.class.Game.tick": {
+                "calls": 459,
+                "wall_ms": 133.29504778981,
+                "max_ms": 24.013581991196,
+                "cpu_ms": 123.708337
+              },
+              "engine.HotkeysIconsDisplay.display": {
+                "calls": 50,
+                "wall_ms": 79.98760202527,
+                "max_ms": 12.570040017366,
+                "cpu_ms": 79.648861999997
+              },
+              "engine.Map.displayEffects": {
+                "calls": 1000,
+                "wall_ms": 74.743843853474,
+                "max_ms": 9.9507769942284,
+                "cpu_ms": 5.7521680000086
+              }
+            },
+            "actions": 43,
+            "frames": 50,
+            "frame_p50_ms": 33.197962999344,
+            "frame_p95_ms": 55.095715016127,
+            "frame_max_ms": 82.044272989035
+          }
+        ]
+      },
+      {
+        "session": "stutter-hotkeys-v1-before-pair1-01",
+        "pair": 1,
+        "side": "before",
+        "process_completed": true,
+        "phases": [
+          {
+            "phase": "move",
+            "wall_ms": 2017.6003829837,
+            "cpu_ms": 275.356527,
+            "turn_delta": 600,
+            "cache_stats": {
+              "FasterHotkeys": {
+                "invalidations": 0,
+                "max_bytes": 4194304,
+                "max_entries": 512,
+                "bypasses": 0,
+                "evictions": 0,
+                "hits": 0,
+                "entries": 0,
+                "misses": 0,
+                "bytes": 0
+              },
+              "FasterEffectMask": {
+                "native_bytes": 0,
+                "max_entries": 32,
+                "entries": 0,
+                "max_grids": 4096,
+                "max_native_bytes": 4194304,
+                "hits": 0,
+                "draws": 0,
+                "extra_fbos": 0,
+                "saved_draws": 0,
+                "misses": 0,
+                "skips": 0
+              }
+            },
+            "records": {
+              "mod.class.Game.display": {
+                "calls": 61,
+                "wall_ms": 524.95002195239,
+                "max_ms": 17.953127980232,
+                "cpu_ms": 235.712593
+              },
+              "mod.class.Game.tick": {
+                "calls": 660,
+                "wall_ms": 30.237353652716,
+                "max_ms": 0.26758298277855,
+                "cpu_ms": 31.283470000001
+              },
+              "engine.HotkeysIconsDisplay.display": {
+                "calls": 61,
+                "wall_ms": 72.222065061331,
+                "max_ms": 10.237340003252,
+                "cpu_ms": 71.829450000002
+              },
+              "engine.Map.displayEffects": {
+                "calls": 1220,
+                "wall_ms": 1.8427764475346,
+                "max_ms": 0.05918100476265,
+                "cpu_ms": 3.4224730000055
+              }
+            },
+            "actions": 60,
+            "frames": 61,
+            "frame_p50_ms": 33.021290004253,
+            "frame_p95_ms": 34.58234500885,
+            "frame_max_ms": 40.822519004345
+          },
+          {
+            "phase": "combat",
+            "wall_ms": 2830.9045360088,
+            "cpu_ms": 836.51835,
+            "turn_delta": 532,
+            "cache_stats": {
+              "FasterHotkeys": {
+                "invalidations": 0,
+                "max_bytes": 4194304,
+                "max_entries": 512,
+                "bypasses": 0,
+                "evictions": 0,
+                "hits": 0,
+                "entries": 0,
+                "misses": 0,
+                "bytes": 0
+              },
+              "FasterEffectMask": {
+                "native_bytes": 0,
+                "max_entries": 32,
+                "entries": 0,
+                "max_grids": 4096,
+                "max_native_bytes": 4194304,
+                "hits": 0,
+                "draws": 0,
+                "extra_fbos": 0,
+                "saved_draws": 0,
+                "misses": 0,
+                "skips": 0
+              }
+            },
+            "records": {
+              "mod.class.Game.display": {
+                "calls": 66,
+                "wall_ms": 1242.4427121282,
+                "max_ms": 56.852219998837,
+                "cpu_ms": 448.234927
+              },
+              "mod.class.Game.tick": {
+                "calls": 597,
+                "wall_ms": 328.66770619154,
+                "max_ms": 44.570562005043,
+                "cpu_ms": 306.21349799999
+              },
+              "engine.HotkeysIconsDisplay.display": {
+                "calls": 66,
+                "wall_ms": 117.84946706891,
+                "max_ms": 13.130786001682,
+                "cpu_ms": 117.406345
+              },
+              "engine.Map.displayEffects": {
+                "calls": 1320,
+                "wall_ms": 216.32427015901,
+                "max_ms": 14.245276004076,
+                "cpu_ms": 9.9482220000064
+              }
+            },
+            "actions": 60,
+            "frames": 66,
+            "frame_p50_ms": 33.918927997351,
+            "frame_p95_ms": 68.457152992487,
+            "frame_max_ms": 84.090930014849
+          }
+        ]
+      },
+      {
+        "session": "stutter-hotkeys-v1-before-pair2-01",
+        "pair": 2,
+        "side": "before",
+        "process_completed": true,
+        "phases": [
+          {
+            "phase": "move",
+            "wall_ms": 2017.8471049964,
+            "cpu_ms": 269.669484,
+            "turn_delta": 600,
+            "cache_stats": {
+              "FasterHotkeys": {
+                "invalidations": 0,
+                "max_bytes": 4194304,
+                "max_entries": 512,
+                "bypasses": 0,
+                "evictions": 0,
+                "hits": 0,
+                "entries": 0,
+                "misses": 0,
+                "bytes": 0
+              },
+              "FasterEffectMask": {
+                "native_bytes": 0,
+                "max_entries": 32,
+                "entries": 0,
+                "max_grids": 4096,
+                "max_native_bytes": 4194304,
+                "hits": 0,
+                "draws": 0,
+                "extra_fbos": 0,
+                "saved_draws": 0,
+                "misses": 0,
+                "skips": 0
+              }
+            },
+            "records": {
+              "mod.class.Game.display": {
+                "calls": 61,
+                "wall_ms": 516.56530797482,
+                "max_ms": 15.470106005669,
+                "cpu_ms": 230.952039
+              },
+              "mod.class.Game.tick": {
+                "calls": 660,
+                "wall_ms": 29.611302763224,
+                "max_ms": 0.27614200115204,
+                "cpu_ms": 30.611339999994
+              },
+              "engine.HotkeysIconsDisplay.display": {
+                "calls": 61,
+                "wall_ms": 70.863821804523,
+                "max_ms": 8.018550992012,
+                "cpu_ms": 70.495903999997
+              },
+              "engine.Map.displayEffects": {
+                "calls": 1220,
+                "wall_ms": 1.7959282100201,
+                "max_ms": 0.022960007190704,
+                "cpu_ms": 3.4763209999956
+              }
+            },
+            "actions": 60,
+            "frames": 61,
+            "frame_p50_ms": 32.949699014425,
+            "frame_p95_ms": 35.468272000551,
+            "frame_max_ms": 37.608850985765
+          },
+          {
+            "phase": "combat",
+            "reason": "low_life_stop",
+            "wall_ms": 2239.1046270132,
+            "cpu_ms": 581.968473,
+            "turn_delta": 469,
+            "cache_stats": {
+              "FasterHotkeys": {
+                "invalidations": 0,
+                "max_bytes": 4194304,
+                "max_entries": 512,
+                "bypasses": 0,
+                "evictions": 0,
+                "hits": 0,
+                "entries": 0,
+                "misses": 0,
+                "bytes": 0
+              },
+              "FasterEffectMask": {
+                "native_bytes": 0,
+                "max_entries": 32,
+                "entries": 0,
+                "max_grids": 4096,
+                "max_native_bytes": 4194304,
+                "hits": 0,
+                "draws": 0,
+                "extra_fbos": 0,
+                "saved_draws": 0,
+                "misses": 0,
+                "skips": 0
+              }
+            },
+            "records": {
+              "mod.class.Game.display": {
+                "calls": 57,
+                "wall_ms": 1029.203021884,
+                "max_ms": 137.27871698141,
+                "cpu_ms": 336.415846
+              },
+              "mod.class.Game.tick": {
+                "calls": 521,
+                "wall_ms": 195.41143104434,
+                "max_ms": 25.227691024542,
+                "cpu_ms": 167.515313
+              },
+              "engine.HotkeysIconsDisplay.display": {
+                "calls": 57,
+                "wall_ms": 104.71756705642,
+                "max_ms": 15.743748992682,
+                "cpu_ms": 104.274369
+              },
+              "engine.Map.displayEffects": {
+                "calls": 1140,
+                "wall_ms": 123.11791145802,
+                "max_ms": 71.249417006969,
+                "cpu_ms": 5.8097599999978
+              }
+            },
+            "actions": 49,
+            "frames": 57,
+            "frame_p50_ms": 33.203271985054,
+            "frame_p95_ms": 57.498394995928,
+            "frame_max_ms": 145.89790299535
+          }
+        ]
+      },
+      {
+        "session": "stutter-hotkeys-v1-after-pair2-01",
+        "pair": 2,
+        "side": "after",
+        "process_completed": true,
+        "phases": [
+          {
+            "phase": "move",
+            "wall_ms": 2019.8694919944,
+            "cpu_ms": 248.623137,
+            "turn_delta": 600,
+            "cache_stats": {
+              "FasterHotkeys": {
+                "invalidations": 1,
+                "max_bytes": 4194304,
+                "max_entries": 512,
+                "bypasses": 0,
+                "evictions": 0,
+                "hits": 1260,
+                "entries": 21,
+                "misses": 21,
+                "bytes": 56324
+              },
+              "FasterEffectMask": {
+                "native_bytes": 0,
+                "max_entries": 32,
+                "entries": 0,
+                "max_grids": 4096,
+                "max_native_bytes": 4194304,
+                "hits": 0,
+                "draws": 0,
+                "extra_fbos": 0,
+                "saved_draws": 0,
+                "misses": 0,
+                "skips": 0
+              }
+            },
+            "records": {
+              "mod.class.Game.display": {
+                "calls": 61,
+                "wall_ms": 514.42353019118,
+                "max_ms": 20.793393015862,
+                "cpu_ms": 211.149282
+              },
+              "mod.class.Game.tick": {
+                "calls": 660,
+                "wall_ms": 28.008730739355,
+                "max_ms": 0.24532201886177,
+                "cpu_ms": 29.694035999998
+              },
+              "engine.HotkeysIconsDisplay.display": {
+                "calls": 61,
+                "wall_ms": 56.476205974817,
+                "max_ms": 11.643901973963,
+                "cpu_ms": 56.157660999996
+              },
+              "engine.Map.displayEffects": {
+                "calls": 1220,
+                "wall_ms": 1.8422604203224,
+                "max_ms": 0.030770987272263,
+                "cpu_ms": 3.3930019999948
+              }
+            },
+            "actions": 60,
+            "frames": 61,
+            "frame_p50_ms": 32.973810017109,
+            "frame_p95_ms": 34.514853000641,
+            "frame_max_ms": 43.293830990791
+          },
+          {
+            "phase": "combat",
+            "wall_ms": 2985.1052219868,
+            "cpu_ms": 744.524202,
+            "turn_delta": 569,
+            "cache_stats": {
+              "FasterHotkeys": {
+                "invalidations": 1,
+                "max_bytes": 4194304,
+                "max_entries": 512,
+                "bypasses": 0,
+                "evictions": 0,
+                "hits": 2690,
+                "entries": 36,
+                "misses": 36,
+                "bytes": 302084
+              },
+              "FasterEffectMask": {
+                "native_bytes": 0,
+                "max_entries": 32,
+                "entries": 0,
+                "max_grids": 4096,
+                "max_native_bytes": 4194304,
+                "hits": 0,
+                "draws": 0,
+                "extra_fbos": 0,
+                "saved_draws": 0,
+                "misses": 0,
+                "skips": 0
+              }
+            },
+            "records": {
+              "mod.class.Game.display": {
+                "calls": 74,
+                "wall_ms": 1574.3262879252,
+                "max_ms": 130.13228300214,
+                "cpu_ms": 450.641317
+              },
+              "mod.class.Game.tick": {
+                "calls": 631,
+                "wall_ms": 221.35040071607,
+                "max_ms": 14.419736981392,
+                "cpu_ms": 210.52749
+              },
+              "engine.HotkeysIconsDisplay.display": {
+                "calls": 74,
+                "wall_ms": 123.38462412357,
+                "max_ms": 15.78716802597,
+                "cpu_ms": 122.841342
+              },
+              "engine.Map.displayEffects": {
+                "calls": 1480,
+                "wall_ms": 199.5578635335,
+                "max_ms": 57.07532197237,
+                "cpu_ms": 7.7019919999998
+              }
+            },
+            "actions": 60,
+            "frames": 74,
+            "frame_p50_ms": 33.472494006157,
+            "frame_p95_ms": 60.316810011864,
+            "frame_max_ms": 136.45092901587
+          }
+        ]
+      },
+      {
+        "session": "stutter-hotkeys-v1-after-pair3-01",
+        "pair": 3,
+        "side": "after",
+        "process_completed": true,
+        "phases": [
+          {
+            "phase": "move",
+            "wall_ms": 2018.6918010116,
+            "cpu_ms": 245.725326,
+            "turn_delta": 600,
+            "cache_stats": {
+              "FasterHotkeys": {
+                "invalidations": 1,
+                "max_bytes": 4194304,
+                "max_entries": 512,
+                "bypasses": 0,
+                "evictions": 0,
+                "hits": 1260,
+                "entries": 21,
+                "misses": 21,
+                "bytes": 56324
+              },
+              "FasterEffectMask": {
+                "native_bytes": 0,
+                "max_entries": 32,
+                "entries": 0,
+                "max_grids": 4096,
+                "max_native_bytes": 4194304,
+                "hits": 0,
+                "draws": 0,
+                "extra_fbos": 0,
+                "saved_draws": 0,
+                "misses": 0,
+                "skips": 0
+              }
+            },
+            "records": {
+              "mod.class.Game.display": {
+                "calls": 61,
+                "wall_ms": 491.40269908309,
+                "max_ms": 17.595213979483,
+                "cpu_ms": 207.977664
+              },
+              "mod.class.Game.tick": {
+                "calls": 660,
+                "wall_ms": 28.501625865698,
+                "max_ms": 0.76070702075958,
+                "cpu_ms": 29.955703000001
+              },
+              "engine.HotkeysIconsDisplay.display": {
+                "calls": 61,
+                "wall_ms": 54.184464037418,
+                "max_ms": 10.028527975082,
+                "cpu_ms": 53.845869
+              },
+              "engine.Map.displayEffects": {
+                "calls": 1220,
+                "wall_ms": 1.7885749638081,
+                "max_ms": 0.023240000009537,
+                "cpu_ms": 3.3281599999909
+              }
+            },
+            "actions": 60,
+            "frames": 61,
+            "frame_p50_ms": 33.040389984846,
+            "frame_p95_ms": 34.638633996248,
+            "frame_max_ms": 43.184628993273
+          },
+          {
+            "phase": "combat",
+            "reason": "low_life_stop",
+            "wall_ms": 2393.5728810132,
+            "cpu_ms": 642.84764,
+            "turn_delta": 456,
+            "cache_stats": {
+              "FasterHotkeys": {
+                "invalidations": 1,
+                "max_bytes": 4194304,
+                "max_entries": 512,
+                "bypasses": 0,
+                "evictions": 0,
+                "hits": 2367,
+                "entries": 30,
+                "misses": 30,
+                "bytes": 203780
+              },
+              "FasterEffectMask": {
+                "native_bytes": 0,
+                "max_entries": 32,
+                "entries": 0,
+                "max_grids": 4096,
+                "max_native_bytes": 4194304,
+                "hits": 0,
+                "draws": 0,
+                "extra_fbos": 0,
+                "saved_draws": 0,
+                "misses": 0,
+                "skips": 0
+              }
+            },
+            "records": {
+              "mod.class.Game.display": {
+                "calls": 57,
+                "wall_ms": 1055.2135689557,
+                "max_ms": 127.12601599097,
+                "cpu_ms": 340.293449
+              },
+              "mod.class.Game.tick": {
+                "calls": 506,
+                "wall_ms": 238.91558822989,
+                "max_ms": 39.027162998915,
+                "cpu_ms": 220.490766
+              },
+              "engine.HotkeysIconsDisplay.display": {
+                "calls": 57,
+                "wall_ms": 92.923806875944,
+                "max_ms": 15.418285995722,
+                "cpu_ms": 92.615381
+              },
+              "engine.Map.displayEffects": {
+                "calls": 1140,
+                "wall_ms": 328.55949890614,
+                "max_ms": 110.71310201287,
+                "cpu_ms": 7.453548
+              }
+            },
+            "actions": 48,
+            "frames": 57,
+            "frame_p50_ms": 33.290601998568,
+            "frame_p95_ms": 67.729005008936,
+            "frame_max_ms": 136.83627200127
+          }
+        ]
+      },
+      {
+        "session": "stutter-hotkeys-v1-before-pair3-01",
+        "pair": 3,
+        "side": "before",
+        "process_completed": true,
+        "phases": [
+          {
+            "phase": "move",
+            "wall_ms": 2020.0381830037,
+            "cpu_ms": 261.818981,
+            "turn_delta": 600,
+            "cache_stats": {
+              "FasterHotkeys": {
+                "invalidations": 0,
+                "max_bytes": 4194304,
+                "max_entries": 512,
+                "bypasses": 0,
+                "evictions": 0,
+                "hits": 0,
+                "entries": 0,
+                "misses": 0,
+                "bytes": 0
+              },
+              "FasterEffectMask": {
+                "native_bytes": 0,
+                "max_entries": 32,
+                "entries": 0,
+                "max_grids": 4096,
+                "max_native_bytes": 4194304,
+                "hits": 0,
+                "draws": 0,
+                "extra_fbos": 0,
+                "saved_draws": 0,
+                "misses": 0,
+                "skips": 0
+              }
+            },
+            "records": {
+              "mod.class.Game.display": {
+                "calls": 61,
+                "wall_ms": 513.79057997465,
+                "max_ms": 15.26157400012,
+                "cpu_ms": 224.050559
+              },
+              "mod.class.Game.tick": {
+                "calls": 660,
+                "wall_ms": 28.914151012897,
+                "max_ms": 0.27000200748444,
+                "cpu_ms": 29.938095000002
+              },
+              "engine.HotkeysIconsDisplay.display": {
+                "calls": 61,
+                "wall_ms": 68.211577862501,
+                "max_ms": 7.024121016264,
+                "cpu_ms": 67.837382999999
+              },
+              "engine.Map.displayEffects": {
+                "calls": 1220,
+                "wall_ms": 1.9145363271236,
+                "max_ms": 0.04993000626564,
+                "cpu_ms": 3.4073119999903
+              }
+            },
+            "actions": 60,
+            "frames": 61,
+            "frame_p50_ms": 32.983108997345,
+            "frame_p95_ms": 34.958316981792,
+            "frame_max_ms": 40.389874994755
+          },
+          {
+            "phase": "combat",
+            "reason": "low_life_stop",
+            "wall_ms": 1941.6595830023,
+            "cpu_ms": 493.807933,
+            "turn_delta": 421,
+            "cache_stats": {
+              "FasterHotkeys": {
+                "invalidations": 0,
+                "max_bytes": 4194304,
+                "max_entries": 512,
+                "bypasses": 0,
+                "evictions": 0,
+                "hits": 0,
+                "entries": 0,
+                "misses": 0,
+                "bytes": 0
+              },
+              "FasterEffectMask": {
+                "native_bytes": 0,
+                "max_entries": 32,
+                "entries": 0,
+                "max_grids": 4096,
+                "max_native_bytes": 4194304,
+                "hits": 0,
+                "draws": 0,
+                "extra_fbos": 0,
+                "saved_draws": 0,
+                "misses": 0,
+                "skips": 0
+              }
+            },
+            "records": {
+              "mod.class.Game.display": {
+                "calls": 51,
+                "wall_ms": 802.95544907451,
+                "max_ms": 137.75617900491,
+                "cpu_ms": 284.271715
+              },
+              "mod.class.Game.tick": {
+                "calls": 467,
+                "wall_ms": 146.86162039638,
+                "max_ms": 22.864380985498,
+                "cpu_ms": 132.178246
+              },
+              "engine.HotkeysIconsDisplay.display": {
+                "calls": 51,
+                "wall_ms": 80.926219195127,
+                "max_ms": 12.061076015234,
+                "cpu_ms": 80.521616999999
+              },
+              "engine.Map.displayEffects": {
+                "calls": 1020,
+                "wall_ms": 47.477388441563,
+                "max_ms": 11.525591015816,
+                "cpu_ms": 6.3048079999976
+              }
+            },
+            "actions": 44,
+            "frames": 51,
+            "frame_p50_ms": 33.366463005543,
+            "frame_p95_ms": 54.67565998435,
+            "frame_max_ms": 141.13640901446
+          }
+        ]
+      }
+    ],
+    "effect_mask": [
+      {
+        "session": "stutter-map-v3-after-pair1-01",
+        "pair": 1,
+        "side": "after",
+        "process_completed": true,
+        "phases": [
+          {
+            "phase": "move",
+            "wall_ms": 2019.3379769921,
+            "cpu_ms": 242.452131,
+            "turn_delta": 600,
+            "cache_stats": {
+              "FasterHotkeys": {
+                "invalidations": 1,
+                "max_bytes": 4194304,
+                "max_entries": 512,
+                "bypasses": 0,
+                "evictions": 0,
+                "hits": 1260,
+                "entries": 21,
+                "misses": 21,
+                "bytes": 56324
+              },
+              "FasterEffectMask": {
+                "native_bytes": 0,
+                "max_entries": 32,
+                "entries": 0,
+                "max_grids": 4096,
+                "max_native_bytes": 4194304,
+                "hits": 0,
+                "draws": 0,
+                "extra_fbos": 0,
+                "saved_draws": 0,
+                "misses": 0,
+                "skips": 0
+              }
+            },
+            "records": {
+              "mod.class.Game.display": {
+                "calls": 61,
+                "wall_ms": 484.91590693593,
+                "max_ms": 18.642758011818,
+                "cpu_ms": 204.976877
+              },
+              "mod.class.Game.tick": {
+                "calls": 660,
+                "wall_ms": 27.475037246943,
+                "max_ms": 0.26105999946594,
+                "cpu_ms": 29.743345000007
+              },
+              "engine.HotkeysIconsDisplay.display": {
+                "calls": 61,
+                "wall_ms": 55.22073289752,
+                "max_ms": 10.898741006851,
+                "cpu_ms": 54.842867000002
+              },
+              "engine.Map.displayEffects": {
+                "calls": 1220,
+                "wall_ms": 1.7546387314796,
+                "max_ms": 0.024660021066666,
+                "cpu_ms": 3.2567379999955
+              }
+            },
+            "actions": 60,
+            "frames": 61,
+            "frame_p50_ms": 33.034011989832,
+            "frame_p95_ms": 35.22251701355,
+            "frame_max_ms": 45.179050981998
+          },
+          {
+            "phase": "combat",
+            "reason": "low_life_stop",
+            "wall_ms": 2652.03926,
+            "cpu_ms": 762.633753,
+            "turn_delta": 519,
+            "cache_stats": {
+              "FasterHotkeys": {
+                "invalidations": 1,
+                "max_bytes": 4194304,
+                "max_entries": 512,
+                "bypasses": 0,
+                "evictions": 0,
+                "hits": 2506,
+                "entries": 31,
+                "misses": 31,
+                "bytes": 220164
+              },
+              "FasterEffectMask": {
+                "native_bytes": 6656,
+                "max_entries": 32,
+                "entries": 2,
+                "max_grids": 4096,
+                "max_native_bytes": 4194304,
+                "hits": 30,
+                "draws": 34,
+                "extra_fbos": 0,
+                "saved_draws": 729,
+                "misses": 4,
+                "skips": 0
+              }
+            },
+            "records": {
+              "mod.class.Game.display": {
+                "calls": 67,
+                "wall_ms": 1210.6084899008,
+                "max_ms": 53.74120798707,
+                "cpu_ms": 425.265168
+              },
+              "mod.class.Game.tick": {
+                "calls": 578,
+                "wall_ms": 294.7330340445,
+                "max_ms": 33.084764003754,
+                "cpu_ms": 256.777269
+              },
+              "engine.HotkeysIconsDisplay.display": {
+                "calls": 67,
+                "wall_ms": 115.1532560885,
+                "max_ms": 15.122023999691,
+                "cpu_ms": 114.699875
+              },
+              "engine.Map.displayEffects": {
+                "calls": 1340,
+                "wall_ms": 242.39599186182,
+                "max_ms": 18.505887985229,
+                "cpu_ms": 8.5057510000106
+              }
+            },
+            "actions": 57,
+            "frames": 67,
+            "frame_p50_ms": 33.374203026295,
+            "frame_p95_ms": 64.025741010904,
+            "frame_max_ms": 82.844960004091
+          }
+        ]
+      },
+      {
+        "session": "stutter-map-v3-before-pair1-01",
+        "pair": 1,
+        "side": "before",
+        "process_completed": true,
+        "phases": [
+          {
+            "phase": "move",
+            "wall_ms": 2016.0740230083,
+            "cpu_ms": 234.946643,
+            "turn_delta": 600,
+            "cache_stats": {
+              "FasterHotkeys": {
+                "invalidations": 1,
+                "max_bytes": 4194304,
+                "max_entries": 512,
+                "bypasses": 0,
+                "evictions": 0,
+                "hits": 1260,
+                "entries": 21,
+                "misses": 21,
+                "bytes": 56324
+              },
+              "FasterEffectMask": {
+                "native_bytes": 0,
+                "max_entries": 32,
+                "entries": 0,
+                "max_grids": 4096,
+                "max_native_bytes": 4194304,
+                "hits": 0,
+                "draws": 0,
+                "extra_fbos": 0,
+                "saved_draws": 0,
+                "misses": 0,
+                "skips": 0
+              }
+            },
+            "records": {
+              "mod.class.Game.display": {
+                "calls": 61,
+                "wall_ms": 466.96712383628,
+                "max_ms": 17.928521990776,
+                "cpu_ms": 198.762557
+              },
+              "mod.class.Game.tick": {
+                "calls": 660,
+                "wall_ms": 27.234733045101,
+                "max_ms": 0.24968901276588,
+                "cpu_ms": 28.72534
+              },
+              "engine.HotkeysIconsDisplay.display": {
+                "calls": 61,
+                "wall_ms": 53.77581307292,
+                "max_ms": 10.109984010458,
+                "cpu_ms": 53.348331999998
+              },
+              "engine.Map.displayEffects": {
+                "calls": 1220,
+                "wall_ms": 1.6627487838268,
+                "max_ms": 0.021319985389709,
+                "cpu_ms": 3.0348369999983
+              }
+            },
+            "actions": 60,
+            "frames": 61,
+            "frame_p50_ms": 33.035846978426,
+            "frame_p95_ms": 34.001246005297,
+            "frame_max_ms": 43.746881008148
+          },
+          {
+            "phase": "combat",
+            "wall_ms": 2286.0976090133,
+            "cpu_ms": 724.36667,
+            "turn_delta": 586,
+            "cache_stats": {
+              "FasterHotkeys": {
+                "invalidations": 1,
+                "max_bytes": 4194304,
+                "max_entries": 512,
+                "bypasses": 0,
+                "evictions": 0,
+                "hits": 2584,
+                "entries": 33,
+                "misses": 33,
+                "bytes": 252932
+              },
+              "FasterEffectMask": {
+                "native_bytes": 0,
+                "max_entries": 32,
+                "entries": 0,
+                "max_grids": 4096,
+                "max_native_bytes": 4194304,
+                "hits": 0,
+                "draws": 0,
+                "extra_fbos": 0,
+                "saved_draws": 0,
+                "misses": 0,
+                "skips": 0
+              }
+            },
+            "records": {
+              "mod.class.Game.display": {
+                "calls": 66,
+                "wall_ms": 868.64260202646,
+                "max_ms": 39.470259010792,
+                "cpu_ms": 438.343567
+              },
+              "mod.class.Game.tick": {
+                "calls": 647,
+                "wall_ms": 237.24436473846,
+                "max_ms": 25.884919971228,
+                "cpu_ms": 207.421899
+              },
+              "engine.HotkeysIconsDisplay.display": {
+                "calls": 66,
+                "wall_ms": 108.65914097428,
+                "max_ms": 13.763457983732,
+                "cpu_ms": 108.214676
+              },
+              "engine.Map.displayEffects": {
+                "calls": 1320,
+                "wall_ms": 3.5281336903572,
+                "max_ms": 0.051730006933212,
+                "cpu_ms": 4.9133789999992
+              }
+            },
+            "actions": 60,
+            "frames": 66,
+            "frame_p50_ms": 33.229977995157,
+            "frame_p95_ms": 46.198718994856,
+            "frame_max_ms": 55.521935999393
+          }
+        ]
+      },
+      {
+        "session": "stutter-map-v3-before-pair2-01",
+        "pair": 2,
+        "side": "before",
+        "process_completed": true,
+        "phases": [
+          {
+            "phase": "move",
+            "wall_ms": 2017.4360649884,
+            "cpu_ms": 246.310519,
+            "turn_delta": 600,
+            "cache_stats": {
+              "FasterHotkeys": {
+                "invalidations": 1,
+                "max_bytes": 4194304,
+                "max_entries": 512,
+                "bypasses": 0,
+                "evictions": 0,
+                "hits": 1260,
+                "entries": 21,
+                "misses": 21,
+                "bytes": 56324
+              },
+              "FasterEffectMask": {
+                "native_bytes": 0,
+                "max_entries": 32,
+                "entries": 0,
+                "max_grids": 4096,
+                "max_native_bytes": 4194304,
+                "hits": 0,
+                "draws": 0,
+                "extra_fbos": 0,
+                "saved_draws": 0,
+                "misses": 0,
+                "skips": 0
+              }
+            },
+            "records": {
+              "mod.class.Game.display": {
+                "calls": 61,
+                "wall_ms": 485.37442988157,
+                "max_ms": 18.787403017282,
+                "cpu_ms": 208.923541
+              },
+              "mod.class.Game.tick": {
+                "calls": 660,
+                "wall_ms": 28.014480829239,
+                "max_ms": 0.27094000577927,
+                "cpu_ms": 29.632738000002
+              },
+              "engine.HotkeysIconsDisplay.display": {
+                "calls": 61,
+                "wall_ms": 57.111355960369,
+                "max_ms": 10.693963974714,
+                "cpu_ms": 56.697808000002
+              },
+              "engine.Map.displayEffects": {
+                "calls": 1220,
+                "wall_ms": 1.7933669090271,
+                "max_ms": 0.022299975156784,
+                "cpu_ms": 3.766539000002
+              }
+            },
+            "actions": 60,
+            "frames": 61,
+            "frame_p50_ms": 33.048731982708,
+            "frame_p95_ms": 34.578310996294,
+            "frame_max_ms": 44.251255989075
+          },
+          {
+            "phase": "combat",
+            "wall_ms": 2723.7153519988,
+            "cpu_ms": 890.587104,
+            "turn_delta": 590,
+            "cache_stats": {
+              "FasterHotkeys": {
+                "invalidations": 1,
+                "max_bytes": 4194304,
+                "max_entries": 512,
+                "bypasses": 0,
+                "evictions": 0,
+                "hits": 2822,
+                "entries": 36,
+                "misses": 36,
+                "bytes": 302084
+              },
+              "FasterEffectMask": {
+                "native_bytes": 0,
+                "max_entries": 32,
+                "entries": 0,
+                "max_grids": 4096,
+                "max_native_bytes": 4194304,
+                "hits": 0,
+                "draws": 0,
+                "extra_fbos": 0,
+                "saved_draws": 0,
+                "misses": 0,
+                "skips": 0
+              }
+            },
+            "records": {
+              "mod.class.Game.display": {
+                "calls": 77,
+                "wall_ms": 1267.022105962,
+                "max_ms": 39.426054984331,
+                "cpu_ms": 485.594308
+              },
+              "mod.class.Game.tick": {
+                "calls": 655,
+                "wall_ms": 363.84474802017,
+                "max_ms": 35.538659989834,
+                "cpu_ms": 325.047744
+              },
+              "engine.HotkeysIconsDisplay.display": {
+                "calls": 77,
+                "wall_ms": 127.64387518167,
+                "max_ms": 12.521632999182,
+                "cpu_ms": 126.683261
+              },
+              "engine.Map.displayEffects": {
+                "calls": 1540,
+                "wall_ms": 188.14279055595,
+                "max_ms": 10.724005997181,
+                "cpu_ms": 9.7738440000012
+              }
+            },
+            "actions": 60,
+            "frames": 77,
+            "frame_p50_ms": 33.151733994484,
+            "frame_p95_ms": 53.64884698391,
+            "frame_max_ms": 76.245063990355
+          }
+        ]
+      },
+      {
+        "session": "stutter-map-v3-after-pair2-01",
+        "pair": 2,
+        "side": "after",
+        "process_completed": true,
+        "phases": [
+          {
+            "phase": "move",
+            "wall_ms": 2017.6292290092,
+            "cpu_ms": 231.88575,
+            "turn_delta": 600,
+            "cache_stats": {
+              "FasterHotkeys": {
+                "invalidations": 1,
+                "max_bytes": 4194304,
+                "max_entries": 512,
+                "bypasses": 0,
+                "evictions": 0,
+                "hits": 1260,
+                "entries": 21,
+                "misses": 21,
+                "bytes": 56324
+              },
+              "FasterEffectMask": {
+                "native_bytes": 0,
+                "max_entries": 32,
+                "entries": 0,
+                "max_grids": 4096,
+                "max_native_bytes": 4194304,
+                "hits": 0,
+                "draws": 0,
+                "extra_fbos": 0,
+                "saved_draws": 0,
+                "misses": 0,
+                "skips": 0
+              }
+            },
+            "records": {
+              "mod.class.Game.display": {
+                "calls": 61,
+                "wall_ms": 463.1568980515,
+                "max_ms": 17.714867025614,
+                "cpu_ms": 195.441552
+              },
+              "mod.class.Game.tick": {
+                "calls": 660,
+                "wall_ms": 27.627321094275,
+                "max_ms": 0.90054902434349,
+                "cpu_ms": 28.99152800001
+              },
+              "engine.HotkeysIconsDisplay.display": {
+                "calls": 61,
+                "wall_ms": 52.048461019993,
+                "max_ms": 10.223636001348,
+                "cpu_ms": 51.162634
+              },
+              "engine.Map.displayEffects": {
+                "calls": 1220,
+                "wall_ms": 1.8755555450916,
+                "max_ms": 0.084358990192413,
+                "cpu_ms": 3.2606580000015
+              }
+            },
+            "actions": 60,
+            "frames": 61,
+            "frame_p50_ms": 33.029807001352,
+            "frame_p95_ms": 35.057134002447,
+            "frame_max_ms": 44.297822982073
+          },
+          {
+            "phase": "combat",
+            "reason": "low_life_stop",
+            "wall_ms": 2732.8510409892,
+            "cpu_ms": 759.879065,
+            "turn_delta": 536,
+            "cache_stats": {
+              "FasterHotkeys": {
+                "invalidations": 1,
+                "max_bytes": 4194304,
+                "max_entries": 512,
+                "bypasses": 0,
+                "evictions": 0,
+                "hits": 2671,
+                "entries": 37,
+                "misses": 37,
+                "bytes": 318468
+              },
+              "FasterEffectMask": {
+                "native_bytes": 4992,
+                "max_entries": 32,
+                "entries": 2,
+                "max_grids": 4096,
+                "max_native_bytes": 4194304,
+                "hits": 38,
+                "draws": 40,
+                "extra_fbos": 0,
+                "saved_draws": 722,
+                "misses": 2,
+                "skips": 0
+              }
+            },
+            "records": {
+              "mod.class.Game.display": {
+                "calls": 71,
+                "wall_ms": 1242.5096329749,
+                "max_ms": 52.573355019093,
+                "cpu_ms": 405.517298
+              },
+              "mod.class.Game.tick": {
+                "calls": 597,
+                "wall_ms": 294.31270349026,
+                "max_ms": 36.904825001955,
+                "cpu_ms": 274.202839
+              },
+              "engine.HotkeysIconsDisplay.display": {
+                "calls": 71,
+                "wall_ms": 102.61143001914,
+                "max_ms": 13.086124002934,
+                "cpu_ms": 102.13224
+              },
+              "engine.Map.displayEffects": {
+                "calls": 1420,
+                "wall_ms": 205.62473702431,
+                "max_ms": 11.622736006975,
+                "cpu_ms": 10.2803
+              }
+            },
+            "actions": 55,
+            "frames": 71,
+            "frame_p50_ms": 33.316758006811,
+            "frame_p95_ms": 64.913568973541,
+            "frame_max_ms": 69.13313600421
+          }
+        ]
+      },
+      {
+        "session": "stutter-map-v3-after-pair3-01",
+        "pair": 3,
+        "side": "after",
+        "process_completed": true,
+        "phases": [
+          {
+            "phase": "move",
+            "wall_ms": 2018.2305770218,
+            "cpu_ms": 242.89505,
+            "turn_delta": 600,
+            "cache_stats": {
+              "FasterHotkeys": {
+                "invalidations": 1,
+                "max_bytes": 4194304,
+                "max_entries": 512,
+                "bypasses": 0,
+                "evictions": 0,
+                "hits": 1260,
+                "entries": 21,
+                "misses": 21,
+                "bytes": 56324
+              },
+              "FasterEffectMask": {
+                "native_bytes": 0,
+                "max_entries": 32,
+                "entries": 0,
+                "max_grids": 4096,
+                "max_native_bytes": 4194304,
+                "hits": 0,
+                "draws": 0,
+                "extra_fbos": 0,
+                "saved_draws": 0,
+                "misses": 0,
+                "skips": 0
+              }
+            },
+            "records": {
+              "mod.class.Game.display": {
+                "calls": 61,
+                "wall_ms": 481.21496108174,
+                "max_ms": 18.426539003849,
+                "cpu_ms": 204.616848
+              },
+              "mod.class.Game.tick": {
+                "calls": 660,
+                "wall_ms": 29.013117015362,
+                "max_ms": 0.79224899411201,
+                "cpu_ms": 30.527640000006
+              },
+              "engine.HotkeysIconsDisplay.display": {
+                "calls": 61,
+                "wall_ms": 54.472741991282,
+                "max_ms": 10.582447975874,
+                "cpu_ms": 54.084518999998
+              },
+              "engine.Map.displayEffects": {
+                "calls": 1220,
+                "wall_ms": 1.8178386390209,
+                "max_ms": 0.053579986095428,
+                "cpu_ms": 3.1950869999851
+              }
+            },
+            "actions": 60,
+            "frames": 61,
+            "frame_p50_ms": 33.020122975111,
+            "frame_p95_ms": 34.362630993128,
+            "frame_max_ms": 45.062699019909
+          },
+          {
+            "phase": "combat",
+            "reason": "low_life_stop",
+            "wall_ms": 2334.7369230092,
+            "cpu_ms": 650.220206,
+            "turn_delta": 499,
+            "cache_stats": {
+              "FasterHotkeys": {
+                "invalidations": 1,
+                "max_bytes": 4194304,
+                "max_entries": 512,
+                "bypasses": 0,
+                "evictions": 0,
+                "hits": 2509,
+                "entries": 33,
+                "misses": 33,
+                "bytes": 252932
+              },
+              "FasterEffectMask": {
+                "native_bytes": 2624,
+                "max_entries": 32,
+                "entries": 1,
+                "max_grids": 4096,
+                "max_native_bytes": 4194304,
+                "hits": 19,
+                "draws": 20,
+                "extra_fbos": 0,
+                "saved_draws": 380,
+                "misses": 1,
+                "skips": 0
+              }
+            },
+            "records": {
+              "mod.class.Game.display": {
+                "calls": 64,
+                "wall_ms": 1037.7863339484,
+                "max_ms": 48.063577979803,
+                "cpu_ms": 369.455537
+              },
+              "mod.class.Game.tick": {
+                "calls": 554,
+                "wall_ms": 218.95069730282,
+                "max_ms": 17.674141019583,
+                "cpu_ms": 200.363716
+              },
+              "engine.HotkeysIconsDisplay.display": {
+                "calls": 64,
+                "wall_ms": 104.23045805097,
+                "max_ms": 14.402514010668,
+                "cpu_ms": 103.823255
+              },
+              "engine.Map.displayEffects": {
+                "calls": 1280,
+                "wall_ms": 150.89245283604,
+                "max_ms": 10.829308003187,
+                "cpu_ms": 6.6753320000034
+              }
+            },
+            "actions": 53,
+            "frames": 64,
+            "frame_p50_ms": 33.159373998642,
+            "frame_p95_ms": 53.191682010889,
+            "frame_max_ms": 61.933402985334
+          }
+        ]
+      },
+      {
+        "session": "stutter-map-v3-before-pair3-01",
+        "pair": 3,
+        "side": "before",
+        "process_completed": true,
+        "phases": [
+          {
+            "phase": "move",
+            "wall_ms": 2017.1953879893,
+            "cpu_ms": 235.357399,
+            "turn_delta": 600,
+            "cache_stats": {
+              "FasterHotkeys": {
+                "invalidations": 1,
+                "max_bytes": 4194304,
+                "max_entries": 512,
+                "bypasses": 0,
+                "evictions": 0,
+                "hits": 1260,
+                "entries": 21,
+                "misses": 21,
+                "bytes": 56324
+              },
+              "FasterEffectMask": {
+                "native_bytes": 0,
+                "max_entries": 32,
+                "entries": 0,
+                "max_grids": 4096,
+                "max_native_bytes": 4194304,
+                "hits": 0,
+                "draws": 0,
+                "extra_fbos": 0,
+                "saved_draws": 0,
+                "misses": 0,
+                "skips": 0
+              }
+            },
+            "records": {
+              "mod.class.Game.display": {
+                "calls": 61,
+                "wall_ms": 472.79096376896,
+                "max_ms": 15.069745004177,
+                "cpu_ms": 200.29256
+              },
+              "mod.class.Game.tick": {
+                "calls": 660,
+                "wall_ms": 26.265764951706,
+                "max_ms": 0.23735001683235,
+                "cpu_ms": 27.589430999994
+              },
+              "engine.HotkeysIconsDisplay.display": {
+                "calls": 61,
+                "wall_ms": 53.737137019634,
+                "max_ms": 6.9491630196571,
+                "cpu_ms": 53.391852000001
+              },
+              "engine.Map.displayEffects": {
+                "calls": 1220,
+                "wall_ms": 1.4186502993107,
+                "max_ms": 0.017980009317398,
+                "cpu_ms": 2.7233349999997
+              }
+            },
+            "actions": 60,
+            "frames": 61,
+            "frame_p50_ms": 33.010767996311,
+            "frame_p95_ms": 35.146025002003,
+            "frame_max_ms": 39.585231006145
+          },
+          {
+            "phase": "combat",
+            "wall_ms": 2792.1754129827,
+            "cpu_ms": 829.555682,
+            "turn_delta": 579,
+            "cache_stats": {
+              "FasterHotkeys": {
+                "invalidations": 1,
+                "max_bytes": 4194304,
+                "max_entries": 512,
+                "bypasses": 0,
+                "evictions": 0,
+                "hits": 2746,
+                "entries": 36,
+                "misses": 36,
+                "bytes": 302084
+              },
+              "FasterEffectMask": {
+                "native_bytes": 0,
+                "max_entries": 32,
+                "entries": 0,
+                "max_grids": 4096,
+                "max_native_bytes": 4194304,
+                "hits": 0,
+                "draws": 0,
+                "extra_fbos": 0,
+                "saved_draws": 0,
+                "misses": 0,
+                "skips": 0
+              }
+            },
+            "records": {
+              "mod.class.Game.display": {
+                "calls": 76,
+                "wall_ms": 1276.9642928839,
+                "max_ms": 45.049946993589,
+                "cpu_ms": 446.319197
+              },
+              "mod.class.Game.tick": {
+                "calls": 641,
+                "wall_ms": 338.40421834588,
+                "max_ms": 43.995079010725,
+                "cpu_ms": 300.961253
+              },
+              "engine.HotkeysIconsDisplay.display": {
+                "calls": 76,
+                "wall_ms": 116.03865507245,
+                "max_ms": 13.586677014828,
+                "cpu_ms": 115.463865
+              },
+              "engine.Map.displayEffects": {
+                "calls": 1520,
+                "wall_ms": 139.8644875586,
+                "max_ms": 24.918226003647,
+                "cpu_ms": 6.907040999994
+              }
+            },
+            "actions": 60,
+            "frames": 76,
+            "frame_p50_ms": 33.369668006897,
+            "frame_p95_ms": 59.163453996181,
+            "frame_max_ms": 63.670410007238
+          }
+        ]
+      }
+    ]
+  },
+  "hotkey_move_summary": {
+    "before": {
+      "median_cpu_ms_per_call": 1.1556705573769999,
+      "median_total_cpu_ms": 70.495903999997,
+      "calls_per_run": [
+        61,
+        61,
+        61
+      ]
+    },
+    "after": {
+      "median_cpu_ms_per_call": 0.8827191639344263,
+      "median_total_cpu_ms": 53.845869,
+      "calls_per_run": [
+        61,
+        61,
+        61
+      ]
+    },
+    "cpu_per_call_reduction_percent": 23.618443136778133
+  },
+  "native_attribution": {
+    "before": [
+      {
+        "phase": "move",
+        "wall_ms": 2028.4503490031,
+        "cpu_ms": 252.399799,
+        "turn_delta": 600,
+        "native_render": {
+          "hotkeys": {
+            "draw_arrays": {
+              "calls": 0,
+              "wall_ms": 0,
+              "pixels_or_vertices": 0,
+              "cpu_ms": 0
+            },
+            "texture_image": {
+              "calls": 1260,
+              "wall_ms": 1.8270938098431,
+              "pixels_or_vertices": 844800,
+              "cpu_ms": 1.8250950000038
+            },
+            "texture_upload": {
+              "calls": 1260,
+              "wall_ms": 0.55769565701485,
+              "pixels_or_vertices": 282960,
+              "cpu_ms": 0.55976399998599
+            },
+            "ttf_raster": {
+              "calls": 1260,
+              "wall_ms": 11.563678592443,
+              "pixels_or_vertices": 282960,
+              "cpu_ms": 11.501622999989
+            }
+          },
+          "map_effects": {
+            "draw_arrays": {
+              "calls": 0,
+              "wall_ms": 0,
+              "pixels_or_vertices": 0,
+              "cpu_ms": 0
+            },
+            "texture_image": {
+              "calls": 0,
+              "wall_ms": 0,
+              "pixels_or_vertices": 0,
+              "cpu_ms": 0
+            },
+            "texture_upload": {
+              "calls": 0,
+              "wall_ms": 0,
+              "pixels_or_vertices": 0,
+              "cpu_ms": 0
+            },
+            "ttf_raster": {
+              "calls": 0,
+              "wall_ms": 0,
+              "pixels_or_vertices": 0,
+              "cpu_ms": 0
+            }
+          }
+        },
+        "records": {
+          "mod.class.Game.display": {
+            "calls": 61,
+            "wall_ms": 495.78221097589,
+            "max_ms": 22.282191008329,
+            "cpu_ms": 217.886959
+          },
+          "mod.class.Game.tick": {
+            "calls": 660,
+            "wall_ms": 26.524956434965,
+            "max_ms": 0.31943202018738,
+            "cpu_ms": 27.038325000003
+          },
+          "engine.HotkeysIconsDisplay.display": {
+            "calls": 61,
+            "wall_ms": 74.805808961391,
+            "max_ms": 14.481704026461,
+            "cpu_ms": 74.428957999999
+          }
+        },
+        "actions": 60,
+        "frames": 61,
+        "frame_p50_ms": 33.07887300849,
+        "frame_p95_ms": 34.305393993855,
+        "frame_max_ms": 49.078649997711
+      }
+    ],
+    "after": [
+      {
+        "phase": "move",
+        "wall_ms": 2018.4430170059,
+        "cpu_ms": 240.880824,
+        "turn_delta": 600,
+        "cache_stats": {
+          "FasterHotkeys": {
+            "invalidations": 1,
+            "max_bytes": 4194304,
+            "max_entries": 512,
+            "bypasses": 0,
+            "evictions": 0,
+            "hits": 1260,
+            "entries": 21,
+            "misses": 21,
+            "bytes": 56324
+          },
+          "FasterEffectMask": {
+            "native_bytes": 0,
+            "max_entries": 32,
+            "entries": 0,
+            "max_grids": 4096,
+            "max_native_bytes": 4194304,
+            "hits": 0,
+            "draws": 0,
+            "extra_fbos": 0,
+            "saved_draws": 0,
+            "misses": 0,
+            "skips": 0
+          }
+        },
+        "native_render": {
+          "hotkeys": {
+            "draw_arrays": {
+              "calls": 0,
+              "wall_ms": 0,
+              "pixels_or_vertices": 0,
+              "cpu_ms": 0
+            },
+            "texture_image": {
+              "calls": 1,
+              "wall_ms": 0.0027100145816803,
+              "pixels_or_vertices": 1,
+              "cpu_ms": 0.002650000000358
+            },
+            "texture_upload": {
+              "calls": 1,
+              "wall_ms": 0.00055998563766479,
+              "pixels_or_vertices": 1,
+              "cpu_ms": 0.00055999999995038
+            },
+            "ttf_raster": {
+              "calls": 0,
+              "wall_ms": 0,
+              "pixels_or_vertices": 0,
+              "cpu_ms": 0
+            }
+          },
+          "map_effects": {
+            "draw_arrays": {
+              "calls": 0,
+              "wall_ms": 0,
+              "pixels_or_vertices": 0,
+              "cpu_ms": 0
+            },
+            "texture_image": {
+              "calls": 0,
+              "wall_ms": 0,
+              "pixels_or_vertices": 0,
+              "cpu_ms": 0
+            },
+            "texture_upload": {
+              "calls": 0,
+              "wall_ms": 0,
+              "pixels_or_vertices": 0,
+              "cpu_ms": 0
+            },
+            "ttf_raster": {
+              "calls": 0,
+              "wall_ms": 0,
+              "pixels_or_vertices": 0,
+              "cpu_ms": 0
+            }
+          }
+        },
+        "records": {
+          "mod.class.Game.display": {
+            "calls": 61,
+            "wall_ms": 480.82696801424,
+            "max_ms": 18.248454004526,
+            "cpu_ms": 203.924457
+          },
+          "mod.class.Game.tick": {
+            "calls": 660,
+            "wall_ms": 27.65974381566,
+            "max_ms": 0.2701730132103,
+            "cpu_ms": 29.383700999994
+          },
+          "engine.HotkeysIconsDisplay.display": {
+            "calls": 61,
+            "wall_ms": 53.793283998966,
+            "max_ms": 9.8967590034008,
+            "cpu_ms": 53.545043
+          },
+          "engine.Map.displayEffects": {
+            "calls": 1220,
+            "wall_ms": 3.5627929866314,
+            "max_ms": 0.89974799752235,
+            "cpu_ms": 2.8074710000055
+          }
+        },
+        "actions": 60,
+        "frames": 61,
+        "frame_p50_ms": 33.004595994949,
+        "frame_p95_ms": 34.389209985733,
+        "frame_max_ms": 43.709262996912
+      }
+    ],
+    "caveat": "Separate LD_PRELOAD attribution runs; use only stable-movement glyph work counts, not formal timing or map batch conclusions."
+  },
+  "full_frame_diagnostics": {
+    "glyphs": {
+      "session": "stutter-hotkeys-pixels-v2-01",
+      "process_completed": true,
+      "result": {
+        "returned_tables_independent": true,
+        "gl_state_equal": true,
+        "aa_and_split_invalidation": true,
+        "cases": 576,
+        "cache": {
+          "invalidations": 6,
+          "max_bytes": 4194304,
+          "max_entries": 512,
+          "bypasses": 96,
+          "evictions": 0,
+          "hits": 625,
+          "entries": 73,
+          "misses": 433,
+          "bytes": 581632
+        },
+        "sequence_frames": 120,
+        "metadata_equal": true,
+        "runtime": "LuaJIT 2.0.2",
+        "cross_texture_unit_binding_equal": true,
+        "glyph_pixels_equal": true
+      }
+    },
+    "hotkeys": {
+      "session": "stutter-hotkeys-display-pixels-v5-01",
+      "process_completed": true,
+      "result": {
+        "gl_state_equal": true,
+        "gl_state_restored": true,
+        "following_draw_probes": 120,
+        "gc_pair_barriers": 120,
+        "cache": {
+          "invalidations": 3,
+          "max_bytes": 4194304,
+          "max_entries": 512,
+          "bypasses": 10,
+          "evictions": 0,
+          "hits": 1329,
+          "entries": 119,
+          "misses": 348,
+          "bytes": 950272
+        },
+        "game_turns_replayed": 0,
+        "gc_reenabled": true,
+        "gl_stack_depths_restored": true,
+        "items_and_clicks_equal": true,
+        "plain_shadow_frames": 40,
+        "no_shadow_frames": 40,
+        "runtime": "LuaJIT 2.0.2",
+        "frames": 120,
+        "full_ui_rgba_equal": true,
+        "changed_frames": 108,
+        "real_native_ui": true,
+        "following_draw_rgba_equal": true,
+        "native_outline_shader_available": true,
+        "business_calls": 8484,
+        "unchanged_frames": 12,
+        "gc_policy": "full GC at framebuffer zero before/after each pair; stopped only inside pixel comparison",
+        "rgba_bytes_compared": 117964800,
+        "shader_shadow_frames": 40,
+        "business_call_sequence_equal": true,
+        "synthetic_actors": true
+      }
+    },
+    "effect_mask": {
+      "session": "stutter-map-display-pixels-v5-01",
+      "process_completed": true,
+      "result": {
+        "gc_isolation": {
+          "normal_game_gc_benchmark": false,
+          "full_gc_at_unbound_pair_boundaries": true,
+          "original_mode_was_running": true,
+          "benchmark_excludes_gc": true,
+          "stopped_inside_pairs": true
+        },
+        "gl_state_equal": true,
+        "fov_calls": 5448,
+        "viewport": [
+          1280,
+          800
+        ],
+        "public_mask_pixels_equal": true,
+        "renders": 890,
+        "fov_equal": true,
+        "benchmark": [
+          {
+            "variant": "batch",
+            "wall_ms": 2679.8255279958,
+            "animation": [
+              {
+                "max": 3,
+                "cnt": 0,
+                "n": 2,
+                "cur": 1
+              },
+              {
+                "max": 1,
+                "cnt": 60,
+                "n": 1,
+                "cur": 1
+              },
+              {
+                "max": 1,
+                "cnt": 54,
+                "n": 1,
+                "cur": 1
+              }
+            ],
+            "cache": {
+              "native_bytes": 7616,
+              "max_entries": 32,
+              "entries": 3,
+              "max_grids": 4096,
+              "max_native_bytes": 4194304,
+              "hits": 360,
+              "draws": 360,
+              "extra_fbos": 0,
+              "saved_draws": 6600,
+              "misses": 0,
+              "skips": 0
+            },
+            "cpu_ms": 29.769166,
+            "pair": 1,
+            "frames": 120
+          },
+          {
+            "variant": "original",
+            "wall_ms": 2664.1322039962,
+            "animation": [
+              {
+                "max": 3,
+                "cnt": 0,
+                "n": 2,
+                "cur": 1
+              },
+              {
+                "max": 1,
+                "cnt": 60,
+                "n": 1,
+                "cur": 1
+              },
+              {
+                "max": 1,
+                "cnt": 54,
+                "n": 1,
+                "cur": 1
+              }
+            ],
+            "cache": {
+              "native_bytes": 7616,
+              "max_entries": 32,
+              "entries": 3,
+              "max_grids": 4096,
+              "max_native_bytes": 4194304,
+              "hits": 0,
+              "draws": 0,
+              "extra_fbos": 0,
+              "saved_draws": 0,
+              "misses": 0,
+              "skips": 0
+            },
+            "cpu_ms": 29.207289,
+            "pair": 1,
+            "frames": 120
+          },
+          {
+            "variant": "original",
+            "wall_ms": 2667.0772019923,
+            "animation": [
+              {
+                "max": 3,
+                "cnt": 0,
+                "n": 2,
+                "cur": 1
+              },
+              {
+                "max": 1,
+                "cnt": 60,
+                "n": 1,
+                "cur": 1
+              },
+              {
+                "max": 1,
+                "cnt": 54,
+                "n": 1,
+                "cur": 1
+              }
+            ],
+            "cache": {
+              "native_bytes": 7616,
+              "max_entries": 32,
+              "entries": 3,
+              "max_grids": 4096,
+              "max_native_bytes": 4194304,
+              "hits": 0,
+              "draws": 0,
+              "extra_fbos": 0,
+              "saved_draws": 0,
+              "misses": 0,
+              "skips": 0
+            },
+            "cpu_ms": 30.312692,
+            "pair": 2,
+            "frames": 120
+          },
+          {
+            "variant": "batch",
+            "wall_ms": 2667.8693500161,
+            "animation": [
+              {
+                "max": 3,
+                "cnt": 0,
+                "n": 2,
+                "cur": 1
+              },
+              {
+                "max": 1,
+                "cnt": 60,
+                "n": 1,
+                "cur": 1
+              },
+              {
+                "max": 1,
+                "cnt": 54,
+                "n": 1,
+                "cur": 1
+              }
+            ],
+            "cache": {
+              "native_bytes": 7616,
+              "max_entries": 32,
+              "entries": 3,
+              "max_grids": 4096,
+              "max_native_bytes": 4194304,
+              "hits": 360,
+              "draws": 360,
+              "extra_fbos": 0,
+              "saved_draws": 6600,
+              "misses": 0,
+              "skips": 0
+            },
+            "cpu_ms": 28.662246,
+            "pair": 2,
+            "frames": 120
+          },
+          {
+            "variant": "batch",
+            "wall_ms": 2682.790681988,
+            "animation": [
+              {
+                "max": 3,
+                "cnt": 0,
+                "n": 2,
+                "cur": 1
+              },
+              {
+                "max": 1,
+                "cnt": 60,
+                "n": 1,
+                "cur": 1
+              },
+              {
+                "max": 1,
+                "cnt": 54,
+                "n": 1,
+                "cur": 1
+              }
+            ],
+            "cache": {
+              "native_bytes": 7616,
+              "max_entries": 32,
+              "entries": 3,
+              "max_grids": 4096,
+              "max_native_bytes": 4194304,
+              "hits": 360,
+              "draws": 360,
+              "extra_fbos": 0,
+              "saved_draws": 6600,
+              "misses": 0,
+              "skips": 0
+            },
+            "cpu_ms": 29.788144,
+            "pair": 3,
+            "frames": 120
+          },
+          {
+            "variant": "original",
+            "wall_ms": 2621.4006080031,
+            "animation": [
+              {
+                "max": 3,
+                "cnt": 0,
+                "n": 2,
+                "cur": 1
+              },
+              {
+                "max": 1,
+                "cnt": 60,
+                "n": 1,
+                "cur": 1
+              },
+              {
+                "max": 1,
+                "cnt": 54,
+                "n": 1,
+                "cur": 1
+              }
+            ],
+            "cache": {
+              "native_bytes": 7616,
+              "max_entries": 32,
+              "entries": 3,
+              "max_grids": 4096,
+              "max_native_bytes": 4194304,
+              "hits": 0,
+              "draws": 0,
+              "extra_fbos": 0,
+              "saved_draws": 0,
+              "misses": 0,
+              "skips": 0
+            },
+            "cpu_ms": 29.555146,
+            "pair": 3,
+            "frames": 120
+          }
+        ],
+        "sequence_frames": 48,
+        "turn_delta": 0,
+        "pixel_cache": {
+          "native_bytes": 7616,
+          "max_entries": 32,
+          "entries": 3,
+          "max_grids": 4096,
+          "max_native_bytes": 4194304,
+          "hits": 93,
+          "draws": 124,
+          "extra_fbos": 0,
+          "saved_draws": 2144,
+          "misses": 31,
+          "skips": 0
+        },
+        "runtime": "LuaJIT 2.0.2",
+        "animation_equal": true,
+        "full_shader_pixels_equal": true
+      }
+    }
+  }
+}

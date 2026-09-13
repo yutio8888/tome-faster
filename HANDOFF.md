@@ -1,3 +1,57 @@
+# Faster ToME4 当前交接：0.2.5
+
+更新：2026-09-13 UTC。用户本轮要求“请你继续完成handoff内列出的待优化项”。已完成三项可集成优化和真实验证；完整快照切片、GC 重调度及新保存事务仍未实现，不能把候选反例分析称为这些功能已经交付。**本节是最新状态，后面的 0.2.4 / 0.2.3 内容只作历史索引。**
+
+## 交付与有效约束
+
+- 生产 A：`/workspace/t-engine4/tmp/worktrees/tome-faster-save-20260912`；分支 `perf-save-stutter-20260912`；远端 `https://github.com/yutio8888/tome-faster.git`。本次提交以该分支 Git log 为准，父提交 `6a307b8cd35e6ceb6b6de777bc9c4780d52179ee`。提交、推送继续沿用此前授权；没有合并用户原 checkout。
+- 运行 W：`/workspace/t-engine4/tmp/worktrees/yron-profile-20260912`；P 为 `W/tmp/profile`。固定引擎仍为 `624a67329fe2ad440c5b344785a9c73fcf22ae63`。
+- 新生产模块：[FasterHotkeys.lua](overload/engine/FasterHotkeys.lua)、[FasterEffectMask.lua](overload/engine/FasterEffectMask.lua)、[FasterSaveFollowup.lua](overload/engine/FasterSaveFollowup.lua)。独立关闭项 `hotkey_text_cache=false`、`effect_mask_batch=false`、`save_callbacks=false`，改后重启。
+- 用户允许 RNG 消耗不同，不允许随意改游戏规则。新改动未改冷却、伤害、FOV、tick、三个完整 GC、保存格式或后台 worker 协议。
+- 发布包：[tome-faster-0.2.5.teaa](releases/tome-faster-0.2.5.teaa)，SHA256 `39c06d93a6a39c74286c3aa31b446a2d577dc0bfcc319c5131269c3c2a4b1754`，67 个 allowlist 文件。CRC、逐文件内容及生产 Lua 语法通过；旧包没有重写。
+- 主报告：[render-save.md](docs/render-save.md)、[render-save-results.json](docs/render-save-results.json)；保存细节：[save-followup.md](docs/save-followup.md)、[save-followup-results.json](docs/save-followup-results.json)。
+
+## 真实结果与范围
+
+- 快捷栏三组 A/B：`P/sessions/stutter-hotkeys-v1-{before,after}-pair{1,2,3}-01`。每次 60 次移动 / 61 次 display，CPU 每调用中位数 **1.156 → 0.883 ms，少约 24%**；完整原生归因运行的移动 TTF 调用 **1260 → 0**。战斗过程有随机差异，不宣传整体战斗百分比。
+- 地图最终 A/B：`P/sessions/stutter-map-v3-{before,after}-pair{1,2,3}-01`。优化侧批量绘制 34 / 40 / 20 次，省去 729 / 722 / 380 次逐格调用。另有 3 对各 120 帧的受控原 shader 计时；CPU 和提交 wall 均无稳定改善。它缓存有序顶点，**不是缓存最终遮罩像素**；仍逐帧重建公开 Map.fbo 和动态 shader。
+- 保存三组 A/B：`P/sessions/stutter-save-callbacks-v1-{before,after}-pair{1,2,3}-01`。未测得稳定 CPU 或最长帧改善；局部 2853 对象 fixture 少约 397.5 KiB / 13.77% Lua 分配。真实 `stutter-save-followup-audit-01` 2854 次 class.save 全部命中、0 回退，只创建 2 组回调（Game / World），仍 3 次完整 GC。
+- 18 次正式分项运行全部 exit0 / completedtrue，互不并行，各用原始 ZIP 新副本。不要纳入旧 map-v1、map-v2 或失败的像素诊断。
+- 完整像素：`stutter-hotkeys-display-pixels-v5-01` 120 帧 UI、117964800 bytes RGBA、8484 次业务调用，三阴影路径各 40 帧；`stutter-map-display-pixels-v5-01` 48 帧完整输出/公开遮罩/GL/FOV/动画全等。前者使用合成 actor 和真实字体/Entity/UI，后者用临时特效和真实可见性/target_fbo。不是整个游戏世界的逐帧回放。
+- 字形基础：`stutter-hotkeys-pixels-v2-01` 576 原生组合 + 120 帧序列，包括中文、AA/split、样式与跨纹理单元绑定；RGBA/元数据/GL 一致。
+- 存档重载：`render-save-roundtrip-20260913` 为角色目录重载，未携带上一份 World。随后 `render-save-full-roundtrip-20260913` **携带了上一轮全部 22 个角色 ZIP + world.teaw**，输入字节与 after-pair3 一致，空闲后再保存。六次保存 A/B + 两次重载的输出共 184 个 ZIP CRC 通过，选定 27 角色 / 203 物品状态一致，回合增量 0。
+- 完整重载输入 `P/render-save-full-roundtrip-20260913.zip` SHA256 `80afc4c8578b30fecf9559fbd85db40fb401b16eb0ed8e24c1cacc48f9fad88b`。原始 ZIP 最终仍为 `eac52e4bd612b2ec6477f71bae12b7844c3e8031813df2ad89fe6fac2c1915a7`。
+- 当前仍是 Linux、嵌入 LuaJIT 2.0.2、Xvfb 1280×800、llvmpipe 软件渲染。没有硬件 GPU / Windows / macOS / 云存档验证。
+
+## 关键实现与排障经验
+
+1. 快捷栏缓存只替三次 `font:draw`，全局 512 项 / 4 MiB，owner 弱持有，返回新元数据。引擎 `font.size` 被 utils 包成 Lua，不能要求它为 C。命中绑定 1×1 sentinel 再绑文字，以处理引擎跨 texture unit 的共享绑定缓存，4 bytes 已入预算。
+2. 标准 MapEffect 是 Entity 类实例，存在纯 `__index` 继承链；引擎 class 模块终端保留空元表。第一版 plain-only / nil-terminal-only 检查都误回退，已用实际构造 fixture 和逐条件真实探针纠正。
+3. 原 `gl_free_fbo` finalizer 会 raw bind 自身 FBO 后绑 0，不恢复调用者。完整 UI 诊断确实记录到原版字体分配期间 FBO 25→0，并捕获了窗口内容。离屏比较现每对前后仅在 FBO0 回收，对内停 GC，结束恢复；**不能将这些受控计时称为常规 GC 开启的游戏 A/B**。
+4. 最终地图实现把顶点准备/可能触发 GC 的分配移到已识别 native FBO 绑定前，绑定内仅 drawEntry。新 fixture 强制执行真实 FBO finalizer，并验证遮罩/返回 scene FBO；未知 custom FBO 保持原循环与回调时点。没有全局修改 FBO finalizer 或生产 GC。
+5. 本体 `core.display.glScale(number,...)` 自带 glPushMatrix，无参数 glScale() 才 pop。诊断额外 glPush 曾在第 15 帧导致栈溢出，现成对调用并检查三个 GL 栈；生产代码不涉及此 API。
+6. driver 与其他诊断均先声明 clock_gettime，独立 FFI struct tag 不兼容；地图诊断用 void* 转换实际同布局参数。错误收尾不应遮蔽原始错误，PASS 必须在状态恢复后输出。
+7. 保存 audit 的 `detail=true` 包装 dumpToJSON 会使离线 guard 回退，因此该详细调用 400ms 左右不能混入正式 detailfalse 保存 A/B。
+
+## 回归与复现
+
+- [regression.log](evidence/faster-tome4-render/regression.log)：现有套件、Ashes/Cults 固定哈希 fixture、799 hotkey、876 native mask、562 native serializer 检查全过；新三项 JIT 开关均过。其他计数以 [VALIDATION.json](VALIDATION.json) 为准。
+- 真实绘制诊断和聚合脚本在 [render evidence](evidence/faster-tome4-render/README.md)；根图、GC/worker 反例在 [save evidence](evidence/faster-tome4-save-followup/README.md)。这些目录不进入安装包，不发布 home、完整日志、玩家 JSON、DLC、RGBA 或存档。
+- `W/game/addons/tome-faster` 包含额外诊断，不能整体作为生产源提交。同步生产时保留本地 hooks；最终 driver 副本已放 render evidence。
+- 每场游戏都必须等上一场完成，`game.lock` 是非阻塞锁，重叠启动会失败。必须同时看 process.json、PASS、SESSION_COMPLETE，不能只看进程 exit0。
+- 本轮已停止自己启动的 Xvfb；没有遗留测试游戏。下轮按历史环境段重新启动显示服务，不能复用历史 PID/session。
+
+## 剩余工作及已否决方案
+
+完整快照切片 / 根裁剪、GC 调度、后台导出事务、新 writer、FBO 复制省略、原生等待归因和旧引用迁移均未发布。对应范围和理由在主报告逐项列出。
+
+- GC 合并已有真实 finalizer / weak 反例；step 到第一次 true 只完成旧周期，不等于新完整屏障。不要只靠计时删 GC。
+- 原 worker 每对象提前唤醒会重复 CREATE、关闭并报告同一个归档；须先有 BEGIN/ENTRY/END/ABORT 和退出/错误协议。
+- 根图诊断 128179 个 raw table，uiset 单边独占 694，tooltip 1039（约0.81%）。大部分共享；exporter 确实读取 uiset 日志/calendar/对话框等。原持久化白名单不等于完整消费者依赖。
+- 要显著降低剩余约百毫秒快照/GC 停顿，仍需完整冻结事务及弱引用/写入屏障设计；不能用本次小幅回调分配收益代替验收。
+
+---
+
 # Faster ToME4 当前交接：0.2.4
 
 更新：2026-09-13 UTC。用户本轮要求“请阅读handoff文档，继续跟进tome4优化插件开发工作”；已按此前优先一完成角色导出 gzip 内存修复。**本节是最新状态，下方 0.2.3 原文仅作为历史环境和证据索引。**

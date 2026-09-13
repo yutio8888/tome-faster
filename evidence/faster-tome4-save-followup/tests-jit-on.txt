@@ -1,0 +1,2 @@
+GC_STEP_COUNTEREXAMPLE partial_steps=166
+PASS save followup: 562 checks; pinned C bytes/filtering, ordering/yields, callbacks, weak lifetime, errors/retry, GC/worker/root counterexamples

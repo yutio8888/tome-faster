@@ -1,10 +1,15 @@
-# Faster ToME4 — save optimizations
+# Faster ToME4 — rendering and save optimizations
 
-Version **0.2.4**, modified 13 September 2026. This fork fixes defects in
+Version **0.2.5**, modified 13 September 2026. This fork fixes defects in
 [Yutio888's Faster ToME4 0.0.1](https://te4.org/games/addons/tome/faster) and adds
 conservative save/load and runtime optimizations for **ToME 1.7.6**.
 
-This release fixes retained native gzip allocations in the recognized character
+This release adds bounded hotkey text caching, ordered effect-mask geometry
+batching, and shared serializer callbacks. The original dynamic UI checks, effect
+shader animation, save format and three full GC barriers are retained.
+See the [0.2.5 design and results](docs/render-save.md).
+
+Version 0.2.4 fixes retained native gzip allocations in the recognized character
 exporter using the engine's embedded lzlib binding. The compression parameters,
 successful output bytes and export callbacks are retained; empty and short inputs
 also produce valid gzip streams. See the [gzip design and results](docs/gzip-export.md).
@@ -19,17 +24,24 @@ Equivalent snapshot cloning and skipping offline character sheets remain include
 their earlier results are in the [0.2.2 report](docs/save-stutter.md). The finite
 `notice_enemy` / `dreamhammer` lifetimes and opt-in timer remain included.
 Further measured hotspots and addon candidates are described in the
-[follow-up plan](docs/followup-plan.md); rendering and GC candidates remain unimplemented.
+[follow-up plan](docs/followup-plan.md). Snapshot slicing and GC rescheduling
+remain unimplemented; the new report records measured limits and counterexamples.
 
 中文说明：[性能问题、修复方案、测量指标与文件清单](docs/faster-tome4-performance-report.md)。
 Published evidence: [profile results](evidence/faster-tome4-profile/README.md).
-Installable 0.2.4 and historical packages: [releases](releases/README.md).
+Installable 0.2.5 and historical packages: [releases](releases/README.md).
 Full-game save A/B and complete loaded-graph equivalence have now been tested on
 one supplied save. GPU/Steam testing and automatic old-save reference migration
 remain outside this release. Player archives and generated save graphs stay local.
 
 ## Changes
 
+- Cache only stable hotkey text rasterization, with 512-entry / 4 MiB global
+  limits and font, display and interface invalidation. Dynamic UI logic runs normally.
+- Batch ordered effect-mask quads using the built-in vertex API. Rebuild the public
+  mask FBO and run the original animated shader each frame; no extra FBO is retained.
+- Reuse two serializer callbacks within each Savefile, reducing transient Lua
+  allocation while retaining the original native serializer and callback ordering.
 - Release gzip compression state after character exports through a local,
   guarded replacement. Keep global compression APIs and charball archives intact.
   Set `export_gzip=false` to restore the original character compressor.
@@ -93,6 +105,9 @@ config.settings.faster_tome = {
     offline_chardump = false,
     unused_party_cleanup = false,
     export_gzip = false,
+    hotkey_text_cache = false,
+    effect_mask_batch = false,
+    save_callbacks = false,
 }
 ```
 
@@ -102,11 +117,13 @@ values, not new menu controls.
 ## Verify and package
 
 Requires LuaJIT/Lua 5.1, a C compiler, Lua 5.1-compatible development headers,
-zlib development files, `pkg-config`, and a local engine Git clone containing commit
+zlib, OpenGL and EGL development files, `pkg-config`, and a local engine Git clone containing commit
 `624a67329fe2ad440c5b344785a9c73fcf22ae63`. Tests read that commit with `git show`;
 they do not use or change player saves. Gzip fixtures compile and execute the
-two pinned native compressors in a temporary directory. Native graphics, ZIP writing, Steam,
-and filesystem access during engine loading are stubbed.
+two pinned native compressors in a temporary directory. Effect-mask fixtures execute
+the pinned GL bindings in a surfaceless EGL context (Mesa software rendering);
+serializer fixtures execute the pinned C writer with an in-memory ZIP sink.
+Steam and engine-loading filesystem dependencies remain stubbed.
 
 ```bash
 export TOME_ENGINE_ROOT=/path/to/t-engine4

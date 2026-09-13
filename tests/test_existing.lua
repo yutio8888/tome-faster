@@ -100,6 +100,8 @@ local function install(w,p,s)
         if name=='engine.CacheList' then return ring end
         if name=='engine.Savefile' then return {} end
         if name=='engine.FasterSave' then return {installSavefile=function() return true end} end
+        if name=='engine.FasterSaveFollowup' then return {installClass=function() return true end} end
+        if name=='engine.class' then return w.class end
         error(name)
     end
     run('hooks/load.lua',w)
@@ -222,7 +224,7 @@ print('PASS pinned Particles.loaded and Shader.loaded integration')
 local map={particleEmitter=function(self,...) return 'emitter',select('#',...),... end}
 local previous=map.particleEmitter
 local loaded=run('superload/engine/Map.lua',env{loadPrevious=function() return map end, config={settings={}},
-    require=function() return {installMap=function() return true end} end})
+    require=function() return {installMap=function() return true end, install=function() return true end} end})
 local result=pack(loaded:particleEmitter(1,2,3,'hit_warning',{},nil,7))
 check(loaded.particleEmitter==previous and result[1]=='emitter' and result[2]==7 and result[6]=='hit_warning','hit warning pass-through')
 print('PASS hit warning restored')
