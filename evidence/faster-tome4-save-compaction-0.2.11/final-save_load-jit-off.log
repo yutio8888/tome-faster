@@ -1,0 +1,31 @@
+PASS pinned save scheduler: last request ordering, cancellation, capture, next batch, debug and errors
+PASS 2001 queued objects: baseline 2001000 shifted elements; optimized zero head insertions
+[Faster ToME4] Save clone optimization skipped:	unknown cloneForSave; keeping existing method
+[Faster ToME4] Snapshot refresh skipped:	test environment has no native display
+[Faster ToME4] Screenshot PNG optimization skipped:	test environment has no native display
+[Faster ToME4] Unused export party cleanup skipped:	unknown saveGame; keeping existing export preparation
+[Faster ToME4] Save clone optimization skipped:	unknown cloneForSave; keeping existing method
+[Faster ToME4] Snapshot refresh skipped:	test environment has no native display
+[Faster ToME4] Screenshot PNG optimization skipped:	test environment has no native display
+[Faster ToME4] Unused export party cleanup skipped:	unknown saveGame; keeping existing export preparation
+[Faster ToME4] Save clone optimization skipped:	unknown cloneForSave; keeping existing method
+[Faster ToME4] Snapshot refresh skipped:	test environment has no native display
+[Faster ToME4] Screenshot PNG optimization skipped:	test environment has no native display
+[Faster ToME4] Unused export party cleanup skipped:	unknown saveGame; keeping existing export preparation
+[Faster ToME4] Save clone optimization skipped:	unknown cloneForSave; keeping existing method
+[Faster ToME4] Snapshot refresh skipped:	test environment has no native display
+[Faster ToME4] Screenshot PNG optimization skipped:	test environment has no native display
+[Faster ToME4] Unused export party cleanup skipped:	unknown saveGame; keeping existing export preparation
+[Faster ToME4] Save clone optimization skipped:	unknown cloneForSave; keeping existing method
+[Faster ToME4] Snapshot refresh skipped:	test environment has no native display
+[Faster ToME4] Screenshot PNG optimization skipped:	test environment has no native display
+[Faster ToME4] Unused export party cleanup skipped:	unknown saveGame; keeping existing export preparation
+[Faster ToME4] Save clone optimization skipped:	unknown cloneForSave; keeping existing method
+[Faster ToME4] Snapshot refresh skipped:	test environment has no native display
+[Faster ToME4] Screenshot PNG optimization skipped:	test environment has no native display
+[Faster ToME4] Unused export party cleanup skipped:	unknown saveGame; keeping existing export preparation
+[Faster ToME4] Save clone optimization skipped:	unknown cloneForSave; keeping existing method
+[Faster ToME4] Snapshot refresh skipped:	test environment has no native display
+[Faster ToME4] Screenshot PNG optimization skipped:	test environment has no native display
+[Faster ToME4] Unused export party cleanup skipped:	unknown saveGame; keeping existing export preparation
+PASS all 89 save/load checks; Lua 5.1 / LuaJIT 2.1.0-beta3

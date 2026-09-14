@@ -1,0 +1,503 @@
+{
+  "date": "2026-09-14",
+  "status": "Analysis prototype only; production addon and its install package unchanged",
+  "engine_commit": "624a67329fe2ad440c5b344785a9c73fcf22ae63",
+  "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+  "baseline_addon": "Faster ToME4 0.2.9",
+  "baseline_package_sha256": "e712cbc001d81d255ea524b1f352cc6721466643d0136d0dac58afa9ff086b23",
+  "save_archive_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+  "platform": "Linux x86_64, Ryzen 7 9800X3D, embedded LuaJIT 2.0.2, Xvfb/llvmpipe",
+  "protocol": {
+    "pairs": 5,
+    "save_calls_per_fresh_home": 1,
+    "warmup_ms": 2000,
+    "warmup_display_calls_min": 30,
+    "order": [
+      "baseline-01",
+      "compact-01",
+      "compact-02",
+      "baseline-02",
+      "baseline-03",
+      "compact-03",
+      "compact-04",
+      "baseline-04",
+      "baseline-05",
+      "compact-05"
+    ],
+    "only_variable": "Savefile.getFileName: normal class/address names vs per-Savefile memoized decimal names; main remains main",
+    "compression": "Original native serializer and background ZIP writer; DEFLATE level 4 unchanged",
+    "graphics": "1280x800, Shockbolt 64x64, 30 FPS, existing FBO guard and snapshot/PNG optimizations enabled",
+    "network": "Disabled; no Steam/web; character-sheet uploads disabled on both sides",
+    "clock": "CLOCK_MONOTONIC for wall, CLOCK_THREAD_CPUTIME_ID for main-thread CPU",
+    "sync": "Time inside normal Game.saveGame call",
+    "total": "From Game.saveGame entry to SavefilePipe.doThread return, including completion checks and generic completion callbacks",
+    "gc": "Normal engine/addon policy; no profiling hooks, native preload, debug hook or GC tuning",
+    "preflights_included": false
+  },
+  "summary": [
+    {
+      "metric": "sync_wall_ms",
+      "baseline_median": 159.61831998825,
+      "compact_median": 157.09951800108,
+      "paired_differences": [
+        3.415229976180001,
+        -0.7500469684599977,
+        -1.2879210710500217,
+        -13.13740503788,
+        -13.52484798431999
+      ]
+    },
+    {
+      "metric": "sync_cpu_ms",
+      "baseline_median": 142.67499,
+      "compact_median": 140.262908,
+      "paired_differences": [
+        3.0701410000000067,
+        -0.43438000000000443,
+        -1.7583480000000122,
+        -12.948138999999998,
+        -13.131354000000016
+      ]
+    },
+    {
+      "metric": "total_wall_ms",
+      "baseline_median": 515.68972301483,
+      "compact_median": 487.15810900927,
+      "paired_differences": [
+        -7.228952050210012,
+        -11.362580001350011,
+        -29.612937033169942,
+        -43.20908796786995,
+        -57.59904098510003
+      ]
+    },
+    {
+      "metric": "total_main_cpu_ms",
+      "baseline_median": 418.247971,
+      "compact_median": 402.944625,
+      "paired_differences": [
+        -9.804185000000018,
+        -9.129957999999988,
+        -16.398702999999955,
+        -31.405193000000054,
+        -38.67950999999999
+      ]
+    },
+    {
+      "metric": "game_bytes",
+      "baseline_median": 2666804,
+      "compact_median": 2480460,
+      "paired_differences": [
+        -186073,
+        -186738,
+        -186784,
+        -186344,
+        -186041
+      ]
+    }
+  ],
+  "raw": [
+    {
+      "session": "baseline-01",
+      "mode": "baseline",
+      "pair": 1,
+      "total_main_cpu_ms": 418.247971,
+      "sync_cpu_ms": 143.090201,
+      "sync_wall_ms": 159.61831998825,
+      "total_wall_ms": 507.73491102457,
+      "game_archive": {
+        "name": "yron/game.teag",
+        "bytes": 2666533,
+        "entries": 2864,
+        "raw_bytes": 6648559,
+        "compressed_bytes": 2300261,
+        "compact_names": false
+      },
+      "save_completed": true,
+      "live_state_equal": true,
+      "lua_errors": false,
+      "source_sha256": {
+        "run.py": "5dcf1a0c0289fa0f958c54acf154ccbe8d51103134731c8e035bf590d852c03b",
+        "runtime/game/addons/tome-faster.teaa": "e712cbc001d81d255ea524b1f352cc6721466643d0136d0dac58afa9ff086b23",
+        "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+        "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "d4536e559d1b49bd6bea190d1c5b85f8c7498bdec4e2d4208d40bec53e316ac6"
+      },
+      "host_load_start": [
+        0.14013671875,
+        0.24658203125,
+        0.33056640625
+      ],
+      "host_load_end": [
+        0.36962890625,
+        0.29248046875,
+        0.34521484375
+      ]
+    },
+    {
+      "session": "baseline-02",
+      "mode": "baseline",
+      "pair": 2,
+      "total_main_cpu_ms": 412.130985,
+      "sync_cpu_ms": 141.239346,
+      "sync_wall_ms": 157.84956496954,
+      "total_wall_ms": 497.26122200489,
+      "game_archive": {
+        "name": "yron/game.teag",
+        "bytes": 2667199,
+        "entries": 2864,
+        "raw_bytes": 6648559,
+        "compressed_bytes": 2300927,
+        "compact_names": false
+      },
+      "save_completed": true,
+      "live_state_equal": true,
+      "lua_errors": false,
+      "source_sha256": {
+        "run.py": "5dcf1a0c0289fa0f958c54acf154ccbe8d51103134731c8e035bf590d852c03b",
+        "runtime/game/addons/tome-faster.teaa": "e712cbc001d81d255ea524b1f352cc6721466643d0136d0dac58afa9ff086b23",
+        "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+        "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "d4536e559d1b49bd6bea190d1c5b85f8c7498bdec4e2d4208d40bec53e316ac6"
+      },
+      "host_load_start": [
+        0.54052734375,
+        0.3330078125,
+        0.3583984375
+      ],
+      "host_load_end": [
+        0.57763671875,
+        0.34423828125,
+        0.3623046875
+      ]
+    },
+    {
+      "session": "baseline-03",
+      "mode": "baseline",
+      "pair": 3,
+      "total_main_cpu_ms": 417.993437,
+      "sync_cpu_ms": 141.480432,
+      "sync_wall_ms": 158.07484704256,
+      "total_wall_ms": 515.68972301483,
+      "game_archive": {
+        "name": "yron/game.teag",
+        "bytes": 2667239,
+        "entries": 2864,
+        "raw_bytes": 6648559,
+        "compressed_bytes": 2300967,
+        "compact_names": false
+      },
+      "save_completed": true,
+      "live_state_equal": true,
+      "lua_errors": false,
+      "source_sha256": {
+        "run.py": "5dcf1a0c0289fa0f958c54acf154ccbe8d51103134731c8e035bf590d852c03b",
+        "runtime/game/addons/tome-faster.teaa": "e712cbc001d81d255ea524b1f352cc6721466643d0136d0dac58afa9ff086b23",
+        "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+        "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "d4536e559d1b49bd6bea190d1c5b85f8c7498bdec4e2d4208d40bec53e316ac6"
+      },
+      "host_load_start": [
+        0.57763671875,
+        0.34423828125,
+        0.3623046875
+      ],
+      "host_load_end": [
+        0.61181640625,
+        0.35546875,
+        0.3662109375
+      ]
+    },
+    {
+      "session": "baseline-04",
+      "mode": "baseline",
+      "pair": 4,
+      "total_main_cpu_ms": 434.349818,
+      "sync_cpu_ms": 153.211047,
+      "sync_wall_ms": 170.52109700441,
+      "total_wall_ms": 534.73833197355,
+      "game_archive": {
+        "name": "yron/game.teag",
+        "bytes": 2666804,
+        "entries": 2864,
+        "raw_bytes": 6648559,
+        "compressed_bytes": 2300532,
+        "compact_names": false
+      },
+      "save_completed": true,
+      "live_state_equal": true,
+      "lua_errors": false,
+      "source_sha256": {
+        "run.py": "5dcf1a0c0289fa0f958c54acf154ccbe8d51103134731c8e035bf590d852c03b",
+        "runtime/game/addons/tome-faster.teaa": "e712cbc001d81d255ea524b1f352cc6721466643d0136d0dac58afa9ff086b23",
+        "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+        "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "d4536e559d1b49bd6bea190d1c5b85f8c7498bdec4e2d4208d40bec53e316ac6"
+      },
+      "host_load_start": [
+        0.51708984375,
+        0.34326171875,
+        0.361328125
+      ],
+      "host_load_end": [
+        0.71630859375,
+        0.3876953125,
+        0.3759765625
+      ]
+    },
+    {
+      "session": "baseline-05",
+      "mode": "baseline",
+      "pair": 5,
+      "total_main_cpu_ms": 438.787281,
+      "sync_cpu_ms": 142.67499,
+      "sync_wall_ms": 160.16085702181,
+      "total_wall_ms": 544.75714999437,
+      "game_archive": {
+        "name": "yron/game.teag",
+        "bytes": 2666511,
+        "entries": 2864,
+        "raw_bytes": 6648559,
+        "compressed_bytes": 2300239,
+        "compact_names": false
+      },
+      "save_completed": true,
+      "live_state_equal": true,
+      "lua_errors": false,
+      "source_sha256": {
+        "run.py": "5dcf1a0c0289fa0f958c54acf154ccbe8d51103134731c8e035bf590d852c03b",
+        "runtime/game/addons/tome-faster.teaa": "e712cbc001d81d255ea524b1f352cc6721466643d0136d0dac58afa9ff086b23",
+        "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+        "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "d4536e559d1b49bd6bea190d1c5b85f8c7498bdec4e2d4208d40bec53e316ac6"
+      },
+      "host_load_start": [
+        0.71630859375,
+        0.3876953125,
+        0.3759765625
+      ],
+      "host_load_end": [
+        0.7392578125,
+        0.39794921875,
+        0.37939453125
+      ]
+    },
+    {
+      "session": "compact-01",
+      "mode": "compact",
+      "pair": 1,
+      "total_main_cpu_ms": 408.443786,
+      "sync_cpu_ms": 146.160342,
+      "sync_wall_ms": 163.03354996443,
+      "total_wall_ms": 500.50595897436,
+      "game_archive": {
+        "name": "yron/game.teag",
+        "bytes": 2480460,
+        "entries": 2864,
+        "raw_bytes": 5887169,
+        "compressed_bytes": 2242076,
+        "compact_names": true
+      },
+      "save_completed": true,
+      "live_state_equal": true,
+      "lua_errors": false,
+      "source_sha256": {
+        "run.py": "5dcf1a0c0289fa0f958c54acf154ccbe8d51103134731c8e035bf590d852c03b",
+        "runtime/game/addons/tome-faster.teaa": "e712cbc001d81d255ea524b1f352cc6721466643d0136d0dac58afa9ff086b23",
+        "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+        "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "d4536e559d1b49bd6bea190d1c5b85f8c7498bdec4e2d4208d40bec53e316ac6"
+      },
+      "host_load_start": [
+        0.36962890625,
+        0.29248046875,
+        0.34521484375
+      ],
+      "host_load_end": [
+        0.50048828125,
+        0.3212890625,
+        0.3544921875
+      ]
+    },
+    {
+      "session": "compact-02",
+      "mode": "compact",
+      "pair": 2,
+      "total_main_cpu_ms": 403.001027,
+      "sync_cpu_ms": 140.804966,
+      "sync_wall_ms": 157.09951800108,
+      "total_wall_ms": 485.89864200354,
+      "game_archive": {
+        "name": "yron/game.teag",
+        "bytes": 2480461,
+        "entries": 2864,
+        "raw_bytes": 5887169,
+        "compressed_bytes": 2242077,
+        "compact_names": true
+      },
+      "save_completed": true,
+      "live_state_equal": true,
+      "lua_errors": false,
+      "source_sha256": {
+        "run.py": "5dcf1a0c0289fa0f958c54acf154ccbe8d51103134731c8e035bf590d852c03b",
+        "runtime/game/addons/tome-faster.teaa": "e712cbc001d81d255ea524b1f352cc6721466643d0136d0dac58afa9ff086b23",
+        "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+        "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "d4536e559d1b49bd6bea190d1c5b85f8c7498bdec4e2d4208d40bec53e316ac6"
+      },
+      "host_load_start": [
+        0.50048828125,
+        0.3212890625,
+        0.3544921875
+      ],
+      "host_load_end": [
+        0.54052734375,
+        0.3330078125,
+        0.3583984375
+      ]
+    },
+    {
+      "session": "compact-03",
+      "mode": "compact",
+      "pair": 3,
+      "total_main_cpu_ms": 401.594734,
+      "sync_cpu_ms": 139.722084,
+      "sync_wall_ms": 156.78692597151,
+      "total_wall_ms": 486.07678598166,
+      "game_archive": {
+        "name": "yron/game.teag",
+        "bytes": 2480455,
+        "entries": 2864,
+        "raw_bytes": 5887169,
+        "compressed_bytes": 2242071,
+        "compact_names": true
+      },
+      "save_completed": true,
+      "live_state_equal": true,
+      "lua_errors": false,
+      "source_sha256": {
+        "run.py": "5dcf1a0c0289fa0f958c54acf154ccbe8d51103134731c8e035bf590d852c03b",
+        "runtime/game/addons/tome-faster.teaa": "e712cbc001d81d255ea524b1f352cc6721466643d0136d0dac58afa9ff086b23",
+        "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+        "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "d4536e559d1b49bd6bea190d1c5b85f8c7498bdec4e2d4208d40bec53e316ac6"
+      },
+      "host_load_start": [
+        0.61181640625,
+        0.35546875,
+        0.3662109375
+      ],
+      "host_load_end": [
+        0.5625,
+        0.34912109375,
+        0.36376953125
+      ]
+    },
+    {
+      "session": "compact-04",
+      "mode": "compact",
+      "pair": 4,
+      "total_main_cpu_ms": 402.944625,
+      "sync_cpu_ms": 140.262908,
+      "sync_wall_ms": 157.38369196653,
+      "total_wall_ms": 491.52924400568,
+      "game_archive": {
+        "name": "yron/game.teag",
+        "bytes": 2480460,
+        "entries": 2864,
+        "raw_bytes": 5887169,
+        "compressed_bytes": 2242076,
+        "compact_names": true
+      },
+      "save_completed": true,
+      "live_state_equal": true,
+      "lua_errors": false,
+      "source_sha256": {
+        "run.py": "5dcf1a0c0289fa0f958c54acf154ccbe8d51103134731c8e035bf590d852c03b",
+        "runtime/game/addons/tome-faster.teaa": "e712cbc001d81d255ea524b1f352cc6721466643d0136d0dac58afa9ff086b23",
+        "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+        "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "d4536e559d1b49bd6bea190d1c5b85f8c7498bdec4e2d4208d40bec53e316ac6"
+      },
+      "host_load_start": [
+        0.5625,
+        0.34912109375,
+        0.36376953125
+      ],
+      "host_load_end": [
+        0.51708984375,
+        0.34326171875,
+        0.361328125
+      ]
+    },
+    {
+      "session": "compact-05",
+      "mode": "compact",
+      "pair": 5,
+      "total_main_cpu_ms": 400.107771,
+      "sync_cpu_ms": 129.543636,
+      "sync_wall_ms": 146.63600903749,
+      "total_wall_ms": 487.15810900927,
+      "game_archive": {
+        "name": "yron/game.teag",
+        "bytes": 2480470,
+        "entries": 2864,
+        "raw_bytes": 5887169,
+        "compressed_bytes": 2242086,
+        "compact_names": true
+      },
+      "save_completed": true,
+      "live_state_equal": true,
+      "lua_errors": false,
+      "source_sha256": {
+        "run.py": "5dcf1a0c0289fa0f958c54acf154ccbe8d51103134731c8e035bf590d852c03b",
+        "runtime/game/addons/tome-faster.teaa": "e712cbc001d81d255ea524b1f352cc6721466643d0136d0dac58afa9ff086b23",
+        "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+        "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "d4536e559d1b49bd6bea190d1c5b85f8c7498bdec4e2d4208d40bec53e316ac6"
+      },
+      "host_load_start": [
+        0.7392578125,
+        0.39794921875,
+        0.37939453125
+      ],
+      "host_load_end": [
+        0.7392578125,
+        0.39794921875,
+        0.37939453125
+      ]
+    }
+  ],
+  "reload": [
+    {
+      "session": "reload-compact-05",
+      "original_loadReal": true,
+      "normalized_state_equal": true,
+      "save_files_unchanged": true,
+      "exit_code": 0,
+      "lua_errors": false
+    },
+    {
+      "session": "reload-baseline-05",
+      "original_loadReal": true,
+      "normalized_state_equal": true,
+      "save_files_unchanged": true,
+      "exit_code": 0,
+      "lua_errors": false
+    }
+  ],
+  "preflight_findings": {
+    "reload_uid_mismatches_each": 205,
+    "baseline_and_compact_both_affected": true,
+    "non_uid_mismatches": 0,
+    "explanation": "Stock engine.Entity.loaded assigns fresh UIDs; final reload comparison preserves a bijection of labels and repeated-UID aliases.",
+    "initial_driver_treated_uid_changes_as_failure": true
+  },
+  "limits": [
+    "One character, one map and five pairs; results do not prove no regression for every save or platform.",
+    "Synchronous-call differences are small and are not attributed to names generated later during serialization.",
+    "Reload verifies original loader, live values and UID-label aliases in the recorded subset; it is not complete graph equivalence for every addon.",
+    "The full-directory 6.5% estimate is offline reversible renaming of all 22 archives; ordinary saves do not rewrite every old region.",
+    "Windows, hardware GPU, other characters, cloud paths, retry/failure and multiple-archive corner cases remain for production validation."
+  ]
+}

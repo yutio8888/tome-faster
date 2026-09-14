@@ -1,0 +1,1731 @@
+{
+  "schema": 1,
+  "pairs_per_case": 30,
+  "declared_unix_ns": 1789360092772274913,
+  "package_sha256": "9464fdfc425f53a238aa76ffc16853bd9c5e38df9d6e9b5519941b517f5d2f76",
+  "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+  "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+  "production_options_baseline": {
+    "profile": false,
+    "stutter": false,
+    "session": false,
+    "compact_save_names": true,
+    "fbo_gc_guard": true,
+    "hit_warning_interval_ms": 500,
+    "compact_inventory": false,
+    "fearscape_cleanup": false,
+    "compact_save_names_base62": false
+  },
+  "source_sha256": {
+    "run.py": "86bec0d4dbf6744d11b76ac1ecbe8877f0d5e207fe853e0a55ec3d30add8263e",
+    "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "0d71e28e4528c40612a9b22f2fbdac6f9bb7c8639a84142d043ec56b29c9e045",
+    "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+    "runtime/game/addons/tome-save-size-probe/overload/engine/FearscapeScenario.lua": "5e0ae22f9371c40de2d89ca8717663e3cfc5bbd22e2b506b5008380cce1b8b56",
+    "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+    "runtime/game/addons/tome-save-size-probe/overload/engine/SaveIsolatedProbe.lua": "87ac801f892fa2a2008143c472982abe548dc4c508a0a1a454f8154e2306610a",
+    "runtime/game/addons/tome-faster.teaa": "9464fdfc425f53a238aa76ffc16853bd9c5e38df9d6e9b5519941b517f5d2f76"
+  },
+  "cases": {
+    "base62-save": {
+      "option": "compact_save_names_base62",
+      "pairs": [
+        {
+          "pair": 1,
+          "baseline": "base62-save--baseline--p01",
+          "candidate": "base62-save--candidate--p01",
+          "run_order": [
+            "base62-save--baseline--p01",
+            "base62-save--candidate--p01"
+          ]
+        },
+        {
+          "pair": 2,
+          "baseline": "base62-save--baseline--p02",
+          "candidate": "base62-save--candidate--p02",
+          "run_order": [
+            "base62-save--candidate--p02",
+            "base62-save--baseline--p02"
+          ]
+        },
+        {
+          "pair": 3,
+          "baseline": "base62-save--baseline--p03",
+          "candidate": "base62-save--candidate--p03",
+          "run_order": [
+            "base62-save--baseline--p03",
+            "base62-save--candidate--p03"
+          ]
+        },
+        {
+          "pair": 4,
+          "baseline": "base62-save--baseline--p04",
+          "candidate": "base62-save--candidate--p04",
+          "run_order": [
+            "base62-save--candidate--p04",
+            "base62-save--baseline--p04"
+          ]
+        },
+        {
+          "pair": 5,
+          "baseline": "base62-save--baseline--p05",
+          "candidate": "base62-save--candidate--p05",
+          "run_order": [
+            "base62-save--baseline--p05",
+            "base62-save--candidate--p05"
+          ]
+        },
+        {
+          "pair": 6,
+          "baseline": "base62-save--baseline--p06",
+          "candidate": "base62-save--candidate--p06",
+          "run_order": [
+            "base62-save--candidate--p06",
+            "base62-save--baseline--p06"
+          ]
+        },
+        {
+          "pair": 7,
+          "baseline": "base62-save--baseline--p07",
+          "candidate": "base62-save--candidate--p07",
+          "run_order": [
+            "base62-save--baseline--p07",
+            "base62-save--candidate--p07"
+          ]
+        },
+        {
+          "pair": 8,
+          "baseline": "base62-save--baseline--p08",
+          "candidate": "base62-save--candidate--p08",
+          "run_order": [
+            "base62-save--candidate--p08",
+            "base62-save--baseline--p08"
+          ]
+        },
+        {
+          "pair": 9,
+          "baseline": "base62-save--baseline--p09",
+          "candidate": "base62-save--candidate--p09",
+          "run_order": [
+            "base62-save--baseline--p09",
+            "base62-save--candidate--p09"
+          ]
+        },
+        {
+          "pair": 10,
+          "baseline": "base62-save--baseline--p10",
+          "candidate": "base62-save--candidate--p10",
+          "run_order": [
+            "base62-save--candidate--p10",
+            "base62-save--baseline--p10"
+          ]
+        },
+        {
+          "pair": 11,
+          "baseline": "base62-save--baseline--p11",
+          "candidate": "base62-save--candidate--p11",
+          "run_order": [
+            "base62-save--baseline--p11",
+            "base62-save--candidate--p11"
+          ]
+        },
+        {
+          "pair": 12,
+          "baseline": "base62-save--baseline--p12",
+          "candidate": "base62-save--candidate--p12",
+          "run_order": [
+            "base62-save--candidate--p12",
+            "base62-save--baseline--p12"
+          ]
+        },
+        {
+          "pair": 13,
+          "baseline": "base62-save--baseline--p13",
+          "candidate": "base62-save--candidate--p13",
+          "run_order": [
+            "base62-save--baseline--p13",
+            "base62-save--candidate--p13"
+          ]
+        },
+        {
+          "pair": 14,
+          "baseline": "base62-save--baseline--p14",
+          "candidate": "base62-save--candidate--p14",
+          "run_order": [
+            "base62-save--candidate--p14",
+            "base62-save--baseline--p14"
+          ]
+        },
+        {
+          "pair": 15,
+          "baseline": "base62-save--baseline--p15",
+          "candidate": "base62-save--candidate--p15",
+          "run_order": [
+            "base62-save--baseline--p15",
+            "base62-save--candidate--p15"
+          ]
+        },
+        {
+          "pair": 16,
+          "baseline": "base62-save--baseline--p16",
+          "candidate": "base62-save--candidate--p16",
+          "run_order": [
+            "base62-save--candidate--p16",
+            "base62-save--baseline--p16"
+          ]
+        },
+        {
+          "pair": 17,
+          "baseline": "base62-save--baseline--p17",
+          "candidate": "base62-save--candidate--p17",
+          "run_order": [
+            "base62-save--baseline--p17",
+            "base62-save--candidate--p17"
+          ]
+        },
+        {
+          "pair": 18,
+          "baseline": "base62-save--baseline--p18",
+          "candidate": "base62-save--candidate--p18",
+          "run_order": [
+            "base62-save--candidate--p18",
+            "base62-save--baseline--p18"
+          ]
+        },
+        {
+          "pair": 19,
+          "baseline": "base62-save--baseline--p19",
+          "candidate": "base62-save--candidate--p19",
+          "run_order": [
+            "base62-save--baseline--p19",
+            "base62-save--candidate--p19"
+          ]
+        },
+        {
+          "pair": 20,
+          "baseline": "base62-save--baseline--p20",
+          "candidate": "base62-save--candidate--p20",
+          "run_order": [
+            "base62-save--candidate--p20",
+            "base62-save--baseline--p20"
+          ]
+        },
+        {
+          "pair": 21,
+          "baseline": "base62-save--baseline--p21",
+          "candidate": "base62-save--candidate--p21",
+          "run_order": [
+            "base62-save--baseline--p21",
+            "base62-save--candidate--p21"
+          ]
+        },
+        {
+          "pair": 22,
+          "baseline": "base62-save--baseline--p22",
+          "candidate": "base62-save--candidate--p22",
+          "run_order": [
+            "base62-save--candidate--p22",
+            "base62-save--baseline--p22"
+          ]
+        },
+        {
+          "pair": 23,
+          "baseline": "base62-save--baseline--p23",
+          "candidate": "base62-save--candidate--p23",
+          "run_order": [
+            "base62-save--baseline--p23",
+            "base62-save--candidate--p23"
+          ]
+        },
+        {
+          "pair": 24,
+          "baseline": "base62-save--baseline--p24",
+          "candidate": "base62-save--candidate--p24",
+          "run_order": [
+            "base62-save--candidate--p24",
+            "base62-save--baseline--p24"
+          ]
+        },
+        {
+          "pair": 25,
+          "baseline": "base62-save--baseline--p25",
+          "candidate": "base62-save--candidate--p25",
+          "run_order": [
+            "base62-save--baseline--p25",
+            "base62-save--candidate--p25"
+          ]
+        },
+        {
+          "pair": 26,
+          "baseline": "base62-save--baseline--p26",
+          "candidate": "base62-save--candidate--p26",
+          "run_order": [
+            "base62-save--candidate--p26",
+            "base62-save--baseline--p26"
+          ]
+        },
+        {
+          "pair": 27,
+          "baseline": "base62-save--baseline--p27",
+          "candidate": "base62-save--candidate--p27",
+          "run_order": [
+            "base62-save--baseline--p27",
+            "base62-save--candidate--p27"
+          ]
+        },
+        {
+          "pair": 28,
+          "baseline": "base62-save--baseline--p28",
+          "candidate": "base62-save--candidate--p28",
+          "run_order": [
+            "base62-save--candidate--p28",
+            "base62-save--baseline--p28"
+          ]
+        },
+        {
+          "pair": 29,
+          "baseline": "base62-save--baseline--p29",
+          "candidate": "base62-save--candidate--p29",
+          "run_order": [
+            "base62-save--baseline--p29",
+            "base62-save--candidate--p29"
+          ]
+        },
+        {
+          "pair": 30,
+          "baseline": "base62-save--baseline--p30",
+          "candidate": "base62-save--candidate--p30",
+          "run_order": [
+            "base62-save--candidate--p30",
+            "base62-save--baseline--p30"
+          ]
+        }
+      ],
+      "event_prefixes": []
+    },
+    "inventory-idle": {
+      "option": "compact_inventory",
+      "pairs": [
+        {
+          "pair": 1,
+          "baseline": "inventory-idle--baseline--p01",
+          "candidate": "inventory-idle--candidate--p01",
+          "run_order": [
+            "inventory-idle--baseline--p01",
+            "inventory-idle--candidate--p01"
+          ]
+        },
+        {
+          "pair": 2,
+          "baseline": "inventory-idle--baseline--p02",
+          "candidate": "inventory-idle--candidate--p02",
+          "run_order": [
+            "inventory-idle--candidate--p02",
+            "inventory-idle--baseline--p02"
+          ]
+        },
+        {
+          "pair": 3,
+          "baseline": "inventory-idle--baseline--p03",
+          "candidate": "inventory-idle--candidate--p03",
+          "run_order": [
+            "inventory-idle--baseline--p03",
+            "inventory-idle--candidate--p03"
+          ]
+        },
+        {
+          "pair": 4,
+          "baseline": "inventory-idle--baseline--p04",
+          "candidate": "inventory-idle--candidate--p04",
+          "run_order": [
+            "inventory-idle--candidate--p04",
+            "inventory-idle--baseline--p04"
+          ]
+        },
+        {
+          "pair": 5,
+          "baseline": "inventory-idle--baseline--p05",
+          "candidate": "inventory-idle--candidate--p05",
+          "run_order": [
+            "inventory-idle--baseline--p05",
+            "inventory-idle--candidate--p05"
+          ]
+        },
+        {
+          "pair": 6,
+          "baseline": "inventory-idle--baseline--p06",
+          "candidate": "inventory-idle--candidate--p06",
+          "run_order": [
+            "inventory-idle--candidate--p06",
+            "inventory-idle--baseline--p06"
+          ]
+        },
+        {
+          "pair": 7,
+          "baseline": "inventory-idle--baseline--p07",
+          "candidate": "inventory-idle--candidate--p07",
+          "run_order": [
+            "inventory-idle--baseline--p07",
+            "inventory-idle--candidate--p07"
+          ]
+        },
+        {
+          "pair": 8,
+          "baseline": "inventory-idle--baseline--p08",
+          "candidate": "inventory-idle--candidate--p08",
+          "run_order": [
+            "inventory-idle--candidate--p08",
+            "inventory-idle--baseline--p08"
+          ]
+        },
+        {
+          "pair": 9,
+          "baseline": "inventory-idle--baseline--p09",
+          "candidate": "inventory-idle--candidate--p09",
+          "run_order": [
+            "inventory-idle--baseline--p09",
+            "inventory-idle--candidate--p09"
+          ]
+        },
+        {
+          "pair": 10,
+          "baseline": "inventory-idle--baseline--p10",
+          "candidate": "inventory-idle--candidate--p10",
+          "run_order": [
+            "inventory-idle--candidate--p10",
+            "inventory-idle--baseline--p10"
+          ]
+        },
+        {
+          "pair": 11,
+          "baseline": "inventory-idle--baseline--p11",
+          "candidate": "inventory-idle--candidate--p11",
+          "run_order": [
+            "inventory-idle--baseline--p11",
+            "inventory-idle--candidate--p11"
+          ]
+        },
+        {
+          "pair": 12,
+          "baseline": "inventory-idle--baseline--p12",
+          "candidate": "inventory-idle--candidate--p12",
+          "run_order": [
+            "inventory-idle--candidate--p12",
+            "inventory-idle--baseline--p12"
+          ]
+        },
+        {
+          "pair": 13,
+          "baseline": "inventory-idle--baseline--p13",
+          "candidate": "inventory-idle--candidate--p13",
+          "run_order": [
+            "inventory-idle--baseline--p13",
+            "inventory-idle--candidate--p13"
+          ]
+        },
+        {
+          "pair": 14,
+          "baseline": "inventory-idle--baseline--p14",
+          "candidate": "inventory-idle--candidate--p14",
+          "run_order": [
+            "inventory-idle--candidate--p14",
+            "inventory-idle--baseline--p14"
+          ]
+        },
+        {
+          "pair": 15,
+          "baseline": "inventory-idle--baseline--p15",
+          "candidate": "inventory-idle--candidate--p15",
+          "run_order": [
+            "inventory-idle--baseline--p15",
+            "inventory-idle--candidate--p15"
+          ]
+        },
+        {
+          "pair": 16,
+          "baseline": "inventory-idle--baseline--p16",
+          "candidate": "inventory-idle--candidate--p16",
+          "run_order": [
+            "inventory-idle--candidate--p16",
+            "inventory-idle--baseline--p16"
+          ]
+        },
+        {
+          "pair": 17,
+          "baseline": "inventory-idle--baseline--p17",
+          "candidate": "inventory-idle--candidate--p17",
+          "run_order": [
+            "inventory-idle--baseline--p17",
+            "inventory-idle--candidate--p17"
+          ]
+        },
+        {
+          "pair": 18,
+          "baseline": "inventory-idle--baseline--p18",
+          "candidate": "inventory-idle--candidate--p18",
+          "run_order": [
+            "inventory-idle--candidate--p18",
+            "inventory-idle--baseline--p18"
+          ]
+        },
+        {
+          "pair": 19,
+          "baseline": "inventory-idle--baseline--p19",
+          "candidate": "inventory-idle--candidate--p19",
+          "run_order": [
+            "inventory-idle--baseline--p19",
+            "inventory-idle--candidate--p19"
+          ]
+        },
+        {
+          "pair": 20,
+          "baseline": "inventory-idle--baseline--p20",
+          "candidate": "inventory-idle--candidate--p20",
+          "run_order": [
+            "inventory-idle--candidate--p20",
+            "inventory-idle--baseline--p20"
+          ]
+        },
+        {
+          "pair": 21,
+          "baseline": "inventory-idle--baseline--p21",
+          "candidate": "inventory-idle--candidate--p21",
+          "run_order": [
+            "inventory-idle--baseline--p21",
+            "inventory-idle--candidate--p21"
+          ]
+        },
+        {
+          "pair": 22,
+          "baseline": "inventory-idle--baseline--p22",
+          "candidate": "inventory-idle--candidate--p22",
+          "run_order": [
+            "inventory-idle--candidate--p22",
+            "inventory-idle--baseline--p22"
+          ]
+        },
+        {
+          "pair": 23,
+          "baseline": "inventory-idle--baseline--p23",
+          "candidate": "inventory-idle--candidate--p23",
+          "run_order": [
+            "inventory-idle--baseline--p23",
+            "inventory-idle--candidate--p23"
+          ]
+        },
+        {
+          "pair": 24,
+          "baseline": "inventory-idle--baseline--p24",
+          "candidate": "inventory-idle--candidate--p24",
+          "run_order": [
+            "inventory-idle--candidate--p24",
+            "inventory-idle--baseline--p24"
+          ]
+        },
+        {
+          "pair": 25,
+          "baseline": "inventory-idle--baseline--p25",
+          "candidate": "inventory-idle--candidate--p25",
+          "run_order": [
+            "inventory-idle--baseline--p25",
+            "inventory-idle--candidate--p25"
+          ]
+        },
+        {
+          "pair": 26,
+          "baseline": "inventory-idle--baseline--p26",
+          "candidate": "inventory-idle--candidate--p26",
+          "run_order": [
+            "inventory-idle--candidate--p26",
+            "inventory-idle--baseline--p26"
+          ]
+        },
+        {
+          "pair": 27,
+          "baseline": "inventory-idle--baseline--p27",
+          "candidate": "inventory-idle--candidate--p27",
+          "run_order": [
+            "inventory-idle--baseline--p27",
+            "inventory-idle--candidate--p27"
+          ]
+        },
+        {
+          "pair": 28,
+          "baseline": "inventory-idle--baseline--p28",
+          "candidate": "inventory-idle--candidate--p28",
+          "run_order": [
+            "inventory-idle--candidate--p28",
+            "inventory-idle--baseline--p28"
+          ]
+        },
+        {
+          "pair": 29,
+          "baseline": "inventory-idle--baseline--p29",
+          "candidate": "inventory-idle--candidate--p29",
+          "run_order": [
+            "inventory-idle--baseline--p29",
+            "inventory-idle--candidate--p29"
+          ]
+        },
+        {
+          "pair": 30,
+          "baseline": "inventory-idle--baseline--p30",
+          "candidate": "inventory-idle--candidate--p30",
+          "run_order": [
+            "inventory-idle--candidate--p30",
+            "inventory-idle--baseline--p30"
+          ]
+        }
+      ],
+      "event_prefixes": []
+    },
+    "inventory-add": {
+      "option": "compact_inventory",
+      "pairs": [
+        {
+          "pair": 1,
+          "baseline": "inventory-add--baseline--p01",
+          "candidate": "inventory-add--candidate--p01",
+          "run_order": [
+            "inventory-add--baseline--p01",
+            "inventory-add--candidate--p01"
+          ]
+        },
+        {
+          "pair": 2,
+          "baseline": "inventory-add--baseline--p02",
+          "candidate": "inventory-add--candidate--p02",
+          "run_order": [
+            "inventory-add--candidate--p02",
+            "inventory-add--baseline--p02"
+          ]
+        },
+        {
+          "pair": 3,
+          "baseline": "inventory-add--baseline--p03",
+          "candidate": "inventory-add--candidate--p03",
+          "run_order": [
+            "inventory-add--baseline--p03",
+            "inventory-add--candidate--p03"
+          ]
+        },
+        {
+          "pair": 4,
+          "baseline": "inventory-add--baseline--p04",
+          "candidate": "inventory-add--candidate--p04",
+          "run_order": [
+            "inventory-add--candidate--p04",
+            "inventory-add--baseline--p04"
+          ]
+        },
+        {
+          "pair": 5,
+          "baseline": "inventory-add--baseline--p05",
+          "candidate": "inventory-add--candidate--p05",
+          "run_order": [
+            "inventory-add--baseline--p05",
+            "inventory-add--candidate--p05"
+          ]
+        },
+        {
+          "pair": 6,
+          "baseline": "inventory-add--baseline--p06",
+          "candidate": "inventory-add--candidate--p06",
+          "run_order": [
+            "inventory-add--candidate--p06",
+            "inventory-add--baseline--p06"
+          ]
+        },
+        {
+          "pair": 7,
+          "baseline": "inventory-add--baseline--p07",
+          "candidate": "inventory-add--candidate--p07",
+          "run_order": [
+            "inventory-add--baseline--p07",
+            "inventory-add--candidate--p07"
+          ]
+        },
+        {
+          "pair": 8,
+          "baseline": "inventory-add--baseline--p08",
+          "candidate": "inventory-add--candidate--p08",
+          "run_order": [
+            "inventory-add--candidate--p08",
+            "inventory-add--baseline--p08"
+          ]
+        },
+        {
+          "pair": 9,
+          "baseline": "inventory-add--baseline--p09",
+          "candidate": "inventory-add--candidate--p09",
+          "run_order": [
+            "inventory-add--baseline--p09",
+            "inventory-add--candidate--p09"
+          ]
+        },
+        {
+          "pair": 10,
+          "baseline": "inventory-add--baseline--p10",
+          "candidate": "inventory-add--candidate--p10",
+          "run_order": [
+            "inventory-add--candidate--p10",
+            "inventory-add--baseline--p10"
+          ]
+        },
+        {
+          "pair": 11,
+          "baseline": "inventory-add--baseline--p11",
+          "candidate": "inventory-add--candidate--p11",
+          "run_order": [
+            "inventory-add--baseline--p11",
+            "inventory-add--candidate--p11"
+          ]
+        },
+        {
+          "pair": 12,
+          "baseline": "inventory-add--baseline--p12",
+          "candidate": "inventory-add--candidate--p12",
+          "run_order": [
+            "inventory-add--candidate--p12",
+            "inventory-add--baseline--p12"
+          ]
+        },
+        {
+          "pair": 13,
+          "baseline": "inventory-add--baseline--p13",
+          "candidate": "inventory-add--candidate--p13",
+          "run_order": [
+            "inventory-add--baseline--p13",
+            "inventory-add--candidate--p13"
+          ]
+        },
+        {
+          "pair": 14,
+          "baseline": "inventory-add--baseline--p14",
+          "candidate": "inventory-add--candidate--p14",
+          "run_order": [
+            "inventory-add--candidate--p14",
+            "inventory-add--baseline--p14"
+          ]
+        },
+        {
+          "pair": 15,
+          "baseline": "inventory-add--baseline--p15",
+          "candidate": "inventory-add--candidate--p15",
+          "run_order": [
+            "inventory-add--baseline--p15",
+            "inventory-add--candidate--p15"
+          ]
+        },
+        {
+          "pair": 16,
+          "baseline": "inventory-add--baseline--p16",
+          "candidate": "inventory-add--candidate--p16",
+          "run_order": [
+            "inventory-add--candidate--p16",
+            "inventory-add--baseline--p16"
+          ]
+        },
+        {
+          "pair": 17,
+          "baseline": "inventory-add--baseline--p17",
+          "candidate": "inventory-add--candidate--p17",
+          "run_order": [
+            "inventory-add--baseline--p17",
+            "inventory-add--candidate--p17"
+          ]
+        },
+        {
+          "pair": 18,
+          "baseline": "inventory-add--baseline--p18",
+          "candidate": "inventory-add--candidate--p18",
+          "run_order": [
+            "inventory-add--candidate--p18",
+            "inventory-add--baseline--p18"
+          ]
+        },
+        {
+          "pair": 19,
+          "baseline": "inventory-add--baseline--p19",
+          "candidate": "inventory-add--candidate--p19",
+          "run_order": [
+            "inventory-add--baseline--p19",
+            "inventory-add--candidate--p19"
+          ]
+        },
+        {
+          "pair": 20,
+          "baseline": "inventory-add--baseline--p20",
+          "candidate": "inventory-add--candidate--p20",
+          "run_order": [
+            "inventory-add--candidate--p20",
+            "inventory-add--baseline--p20"
+          ]
+        },
+        {
+          "pair": 21,
+          "baseline": "inventory-add--baseline--p21",
+          "candidate": "inventory-add--candidate--p21",
+          "run_order": [
+            "inventory-add--baseline--p21",
+            "inventory-add--candidate--p21"
+          ]
+        },
+        {
+          "pair": 22,
+          "baseline": "inventory-add--baseline--p22",
+          "candidate": "inventory-add--candidate--p22",
+          "run_order": [
+            "inventory-add--candidate--p22",
+            "inventory-add--baseline--p22"
+          ]
+        },
+        {
+          "pair": 23,
+          "baseline": "inventory-add--baseline--p23",
+          "candidate": "inventory-add--candidate--p23",
+          "run_order": [
+            "inventory-add--baseline--p23",
+            "inventory-add--candidate--p23"
+          ]
+        },
+        {
+          "pair": 24,
+          "baseline": "inventory-add--baseline--p24",
+          "candidate": "inventory-add--candidate--p24",
+          "run_order": [
+            "inventory-add--candidate--p24",
+            "inventory-add--baseline--p24"
+          ]
+        },
+        {
+          "pair": 25,
+          "baseline": "inventory-add--baseline--p25",
+          "candidate": "inventory-add--candidate--p25",
+          "run_order": [
+            "inventory-add--baseline--p25",
+            "inventory-add--candidate--p25"
+          ]
+        },
+        {
+          "pair": 26,
+          "baseline": "inventory-add--baseline--p26",
+          "candidate": "inventory-add--candidate--p26",
+          "run_order": [
+            "inventory-add--candidate--p26",
+            "inventory-add--baseline--p26"
+          ]
+        },
+        {
+          "pair": 27,
+          "baseline": "inventory-add--baseline--p27",
+          "candidate": "inventory-add--candidate--p27",
+          "run_order": [
+            "inventory-add--baseline--p27",
+            "inventory-add--candidate--p27"
+          ]
+        },
+        {
+          "pair": 28,
+          "baseline": "inventory-add--baseline--p28",
+          "candidate": "inventory-add--candidate--p28",
+          "run_order": [
+            "inventory-add--candidate--p28",
+            "inventory-add--baseline--p28"
+          ]
+        },
+        {
+          "pair": 29,
+          "baseline": "inventory-add--baseline--p29",
+          "candidate": "inventory-add--candidate--p29",
+          "run_order": [
+            "inventory-add--baseline--p29",
+            "inventory-add--candidate--p29"
+          ]
+        },
+        {
+          "pair": 30,
+          "baseline": "inventory-add--baseline--p30",
+          "candidate": "inventory-add--candidate--p30",
+          "run_order": [
+            "inventory-add--candidate--p30",
+            "inventory-add--baseline--p30"
+          ]
+        }
+      ],
+      "event_prefixes": [
+        "inventory_add"
+      ]
+    },
+    "fearscape-idle": {
+      "option": "fearscape_cleanup",
+      "pairs": [
+        {
+          "pair": 1,
+          "baseline": "fearscape-idle--baseline--p01",
+          "candidate": "fearscape-idle--candidate--p01",
+          "run_order": [
+            "fearscape-idle--baseline--p01",
+            "fearscape-idle--candidate--p01"
+          ]
+        },
+        {
+          "pair": 2,
+          "baseline": "fearscape-idle--baseline--p02",
+          "candidate": "fearscape-idle--candidate--p02",
+          "run_order": [
+            "fearscape-idle--candidate--p02",
+            "fearscape-idle--baseline--p02"
+          ]
+        },
+        {
+          "pair": 3,
+          "baseline": "fearscape-idle--baseline--p03",
+          "candidate": "fearscape-idle--candidate--p03",
+          "run_order": [
+            "fearscape-idle--baseline--p03",
+            "fearscape-idle--candidate--p03"
+          ]
+        },
+        {
+          "pair": 4,
+          "baseline": "fearscape-idle--baseline--p04",
+          "candidate": "fearscape-idle--candidate--p04",
+          "run_order": [
+            "fearscape-idle--candidate--p04",
+            "fearscape-idle--baseline--p04"
+          ]
+        },
+        {
+          "pair": 5,
+          "baseline": "fearscape-idle--baseline--p05",
+          "candidate": "fearscape-idle--candidate--p05",
+          "run_order": [
+            "fearscape-idle--baseline--p05",
+            "fearscape-idle--candidate--p05"
+          ]
+        },
+        {
+          "pair": 6,
+          "baseline": "fearscape-idle--baseline--p06",
+          "candidate": "fearscape-idle--candidate--p06",
+          "run_order": [
+            "fearscape-idle--candidate--p06",
+            "fearscape-idle--baseline--p06"
+          ]
+        },
+        {
+          "pair": 7,
+          "baseline": "fearscape-idle--baseline--p07",
+          "candidate": "fearscape-idle--candidate--p07",
+          "run_order": [
+            "fearscape-idle--baseline--p07",
+            "fearscape-idle--candidate--p07"
+          ]
+        },
+        {
+          "pair": 8,
+          "baseline": "fearscape-idle--baseline--p08",
+          "candidate": "fearscape-idle--candidate--p08",
+          "run_order": [
+            "fearscape-idle--candidate--p08",
+            "fearscape-idle--baseline--p08"
+          ]
+        },
+        {
+          "pair": 9,
+          "baseline": "fearscape-idle--baseline--p09",
+          "candidate": "fearscape-idle--candidate--p09",
+          "run_order": [
+            "fearscape-idle--baseline--p09",
+            "fearscape-idle--candidate--p09"
+          ]
+        },
+        {
+          "pair": 10,
+          "baseline": "fearscape-idle--baseline--p10",
+          "candidate": "fearscape-idle--candidate--p10",
+          "run_order": [
+            "fearscape-idle--candidate--p10",
+            "fearscape-idle--baseline--p10"
+          ]
+        },
+        {
+          "pair": 11,
+          "baseline": "fearscape-idle--baseline--p11",
+          "candidate": "fearscape-idle--candidate--p11",
+          "run_order": [
+            "fearscape-idle--baseline--p11",
+            "fearscape-idle--candidate--p11"
+          ]
+        },
+        {
+          "pair": 12,
+          "baseline": "fearscape-idle--baseline--p12",
+          "candidate": "fearscape-idle--candidate--p12",
+          "run_order": [
+            "fearscape-idle--candidate--p12",
+            "fearscape-idle--baseline--p12"
+          ]
+        },
+        {
+          "pair": 13,
+          "baseline": "fearscape-idle--baseline--p13",
+          "candidate": "fearscape-idle--candidate--p13",
+          "run_order": [
+            "fearscape-idle--baseline--p13",
+            "fearscape-idle--candidate--p13"
+          ]
+        },
+        {
+          "pair": 14,
+          "baseline": "fearscape-idle--baseline--p14",
+          "candidate": "fearscape-idle--candidate--p14",
+          "run_order": [
+            "fearscape-idle--candidate--p14",
+            "fearscape-idle--baseline--p14"
+          ]
+        },
+        {
+          "pair": 15,
+          "baseline": "fearscape-idle--baseline--p15",
+          "candidate": "fearscape-idle--candidate--p15",
+          "run_order": [
+            "fearscape-idle--baseline--p15",
+            "fearscape-idle--candidate--p15"
+          ]
+        },
+        {
+          "pair": 16,
+          "baseline": "fearscape-idle--baseline--p16",
+          "candidate": "fearscape-idle--candidate--p16",
+          "run_order": [
+            "fearscape-idle--candidate--p16",
+            "fearscape-idle--baseline--p16"
+          ]
+        },
+        {
+          "pair": 17,
+          "baseline": "fearscape-idle--baseline--p17",
+          "candidate": "fearscape-idle--candidate--p17",
+          "run_order": [
+            "fearscape-idle--baseline--p17",
+            "fearscape-idle--candidate--p17"
+          ]
+        },
+        {
+          "pair": 18,
+          "baseline": "fearscape-idle--baseline--p18",
+          "candidate": "fearscape-idle--candidate--p18",
+          "run_order": [
+            "fearscape-idle--candidate--p18",
+            "fearscape-idle--baseline--p18"
+          ]
+        },
+        {
+          "pair": 19,
+          "baseline": "fearscape-idle--baseline--p19",
+          "candidate": "fearscape-idle--candidate--p19",
+          "run_order": [
+            "fearscape-idle--baseline--p19",
+            "fearscape-idle--candidate--p19"
+          ]
+        },
+        {
+          "pair": 20,
+          "baseline": "fearscape-idle--baseline--p20",
+          "candidate": "fearscape-idle--candidate--p20",
+          "run_order": [
+            "fearscape-idle--candidate--p20",
+            "fearscape-idle--baseline--p20"
+          ]
+        },
+        {
+          "pair": 21,
+          "baseline": "fearscape-idle--baseline--p21",
+          "candidate": "fearscape-idle--candidate--p21",
+          "run_order": [
+            "fearscape-idle--baseline--p21",
+            "fearscape-idle--candidate--p21"
+          ]
+        },
+        {
+          "pair": 22,
+          "baseline": "fearscape-idle--baseline--p22",
+          "candidate": "fearscape-idle--candidate--p22",
+          "run_order": [
+            "fearscape-idle--candidate--p22",
+            "fearscape-idle--baseline--p22"
+          ]
+        },
+        {
+          "pair": 23,
+          "baseline": "fearscape-idle--baseline--p23",
+          "candidate": "fearscape-idle--candidate--p23",
+          "run_order": [
+            "fearscape-idle--baseline--p23",
+            "fearscape-idle--candidate--p23"
+          ]
+        },
+        {
+          "pair": 24,
+          "baseline": "fearscape-idle--baseline--p24",
+          "candidate": "fearscape-idle--candidate--p24",
+          "run_order": [
+            "fearscape-idle--candidate--p24",
+            "fearscape-idle--baseline--p24"
+          ]
+        },
+        {
+          "pair": 25,
+          "baseline": "fearscape-idle--baseline--p25",
+          "candidate": "fearscape-idle--candidate--p25",
+          "run_order": [
+            "fearscape-idle--baseline--p25",
+            "fearscape-idle--candidate--p25"
+          ]
+        },
+        {
+          "pair": 26,
+          "baseline": "fearscape-idle--baseline--p26",
+          "candidate": "fearscape-idle--candidate--p26",
+          "run_order": [
+            "fearscape-idle--candidate--p26",
+            "fearscape-idle--baseline--p26"
+          ]
+        },
+        {
+          "pair": 27,
+          "baseline": "fearscape-idle--baseline--p27",
+          "candidate": "fearscape-idle--candidate--p27",
+          "run_order": [
+            "fearscape-idle--baseline--p27",
+            "fearscape-idle--candidate--p27"
+          ]
+        },
+        {
+          "pair": 28,
+          "baseline": "fearscape-idle--baseline--p28",
+          "candidate": "fearscape-idle--candidate--p28",
+          "run_order": [
+            "fearscape-idle--candidate--p28",
+            "fearscape-idle--baseline--p28"
+          ]
+        },
+        {
+          "pair": 29,
+          "baseline": "fearscape-idle--baseline--p29",
+          "candidate": "fearscape-idle--candidate--p29",
+          "run_order": [
+            "fearscape-idle--baseline--p29",
+            "fearscape-idle--candidate--p29"
+          ]
+        },
+        {
+          "pair": 30,
+          "baseline": "fearscape-idle--baseline--p30",
+          "candidate": "fearscape-idle--candidate--p30",
+          "run_order": [
+            "fearscape-idle--candidate--p30",
+            "fearscape-idle--baseline--p30"
+          ]
+        }
+      ],
+      "event_prefixes": []
+    },
+    "fearscape-exit": {
+      "option": "fearscape_cleanup",
+      "pairs": [
+        {
+          "pair": 1,
+          "baseline": "fearscape-exit--baseline--p01",
+          "candidate": "fearscape-exit--candidate--p01",
+          "run_order": [
+            "fearscape-exit--baseline--p01",
+            "fearscape-exit--candidate--p01"
+          ]
+        },
+        {
+          "pair": 2,
+          "baseline": "fearscape-exit--baseline--p02",
+          "candidate": "fearscape-exit--candidate--p02",
+          "run_order": [
+            "fearscape-exit--candidate--p02",
+            "fearscape-exit--baseline--p02"
+          ]
+        },
+        {
+          "pair": 3,
+          "baseline": "fearscape-exit--baseline--p03",
+          "candidate": "fearscape-exit--candidate--p03",
+          "run_order": [
+            "fearscape-exit--baseline--p03",
+            "fearscape-exit--candidate--p03"
+          ]
+        },
+        {
+          "pair": 4,
+          "baseline": "fearscape-exit--baseline--p04",
+          "candidate": "fearscape-exit--candidate--p04",
+          "run_order": [
+            "fearscape-exit--candidate--p04",
+            "fearscape-exit--baseline--p04"
+          ]
+        },
+        {
+          "pair": 5,
+          "baseline": "fearscape-exit--baseline--p05",
+          "candidate": "fearscape-exit--candidate--p05",
+          "run_order": [
+            "fearscape-exit--baseline--p05",
+            "fearscape-exit--candidate--p05"
+          ]
+        },
+        {
+          "pair": 6,
+          "baseline": "fearscape-exit--baseline--p06",
+          "candidate": "fearscape-exit--candidate--p06",
+          "run_order": [
+            "fearscape-exit--candidate--p06",
+            "fearscape-exit--baseline--p06"
+          ]
+        },
+        {
+          "pair": 7,
+          "baseline": "fearscape-exit--baseline--p07",
+          "candidate": "fearscape-exit--candidate--p07",
+          "run_order": [
+            "fearscape-exit--baseline--p07",
+            "fearscape-exit--candidate--p07"
+          ]
+        },
+        {
+          "pair": 8,
+          "baseline": "fearscape-exit--baseline--p08",
+          "candidate": "fearscape-exit--candidate--p08",
+          "run_order": [
+            "fearscape-exit--candidate--p08",
+            "fearscape-exit--baseline--p08"
+          ]
+        },
+        {
+          "pair": 9,
+          "baseline": "fearscape-exit--baseline--p09",
+          "candidate": "fearscape-exit--candidate--p09",
+          "run_order": [
+            "fearscape-exit--baseline--p09",
+            "fearscape-exit--candidate--p09"
+          ]
+        },
+        {
+          "pair": 10,
+          "baseline": "fearscape-exit--baseline--p10",
+          "candidate": "fearscape-exit--candidate--p10",
+          "run_order": [
+            "fearscape-exit--candidate--p10",
+            "fearscape-exit--baseline--p10"
+          ]
+        },
+        {
+          "pair": 11,
+          "baseline": "fearscape-exit--baseline--p11",
+          "candidate": "fearscape-exit--candidate--p11",
+          "run_order": [
+            "fearscape-exit--baseline--p11",
+            "fearscape-exit--candidate--p11"
+          ]
+        },
+        {
+          "pair": 12,
+          "baseline": "fearscape-exit--baseline--p12",
+          "candidate": "fearscape-exit--candidate--p12",
+          "run_order": [
+            "fearscape-exit--candidate--p12",
+            "fearscape-exit--baseline--p12"
+          ]
+        },
+        {
+          "pair": 13,
+          "baseline": "fearscape-exit--baseline--p13",
+          "candidate": "fearscape-exit--candidate--p13",
+          "run_order": [
+            "fearscape-exit--baseline--p13",
+            "fearscape-exit--candidate--p13"
+          ]
+        },
+        {
+          "pair": 14,
+          "baseline": "fearscape-exit--baseline--p14",
+          "candidate": "fearscape-exit--candidate--p14",
+          "run_order": [
+            "fearscape-exit--candidate--p14",
+            "fearscape-exit--baseline--p14"
+          ]
+        },
+        {
+          "pair": 15,
+          "baseline": "fearscape-exit--baseline--p15",
+          "candidate": "fearscape-exit--candidate--p15",
+          "run_order": [
+            "fearscape-exit--baseline--p15",
+            "fearscape-exit--candidate--p15"
+          ]
+        },
+        {
+          "pair": 16,
+          "baseline": "fearscape-exit--baseline--p16",
+          "candidate": "fearscape-exit--candidate--p16",
+          "run_order": [
+            "fearscape-exit--candidate--p16",
+            "fearscape-exit--baseline--p16"
+          ]
+        },
+        {
+          "pair": 17,
+          "baseline": "fearscape-exit--baseline--p17",
+          "candidate": "fearscape-exit--candidate--p17",
+          "run_order": [
+            "fearscape-exit--baseline--p17",
+            "fearscape-exit--candidate--p17"
+          ]
+        },
+        {
+          "pair": 18,
+          "baseline": "fearscape-exit--baseline--p18",
+          "candidate": "fearscape-exit--candidate--p18",
+          "run_order": [
+            "fearscape-exit--candidate--p18",
+            "fearscape-exit--baseline--p18"
+          ]
+        },
+        {
+          "pair": 19,
+          "baseline": "fearscape-exit--baseline--p19",
+          "candidate": "fearscape-exit--candidate--p19",
+          "run_order": [
+            "fearscape-exit--baseline--p19",
+            "fearscape-exit--candidate--p19"
+          ]
+        },
+        {
+          "pair": 20,
+          "baseline": "fearscape-exit--baseline--p20",
+          "candidate": "fearscape-exit--candidate--p20",
+          "run_order": [
+            "fearscape-exit--candidate--p20",
+            "fearscape-exit--baseline--p20"
+          ]
+        },
+        {
+          "pair": 21,
+          "baseline": "fearscape-exit--baseline--p21",
+          "candidate": "fearscape-exit--candidate--p21",
+          "run_order": [
+            "fearscape-exit--baseline--p21",
+            "fearscape-exit--candidate--p21"
+          ]
+        },
+        {
+          "pair": 22,
+          "baseline": "fearscape-exit--baseline--p22",
+          "candidate": "fearscape-exit--candidate--p22",
+          "run_order": [
+            "fearscape-exit--candidate--p22",
+            "fearscape-exit--baseline--p22"
+          ]
+        },
+        {
+          "pair": 23,
+          "baseline": "fearscape-exit--baseline--p23",
+          "candidate": "fearscape-exit--candidate--p23",
+          "run_order": [
+            "fearscape-exit--baseline--p23",
+            "fearscape-exit--candidate--p23"
+          ]
+        },
+        {
+          "pair": 24,
+          "baseline": "fearscape-exit--baseline--p24",
+          "candidate": "fearscape-exit--candidate--p24",
+          "run_order": [
+            "fearscape-exit--candidate--p24",
+            "fearscape-exit--baseline--p24"
+          ]
+        },
+        {
+          "pair": 25,
+          "baseline": "fearscape-exit--baseline--p25",
+          "candidate": "fearscape-exit--candidate--p25",
+          "run_order": [
+            "fearscape-exit--baseline--p25",
+            "fearscape-exit--candidate--p25"
+          ]
+        },
+        {
+          "pair": 26,
+          "baseline": "fearscape-exit--baseline--p26",
+          "candidate": "fearscape-exit--candidate--p26",
+          "run_order": [
+            "fearscape-exit--candidate--p26",
+            "fearscape-exit--baseline--p26"
+          ]
+        },
+        {
+          "pair": 27,
+          "baseline": "fearscape-exit--baseline--p27",
+          "candidate": "fearscape-exit--candidate--p27",
+          "run_order": [
+            "fearscape-exit--baseline--p27",
+            "fearscape-exit--candidate--p27"
+          ]
+        },
+        {
+          "pair": 28,
+          "baseline": "fearscape-exit--baseline--p28",
+          "candidate": "fearscape-exit--candidate--p28",
+          "run_order": [
+            "fearscape-exit--candidate--p28",
+            "fearscape-exit--baseline--p28"
+          ]
+        },
+        {
+          "pair": 29,
+          "baseline": "fearscape-exit--baseline--p29",
+          "candidate": "fearscape-exit--candidate--p29",
+          "run_order": [
+            "fearscape-exit--baseline--p29",
+            "fearscape-exit--candidate--p29"
+          ]
+        },
+        {
+          "pair": 30,
+          "baseline": "fearscape-exit--baseline--p30",
+          "candidate": "fearscape-exit--candidate--p30",
+          "run_order": [
+            "fearscape-exit--candidate--p30",
+            "fearscape-exit--baseline--p30"
+          ]
+        }
+      ],
+      "event_prefixes": [
+        "entry_sync",
+        "entry_observed",
+        "exit_sync",
+        "exit_observed"
+      ]
+    }
+  },
+  "execution_order": [
+    "base62-save--baseline--p01",
+    "base62-save--candidate--p01",
+    "inventory-idle--baseline--p01",
+    "inventory-idle--candidate--p01",
+    "inventory-add--baseline--p01",
+    "inventory-add--candidate--p01",
+    "fearscape-idle--baseline--p01",
+    "fearscape-idle--candidate--p01",
+    "fearscape-exit--baseline--p01",
+    "fearscape-exit--candidate--p01",
+    "inventory-idle--candidate--p02",
+    "inventory-idle--baseline--p02",
+    "inventory-add--candidate--p02",
+    "inventory-add--baseline--p02",
+    "fearscape-idle--candidate--p02",
+    "fearscape-idle--baseline--p02",
+    "fearscape-exit--candidate--p02",
+    "fearscape-exit--baseline--p02",
+    "base62-save--candidate--p02",
+    "base62-save--baseline--p02",
+    "inventory-add--baseline--p03",
+    "inventory-add--candidate--p03",
+    "fearscape-idle--baseline--p03",
+    "fearscape-idle--candidate--p03",
+    "fearscape-exit--baseline--p03",
+    "fearscape-exit--candidate--p03",
+    "base62-save--baseline--p03",
+    "base62-save--candidate--p03",
+    "inventory-idle--baseline--p03",
+    "inventory-idle--candidate--p03",
+    "fearscape-idle--candidate--p04",
+    "fearscape-idle--baseline--p04",
+    "fearscape-exit--candidate--p04",
+    "fearscape-exit--baseline--p04",
+    "base62-save--candidate--p04",
+    "base62-save--baseline--p04",
+    "inventory-idle--candidate--p04",
+    "inventory-idle--baseline--p04",
+    "inventory-add--candidate--p04",
+    "inventory-add--baseline--p04",
+    "fearscape-exit--baseline--p05",
+    "fearscape-exit--candidate--p05",
+    "base62-save--baseline--p05",
+    "base62-save--candidate--p05",
+    "inventory-idle--baseline--p05",
+    "inventory-idle--candidate--p05",
+    "inventory-add--baseline--p05",
+    "inventory-add--candidate--p05",
+    "fearscape-idle--baseline--p05",
+    "fearscape-idle--candidate--p05",
+    "base62-save--candidate--p06",
+    "base62-save--baseline--p06",
+    "inventory-idle--candidate--p06",
+    "inventory-idle--baseline--p06",
+    "inventory-add--candidate--p06",
+    "inventory-add--baseline--p06",
+    "fearscape-idle--candidate--p06",
+    "fearscape-idle--baseline--p06",
+    "fearscape-exit--candidate--p06",
+    "fearscape-exit--baseline--p06",
+    "inventory-idle--baseline--p07",
+    "inventory-idle--candidate--p07",
+    "inventory-add--baseline--p07",
+    "inventory-add--candidate--p07",
+    "fearscape-idle--baseline--p07",
+    "fearscape-idle--candidate--p07",
+    "fearscape-exit--baseline--p07",
+    "fearscape-exit--candidate--p07",
+    "base62-save--baseline--p07",
+    "base62-save--candidate--p07",
+    "inventory-add--candidate--p08",
+    "inventory-add--baseline--p08",
+    "fearscape-idle--candidate--p08",
+    "fearscape-idle--baseline--p08",
+    "fearscape-exit--candidate--p08",
+    "fearscape-exit--baseline--p08",
+    "base62-save--candidate--p08",
+    "base62-save--baseline--p08",
+    "inventory-idle--candidate--p08",
+    "inventory-idle--baseline--p08",
+    "fearscape-idle--baseline--p09",
+    "fearscape-idle--candidate--p09",
+    "fearscape-exit--baseline--p09",
+    "fearscape-exit--candidate--p09",
+    "base62-save--baseline--p09",
+    "base62-save--candidate--p09",
+    "inventory-idle--baseline--p09",
+    "inventory-idle--candidate--p09",
+    "inventory-add--baseline--p09",
+    "inventory-add--candidate--p09",
+    "fearscape-exit--candidate--p10",
+    "fearscape-exit--baseline--p10",
+    "base62-save--candidate--p10",
+    "base62-save--baseline--p10",
+    "inventory-idle--candidate--p10",
+    "inventory-idle--baseline--p10",
+    "inventory-add--candidate--p10",
+    "inventory-add--baseline--p10",
+    "fearscape-idle--candidate--p10",
+    "fearscape-idle--baseline--p10",
+    "base62-save--baseline--p11",
+    "base62-save--candidate--p11",
+    "inventory-idle--baseline--p11",
+    "inventory-idle--candidate--p11",
+    "inventory-add--baseline--p11",
+    "inventory-add--candidate--p11",
+    "fearscape-idle--baseline--p11",
+    "fearscape-idle--candidate--p11",
+    "fearscape-exit--baseline--p11",
+    "fearscape-exit--candidate--p11",
+    "inventory-idle--candidate--p12",
+    "inventory-idle--baseline--p12",
+    "inventory-add--candidate--p12",
+    "inventory-add--baseline--p12",
+    "fearscape-idle--candidate--p12",
+    "fearscape-idle--baseline--p12",
+    "fearscape-exit--candidate--p12",
+    "fearscape-exit--baseline--p12",
+    "base62-save--candidate--p12",
+    "base62-save--baseline--p12",
+    "inventory-add--baseline--p13",
+    "inventory-add--candidate--p13",
+    "fearscape-idle--baseline--p13",
+    "fearscape-idle--candidate--p13",
+    "fearscape-exit--baseline--p13",
+    "fearscape-exit--candidate--p13",
+    "base62-save--baseline--p13",
+    "base62-save--candidate--p13",
+    "inventory-idle--baseline--p13",
+    "inventory-idle--candidate--p13",
+    "fearscape-idle--candidate--p14",
+    "fearscape-idle--baseline--p14",
+    "fearscape-exit--candidate--p14",
+    "fearscape-exit--baseline--p14",
+    "base62-save--candidate--p14",
+    "base62-save--baseline--p14",
+    "inventory-idle--candidate--p14",
+    "inventory-idle--baseline--p14",
+    "inventory-add--candidate--p14",
+    "inventory-add--baseline--p14",
+    "fearscape-exit--baseline--p15",
+    "fearscape-exit--candidate--p15",
+    "base62-save--baseline--p15",
+    "base62-save--candidate--p15",
+    "inventory-idle--baseline--p15",
+    "inventory-idle--candidate--p15",
+    "inventory-add--baseline--p15",
+    "inventory-add--candidate--p15",
+    "fearscape-idle--baseline--p15",
+    "fearscape-idle--candidate--p15",
+    "base62-save--candidate--p16",
+    "base62-save--baseline--p16",
+    "inventory-idle--candidate--p16",
+    "inventory-idle--baseline--p16",
+    "inventory-add--candidate--p16",
+    "inventory-add--baseline--p16",
+    "fearscape-idle--candidate--p16",
+    "fearscape-idle--baseline--p16",
+    "fearscape-exit--candidate--p16",
+    "fearscape-exit--baseline--p16",
+    "inventory-idle--baseline--p17",
+    "inventory-idle--candidate--p17",
+    "inventory-add--baseline--p17",
+    "inventory-add--candidate--p17",
+    "fearscape-idle--baseline--p17",
+    "fearscape-idle--candidate--p17",
+    "fearscape-exit--baseline--p17",
+    "fearscape-exit--candidate--p17",
+    "base62-save--baseline--p17",
+    "base62-save--candidate--p17",
+    "inventory-add--candidate--p18",
+    "inventory-add--baseline--p18",
+    "fearscape-idle--candidate--p18",
+    "fearscape-idle--baseline--p18",
+    "fearscape-exit--candidate--p18",
+    "fearscape-exit--baseline--p18",
+    "base62-save--candidate--p18",
+    "base62-save--baseline--p18",
+    "inventory-idle--candidate--p18",
+    "inventory-idle--baseline--p18",
+    "fearscape-idle--baseline--p19",
+    "fearscape-idle--candidate--p19",
+    "fearscape-exit--baseline--p19",
+    "fearscape-exit--candidate--p19",
+    "base62-save--baseline--p19",
+    "base62-save--candidate--p19",
+    "inventory-idle--baseline--p19",
+    "inventory-idle--candidate--p19",
+    "inventory-add--baseline--p19",
+    "inventory-add--candidate--p19",
+    "fearscape-exit--candidate--p20",
+    "fearscape-exit--baseline--p20",
+    "base62-save--candidate--p20",
+    "base62-save--baseline--p20",
+    "inventory-idle--candidate--p20",
+    "inventory-idle--baseline--p20",
+    "inventory-add--candidate--p20",
+    "inventory-add--baseline--p20",
+    "fearscape-idle--candidate--p20",
+    "fearscape-idle--baseline--p20",
+    "base62-save--baseline--p21",
+    "base62-save--candidate--p21",
+    "inventory-idle--baseline--p21",
+    "inventory-idle--candidate--p21",
+    "inventory-add--baseline--p21",
+    "inventory-add--candidate--p21",
+    "fearscape-idle--baseline--p21",
+    "fearscape-idle--candidate--p21",
+    "fearscape-exit--baseline--p21",
+    "fearscape-exit--candidate--p21",
+    "inventory-idle--candidate--p22",
+    "inventory-idle--baseline--p22",
+    "inventory-add--candidate--p22",
+    "inventory-add--baseline--p22",
+    "fearscape-idle--candidate--p22",
+    "fearscape-idle--baseline--p22",
+    "fearscape-exit--candidate--p22",
+    "fearscape-exit--baseline--p22",
+    "base62-save--candidate--p22",
+    "base62-save--baseline--p22",
+    "inventory-add--baseline--p23",
+    "inventory-add--candidate--p23",
+    "fearscape-idle--baseline--p23",
+    "fearscape-idle--candidate--p23",
+    "fearscape-exit--baseline--p23",
+    "fearscape-exit--candidate--p23",
+    "base62-save--baseline--p23",
+    "base62-save--candidate--p23",
+    "inventory-idle--baseline--p23",
+    "inventory-idle--candidate--p23",
+    "fearscape-idle--candidate--p24",
+    "fearscape-idle--baseline--p24",
+    "fearscape-exit--candidate--p24",
+    "fearscape-exit--baseline--p24",
+    "base62-save--candidate--p24",
+    "base62-save--baseline--p24",
+    "inventory-idle--candidate--p24",
+    "inventory-idle--baseline--p24",
+    "inventory-add--candidate--p24",
+    "inventory-add--baseline--p24",
+    "fearscape-exit--baseline--p25",
+    "fearscape-exit--candidate--p25",
+    "base62-save--baseline--p25",
+    "base62-save--candidate--p25",
+    "inventory-idle--baseline--p25",
+    "inventory-idle--candidate--p25",
+    "inventory-add--baseline--p25",
+    "inventory-add--candidate--p25",
+    "fearscape-idle--baseline--p25",
+    "fearscape-idle--candidate--p25",
+    "base62-save--candidate--p26",
+    "base62-save--baseline--p26",
+    "inventory-idle--candidate--p26",
+    "inventory-idle--baseline--p26",
+    "inventory-add--candidate--p26",
+    "inventory-add--baseline--p26",
+    "fearscape-idle--candidate--p26",
+    "fearscape-idle--baseline--p26",
+    "fearscape-exit--candidate--p26",
+    "fearscape-exit--baseline--p26",
+    "inventory-idle--baseline--p27",
+    "inventory-idle--candidate--p27",
+    "inventory-add--baseline--p27",
+    "inventory-add--candidate--p27",
+    "fearscape-idle--baseline--p27",
+    "fearscape-idle--candidate--p27",
+    "fearscape-exit--baseline--p27",
+    "fearscape-exit--candidate--p27",
+    "base62-save--baseline--p27",
+    "base62-save--candidate--p27",
+    "inventory-add--candidate--p28",
+    "inventory-add--baseline--p28",
+    "fearscape-idle--candidate--p28",
+    "fearscape-idle--baseline--p28",
+    "fearscape-exit--candidate--p28",
+    "fearscape-exit--baseline--p28",
+    "base62-save--candidate--p28",
+    "base62-save--baseline--p28",
+    "inventory-idle--candidate--p28",
+    "inventory-idle--baseline--p28",
+    "fearscape-idle--baseline--p29",
+    "fearscape-idle--candidate--p29",
+    "fearscape-exit--baseline--p29",
+    "fearscape-exit--candidate--p29",
+    "base62-save--baseline--p29",
+    "base62-save--candidate--p29",
+    "inventory-idle--baseline--p29",
+    "inventory-idle--candidate--p29",
+    "inventory-add--baseline--p29",
+    "inventory-add--candidate--p29",
+    "fearscape-exit--candidate--p30",
+    "fearscape-exit--baseline--p30",
+    "base62-save--candidate--p30",
+    "base62-save--baseline--p30",
+    "inventory-idle--candidate--p30",
+    "inventory-idle--baseline--p30",
+    "inventory-add--candidate--p30",
+    "inventory-add--baseline--p30",
+    "fearscape-idle--candidate--p30",
+    "fearscape-idle--baseline--p30"
+  ],
+  "rules": [
+    "Exactly 30 pairs per case; no trimming, extending, pooling or importing previous results.",
+    "Each pair differs by exactly one of the three production options in the same frozen 0.2.11 package.",
+    "30 interleaved rounds, rotating the five-case order; odd pair AB, even pair BA.",
+    "Primary save metric: entire completed save RUSAGE_SELF user CPU; end after synchronous return and original worker return with queues drained.",
+    "Per-case marginal one-sided 95% paired log t(df=29) upper bound strictly below +1%; not a simultaneous 95% guarantee across all cases.",
+    "Events: paired absolute differences for 30 complete batches/events, including zero values. Individual objects are not independent samples.",
+    "Nested sync/observed phases never added; event_and_save sums only disjoint affected-event and save intervals.",
+    "64 empty sampling brackets before warmup per session describe observations only; no subtraction or precision bound.",
+    "Invalid formal session invalidates this run: preserve failures and declare corrected new data; never silently replace a sample.",
+    "All three experiments retain default off; this task measures isolated effects without changing production code or defaults."
+  ]
+}

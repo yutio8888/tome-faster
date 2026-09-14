@@ -1,0 +1,13 @@
+EGL mask renderer: llvmpipe (LLVM 15.0.6, 256 bits)
+luajit: tests/test_effect_mask.lua:21: full renderer executes six batch draws, including the default guard combination
+stack traceback:
+	[C]: in function 'assert'
+	tests/test_effect_mask.lua:21: in function 'check'
+	tests/test_effect_mask.lua:292: in function <tests/test_effect_mask.lua:24>
+	[C]: in function 'xpcall'
+	tests/test_effect_mask.lua:320: in main chunk
+	[C]: at 0x55839b97c2c0
+stack traceback:
+	[C]: in function 'error'
+	tests/test_effect_mask.lua:322: in main chunk
+	[C]: at 0x55839b97c2c0

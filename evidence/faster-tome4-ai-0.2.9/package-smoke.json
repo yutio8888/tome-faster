@@ -1,0 +1,18 @@
+{
+  "version": "0.2.9",
+  "package_sha256": "e712cbc001d81d255ea524b1f352cc6721466643d0136d0dac58afa9ff086b23",
+  "package_bytes": 359817,
+  "package_install": "archive only, no source addon directory",
+  "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+  "runtime": "LuaJIT 2.0.2",
+  "exit_code": 0,
+  "lua_error": false,
+  "assertions": 96,
+  "save_files_unchanged": true,
+  "state_unchanged": true,
+  "fbo_guard_enabled": true,
+  "production_astar_and_effect_mask_installed": true,
+  "effect_mask_draws": 0,
+  "benchmark_included_in_formal_results": false,
+  "reproducible_package_bytes": true
+}

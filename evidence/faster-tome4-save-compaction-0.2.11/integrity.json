@@ -1,0 +1,18 @@
+{
+  "protected_manifest_files_verified": 67,
+  "protected_faster_0_2_8_save_files_verified": 27,
+  "source_combat_zip_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+  "source_combat_zip_unchanged": true,
+  "engine_commit": "624a67329fe2ad440c5b344785a9c73fcf22ae63",
+  "engine_tracked_files_unchanged": true,
+  "new_game_homes_under": "test-saves/",
+  "new_experiments_default_enabled": false,
+  "protected_faster_0_2_8_character_files_verified": 25,
+  "owned_xvfb_exit_codes": {
+    "save-compaction-20260914": 0,
+    "save-compaction-defaults-20260914": 0,
+    "save-inventory-20260914": 0,
+    "save-fearscape-20260914": 0,
+    "save-compaction-release-20260914": 0
+  }
+}

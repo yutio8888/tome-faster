@@ -3,6 +3,18 @@
 -- gl_fbo_use, which establishes its requested target before drawing resumes.
 local M = {}
 local marker = "__fbo_gc_guard_v1"
+local owned_mt, owned_index, owned_gc, owned_use, native_use, owned_state
+
+-- Identity-only bridge for other Faster renderers. They must still invoke the
+-- current use() wrapper so queued destruction precedes the normal FBO binding.
+-- A registry marker alone is insufficient: recognize only our live callbacks.
+function M.originalUse(mt, method)
+    if owned_state and mt == owned_mt and rawget(mt, marker) == owned_state
+        and rawget(mt, "__index") == owned_index and rawget(mt, "__gc") == owned_gc
+        and method == owned_use and rawget(owned_index, "use") == owned_use then
+        return native_use
+    end
+end
 
 function M.install()
     if not debug or not debug.getregistry or not debug.getinfo or not newproxy then
@@ -13,10 +25,10 @@ function M.install()
         return nil, "framebuffer metatable is unavailable"
     end
     if mt[marker] then return mt[marker] end
-    local native_gc, native_use = mt.__gc, mt.__index.use
-    if type(native_gc) ~= "function" or type(native_use) ~= "function" or
+    local native_gc, original_use = mt.__gc, mt.__index.use
+    if type(native_gc) ~= "function" or type(original_use) ~= "function" or
         debug.getinfo(native_gc, "S").what ~= "C" or
-        debug.getinfo(native_use, "S").what ~= "C" then
+        debug.getinfo(original_use, "S").what ~= "C" then
         return nil, "another modification has replaced the native framebuffer methods"
     end
 
@@ -58,9 +70,11 @@ function M.install()
     end
     mt.__index.use = function(fbo, ...)
         if count > 0 then drain() end
-        return native_use(fbo, ...)
+        return original_use(fbo, ...)
     end
     mt[marker] = state
+    owned_mt, owned_index, owned_gc, owned_use, native_use, owned_state =
+        mt, mt.__index, mt.__gc, mt.__index.use, original_use, state
     return state
 end
 

@@ -103,6 +103,7 @@ local function install(w,p,s)
         if name=='engine.Savefile' then return {} end
         if name=='engine.FasterSave' then return {installSavefile=function() return true end} end
         if name=='engine.FasterSaveFollowup' then return {installClass=function() return true end} end
+        if name=='engine.FasterSaveNames' then return {installSavefile=function() return true end} end
         if name=='engine.class' then return w.class end
         error(name)
     end
@@ -321,6 +322,15 @@ d:setScroll(0); d.scroll=nil; d:setScroll(0); check(f.calls==1,'chat cache hit')
 collectgarbage('collect'); d.scroll=nil; d:setScroll(0); check(f.calls==1,'strong cache survives GC')
 local other=dialog(chat,f,300,{'same text'}); other:setScroll(0); check(f.calls==2,'per-instance cache')
 d.iw=50; d:setScroll(0); check(f.calls==3 and d.dlist[1].d.w==40 and d.line_size['same text']==3,'width invalidation at same scroll')
+do
+    local weak=setmetatable({}, {__mode='v'})
+    local old_line={}
+    weak[1]=old_line
+    d.line_size[old_line]=3
+    old_line=nil
+    collectgarbage('collect'); collectgarbage('collect')
+    check(weak[1]==nil,'invalidated chat measurements do not retain discarded tstring/table keys')
+end
 d.font=font('B'); d:setScroll(0); check(d.font.calls==1 and d.dlist[1].d.t:sub(1,1)=='B','font invalidation')
 for i=1,129 do
     d.lines={{str='entry'..i,src=i}}; d.max=1; d.scroll=nil; d:setScroll(0)

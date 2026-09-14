@@ -1,0 +1,58 @@
+{
+  "baseline": {
+    "bytes": {
+      "median": 2480463.5,
+      "min": 2480437,
+      "max": 2480481
+    },
+    "entries": {
+      "median": 2864.0,
+      "min": 2864,
+      "max": 2864
+    },
+    "raw_bytes": {
+      "median": 5887169.0,
+      "min": 5887169,
+      "max": 5887169
+    },
+    "compressed_bytes": {
+      "median": 2242079.5,
+      "min": 2242053,
+      "max": 2242097
+    },
+    "all_archives_bytes": {
+      "median": 21229873.5,
+      "min": 21229847,
+      "max": 21229892
+    }
+  },
+  "candidate": {
+    "bytes": {
+      "median": 2480459.5,
+      "min": 2480435,
+      "max": 2480477
+    },
+    "entries": {
+      "median": 2864.0,
+      "min": 2864,
+      "max": 2864
+    },
+    "raw_bytes": {
+      "median": 5887169.0,
+      "min": 5887169,
+      "max": 5887169
+    },
+    "compressed_bytes": {
+      "median": 2242075.5,
+      "min": 2242051,
+      "max": 2242093
+    },
+    "all_archives_bytes": {
+      "median": 21229870.0,
+      "min": 21229845,
+      "max": 21229888
+    }
+  },
+  "main_median_reduction_bytes": 4.0,
+  "main_median_reduction_pct": 0.00016126018383257808
+}

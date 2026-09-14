@@ -1,0 +1,428 @@
+{
+  "version": "0.2.11",
+  "date": "2026-09-14",
+  "release_decision": "All three new experiments disabled by default; no general less-than-1% added user-CPU claim.",
+  "defaults": {
+    "compact_save_names": true,
+    "compact_save_names_base62": false,
+    "compact_inventory": false,
+    "fearscape_cleanup": false,
+    "fbo_gc_guard": true,
+    "hit_warning_interval_ms": 500
+  },
+  "cohorts": {
+    "base62-candidate": {
+      "comparison": "Frozen previously delivered 0.2.10 package versus 0.2.11 candidate; same runtime, source save, diagnostics and pre-existing feature settings.",
+      "decision": "not_proven",
+      "pairs": 30,
+      "sessions": 60,
+      "plan_sha256": "2b3916d0de3a3ea053364bcc00e91f6f49c234686d7f650bd6269d184003c9af",
+      "candidate_archive_sha256": "79f21bebe235463de05b322899b9bd62d556532e382466e60a9b41b64e923a0b",
+      "cpu": {
+        "total_process_user_ms": {
+          "pairs": 30,
+          "baseline": {
+            "mean_ms": 1247.0311333333334,
+            "median_ms": 1250.3490000000002,
+            "sd_ms": 45.019530838816245,
+            "min_ms": 1177.874,
+            "max_ms": 1352.36
+          },
+          "candidate": {
+            "mean_ms": 1263.7319,
+            "median_ms": 1260.722,
+            "sd_ms": 55.618672240069486,
+            "min_ms": 1192.848,
+            "max_ms": 1368.024
+          },
+          "paired_geomean_change_pct": 1.3079715897768707,
+          "paired_mean_delta_ms": 16.700766666666688,
+          "paired_change_sd_percentage_points": 4.210568900591125,
+          "paired_log_ratio_sd": 0.04227401465327401,
+          "paired_log_ratio_se": 0.007718143807300703,
+          "two_sided_95pct_change_ci_pct": [
+            -0.2786571717678939,
+            2.9198446045132234
+          ],
+          "one_sided_95pct_upper_change_pct": 2.6452848108928095,
+          "passes_less_than_1pct_added_user_cpu": false,
+          "order_geomean_change_pct": {
+            "AB": 1.956262797647812,
+            "BA": 0.6638025562449095
+          },
+          "role": "primary"
+        },
+        "sync_thread_user_ms": {
+          "pairs": 30,
+          "baseline": {
+            "mean_ms": 143.5725,
+            "median_ms": 143.8,
+            "sd_ms": 9.391847788338051,
+            "min_ms": 125.388,
+            "max_ms": 162.923
+          },
+          "candidate": {
+            "mean_ms": 141.55113333333333,
+            "median_ms": 140.498,
+            "sd_ms": 9.496450254167872,
+            "min_ms": 122.354,
+            "max_ms": 162.619
+          },
+          "paired_geomean_change_pct": -1.4166912296958911,
+          "paired_mean_delta_ms": -2.0213666666666668,
+          "paired_change_sd_percentage_points": 7.093402703159729,
+          "paired_log_ratio_sd": 0.07151513136387425,
+          "paired_log_ratio_se": 0.013056816883646374,
+          "two_sided_95pct_change_ci_pct": [
+            -4.014438788612781,
+            1.2513616157108802
+          ],
+          "one_sided_95pct_upper_change_pct": 0.7948391560445536,
+          "passes_less_than_1pct_added_user_cpu": true,
+          "order_geomean_change_pct": {
+            "AB": -2.3183216909277617,
+            "BA": -0.5067384555933409
+          },
+          "role": "secondary"
+        }
+      },
+      "size": {
+        "baseline": {
+          "bytes": {
+            "median": 2480461.0,
+            "min": 2480441,
+            "max": 2480483
+          },
+          "entries": {
+            "median": 2864.0,
+            "min": 2864,
+            "max": 2864
+          },
+          "raw_bytes": {
+            "median": 5887169.0,
+            "min": 5887169,
+            "max": 5887169
+          },
+          "compressed_bytes": {
+            "median": 2242077.0,
+            "min": 2242057,
+            "max": 2242099
+          },
+          "all_archives_bytes": {
+            "median": 21229871.5,
+            "min": 21229852,
+            "max": 21229893
+          }
+        },
+        "candidate": {
+          "bytes": {
+            "median": 2463161.5,
+            "min": 2463141,
+            "max": 2463183
+          },
+          "entries": {
+            "median": 2864.0,
+            "min": 2864,
+            "max": 2864
+          },
+          "raw_bytes": {
+            "median": 5848017.0,
+            "min": 5848017,
+            "max": 5848017
+          },
+          "compressed_bytes": {
+            "median": 2234137.5,
+            "min": 2234117,
+            "max": 2234159
+          },
+          "all_archives_bytes": {
+            "median": 21212571.0,
+            "min": 21212551,
+            "max": 21212594
+          }
+        },
+        "main_median_reduction_bytes": 17299.5,
+        "main_median_reduction_pct": 0.6974308404768307
+      },
+      "evidence": "evidence/faster-tome4-save-compaction-0.2.11/base62-candidate/"
+    },
+    "decimal-candidate": {
+      "comparison": "Frozen 0.2.10 versus 0.2.11 with decimal default retained; base62 disabled. Standard paused save without added fixture objects.",
+      "decision": "not_proven",
+      "pairs": 30,
+      "sessions": 60,
+      "plan_sha256": "a39be14a030248d68da31b72cc3e024e8628fe387596a68193f561d3751a5d59",
+      "candidate_archive_sha256": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+      "cpu": {
+        "total_process_user_ms": {
+          "pairs": 30,
+          "baseline": {
+            "mean_ms": 1206.4752,
+            "median_ms": 1202.9965,
+            "sd_ms": 21.542474678387478,
+            "min_ms": 1140.441,
+            "max_ms": 1259.116
+          },
+          "candidate": {
+            "mean_ms": 1214.2670333333333,
+            "median_ms": 1208.9795,
+            "sd_ms": 30.726807499914177,
+            "min_ms": 1173.875,
+            "max_ms": 1308.063
+          },
+          "paired_geomean_change_pct": 0.6310378529644016,
+          "paired_mean_delta_ms": 7.791833333333321,
+          "paired_change_sd_percentage_points": 2.975325011269668,
+          "paired_log_ratio_sd": 0.02930556914196008,
+          "paired_log_ratio_se": 0.005350440426526284,
+          "two_sided_95pct_change_ci_pct": [
+            -0.46415225862472775,
+            1.7382783103107615
+          ],
+          "one_sided_95pct_upper_change_pct": 1.5500535526588988,
+          "passes_less_than_1pct_added_user_cpu": false,
+          "order_geomean_change_pct": {
+            "AB": 0.2815855968711071,
+            "BA": 0.9817078488706623
+          },
+          "role": "primary"
+        },
+        "sync_thread_user_ms": {
+          "pairs": 30,
+          "baseline": {
+            "mean_ms": 133.95316666666668,
+            "median_ms": 134.8305,
+            "sd_ms": 8.052245517109878,
+            "min_ms": 120.892,
+            "max_ms": 158.506
+          },
+          "candidate": {
+            "mean_ms": 133.12056666666666,
+            "median_ms": 135.0075,
+            "sd_ms": 6.394853996248338,
+            "min_ms": 121.171,
+            "max_ms": 142.715
+          },
+          "paired_geomean_change_pct": -0.5644887777255012,
+          "paired_mean_delta_ms": -0.8325999999999975,
+          "paired_change_sd_percentage_points": 6.557314779529417,
+          "paired_log_ratio_sd": 0.06537908829674803,
+          "paired_log_ratio_se": 0.011936533816416968,
+          "two_sided_95pct_change_ci_pct": [
+            -2.962611486152814,
+            1.8928996695345714
+          ],
+          "one_sided_95pct_upper_change_pct": 1.4728213657739804,
+          "passes_less_than_1pct_added_user_cpu": false,
+          "order_geomean_change_pct": {
+            "AB": -0.06524575740930974,
+            "BA": -1.0612377348379207
+          },
+          "role": "secondary"
+        }
+      },
+      "size": {
+        "baseline": {
+          "bytes": {
+            "median": 2480463.5,
+            "min": 2480437,
+            "max": 2480481
+          },
+          "entries": {
+            "median": 2864.0,
+            "min": 2864,
+            "max": 2864
+          },
+          "raw_bytes": {
+            "median": 5887169.0,
+            "min": 5887169,
+            "max": 5887169
+          },
+          "compressed_bytes": {
+            "median": 2242079.5,
+            "min": 2242053,
+            "max": 2242097
+          },
+          "all_archives_bytes": {
+            "median": 21229873.5,
+            "min": 21229847,
+            "max": 21229892
+          }
+        },
+        "candidate": {
+          "bytes": {
+            "median": 2480459.5,
+            "min": 2480435,
+            "max": 2480477
+          },
+          "entries": {
+            "median": 2864.0,
+            "min": 2864,
+            "max": 2864
+          },
+          "raw_bytes": {
+            "median": 5887169.0,
+            "min": 5887169,
+            "max": 5887169
+          },
+          "compressed_bytes": {
+            "median": 2242075.5,
+            "min": 2242051,
+            "max": 2242093
+          },
+          "all_archives_bytes": {
+            "median": 21229870.0,
+            "min": 21229845,
+            "max": 21229888
+          }
+        },
+        "main_median_reduction_bytes": 4.0,
+        "main_median_reduction_pct": 0.00016126018383257808
+      },
+      "evidence": "evidence/faster-tome4-save-compaction-0.2.11/decimal-candidate/"
+    },
+    "inventory-candidate": {
+      "comparison": "Frozen 0.2.10 versus 0.2.11 with decimal default retained; base62 disabled. Save after the same 24 stock gem objects are added using the actual inventory table argument in both variants.",
+      "decision": "pass",
+      "pairs": 30,
+      "sessions": 60,
+      "plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+      "candidate_archive_sha256": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+      "cpu": {
+        "total_process_user_ms": {
+          "pairs": 30,
+          "baseline": {
+            "mean_ms": 1227.5250666666666,
+            "median_ms": 1215.052,
+            "sd_ms": 35.081302883379365,
+            "min_ms": 1191.596,
+            "max_ms": 1295.828
+          },
+          "candidate": {
+            "mean_ms": 1215.6964333333333,
+            "median_ms": 1201.4715,
+            "sd_ms": 39.20316649656595,
+            "min_ms": 1173.942,
+            "max_ms": 1302.412
+          },
+          "paired_geomean_change_pct": -0.9737941632269539,
+          "paired_mean_delta_ms": -11.828633333333316,
+          "paired_change_sd_percentage_points": 3.4055993057925997,
+          "paired_log_ratio_sd": 0.03431664305866088,
+          "paired_log_ratio_se": 0.006265333167027215,
+          "two_sided_95pct_change_ci_pct": [
+            -2.2346250080377517,
+            0.3032969825273732
+          ],
+          "one_sided_95pct_upper_change_pct": 0.0860301301542261,
+          "passes_less_than_1pct_added_user_cpu": true,
+          "order_geomean_change_pct": {
+            "AB": -0.7339600665720621,
+            "BA": -1.2130488029602557
+          },
+          "role": "primary"
+        },
+        "sync_thread_user_ms": {
+          "pairs": 30,
+          "baseline": {
+            "mean_ms": 134.80293333333333,
+            "median_ms": 136.20999999999998,
+            "sd_ms": 5.710289593075085,
+            "min_ms": 120.397,
+            "max_ms": 147.371
+          },
+          "candidate": {
+            "mean_ms": 133.9754,
+            "median_ms": 136.19549999999998,
+            "sd_ms": 7.651603454223806,
+            "min_ms": 117.713,
+            "max_ms": 148.52
+          },
+          "paired_geomean_change_pct": -0.6857890048001519,
+          "paired_mean_delta_ms": -0.8275333333333331,
+          "paired_change_sd_percentage_points": 7.127021476906259,
+          "paired_log_ratio_sd": 0.07157304994418892,
+          "paired_log_ratio_se": 0.013067391321292048,
+          "two_sided_95pct_change_ci_pct": [
+            -3.3048876736232016,
+            2.00425097296804
+          ],
+          "one_sided_95pct_upper_change_pct": 1.5439622479967303,
+          "passes_less_than_1pct_added_user_cpu": false,
+          "order_geomean_change_pct": {
+            "AB": -1.1106342387640826,
+            "BA": -0.2591185647442168
+          },
+          "role": "secondary"
+        }
+      },
+      "size": {
+        "baseline": {
+          "bytes": {
+            "median": 2517738.5,
+            "min": 2517720,
+            "max": 2517774
+          },
+          "entries": {
+            "median": 2888.0,
+            "min": 2888,
+            "max": 2888
+          },
+          "raw_bytes": {
+            "median": 6029375.0,
+            "min": 6029375,
+            "max": 6029375
+          },
+          "compressed_bytes": {
+            "median": 2277338.5,
+            "min": 2277320,
+            "max": 2277374
+          },
+          "all_archives_bytes": {
+            "median": 21267148.5,
+            "min": 21267130,
+            "max": 21267184
+          }
+        },
+        "candidate": {
+          "bytes": {
+            "median": 2492812.5,
+            "min": 2492789,
+            "max": 2492827
+          },
+          "entries": {
+            "median": 2888.0,
+            "min": 2888,
+            "max": 2888
+          },
+          "raw_bytes": {
+            "median": 5909783.0,
+            "min": 5909783,
+            "max": 5909783
+          },
+          "compressed_bytes": {
+            "median": 2252412.5,
+            "min": 2252389,
+            "max": 2252427
+          },
+          "all_archives_bytes": {
+            "median": 21242222.0,
+            "min": 21242198,
+            "max": 21242237
+          }
+        },
+        "main_median_reduction_bytes": 24926.0,
+        "main_median_reduction_pct": 0.9900154444156929
+      },
+      "evidence": "evidence/faster-tome4-save-compaction-0.2.11/inventory-candidate/"
+    }
+  },
+  "limitations": [
+    "Each cohort has all 30 predeclared pairs; no trimming, pooling, or extra samples.",
+    "Primary metric is save-interval RUSAGE_SELF utime, including worker, render and particle threads.",
+    "Inventory additions and Fearscape entry/exit happen before save timing; their event CPU is unmeasured.",
+    "Ordinary decimal-candidate results remain NOTPROVEN despite inventory-candidate passing.",
+    "The released opt-in guards differ from the frozen measured candidates; only behavior/compatibility was rechecked on final code.",
+    "Linux llvmpipe and one supplied old save; no Windows, hardware GPU or population-wide claim."
+  ]
+}

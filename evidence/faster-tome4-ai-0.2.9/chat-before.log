@@ -1,0 +1,11 @@
+PASS ring capacity, order, truncation (partial/full/wrapped)
+PASS original print stdout, stringification, backlog, capacity, truncation, errors, nesting
+PASS loader environment, fresh closures, returns, retries, eviction, debug bypass
+PASS pinned Particles.loaded and Shader.loaded integration
+PASS hit warning default/custom/disabled rate limits, independent weak maps, SDL wrap and particle pass-through
+luajit: tests/test_existing.lua:39: invalidated chat measurements do not retain discarded tstring/table keys
+stack traceback:
+	[C]: in function 'assert'
+	tests/test_existing.lua:39: in function 'check'
+	tests/test_existing.lua:331: in main chunk
+	[C]: at 0x55a8f7c2c2c0

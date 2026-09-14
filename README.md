@@ -1,8 +1,38 @@
-# Faster ToME4 — rendering and save optimizations
+# Faster ToME4 — runtime and save optimizations
 
-Version **0.2.8**, modified 13 September 2026. This fork fixes defects in
+Version **0.2.12**, modified 14 September 2026. This fork fixes defects in
 [Yutio888's Faster ToME4 0.0.1](https://te4.org/games/addons/tome/faster) and adds
 conservative save/load and runtime optimizations for **ToME 1.7.6**.
+
+Version 0.2.12 enables **inventory ownership compaction and completed Fearscape
+reference cleanup by default**. Both act at their original gameplay events;
+they do not scan or migrate an old saved graph. Set `compact_inventory=false`
+or `fearscape_cleanup=false` and restart to disable either feature. Short decimal
+object names remain enabled; **base62 remains disabled by default** and requires
+`compact_save_names_base62=true`. See the [default configuration](docs/save-defaults.md).
+
+The [single-option measurements](docs/save-isolated.md) retain the frozen 0.2.11
+results: five separate workloads, 30 pairs each, with events timed separately
+from saving. Base62 did not establish the save CPU limit; the other four save
+workloads passed their individual gates. These are scoped measurements, not a
+new CPU benchmark of the combined 0.2.12 defaults. Implementation details and
+earlier compatibility checks remain in the [0.2.11 report](docs/save-compaction.md).
+
+Version 0.2.10 uses short decimal identifiers for internal save objects, keeping
+the `main` entry, original reader, native serializer and compression level.
+Existing region archives acquire the smaller names when naturally saved again;
+there is no extra migration pass. Set `compact_save_names=false` and restart to
+disable the writer optimization. Existing compact saves still load normally.
+See the [save size analysis and production validation](docs/save-size-analysis.md).
+The [save-system technical guide](docs/tome4-save-system.md) explains the pipeline,
+file structure, remaining candidates, implementation costs and compatibility limits.
+
+Version 0.2.9 reduces A* neighbor allocation and large-frontier scanning while
+retaining the original path choices. Three loads of one real 50×50 map measured
+13–21% less path-query CPU time, depending on path length; this is not an FPS or
+whole-turn claim. It also restores effect-mask batching with the default FBO
+guard and keeps chat measurement keys weak after resizing. See the
+[implementation, measurements and limits](docs/ai-performance.md).
 
 Version 0.2.8 defers framebuffer destruction until immediately before the next
 normal FBO binding. This avoids the 1.7.6 native finalizer leaving framebuffer 0
@@ -56,6 +86,19 @@ Player archives and generated save graphs stay local.
 
 ## Changes
 
+- Normalize a recognized inventory table reference to its numeric ID after all
+  original add-object callbacks finish. Unknown ownership extensions and method
+  overrides retain their existing behavior.
+- Clear only the observed, completed Fearscape capture reference after the
+  original exit restores a living target, its death callback and the source
+  level. Keep active, failed and uncertain captures intact.
+- Reuse neighbor offsets within each recognized square-grid A* search, omit an
+  unused score table, and supplement large open sets with an indexed heap. Keep
+  the original open-table tie order, callbacks, paths and live terrain checks.
+- Recognize Faster's own FBO wrapper in effect-mask batching, including either
+  initialization order. Rendering still passes through the GC guard's `use()`.
+- Keep chat line measurements weakly keyed when font or width changes invalidate
+  wrapping, so discarded text tables can be collected.
 - Queue obsolete FBOs until the next normal `use()` call, then release them before
   that call establishes its drawing target. A Lua shutdown guard drains pending
   resources when returning to the main menu. No native library is added.
@@ -150,6 +193,9 @@ startup (restart after changing them):
 
 ```lua
 config.settings.faster_tome = {
+    ai_astar = false,
+    ai_astar_heap = false,
+    ai_astar_neighbors = false,
     save_coalescing = false,
     load_queue = false,
     map_checker_source = false,
@@ -161,6 +207,10 @@ config.settings.faster_tome = {
     hotkey_text_cache = false,
     effect_mask_batch = false,
     save_callbacks = false,
+    compact_save_names = false,
+    compact_save_names_base62 = false,
+    compact_inventory = false,
+    fearscape_cleanup = false,
     snapshot_refresh = false,
     screenshot_png = false,
     hit_warning_interval_ms = 0,
@@ -168,9 +218,16 @@ config.settings.faster_tome = {
 }
 ```
 
-Omitting a boolean field enables that optimization. The warning interval defaults
-to 500 milliseconds; zero disables its limit, and invalid values use the default.
+Omitting a boolean field enables that optimization, except
+`compact_save_names_base62`, which requires explicit `true`.
+Base62 also requires enabled `compact_save_names`. Inventory and Fearscape accept
+omitted values or `true`; `false` and invalid nonboolean values leave them disabled.
+The warning interval defaults to 500 milliseconds; zero
+disables its limit, and invalid values use the default.
 These are developer configuration values, not new menu controls.
+`ai_astar=false` restores the original A* method. The two subordinate options
+disable the heap or neighbor-offset reuse independently; the shared removal of
+the unused heuristic-score table remains active while `ai_astar` is enabled.
 
 ## Verify and package
 

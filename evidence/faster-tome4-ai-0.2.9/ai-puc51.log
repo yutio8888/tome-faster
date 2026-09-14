@@ -1,0 +1,3 @@
+PASS AI exact paths and ordered map/heuristic/RNG callbacks: interpreter
+PASS AI frontier next calls: 171803 -> 75262
+PASS AI: 2494 checks; 622 differential searches; Lua 5.1

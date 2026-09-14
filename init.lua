@@ -17,17 +17,17 @@
 -- Nicolas Casalini "DarkGod"
 -- darkgod@te4.org
 
--- Modified 2026-09-13 by yutio8888: maintained fork, original authorship retained.
+-- Modified 2026-09-14 by yutio8888: maintained fork, original authorship retained.
 long_name = "Faster ToME4"
 short_name = "faster"
 for_module = "tome"
 version = {1,7,6}
-addon_version = {0,2,8}
+addon_version = {0,2,12}
 tags = { "fast" }
 weight = 100000
 author = { "Yutio888", "yutio888@qq.com" }
 homepage = "http://te4.org/"
-description = [[Performance optimizations for ToME 1.7.6: defer framebuffer destruction until the next normal binding to avoid GC disrupting the drawing target, with no native library required; rate-limit ranged-hit direction indicators to one per 500 ms per map, with a configurable interval. Includes faster lossless save screenshots, synchronous snapshot screen refresh, bounded rendering caches, serializer callback reuse, and previous save/export fixes. Retains online exports, archive format and graphics settings. Reduced visual emitters and omitted temporary export party work also reduce RNG consumption.]]
+description = [[Performance optimizations for ToME 1.7.6: inventory ownership compaction and completed Fearscape reference cleanup are enabled by default, alongside short decimal save names. Base62 save names remain opt-in. These features retain the original archive reader and compression level. Includes faster A* pathfinding, effect-mask batching with the default framebuffer GC guard, weak chat measurement caches, ranged-hit direction indicators limited to one per 500 ms per map, faster lossless save screenshots, synchronous snapshot screen refresh, bounded rendering caches, serializer callback reuse, and previous save/export fixes. Retains online exports and graphics settings. Reduced visual emitters and omitted temporary export party work also reduce RNG consumption.]]
 overload = true
 superload = true
 hooks = true

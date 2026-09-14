@@ -1,0 +1,325 @@
+{
+  "sessions": [
+    {
+      "session": "base62-save--baseline--preflight",
+      "input_sha256": "2902e6f204764a101118a194e975d474c8ffc5a0a069e5cccee60b3dfedc5a39",
+      "result_sha256": "b2c72940186294765def8e2f8e00216058560f7d268ff94317289226b5a6dc82",
+      "source_sha256": {
+        "run.py": "86bec0d4dbf6744d11b76ac1ecbe8877f0d5e207fe853e0a55ec3d30add8263e",
+        "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "0d71e28e4528c40612a9b22f2fbdac6f9bb7c8639a84142d043ec56b29c9e045",
+        "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/FearscapeScenario.lua": "5e0ae22f9371c40de2d89ca8717663e3cfc5bbd22e2b506b5008380cce1b8b56",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveIsolatedProbe.lua": "87ac801f892fa2a2008143c472982abe548dc4c508a0a1a454f8154e2306610a",
+        "runtime/game/addons/tome-faster.teaa": "9464fdfc425f53a238aa76ffc16853bd9c5e38df9d6e9b5519941b517f5d2f76"
+      },
+      "valid": true,
+      "included_in_formal_samples": false
+    },
+    {
+      "session": "base62-save--baseline--preflight2",
+      "input_sha256": "60fdf6c2ee617b4bdc4b37d152c748b2200c643410c068a891082995a7f6a522",
+      "result_sha256": "beee6a805aac7966b14a25300290039e07d4e77a9cf5c3725f38d2bb70f8ac13",
+      "source_sha256": {
+        "run.py": "c2557fcffcd5654ce4019fd96f168aebcf8c075524cbbadb741c7363b79a5cb5",
+        "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "0d71e28e4528c40612a9b22f2fbdac6f9bb7c8639a84142d043ec56b29c9e045",
+        "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/FearscapeScenario.lua": "5e0ae22f9371c40de2d89ca8717663e3cfc5bbd22e2b506b5008380cce1b8b56",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveIsolatedProbe.lua": "09039d5f10a0c4608fb67669ab477d2934027d6082c55a0a91d8ae5ff3471481",
+        "runtime/game/addons/tome-faster.teaa": "9464fdfc425f53a238aa76ffc16853bd9c5e38df9d6e9b5519941b517f5d2f76"
+      },
+      "valid": true,
+      "included_in_formal_samples": false
+    },
+    {
+      "session": "base62-save--candidate--preflight",
+      "input_sha256": "f3c4deaa7b7437c653fe8bb8112a1d0d792d2d623075c0cb140a4f0b1e95715f",
+      "result_sha256": "62ea89c460ff5de51329ac1ba6cce5be611a14209835fc92cf7617855b096447",
+      "source_sha256": {
+        "run.py": "86bec0d4dbf6744d11b76ac1ecbe8877f0d5e207fe853e0a55ec3d30add8263e",
+        "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "0d71e28e4528c40612a9b22f2fbdac6f9bb7c8639a84142d043ec56b29c9e045",
+        "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/FearscapeScenario.lua": "5e0ae22f9371c40de2d89ca8717663e3cfc5bbd22e2b506b5008380cce1b8b56",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveIsolatedProbe.lua": "87ac801f892fa2a2008143c472982abe548dc4c508a0a1a454f8154e2306610a",
+        "runtime/game/addons/tome-faster.teaa": "9464fdfc425f53a238aa76ffc16853bd9c5e38df9d6e9b5519941b517f5d2f76"
+      },
+      "valid": true,
+      "included_in_formal_samples": false
+    },
+    {
+      "session": "base62-save--candidate--preflight2",
+      "input_sha256": "60721bed3289ec34b76f7bc16d61c4b45d885348d878f8bf45694cfdd27b8d06",
+      "result_sha256": "1b53ca6c16410f5ca58b24f443e4a05c34af3fcadf4278794020553d424dd79f",
+      "source_sha256": {
+        "run.py": "c2557fcffcd5654ce4019fd96f168aebcf8c075524cbbadb741c7363b79a5cb5",
+        "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "0d71e28e4528c40612a9b22f2fbdac6f9bb7c8639a84142d043ec56b29c9e045",
+        "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/FearscapeScenario.lua": "5e0ae22f9371c40de2d89ca8717663e3cfc5bbd22e2b506b5008380cce1b8b56",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveIsolatedProbe.lua": "09039d5f10a0c4608fb67669ab477d2934027d6082c55a0a91d8ae5ff3471481",
+        "runtime/game/addons/tome-faster.teaa": "9464fdfc425f53a238aa76ffc16853bd9c5e38df9d6e9b5519941b517f5d2f76"
+      },
+      "valid": true,
+      "included_in_formal_samples": false
+    },
+    {
+      "session": "inventory-idle--baseline--preflight",
+      "input_sha256": "53e22118e60adb73a54a8ef0e32e7934a7e27411389d5bef4f1788f4d46951e8",
+      "result_sha256": "1b2d1a83b4f16ac42ba61e6acba790cd3de4292a1d1c9bd40b6a1122edc32db6",
+      "source_sha256": {
+        "run.py": "86bec0d4dbf6744d11b76ac1ecbe8877f0d5e207fe853e0a55ec3d30add8263e",
+        "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "0d71e28e4528c40612a9b22f2fbdac6f9bb7c8639a84142d043ec56b29c9e045",
+        "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/FearscapeScenario.lua": "5e0ae22f9371c40de2d89ca8717663e3cfc5bbd22e2b506b5008380cce1b8b56",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveIsolatedProbe.lua": "87ac801f892fa2a2008143c472982abe548dc4c508a0a1a454f8154e2306610a",
+        "runtime/game/addons/tome-faster.teaa": "9464fdfc425f53a238aa76ffc16853bd9c5e38df9d6e9b5519941b517f5d2f76"
+      },
+      "valid": true,
+      "included_in_formal_samples": false
+    },
+    {
+      "session": "inventory-idle--baseline--preflight2",
+      "input_sha256": "2aa39266f861eebbd651d0812e61326b636092c4de516ca218037f3cb59f0853",
+      "result_sha256": "3c72fa9a426ca171894ff5559d89b938f61b8a32b450525529501f1fe3cf1d63",
+      "source_sha256": {
+        "run.py": "c2557fcffcd5654ce4019fd96f168aebcf8c075524cbbadb741c7363b79a5cb5",
+        "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "0d71e28e4528c40612a9b22f2fbdac6f9bb7c8639a84142d043ec56b29c9e045",
+        "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/FearscapeScenario.lua": "5e0ae22f9371c40de2d89ca8717663e3cfc5bbd22e2b506b5008380cce1b8b56",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveIsolatedProbe.lua": "09039d5f10a0c4608fb67669ab477d2934027d6082c55a0a91d8ae5ff3471481",
+        "runtime/game/addons/tome-faster.teaa": "9464fdfc425f53a238aa76ffc16853bd9c5e38df9d6e9b5519941b517f5d2f76"
+      },
+      "valid": true,
+      "included_in_formal_samples": false
+    },
+    {
+      "session": "inventory-idle--candidate--preflight",
+      "input_sha256": "47a2762b13bb74752571a294bce0e7ee08a51afaad63782475e396743de8fb2f",
+      "result_sha256": "181b6e8850a0b39f0db01cb31ec9d811d73bfe797fef5326d8aeb42f7ce8b720",
+      "source_sha256": {
+        "run.py": "86bec0d4dbf6744d11b76ac1ecbe8877f0d5e207fe853e0a55ec3d30add8263e",
+        "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "0d71e28e4528c40612a9b22f2fbdac6f9bb7c8639a84142d043ec56b29c9e045",
+        "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/FearscapeScenario.lua": "5e0ae22f9371c40de2d89ca8717663e3cfc5bbd22e2b506b5008380cce1b8b56",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveIsolatedProbe.lua": "87ac801f892fa2a2008143c472982abe548dc4c508a0a1a454f8154e2306610a",
+        "runtime/game/addons/tome-faster.teaa": "9464fdfc425f53a238aa76ffc16853bd9c5e38df9d6e9b5519941b517f5d2f76"
+      },
+      "valid": true,
+      "included_in_formal_samples": false
+    },
+    {
+      "session": "inventory-idle--candidate--preflight2",
+      "input_sha256": "997f4a3116c7d32fbe3c4833a8a96498fdf222ab0d9bb31686fbb58581399a05",
+      "result_sha256": "f4de7d36a54265c9c0ea2a71eae9816d8b4f8c3fa243e77025f9f5f8689dfabd",
+      "source_sha256": {
+        "run.py": "c2557fcffcd5654ce4019fd96f168aebcf8c075524cbbadb741c7363b79a5cb5",
+        "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "0d71e28e4528c40612a9b22f2fbdac6f9bb7c8639a84142d043ec56b29c9e045",
+        "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/FearscapeScenario.lua": "5e0ae22f9371c40de2d89ca8717663e3cfc5bbd22e2b506b5008380cce1b8b56",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveIsolatedProbe.lua": "09039d5f10a0c4608fb67669ab477d2934027d6082c55a0a91d8ae5ff3471481",
+        "runtime/game/addons/tome-faster.teaa": "9464fdfc425f53a238aa76ffc16853bd9c5e38df9d6e9b5519941b517f5d2f76"
+      },
+      "valid": true,
+      "included_in_formal_samples": false
+    },
+    {
+      "session": "inventory-add--baseline--preflight",
+      "input_sha256": "3f92088986f7ac9e6795d3d496a4d4488daa3b17c86a8775be54cb1a8489a121",
+      "result_sha256": "07ea85a839ecd70e77d6da194f1521aa35d45a6acf40ea3fb0e1d884c0e6f0d0",
+      "source_sha256": {
+        "run.py": "86bec0d4dbf6744d11b76ac1ecbe8877f0d5e207fe853e0a55ec3d30add8263e",
+        "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "0d71e28e4528c40612a9b22f2fbdac6f9bb7c8639a84142d043ec56b29c9e045",
+        "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/FearscapeScenario.lua": "5e0ae22f9371c40de2d89ca8717663e3cfc5bbd22e2b506b5008380cce1b8b56",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveIsolatedProbe.lua": "87ac801f892fa2a2008143c472982abe548dc4c508a0a1a454f8154e2306610a",
+        "runtime/game/addons/tome-faster.teaa": "9464fdfc425f53a238aa76ffc16853bd9c5e38df9d6e9b5519941b517f5d2f76"
+      },
+      "valid": true,
+      "included_in_formal_samples": false
+    },
+    {
+      "session": "inventory-add--baseline--preflight2",
+      "input_sha256": "79c5fefa2f5702443dd06d8337fd509b828b73c99e381f285f18e4c7396d3d86",
+      "result_sha256": "28e0639706b9ebf05a6cf8ef4405352eed1b2b18928b79e38f794259c4ba5452",
+      "source_sha256": {
+        "run.py": "c2557fcffcd5654ce4019fd96f168aebcf8c075524cbbadb741c7363b79a5cb5",
+        "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "0d71e28e4528c40612a9b22f2fbdac6f9bb7c8639a84142d043ec56b29c9e045",
+        "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/FearscapeScenario.lua": "5e0ae22f9371c40de2d89ca8717663e3cfc5bbd22e2b506b5008380cce1b8b56",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveIsolatedProbe.lua": "09039d5f10a0c4608fb67669ab477d2934027d6082c55a0a91d8ae5ff3471481",
+        "runtime/game/addons/tome-faster.teaa": "9464fdfc425f53a238aa76ffc16853bd9c5e38df9d6e9b5519941b517f5d2f76"
+      },
+      "valid": true,
+      "included_in_formal_samples": false
+    },
+    {
+      "session": "inventory-add--candidate--preflight",
+      "input_sha256": "96215ab16771b4c45ca141aa4952c35d7a1fa7aa02d4d1841346be57fee0b6bc",
+      "result_sha256": "5fd0c1b2ab44ef5e43596a22a0444a635fc492a1b0bdb801ae52812e198f0fbc",
+      "source_sha256": {
+        "run.py": "86bec0d4dbf6744d11b76ac1ecbe8877f0d5e207fe853e0a55ec3d30add8263e",
+        "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "0d71e28e4528c40612a9b22f2fbdac6f9bb7c8639a84142d043ec56b29c9e045",
+        "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/FearscapeScenario.lua": "5e0ae22f9371c40de2d89ca8717663e3cfc5bbd22e2b506b5008380cce1b8b56",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveIsolatedProbe.lua": "87ac801f892fa2a2008143c472982abe548dc4c508a0a1a454f8154e2306610a",
+        "runtime/game/addons/tome-faster.teaa": "9464fdfc425f53a238aa76ffc16853bd9c5e38df9d6e9b5519941b517f5d2f76"
+      },
+      "valid": true,
+      "included_in_formal_samples": false
+    },
+    {
+      "session": "inventory-add--candidate--preflight2",
+      "input_sha256": "aac9ca826f9b1dc2eee10e5e4d39bff7634126de2c28e2a5cbcbf68df1842108",
+      "result_sha256": "1fd9392135e346883e7a2f5f8bee23862c9744be881a8e3357c3b52416f164fb",
+      "source_sha256": {
+        "run.py": "c2557fcffcd5654ce4019fd96f168aebcf8c075524cbbadb741c7363b79a5cb5",
+        "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "0d71e28e4528c40612a9b22f2fbdac6f9bb7c8639a84142d043ec56b29c9e045",
+        "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/FearscapeScenario.lua": "5e0ae22f9371c40de2d89ca8717663e3cfc5bbd22e2b506b5008380cce1b8b56",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveIsolatedProbe.lua": "09039d5f10a0c4608fb67669ab477d2934027d6082c55a0a91d8ae5ff3471481",
+        "runtime/game/addons/tome-faster.teaa": "9464fdfc425f53a238aa76ffc16853bd9c5e38df9d6e9b5519941b517f5d2f76"
+      },
+      "valid": true,
+      "included_in_formal_samples": false
+    },
+    {
+      "session": "fearscape-idle--baseline--preflight",
+      "input_sha256": "22ce758b5306cf8ce08a9b0349ad236eb0f2efdbc807138c3182037decc8e9c3",
+      "result_sha256": "089f033bd21bd23628415fb3887d6a50ce28d49812513df2b2882cad77273ddc",
+      "source_sha256": {
+        "run.py": "86bec0d4dbf6744d11b76ac1ecbe8877f0d5e207fe853e0a55ec3d30add8263e",
+        "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "0d71e28e4528c40612a9b22f2fbdac6f9bb7c8639a84142d043ec56b29c9e045",
+        "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/FearscapeScenario.lua": "5e0ae22f9371c40de2d89ca8717663e3cfc5bbd22e2b506b5008380cce1b8b56",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveIsolatedProbe.lua": "87ac801f892fa2a2008143c472982abe548dc4c508a0a1a454f8154e2306610a",
+        "runtime/game/addons/tome-faster.teaa": "9464fdfc425f53a238aa76ffc16853bd9c5e38df9d6e9b5519941b517f5d2f76"
+      },
+      "valid": true,
+      "included_in_formal_samples": false
+    },
+    {
+      "session": "fearscape-idle--baseline--preflight2",
+      "input_sha256": "d012af3512915f8dadab6cc1289ebc08b42971497818741e62089a80f36f9ca7",
+      "result_sha256": "cb0b12c660f16477406ef35e528c5c9ac25c6da1b0741678b6cef20608547b24",
+      "source_sha256": {
+        "run.py": "c2557fcffcd5654ce4019fd96f168aebcf8c075524cbbadb741c7363b79a5cb5",
+        "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "0d71e28e4528c40612a9b22f2fbdac6f9bb7c8639a84142d043ec56b29c9e045",
+        "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/FearscapeScenario.lua": "5e0ae22f9371c40de2d89ca8717663e3cfc5bbd22e2b506b5008380cce1b8b56",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveIsolatedProbe.lua": "09039d5f10a0c4608fb67669ab477d2934027d6082c55a0a91d8ae5ff3471481",
+        "runtime/game/addons/tome-faster.teaa": "9464fdfc425f53a238aa76ffc16853bd9c5e38df9d6e9b5519941b517f5d2f76"
+      },
+      "valid": true,
+      "included_in_formal_samples": false
+    },
+    {
+      "session": "fearscape-idle--candidate--preflight",
+      "input_sha256": "3b3d0dd22d197600f2849339fb4079dd1fb48a3d69b007366f836f8d3ce3c1da",
+      "result_sha256": "23a6c7352039ad39f0d9b73299350c800f47916a8f0221f90d27e5bc4c025aa3",
+      "source_sha256": {
+        "run.py": "86bec0d4dbf6744d11b76ac1ecbe8877f0d5e207fe853e0a55ec3d30add8263e",
+        "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "0d71e28e4528c40612a9b22f2fbdac6f9bb7c8639a84142d043ec56b29c9e045",
+        "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/FearscapeScenario.lua": "5e0ae22f9371c40de2d89ca8717663e3cfc5bbd22e2b506b5008380cce1b8b56",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveIsolatedProbe.lua": "87ac801f892fa2a2008143c472982abe548dc4c508a0a1a454f8154e2306610a",
+        "runtime/game/addons/tome-faster.teaa": "9464fdfc425f53a238aa76ffc16853bd9c5e38df9d6e9b5519941b517f5d2f76"
+      },
+      "valid": true,
+      "included_in_formal_samples": false
+    },
+    {
+      "session": "fearscape-idle--candidate--preflight2",
+      "input_sha256": "4216171209ca0cbc579a3aed743052cd4062d63ea0b2c312331f0c2f18d50198",
+      "result_sha256": "32e1d5805426926b30aeb65d69e1fbd59273d1ec8872e86cfb7e8e8ee59d9056",
+      "source_sha256": {
+        "run.py": "c2557fcffcd5654ce4019fd96f168aebcf8c075524cbbadb741c7363b79a5cb5",
+        "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "0d71e28e4528c40612a9b22f2fbdac6f9bb7c8639a84142d043ec56b29c9e045",
+        "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/FearscapeScenario.lua": "5e0ae22f9371c40de2d89ca8717663e3cfc5bbd22e2b506b5008380cce1b8b56",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveIsolatedProbe.lua": "09039d5f10a0c4608fb67669ab477d2934027d6082c55a0a91d8ae5ff3471481",
+        "runtime/game/addons/tome-faster.teaa": "9464fdfc425f53a238aa76ffc16853bd9c5e38df9d6e9b5519941b517f5d2f76"
+      },
+      "valid": true,
+      "included_in_formal_samples": false
+    },
+    {
+      "session": "fearscape-exit--baseline--preflight",
+      "input_sha256": "26d09ed8fe8b98cd9dff813896219842a1209d1f2f88f94eda3c9d427e46d01f",
+      "result_sha256": "e76a53889a623c50c1d8eb0a29b0fac1e0a76593c76608078b571f1a700bc6c9",
+      "source_sha256": {
+        "run.py": "86bec0d4dbf6744d11b76ac1ecbe8877f0d5e207fe853e0a55ec3d30add8263e",
+        "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "0d71e28e4528c40612a9b22f2fbdac6f9bb7c8639a84142d043ec56b29c9e045",
+        "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/FearscapeScenario.lua": "5e0ae22f9371c40de2d89ca8717663e3cfc5bbd22e2b506b5008380cce1b8b56",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveIsolatedProbe.lua": "87ac801f892fa2a2008143c472982abe548dc4c508a0a1a454f8154e2306610a",
+        "runtime/game/addons/tome-faster.teaa": "9464fdfc425f53a238aa76ffc16853bd9c5e38df9d6e9b5519941b517f5d2f76"
+      },
+      "valid": true,
+      "included_in_formal_samples": false
+    },
+    {
+      "session": "fearscape-exit--baseline--preflight2",
+      "input_sha256": "8f56dfc8db0e442036ed678a86947ee95d28553b7c8cdb1731c28187845411fc",
+      "result_sha256": "b1fc8d5a1579ebfa4ff266afa9206520dfd8e417e7f5ab5e5e4cc058bf194829",
+      "source_sha256": {
+        "run.py": "c2557fcffcd5654ce4019fd96f168aebcf8c075524cbbadb741c7363b79a5cb5",
+        "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "0d71e28e4528c40612a9b22f2fbdac6f9bb7c8639a84142d043ec56b29c9e045",
+        "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/FearscapeScenario.lua": "5e0ae22f9371c40de2d89ca8717663e3cfc5bbd22e2b506b5008380cce1b8b56",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveIsolatedProbe.lua": "09039d5f10a0c4608fb67669ab477d2934027d6082c55a0a91d8ae5ff3471481",
+        "runtime/game/addons/tome-faster.teaa": "9464fdfc425f53a238aa76ffc16853bd9c5e38df9d6e9b5519941b517f5d2f76"
+      },
+      "valid": true,
+      "included_in_formal_samples": false
+    },
+    {
+      "session": "fearscape-exit--candidate--preflight",
+      "input_sha256": "7322aeaeaea56e200001df7459cb4b2d78b70e8b1805b677f032d2cafdda23f4",
+      "result_sha256": "9879113e352743ccb11f419b05889e069d0cfb621545bb636b3d60fc52aa2b6c",
+      "source_sha256": {
+        "run.py": "86bec0d4dbf6744d11b76ac1ecbe8877f0d5e207fe853e0a55ec3d30add8263e",
+        "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "0d71e28e4528c40612a9b22f2fbdac6f9bb7c8639a84142d043ec56b29c9e045",
+        "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/FearscapeScenario.lua": "5e0ae22f9371c40de2d89ca8717663e3cfc5bbd22e2b506b5008380cce1b8b56",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveIsolatedProbe.lua": "87ac801f892fa2a2008143c472982abe548dc4c508a0a1a454f8154e2306610a",
+        "runtime/game/addons/tome-faster.teaa": "9464fdfc425f53a238aa76ffc16853bd9c5e38df9d6e9b5519941b517f5d2f76"
+      },
+      "valid": true,
+      "included_in_formal_samples": false
+    },
+    {
+      "session": "fearscape-exit--candidate--preflight2",
+      "input_sha256": "c727bb22c0fcdda7afbcad7eb6597fdab29a6d8cf41254fdea14833e78e7f858",
+      "result_sha256": "07fdd5f2030bc8ec9d3fcf7980b1079e6a9739cb500b79ca84779037cb751176",
+      "source_sha256": {
+        "run.py": "c2557fcffcd5654ce4019fd96f168aebcf8c075524cbbadb741c7363b79a5cb5",
+        "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "0d71e28e4528c40612a9b22f2fbdac6f9bb7c8639a84142d043ec56b29c9e045",
+        "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/FearscapeScenario.lua": "5e0ae22f9371c40de2d89ca8717663e3cfc5bbd22e2b506b5008380cce1b8b56",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveIsolatedProbe.lua": "09039d5f10a0c4608fb67669ab477d2934027d6082c55a0a91d8ae5ff3471481",
+        "runtime/game/addons/tome-faster.teaa": "9464fdfc425f53a238aa76ffc16853bd9c5e38df9d6e9b5519941b517f5d2f76"
+      },
+      "valid": true,
+      "included_in_formal_samples": false
+    }
+  ],
+  "formal_samples": 0
+}

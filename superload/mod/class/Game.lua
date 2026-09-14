@@ -1,5 +1,17 @@
 -- GPL-3.0-or-later. Added 2026-09-12; see COPYING.
 local Game = loadPrevious(...)
+-- The original Game has finished requiring Actor, Player and NPC here. These
+-- installers are enabled by default; explicit opt-outs remain unloaded.
+local options = config.settings.faster_tome
+if not options or options.compact_inventory == nil or options.compact_inventory == true then
+    local inventory_ok, inventory_reason = require("engine.FasterInventory").install(
+        require "engine.interface.ActorInventory", require "mod.class.Actor", require "mod.class.Player", options)
+    if not inventory_ok then print("[Faster ToME4] Compact inventory records skipped:", inventory_reason) end
+end
+if not options or options.fearscape_cleanup == nil or options.fearscape_cleanup == true then
+    local fearscape_ok, fearscape_reason = require("engine.FasterFearscape").installTalents(require "engine.interface.ActorTalents", options)
+    if not fearscape_ok then print("[Faster ToME4] Fearscape reference cleanup skipped:", fearscape_reason) end
+end
 local ok, reason = require("engine.FasterSave").installGame(Game, config.settings.faster_tome)
 if not ok then print("[Faster ToME4] Save coalescing skipped:", reason) end
 local clone_ok, clone_reason = require("engine.FasterClone").installGame(Game, config.settings.faster_tome)

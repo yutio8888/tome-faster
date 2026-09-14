@@ -92,6 +92,8 @@ end
 -- Savefile is required by engine.Module before addon superloads are installed.
 local ok, reason = require("engine.FasterSave").installSavefile(require "engine.Savefile", config.settings.faster_tome)
 if not ok then print("[Faster ToME4] Load queue optimization skipped:", reason) end
+local names_ok, names_reason = require("engine.FasterSaveNames").installSavefile(require "engine.Savefile", config.settings.faster_tome)
+if not names_ok then print("[Faster ToME4] Compact save names skipped:", names_reason) end
 local callbacks_ok, callbacks_reason = require("engine.FasterSaveFollowup").installClass(require "engine.class", config.settings.faster_tome)
 if not callbacks_ok then print("[Faster ToME4] Save callback reuse skipped:", callbacks_reason) end
 
@@ -113,6 +115,8 @@ class:bindHook("ToME:load", function()
     Runtime.installMap(require "engine.Map", config.settings.faster_tome)
     require("engine.FasterEffectMask").install(require "engine.Map", config.settings.faster_tome)
     Runtime.installTalents(require "engine.interface.ActorTalents", config.settings.faster_tome)
+    local ai_ok, ai_reason = require("engine.FasterAI").installAstar(require "engine.Astar", config.settings.faster_tome)
+    if not ai_ok then print("[Faster ToME4] AI pathfinding optimization skipped:", ai_reason) end
 end)
 
 -- Explicit opt-in only. Game superload attaches once that class becomes available.

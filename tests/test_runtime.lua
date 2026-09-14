@@ -214,8 +214,11 @@ do
     e._G = e
     e.require = function(name)
         if name == "engine.FasterRuntime" then return runtime end
+        if name == "engine.FasterAI" then return {installAstar=function() return true end} end
+        if name == "engine.Astar" then return {} end
         if name == "engine.FasterEffectMask" then return {install=function() return true end} end
         if name == "engine.FasterSaveFollowup" then return {installClass=function() return true end} end
+        if name == "engine.FasterSaveNames" then return {installSavefile=function() return true end} end
         if name == "engine.FBOGCGuard" then return assert(loadfile(root .. "/overload/engine/FBOGCGuard.lua"))() end
         if name == "engine.class" then return e.class end
         if name == "engine.Map" then return w.class end

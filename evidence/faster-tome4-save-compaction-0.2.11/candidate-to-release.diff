@@ -1,0 +1,60 @@
+--- measured-candidate/init.lua
++++ release/init.lua
+@@ -27,7 +27,7 @@
+ weight = 100000
+ author = { "Yutio888", "yutio888@qq.com" }
+ homepage = "http://te4.org/"
+-description = [[Performance optimizations for ToME 1.7.6: compact standard inventory ownership and completed Fearscape reference cleanup reduce save growth while retaining the original archive reader and compression level. Short decimal object names remain enabled; further base62 compaction is experimental and opt-in. Includes faster A* pathfinding, effect-mask batching with the default framebuffer GC guard, weak chat measurement caches, ranged-hit direction indicators limited to one per 500 ms per map, faster lossless save screenshots, synchronous snapshot screen refresh, bounded rendering caches, serializer callback reuse, and previous save/export fixes. Retains online exports and graphics settings. Reduced visual emitters and omitted temporary export party work also reduce RNG consumption.]]
++description = [[Performance optimizations for ToME 1.7.6: experimental, opt-in inventory ownership compaction, completed Fearscape reference cleanup and base62 save names retain the original archive reader and compression level. These new experiments are disabled by default because the strict added user CPU limit is unproven. Existing short decimal save names remain enabled. Includes faster A* pathfinding, effect-mask batching with the default framebuffer GC guard, weak chat measurement caches, ranged-hit direction indicators limited to one per 500 ms per map, faster lossless save screenshots, synchronous snapshot screen refresh, bounded rendering caches, serializer callback reuse, and previous save/export fixes. Retains online exports and graphics settings. Reduced visual emitters and omitted temporary export party work also reduce RNG consumption.]]
+ overload = true
+ superload = true
+ hooks = true
+--- measured-candidate/overload/engine/FasterFearscape.lua
++++ release/overload/engine/FasterFearscape.lua
+@@ -12,7 +12,7 @@
+ end
+ 
+ function M.installTalents(Talents, options)
+-    if options and options.fearscape_cleanup == false then return false, "disabled in faster_tome settings" end
++    if not (options and options.fearscape_cleanup == true) then return false, "requires explicit fearscape_cleanup=true" end
+     local talent = Talents.talents_def and Talents.talents_def.T_DEMON_PLANE
+     if not talent then return false, "Fearscape talent is unavailable" end
+     local original, activate = talent.deactivate, talent.activate
+--- measured-candidate/overload/engine/FasterInventory.lua
++++ release/overload/engine/FasterInventory.lua
+@@ -51,7 +51,7 @@
+ end
+ 
+ function M.install(Inventory, Actor, Player, options)
+-    if options and options.compact_inventory == false then return false, "disabled in faster_tome settings" end
++    if not (options and options.compact_inventory == true) then return false, "requires explicit compact_inventory=true" end
+     if type(Inventory) ~= "table" or type(Actor) ~= "table" or type(Player) ~= "table" then
+         return false, "inventory, actor or player class not loaded"
+     end
+--- measured-candidate/superload/mod/class/Game.lua
++++ release/superload/mod/class/Game.lua
+@@ -1,12 +1,17 @@
+ -- GPL-3.0-or-later. Added 2026-09-12; see COPYING.
+ local Game = loadPrevious(...)
+--- The original Game has finished requiring Actor, Player and NPC here. Patch
+--- the cached classes without changing their original module-loading order.
+-local inventory_ok, inventory_reason = require("engine.FasterInventory").install(
+-    require "engine.interface.ActorInventory", require "mod.class.Actor", require "mod.class.Player", config.settings.faster_tome)
+-if not inventory_ok then print("[Faster ToME4] Compact inventory records skipped:", inventory_reason) end
+-local fearscape_ok, fearscape_reason = require("engine.FasterFearscape").installTalents(require "engine.interface.ActorTalents", config.settings.faster_tome)
+-if not fearscape_ok then print("[Faster ToME4] Fearscape reference cleanup skipped:", fearscape_reason) end
++-- The original Game has finished requiring Actor, Player and NPC here. These
++-- experimental installers remain unloaded unless explicitly enabled at startup.
++local options = config.settings.faster_tome
++if options and options.compact_inventory == true then
++    local inventory_ok, inventory_reason = require("engine.FasterInventory").install(
++        require "engine.interface.ActorInventory", require "mod.class.Actor", require "mod.class.Player", options)
++    if not inventory_ok then print("[Faster ToME4] Compact inventory records skipped:", inventory_reason) end
++end
++if options and options.fearscape_cleanup == true then
++    local fearscape_ok, fearscape_reason = require("engine.FasterFearscape").installTalents(require "engine.interface.ActorTalents", options)
++    if not fearscape_ok then print("[Faster ToME4] Fearscape reference cleanup skipped:", fearscape_reason) end
++end
+ local ok, reason = require("engine.FasterSave").installGame(Game, config.settings.faster_tome)
+ if not ok then print("[Faster ToME4] Save coalescing skipped:", reason) end
+ local clone_ok, clone_reason = require("engine.FasterClone").installGame(Game, config.settings.faster_tome)

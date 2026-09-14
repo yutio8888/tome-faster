@@ -1,0 +1,18 @@
+{
+  "engine_commit": "624a67329fe2ad440c5b344785a9c73fcf22ae63",
+  "engine_sources": {
+    "src/serial.c": "51b9abbffea3a4a0e662dc0e6c27a91c6c063809acf5480d8c628110a9f4476f",
+    "game/engines/default/engine/Savefile.lua": "1eca1669f3469544a9e561e86fa8b657bc743ef20cc04fd7ff820a9b5862c37a",
+    "game/engines/default/engine/SavefilePipe.lua": "f1fe572b414dc9626c33fd71a7891d8cfaed2741a1cea405cc30e12dc0376e70",
+    "game/engines/default/engine/class.lua": "e65f81d273090e02c29855d1d5b0b0452878399f7d6a8bd024ef3ec6fc498928",
+    "game/engines/default/engine/Entity.lua": "4c9eb3873ad9f99ffd01ab75a44faaf219a6dc1393dbf0a30584a9288f2141d2"
+  },
+  "diagnostic_sources": {
+    "audit_size.py": "fa7d914b5c4624e063e8d34bd1ece2228acdb7669f870b3948b975ad9d5ce053",
+    "run-local.py": "5dcf1a0c0289fa0f958c54acf154ccbe8d51103134731c8e035bf590d852c03b",
+    "probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+    "probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+    "probe/overload/engine/SaveSizeProbe.lua": "d4536e559d1b49bd6bea190d1c5b85f8c7498bdec4e2d4208d40bec53e316ac6"
+  },
+  "audit_note": "Original offline measurements completed and JSON was written; the first console summary then failed because a loop variable shadowed round(). Only that reporting variable was subsequently renamed."
+}

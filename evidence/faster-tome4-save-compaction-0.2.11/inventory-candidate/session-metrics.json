@@ -1,0 +1,4202 @@
+[
+  {
+    "session": "baseline-01",
+    "input_sha256": "8a8602ae4aa97ee7dbd2145d83935d50f298fd8984175434c0192392919c2229",
+    "result_sha256": "1d97a908d7a98cf34ba319fb5e17ebb61fbf2dc60881f1f65d7d64297876ad17",
+    "measurement_sequence": 1,
+    "started_unix_ns": 1789356281700827919,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": false,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/data/talents/corruptions/shadowflame.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 28,
+      "namer_last": 43,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/mod/class/Player.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2517735,
+      "entries": 2888,
+      "raw_bytes": 6029375,
+      "compressed_bytes": 2277335,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21267144,
+    "host_load_start": [
+      0.73046875,
+      1.28173828125,
+      1.2421875
+    ],
+    "host_load_end": [
+      0.671875,
+      1.26025390625,
+      1.2353515625
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 136.146,
+      "sync_thread_system_ms": 7.053,
+      "total_process_system_ms": 64.285,
+      "total_wall_ms": 517.06188094616,
+      "total_process_user_ms": 1222.921,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 143.197483,
+      "sync_wall_ms": 160.02953100204,
+      "total_main_cpu_ms": 422.704125
+    }
+  },
+  {
+    "session": "candidate-01",
+    "input_sha256": "be2cff35b99c4b413f27765ffcd3fc69b0f54858fd278af1546ea3a188a95717",
+    "result_sha256": "e3888a8af9086acbf558b5c2941e55432efc8303c90a84be518f660500eee76d",
+    "measurement_sequence": 2,
+    "started_unix_ns": 1789356286267950813,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": true,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/engine/FasterFearscape.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 48,
+      "namer_last": 63,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/engine/FasterInventory.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2492811,
+      "entries": 2888,
+      "raw_bytes": 5909783,
+      "compressed_bytes": 2252411,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21242222,
+    "host_load_start": [
+      0.671875,
+      1.26025390625,
+      1.2353515625
+    ],
+    "host_load_end": [
+      0.61767578125,
+      1.2392578125,
+      1.228515625
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 137.58,
+      "sync_thread_system_ms": 7.033,
+      "total_process_system_ms": 81.711,
+      "total_wall_ms": 500.0535889864,
+      "total_process_user_ms": 1205.43,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 144.610657,
+      "sync_wall_ms": 161.72149801254,
+      "total_main_cpu_ms": 414.405142
+    }
+  },
+  {
+    "session": "candidate-02",
+    "input_sha256": "8ccb0865511cc1d54a8c9654e810f2dc30f2f86e8629a88cd884c7eb5e24bfaf",
+    "result_sha256": "c6d90a1be21c535d7fc86e10eac05660eb2f80d1d51acf63206c07e483db7ea9",
+    "measurement_sequence": 3,
+    "started_unix_ns": 1789356290936243808,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": true,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/engine/FasterFearscape.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 48,
+      "namer_last": 63,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/engine/FasterInventory.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2492818,
+      "entries": 2888,
+      "raw_bytes": 5909783,
+      "compressed_bytes": 2252418,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21242229,
+    "host_load_start": [
+      0.61767578125,
+      1.2392578125,
+      1.228515625
+    ],
+    "host_load_end": [
+      0.6484375,
+      1.23486328125,
+      1.22705078125
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 140.437,
+      "sync_thread_system_ms": 4.032,
+      "total_process_system_ms": 94.889,
+      "total_wall_ms": 529.46766400337,
+      "total_process_user_ms": 1211.074,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 144.467387,
+      "sync_wall_ms": 161.53019499779,
+      "total_main_cpu_ms": 433.178318
+    }
+  },
+  {
+    "session": "baseline-02",
+    "input_sha256": "0ea3c320c3badc9333214b96f6fae26ae88d90db835c61fe72639403794fd8b0",
+    "result_sha256": "c571f8d6319c5f56bc4b12085c9dc37fa600258a2e74af44848ebc9717b6879d",
+    "measurement_sequence": 4,
+    "started_unix_ns": 1789356295602660050,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": false,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/data/talents/corruptions/shadowflame.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 28,
+      "namer_last": 43,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/mod/class/Player.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2517736,
+      "entries": 2888,
+      "raw_bytes": 6029375,
+      "compressed_bytes": 2277336,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21267146,
+    "host_load_start": [
+      0.6484375,
+      1.23486328125,
+      1.22705078125
+    ],
+    "host_load_end": [
+      0.6767578125,
+      1.23095703125,
+      1.2255859375
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 143.782,
+      "sync_thread_system_ms": 2.733,
+      "total_process_system_ms": 63.913,
+      "total_wall_ms": 506.87473297119,
+      "total_process_user_ms": 1220.801,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 146.512036,
+      "sync_wall_ms": 164.30879199505,
+      "total_main_cpu_ms": 421.511724
+    }
+  },
+  {
+    "session": "baseline-03",
+    "input_sha256": "a3ca4879297830805b6be1adbd182fdd0a02c900fec4c8ab824982f26a3f28d9",
+    "result_sha256": "5caac100d6f9d3018b05f250c5d2e18c4d18fabbf7068f1d52ed2b7e69309fc6",
+    "measurement_sequence": 5,
+    "started_unix_ns": 1789356300070649679,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": false,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/data/talents/corruptions/shadowflame.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 28,
+      "namer_last": 43,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/mod/class/Player.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2517730,
+      "entries": 2888,
+      "raw_bytes": 6029375,
+      "compressed_bytes": 2277330,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21267140,
+    "host_load_start": [
+      0.6767578125,
+      1.23095703125,
+      1.2255859375
+    ],
+    "host_load_end": [
+      0.62255859375,
+      1.21044921875,
+      1.21875
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 137.537,
+      "sync_thread_system_ms": 4.249,
+      "total_process_system_ms": 70.717,
+      "total_wall_ms": 495.23817801476,
+      "total_process_user_ms": 1207.189,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 141.783101,
+      "sync_wall_ms": 158.89366400242,
+      "total_main_cpu_ms": 406.948949
+    }
+  },
+  {
+    "session": "candidate-03",
+    "input_sha256": "c9bf8fdb1e22b99cd65c34f76fe695e82490f41cb88d14caa1542bf2d95b37ea",
+    "result_sha256": "b4449c0b6cd7dc7b39b6291ba864cfaca8adaf24e4c8f1ebbb074c36706ef283",
+    "measurement_sequence": 6,
+    "started_unix_ns": 1789356304687702859,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": true,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/engine/FasterFearscape.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 48,
+      "namer_last": 63,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/engine/FasterInventory.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2492825,
+      "entries": 2888,
+      "raw_bytes": 5909783,
+      "compressed_bytes": 2252425,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21242234,
+    "host_load_start": [
+      0.62255859375,
+      1.21044921875,
+      1.21875
+    ],
+    "host_load_end": [
+      0.65283203125,
+      1.20654296875,
+      1.21728515625
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 133.921,
+      "sync_thread_system_ms": 6.2739999999999,
+      "total_process_system_ms": 62.987,
+      "total_wall_ms": 496.69116002321,
+      "total_process_user_ms": 1215.519,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 140.192527,
+      "sync_wall_ms": 157.12816500664,
+      "total_main_cpu_ms": 408.267714
+    }
+  },
+  {
+    "session": "candidate-04",
+    "input_sha256": "60b60f9a575f4de9cb38e8d685f05b9ec1a4953d3e05d0cdc73d57ac4ad26aa7",
+    "result_sha256": "e9d0949c21458b48ecd4a7a9ce04d5ddc75e013bb8a17852c807e3dd2b33daeb",
+    "measurement_sequence": 7,
+    "started_unix_ns": 1789356309254127828,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": true,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/engine/FasterFearscape.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 48,
+      "namer_last": 63,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/engine/FasterInventory.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2492809,
+      "entries": 2888,
+      "raw_bytes": 5909783,
+      "compressed_bytes": 2252409,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21242219,
+    "host_load_start": [
+      0.65283203125,
+      1.20654296875,
+      1.21728515625
+    ],
+    "host_load_end": [
+      0.65283203125,
+      1.20654296875,
+      1.21728515625
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 117.713,
+      "sync_thread_system_ms": 8.926,
+      "total_process_system_ms": 89.83,
+      "total_wall_ms": 488.88324505091,
+      "total_process_user_ms": 1176.029,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 126.63641,
+      "sync_wall_ms": 142.99437600374,
+      "total_main_cpu_ms": 403.911411
+    }
+  },
+  {
+    "session": "baseline-04",
+    "input_sha256": "57c030f429e87235677ffce3e24044c1cc5085cfce8cc6bd9a67ab4a3b175662",
+    "result_sha256": "664242d3f750b5a6f440411bb90e147ce2832bccbfe6aae8b91e79a6ab10024a",
+    "measurement_sequence": 8,
+    "started_unix_ns": 1789356313820016541,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": false,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/data/talents/corruptions/shadowflame.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 28,
+      "namer_last": 43,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/mod/class/Player.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2517740,
+      "entries": 2888,
+      "raw_bytes": 6029375,
+      "compressed_bytes": 2277340,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21267151,
+    "host_load_start": [
+      0.6806640625,
+      1.20263671875,
+      1.2158203125
+    ],
+    "host_load_end": [
+      0.6806640625,
+      1.20263671875,
+      1.2158203125
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 132.485,
+      "sync_thread_system_ms": 10.042,
+      "total_process_system_ms": 74,
+      "total_wall_ms": 493.91622400284,
+      "total_process_user_ms": 1202.605,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 142.524427,
+      "sync_wall_ms": 159.19917404652,
+      "total_main_cpu_ms": 408.469797
+    }
+  },
+  {
+    "session": "baseline-05",
+    "input_sha256": "a58de655643b396e16e26ae5951e45e8b9bc1f4ba57b52061b8020f4adadd504",
+    "result_sha256": "73953d05180a2475f9c90ac7cbe1a2c42bda1512330a5ad7ab2a1361f471c7e2",
+    "measurement_sequence": 9,
+    "started_unix_ns": 1789356318490338127,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": false,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/data/talents/corruptions/shadowflame.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 28,
+      "namer_last": 43,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/mod/class/Player.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2517740,
+      "entries": 2888,
+      "raw_bytes": 6029375,
+      "compressed_bytes": 2277340,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21267150,
+    "host_load_start": [
+      0.6806640625,
+      1.20263671875,
+      1.2158203125
+    ],
+    "host_load_end": [
+      0.70654296875,
+      1.19921875,
+      1.21435546875
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 120.397,
+      "sync_thread_system_ms": 7.741,
+      "total_process_system_ms": 66.324,
+      "total_wall_ms": 487.29436200857,
+      "total_process_user_ms": 1210.994,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 128.135208,
+      "sync_wall_ms": 146.35286903381,
+      "total_main_cpu_ms": 396.756094
+    }
+  },
+  {
+    "session": "candidate-05",
+    "input_sha256": "62f286e671c9062a8436c3d8ad42b832086a0e75365eaeb8fa05653274b7fcbc",
+    "result_sha256": "4defa440ab808d308c59c75eb5f50b5595f8372879acdecbf1ade9b06ef67c69",
+    "measurement_sequence": 10,
+    "started_unix_ns": 1789356323056867566,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": true,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/engine/FasterFearscape.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 48,
+      "namer_last": 63,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/engine/FasterInventory.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2492823,
+      "entries": 2888,
+      "raw_bytes": 5909783,
+      "compressed_bytes": 2252423,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21242232,
+    "host_load_start": [
+      0.70654296875,
+      1.19921875,
+      1.21435546875
+    ],
+    "host_load_end": [
+      0.970703125,
+      1.24609375,
+      1.2294921875
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 124.454,
+      "sync_thread_system_ms": 4.997,
+      "total_process_system_ms": 81.45,
+      "total_wall_ms": 484.44164001942,
+      "total_process_user_ms": 1180.893,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 129.448561,
+      "sync_wall_ms": 146.64524203539,
+      "total_main_cpu_ms": 396.810973
+    }
+  },
+  {
+    "session": "candidate-06",
+    "input_sha256": "bf13f800ee6ab46ff94145de0e0e986548ae0fccb503581e8994c419c90c180b",
+    "result_sha256": "c4bae6cf4bcd689061e1e53ce9b9eb0d5fdd290fd4ed0162f4693e685e972999",
+    "measurement_sequence": 11,
+    "started_unix_ns": 1789356327473334209,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": true,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/engine/FasterFearscape.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 48,
+      "namer_last": 63,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/engine/FasterInventory.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2492817,
+      "entries": 2888,
+      "raw_bytes": 5909783,
+      "compressed_bytes": 2252417,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21242227,
+    "host_load_start": [
+      0.970703125,
+      1.24609375,
+      1.2294921875
+    ],
+    "host_load_end": [
+      0.97314453125,
+      1.24169921875,
+      1.22802734375
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 139.539,
+      "sync_thread_system_ms": 5.965,
+      "total_process_system_ms": 71.859,
+      "total_wall_ms": 514.74700301886,
+      "total_process_user_ms": 1279.012,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 145.502253,
+      "sync_wall_ms": 163.47641599178,
+      "total_main_cpu_ms": 421.66721
+    }
+  },
+  {
+    "session": "baseline-06",
+    "input_sha256": "f0531d86856134b6e90937a93864af2bae3694b76cdc9cccbc1ee27e2d662db4",
+    "result_sha256": "d21f2bdea744b5000f07fe9751490ac6949e4dc1e9300046a4cbb75b27adeaa3",
+    "measurement_sequence": 12,
+    "started_unix_ns": 1789356331940070819,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": false,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/data/talents/corruptions/shadowflame.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 28,
+      "namer_last": 43,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/mod/class/Player.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2517742,
+      "entries": 2888,
+      "raw_bytes": 6029375,
+      "compressed_bytes": 2277342,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21267150,
+    "host_load_start": [
+      0.97314453125,
+      1.24169921875,
+      1.22802734375
+    ],
+    "host_load_end": [
+      0.9755859375,
+      1.2373046875,
+      1.2265625
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 134.918,
+      "sync_thread_system_ms": 3.433,
+      "total_process_system_ms": 64.958,
+      "total_wall_ms": 511.10337102413,
+      "total_process_user_ms": 1283.327,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 138.349635,
+      "sync_wall_ms": 154.39610004425,
+      "total_main_cpu_ms": 418.74947
+    }
+  },
+  {
+    "session": "baseline-07",
+    "input_sha256": "54bc96e4ec4a4e9ac81c147d49d4520058cedde7426f79b9dcd3a20b6a82aa46",
+    "result_sha256": "7f0e5fede2031ff0c17bd4b2b9b11f64eadffbaaf1e8bddf26eb4af172d5253c",
+    "measurement_sequence": 13,
+    "started_unix_ns": 1789356336606065008,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": false,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/data/talents/corruptions/shadowflame.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 28,
+      "namer_last": 43,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/mod/class/Player.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2517720,
+      "entries": 2888,
+      "raw_bytes": 6029375,
+      "compressed_bytes": 2277320,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21267130,
+    "host_load_start": [
+      0.9755859375,
+      1.2373046875,
+      1.2265625
+    ],
+    "host_load_end": [
+      0.97802734375,
+      1.23291015625,
+      1.22509765625
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 127.426,
+      "sync_thread_system_ms": 3.454,
+      "total_process_system_ms": 71.612,
+      "total_wall_ms": 481.92442399263,
+      "total_process_user_ms": 1195.538,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 130.876243,
+      "sync_wall_ms": 145.63401800394,
+      "total_main_cpu_ms": 398.268857
+    }
+  },
+  {
+    "session": "candidate-07",
+    "input_sha256": "073d31ecdedb427d15aebe3cb3033592a41a29d89d4fe0f8bd66f3fc12cfeea0",
+    "result_sha256": "9ca4a2bef6732e182b4fea779c476018b9e547e8499c28640c189bbeb5b444e3",
+    "measurement_sequence": 14,
+    "started_unix_ns": 1789356341025889302,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": true,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/engine/FasterFearscape.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 48,
+      "namer_last": 63,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/engine/FasterInventory.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2492816,
+      "entries": 2888,
+      "raw_bytes": 5909783,
+      "compressed_bytes": 2252416,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21242224,
+    "host_load_start": [
+      0.97802734375,
+      1.23291015625,
+      1.22509765625
+    ],
+    "host_load_end": [
+      1.62060546875,
+      1.3623046875,
+      1.26708984375
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 136.143,
+      "sync_thread_system_ms": 6.085,
+      "total_process_system_ms": 75.967,
+      "total_wall_ms": 496.23965001106,
+      "total_process_user_ms": 1198.845,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 142.225216,
+      "sync_wall_ms": 159.08442801237,
+      "total_main_cpu_ms": 408.159638
+    }
+  },
+  {
+    "session": "candidate-08",
+    "input_sha256": "0dc8c77d78dbb9a4ee9c44597cfb867d52bac677aeb068269c9d089178d27a91",
+    "result_sha256": "63b9a19ca2faec05d666253dbabc541201d91eb9310ccded88d0a3f76abd48bb",
+    "measurement_sequence": 15,
+    "started_unix_ns": 1789356345443243494,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": true,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/engine/FasterFearscape.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 48,
+      "namer_last": 63,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/engine/FasterInventory.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2492797,
+      "entries": 2888,
+      "raw_bytes": 5909783,
+      "compressed_bytes": 2252397,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21242208,
+    "host_load_start": [
+      1.62060546875,
+      1.3623046875,
+      1.26708984375
+    ],
+    "host_load_end": [
+      1.49072265625,
+      1.33935546875,
+      1.26025390625
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 139.086,
+      "sync_thread_system_ms": 3.018,
+      "total_process_system_ms": 66.049,
+      "total_wall_ms": 499.30413901806,
+      "total_process_user_ms": 1205.956,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 142.101469,
+      "sync_wall_ms": 158.98163503408,
+      "total_main_cpu_ms": 408.319883
+    }
+  },
+  {
+    "session": "baseline-08",
+    "input_sha256": "063cfff4ded983c2cf66698eef138c7bb0fab4cdf18dc41570a824497cd9171c",
+    "result_sha256": "a480a2df737818f529104e258217151ce65c61ee02005024a2a570c396f4b4ce",
+    "measurement_sequence": 16,
+    "started_unix_ns": 1789356350110044614,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": false,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/data/talents/corruptions/shadowflame.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 28,
+      "namer_last": 43,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/mod/class/Player.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2517762,
+      "entries": 2888,
+      "raw_bytes": 6029375,
+      "compressed_bytes": 2277362,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21267173,
+    "host_load_start": [
+      1.49072265625,
+      1.33935546875,
+      1.26025390625
+    ],
+    "host_load_end": [
+      1.37109375,
+      1.31689453125,
+      1.25341796875
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 140.991,
+      "sync_thread_system_ms": 2.248,
+      "total_process_system_ms": 62.961,
+      "total_wall_ms": 522.3872860074,
+      "total_process_user_ms": 1295.541,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 143.236661,
+      "sync_wall_ms": 160.67126202583,
+      "total_main_cpu_ms": 426.705039
+    }
+  },
+  {
+    "session": "baseline-09",
+    "input_sha256": "70cb105d4119bd4d2e82f8b740aa8735f173ea50173fa0c41a096c7acec04666",
+    "result_sha256": "cb4124879173817db748d958b22d9da8fedb56e4ff9d20f25e6e441616bb4538",
+    "measurement_sequence": 17,
+    "started_unix_ns": 1789356354729075650,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": false,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/data/talents/corruptions/shadowflame.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 28,
+      "namer_last": 43,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/mod/class/Player.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2517756,
+      "entries": 2888,
+      "raw_bytes": 6029375,
+      "compressed_bytes": 2277356,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21267167,
+    "host_load_start": [
+      1.37109375,
+      1.31689453125,
+      1.25341796875
+    ],
+    "host_load_end": [
+      1.34130859375,
+      1.3115234375,
+      1.251953125
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 147.371,
+      "sync_thread_system_ms": 3.506,
+      "total_process_system_ms": 68.666,
+      "total_wall_ms": 515.8716250062,
+      "total_process_user_ms": 1291.522,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 150.87236,
+      "sync_wall_ms": 167.79000502825,
+      "total_main_cpu_ms": 425.030556
+    }
+  },
+  {
+    "session": "candidate-09",
+    "input_sha256": "a130da0f227dc3ddba909bdef1d79f5e0fcd0ffd33df5d855621f1ce9773feb3",
+    "result_sha256": "a4bb97ce2ba28c0175742b2c26eb82b46a0cd143c62e573585d9095d98520a40",
+    "measurement_sequence": 18,
+    "started_unix_ns": 1789356359298042706,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": true,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/engine/FasterFearscape.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 48,
+      "namer_last": 63,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/engine/FasterInventory.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2492815,
+      "entries": 2888,
+      "raw_bytes": 5909783,
+      "compressed_bytes": 2252415,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21242226,
+    "host_load_start": [
+      1.34130859375,
+      1.3115234375,
+      1.251953125
+    ],
+    "host_load_end": [
+      1.34130859375,
+      1.3115234375,
+      1.251953125
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 133.631,
+      "sync_thread_system_ms": 7.056,
+      "total_process_system_ms": 86.056,
+      "total_wall_ms": 524.15237802267,
+      "total_process_user_ms": 1276.625,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 140.68535,
+      "sync_wall_ms": 155.06441301107,
+      "total_main_cpu_ms": 428.06341
+    }
+  },
+  {
+    "session": "candidate-10",
+    "input_sha256": "253d968821efca9fe6d612ee43cdfb42a575878df1e6ccf8b4cc538717953cae",
+    "result_sha256": "ff338fe0605447859fb8431844afb3bcd5bcf0d83ebf39bfb21a70626708659a",
+    "measurement_sequence": 19,
+    "started_unix_ns": 1789356363864280457,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": true,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/engine/FasterFearscape.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 48,
+      "namer_last": 63,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/engine/FasterInventory.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2492820,
+      "entries": 2888,
+      "raw_bytes": 5909783,
+      "compressed_bytes": 2252420,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21242230,
+    "host_load_start": [
+      1.31396484375,
+      1.30615234375,
+      1.25048828125
+    ],
+    "host_load_end": [
+      1.31396484375,
+      1.30615234375,
+      1.25048828125
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 122.797,
+      "sync_thread_system_ms": 5.082,
+      "total_process_system_ms": 72.015,
+      "total_wall_ms": 482.67425400019,
+      "total_process_user_ms": 1192.794,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 127.875897,
+      "sync_wall_ms": 144.47336101532,
+      "total_main_cpu_ms": 398.27659
+    }
+  },
+  {
+    "session": "baseline-10",
+    "input_sha256": "a85c42c50dbfe1d5cced805da1ca10cf205f5f29571c0fc973608e20176ead93",
+    "result_sha256": "3d57d67c70dc4d9ad28f2b01146dd3f123fab543a8037a295bc95aad1292b492",
+    "measurement_sequence": 20,
+    "started_unix_ns": 1789356368432601692,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": false,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/data/talents/corruptions/shadowflame.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 28,
+      "namer_last": 43,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/mod/class/Player.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2517729,
+      "entries": 2888,
+      "raw_bytes": 6029375,
+      "compressed_bytes": 2277329,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21267138,
+    "host_load_start": [
+      1.31396484375,
+      1.30615234375,
+      1.25048828125
+    ],
+    "host_load_end": [
+      1.28857421875,
+      1.30078125,
+      1.2490234375
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 136.695,
+      "sync_thread_system_ms": 3.303,
+      "total_process_system_ms": 68.752,
+      "total_wall_ms": 513.5317209959,
+      "total_process_user_ms": 1289.006,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 139.995766,
+      "sync_wall_ms": 157.44207400084,
+      "total_main_cpu_ms": 414.9805
+    }
+  },
+  {
+    "session": "baseline-11",
+    "input_sha256": "aa063b7b13a1d7fddc2574cd1088881c615b9867945cc9512a813ceb7fe5a5a2",
+    "result_sha256": "29d1132924c72ef4d5da627588c1ced8a36e27165bcdf44b989fae8a55b3afea",
+    "measurement_sequence": 21,
+    "started_unix_ns": 1789356373051186383,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": false,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/data/talents/corruptions/shadowflame.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 28,
+      "namer_last": 43,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/mod/class/Player.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2517738,
+      "entries": 2888,
+      "raw_bytes": 6029375,
+      "compressed_bytes": 2277338,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21267149,
+    "host_load_start": [
+      1.28857421875,
+      1.30078125,
+      1.2490234375
+    ],
+    "host_load_end": [
+      1.26513671875,
+      1.29541015625,
+      1.24755859375
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 137.669,
+      "sync_thread_system_ms": 2.438,
+      "total_process_system_ms": 71.889,
+      "total_wall_ms": 497.55953299999,
+      "total_process_user_ms": 1206.581,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 140.104405,
+      "sync_wall_ms": 157.3914039731,
+      "total_main_cpu_ms": 408.921526
+    }
+  },
+  {
+    "session": "candidate-11",
+    "input_sha256": "564a805f56562e962fd7e2e1a64a25a835b6f543a3bfc1293c7fc7c03ee48398",
+    "result_sha256": "de091e5ef5fa06d02ece54e6226471939533bd78b9e60329090cc991d608a59a",
+    "measurement_sequence": 22,
+    "started_unix_ns": 1789356377617086960,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": true,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/engine/FasterFearscape.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 48,
+      "namer_last": 63,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/engine/FasterInventory.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2492800,
+      "entries": 2888,
+      "raw_bytes": 5909783,
+      "compressed_bytes": 2252400,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21242208,
+    "host_load_start": [
+      1.26513671875,
+      1.29541015625,
+      1.24755859375
+    ],
+    "host_load_end": [
+      1.24365234375,
+      1.2900390625,
+      1.24609375
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 126.944,
+      "sync_thread_system_ms": 2.763,
+      "total_process_system_ms": 67.572,
+      "total_wall_ms": 481.78940695524,
+      "total_process_user_ms": 1191.363,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 129.704151,
+      "sync_wall_ms": 146.8026329875,
+      "total_main_cpu_ms": 396.061257
+    }
+  },
+  {
+    "session": "candidate-12",
+    "input_sha256": "3315b76cb98e8f66ddaaa9f9f5d8084d0c7bb12b946207f728f98ca4392601f4",
+    "result_sha256": "ef3c893bf93f8573919e4421b1246034f2a7b837218f7e85f05ed4ca7af202ad",
+    "measurement_sequence": 23,
+    "started_unix_ns": 1789356382184907730,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": true,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/engine/FasterFearscape.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 48,
+      "namer_last": 63,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/engine/FasterInventory.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2492812,
+      "entries": 2888,
+      "raw_bytes": 5909783,
+      "compressed_bytes": 2252412,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21242221,
+    "host_load_start": [
+      1.24365234375,
+      1.2900390625,
+      1.24609375
+    ],
+    "host_load_end": [
+      1.22412109375,
+      1.28515625,
+      1.24462890625
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 120.678,
+      "sync_thread_system_ms": 7.324,
+      "total_process_system_ms": 70.221,
+      "total_wall_ms": 483.38188999891,
+      "total_process_user_ms": 1199.198,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 127.997532,
+      "sync_wall_ms": 144.2001940012,
+      "total_main_cpu_ms": 398.274567
+    }
+  },
+  {
+    "session": "baseline-12",
+    "input_sha256": "ae42ae521b2a105510498c91079ff1f3867e35f01aa7dec546edda11db717249",
+    "result_sha256": "483c9fd33573809dea414b25dd76747fa0e1b9014cfbf77e936f710370fb62fc",
+    "measurement_sequence": 24,
+    "started_unix_ns": 1789356386720665590,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": false,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/data/talents/corruptions/shadowflame.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 28,
+      "namer_last": 43,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/mod/class/Player.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2517745,
+      "entries": 2888,
+      "raw_bytes": 6029375,
+      "compressed_bytes": 2277345,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21267154,
+    "host_load_start": [
+      1.22412109375,
+      1.28515625,
+      1.24462890625
+    ],
+    "host_load_end": [
+      1.1259765625,
+      1.263671875,
+      1.23779296875
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 136.837,
+      "sync_thread_system_ms": 5.973,
+      "total_process_system_ms": 57.778,
+      "total_wall_ms": 502.24695301056,
+      "total_process_user_ms": 1220,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 142.807425,
+      "sync_wall_ms": 159.54192298651,
+      "total_main_cpu_ms": 412.297715
+    }
+  },
+  {
+    "session": "baseline-13",
+    "input_sha256": "232b2a1d13d4bcc87353182c8f52aa72c40922a8d074f0da25cb9180f057cdea",
+    "result_sha256": "6ea8bbc88ecebc828e80865491a013f7db7cdf1b561d5995a2970eca99cad955",
+    "measurement_sequence": 25,
+    "started_unix_ns": 1789356391189939766,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": false,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/data/talents/corruptions/shadowflame.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 28,
+      "namer_last": 43,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/mod/class/Player.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2517754,
+      "entries": 2888,
+      "raw_bytes": 6029375,
+      "compressed_bytes": 2277354,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21267162,
+    "host_load_start": [
+      1.1259765625,
+      1.263671875,
+      1.23779296875
+    ],
+    "host_load_end": [
+      1.03564453125,
+      1.24267578125,
+      1.23095703125
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 138.65,
+      "sync_thread_system_ms": 3.301,
+      "total_process_system_ms": 74.331,
+      "total_wall_ms": 519.09211397171,
+      "total_process_user_ms": 1290.82,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 141.948711,
+      "sync_wall_ms": 158.53139096498,
+      "total_main_cpu_ms": 425.149289
+    }
+  },
+  {
+    "session": "candidate-13",
+    "input_sha256": "f9f215dcd2151c22f2dc125584a8359c7049fc7aee4638445555052590adfd34",
+    "result_sha256": "962aef5582529ec09c99900dfb3ca50bb74aa9bac8e68c51d57f0ebd7e0f7687",
+    "measurement_sequence": 26,
+    "started_unix_ns": 1789356395755571295,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": true,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/engine/FasterFearscape.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 48,
+      "namer_last": 63,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/engine/FasterInventory.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2492819,
+      "entries": 2888,
+      "raw_bytes": 5909783,
+      "compressed_bytes": 2252419,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21242229,
+    "host_load_start": [
+      1.03564453125,
+      1.24267578125,
+      1.23095703125
+    ],
+    "host_load_end": [
+      0.95263671875,
+      1.2216796875,
+      1.22412109375
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 133.958,
+      "sync_thread_system_ms": 4.455,
+      "total_process_system_ms": 58.001,
+      "total_wall_ms": 497.23888504505,
+      "total_process_user_ms": 1215.155,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 138.411884,
+      "sync_wall_ms": 153.86552202702,
+      "total_main_cpu_ms": 409.293863
+    }
+  },
+  {
+    "session": "candidate-14",
+    "input_sha256": "ece75af95748da284d6e91acbdfa9f58513c829374d1bfad374cd127cfc761ad",
+    "result_sha256": "8c5999d9c4f54bb9e74c771c7b05a5b9945967501ee2cb68cbac5de1474d215e",
+    "measurement_sequence": 27,
+    "started_unix_ns": 1789356400371548529,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": true,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/engine/FasterFearscape.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 48,
+      "namer_last": 63,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/engine/FasterInventory.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2492827,
+      "entries": 2888,
+      "raw_bytes": 5909783,
+      "compressed_bytes": 2252427,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21242237,
+    "host_load_start": [
+      0.95263671875,
+      1.2216796875,
+      1.22412109375
+    ],
+    "host_load_end": [
+      0.8759765625,
+      1.201171875,
+      1.21728515625
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 137.239,
+      "sync_thread_system_ms": 5.085,
+      "total_process_system_ms": 62.212,
+      "total_wall_ms": 495.79453796148,
+      "total_process_user_ms": 1213.873,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 142.32178,
+      "sync_wall_ms": 159.17634600401,
+      "total_main_cpu_ms": 408.638577
+    }
+  },
+  {
+    "session": "baseline-14",
+    "input_sha256": "44bca242d72a113d654e97e9add90de4bf4abc2a7485c1ebd4d2d65e42c99423",
+    "result_sha256": "3dc2f49fe1e69baaf5fbaaed64791871539fa7d97d684be776b638a8ffb46fc9",
+    "measurement_sequence": 28,
+    "started_unix_ns": 1789356404941518731,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": false,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/data/talents/corruptions/shadowflame.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 28,
+      "namer_last": 43,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/mod/class/Player.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2517721,
+      "entries": 2888,
+      "raw_bytes": 6029375,
+      "compressed_bytes": 2277321,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21267131,
+    "host_load_start": [
+      0.8759765625,
+      1.201171875,
+      1.21728515625
+    ],
+    "host_load_end": [
+      0.88623046875,
+      1.19775390625,
+      1.2158203125
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 137.63,
+      "sync_thread_system_ms": 2.745,
+      "total_process_system_ms": 69.093,
+      "total_wall_ms": 493.60851299763,
+      "total_process_user_ms": 1207.403,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 140.372882,
+      "sync_wall_ms": 154.77606999874,
+      "total_main_cpu_ms": 409.201015
+    }
+  },
+  {
+    "session": "baseline-15",
+    "input_sha256": "21ad2353732753012d0199d76f13d030858c7dd0c86d618b0b954c068b005a33",
+    "result_sha256": "d3d056a5a89930008c9501b83cc47492640d939385c06d24658259b9355a9086",
+    "measurement_sequence": 29,
+    "started_unix_ns": 1789356409606425849,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": false,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/data/talents/corruptions/shadowflame.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 28,
+      "namer_last": 43,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/mod/class/Player.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2517737,
+      "entries": 2888,
+      "raw_bytes": 6029375,
+      "compressed_bytes": 2277337,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21267145,
+    "host_load_start": [
+      0.88623046875,
+      1.19775390625,
+      1.2158203125
+    ],
+    "host_load_end": [
+      0.9755859375,
+      1.21142578125,
+      1.22021484375
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 132.285,
+      "sync_thread_system_ms": 8.684,
+      "total_process_system_ms": 81.8,
+      "total_wall_ms": 490.38924604654,
+      "total_process_user_ms": 1194.641,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 140.967239,
+      "sync_wall_ms": 157.84958004951,
+      "total_main_cpu_ms": 405.289286
+    }
+  },
+  {
+    "session": "candidate-15",
+    "input_sha256": "842f4fb7b97159299015752be22c9970fd7bb26e55e42a36fd2479903ce67b98",
+    "result_sha256": "ee8024b3d092a628676516fce39921112f6c81a87d2b537555283872825115cf",
+    "measurement_sequence": 30,
+    "started_unix_ns": 1789356414171629301,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": true,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/engine/FasterFearscape.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 48,
+      "namer_last": 63,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/engine/FasterInventory.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2492810,
+      "entries": 2888,
+      "raw_bytes": 5909783,
+      "compressed_bytes": 2252410,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21242220,
+    "host_load_start": [
+      0.9755859375,
+      1.21142578125,
+      1.22021484375
+    ],
+    "host_load_end": [
+      0.9755859375,
+      1.21142578125,
+      1.22021484375
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 136.788,
+      "sync_thread_system_ms": 3.937,
+      "total_process_system_ms": 78.282,
+      "total_wall_ms": 493.57213699818,
+      "total_process_user_ms": 1192.788,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 140.721985,
+      "sync_wall_ms": 157.59331798553,
+      "total_main_cpu_ms": 404.551641
+    }
+  },
+  {
+    "session": "candidate-16",
+    "input_sha256": "c3cd774a6f1f6e3a2509bd00388bc5cde08706bda88059add9e86596e6cd5a5b",
+    "result_sha256": "62b5af5982fc63535a37ff061a206853a73c1656443f559f8b212ed8c514c31b",
+    "measurement_sequence": 31,
+    "started_unix_ns": 1789356418736159702,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": true,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/engine/FasterFearscape.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 48,
+      "namer_last": 63,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/engine/FasterInventory.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2492811,
+      "entries": 2888,
+      "raw_bytes": 5909783,
+      "compressed_bytes": 2252411,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21242221,
+    "host_load_start": [
+      0.97802734375,
+      1.20751953125,
+      1.21875
+    ],
+    "host_load_end": [
+      0.97802734375,
+      1.20751953125,
+      1.21875
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 148.52,
+      "sync_thread_system_ms": 5.339,
+      "total_process_system_ms": 66.495,
+      "total_wall_ms": 523.3221809864,
+      "total_process_user_ms": 1296.979,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 153.857971,
+      "sync_wall_ms": 171.54259097576,
+      "total_main_cpu_ms": 424.162771
+    }
+  },
+  {
+    "session": "baseline-16",
+    "input_sha256": "34bd2be0c4f585a0120a667e2a04d4f6c8d0d2b4b8707c06eee2601d7c0c8ff7",
+    "result_sha256": "6e102259271c92e8c202896e6de8bb7cfbdb70d5bd5e48642e2e9877e9f248eb",
+    "measurement_sequence": 32,
+    "started_unix_ns": 1789356423353166809,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": false,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/data/talents/corruptions/shadowflame.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 28,
+      "namer_last": 43,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/mod/class/Player.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2517761,
+      "entries": 2888,
+      "raw_bytes": 6029375,
+      "compressed_bytes": 2277361,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21267169,
+    "host_load_start": [
+      0.97802734375,
+      1.20751953125,
+      1.21875
+    ],
+    "host_load_end": [
+      0.97998046875,
+      1.20361328125,
+      1.21728515625
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 137.825,
+      "sync_thread_system_ms": 3.379,
+      "total_process_system_ms": 54.038,
+      "total_wall_ms": 495.22567898035,
+      "total_process_user_ms": 1223.949,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 141.20136,
+      "sync_wall_ms": 159.99217098951,
+      "total_main_cpu_ms": 404.672917
+    }
+  },
+  {
+    "session": "baseline-17",
+    "input_sha256": "8772a9530e35ca6246596039d25623e567721076abc6d756542f8b344a73017a",
+    "result_sha256": "40c9d74c5e41f9c4b33ba321a157e92b0ae5a7f8941ee4dd1fe1b720c8bcaec4",
+    "measurement_sequence": 33,
+    "started_unix_ns": 1789356427921674832,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": false,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/data/talents/corruptions/shadowflame.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 28,
+      "namer_last": 43,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/mod/class/Player.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2517733,
+      "entries": 2888,
+      "raw_bytes": 6029375,
+      "compressed_bytes": 2277333,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21267143,
+    "host_load_start": [
+      0.97998046875,
+      1.20361328125,
+      1.21728515625
+    ],
+    "host_load_end": [
+      0.98193359375,
+      1.2001953125,
+      1.2158203125
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 136.888,
+      "sync_thread_system_ms": 3.435,
+      "total_process_system_ms": 73.268,
+      "total_wall_ms": 498.21240699291,
+      "total_process_user_ms": 1208.702,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 140.321185,
+      "sync_wall_ms": 157.21924102306,
+      "total_main_cpu_ms": 409.119609
+    }
+  },
+  {
+    "session": "candidate-17",
+    "input_sha256": "98a65666dfa58876e6fd6c59158a7ea7ddc8cb977562a79db0c4c7873c4b43cf",
+    "result_sha256": "53c12eaa3acc403dbad93183e7bba14418174496421372f26e2aa3af38b934a8",
+    "measurement_sequence": 34,
+    "started_unix_ns": 1789356432338380595,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": true,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/engine/FasterFearscape.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 48,
+      "namer_last": 63,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/engine/FasterInventory.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2492810,
+      "entries": 2888,
+      "raw_bytes": 5909783,
+      "compressed_bytes": 2252410,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21242220,
+    "host_load_start": [
+      0.98193359375,
+      1.2001953125,
+      1.2158203125
+    ],
+    "host_load_end": [
+      0.9833984375,
+      1.19677734375,
+      1.21435546875
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 123.418,
+      "sync_thread_system_ms": 5.42,
+      "total_process_system_ms": 90.243,
+      "total_wall_ms": 482.65935301781,
+      "total_process_user_ms": 1173.942,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 128.836953,
+      "sync_wall_ms": 145.7015709877,
+      "total_main_cpu_ms": 395.768012
+    }
+  },
+  {
+    "session": "candidate-18",
+    "input_sha256": "0d8b67d1b31f6edc2e934d069e4b2164dc66b26714b73125c8c0a47da101c660",
+    "result_sha256": "b20d3106ba993df486597993e5b2ddc2aac957f85fe12a4398c48f82bdd4331b",
+    "measurement_sequence": 35,
+    "started_unix_ns": 1789356436903666067,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": true,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/engine/FasterFearscape.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 48,
+      "namer_last": 63,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/engine/FasterInventory.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2492789,
+      "entries": 2888,
+      "raw_bytes": 5909783,
+      "compressed_bytes": 2252389,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21242198,
+    "host_load_start": [
+      0.9833984375,
+      1.19677734375,
+      1.21435546875
+    ],
+    "host_load_end": [
+      0.98486328125,
+      1.193359375,
+      1.212890625
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 148.505,
+      "sync_thread_system_ms": 5.835,
+      "total_process_system_ms": 78.682,
+      "total_wall_ms": 531.97940897942,
+      "total_process_user_ms": 1293.56,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 154.33832,
+      "sync_wall_ms": 171.66665798426,
+      "total_main_cpu_ms": 437.507673
+    }
+  },
+  {
+    "session": "baseline-18",
+    "input_sha256": "f92c84de0f44bd21afda99b01f963389d06b7142da7b62256ee6d1e8a12e9647",
+    "result_sha256": "1f5b60fe5131eb932c19421303482b9322cca1d997bb641a3fe3709524dc1e99",
+    "measurement_sequence": 36,
+    "started_unix_ns": 1789356441368371150,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": false,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/data/talents/corruptions/shadowflame.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 28,
+      "namer_last": 43,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/mod/class/Player.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2517721,
+      "entries": 2888,
+      "raw_bytes": 6029375,
+      "compressed_bytes": 2277321,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21267131,
+    "host_load_start": [
+      0.98486328125,
+      1.193359375,
+      1.212890625
+    ],
+    "host_load_end": [
+      0.986328125,
+      1.18994140625,
+      1.21142578125
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 131.178,
+      "sync_thread_system_ms": 4.939,
+      "total_process_system_ms": 64.813,
+      "total_wall_ms": 490.24321699142,
+      "total_process_user_ms": 1206.222,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 136.114779,
+      "sync_wall_ms": 153.02332603931,
+      "total_main_cpu_ms": 401.231667
+    }
+  },
+  {
+    "session": "baseline-19",
+    "input_sha256": "18c4e48df9a6d2df505a79d073993e75ead0f5195caa9a4547f515cd8ea45697",
+    "result_sha256": "a40d8f7df786faa0de1c910c443447a7d81b5d7a55e0ff36fda5541e8549671c",
+    "measurement_sequence": 37,
+    "started_unix_ns": 1789356445887229528,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": false,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/data/talents/corruptions/shadowflame.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 28,
+      "namer_last": 43,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/mod/class/Player.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2517739,
+      "entries": 2888,
+      "raw_bytes": 6029375,
+      "compressed_bytes": 2277339,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21267149,
+    "host_load_start": [
+      0.986328125,
+      1.18994140625,
+      1.21142578125
+    ],
+    "host_load_end": [
+      0.9072265625,
+      1.169921875,
+      1.20458984375
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 135.516,
+      "sync_thread_system_ms": 6.833,
+      "total_process_system_ms": 85.229,
+      "total_wall_ms": 488.54327696562,
+      "total_process_user_ms": 1194.154,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 142.345605,
+      "sync_wall_ms": 156.61480098963,
+      "total_main_cpu_ms": 406.286314
+    }
+  },
+  {
+    "session": "candidate-19",
+    "input_sha256": "d948e05571bcde76dea563c54f1d558a6aee9aa212fbb883b2c7f76382d3c883",
+    "result_sha256": "09453f9b5e2762c86e59106e85b3d1aa04746a38bbf4d26eb17354a4b0a24e08",
+    "measurement_sequence": 38,
+    "started_unix_ns": 1789356450453959725,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": true,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/engine/FasterFearscape.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 48,
+      "namer_last": 63,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/engine/FasterInventory.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2492813,
+      "entries": 2888,
+      "raw_bytes": 5909783,
+      "compressed_bytes": 2252413,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21242222,
+    "host_load_start": [
+      0.9072265625,
+      1.169921875,
+      1.20458984375
+    ],
+    "host_load_end": [
+      1.7958984375,
+      1.35009765625,
+      1.2626953125
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 137.524,
+      "sync_thread_system_ms": 6.588,
+      "total_process_system_ms": 73.203,
+      "total_wall_ms": 509.78287303448,
+      "total_process_user_ms": 1200.727,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 144.110387,
+      "sync_wall_ms": 160.96787601709,
+      "total_main_cpu_ms": 413.766682
+    }
+  },
+  {
+    "session": "candidate-20",
+    "input_sha256": "95ffa4b8fcdd147c58c537b345b08184a83b093145921287f3f824926d6d4d67",
+    "result_sha256": "cb7e10e8a9db18cd8df0c6f746e09946a78e1cd3c26e897bddde569807be1956",
+    "measurement_sequence": 39,
+    "started_unix_ns": 1789356455171606261,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": true,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/engine/FasterFearscape.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 48,
+      "namer_last": 63,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/engine/FasterInventory.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2492826,
+      "entries": 2888,
+      "raw_bytes": 5909783,
+      "compressed_bytes": 2252426,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21242235,
+    "host_load_start": [
+      1.7958984375,
+      1.35009765625,
+      1.2626953125
+    ],
+    "host_load_end": [
+      1.65185546875,
+      1.32763671875,
+      1.255859375
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 137.561,
+      "sync_thread_system_ms": 5.311,
+      "total_process_system_ms": 80.321,
+      "total_wall_ms": 503.4118449688,
+      "total_process_user_ms": 1198.457,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 142.867428,
+      "sync_wall_ms": 160.02799499035,
+      "total_main_cpu_ms": 409.892149
+    }
+  },
+  {
+    "session": "baseline-20",
+    "input_sha256": "099069cfd7fcd8ea9eda1bff939d78eb09d0ba03caef6bf749a8f196f62e6b2d",
+    "result_sha256": "f74b00f4c29df437d6ef84949db227fe6ab490eebe0e0afb727cfa7f83f1e6e4",
+    "measurement_sequence": 40,
+    "started_unix_ns": 1789356459788846711,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": false,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/data/talents/corruptions/shadowflame.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 28,
+      "namer_last": 43,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/mod/class/Player.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2517742,
+      "entries": 2888,
+      "raw_bytes": 6029375,
+      "compressed_bytes": 2277342,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21267151,
+    "host_load_start": [
+      1.65185546875,
+      1.32763671875,
+      1.255859375
+    ],
+    "host_load_end": [
+      1.599609375,
+      1.32177734375,
+      1.25439453125
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 131.181,
+      "sync_thread_system_ms": 8.834,
+      "total_process_system_ms": 85.406,
+      "total_wall_ms": 516.14628297091,
+      "total_process_user_ms": 1222.309,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 140.01233,
+      "sync_wall_ms": 157.69626998901,
+      "total_main_cpu_ms": 429.340983
+    }
+  },
+  {
+    "session": "baseline-21",
+    "input_sha256": "325b8cf074b8a5a1e54ce85eb7555d6430ccd46904ff76b5ef7c88695b3a36b2",
+    "result_sha256": "486fbb749f1c9a206231a88053142fef37e3f139443b606bcf313a08f9c879b6",
+    "measurement_sequence": 41,
+    "started_unix_ns": 1789356464405776694,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": false,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/data/talents/corruptions/shadowflame.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 28,
+      "namer_last": 43,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/mod/class/Player.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2517774,
+      "entries": 2888,
+      "raw_bytes": 6029375,
+      "compressed_bytes": 2277374,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21267184,
+    "host_load_start": [
+      1.599609375,
+      1.32177734375,
+      1.25439453125
+    ],
+    "host_load_end": [
+      1.55126953125,
+      1.31640625,
+      1.2529296875
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 132.753,
+      "sync_thread_system_ms": 8.728,
+      "total_process_system_ms": 72.114,
+      "total_wall_ms": 490.69908899069,
+      "total_process_user_ms": 1202.053,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 141.478036,
+      "sync_wall_ms": 158.71451002359,
+      "total_main_cpu_ms": 405.093177
+    }
+  },
+  {
+    "session": "candidate-21",
+    "input_sha256": "bc7cfe0686524b0a9cb12240a160c4a4392dab8032564e656e360ea9a19843be",
+    "result_sha256": "2e03c986a002caee3731607924b6486f1f3910bd368fcf282df52f7f95070ccf",
+    "measurement_sequence": 42,
+    "started_unix_ns": 1789356469122121555,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": true,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/engine/FasterFearscape.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 48,
+      "namer_last": 63,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/engine/FasterInventory.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2492810,
+      "entries": 2888,
+      "raw_bytes": 5909783,
+      "compressed_bytes": 2252410,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21242219,
+    "host_load_start": [
+      1.55126953125,
+      1.31640625,
+      1.2529296875
+    ],
+    "host_load_end": [
+      1.55126953125,
+      1.31640625,
+      1.2529296875
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 133.685,
+      "sync_thread_system_ms": 5.99,
+      "total_process_system_ms": 85.081,
+      "total_wall_ms": 495.16820198298,
+      "total_process_user_ms": 1184.962,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 139.673953,
+      "sync_wall_ms": 155.99089097977,
+      "total_main_cpu_ms": 406.827319
+    }
+  },
+  {
+    "session": "candidate-22",
+    "input_sha256": "76b97783e45ce3882bd4f8056577888aebfa16451d9906b1761aac8a090913a8",
+    "result_sha256": "20f1deb8ee206052422ce5153ba1f6d21a96e1bb28bfd8d530c1e765c74e3d07",
+    "measurement_sequence": 43,
+    "started_unix_ns": 1789356473637681252,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": true,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/engine/FasterFearscape.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 48,
+      "namer_last": 63,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/engine/FasterInventory.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2492817,
+      "entries": 2888,
+      "raw_bytes": 5909783,
+      "compressed_bytes": 2252417,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21242227,
+    "host_load_start": [
+      1.55126953125,
+      1.31640625,
+      1.2529296875
+    ],
+    "host_load_end": [
+      1.58740234375,
+      1.328125,
+      1.25732421875
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 135.387,
+      "sync_thread_system_ms": 7.421,
+      "total_process_system_ms": 73.506,
+      "total_wall_ms": 493.68021500111,
+      "total_process_user_ms": 1202.216,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 142.805933,
+      "sync_wall_ms": 159.71739900112,
+      "total_main_cpu_ms": 407.757664
+    }
+  },
+  {
+    "session": "baseline-22",
+    "input_sha256": "830e29ddd266a6e0ef2d0d0c5d31f630765ca843ac38c06a54b831ad5199b112",
+    "result_sha256": "e58f86403384879376fb2493ed5fb88303771415b270e4fb6145691c192393e4",
+    "measurement_sequence": 44,
+    "started_unix_ns": 1789356478205840747,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": false,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/data/talents/corruptions/shadowflame.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 28,
+      "namer_last": 43,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/mod/class/Player.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2517732,
+      "entries": 2888,
+      "raw_bytes": 6029375,
+      "compressed_bytes": 2277332,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21267143,
+    "host_load_start": [
+      1.58740234375,
+      1.328125,
+      1.25732421875
+    ],
+    "host_load_end": [
+      1.5400390625,
+      1.322265625,
+      1.255859375
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 137.803,
+      "sync_thread_system_ms": 6.025,
+      "total_process_system_ms": 56.586,
+      "total_wall_ms": 494.00427597761,
+      "total_process_user_ms": 1222.104,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 143.825843,
+      "sync_wall_ms": 160.37762397528,
+      "total_main_cpu_ms": 408.782994
+    }
+  },
+  {
+    "session": "baseline-23",
+    "input_sha256": "1e51385b0541b2c16d5f73d30816b20070c3a074c7901c72c97f3cbc413554e1",
+    "result_sha256": "40332d26860cbbb38b0dee99fc685b7516f7c3f3a62071b0c33b9a40842f3319",
+    "measurement_sequence": 45,
+    "started_unix_ns": 1789356482873336069,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": false,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/data/talents/corruptions/shadowflame.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 28,
+      "namer_last": 43,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/mod/class/Player.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2517750,
+      "entries": 2888,
+      "raw_bytes": 6029375,
+      "compressed_bytes": 2277350,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21267161,
+    "host_load_start": [
+      1.5400390625,
+      1.322265625,
+      1.255859375
+    ],
+    "host_load_end": [
+      1.49658203125,
+      1.31689453125,
+      1.25439453125
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 133.948,
+      "sync_thread_system_ms": 7.571,
+      "total_process_system_ms": 71.615,
+      "total_wall_ms": 496.88738304377,
+      "total_process_user_ms": 1204.222,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 141.516738,
+      "sync_wall_ms": 160.14118099213,
+      "total_main_cpu_ms": 407.610207
+    }
+  },
+  {
+    "session": "candidate-23",
+    "input_sha256": "0498b3fe278b8754233dd72ccc729bde480090ec626fe9d3459bebd767dc314d",
+    "result_sha256": "647202c1f739dbb60653e7bd622a91eff12b5c9456a6dde91aa68393cc883754",
+    "measurement_sequence": 46,
+    "started_unix_ns": 1789356487490280569,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": true,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/engine/FasterFearscape.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 48,
+      "namer_last": 63,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/engine/FasterInventory.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2492795,
+      "entries": 2888,
+      "raw_bytes": 5909783,
+      "compressed_bytes": 2252395,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21242203,
+    "host_load_start": [
+      1.49658203125,
+      1.31689453125,
+      1.25439453125
+    ],
+    "host_load_end": [
+      1.45654296875,
+      1.3115234375,
+      1.2529296875
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 126.045,
+      "sync_thread_system_ms": 4.703,
+      "total_process_system_ms": 72.576,
+      "total_wall_ms": 493.00283098221,
+      "total_process_user_ms": 1208.937,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 130.746308,
+      "sync_wall_ms": 144.56306099892,
+      "total_main_cpu_ms": 408.7796
+    }
+  },
+  {
+    "session": "candidate-24",
+    "input_sha256": "1324d4ece563b84a10c7b8dec267dee367663bd4daa44870d7e0818190df3b5a",
+    "result_sha256": "e771426284c762130d1fbb99a9122ddd20071215d548a64b3e80e08a82282bd1",
+    "measurement_sequence": 47,
+    "started_unix_ns": 1789356492105414859,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": true,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/engine/FasterFearscape.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 48,
+      "namer_last": 63,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/engine/FasterInventory.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2492806,
+      "entries": 2888,
+      "raw_bytes": 5909783,
+      "compressed_bytes": 2252406,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21242215,
+    "host_load_start": [
+      1.45654296875,
+      1.3115234375,
+      1.2529296875
+    ],
+    "host_load_end": [
+      1.419921875,
+      1.30615234375,
+      1.25146484375
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 122.483,
+      "sync_thread_system_ms": 5.205,
+      "total_process_system_ms": 75.144,
+      "total_wall_ms": 481.39622998238,
+      "total_process_user_ms": 1187.95,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 127.684673,
+      "sync_wall_ms": 144.62045097351,
+      "total_main_cpu_ms": 396.039541
+    }
+  },
+  {
+    "session": "baseline-24",
+    "input_sha256": "b8d4264f48b0642075d5e29e6555032b14c6eb0523c140e64dee8782c090a14d",
+    "result_sha256": "f075839557d8656c26cdacc7251c9fe59970dd9b3f474edc1aec6250c25fdaca",
+    "measurement_sequence": 48,
+    "started_unix_ns": 1789356496676218503,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": false,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/data/talents/corruptions/shadowflame.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 28,
+      "namer_last": 43,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/mod/class/Player.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2517744,
+      "entries": 2888,
+      "raw_bytes": 6029375,
+      "compressed_bytes": 2277344,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21267154,
+    "host_load_start": [
+      1.419921875,
+      1.30615234375,
+      1.25146484375
+    ],
+    "host_load_end": [
+      1.38623046875,
+      1.30078125,
+      1.25
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 136.274,
+      "sync_thread_system_ms": 7.237,
+      "total_process_system_ms": 68.448,
+      "total_wall_ms": 500.06294798851,
+      "total_process_user_ms": 1219.11,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 143.506732,
+      "sync_wall_ms": 157.0878379941,
+      "total_main_cpu_ms": 412.361708
+    }
+  },
+  {
+    "session": "baseline-25",
+    "input_sha256": "701cc8f5dfb6214a6165371780b7d86e73dea3c54ad75d72839d472e30f980df",
+    "result_sha256": "aa9203caac8055165f1c3457618fdbf745c874ba1114e601b32f99db0fca4b29",
+    "measurement_sequence": 49,
+    "started_unix_ns": 1789356502077297634,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": false,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/data/talents/corruptions/shadowflame.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 28,
+      "namer_last": 43,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/mod/class/Player.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2517737,
+      "entries": 2888,
+      "raw_bytes": 6029375,
+      "compressed_bytes": 2277337,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21267148,
+    "host_load_start": [
+      1.38623046875,
+      1.30078125,
+      1.25
+    ],
+    "host_load_end": [
+      1.35498046875,
+      1.29541015625,
+      1.24853515625
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 134.299,
+      "sync_thread_system_ms": 8.457,
+      "total_process_system_ms": 77.485,
+      "total_wall_ms": 497.33816701174,
+      "total_process_user_ms": 1191.596,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 142.753559,
+      "sync_wall_ms": 159.52049100399,
+      "total_main_cpu_ms": 410.091021
+    }
+  },
+  {
+    "session": "candidate-25",
+    "input_sha256": "f1ec50172242348476f4fee4cc61b795ca5f5c04fe0c6f9e6e494c08fae18d5b",
+    "result_sha256": "ea1f603f00bec11f30515df4dc34f6b84f9cc307ec420908107806e742dea6e6",
+    "measurement_sequence": 50,
+    "started_unix_ns": 1789356506747455049,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": true,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/engine/FasterFearscape.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 48,
+      "namer_last": 63,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/engine/FasterInventory.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2492825,
+      "entries": 2888,
+      "raw_bytes": 5909783,
+      "compressed_bytes": 2252425,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21242235,
+    "host_load_start": [
+      1.35498046875,
+      1.29541015625,
+      1.24853515625
+    ],
+    "host_load_end": [
+      1.326171875,
+      1.2900390625,
+      1.2470703125
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 137.059,
+      "sync_thread_system_ms": 4.463,
+      "total_process_system_ms": 93.368,
+      "total_wall_ms": 489.39826500416,
+      "total_process_user_ms": 1180.209,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 141.520554,
+      "sync_wall_ms": 158.47649103403,
+      "total_main_cpu_ms": 404.983959
+    }
+  },
+  {
+    "session": "candidate-26",
+    "input_sha256": "621e26016d617b96edc4d7b1a7e41923e4f0f2e5ae3843eb84a3231cfb97968c",
+    "result_sha256": "a585907b33a5c058487ac04c4c35858efec12bbd079da18fc8c08bd9c055a9b6",
+    "measurement_sequence": 51,
+    "started_unix_ns": 1789356511415447830,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": true,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/engine/FasterFearscape.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 48,
+      "namer_last": 63,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/engine/FasterInventory.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2492803,
+      "entries": 2888,
+      "raw_bytes": 5909783,
+      "compressed_bytes": 2252403,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21242214,
+    "host_load_start": [
+      1.326171875,
+      1.2900390625,
+      1.2470703125
+    ],
+    "host_load_end": [
+      1.38037109375,
+      1.30224609375,
+      1.25146484375
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 139.439,
+      "sync_thread_system_ms": 4.847,
+      "total_process_system_ms": 62.24,
+      "total_wall_ms": 519.48362898827,
+      "total_process_user_ms": 1302.412,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 144.284518,
+      "sync_wall_ms": 162.25381803513,
+      "total_main_cpu_ms": 417.471788
+    }
+  },
+  {
+    "session": "baseline-26",
+    "input_sha256": "a8145955104bb8145a7a54b9d2bcd06e8b0a902de53c856ff980f3e7813d7101",
+    "result_sha256": "b236ac84f5bfc5b524b3d70a8232a2246f9217d0488ad40e1839648e0e345d4a",
+    "measurement_sequence": 52,
+    "started_unix_ns": 1789356515981987763,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": false,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/data/talents/corruptions/shadowflame.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 28,
+      "namer_last": 43,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/mod/class/Player.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2517725,
+      "entries": 2888,
+      "raw_bytes": 6029375,
+      "compressed_bytes": 2277325,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21267136,
+    "host_load_start": [
+      1.38037109375,
+      1.30224609375,
+      1.25146484375
+    ],
+    "host_load_end": [
+      1.26953125,
+      1.2802734375,
+      1.24462890625
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 124.827,
+      "sync_thread_system_ms": 2.113,
+      "total_process_system_ms": 51.395,
+      "total_wall_ms": 483.69908201694,
+      "total_process_user_ms": 1263.014,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 126.937156,
+      "sync_wall_ms": 142.360435009,
+      "total_main_cpu_ms": 393.128916
+    }
+  },
+  {
+    "session": "baseline-27",
+    "input_sha256": "23fd81f90212eeb4b85005a0afbbc0f12e2ea365687fa78704d728f9b41cbc5a",
+    "result_sha256": "03cc4a21139798551099143b658b365d8edea19b1c3c5d203a0efc9c301290c0",
+    "measurement_sequence": 53,
+    "started_unix_ns": 1789356520499311222,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": false,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/data/talents/corruptions/shadowflame.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 28,
+      "namer_last": 43,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/mod/class/Player.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2517735,
+      "entries": 2888,
+      "raw_bytes": 6029375,
+      "compressed_bytes": 2277335,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21267146,
+    "host_load_start": [
+      1.26953125,
+      1.2802734375,
+      1.24462890625
+    ],
+    "host_load_end": [
+      1.80859375,
+      1.39208984375,
+      1.28125
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 138.898,
+      "sync_thread_system_ms": 3.253,
+      "total_process_system_ms": 71.513,
+      "total_wall_ms": 494.04241496325,
+      "total_process_user_ms": 1200.557,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 142.148459,
+      "sync_wall_ms": 159.49472898245,
+      "total_main_cpu_ms": 408.254895
+    }
+  },
+  {
+    "session": "candidate-27",
+    "input_sha256": "7970aa9f1ecb7dcb9403ff9905e207776780a4323c868767fad86af03bb294d3",
+    "result_sha256": "cd0a456f6b613c59b6a00b3d3b55db9a5fb6ba9632aa8e28a887b4e7edd0d5e9",
+    "measurement_sequence": 54,
+    "started_unix_ns": 1789356525014300598,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": true,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/engine/FasterFearscape.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 48,
+      "namer_last": 63,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/engine/FasterInventory.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2492799,
+      "entries": 2888,
+      "raw_bytes": 5909783,
+      "compressed_bytes": 2252399,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21242209,
+    "host_load_start": [
+      1.80859375,
+      1.39208984375,
+      1.28125
+    ],
+    "host_load_end": [
+      1.66357421875,
+      1.36865234375,
+      1.27392578125
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 134.485,
+      "sync_thread_system_ms": 4.839,
+      "total_process_system_ms": 65.493,
+      "total_wall_ms": 494.85684096813,
+      "total_process_user_ms": 1202.636,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 139.321582,
+      "sync_wall_ms": 155.29132497311,
+      "total_main_cpu_ms": 409.604546
+    }
+  },
+  {
+    "session": "candidate-28",
+    "input_sha256": "e45b066191ea845b94de6861feef4beff7b0a8dfc017e63e4bae005c29b9f075",
+    "result_sha256": "5b5b313592bf72999d037e914606ba7650159c1128e36e30a0122ab029e6224b",
+    "measurement_sequence": 55,
+    "started_unix_ns": 1789356529632609659,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": true,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/engine/FasterFearscape.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 48,
+      "namer_last": 63,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/engine/FasterInventory.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2492817,
+      "entries": 2888,
+      "raw_bytes": 5909783,
+      "compressed_bytes": 2252417,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21242228,
+    "host_load_start": [
+      1.66357421875,
+      1.36865234375,
+      1.27392578125
+    ],
+    "host_load_end": [
+      1.69091796875,
+      1.37939453125,
+      1.27783203125
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 137.499,
+      "sync_thread_system_ms": 3.675,
+      "total_process_system_ms": 78.074,
+      "total_wall_ms": 491.04633998871,
+      "total_process_user_ms": 1197.216,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 141.171268,
+      "sync_wall_ms": 158.62983900309,
+      "total_main_cpu_ms": 404.923694
+    }
+  },
+  {
+    "session": "baseline-28",
+    "input_sha256": "90df3d3152e72c276e6b1c48c1e7afc0a6d41ee3246274fc732be9bd20f79bc1",
+    "result_sha256": "fbef000c4cc1969b14e783548afe3780c987af557859c0772dbe1a4b85177c84",
+    "measurement_sequence": 56,
+    "started_unix_ns": 1789356534148436803,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": false,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/data/talents/corruptions/shadowflame.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 28,
+      "namer_last": 43,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/mod/class/Player.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2517746,
+      "entries": 2888,
+      "raw_bytes": 6029375,
+      "compressed_bytes": 2277346,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21267157,
+    "host_load_start": [
+      1.69091796875,
+      1.37939453125,
+      1.27783203125
+    ],
+    "host_load_end": [
+      1.69091796875,
+      1.37939453125,
+      1.27783203125
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 123.639,
+      "sync_thread_system_ms": 7.663,
+      "total_process_system_ms": 63.302,
+      "total_wall_ms": 489.48494303226,
+      "total_process_user_ms": 1205.328,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 131.301097,
+      "sync_wall_ms": 147.71793699265,
+      "total_main_cpu_ms": 399.056799
+    }
+  },
+  {
+    "session": "baseline-29",
+    "input_sha256": "5fb7f563cec84b800cfa56a473b879d10bed6232fc5433f335a024d82a0ba706",
+    "result_sha256": "0b72fec734aab046d23845d61992bd90515e8588e0b37a165b07f19f0e4ed00b",
+    "measurement_sequence": 57,
+    "started_unix_ns": 1789356538715646332,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": false,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/data/talents/corruptions/shadowflame.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 28,
+      "namer_last": 43,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/mod/class/Player.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2517737,
+      "entries": 2888,
+      "raw_bytes": 6029375,
+      "compressed_bytes": 2277337,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21267145,
+    "host_load_start": [
+      1.63525390625,
+      1.373046875,
+      1.27587890625
+    ],
+    "host_load_end": [
+      1.63525390625,
+      1.373046875,
+      1.27587890625
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 129.19,
+      "sync_thread_system_ms": 3.92,
+      "total_process_system_ms": 67.605,
+      "total_wall_ms": 498.80095499754,
+      "total_process_user_ms": 1227.715,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 133.10864,
+      "sync_wall_ms": 150.48149400949,
+      "total_main_cpu_ms": 410.087715
+    }
+  },
+  {
+    "session": "candidate-29",
+    "input_sha256": "afc79431cfe1698c7725caf322ed40d613883f10cedbcd58572cb15e01043f93",
+    "result_sha256": "f00a7d77c168c149c560b7875a42b7b3de9b6f13eefd87905f6cef1f583896a8",
+    "measurement_sequence": 58,
+    "started_unix_ns": 1789356543233072693,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": true,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/engine/FasterFearscape.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 48,
+      "namer_last": 63,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/engine/FasterInventory.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2492820,
+      "entries": 2888,
+      "raw_bytes": 5909783,
+      "compressed_bytes": 2252420,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21242230,
+    "host_load_start": [
+      1.63525390625,
+      1.373046875,
+      1.27587890625
+    ],
+    "host_load_end": [
+      1.74462890625,
+      1.400390625,
+      1.28515625
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 140.496,
+      "sync_thread_system_ms": 3.114,
+      "total_process_system_ms": 76.569,
+      "total_wall_ms": 519.97160798311,
+      "total_process_user_ms": 1287.651,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 143.607773,
+      "sync_wall_ms": 159.99176901579,
+      "total_main_cpu_ms": 421.479948
+    }
+  },
+  {
+    "session": "candidate-30",
+    "input_sha256": "b40b179381b7ff01f0a31ec3538e6152f904c8cd2c692420eb6d79c53b768d26",
+    "result_sha256": "8db456a6e8387c320131d484dc74c5e31983f130c9d1cd5a06068e7d9beb29d4",
+    "measurement_sequence": 59,
+    "started_unix_ns": 1789356547799667322,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": true,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/engine/FasterFearscape.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 48,
+      "namer_last": 63,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/engine/FasterInventory.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2492807,
+      "entries": 2888,
+      "raw_bytes": 5909783,
+      "compressed_bytes": 2252407,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21242215,
+    "host_load_start": [
+      1.74462890625,
+      1.400390625,
+      1.28515625
+    ],
+    "host_load_end": [
+      1.6845703125,
+      1.3935546875,
+      1.283203125
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 136.248,
+      "sync_thread_system_ms": 6.726,
+      "total_process_system_ms": 77.039,
+      "total_wall_ms": 496.97000300884,
+      "total_process_user_ms": 1198.485,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 142.970113,
+      "sync_wall_ms": 159.51852500439,
+      "total_main_cpu_ms": 409.372247
+    }
+  },
+  {
+    "session": "baseline-30",
+    "input_sha256": "27fc50d12c7faa56b9a490d5ba371beba0ce74ec6c7bbacf35ce039fd3708b73",
+    "result_sha256": "ec9867db858b1ec48d2a5f8c47f944a4278315d4682ee143a0f251a3182823d4",
+    "measurement_sequence": 60,
+    "started_unix_ns": 1789356552366631102,
+    "acceptance_plan_sha256": "7299764778ff5b5e3739641c87698461de94a79f66e2fa0b9d32b1e942683604",
+    "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+    "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+    "addon_sha256": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+    "source_sha256": {
+      "run.py": "56e44c4bce37b4880451589b5db1fbae43d05a51f3f8dad0cf286a6ff6ce9a2a",
+      "runtime/game/addons/tome-faster.teaa": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+      "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+      "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+      "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "435d9693545291f9f4b726c8e938f7fa7311e97712d29b96d118989a94ee4051"
+    },
+    "setup": {
+      "candidate": false,
+      "hit_warning_interval_ms": 500,
+      "production": true,
+      "fearscape_source": "@/data/talents/corruptions/shadowflame.lua",
+      "fbo_gc_guard": true,
+      "namer_first": 28,
+      "namer_last": 43,
+      "kind": "setup",
+      "compact": true,
+      "bare": false,
+      "namer_source": "@/engine/FasterSaveNames.lua",
+      "inventory_source": "@/mod/class/Player.lua"
+    },
+    "exit_code": 0,
+    "complete": true,
+    "lua_error": false,
+    "selected_game_state_equal": true,
+    "save_files_unchanged": false,
+    "main_archive": {
+      "bytes": 2517739,
+      "entries": 2888,
+      "raw_bytes": 6029375,
+      "compressed_bytes": 2277339,
+      "compact_names": true
+    },
+    "archive_count_crc_checked": 23,
+    "all_archives_bytes": 21267148,
+    "host_load_start": [
+      1.6845703125,
+      1.3935546875,
+      1.283203125
+    ],
+    "host_load_end": [
+      1.62939453125,
+      1.38671875,
+      1.28125
+    ],
+    "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+    "timings": {
+      "sync_thread_user_ms": 139.05,
+      "sync_thread_system_ms": 4.449,
+      "total_process_system_ms": 60.972,
+      "total_wall_ms": 521.44828999043,
+      "total_process_user_ms": 1295.828,
+      "runtime": "LuaJIT 2.0.2",
+      "kind": "complete",
+      "sync_cpu_ms": 143.497155,
+      "sync_wall_ms": 161.26034200191,
+      "total_main_cpu_ms": 423.227268
+    }
+  }
+]

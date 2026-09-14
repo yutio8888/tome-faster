@@ -2,6 +2,8 @@
 -- bindings, using a separate surfaceless EGL context (no game/save/network).
 assert(_VERSION == "Lua 5.1", "Lua 5.1 / LuaJIT required")
 local root, repo = arg[1] or ".", assert(arg[2], "pass fixed engine Git clone")
+local guard_order = arg[3]
+assert(guard_order == nil or guard_order == "guard-first" or guard_order == "mask-first", "unknown guard load order")
 local commit = "624a67329fe2ad440c5b344785a9c73fcf22ae63"
 local function quote(s) return "'" .. s:gsub("'", "'\\''") .. "'" end
 local function output(command)
@@ -37,8 +39,15 @@ local function main()
     assert(status == 0 or status == true, "native mask fixture requires C compiler, Lua 5.1, EGL and GL headers")
     local native = assert(package.loadlib(build .. "/effect_mask_fixture.so", "luaopen_effect_mask_fixture"))()
     print("EGL mask renderer: " .. native.init())
-    local env = setmetatable({core = {display = native}}, {__index = _G})
+    local Guard = assert(loadfile(root .. "/overload/engine/FBOGCGuard.lua"))()
+    local guard
+    if guard_order == "guard-first" then guard = assert(Guard.install()) end
+    local env = setmetatable({core = {display = native}, require = function(name)
+        if name == "engine.FBOGCGuard" then return Guard end
+        return require(name)
+    end}, {__index = _G})
     local Faster = setfenv(assert(loadfile(root .. "/overload/engine/FasterEffectMask.lua")), env)()
+    if guard_order == "mask-first" then guard = assert(Guard.install()) end
     local Tiles = {use_images = true}
     env._M = Tiles
     run(section(pinned("game/engines/default/engine/Tiles.lua"), "function _M:get(char", "function _M:clean()"), "@/engine/Tiles.lua", env)
@@ -242,7 +251,12 @@ local function main()
             Faster.prepare = function(...)
                 check(native.state().fbo == sceneID, "geometry preparation occurs before binding mask FBO")
                 collectgarbage("collect"); collectgarbage("collect")
-                check(native.state().fbo == 0, "pinned FBO finalizer really unbinds the active scene")
+                if guard then
+                    check(native.state().fbo == sceneID and guard.pending_count() > 0,
+                        "guard defers native finalizers without unbinding the active scene")
+                else
+                    check(native.state().fbo == 0, "pinned FBO finalizer really unbinds the active scene")
+                end
                 return savedPrepare(...)
             end
         end
@@ -275,15 +289,33 @@ local function main()
     local b, bp, counts = scenario(true)
     check(a == b, "full function call order and dynamic shader/animation parity")
     check(ap == bp, "all successive animation masks RGBA equal")
-    check(counts.hits == 5 and counts.misses == 1, "full renderer uses the batch cache")
+    check(counts.hits == 5 and counts.misses == 1 and counts.draws == 6,
+        "full renderer executes six batch draws, including the default guard combination")
     local gcCalls, gcPixels, gcCounts = scenario(true, true)
     check(a == gcCalls and ap == gcPixels and gcCounts.hits == 5, "forced native FBO GC during preparation preserves every mask and animation")
     local customCalls, customPixels = scenario(false, false, true)
     local customAfter, customAfterPixels, customCounts = scenario(true, false, true)
     check(customCalls == customAfter and customPixels == customAfterPixels and customCounts.draws == 0,
         "unknown custom FBO callbacks mutate grids in original order and bypass preparation")
+    if guard then
+        local mt = debug.getregistry()["gl{fbo}"]
+        local guarded_use = mt.__index.use
+        local calls = 0
+        mt.__index.use = function(...)
+            calls = calls + 1
+            return guarded_use(...)
+        end
+        local foreignCalls, foreignPixels = scenario(false)
+        local foreignAfter, foreignAfterPixels, foreignCounts = scenario(true)
+        check(calls > 0 and foreignCalls == foreignAfter and foreignPixels == foreignAfterPixels and foreignCounts.draws == 0,
+            "an unknown wrapper after the guard keeps its calls and bypasses batching")
+        mt.__index.use = guarded_use
+        local restoredCalls, restoredPixels, restoredCounts = scenario(true)
+        check(restoredCalls == a and restoredPixels == ap and restoredCounts.draws == 6,
+            "restoring the owned guard wrapper restores batching")
+    end
     Faster.clear()
-    print("PASS effect mask: " .. checks .. " checks; actual pinned native GL masks/state and ordered animation calls")
+    print("PASS effect mask: " .. checks .. " checks; actual pinned native GL masks/state and ordered animation calls; " .. (guard_order or "native-only"))
 end
 local ok, err = xpcall(main, debug.traceback)
 os.execute("rm -rf " .. quote(build))

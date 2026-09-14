@@ -1,0 +1,247 @@
+{
+  "source_sha256": {
+    "cur.png": "2778c7d7185d081455cfaee1b2a338ae864b34c7b7a577cb0ecbd02aeba20a3d",
+    "desc.lua": "351c5abeb05748850f2c80e80db1c9d50236e16105c403ef6b3938af73298dc5",
+    "game.teag": "1eafd295bf127e35f2bee2275ddea350cb68b6f136d2a9689873caf638b80cd3",
+    "last_log.txt": "581c7d68cee08b0cfd76fa98100e32ffa6196ea665aa2d41c3078621b91662b9",
+    "zone-ashes-urhrok+searing-halls.teaz": "419ff8e71b46b580689b9696d57e5c21878498696df975eadc8ffa89635c5fff",
+    "zone-daikara.teaz": "1e73ffb64d164987a1d229569b3e487184a9570f6d6f162a1cef1f9fd41977d6",
+    "zone-heart-gloom.teaz": "6205ccc6733a699b0cbe65290220d613c48b0847311d852b2edad843d00ec713",
+    "zone-lake-nur.teaz": "276e28829be101fa452d02d53f2a5e797f414fd5f8e367e7e9b152b8f56f0e5f",
+    "zone-mark-spellblaze.teaz": "5ffe9fd9aab37345dd09f16a558405c84133c4aa202e807d6386bd13f2280d30",
+    "zone-maze.teaz": "e2afb39be08c1c3b6bf3ae80e7fdb7ac793b3b86d091a0e9ef0b5292a3fdd8b0",
+    "zone-norgos-lair.teaz": "218c5378aa9e33ad90dcacd2006f923828af88354b17a6f06bd3823b4d712b2b",
+    "zone-old-forest.teaz": "09b65cbb6bf679075140cb4f51d8105342e4de8763c5e459ac2338ebe309a551",
+    "zone-rhaloren-camp.teaz": "cb2701b789b3125f94bfbf1c11c89c6bf3be7810713c4924dc8b5ae314e5f6a9",
+    "zone-ruins-kor-pul.teaz": "737f4603da7d0265556118984434744663e56c94062a1dec825482adc36bf1b8",
+    "zone-sandworm-lair.teaz": "48b1e3432203f3022afcf97ce5b24232d6dc62d43a2276696a06623a6828108f",
+    "zone-scintillating-caves.teaz": "e12f2233170eaff90a59188d7ad619d38a858a2a1fc72fed7790005fa8114312",
+    "zone-shertul-fortress.teaz": "2f46e687e685ab6352d7fccb8471071c6534870ca6ed1fa8e508d01c7266a72f",
+    "zone-town-angolwen.teaz": "32cf2633d6323d6c1937efeffdc3ff96b3f7e5038cb1dea9024fbc702b57b438",
+    "zone-town-derth.teaz": "9bce7e99246477a26a8157d68ffd90c81578b39c9b4e47de8a87905e41d94d06",
+    "zone-town-elvala.teaz": "6de1969daddcb07b040a0df07f867a0d9d0088e48e2bac4316f2345325d75d46",
+    "zone-town-last-hope.teaz": "9e8dacdb5b13e6c5caa64bc64458799b5002212cf02e3abd460353e0efefc067",
+    "zone-town-shatur.teaz": "6b5f33e564bd01bc204747a50bc436154af01f6dab45f59d1b887dca946da387",
+    "zone-town-zigur.teaz": "55bd4a339848aad14c2a46ac7d05e6730017ad8aac50c41e919041ab572c62e1",
+    "zone-trollmire.teaz": "6d85191c5325cc0d38b608aad14261aaf4c58c1a9d0e8f22d33c57aaf34506b1",
+    "zone-wilderness.teaz": "34d5a90b6ae473ba817aabf1e5bf400300cf648861c3b7c6aaea4a8ce665ec4c"
+  },
+  "source_unchanged": true,
+  "totals": {
+    "objects_with_in_inven": 2955,
+    "raw_assignment_bytes": 712540,
+    "id_table": 1037,
+    "inlined_inventory_reference_occurrences": 5156,
+    "table_inner_id_number": 1037,
+    "owner_is_player": 2002,
+    "id_number": 1791,
+    "id_string": 127
+  },
+  "archives": [
+    {
+      "archive": "game.teag",
+      "objects_with_in_inven": 339,
+      "raw_assignment_bytes": 67982,
+      "id_table": 88,
+      "inlined_inventory_reference_occurrences": 266,
+      "table_inner_id_number": 88,
+      "owner_is_player": 255,
+      "id_number": 238,
+      "id_string": 13
+    },
+    {
+      "archive": "zone-ashes-urhrok+searing-halls.teaz"
+    },
+    {
+      "archive": "zone-daikara.teaz",
+      "objects_with_in_inven": 30,
+      "raw_assignment_bytes": 7826,
+      "id_number": 18,
+      "id_table": 12,
+      "inlined_inventory_reference_occurrences": 12,
+      "table_inner_id_number": 12
+    },
+    {
+      "archive": "zone-heart-gloom.teaz",
+      "objects_with_in_inven": 130,
+      "raw_assignment_bytes": 22509,
+      "id_table": 30,
+      "inlined_inventory_reference_occurrences": 90,
+      "table_inner_id_number": 30,
+      "owner_is_player": 110,
+      "id_number": 92,
+      "id_string": 8
+    },
+    {
+      "archive": "zone-lake-nur.teaz",
+      "objects_with_in_inven": 212,
+      "raw_assignment_bytes": 45999,
+      "id_table": 56,
+      "inlined_inventory_reference_occurrences": 228,
+      "table_inner_id_number": 56,
+      "owner_is_player": 169,
+      "id_number": 141,
+      "id_string": 15
+    },
+    {
+      "archive": "zone-mark-spellblaze.teaz",
+      "objects_with_in_inven": 264,
+      "raw_assignment_bytes": 57536,
+      "id_table": 82,
+      "inlined_inventory_reference_occurrences": 260,
+      "table_inner_id_number": 82,
+      "id_number": 168,
+      "owner_is_player": 184,
+      "id_string": 14
+    },
+    {
+      "archive": "zone-maze.teaz",
+      "objects_with_in_inven": 12,
+      "raw_assignment_bytes": 2223,
+      "id_table": 5,
+      "inlined_inventory_reference_occurrences": 5,
+      "table_inner_id_number": 5,
+      "id_number": 7
+    },
+    {
+      "archive": "zone-norgos-lair.teaz"
+    },
+    {
+      "archive": "zone-old-forest.teaz"
+    },
+    {
+      "archive": "zone-rhaloren-camp.teaz",
+      "objects_with_in_inven": 111,
+      "raw_assignment_bytes": 20365,
+      "id_table": 26,
+      "inlined_inventory_reference_occurrences": 87,
+      "table_inner_id_number": 26,
+      "owner_is_player": 98,
+      "id_number": 79,
+      "id_string": 6
+    },
+    {
+      "archive": "zone-ruins-kor-pul.teaz",
+      "objects_with_in_inven": 171,
+      "raw_assignment_bytes": 34787,
+      "id_table": 39,
+      "inlined_inventory_reference_occurrences": 188,
+      "table_inner_id_number": 39,
+      "owner_is_player": 146,
+      "id_number": 121,
+      "id_string": 11
+    },
+    {
+      "archive": "zone-sandworm-lair.teaz",
+      "objects_with_in_inven": 194,
+      "raw_assignment_bytes": 36218,
+      "id_table": 69,
+      "inlined_inventory_reference_occurrences": 120,
+      "table_inner_id_number": 69,
+      "owner_is_player": 85,
+      "id_number": 123,
+      "id_string": 2
+    },
+    {
+      "archive": "zone-scintillating-caves.teaz",
+      "objects_with_in_inven": 71,
+      "raw_assignment_bytes": 10520,
+      "id_number": 58,
+      "owner_is_player": 71,
+      "id_table": 12,
+      "inlined_inventory_reference_occurrences": 53,
+      "table_inner_id_number": 12,
+      "id_string": 1
+    },
+    {
+      "archive": "zone-shertul-fortress.teaz",
+      "objects_with_in_inven": 205,
+      "raw_assignment_bytes": 45644,
+      "id_table": 57,
+      "inlined_inventory_reference_occurrences": 222,
+      "table_inner_id_number": 57,
+      "owner_is_player": 162,
+      "id_number": 133,
+      "id_string": 15
+    },
+    {
+      "archive": "zone-town-angolwen.teaz",
+      "objects_with_in_inven": 214,
+      "raw_assignment_bytes": 53718,
+      "id_table": 94,
+      "inlined_inventory_reference_occurrences": 426,
+      "table_inner_id_number": 94,
+      "owner_is_player": 121,
+      "id_number": 111,
+      "id_string": 9
+    },
+    {
+      "archive": "zone-town-derth.teaz",
+      "objects_with_in_inven": 113,
+      "raw_assignment_bytes": 47825,
+      "id_table": 80,
+      "inlined_inventory_reference_occurrences": 652,
+      "table_inner_id_number": 80,
+      "owner_is_player": 45,
+      "id_number": 33
+    },
+    {
+      "archive": "zone-town-elvala.teaz",
+      "objects_with_in_inven": 86,
+      "raw_assignment_bytes": 24706,
+      "id_table": 49,
+      "inlined_inventory_reference_occurrences": 273,
+      "table_inner_id_number": 49,
+      "id_number": 37,
+      "owner_is_player": 38
+    },
+    {
+      "archive": "zone-town-last-hope.teaz",
+      "objects_with_in_inven": 281,
+      "raw_assignment_bytes": 99593,
+      "id_table": 136,
+      "inlined_inventory_reference_occurrences": 1197,
+      "table_inner_id_number": 136,
+      "owner_is_player": 168,
+      "id_number": 136,
+      "id_string": 9
+    },
+    {
+      "archive": "zone-town-shatur.teaz",
+      "objects_with_in_inven": 223,
+      "raw_assignment_bytes": 72081,
+      "id_table": 114,
+      "inlined_inventory_reference_occurrences": 783,
+      "table_inner_id_number": 114,
+      "owner_is_player": 123,
+      "id_number": 100,
+      "id_string": 9
+    },
+    {
+      "archive": "zone-town-zigur.teaz",
+      "objects_with_in_inven": 255,
+      "raw_assignment_bytes": 55432,
+      "id_table": 77,
+      "inlined_inventory_reference_occurrences": 255,
+      "table_inner_id_number": 77,
+      "id_number": 163,
+      "owner_is_player": 183,
+      "id_string": 15
+    },
+    {
+      "archive": "zone-trollmire.teaz",
+      "objects_with_in_inven": 44,
+      "raw_assignment_bytes": 7576,
+      "id_number": 33,
+      "owner_is_player": 44,
+      "id_table": 11,
+      "inlined_inventory_reference_occurrences": 39,
+      "table_inner_id_number": 11
+    },
+    {
+      "archive": "zone-wilderness.teaz"
+    }
+  ],
+  "protocol": "Strict parse of in_inven values only, using the pinned encoder grammar. No Lua execution. Duplicate references count occurrences, not unique objects.",
+  "limits": "An inner numeric inventory ID does not prove that replacing an arbitrary table is semantically safe; identity and current ownership require runtime validation."
+}

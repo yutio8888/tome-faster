@@ -1,0 +1,1150 @@
+{
+  "source_sha256": {
+    "cur.png": "768b33450fdb582ab33b23b94d8446aeec00ef6f8a0a6e057a8c0e02a4be7440",
+    "desc.lua": "f7611f28d870b226fcd77385015647a84f87baa1e823dc6da6578d7e928a401c",
+    "game.teag": "1a6fe5ed1ba1f772e8cfcd50493dab8b7ba744cdc692ea88e248807fa25fd07e",
+    "last_log.txt": "7a731497e79635dd66bfdbe041b787911cff3a5e0e53517b438c0531c454d7c9",
+    "zone-ashes-urhrok+searing-halls.teaz": "419ff8e71b46b580689b9696d57e5c21878498696df975eadc8ffa89635c5fff",
+    "zone-daikara.teaz": "1e73ffb64d164987a1d229569b3e487184a9570f6d6f162a1cef1f9fd41977d6",
+    "zone-heart-gloom.teaz": "6205ccc6733a699b0cbe65290220d613c48b0847311d852b2edad843d00ec713",
+    "zone-lake-nur.teaz": "276e28829be101fa452d02d53f2a5e797f414fd5f8e367e7e9b152b8f56f0e5f",
+    "zone-mark-spellblaze.teaz": "5ffe9fd9aab37345dd09f16a558405c84133c4aa202e807d6386bd13f2280d30",
+    "zone-maze.teaz": "e2afb39be08c1c3b6bf3ae80e7fdb7ac793b3b86d091a0e9ef0b5292a3fdd8b0",
+    "zone-norgos-lair.teaz": "218c5378aa9e33ad90dcacd2006f923828af88354b17a6f06bd3823b4d712b2b",
+    "zone-old-forest.teaz": "09b65cbb6bf679075140cb4f51d8105342e4de8763c5e459ac2338ebe309a551",
+    "zone-rhaloren-camp.teaz": "cb2701b789b3125f94bfbf1c11c89c6bf3be7810713c4924dc8b5ae314e5f6a9",
+    "zone-ruins-kor-pul.teaz": "737f4603da7d0265556118984434744663e56c94062a1dec825482adc36bf1b8",
+    "zone-sandworm-lair.teaz": "48b1e3432203f3022afcf97ce5b24232d6dc62d43a2276696a06623a6828108f",
+    "zone-scintillating-caves.teaz": "e12f2233170eaff90a59188d7ad619d38a858a2a1fc72fed7790005fa8114312",
+    "zone-shertul-fortress.teaz": "2f46e687e685ab6352d7fccb8471071c6534870ca6ed1fa8e508d01c7266a72f",
+    "zone-town-angolwen.teaz": "32cf2633d6323d6c1937efeffdc3ff96b3f7e5038cb1dea9024fbc702b57b438",
+    "zone-town-derth.teaz": "9bce7e99246477a26a8157d68ffd90c81578b39c9b4e47de8a87905e41d94d06",
+    "zone-town-elvala.teaz": "6de1969daddcb07b040a0df07f867a0d9d0088e48e2bac4316f2345325d75d46",
+    "zone-town-last-hope.teaz": "9e8dacdb5b13e6c5caa64bc64458799b5002212cf02e3abd460353e0efefc067",
+    "zone-town-shatur.teaz": "6b5f33e564bd01bc204747a50bc436154af01f6dab45f59d1b887dca946da387",
+    "zone-town-zigur.teaz": "55bd4a339848aad14c2a46ac7d05e6730017ad8aac50c41e919041ab572c62e1",
+    "zone-trollmire.teaz": "6d85191c5325cc0d38b608aad14261aaf4c58c1a9d0e8f22d33c57aaf34506b1",
+    "zone-wilderness.teaz": "34d5a90b6ae473ba817aabf1e5bf400300cf648861c3b7c6aaea4a8ce665ec4c"
+  },
+  "zlib_version": "1.2.13",
+  "files": [
+    {
+      "name": "cur.png",
+      "bytes": 432645
+    },
+    {
+      "name": "desc.lua",
+      "bytes": 430
+    },
+    {
+      "name": "game.teag",
+      "bytes": 2662545
+    },
+    {
+      "name": "last_log.txt",
+      "bytes": 63506
+    },
+    {
+      "name": "zone-ashes-urhrok+searing-halls.teaz",
+      "bytes": 213267
+    },
+    {
+      "name": "zone-daikara.teaz",
+      "bytes": 286443
+    },
+    {
+      "name": "zone-heart-gloom.teaz",
+      "bytes": 914182
+    },
+    {
+      "name": "zone-lake-nur.teaz",
+      "bytes": 1223906
+    },
+    {
+      "name": "zone-mark-spellblaze.teaz",
+      "bytes": 1455247
+    },
+    {
+      "name": "zone-maze.teaz",
+      "bytes": 102003
+    },
+    {
+      "name": "zone-norgos-lair.teaz",
+      "bytes": 217345
+    },
+    {
+      "name": "zone-old-forest.teaz",
+      "bytes": 694576
+    },
+    {
+      "name": "zone-rhaloren-camp.teaz",
+      "bytes": 704841
+    },
+    {
+      "name": "zone-ruins-kor-pul.teaz",
+      "bytes": 940953
+    },
+    {
+      "name": "zone-sandworm-lair.teaz",
+      "bytes": 2631520
+    },
+    {
+      "name": "zone-scintillating-caves.teaz",
+      "bytes": 532298
+    },
+    {
+      "name": "zone-shertul-fortress.teaz",
+      "bytes": 1160573
+    },
+    {
+      "name": "zone-town-angolwen.teaz",
+      "bytes": 1053596
+    },
+    {
+      "name": "zone-town-derth.teaz",
+      "bytes": 711401
+    },
+    {
+      "name": "zone-town-elvala.teaz",
+      "bytes": 509095
+    },
+    {
+      "name": "zone-town-last-hope.teaz",
+      "bytes": 1629057
+    },
+    {
+      "name": "zone-town-shatur.teaz",
+      "bytes": 1107832
+    },
+    {
+      "name": "zone-town-zigur.teaz",
+      "bytes": 1343693
+    },
+    {
+      "name": "zone-trollmire.teaz",
+      "bytes": 467063
+    },
+    {
+      "name": "zone-wilderness.teaz",
+      "bytes": 850253
+    }
+  ],
+  "archives": [
+    {
+      "name": "game.teag",
+      "entries": 2859,
+      "file_bytes": 2662545,
+      "raw_bytes": 6644622,
+      "compressed_bytes": 2296903,
+      "header_bytes": 365642,
+      "compact_raw_bytes": 5903907,
+      "compact_compressed_bytes": 2239481,
+      "compact_header_bytes": 237970,
+      "compact_file_bytes": 2477451,
+      "byte_exact_after_inverse_rename": true
+    },
+    {
+      "name": "zone-ashes-urhrok+searing-halls.teaz",
+      "entries": 253,
+      "file_bytes": 213267,
+      "raw_bytes": 904517,
+      "compressed_bytes": 181379,
+      "header_bytes": 31888,
+      "compact_raw_bytes": 764493,
+      "compact_compressed_bytes": 175477,
+      "compact_header_bytes": 20558,
+      "compact_file_bytes": 196035,
+      "byte_exact_after_inverse_rename": true
+    },
+    {
+      "name": "zone-daikara.teaz",
+      "entries": 213,
+      "file_bytes": 286443,
+      "raw_bytes": 1217585,
+      "compressed_bytes": 259361,
+      "header_bytes": 27082,
+      "compact_raw_bytes": 974915,
+      "compact_compressed_bytes": 252687,
+      "compact_header_bytes": 17278,
+      "compact_file_bytes": 269965,
+      "byte_exact_after_inverse_rename": true
+    },
+    {
+      "name": "zone-heart-gloom.teaz",
+      "entries": 870,
+      "file_bytes": 914182,
+      "raw_bytes": 2223340,
+      "compressed_bytes": 802724,
+      "header_bytes": 111458,
+      "compact_raw_bytes": 2008725,
+      "compact_compressed_bytes": 783889,
+      "compact_header_bytes": 71152,
+      "compact_file_bytes": 855041,
+      "byte_exact_after_inverse_rename": true
+    },
+    {
+      "name": "zone-lake-nur.teaz",
+      "entries": 1194,
+      "file_bytes": 1223906,
+      "raw_bytes": 2794933,
+      "compressed_bytes": 1070772,
+      "header_bytes": 153134,
+      "compact_raw_bytes": 2561512,
+      "compact_compressed_bytes": 1044859,
+      "compact_header_bytes": 98110,
+      "compact_file_bytes": 1142969,
+      "byte_exact_after_inverse_rename": true
+    },
+    {
+      "name": "zone-mark-spellblaze.teaz",
+      "entries": 1375,
+      "file_bytes": 1455247,
+      "raw_bytes": 3266919,
+      "compressed_bytes": 1278715,
+      "header_bytes": 176532,
+      "compact_raw_bytes": 3045724,
+      "compact_compressed_bytes": 1250495,
+      "compact_header_bytes": 113314,
+      "compact_file_bytes": 1363809,
+      "byte_exact_after_inverse_rename": true
+    },
+    {
+      "name": "zone-maze.teaz",
+      "entries": 103,
+      "file_bytes": 102003,
+      "raw_bytes": 296227,
+      "compressed_bytes": 88945,
+      "header_bytes": 13058,
+      "compact_raw_bytes": 254621,
+      "compact_compressed_bytes": 86467,
+      "compact_header_bytes": 8258,
+      "compact_file_bytes": 94725,
+      "byte_exact_after_inverse_rename": true
+    },
+    {
+      "name": "zone-norgos-lair.teaz",
+      "entries": 266,
+      "file_bytes": 217345,
+      "raw_bytes": 875402,
+      "compressed_bytes": 184155,
+      "header_bytes": 33190,
+      "compact_raw_bytes": 696827,
+      "compact_compressed_bytes": 175658,
+      "compact_header_bytes": 21624,
+      "compact_file_bytes": 197282,
+      "byte_exact_after_inverse_rename": true
+    },
+    {
+      "name": "zone-old-forest.teaz",
+      "entries": 1165,
+      "file_bytes": 694576,
+      "raw_bytes": 1731868,
+      "compressed_bytes": 548558,
+      "header_bytes": 146018,
+      "compact_raw_bytes": 1469110,
+      "compact_compressed_bytes": 521866,
+      "compact_header_bytes": 95674,
+      "compact_file_bytes": 617540,
+      "byte_exact_after_inverse_rename": true
+    },
+    {
+      "name": "zone-rhaloren-camp.teaz",
+      "entries": 715,
+      "file_bytes": 704841,
+      "raw_bytes": 1796828,
+      "compressed_bytes": 613141,
+      "header_bytes": 91700,
+      "compact_raw_bytes": 1586095,
+      "compact_compressed_bytes": 597305,
+      "compact_header_bytes": 58442,
+      "compact_file_bytes": 655747,
+      "byte_exact_after_inverse_rename": true
+    },
+    {
+      "name": "zone-ruins-kor-pul.teaz",
+      "entries": 1004,
+      "file_bytes": 940953,
+      "raw_bytes": 2210423,
+      "compressed_bytes": 812065,
+      "header_bytes": 128888,
+      "compact_raw_bytes": 1981901,
+      "compact_compressed_bytes": 791109,
+      "compact_header_bytes": 82150,
+      "compact_file_bytes": 873259,
+      "byte_exact_after_inverse_rename": true
+    },
+    {
+      "name": "zone-sandworm-lair.teaz",
+      "entries": 1421,
+      "file_bytes": 2631520,
+      "raw_bytes": 6206845,
+      "compressed_bytes": 2451036,
+      "header_bytes": 180484,
+      "compact_raw_bytes": 5858571,
+      "compact_compressed_bytes": 2410212,
+      "compact_header_bytes": 117178,
+      "compact_file_bytes": 2527390,
+      "byte_exact_after_inverse_rename": true
+    },
+    {
+      "name": "zone-scintillating-caves.teaz",
+      "entries": 587,
+      "file_bytes": 532298,
+      "raw_bytes": 1307047,
+      "compressed_bytes": 457424,
+      "header_bytes": 74874,
+      "compact_raw_bytes": 1173634,
+      "compact_compressed_bytes": 443661,
+      "compact_header_bytes": 47946,
+      "compact_file_bytes": 491607,
+      "byte_exact_after_inverse_rename": true
+    },
+    {
+      "name": "zone-shertul-fortress.teaz",
+      "entries": 1131,
+      "file_bytes": 1160573,
+      "raw_bytes": 2556469,
+      "compressed_bytes": 1015327,
+      "header_bytes": 145246,
+      "compact_raw_bytes": 2400331,
+      "compact_compressed_bytes": 990177,
+      "compact_header_bytes": 92818,
+      "compact_file_bytes": 1082995,
+      "byte_exact_after_inverse_rename": true
+    },
+    {
+      "name": "zone-town-angolwen.teaz",
+      "entries": 1099,
+      "file_bytes": 1053596,
+      "raw_bytes": 2111393,
+      "compressed_bytes": 912254,
+      "header_bytes": 141342,
+      "compact_raw_bytes": 1984755,
+      "compact_compressed_bytes": 889009,
+      "compact_header_bytes": 90130,
+      "compact_file_bytes": 979139,
+      "byte_exact_after_inverse_rename": true
+    },
+    {
+      "name": "zone-town-derth.teaz",
+      "entries": 686,
+      "file_bytes": 711401,
+      "raw_bytes": 1812652,
+      "compressed_bytes": 623351,
+      "header_bytes": 88050,
+      "compact_raw_bytes": 1708117,
+      "compact_compressed_bytes": 607182,
+      "compact_header_bytes": 56064,
+      "compact_file_bytes": 663246,
+      "byte_exact_after_inverse_rename": true
+    },
+    {
+      "name": "zone-town-elvala.teaz",
+      "entries": 407,
+      "file_bytes": 509095,
+      "raw_bytes": 1496793,
+      "compressed_bytes": 456857,
+      "header_bytes": 52238,
+      "compact_raw_bytes": 1410895,
+      "compact_compressed_bytes": 446378,
+      "compact_header_bytes": 33186,
+      "compact_file_bytes": 479564,
+      "byte_exact_after_inverse_rename": true
+    },
+    {
+      "name": "zone-town-last-hope.teaz",
+      "entries": 1697,
+      "file_bytes": 1629057,
+      "raw_bytes": 3509839,
+      "compressed_bytes": 1411461,
+      "header_bytes": 217596,
+      "compact_raw_bytes": 3341867,
+      "compact_compressed_bytes": 1375687,
+      "compact_header_bytes": 140362,
+      "compact_file_bytes": 1516049,
+      "byte_exact_after_inverse_rename": true
+    },
+    {
+      "name": "zone-town-shatur.teaz",
+      "entries": 1132,
+      "file_bytes": 1107832,
+      "raw_bytes": 2228423,
+      "compressed_bytes": 962194,
+      "header_bytes": 145638,
+      "compact_raw_bytes": 2093632,
+      "compact_compressed_bytes": 937137,
+      "compact_header_bytes": 92902,
+      "compact_file_bytes": 1030039,
+      "byte_exact_after_inverse_rename": true
+    },
+    {
+      "name": "zone-town-zigur.teaz",
+      "entries": 1313,
+      "file_bytes": 1343693,
+      "raw_bytes": 2833030,
+      "compressed_bytes": 1175087,
+      "header_bytes": 168606,
+      "compact_raw_bytes": 2690584,
+      "compact_compressed_bytes": 1146990,
+      "compact_header_bytes": 108106,
+      "compact_file_bytes": 1255096,
+      "byte_exact_after_inverse_rename": true
+    },
+    {
+      "name": "zone-trollmire.teaz",
+      "entries": 442,
+      "file_bytes": 467063,
+      "raw_bytes": 1535276,
+      "compressed_bytes": 410441,
+      "header_bytes": 56622,
+      "compact_raw_bytes": 1325483,
+      "compact_compressed_bytes": 398027,
+      "compact_header_bytes": 36056,
+      "compact_file_bytes": 434083,
+      "byte_exact_after_inverse_rename": true
+    },
+    {
+      "name": "zone-wilderness.teaz",
+      "entries": 1136,
+      "file_bytes": 850253,
+      "raw_bytes": 2948509,
+      "compressed_bytes": 705995,
+      "header_bytes": 144258,
+      "compact_raw_bytes": 2556707,
+      "compact_compressed_bytes": 686355,
+      "compact_header_bytes": 93238,
+      "compact_file_bytes": 779593,
+      "byte_exact_after_inverse_rename": true
+    }
+  ],
+  "classes": [
+    {
+      "name": "mod.class.Object",
+      "entries": 11532,
+      "raw": 18452529,
+      "compressed": 9198479,
+      "headers": 1499160
+    },
+    {
+      "name": "mod.class.NPC",
+      "entries": 576,
+      "raw": 5602970,
+      "compressed": 2079571,
+      "headers": 71424
+    },
+    {
+      "name": "mod.class.Grid",
+      "entries": 3452,
+      "raw": 2712554,
+      "compressed": 1445649,
+      "headers": 434952
+    },
+    {
+      "name": "engine.Map",
+      "entries": 60,
+      "raw": 15065117,
+      "compressed": 1611764,
+      "headers": 7080
+    },
+    {
+      "name": "engine.Entity",
+      "entries": 3667,
+      "raw": 2007166,
+      "compressed": 1132662,
+      "headers": 454708
+    },
+    {
+      "name": "engine.Object",
+      "entries": 360,
+      "raw": 2853103,
+      "compressed": 1264070,
+      "headers": 44640
+    },
+    {
+      "name": "mod.class.Player",
+      "entries": 21,
+      "raw": 1658359,
+      "compressed": 537567,
+      "headers": 2730
+    },
+    {
+      "name": "engine.Quest",
+      "entries": 217,
+      "raw": 1061005,
+      "compressed": 425947,
+      "headers": 26474
+    },
+    {
+      "name": "engine.Particles",
+      "entries": 687,
+      "raw": 587673,
+      "compressed": 246405,
+      "headers": 89310
+    },
+    {
+      "name": "engine.Level",
+      "entries": 59,
+      "raw": 464173,
+      "compressed": 156087,
+      "headers": 7198
+    },
+    {
+      "name": "engine.KeyBind",
+      "entries": 51,
+      "raw": 708603,
+      "compressed": 128300,
+      "headers": 6426
+    },
+    {
+      "name": "mod.class.Trap",
+      "entries": 98,
+      "raw": 184878,
+      "compressed": 96994,
+      "headers": 12348
+    },
+    {
+      "name": "mod.class.Encounter",
+      "entries": 17,
+      "raw": 283150,
+      "compressed": 76115,
+      "headers": 2312
+    },
+    {
+      "name": "mod.class.WorldNPC",
+      "entries": 15,
+      "raw": 158044,
+      "compressed": 58778,
+      "headers": 2010
+    },
+    {
+      "name": "main",
+      "entries": 22,
+      "raw": 137657,
+      "compressed": 54429,
+      "headers": 1848
+    },
+    {
+      "name": "mod.class.Store",
+      "entries": 47,
+      "raw": 96718,
+      "compressed": 42089,
+      "headers": 6016
+    },
+    {
+      "name": "mod.class.Party",
+      "entries": 9,
+      "raw": 101931,
+      "compressed": 42114,
+      "headers": 1152
+    },
+    {
+      "name": "mod.class.PartyMember",
+      "entries": 8,
+      "raw": 111572,
+      "compressed": 38665,
+      "headers": 1120
+    },
+    {
+      "name": "engine.Mouse",
+      "entries": 51,
+      "raw": 56269,
+      "compressed": 26447,
+      "headers": 6222
+    },
+    {
+      "name": "engine.ui.Dialog",
+      "entries": 17,
+      "raw": 38743,
+      "compressed": 12128,
+      "headers": 2210
+    },
+    {
+      "name": "mod.class.WildernessGrid",
+      "entries": 34,
+      "raw": 12962,
+      "compressed": 7733,
+      "headers": 4964
+    },
+    {
+      "name": "mod.class.GameState",
+      "entries": 1,
+      "raw": 96361,
+      "compressed": 11193,
+      "headers": 136
+    },
+    {
+      "name": "engine.ui.Button",
+      "entries": 17,
+      "raw": 27404,
+      "compressed": 8002,
+      "headers": 2210
+    },
+    {
+      "name": "engine.ui.Textzone",
+      "entries": 17,
+      "raw": 10240,
+      "compressed": 6670,
+      "headers": 2278
+    },
+    {
+      "name": "engine.Shader",
+      "entries": 23,
+      "raw": 10210,
+      "compressed": 6023,
+      "headers": 2852
+    },
+    {
+      "name": "mod.class.Zone",
+      "entries": 1,
+      "raw": 7175,
+      "compressed": 2683,
+      "headers": 126
+    },
+    {
+      "name": "engine.MapEffect",
+      "entries": 4,
+      "raw": 1618,
+      "compressed": 968,
+      "headers": 520
+    },
+    {
+      "name": "engine.Quadratic",
+      "entries": 3,
+      "raw": 339,
+      "compressed": 288,
+      "headers": 390
+    },
+    {
+      "name": "engine.Astar",
+      "entries": 1,
+      "raw": 220,
+      "compressed": 163,
+      "headers": 122
+    },
+    {
+      "name": "engine.Emote",
+      "entries": 1,
+      "raw": 197,
+      "compressed": 162,
+      "headers": 122
+    }
+  ],
+  "total_bytes": 21908270,
+  "compact_total_bytes": 20479205,
+  "protocol": "In-memory raw DEFLATE, memLevel 8, default strategy. Two warmups, seven rotating rounds, each phase measured once per round. Excludes serialization, rename work, CRC, ZIP headers, disk, game scheduling and cloud.",
+  "compression": [
+    {
+      "dataset": "game",
+      "variant": "level1",
+      "median_cpu_ms": 53.175324,
+      "median_wall_ms": 53.255954,
+      "compressed_bytes": 2403749,
+      "raw": [
+        {
+          "round": 1,
+          "cpu_ms": 53.186677,
+          "wall_ms": 53.269324,
+          "compressed_bytes": 2403749
+        },
+        {
+          "round": 2,
+          "cpu_ms": 53.175324,
+          "wall_ms": 53.255954,
+          "compressed_bytes": 2403749
+        },
+        {
+          "round": 3,
+          "cpu_ms": 53.197091,
+          "wall_ms": 53.272034,
+          "compressed_bytes": 2403749
+        },
+        {
+          "round": 4,
+          "cpu_ms": 53.129658,
+          "wall_ms": 53.206664,
+          "compressed_bytes": 2403749
+        },
+        {
+          "round": 5,
+          "cpu_ms": 53.147869,
+          "wall_ms": 53.222664,
+          "compressed_bytes": 2403749
+        },
+        {
+          "round": 6,
+          "cpu_ms": 53.110601,
+          "wall_ms": 53.187224,
+          "compressed_bytes": 2403749
+        },
+        {
+          "round": 7,
+          "cpu_ms": 53.295029,
+          "wall_ms": 53.374335,
+          "compressed_bytes": 2403749
+        }
+      ]
+    },
+    {
+      "dataset": "game",
+      "variant": "level4",
+      "median_cpu_ms": 61.87513,
+      "median_wall_ms": 61.960737,
+      "compressed_bytes": 2296903,
+      "raw": [
+        {
+          "round": 1,
+          "cpu_ms": 61.899458,
+          "wall_ms": 61.994327,
+          "compressed_bytes": 2296903
+        },
+        {
+          "round": 2,
+          "cpu_ms": 61.925101,
+          "wall_ms": 62.014627,
+          "compressed_bytes": 2296903
+        },
+        {
+          "round": 3,
+          "cpu_ms": 61.900042,
+          "wall_ms": 61.987686,
+          "compressed_bytes": 2296903
+        },
+        {
+          "round": 4,
+          "cpu_ms": 61.861002,
+          "wall_ms": 61.948386,
+          "compressed_bytes": 2296903
+        },
+        {
+          "round": 5,
+          "cpu_ms": 61.853441,
+          "wall_ms": 61.940046,
+          "compressed_bytes": 2296903
+        },
+        {
+          "round": 6,
+          "cpu_ms": 61.871405,
+          "wall_ms": 61.960686,
+          "compressed_bytes": 2296903
+        },
+        {
+          "round": 7,
+          "cpu_ms": 61.87513,
+          "wall_ms": 61.960737,
+          "compressed_bytes": 2296903
+        }
+      ]
+    },
+    {
+      "dataset": "game",
+      "variant": "level6",
+      "median_cpu_ms": 79.012803,
+      "median_wall_ms": 79.124399,
+      "compressed_bytes": 2236272,
+      "raw": [
+        {
+          "round": 1,
+          "cpu_ms": 79.923492,
+          "wall_ms": 80.040307,
+          "compressed_bytes": 2236272
+        },
+        {
+          "round": 2,
+          "cpu_ms": 79.012803,
+          "wall_ms": 79.124399,
+          "compressed_bytes": 2236272
+        },
+        {
+          "round": 3,
+          "cpu_ms": 79.051046,
+          "wall_ms": 79.16455,
+          "compressed_bytes": 2236272
+        },
+        {
+          "round": 4,
+          "cpu_ms": 78.976731,
+          "wall_ms": 79.09083,
+          "compressed_bytes": 2236272
+        },
+        {
+          "round": 5,
+          "cpu_ms": 78.970058,
+          "wall_ms": 79.07877,
+          "compressed_bytes": 2236272
+        },
+        {
+          "round": 6,
+          "cpu_ms": 78.982896,
+          "wall_ms": 79.09632,
+          "compressed_bytes": 2236272
+        },
+        {
+          "round": 7,
+          "cpu_ms": 79.137126,
+          "wall_ms": 79.24763,
+          "compressed_bytes": 2236272
+        }
+      ]
+    },
+    {
+      "dataset": "game",
+      "variant": "level9",
+      "median_cpu_ms": 114.511776,
+      "median_wall_ms": 114.677236,
+      "compressed_bytes": 2227106,
+      "raw": [
+        {
+          "round": 1,
+          "cpu_ms": 114.828102,
+          "wall_ms": 115.027799,
+          "compressed_bytes": 2227106
+        },
+        {
+          "round": 2,
+          "cpu_ms": 114.511776,
+          "wall_ms": 114.677236,
+          "compressed_bytes": 2227106
+        },
+        {
+          "round": 3,
+          "cpu_ms": 114.481603,
+          "wall_ms": 114.644306,
+          "compressed_bytes": 2227106
+        },
+        {
+          "round": 4,
+          "cpu_ms": 114.533937,
+          "wall_ms": 114.694646,
+          "compressed_bytes": 2227106
+        },
+        {
+          "round": 5,
+          "cpu_ms": 114.4916,
+          "wall_ms": 114.651905,
+          "compressed_bytes": 2227106
+        },
+        {
+          "round": 6,
+          "cpu_ms": 114.45085,
+          "wall_ms": 114.608165,
+          "compressed_bytes": 2227106
+        },
+        {
+          "round": 7,
+          "cpu_ms": 114.760142,
+          "wall_ms": 114.926529,
+          "compressed_bytes": 2227106
+        }
+      ]
+    },
+    {
+      "dataset": "game",
+      "variant": "compact_level4",
+      "median_cpu_ms": 59.298935,
+      "median_wall_ms": 59.387365,
+      "compressed_bytes": 2239481,
+      "raw": [
+        {
+          "round": 1,
+          "cpu_ms": 59.393233,
+          "wall_ms": 59.512636,
+          "compressed_bytes": 2239481
+        },
+        {
+          "round": 2,
+          "cpu_ms": 59.307037,
+          "wall_ms": 59.390525,
+          "compressed_bytes": 2239481
+        },
+        {
+          "round": 3,
+          "cpu_ms": 59.298935,
+          "wall_ms": 59.387365,
+          "compressed_bytes": 2239481
+        },
+        {
+          "round": 4,
+          "cpu_ms": 59.150564,
+          "wall_ms": 59.234154,
+          "compressed_bytes": 2239481
+        },
+        {
+          "round": 5,
+          "cpu_ms": 59.234294,
+          "wall_ms": 59.318704,
+          "compressed_bytes": 2239481
+        },
+        {
+          "round": 6,
+          "cpu_ms": 59.289921,
+          "wall_ms": 59.375305,
+          "compressed_bytes": 2239481
+        },
+        {
+          "round": 7,
+          "cpu_ms": 59.344017,
+          "wall_ms": 59.428505,
+          "compressed_bytes": 2239481
+        }
+      ]
+    },
+    {
+      "dataset": "all_archives",
+      "variant": "level1",
+      "median_cpu_ms": 422.995777,
+      "median_wall_ms": 424.194153,
+      "compressed_bytes": 19613209,
+      "raw": [
+        {
+          "round": 1,
+          "cpu_ms": 422.654025,
+          "wall_ms": 423.268612,
+          "compressed_bytes": 19613209
+        },
+        {
+          "round": 2,
+          "cpu_ms": 423.403634,
+          "wall_ms": 424.194153,
+          "compressed_bytes": 19613209
+        },
+        {
+          "round": 3,
+          "cpu_ms": 421.769049,
+          "wall_ms": 422.648311,
+          "compressed_bytes": 19613209
+        },
+        {
+          "round": 4,
+          "cpu_ms": 423.708966,
+          "wall_ms": 424.428396,
+          "compressed_bytes": 19613209
+        },
+        {
+          "round": 5,
+          "cpu_ms": 423.583871,
+          "wall_ms": 424.262146,
+          "compressed_bytes": 19613209
+        },
+        {
+          "round": 6,
+          "cpu_ms": 422.801635,
+          "wall_ms": 423.583281,
+          "compressed_bytes": 19613209
+        },
+        {
+          "round": 7,
+          "cpu_ms": 422.995777,
+          "wall_ms": 424.25974,
+          "compressed_bytes": 19613209
+        }
+      ]
+    },
+    {
+      "dataset": "all_archives",
+      "variant": "level4",
+      "median_cpu_ms": 492.900064,
+      "median_wall_ms": 493.823491,
+      "compressed_bytes": 18718145,
+      "raw": [
+        {
+          "round": 1,
+          "cpu_ms": 492.900064,
+          "wall_ms": 493.823491,
+          "compressed_bytes": 18718145
+        },
+        {
+          "round": 2,
+          "cpu_ms": 493.359818,
+          "wall_ms": 494.583328,
+          "compressed_bytes": 18718145
+        },
+        {
+          "round": 3,
+          "cpu_ms": 492.587047,
+          "wall_ms": 493.316711,
+          "compressed_bytes": 18718145
+        },
+        {
+          "round": 4,
+          "cpu_ms": 492.820176,
+          "wall_ms": 493.626365,
+          "compressed_bytes": 18718145
+        },
+        {
+          "round": 5,
+          "cpu_ms": 494.781805,
+          "wall_ms": 495.518291,
+          "compressed_bytes": 18718145
+        },
+        {
+          "round": 6,
+          "cpu_ms": 495.173163,
+          "wall_ms": 495.987167,
+          "compressed_bytes": 18718145
+        },
+        {
+          "round": 7,
+          "cpu_ms": 492.534369,
+          "wall_ms": 493.295296,
+          "compressed_bytes": 18718145
+        }
+      ]
+    },
+    {
+      "dataset": "all_archives",
+      "variant": "level6",
+      "median_cpu_ms": 658.78186,
+      "median_wall_ms": 660.050459,
+      "compressed_bytes": 18223422,
+      "raw": [
+        {
+          "round": 1,
+          "cpu_ms": 658.78186,
+          "wall_ms": 660.050459,
+          "compressed_bytes": 18223422
+        },
+        {
+          "round": 2,
+          "cpu_ms": 656.548453,
+          "wall_ms": 657.530339,
+          "compressed_bytes": 18223422
+        },
+        {
+          "round": 3,
+          "cpu_ms": 659.239337,
+          "wall_ms": 660.751978,
+          "compressed_bytes": 18223422
+        },
+        {
+          "round": 4,
+          "cpu_ms": 660.146712,
+          "wall_ms": 661.310517,
+          "compressed_bytes": 18223422
+        },
+        {
+          "round": 5,
+          "cpu_ms": 659.580824,
+          "wall_ms": 660.554212,
+          "compressed_bytes": 18223422
+        },
+        {
+          "round": 6,
+          "cpu_ms": 658.426509,
+          "wall_ms": 659.380474,
+          "compressed_bytes": 18223422
+        },
+        {
+          "round": 7,
+          "cpu_ms": 657.441194,
+          "wall_ms": 658.422958,
+          "compressed_bytes": 18223422
+        }
+      ]
+    },
+    {
+      "dataset": "all_archives",
+      "variant": "level9",
+      "median_cpu_ms": 1057.928148,
+      "median_wall_ms": 1059.422819,
+      "compressed_bytes": 18135985,
+      "raw": [
+        {
+          "round": 1,
+          "cpu_ms": 1057.177608,
+          "wall_ms": 1058.855467,
+          "compressed_bytes": 18135985
+        },
+        {
+          "round": 2,
+          "cpu_ms": 1060.659582,
+          "wall_ms": 1062.358149,
+          "compressed_bytes": 18135985
+        },
+        {
+          "round": 3,
+          "cpu_ms": 1057.8144,
+          "wall_ms": 1059.399848,
+          "compressed_bytes": 18135985
+        },
+        {
+          "round": 4,
+          "cpu_ms": 1060.371752,
+          "wall_ms": 1062.286285,
+          "compressed_bytes": 18135985
+        },
+        {
+          "round": 5,
+          "cpu_ms": 1058.234837,
+          "wall_ms": 1059.887781,
+          "compressed_bytes": 18135985
+        },
+        {
+          "round": 6,
+          "cpu_ms": 1057.928148,
+          "wall_ms": 1059.422819,
+          "compressed_bytes": 18135985
+        },
+        {
+          "round": 7,
+          "cpu_ms": 1057.054595,
+          "wall_ms": 1058.798827,
+          "compressed_bytes": 18135985
+        }
+      ]
+    },
+    {
+      "dataset": "all_archives",
+      "variant": "compact_level4",
+      "median_cpu_ms": 473.565518,
+      "median_wall_ms": 474.383682,
+      "compressed_bytes": 18250108,
+      "raw": [
+        {
+          "round": 1,
+          "cpu_ms": 473.833567,
+          "wall_ms": 474.555452,
+          "compressed_bytes": 18250108
+        },
+        {
+          "round": 2,
+          "cpu_ms": 473.266585,
+          "wall_ms": 473.998167,
+          "compressed_bytes": 18250108
+        },
+        {
+          "round": 3,
+          "cpu_ms": 473.565518,
+          "wall_ms": 474.383682,
+          "compressed_bytes": 18250108
+        },
+        {
+          "round": 4,
+          "cpu_ms": 473.394624,
+          "wall_ms": 474.186392,
+          "compressed_bytes": 18250108
+        },
+        {
+          "round": 5,
+          "cpu_ms": 474.700256,
+          "wall_ms": 475.449054,
+          "compressed_bytes": 18250108
+        },
+        {
+          "round": 6,
+          "cpu_ms": 473.067365,
+          "wall_ms": 473.855873,
+          "compressed_bytes": 18250108
+        },
+        {
+          "round": 7,
+          "cpu_ms": 475.070545,
+          "wall_ms": 476.207004,
+          "compressed_bytes": 18250108
+        }
+      ]
+    }
+  ],
+  "source_unchanged": true,
+  "date": "2026-09-14",
+  "purpose": "Read-only inventory and reversible identifier renaming; predicted file sizes are not rewritten game saves."
+}

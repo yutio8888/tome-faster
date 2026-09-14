@@ -1,17 +1,17 @@
 {
-  "date": "2026-09-13",
-  "addon_version": "0.2.8",
+  "date": "2026-09-14",
+  "addon_version": "0.2.12",
   "engine_commit": "624a67329fe2ad440c5b344785a9c73fcf22ae63",
   "runtime": "Unit fixtures: LuaJIT 2.1.0-beta3; full game: embedded LuaJIT 2.0.2",
   "tests": {
-    "existing_assertions": 20825,
-    "save_load_checks": 71,
+    "existing_assertions": 20826,
+    "save_load_checks": 101,
     "status": "passed",
     "runtime_checks": 162,
     "profile_checks": 22,
     "historical_native_particle_lifetime_cases": 6,
     "clone_differential_graphs": 91,
-    "clone_assertions_this_run": 73185,
+    "clone_assertions_this_run": 73487,
     "character_export_checks": 176,
     "export_cleanup_scenarios": 38,
     "export_cleanup_assertions": 824,
@@ -22,7 +22,24 @@
     "effect_mask_checks": 876,
     "effect_mask_jit_off_checks": 876,
     "save_callback_checks": 562,
-    "save_callback_jit_off_checks": 562
+    "save_callback_jit_off_checks": 562,
+    "ai_checks_jit_on_and_off": 4953,
+    "ai_differential_searches_jit_on_and_off": 1243,
+    "ai_puc51_checks": 2494,
+    "ai_puc51_differential_searches": 622,
+    "effect_mask_guard_first_checks": 889,
+    "effect_mask_mask_first_checks": 889,
+    "fbo_gc_checks_this_run": 31,
+    "compact_save_name_checks": 32788,
+    "compact_save_name_jit_off_checks": 32788,
+    "inventory_compaction_checks": 458,
+    "inventory_compaction_jit_off_checks": 458,
+    "inventory_differential_scenarios": 28,
+    "fearscape_cleanup_scenarios": 70,
+    "fearscape_cleanup_checks": 2743,
+    "fearscape_cleanup_jit_off_checks": 2743,
+    "independent_reserved_main_native_stock_checks": 77,
+    "save_load_jit_off_checks": 101
   },
   "algorithmic_fixture": {
     "delayed_objects": 2001,
@@ -126,6 +143,38 @@
     {
       "path": "src/tgl.h",
       "sha256": "8ba121f41d65f6731d266981241ba936e3f9b14f42e4c5a105c65d53b74e9694"
+    },
+    {
+      "path": "game/engines/default/engine/Astar.lua",
+      "sha256": "b4d4398bae79bd87f67de01d39a314d5c8dfd1796c1313166d3b08d3161409a9"
+    },
+    {
+      "path": "game/engines/default/engine/utils.lua",
+      "sha256": "871f7ae2d26266751811d9249e4525b5b0f9d8c88b35272755d7a617885c2bbf"
+    },
+    {
+      "path": "game/engines/default/engine/ai/simple.lua",
+      "sha256": "b3b27906c4e94f089135bee67af31e5361f968515b797b81c89e641fb533c603"
+    },
+    {
+      "path": "game/modules/tome/class/interface/ActorAI.lua",
+      "sha256": "1e7f69685e49b5e356a1bb2c6516ec8544921a103a490b6e1ac53a83eb660e26"
+    },
+    {
+      "path": "game/engines/default/engine/interface/ActorInventory.lua",
+      "sha256": "363d34dc551e83cdbef6477cb5fbbc8ee1814e055a4f6fe358232488c8e926eb"
+    },
+    {
+      "path": "game/modules/tome/class/Actor.lua",
+      "sha256": "e839397f675ca77d46aa345b81ea49c341c7109b4d3064e6b3598639be5fa711"
+    },
+    {
+      "path": "game/modules/tome/class/Player.lua",
+      "sha256": "4878ab4818826c50b993dc8233dfc78b8ac389733093553564bbfe6b328fb80a"
+    },
+    {
+      "path": "game/modules/tome/data/talents/corruptions/shadowflame.lua",
+      "sha256": "af15b07aeb12fe21cf4374d4889c8a3569bd05c0d023e6793124840ead49d843"
     }
   ],
   "runtime_fixtures": {
@@ -501,5 +550,365 @@
       "lua_errors": 0,
       "source_hashes_match": true
     }
+  },
+  "ai_and_render_compatibility_0_2_9": {
+    "report": "docs/ai-performance.md",
+    "real_game_results": "docs/ai-game-results.json",
+    "synthetic_results": "docs/ai-benchmark.csv",
+    "regression_log": "evidence/faster-tome4-ai-0.2.9/regression-implementation.log",
+    "ai_default_enabled": true,
+    "fbo_gc_guard_default_enabled": true,
+    "hit_warning_default_ms": 500,
+    "engine_source_modified": false,
+    "native_binary_bundled": false,
+    "full_regression_passed": true,
+    "real_game_loads": 3,
+    "real_game_queries_unique": 24,
+    "real_game_path_comparisons": 288,
+    "real_game_save_files_unchanged": true,
+    "real_game_state_unchanged": true,
+    "real_game_mask_draws": 0,
+    "mask_batching_with_guard_verified_in_native_fixture": true,
+    "mask_guard_load_orders": [
+      "guard-first",
+      "mask-first"
+    ],
+    "foreign_fbo_wrapper_falls_back": true,
+    "weak_chat_measurement_keys_preserved": true,
+    "changes_fbo_release_policy": false,
+    "changes_ai_path_selection": false,
+    "current_helper_sha256": {
+      "overload/engine/FasterAI.lua": "ba41c2ef1a68969bb568cac1430e9bc23794737b6f50db1578b465e2a1614199",
+      "overload/engine/FBOGCGuard.lua": "6ef95d4778863fdb1e8563d867a4d7d755afa715842d0e88f30fb18453aaf085",
+      "overload/engine/FasterEffectMask.lua": "8dc8724f17943b63a87419f827685aa2e1aa2c015a0a6c5dbcbc18798a8b3033"
+    },
+    "windows_measured": false,
+    "whole_game_speedup_claimed": false
+  },
+  "compact_save_names_0_2_10": {
+    "default_enabled": true,
+    "configuration": "config.settings.faster_tome.compact_save_names=false; restart",
+    "report": "docs/save-size-analysis.md",
+    "results": "docs/save-names-results.json",
+    "regression_log": "evidence/faster-tome4-save-names-0.2.10/regression.log",
+    "full_regression_passed": true,
+    "native_writer_and_stock_reader_graph_checks": 8529,
+    "jit_off_graph_checks": 8529,
+    "formal_save_pairs": 20,
+    "reload_sessions": 3,
+    "resave_sessions": 1,
+    "protected_baseline_files_unchanged": 25,
+    "fbo_gc_guard_default_enabled": true,
+    "hit_warning_default_ms": 500,
+    "engine_source_modified": false,
+    "native_binary_bundled": false,
+    "compression_level_changed": false,
+    "reader_changed": false,
+    "archive_entry_names_changed": true,
+    "forced_old_archive_migration": false,
+    "cache_in_save_graph": false,
+    "unknown_naming_or_lifecycle_overrides_preserved": true,
+    "helper_sha256": "2d7a7365319b3d23a348fea8ffc4800a2bad964d7dd028d99710f6f6d3eda9ee",
+    "windows_measured": false,
+    "all_calls_faster_claimed": false
+  },
+  "save_compaction_0_2_11": {
+    "report": "docs/save-compaction.md",
+    "results": "docs/save-compaction-results.json",
+    "release_decision": "All three new experiments disabled by default; no general less-than-1% added user-CPU claim.",
+    "defaults": {
+      "compact_save_names": true,
+      "compact_save_names_base62": false,
+      "compact_inventory": false,
+      "fearscape_cleanup": false,
+      "fbo_gc_guard": true,
+      "hit_warning_interval_ms": 500
+    },
+    "all_new_options_require_explicit_true": true,
+    "default_inventory_and_fearscape_modules_unloaded": true,
+    "full_regression_passed": true,
+    "full_regression_log": "evidence/faster-tome4-save-compaction-0.2.11/regression-final.log",
+    "all_new_suites_jit_off_passed": true,
+    "final_real_game_acceptance_sessions": 9,
+    "final_compatibility_results": "evidence/faster-tome4-save-compaction-0.2.11/release-compatibility.json",
+    "full_real_save_graph_equivalence_claimed": false,
+    "stock_reader_test_scope": "All nonofficial gameplay addons removed; original official DLCs and diagnostic probe retained. Only copied desc.lua dependency names adjusted; serialized archives untouched before load.",
+    "normal_stock_loader_ignores_missing_addon_metadata_claimed": false,
+    "native_writer_and_stock_reader_full_fixture_graph_checks": true,
+    "compression_level_changed": false,
+    "custom_reader_added": false,
+    "block_compression_implemented": false,
+    "old_detached_inventory_migration": false,
+    "old_orphan_fearscape_migration": false,
+    "extra_save_time_graph_scan": false,
+    "native_binary_bundled": false,
+    "engine_source_modified": false,
+    "formal_save_pairs_total": 90,
+    "formal_saves_total": 180,
+    "cpu_primary_metric": "getrusage(RUSAGE_SELF).ru_utime across entire completed save, including other process threads",
+    "cpu_decision_rule": "30 fixed pairs per cohort; paired log-ratio Student t(df=29) one-sided 95% upper bound strictly below log(1.01)",
+    "cpu_cohorts": {
+      "base62-candidate": {
+        "decision": "not_proven",
+        "paired_change_pct": 1.3079715897768707,
+        "upper_95pct_change_pct": 2.6452848108928095,
+        "main_median_reduction_bytes": 17299.5,
+        "candidate_archive_sha256": "79f21bebe235463de05b322899b9bd62d556532e382466e60a9b41b64e923a0b"
+      },
+      "decimal-candidate": {
+        "decision": "not_proven",
+        "paired_change_pct": 0.6310378529644016,
+        "upper_95pct_change_pct": 1.5500535526588988,
+        "main_median_reduction_bytes": 4.0,
+        "candidate_archive_sha256": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01"
+      },
+      "inventory-candidate": {
+        "decision": "pass",
+        "paired_change_pct": -0.9737941632269539,
+        "upper_95pct_change_pct": 0.0860301301542261,
+        "main_median_reduction_bytes": 24926.0,
+        "candidate_archive_sha256": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01"
+      }
+    },
+    "event_cpu_measured": false,
+    "release_guards_have_new_cpu_cohort": false,
+    "real_fearscape_main_bytes_reduced": 1738,
+    "real_fearscape_main_entries_reduced": 1,
+    "whole_fearscape_plane_elimination_claimed": false,
+    "final_production_source_sha256": {
+      "hooks/load.lua": "731a5fff440f6a398117a331dde34ad0c5d4bee51e1dc70ad3626e6b3e2d8812",
+      "init.lua": "562725e2692c413c07bb6bc1bf6f2529a19f6553c25fe8036ab3dbdddf3752fc",
+      "overload/data/gfx/particles/dreamhammer.lua": "b7758e9ecc6e63328a60350919aacceb7fb56e1ecfdbe5eb84ecacfd11f66295",
+      "overload/data/gfx/particles/notice_enemy.lua": "70e2d4f481e3f982cb7b963ed0a1cda6f5019c904f5522004a0c82a9d8c291b6",
+      "overload/engine/CacheList.lua": "3194e47e6e67b3f0bcb0116458f107222dc9a26ef696eb18c2b3920efbb6b564",
+      "overload/engine/FBOGCGuard.lua": "6ef95d4778863fdb1e8563d867a4d7d755afa715842d0e88f30fb18453aaf085",
+      "overload/engine/FasterAI.lua": "ba41c2ef1a68969bb568cac1430e9bc23794737b6f50db1578b465e2a1614199",
+      "overload/engine/FasterChardump.lua": "e9f36c1700f241987bd672562a98ee03ce15e0fba1bde9dea748e17104dc2fe1",
+      "overload/engine/FasterClone.lua": "e9a897b8f63a790bfb42e33371b377a21039578a3cf07e8341de7527b09bf18c",
+      "overload/engine/FasterCloneRefresh.lua": "c7d05a159ebf4b1cd13cf2b4fb689eb62e828f8f5ca60eca59d1e2ae483038e8",
+      "overload/engine/FasterEffectMask.lua": "8dc8724f17943b63a87419f827685aa2e1aa2c015a0a6c5dbcbc18798a8b3033",
+      "overload/engine/FasterExportCleanup.lua": "e3e9f1b6d18f94b872e85744b75d4718286066477ae21eae63ad982ea797abf6",
+      "overload/engine/FasterFearscape.lua": "f27af6223f04c02064f3ecaf09d12d7ab3b496788c641436d0981152a3681312",
+      "overload/engine/FasterGzip.lua": "93dd291c9c12d89f5ee78c51c34f08d6871563142c26e9ca89fe6eef42a59c0e",
+      "overload/engine/FasterHotkeys.lua": "f69e468372567ce9d7af98839231632a5d9136a0011b96360e24ce6f1e52b4aa",
+      "overload/engine/FasterInventory.lua": "a4b96229c4c1d4d5388dede0550beb93317b59070cc3f485119d4e5e530dab2d",
+      "overload/engine/FasterProfile.lua": "74248114a34410eec068ce95006c13679ed03792f54ed831fbfd85926ba0e15f",
+      "overload/engine/FasterRuntime.lua": "b9ab8757e16e959d701bede560f59a804cbaa8887aaa85adab1c294e3832d802",
+      "overload/engine/FasterSave.lua": "07ee23e298cb937fe2150b0a1a87123b425318c7850dc3cba8a87d6089f638b2",
+      "overload/engine/FasterSaveFollowup.lua": "6bdc0f668e1a265f4c57bbfeed1f7f2ce261f8520b7d4fce2b56e68790d86eb8",
+      "overload/engine/FasterSaveNames.lua": "b28e253404cb3bc9991ae15ca535ae4da49dc24961ea5bf30db9c2cdf7928c21",
+      "overload/engine/FasterScreenshot.lua": "8e75c9c89d84ba9e502dc3f3b29f82841a0659f60d616c3e5044526115b8737d",
+      "overload/engine/FasterSnapshotRefresh.lua": "18670b6dbe5cf81f3fadd7f44df690354b7c25aca32dc2a38603b3fbdd59e783",
+      "superload/engine/Astar.lua": "40c1c4018956a3371dddac33eb11df7fb4b6915b7add4ecb3c52e24d5cf6bfc4",
+      "superload/engine/HotkeysIconsDisplay.lua": "0a5e7300c9794b768ece0bc118c84ac8545a9399a02c8072d0752421e7008371",
+      "superload/engine/Map.lua": "c9f0da08abe403ad63f4311dfe59ec52dffe0ede9d4b8e3317ca5eefa6cd5998",
+      "superload/mod/class/Game.lua": "312229b62cc677d615d5ff7666ec69934f4c0a53eb9dee9280aa1d7e6ce4db87",
+      "superload/mod/class/Player.lua": "d3b22c3244400d3fe7e1c2954af7f5bf8f6368c0ddedd0aecc31321d2a54ad6e",
+      "superload/mod/dialogs/ShowChatLog.lua": "ef4e9f58e6ad53033ae26d9943df0b7895eaa61c0964c399246eee1963a6476d"
+    },
+    "protected_manifest_files_verified": 67,
+    "windows_measured": false,
+    "hardware_gpu_measured": false,
+    "limitations": [
+      "Each cohort has all 30 predeclared pairs; no trimming, pooling, or extra samples.",
+      "Primary metric is save-interval RUSAGE_SELF utime, including worker, render and particle threads.",
+      "Inventory additions and Fearscape entry/exit happen before save timing; their event CPU is unmeasured.",
+      "Ordinary decimal-candidate results remain NOTPROVEN despite inventory-candidate passing.",
+      "The released opt-in guards differ from the frozen measured candidates; only behavior/compatibility was rechecked on final code.",
+      "Linux llvmpipe and one supplied old save; no Windows, hardware GPU or population-wide claim."
+    ],
+    "record_scope": "Initial implementation acceptance; subsequent same-package, single-option testing is recorded in save_isolated_0_2_11.",
+    "subsequent_isolated_report": "docs/save-isolated.md"
+  },
+  "save_isolated_0_2_11": {
+    "report": "docs/save-isolated.md",
+    "results": "docs/save-isolated-results.json",
+    "evidence": "evidence/faster-tome4-save-isolated-0.2.11/README.md",
+    "measured_package_sha256": "9464fdfc425f53a238aa76ffc16853bd9c5e38df9d6e9b5519941b517f5d2f76",
+    "plan_sha256": "82ba2eede4edcf0c454a0ecafaada371c421493cb2b6a2fcdc79fa140398a2b3",
+    "analysis_sha256": "cd5413722ead0fef6688db7d32fe9983cd5371b8ff8aaf3ab896c0ab6922c704",
+    "same_package_all_variants": true,
+    "one_switch_per_pair": true,
+    "formal_pairs_per_case": 30,
+    "formal_pairs_total": 150,
+    "formal_saves_total": 300,
+    "interleaved_rounds": 30,
+    "all_predeclared_samples_retained": true,
+    "previous_cohorts_pooled": false,
+    "default_options_changed": false,
+    "production_code_changed": false,
+    "package_rebuilt": false,
+    "primary_metric": "Entire completed save getrusage(RUSAGE_SELF) user CPU; includes other process threads.",
+    "save_gate": "Per-case paired log(B/A), t(df=29), marginal one-sided 95% upper bound strictly below +1%.",
+    "event_cpu_measured_separately": true,
+    "event_method": "30 paired absolute differences with two-sided 95% t intervals; zeros retained; nested phases never added.",
+    "all_save_cases_pass": false,
+    "whole_lifecycle_less_than_1pct_claimed": false,
+    "event_plus_save_used_as_gate": false,
+    "original_reader_compatibility_sessions": 6,
+    "all_compatibility_passed": true,
+    "archive_crc_unique_names_main_checks": 6900,
+    "cross_variant_semantic_projection_equal": true,
+    "full_real_save_graph_equivalence_claimed": false,
+    "protected_manifest_files_verified": 67,
+    "frozen_environment_files_verified": 2741,
+    "production_files_byte_identical": 29,
+    "independent_timing_statistics_recomputed": 102,
+    "windows_measured": false,
+    "hardware_gpu_measured": false,
+    "cases": {
+      "base62-save": {
+        "option": "compact_save_names_base62",
+        "save_cpu_decision": "not_proven",
+        "baseline_save_user_mean_ms": 1221.8642333333332,
+        "candidate_save_user_mean_ms": 1239.1323,
+        "paired_save_user_change_pct": 1.3117784316234327,
+        "save_user_upper_95pct_pct": 3.0241803290406812,
+        "main_baseline_median_bytes": 2480460.5,
+        "main_candidate_median_bytes": 2463162.0,
+        "main_median_reduction_bytes": 17298.5,
+        "main_raw_reduction_bytes": 39152.0,
+        "main_entries_reduced": 0.0
+      },
+      "inventory-idle": {
+        "option": "compact_inventory",
+        "save_cpu_decision": "pass",
+        "baseline_save_user_mean_ms": 1221.1428333333333,
+        "candidate_save_user_mean_ms": 1217.6028333333334,
+        "paired_save_user_change_pct": -0.28251469669196616,
+        "save_user_upper_95pct_pct": 0.6950623210976965,
+        "main_baseline_median_bytes": 2480464.0,
+        "main_candidate_median_bytes": 2480463.5,
+        "main_median_reduction_bytes": 0.5,
+        "main_raw_reduction_bytes": 0.0,
+        "main_entries_reduced": 0.0
+      },
+      "inventory-add": {
+        "option": "compact_inventory",
+        "save_cpu_decision": "pass",
+        "baseline_save_user_mean_ms": 1234.8808666666666,
+        "candidate_save_user_mean_ms": 1219.8623666666667,
+        "paired_save_user_change_pct": -1.193380645703059,
+        "save_user_upper_95pct_pct": 0.22833643039926743,
+        "main_baseline_median_bytes": 2517742.5,
+        "main_candidate_median_bytes": 2492813.0,
+        "main_median_reduction_bytes": 24929.5,
+        "main_raw_reduction_bytes": 119592.0,
+        "main_entries_reduced": 0.0,
+        "events_process_user_ms": {
+          "inventory_add": {
+            "baseline_mean": 1.2084000000001067,
+            "candidate_mean": 1.381866666666764,
+            "paired_mean_delta": 0.17346666666665733,
+            "two_sided_95pct_delta_ci": [
+              -0.008026246899911882,
+              0.35495958023322655
+            ],
+            "baseline_zero_count": 0,
+            "candidate_zero_count": 0
+          }
+        }
+      },
+      "fearscape-idle": {
+        "option": "fearscape_cleanup",
+        "save_cpu_decision": "pass",
+        "baseline_save_user_mean_ms": 1229.5782666666667,
+        "candidate_save_user_mean_ms": 1211.7204,
+        "paired_save_user_change_pct": -1.4085151406006033,
+        "save_user_upper_95pct_pct": -0.47878922857565775,
+        "main_baseline_median_bytes": 2480458.5,
+        "main_candidate_median_bytes": 2480462.5,
+        "main_median_reduction_bytes": -4.0,
+        "main_raw_reduction_bytes": 0.0,
+        "main_entries_reduced": 0.0
+      },
+      "fearscape-exit": {
+        "option": "fearscape_cleanup",
+        "save_cpu_decision": "pass",
+        "baseline_save_user_mean_ms": 1230.1257666666666,
+        "candidate_save_user_mean_ms": 1217.2847,
+        "paired_save_user_change_pct": -1.0219045620153495,
+        "save_user_upper_95pct_pct": 0.557453743753782,
+        "main_baseline_median_bytes": 2337700.5,
+        "main_candidate_median_bytes": 2335961.5,
+        "main_median_reduction_bytes": 1739.0,
+        "main_raw_reduction_bytes": 5000.0,
+        "main_entries_reduced": 1.0,
+        "events_process_user_ms": {
+          "entry_sync": {
+            "baseline_mean": 30.958966666666498,
+            "candidate_mean": 32.450866666666634,
+            "paired_mean_delta": 1.4919000000001337,
+            "two_sided_95pct_delta_ci": [
+              -2.0688355053297816,
+              5.052635505330049
+            ],
+            "baseline_zero_count": 0,
+            "candidate_zero_count": 0
+          },
+          "entry_observed": {
+            "baseline_mean": 411.6411,
+            "candidate_mean": 427.3884,
+            "paired_mean_delta": 15.747300000000003,
+            "two_sided_95pct_delta_ci": [
+              -21.957816527474726,
+              53.45241652747473
+            ],
+            "baseline_zero_count": 0,
+            "candidate_zero_count": 0
+          },
+          "exit_sync": {
+            "baseline_mean": 0.0814333333333403,
+            "candidate_mean": 0.0800999999999478,
+            "paired_mean_delta": -0.001333333333392497,
+            "two_sided_95pct_delta_ci": [
+              -0.010451624104440496,
+              0.0077849574376555025
+            ],
+            "baseline_zero_count": 0,
+            "candidate_zero_count": 1
+          },
+          "exit_observed": {
+            "baseline_mean": 144.0896666666667,
+            "candidate_mean": 151.1458666666667,
+            "paired_mean_delta": 7.056199999999999,
+            "two_sided_95pct_delta_ci": [
+              -7.587734987116123,
+              21.700134987116122
+            ],
+            "baseline_zero_count": 0,
+            "candidate_zero_count": 0
+          }
+        }
+      }
+    }
+  },
+  "save_defaults_0_2_12": {
+    "report": "docs/save-defaults.md",
+    "acceptance": "evidence/faster-tome4-save-defaults-0.2.12/acceptance.json",
+    "defaults": {
+      "compact_inventory": true,
+      "fearscape_cleanup": true,
+      "compact_save_names": true,
+      "compact_save_names_base62": false,
+      "fbo_gc_guard": true,
+      "hit_warning_interval_ms": 500
+    },
+    "explicit_false_preserved": true,
+    "invalid_inventory_and_fearscape_values_disabled": true,
+    "event_implementations_unchanged": true,
+    "full_regression_passed": true,
+    "full_regression_log": "evidence/faster-tome4-save-defaults-0.2.12/regression.log",
+    "affected_suites_jit_off_passed": true,
+    "real_game_sessions": 8,
+    "real_game_save_sessions": 4,
+    "real_game_read_sessions": 4,
+    "candidate_feature_keys_omitted": true,
+    "observed_default_name_62": "62",
+    "all_real_game_checks_passed": true,
+    "protected_manifest_files_verified": 67,
+    "engine_source_modified": false,
+    "combined_default_cpu_benchmark": false,
+    "behavior_acceptance_package_sha256": "7e2c7a8d8aac9aa9fec26e5d2686c1871d2878d99df74303af5e97fac8dfe7a5"
   }
 }

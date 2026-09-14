@@ -1,0 +1,12 @@
+{
+  "cases": 5,
+  "timing_metrics_recomputed": 102,
+  "all_timing_and_archive_intervals_match": true,
+  "decisions": {
+    "base62-save": "not_proven",
+    "inventory-idle": "pass",
+    "inventory-add": "pass",
+    "fearscape-idle": "pass",
+    "fearscape-exit": "pass"
+  }
+}

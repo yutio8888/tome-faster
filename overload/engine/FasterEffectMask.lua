@@ -3,6 +3,7 @@
 -- Cache ordered mask geometry, not pixels: the public Map.fbo is rebuilt on
 -- every frame, and the original dynamic shader/animation path stays intact.
 local M = {}
+local FBOGuard = require "engine.FBOGCGuard"
 local MAX_ENTRIES, MAX_BYTES, MAX_GRIDS = 32, 4 * 1024 * 1024, 4096
 local entries, bytes = {}, 0
 local counters = {hits = 0, misses = 0, skips = 0, draws = 0, saved_draws = 0}
@@ -28,7 +29,10 @@ for class, names in pairs({["gl{texture}"] = {"toScreen"}, ["gl{vertexes}"] = {"
     if type(index) == "table" then
         for _, name in ipairs(names) do
             local method = rawget(index, name)
-            if native(method) then methods[name] = method end
+            if native(method) then methods[name] = method
+            elseif class == "gl{fbo}" and name == "use" then
+                methods[name] = FBOGuard.originalUse(mt, method)
+            end
         end
     end
     native_methods[class] = methods
@@ -38,8 +42,11 @@ local function nativeObject(object, class, method)
     local mt = getmetatable(object)
     local index = type(mt) == "table" and rawget(mt, "__index")
     local expected = native_methods[class]
-    return mt == expected.metatable and type(index) == "table" and rawget(index, "class") == class
-        and expected[method] ~= nil and rawget(index, method) == expected[method]
+    if mt ~= expected.metatable or type(index) ~= "table" or rawget(index, "class") ~= class
+        or expected[method] == nil then return false end
+    local current = rawget(index, method)
+    return current == expected[method] or
+        (class == "gl{fbo}" and method == "use" and FBOGuard.originalUse(mt, current) == expected[method])
 end
 local function finite(n) return type(n) == "number" and n == n and n > -1000000 and n < 1000000 end
 local function plain(t) return type(t) == "table" and getmetatable(t) == nil end

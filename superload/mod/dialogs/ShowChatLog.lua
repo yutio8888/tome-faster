@@ -28,7 +28,7 @@ function _M:setScroll(i, do_shifty_thing)
     if not cache or cache.font ~= self.font or cache.width ~= self.iw - 10 then
         if cache then
             -- Wrapping measurements belong to the previous rendering setup.
-            self.line_size = {}
+            self.line_size = setmetatable({}, {__mode = "k"})
             self.max = #self.lines
             self.scrollbar.max = math.max(0, self.max - self.max_display)
             self.scroll = nil

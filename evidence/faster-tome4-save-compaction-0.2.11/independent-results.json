@@ -1,0 +1,30 @@
+{
+  "machine": "x86_64",
+  "platform": "Linux-7.2.3-1-cachyos-x86_64-with-glibc2.36",
+  "files_sha256": {
+    "cpu_usage.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+    "rusage_fixture.c": "3a6eb01a95623cb9a498ba7aa44a693db98f30967ac594d18d2f79f06d7554ff",
+    "check_rusage.lua": "f5074d8feff1bb1fb9a3d82617b8a7ebf1e46e2e346a6ac8b4d977e8d7d0fd09",
+    "acceptance-plan.json": "5128316a9a80d8808b4bcee6bed1397bc2325fe31ed314387c3075da4e675a23",
+    "analyze_cpu.py": "2e212def35b4a5a4a69be42350a2095fde0a10191a2ce58ecf7e206961cbea37",
+    "test_analysis.py": "d4ca913c31c74b725d55149fa2088107d501c57eeb37e1b4d841fa3e8934ab21",
+    "check_reserved_stock.lua": "6ddcc2afc3b479f6f7f3a3f060a458fa50ad29f6af1b43895ba83f3fe7b753eb",
+    "README.md": "829067c334adf94d0f024a739187df10dbf964db9bc9afb0c2d5c9d1a859311e"
+  },
+  "completed_checks": {
+    "rusage_native_abi": {
+      "struct_rusage_bytes": 144,
+      "utime_offset": 0,
+      "stime_offset": 16,
+      "nivcsw_offset": 136,
+      "RUSAGE_SELF": 0,
+      "RUSAGE_THREAD": 1,
+      "worker_user_ms": 30.108,
+      "main_user_ms": 0.026
+    },
+    "paired_analysis_unit_checks": 4,
+    "independent_reserved_name_native_stock_checks": 77
+  },
+  "real_game_benchmark_run": false,
+  "production_files_modified": false
+}

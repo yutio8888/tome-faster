@@ -1,0 +1,257 @@
+{
+  "source_sha256": {
+    "cur.png": "2778c7d7185d081455cfaee1b2a338ae864b34c7b7a577cb0ecbd02aeba20a3d",
+    "desc.lua": "351c5abeb05748850f2c80e80db1c9d50236e16105c403ef6b3938af73298dc5",
+    "game.teag": "1eafd295bf127e35f2bee2275ddea350cb68b6f136d2a9689873caf638b80cd3",
+    "last_log.txt": "581c7d68cee08b0cfd76fa98100e32ffa6196ea665aa2d41c3078621b91662b9",
+    "zone-ashes-urhrok+searing-halls.teaz": "419ff8e71b46b580689b9696d57e5c21878498696df975eadc8ffa89635c5fff",
+    "zone-daikara.teaz": "1e73ffb64d164987a1d229569b3e487184a9570f6d6f162a1cef1f9fd41977d6",
+    "zone-heart-gloom.teaz": "6205ccc6733a699b0cbe65290220d613c48b0847311d852b2edad843d00ec713",
+    "zone-lake-nur.teaz": "276e28829be101fa452d02d53f2a5e797f414fd5f8e367e7e9b152b8f56f0e5f",
+    "zone-mark-spellblaze.teaz": "5ffe9fd9aab37345dd09f16a558405c84133c4aa202e807d6386bd13f2280d30",
+    "zone-maze.teaz": "e2afb39be08c1c3b6bf3ae80e7fdb7ac793b3b86d091a0e9ef0b5292a3fdd8b0",
+    "zone-norgos-lair.teaz": "218c5378aa9e33ad90dcacd2006f923828af88354b17a6f06bd3823b4d712b2b",
+    "zone-old-forest.teaz": "09b65cbb6bf679075140cb4f51d8105342e4de8763c5e459ac2338ebe309a551",
+    "zone-rhaloren-camp.teaz": "cb2701b789b3125f94bfbf1c11c89c6bf3be7810713c4924dc8b5ae314e5f6a9",
+    "zone-ruins-kor-pul.teaz": "737f4603da7d0265556118984434744663e56c94062a1dec825482adc36bf1b8",
+    "zone-sandworm-lair.teaz": "48b1e3432203f3022afcf97ce5b24232d6dc62d43a2276696a06623a6828108f",
+    "zone-scintillating-caves.teaz": "e12f2233170eaff90a59188d7ad619d38a858a2a1fc72fed7790005fa8114312",
+    "zone-shertul-fortress.teaz": "2f46e687e685ab6352d7fccb8471071c6534870ca6ed1fa8e508d01c7266a72f",
+    "zone-town-angolwen.teaz": "32cf2633d6323d6c1937efeffdc3ff96b3f7e5038cb1dea9024fbc702b57b438",
+    "zone-town-derth.teaz": "9bce7e99246477a26a8157d68ffd90c81578b39c9b4e47de8a87905e41d94d06",
+    "zone-town-elvala.teaz": "6de1969daddcb07b040a0df07f867a0d9d0088e48e2bac4316f2345325d75d46",
+    "zone-town-last-hope.teaz": "9e8dacdb5b13e6c5caa64bc64458799b5002212cf02e3abd460353e0efefc067",
+    "zone-town-shatur.teaz": "6b5f33e564bd01bc204747a50bc436154af01f6dab45f59d1b887dca946da387",
+    "zone-town-zigur.teaz": "55bd4a339848aad14c2a46ac7d05e6730017ad8aac50c41e919041ab572c62e1",
+    "zone-trollmire.teaz": "6d85191c5325cc0d38b608aad14261aaf4c58c1a9d0e8f22d33c57aaf34506b1",
+    "zone-wilderness.teaz": "34d5a90b6ae473ba817aabf1e5bf400300cf648861c3b7c6aaea4a8ce665ec4c"
+  },
+  "source_total_bytes": 22208501,
+  "archives": [
+    {
+      "name": "game.teag",
+      "bytes": 2669920,
+      "entries": 2849,
+      "players": 1,
+      "player_raw_bytes": 128226,
+      "objects": 1526,
+      "engine_objects": 0,
+      "quests": 23
+    },
+    {
+      "name": "zone-ashes-urhrok+searing-halls.teaz",
+      "bytes": 213267,
+      "entries": 253,
+      "players": 0,
+      "player_raw_bytes": 0,
+      "objects": 0,
+      "engine_objects": 0,
+      "quests": 0
+    },
+    {
+      "name": "zone-daikara.teaz",
+      "bytes": 286443,
+      "entries": 213,
+      "players": 0,
+      "player_raw_bytes": 0,
+      "objects": 72,
+      "engine_objects": 0,
+      "quests": 0
+    },
+    {
+      "name": "zone-heart-gloom.teaz",
+      "bytes": 914182,
+      "entries": 870,
+      "players": 1,
+      "player_raw_bytes": 92810,
+      "objects": 555,
+      "engine_objects": 15,
+      "quests": 12
+    },
+    {
+      "name": "zone-lake-nur.teaz",
+      "bytes": 1223906,
+      "entries": 1194,
+      "players": 2,
+      "player_raw_bytes": 116368,
+      "objects": 806,
+      "engine_objects": 0,
+      "quests": 15
+    },
+    {
+      "name": "zone-mark-spellblaze.teaz",
+      "bytes": 1455247,
+      "entries": 1375,
+      "players": 2,
+      "player_raw_bytes": 132648,
+      "objects": 968,
+      "engine_objects": 0,
+      "quests": 16
+    },
+    {
+      "name": "zone-maze.teaz",
+      "bytes": 102003,
+      "entries": 103,
+      "players": 0,
+      "player_raw_bytes": 0,
+      "objects": 27,
+      "engine_objects": 0,
+      "quests": 0
+    },
+    {
+      "name": "zone-norgos-lair.teaz",
+      "bytes": 217345,
+      "entries": 266,
+      "players": 0,
+      "player_raw_bytes": 0,
+      "objects": 0,
+      "engine_objects": 0,
+      "quests": 0
+    },
+    {
+      "name": "zone-old-forest.teaz",
+      "bytes": 694576,
+      "entries": 1165,
+      "players": 0,
+      "player_raw_bytes": 0,
+      "objects": 2,
+      "engine_objects": 0,
+      "quests": 0
+    },
+    {
+      "name": "zone-rhaloren-camp.teaz",
+      "bytes": 704841,
+      "entries": 715,
+      "players": 1,
+      "player_raw_bytes": 88491,
+      "objects": 480,
+      "engine_objects": 1,
+      "quests": 12
+    },
+    {
+      "name": "zone-ruins-kor-pul.teaz",
+      "bytes": 940953,
+      "entries": 1004,
+      "players": 1,
+      "player_raw_bytes": 97885,
+      "objects": 654,
+      "engine_objects": 0,
+      "quests": 12
+    },
+    {
+      "name": "zone-sandworm-lair.teaz",
+      "bytes": 2631520,
+      "entries": 1421,
+      "players": 1,
+      "player_raw_bytes": 85030,
+      "objects": 692,
+      "engine_objects": 344,
+      "quests": 12
+    },
+    {
+      "name": "zone-scintillating-caves.teaz",
+      "bytes": 532298,
+      "entries": 587,
+      "players": 1,
+      "player_raw_bytes": 83103,
+      "objects": 326,
+      "engine_objects": 0,
+      "quests": 10
+    },
+    {
+      "name": "zone-shertul-fortress.teaz",
+      "bytes": 1160573,
+      "entries": 1131,
+      "players": 2,
+      "player_raw_bytes": 116310,
+      "objects": 802,
+      "engine_objects": 0,
+      "quests": 15
+    },
+    {
+      "name": "zone-town-angolwen.teaz",
+      "bytes": 1053596,
+      "entries": 1099,
+      "players": 1,
+      "player_raw_bytes": 96787,
+      "objects": 817,
+      "engine_objects": 0,
+      "quests": 12
+    },
+    {
+      "name": "zone-town-derth.teaz",
+      "bytes": 711401,
+      "entries": 686,
+      "players": 1,
+      "player_raw_bytes": 80692,
+      "objects": 451,
+      "engine_objects": 0,
+      "quests": 10
+    },
+    {
+      "name": "zone-town-elvala.teaz",
+      "bytes": 509095,
+      "entries": 407,
+      "players": 1,
+      "player_raw_bytes": 67708,
+      "objects": 251,
+      "engine_objects": 0,
+      "quests": 8
+    },
+    {
+      "name": "zone-town-last-hope.teaz",
+      "bytes": 1629057,
+      "entries": 1697,
+      "players": 2,
+      "player_raw_bytes": 176498,
+      "objects": 1112,
+      "engine_objects": 0,
+      "quests": 22
+    },
+    {
+      "name": "zone-town-shatur.teaz",
+      "bytes": 1107832,
+      "entries": 1132,
+      "players": 1,
+      "player_raw_bytes": 96294,
+      "objects": 867,
+      "engine_objects": 0,
+      "quests": 12
+    },
+    {
+      "name": "zone-town-zigur.teaz",
+      "bytes": 1343693,
+      "entries": 1313,
+      "players": 2,
+      "player_raw_bytes": 120217,
+      "objects": 924,
+      "engine_objects": 0,
+      "quests": 16
+    },
+    {
+      "name": "zone-trollmire.teaz",
+      "bytes": 467063,
+      "entries": 442,
+      "players": 1,
+      "player_raw_bytes": 79105,
+      "objects": 200,
+      "engine_objects": 0,
+      "quests": 10
+    },
+    {
+      "name": "zone-wilderness.teaz",
+      "bytes": 850253,
+      "entries": 1136,
+      "players": 0,
+      "player_raw_bytes": 0,
+      "objects": 0,
+      "engine_objects": 0,
+      "quests": 0
+    }
+  ],
+  "total_players": 21,
+  "zones_with_player": 15,
+  "total_zones": 21,
+  "total_player_raw_bytes": 1658172,
+  "source_unchanged": true
+}

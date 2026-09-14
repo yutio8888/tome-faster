@@ -1,0 +1,583 @@
+{
+  "sessions": [
+    {
+      "session": "candidate-default",
+      "input_sha256": "a3124417dddd532cea34a740fea11a00e62c558ce0d1d06ff55c8b3895621f0f",
+      "result_sha256": "f4df497d532d5306010de256334f2155ecd70d96965c0141118a7b80f7ca8296",
+      "measurement_sequence": null,
+      "started_unix_ns": 1789356876646752143,
+      "acceptance_plan_sha256": null,
+      "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+      "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+      "addon_sha256": "070accb8d64fa90fface6660599b55beb310a4a0e5164b3dbd3e1db095be1b92",
+      "source_sha256": {
+        "run.py": "e29144142cc487fbfa66768e6832ded0828478a00b7088c06d44137f83c6804c",
+        "runtime/game/addons/tome-faster.teaa": "070accb8d64fa90fface6660599b55beb310a4a0e5164b3dbd3e1db095be1b92",
+        "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+        "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/FearscapeScenario.lua": "e4153e43c3aa97d68dc51e4503ac7acd4bc2c73be9fc51904a6f0cf1ae33d5f7",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "56a505a339642167db167b712f20b86d14c38d8acfef362f030b6b36ef9e5590"
+      },
+      "setup": {
+        "candidate": true,
+        "hit_warning_interval_ms": 500,
+        "sample_name_62": "62",
+        "fbo_gc_guard": true,
+        "production": true,
+        "fearscape_source": "@/data/talents/corruptions/shadowflame.lua",
+        "namer_last": 63,
+        "compact": true,
+        "namer_first": 48,
+        "kind": "setup",
+        "namer_source": "@/engine/FasterSaveNames.lua",
+        "bare": false,
+        "experiments_enabled": false,
+        "inventory_source": "@/mod/class/Player.lua"
+      },
+      "exit_code": 0,
+      "complete": true,
+      "lua_error": false,
+      "selected_game_state_equal": true,
+      "save_files_unchanged": false,
+      "main_archive": {
+        "bytes": 2480465,
+        "entries": 2864,
+        "raw_bytes": 5887169,
+        "compressed_bytes": 2242081,
+        "compact_names": true
+      },
+      "archive_count_crc_checked": 23,
+      "all_archives_bytes": 21229875,
+      "host_load_start": [
+        2.05078125,
+        1.46337890625,
+        1.30224609375
+      ],
+      "host_load_end": [
+        1.96630859375,
+        1.45556640625,
+        1.30029296875
+      ],
+      "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof."
+    },
+    {
+      "session": "stock-candidate-default",
+      "input_sha256": "fd75f64718c58f41fe8e31820e97b8dcba7c2501036b8d01051ae2c33bdc4483",
+      "result_sha256": "86403c1ff67bbde7fa30e73c81892fad91e29b05b26b9066774241146106432f",
+      "measurement_sequence": null,
+      "started_unix_ns": 1789356881283204246,
+      "acceptance_plan_sha256": null,
+      "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+      "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+      "addon_sha256": null,
+      "source_sha256": {
+        "run.py": "e29144142cc487fbfa66768e6832ded0828478a00b7088c06d44137f83c6804c",
+        "runtime-stock/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+        "runtime-stock/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime-stock/game/addons/tome-save-size-probe/overload/engine/FearscapeScenario.lua": "e4153e43c3aa97d68dc51e4503ac7acd4bc2c73be9fc51904a6f0cf1ae33d5f7",
+        "runtime-stock/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+        "runtime-stock/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "56a505a339642167db167b712f20b86d14c38d8acfef362f030b6b36ef9e5590"
+      },
+      "setup": {
+        "candidate": false,
+        "hit_warning_interval_ms": 500,
+        "fbo_gc_guard": true,
+        "production": true,
+        "fearscape_source": "@/data/talents/corruptions/shadowflame.lua",
+        "namer_last": 136,
+        "compact": true,
+        "namer_first": 130,
+        "kind": "setup",
+        "namer_source": "@/engine/Savefile.lua",
+        "bare": true,
+        "experiments_enabled": false,
+        "inventory_source": "@/mod/class/Player.lua"
+      },
+      "exit_code": 0,
+      "complete": true,
+      "lua_error": false,
+      "selected_game_state_equal": true,
+      "save_files_unchanged": true,
+      "main_archive": {
+        "bytes": 2480465,
+        "entries": 2864,
+        "raw_bytes": 5887169,
+        "compressed_bytes": 2242081,
+        "compact_names": true
+      },
+      "archive_count_crc_checked": 23,
+      "all_archives_bytes": 21229875,
+      "host_load_start": [
+        1.96630859375,
+        1.45556640625,
+        1.30029296875
+      ],
+      "host_load_end": [
+        1.96923828125,
+        1.46484375,
+        1.30419921875
+      ],
+      "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+      "reload": {
+        "no_faster": true,
+        "kind": "reload",
+        "runtime": "LuaJIT 2.0.2",
+        "original_loadReal": true
+      }
+    },
+    {
+      "session": "candidate-experimental-inventory",
+      "input_sha256": "196c6251447fe5d9ff64c6d1131f4c34922258c5180d3f6cc67ff5d8455df845",
+      "result_sha256": "db1ac1b10ecd6150dcbb498c9f82621cbc297f66536f10821afc650b4f033243",
+      "measurement_sequence": null,
+      "started_unix_ns": 1789356885311024725,
+      "acceptance_plan_sha256": null,
+      "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+      "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+      "addon_sha256": "070accb8d64fa90fface6660599b55beb310a4a0e5164b3dbd3e1db095be1b92",
+      "source_sha256": {
+        "run.py": "e29144142cc487fbfa66768e6832ded0828478a00b7088c06d44137f83c6804c",
+        "runtime/game/addons/tome-faster.teaa": "070accb8d64fa90fface6660599b55beb310a4a0e5164b3dbd3e1db095be1b92",
+        "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+        "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/FearscapeScenario.lua": "e4153e43c3aa97d68dc51e4503ac7acd4bc2c73be9fc51904a6f0cf1ae33d5f7",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "56a505a339642167db167b712f20b86d14c38d8acfef362f030b6b36ef9e5590"
+      },
+      "setup": {
+        "candidate": true,
+        "hit_warning_interval_ms": 500,
+        "sample_name_62": "10",
+        "fbo_gc_guard": true,
+        "production": true,
+        "fearscape_source": "@/engine/FasterFearscape.lua",
+        "namer_last": 63,
+        "compact": true,
+        "namer_first": 48,
+        "kind": "setup",
+        "namer_source": "@/engine/FasterSaveNames.lua",
+        "bare": false,
+        "experiments_enabled": true,
+        "inventory_source": "@/engine/FasterInventory.lua"
+      },
+      "exit_code": 0,
+      "complete": true,
+      "lua_error": false,
+      "selected_game_state_equal": true,
+      "save_files_unchanged": false,
+      "main_archive": {
+        "bytes": 2475775,
+        "entries": 2888,
+        "raw_bytes": 5869623,
+        "compressed_bytes": 2244831,
+        "compact_names": true
+      },
+      "archive_count_crc_checked": 23,
+      "all_archives_bytes": 21225185,
+      "host_load_start": [
+        1.96923828125,
+        1.46484375,
+        1.30419921875
+      ],
+      "host_load_end": [
+        2.61279296875,
+        1.60693359375,
+        1.35107421875
+      ],
+      "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof."
+    },
+    {
+      "session": "stock-candidate-experimental-inventory",
+      "input_sha256": "01257edb6609849dbf74bf52927c429a851805deec1dcac17f75af1995a1ccc7",
+      "result_sha256": "24cc20a4f39fa164beb46ea9917473dab3d4fc525ac5bb10db50d7c1d0ed63e6",
+      "measurement_sequence": null,
+      "started_unix_ns": 1789356889944113745,
+      "acceptance_plan_sha256": null,
+      "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+      "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+      "addon_sha256": null,
+      "source_sha256": {
+        "run.py": "e29144142cc487fbfa66768e6832ded0828478a00b7088c06d44137f83c6804c",
+        "runtime-stock/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+        "runtime-stock/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime-stock/game/addons/tome-save-size-probe/overload/engine/FearscapeScenario.lua": "e4153e43c3aa97d68dc51e4503ac7acd4bc2c73be9fc51904a6f0cf1ae33d5f7",
+        "runtime-stock/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+        "runtime-stock/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "56a505a339642167db167b712f20b86d14c38d8acfef362f030b6b36ef9e5590"
+      },
+      "setup": {
+        "candidate": false,
+        "hit_warning_interval_ms": 500,
+        "fbo_gc_guard": true,
+        "production": true,
+        "fearscape_source": "@/data/talents/corruptions/shadowflame.lua",
+        "namer_last": 136,
+        "compact": true,
+        "namer_first": 130,
+        "kind": "setup",
+        "namer_source": "@/engine/Savefile.lua",
+        "bare": true,
+        "experiments_enabled": false,
+        "inventory_source": "@/mod/class/Player.lua"
+      },
+      "exit_code": 0,
+      "complete": true,
+      "lua_error": false,
+      "selected_game_state_equal": true,
+      "save_files_unchanged": true,
+      "main_archive": {
+        "bytes": 2475775,
+        "entries": 2888,
+        "raw_bytes": 5869623,
+        "compressed_bytes": 2244831,
+        "compact_names": true
+      },
+      "archive_count_crc_checked": 23,
+      "all_archives_bytes": 21225185,
+      "host_load_start": [
+        2.61279296875,
+        1.60693359375,
+        1.35107421875
+      ],
+      "host_load_end": [
+        2.61279296875,
+        1.60693359375,
+        1.35107421875
+      ],
+      "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+      "reload": {
+        "no_faster": true,
+        "kind": "reload",
+        "runtime": "LuaJIT 2.0.2",
+        "original_loadReal": true
+      }
+    },
+    {
+      "session": "reload-candidate-experimental-inventory",
+      "input_sha256": "8766ea40db449b317f5d4278c6fb9ab29e516812a63590bc211a7688b21a7fd3",
+      "result_sha256": "dcedaf8160f579e271364a346fe31c51942ddce893f0b164ba9c80599e3c4bc5",
+      "measurement_sequence": null,
+      "started_unix_ns": 1789356893840700590,
+      "acceptance_plan_sha256": null,
+      "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+      "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+      "addon_sha256": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+      "source_sha256": {
+        "run.py": "e29144142cc487fbfa66768e6832ded0828478a00b7088c06d44137f83c6804c",
+        "runtime/game/addons/tome-faster.teaa": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+        "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+        "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/FearscapeScenario.lua": "e4153e43c3aa97d68dc51e4503ac7acd4bc2c73be9fc51904a6f0cf1ae33d5f7",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "56a505a339642167db167b712f20b86d14c38d8acfef362f030b6b36ef9e5590"
+      },
+      "setup": {
+        "candidate": false,
+        "hit_warning_interval_ms": 500,
+        "sample_name_62": "62",
+        "fbo_gc_guard": true,
+        "production": true,
+        "fearscape_source": "@/data/talents/corruptions/shadowflame.lua",
+        "namer_last": 43,
+        "compact": true,
+        "namer_first": 28,
+        "kind": "setup",
+        "namer_source": "@/engine/FasterSaveNames.lua",
+        "bare": false,
+        "experiments_enabled": false,
+        "inventory_source": "@/mod/class/Player.lua"
+      },
+      "exit_code": 0,
+      "complete": true,
+      "lua_error": false,
+      "selected_game_state_equal": true,
+      "save_files_unchanged": true,
+      "main_archive": {
+        "bytes": 2475775,
+        "entries": 2888,
+        "raw_bytes": 5869623,
+        "compressed_bytes": 2244831,
+        "compact_names": true
+      },
+      "archive_count_crc_checked": 23,
+      "all_archives_bytes": 21225185,
+      "host_load_start": [
+        2.4833984375,
+        1.5966796875,
+        1.34912109375
+      ],
+      "host_load_end": [
+        2.4833984375,
+        1.5966796875,
+        1.34912109375
+      ],
+      "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+      "reload": {
+        "no_faster": false,
+        "kind": "reload",
+        "runtime": "LuaJIT 2.0.2",
+        "original_loadReal": true
+      }
+    },
+    {
+      "session": "resave-candidate-experimental-inventory",
+      "input_sha256": "d2aa4b9ef881196075e9c9dbfe0dbf2664483c726a1d3e3bfa6c8084b3442b82",
+      "result_sha256": "3ae38d6569c99177a2028a6ade046fca57cead217a6d80054219682b872938af",
+      "measurement_sequence": null,
+      "started_unix_ns": 1789356897933964866,
+      "acceptance_plan_sha256": null,
+      "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+      "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+      "addon_sha256": "070accb8d64fa90fface6660599b55beb310a4a0e5164b3dbd3e1db095be1b92",
+      "source_sha256": {
+        "run.py": "e29144142cc487fbfa66768e6832ded0828478a00b7088c06d44137f83c6804c",
+        "runtime/game/addons/tome-faster.teaa": "070accb8d64fa90fface6660599b55beb310a4a0e5164b3dbd3e1db095be1b92",
+        "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+        "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/FearscapeScenario.lua": "e4153e43c3aa97d68dc51e4503ac7acd4bc2c73be9fc51904a6f0cf1ae33d5f7",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "56a505a339642167db167b712f20b86d14c38d8acfef362f030b6b36ef9e5590"
+      },
+      "setup": {
+        "candidate": true,
+        "hit_warning_interval_ms": 500,
+        "sample_name_62": "10",
+        "fbo_gc_guard": true,
+        "production": true,
+        "fearscape_source": "@/engine/FasterFearscape.lua",
+        "namer_last": 63,
+        "compact": true,
+        "namer_first": 48,
+        "kind": "setup",
+        "namer_source": "@/engine/FasterSaveNames.lua",
+        "bare": false,
+        "experiments_enabled": true,
+        "inventory_source": "@/engine/FasterInventory.lua"
+      },
+      "exit_code": 0,
+      "complete": true,
+      "lua_error": false,
+      "selected_game_state_equal": true,
+      "save_files_unchanged": false,
+      "main_archive": {
+        "bytes": 2478698,
+        "entries": 2893,
+        "raw_bytes": 5873494,
+        "compressed_bytes": 2247354,
+        "compact_names": true
+      },
+      "archive_count_crc_checked": 23,
+      "all_archives_bytes": 21228107,
+      "host_load_start": [
+        2.4833984375,
+        1.5966796875,
+        1.34912109375
+      ],
+      "host_load_end": [
+        2.4443359375,
+        1.603515625,
+        1.35302734375
+      ],
+      "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof."
+    },
+    {
+      "session": "stock-resave-candidate-experimental-inventory",
+      "input_sha256": "22c7825b8079a4a9f20d92f772a4ad17bcb1f60d116d8dc6a2bd4aab24ec57f3",
+      "result_sha256": "b41df01f9248420ac92e05f847a93b4563c5611640ccee18bc1aafc18745ad63",
+      "measurement_sequence": null,
+      "started_unix_ns": 1789356902515465584,
+      "acceptance_plan_sha256": null,
+      "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+      "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+      "addon_sha256": null,
+      "source_sha256": {
+        "run.py": "e29144142cc487fbfa66768e6832ded0828478a00b7088c06d44137f83c6804c",
+        "runtime-stock/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+        "runtime-stock/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime-stock/game/addons/tome-save-size-probe/overload/engine/FearscapeScenario.lua": "e4153e43c3aa97d68dc51e4503ac7acd4bc2c73be9fc51904a6f0cf1ae33d5f7",
+        "runtime-stock/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+        "runtime-stock/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "56a505a339642167db167b712f20b86d14c38d8acfef362f030b6b36ef9e5590"
+      },
+      "setup": {
+        "candidate": false,
+        "hit_warning_interval_ms": 500,
+        "fbo_gc_guard": true,
+        "production": true,
+        "fearscape_source": "@/data/talents/corruptions/shadowflame.lua",
+        "namer_last": 136,
+        "compact": true,
+        "namer_first": 130,
+        "kind": "setup",
+        "namer_source": "@/engine/Savefile.lua",
+        "bare": true,
+        "experiments_enabled": false,
+        "inventory_source": "@/mod/class/Player.lua"
+      },
+      "exit_code": 0,
+      "complete": true,
+      "lua_error": false,
+      "selected_game_state_equal": true,
+      "save_files_unchanged": true,
+      "main_archive": {
+        "bytes": 2478698,
+        "entries": 2893,
+        "raw_bytes": 5873494,
+        "compressed_bytes": 2247354,
+        "compact_names": true
+      },
+      "archive_count_crc_checked": 23,
+      "all_archives_bytes": 21228107,
+      "host_load_start": [
+        2.4443359375,
+        1.603515625,
+        1.35302734375
+      ],
+      "host_load_end": [
+        2.32861328125,
+        1.59326171875,
+        1.35107421875
+      ],
+      "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+      "reload": {
+        "no_faster": true,
+        "kind": "reload",
+        "runtime": "LuaJIT 2.0.2",
+        "original_loadReal": true
+      }
+    },
+    {
+      "session": "candidate-experimental-fearscape",
+      "input_sha256": "5df70d5e4f028c143b830775283dc09ecb15d0f832dafb77a49f17aaafb1e69a",
+      "result_sha256": "7afeccab9e1b4287a433f122dea547d14aff6eaf7ff2317677e1bac169ef7f18",
+      "measurement_sequence": null,
+      "started_unix_ns": 1789356906482345035,
+      "acceptance_plan_sha256": null,
+      "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+      "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+      "addon_sha256": "070accb8d64fa90fface6660599b55beb310a4a0e5164b3dbd3e1db095be1b92",
+      "source_sha256": {
+        "run.py": "e29144142cc487fbfa66768e6832ded0828478a00b7088c06d44137f83c6804c",
+        "runtime/game/addons/tome-faster.teaa": "070accb8d64fa90fface6660599b55beb310a4a0e5164b3dbd3e1db095be1b92",
+        "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+        "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/FearscapeScenario.lua": "e4153e43c3aa97d68dc51e4503ac7acd4bc2c73be9fc51904a6f0cf1ae33d5f7",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "56a505a339642167db167b712f20b86d14c38d8acfef362f030b6b36ef9e5590"
+      },
+      "setup": {
+        "candidate": true,
+        "hit_warning_interval_ms": 500,
+        "sample_name_62": "10",
+        "fbo_gc_guard": true,
+        "production": true,
+        "fearscape_source": "@/engine/FasterFearscape.lua",
+        "namer_last": 63,
+        "compact": true,
+        "namer_first": 48,
+        "kind": "setup",
+        "namer_source": "@/engine/FasterSaveNames.lua",
+        "bare": false,
+        "experiments_enabled": true,
+        "inventory_source": "@/engine/FasterInventory.lua"
+      },
+      "exit_code": 0,
+      "complete": true,
+      "lua_error": false,
+      "selected_game_state_equal": true,
+      "save_files_unchanged": false,
+      "main_archive": {
+        "bytes": 2318498,
+        "entries": 2726,
+        "raw_bytes": 5508106,
+        "compressed_bytes": 2100514,
+        "compact_names": true
+      },
+      "archive_count_crc_checked": 23,
+      "all_archives_bytes": 21068059,
+      "host_load_start": [
+        2.32861328125,
+        1.59326171875,
+        1.35107421875
+      ],
+      "host_load_end": [
+        2.14208984375,
+        1.56640625,
+        1.34375
+      ],
+      "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof."
+    },
+    {
+      "session": "stock-candidate-experimental-fearscape",
+      "input_sha256": "efd27718a09a0c8f7382955d986e07672054ab1418de9826a4247a81f68ebe02",
+      "result_sha256": "bba41c8002209e01267ec0125ef3cbef1a756a4257dfa54e970bb740da49df57",
+      "measurement_sequence": null,
+      "started_unix_ns": 1789356911526439871,
+      "acceptance_plan_sha256": null,
+      "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+      "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+      "addon_sha256": null,
+      "source_sha256": {
+        "run.py": "e29144142cc487fbfa66768e6832ded0828478a00b7088c06d44137f83c6804c",
+        "runtime-stock/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+        "runtime-stock/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime-stock/game/addons/tome-save-size-probe/overload/engine/FearscapeScenario.lua": "e4153e43c3aa97d68dc51e4503ac7acd4bc2c73be9fc51904a6f0cf1ae33d5f7",
+        "runtime-stock/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+        "runtime-stock/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "56a505a339642167db167b712f20b86d14c38d8acfef362f030b6b36ef9e5590"
+      },
+      "setup": {
+        "candidate": false,
+        "hit_warning_interval_ms": 500,
+        "fbo_gc_guard": true,
+        "production": true,
+        "fearscape_source": "@/data/talents/corruptions/shadowflame.lua",
+        "namer_last": 136,
+        "compact": true,
+        "namer_first": 130,
+        "kind": "setup",
+        "namer_source": "@/engine/Savefile.lua",
+        "bare": true,
+        "experiments_enabled": false,
+        "inventory_source": "@/mod/class/Player.lua"
+      },
+      "exit_code": 0,
+      "complete": true,
+      "lua_error": false,
+      "selected_game_state_equal": true,
+      "save_files_unchanged": true,
+      "main_archive": {
+        "bytes": 2318498,
+        "entries": 2726,
+        "raw_bytes": 5508106,
+        "compressed_bytes": 2100514,
+        "compact_names": true
+      },
+      "archive_count_crc_checked": 23,
+      "all_archives_bytes": 21068059,
+      "host_load_start": [
+        2.14208984375,
+        1.56640625,
+        1.34375
+      ],
+      "host_load_end": [
+        1.97021484375,
+        1.5400390625,
+        1.33642578125
+      ],
+      "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+      "reload": {
+        "no_faster": true,
+        "kind": "reload",
+        "runtime": "LuaJIT 2.0.2",
+        "original_loadReal": true
+      }
+    }
+  ],
+  "all_passed": true,
+  "formal_cpu_benchmark": false,
+  "stock_runtime_addons": [
+    "tome-possessors.teaa",
+    "tome-save-size-probe"
+  ],
+  "stock_scope": "All nonofficial addons removed. Original official DLCs and a diagnostic probe retained. Only addon dependency names in desc.lua adjusted; serialized archive contents untouched.",
+  "final_package_validation_archive_sha256": "070accb8d64fa90fface6660599b55beb310a4a0e5164b3dbd3e1db095be1b92"
+}

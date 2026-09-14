@@ -1,0 +1,4394 @@
+{
+  "date": "2026-09-13",
+  "engine_commit": "624a67329fe2ad440c5b344785a9c73fcf22ae63",
+  "engine_binary_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+  "save_archive_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+  "platform": "Linux x86_64, Ryzen 7 9800X3D, Xvfb/llvmpipe, LuaJIT 2.0.2",
+  "protocol": {
+    "source": "tests/bench_ai_game",
+    "sessions": 3,
+    "queries_per_group": 8,
+    "rounds_per_variant": 8,
+    "ordering": "Balanced Latin square [1,2,4,3], [2,3,1,4], [3,4,2,1], [4,1,3,2], repeated twice",
+    "warmup_batches_per_variant": 30,
+    "batch_target_original_cpu_ms": 25,
+    "calibration_original_batches": 10,
+    "cpu_clock": "clock_gettime(CLOCK_THREAD_CPUTIME_ID)",
+    "wall_clock": "clock_gettime(CLOCK_MONOTONIC)",
+    "gc": "Enabled for timing; collect before each batch. Separate allocation passes stop GC for one batch, then restart.",
+    "aggregate": "Median of three session medians; each session median contains eight batch means per variant/group",
+    "baseline": "Original calc loaded from the unmodified engine, using the same actual Map, player actor and native FOV cache",
+    "variants": "neighbors, heap and both share removal of the unused h_score table; both is the normally installed production method",
+    "no_game_actions": true,
+    "no_profiler": true,
+    "no_native_preload": true
+  },
+  "limitations": [
+    "One 50x50 real map; 24 unique real queries repeated across three loads.",
+    "All 818 walkable targets on this map were reachable; unreachable performance is synthetic only.",
+    "Measures warmed path queries, not complete AI turns, frame rate, GC pause distribution, Windows or hardware GPU performance.",
+    "Effect batching installed but the idle real map exercised zero mask draws; native combination fixtures provide rendering evidence."
+  ],
+  "summary": [
+    {
+      "group": "short",
+      "variant": "original",
+      "cpu_ms": 0.01025091328125,
+      "wall_ms": 0.010271859768545312,
+      "allocated_kib": 3.6591796875,
+      "session_cpu_ms": [
+        0.01025091328125,
+        0.010687492564308683,
+        0.01016681796875
+      ],
+      "session_wall_ms": [
+        0.010271859768545312,
+        0.01071285530685229,
+        0.010188376170117384
+      ],
+      "session_allocated_kib": [
+        3.6591796875,
+        3.6591796875,
+        3.6591796875
+      ]
+    },
+    {
+      "group": "short",
+      "variant": "neighbors",
+      "cpu_ms": 0.0089171126953125,
+      "wall_ms": 0.008935782813932813,
+      "allocated_kib": 2.8203125,
+      "session_cpu_ms": [
+        0.0090937712890625,
+        0.008808831591639872,
+        0.0089171126953125
+      ],
+      "session_wall_ms": [
+        0.0091163724602666,
+        0.008826712613559887,
+        0.008935782813932813
+      ],
+      "session_allocated_kib": [
+        2.8203125,
+        2.8203125,
+        2.8203125
+      ]
+    },
+    {
+      "group": "short",
+      "variant": "heap",
+      "cpu_ms": 0.009192459204180065,
+      "wall_ms": 0.009211342446386255,
+      "allocated_kib": 3.4833984375,
+      "session_cpu_ms": [
+        0.009227111328124999,
+        0.009192459204180065,
+        0.009068322265625001
+      ],
+      "session_wall_ms": [
+        0.009245547646423827,
+        0.009211342446386255,
+        0.009087463869946093
+      ],
+      "session_allocated_kib": [
+        3.4833984375,
+        3.4833984375,
+        3.4833984375
+      ]
+    },
+    {
+      "group": "short",
+      "variant": "both",
+      "cpu_ms": 0.008941415234375,
+      "wall_ms": 0.008959687309106837,
+      "allocated_kib": 2.8203125,
+      "session_cpu_ms": [
+        0.0090932654296875,
+        0.008927879019292605,
+        0.008941415234375
+      ],
+      "session_wall_ms": [
+        0.00911239784909414,
+        0.008947843248533562,
+        0.008959687309106837
+      ],
+      "session_allocated_kib": [
+        2.8203125,
+        2.8203125,
+        2.8203125
+      ]
+    },
+    {
+      "group": "medium",
+      "variant": "original",
+      "cpu_ms": 0.06802786580882536,
+      "wall_ms": 0.06817573347293199,
+      "allocated_kib": 20.6982421875,
+      "session_cpu_ms": [
+        0.06766502529761906,
+        0.06802786580882536,
+        0.06972277777777777
+      ],
+      "session_wall_ms": [
+        0.06779642558346131,
+        0.06817573347293199,
+        0.06986627640823612
+      ],
+      "session_allocated_kib": [
+        20.6982421875,
+        20.6982421875,
+        20.6982421875
+      ]
+    },
+    {
+      "group": "medium",
+      "variant": "neighbors",
+      "cpu_ms": 0.054112679166665276,
+      "wall_ms": 0.05424485699170139,
+      "allocated_kib": 8.865234375,
+      "session_cpu_ms": [
+        0.05489321130952381,
+        0.05320990625,
+        0.054112679166665276
+      ],
+      "session_wall_ms": [
+        0.05500904466247322,
+        0.05332730699549632,
+        0.05424485699170139
+      ],
+      "session_allocated_kib": [
+        8.865234375,
+        8.865234375,
+        8.865234375
+      ]
+    },
+    {
+      "group": "medium",
+      "variant": "heap",
+      "cpu_ms": 0.06767296428571429,
+      "wall_ms": 0.06781565029883632,
+      "allocated_kib": 19.3037109375,
+      "session_cpu_ms": [
+        0.06767296428571429,
+        0.0656932150735294,
+        0.06903199027777779
+      ],
+      "session_wall_ms": [
+        0.06781565029883632,
+        0.06581883822732168,
+        0.0691973402268361
+      ],
+      "session_allocated_kib": [
+        19.3037109375,
+        19.3037109375,
+        19.3037109375
+      ]
+    },
+    {
+      "group": "medium",
+      "variant": "both",
+      "cpu_ms": 0.054419320833334714,
+      "wall_ms": 0.05453989998334028,
+      "allocated_kib": 8.865234375,
+      "session_cpu_ms": [
+        0.05583223214285714,
+        0.05399879411764706,
+        0.054419320833334714
+      ],
+      "session_wall_ms": [
+        0.055946822899083336,
+        0.054136099293827206,
+        0.05453989998334028
+      ],
+      "session_allocated_kib": [
+        8.865234375,
+        8.865234375,
+        8.865234375
+      ]
+    },
+    {
+      "group": "long",
+      "variant": "original",
+      "cpu_ms": 1.3429654375000313,
+      "wall_ms": 1.3457866553217186,
+      "allocated_kib": 304.0419921875,
+      "session_cpu_ms": [
+        1.3274471041666667,
+        1.3442547083333543,
+        1.3429654375000313
+      ],
+      "session_wall_ms": [
+        1.3300136458128748,
+        1.3472708538174583,
+        1.3457866553217186
+      ],
+      "session_allocated_kib": [
+        304.0419921875,
+        304.0419921875,
+        304.0419921875
+      ]
+    },
+    {
+      "group": "long",
+      "variant": "neighbors",
+      "cpu_ms": 1.0192689374999793,
+      "wall_ms": 1.0212189164012708,
+      "allocated_kib": 56.724609375,
+      "session_cpu_ms": [
+        1.037635375,
+        1.0192689374999793,
+        1.018802875
+      ],
+      "session_wall_ms": [
+        1.039416187132396,
+        1.0212189164012708,
+        1.0208286875858752
+      ],
+      "session_allocated_kib": [
+        56.724609375,
+        56.724609375,
+        56.724609375
+      ]
+    },
+    {
+      "group": "long",
+      "variant": "heap",
+      "cpu_ms": 1.3300336875000314,
+      "wall_ms": 1.3329527815804063,
+      "allocated_kib": 292.1474609375,
+      "session_cpu_ms": [
+        1.3338785833333542,
+        1.3080178958333333,
+        1.3300336875000314
+      ],
+      "session_wall_ms": [
+        1.3363180831074581,
+        1.310669479270771,
+        1.3329527815804063
+      ],
+      "session_allocated_kib": [
+        292.1474609375,
+        292.1474609375,
+        292.1474609375
+      ]
+    },
+    {
+      "group": "long",
+      "variant": "both",
+      "cpu_ms": 1.0574029687500313,
+      "wall_ms": 1.0593080939725,
+      "allocated_kib": 56.724609375,
+      "session_cpu_ms": [
+        1.0723060000000002,
+        1.0539321875,
+        1.0574029687500313
+      ],
+      "session_wall_ms": [
+        1.0739812708149374,
+        1.0560415207097917,
+        1.0593080939725
+      ],
+      "session_allocated_kib": [
+        56.724609375,
+        56.724609375,
+        56.724609375
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "name": "formal-01",
+      "elapsed_s": 10.23820382298436,
+      "source_sha256": {
+        "run_game_bench.py": "efcaecb2b8bc9b0b49d74500bc33077428bdfe4aa42370eaabcd1dd743088297",
+        "runtime/game/addons/tome-faster/hooks/load.lua": "5b5a490b72d202100118eee4dfc847daab18b2e3f98d25d845dca20715df7ed8",
+        "runtime/game/addons/tome-faster/init.lua": "9031331764c760e9aabc111129553757a0331add23d486505fe6bf158a50fbe3",
+        "runtime/game/addons/tome-faster/overload/data/gfx/particles/dreamhammer.lua": "b7758e9ecc6e63328a60350919aacceb7fb56e1ecfdbe5eb84ecacfd11f66295",
+        "runtime/game/addons/tome-faster/overload/data/gfx/particles/notice_enemy.lua": "70e2d4f481e3f982cb7b963ed0a1cda6f5019c904f5522004a0c82a9d8c291b6",
+        "runtime/game/addons/tome-faster/overload/engine/CacheList.lua": "3194e47e6e67b3f0bcb0116458f107222dc9a26ef696eb18c2b3920efbb6b564",
+        "runtime/game/addons/tome-faster/overload/engine/FBOGCGuard.lua": "6ef95d4778863fdb1e8563d867a4d7d755afa715842d0e88f30fb18453aaf085",
+        "runtime/game/addons/tome-faster/overload/engine/FasterAI.lua": "ba41c2ef1a68969bb568cac1430e9bc23794737b6f50db1578b465e2a1614199",
+        "runtime/game/addons/tome-faster/overload/engine/FasterChardump.lua": "e9f36c1700f241987bd672562a98ee03ce15e0fba1bde9dea748e17104dc2fe1",
+        "runtime/game/addons/tome-faster/overload/engine/FasterClone.lua": "e9a897b8f63a790bfb42e33371b377a21039578a3cf07e8341de7527b09bf18c",
+        "runtime/game/addons/tome-faster/overload/engine/FasterCloneRefresh.lua": "c7d05a159ebf4b1cd13cf2b4fb689eb62e828f8f5ca60eca59d1e2ae483038e8",
+        "runtime/game/addons/tome-faster/overload/engine/FasterEffectMask.lua": "8dc8724f17943b63a87419f827685aa2e1aa2c015a0a6c5dbcbc18798a8b3033",
+        "runtime/game/addons/tome-faster/overload/engine/FasterExportCleanup.lua": "e3e9f1b6d18f94b872e85744b75d4718286066477ae21eae63ad982ea797abf6",
+        "runtime/game/addons/tome-faster/overload/engine/FasterGzip.lua": "93dd291c9c12d89f5ee78c51c34f08d6871563142c26e9ca89fe6eef42a59c0e",
+        "runtime/game/addons/tome-faster/overload/engine/FasterHotkeys.lua": "f69e468372567ce9d7af98839231632a5d9136a0011b96360e24ce6f1e52b4aa",
+        "runtime/game/addons/tome-faster/overload/engine/FasterProfile.lua": "74248114a34410eec068ce95006c13679ed03792f54ed831fbfd85926ba0e15f",
+        "runtime/game/addons/tome-faster/overload/engine/FasterRuntime.lua": "b9ab8757e16e959d701bede560f59a804cbaa8887aaa85adab1c294e3832d802",
+        "runtime/game/addons/tome-faster/overload/engine/FasterSave.lua": "07ee23e298cb937fe2150b0a1a87123b425318c7850dc3cba8a87d6089f638b2",
+        "runtime/game/addons/tome-faster/overload/engine/FasterSaveFollowup.lua": "6bdc0f668e1a265f4c57bbfeed1f7f2ce261f8520b7d4fce2b56e68790d86eb8",
+        "runtime/game/addons/tome-faster/overload/engine/FasterScreenshot.lua": "8e75c9c89d84ba9e502dc3f3b29f82841a0659f60d616c3e5044526115b8737d",
+        "runtime/game/addons/tome-faster/overload/engine/FasterSnapshotRefresh.lua": "18670b6dbe5cf81f3fadd7f44df690354b7c25aca32dc2a38603b3fbdd59e783",
+        "runtime/game/addons/tome-faster/superload/engine/Astar.lua": "40c1c4018956a3371dddac33eb11df7fb4b6915b7add4ecb3c52e24d5cf6bfc4",
+        "runtime/game/addons/tome-faster/superload/engine/HotkeysIconsDisplay.lua": "0a5e7300c9794b768ece0bc118c84ac8545a9399a02c8072d0752421e7008371",
+        "runtime/game/addons/tome-faster/superload/engine/Map.lua": "c9f0da08abe403ad63f4311dfe59ec52dffe0ede9d4b8e3317ca5eefa6cd5998",
+        "runtime/game/addons/tome-faster/superload/mod/class/Game.lua": "191fe266d58df42bf30c2cc1da25bc0d104394dd917c1e629d30f031ea5a96eb",
+        "runtime/game/addons/tome-faster/superload/mod/class/Player.lua": "d3b22c3244400d3fe7e1c2954af7f5bf8f6368c0ddedd0aecc31321d2a54ad6e",
+        "runtime/game/addons/tome-faster/superload/mod/dialogs/ShowChatLog.lua": "ef4e9f58e6ad53033ae26d9943df0b7895eaa61c0964c399246eee1963a6476d",
+        "runtime/game/addons/tome-faster-ai-bench/hooks/load.lua": "69a6202b4c1a4b90d347f1d987bc3c82d264102e7ed659758a3118c5888c4b93",
+        "runtime/game/addons/tome-faster-ai-bench/init.lua": "6f589c837a76843bfa2c58611465aab9df0959efb247420522baa903cc80fe34",
+        "runtime/game/addons/tome-faster-ai-bench/overload/engine/FasterAIBench.lua": "f9464183895c4ffddec1b7aba3d282db3c496de6e2a0cd0df0b2d8f5f634b963"
+      },
+      "save_files_unchanged": true,
+      "setup": {
+        "map_w": 50,
+        "jit": true,
+        "groups": [
+          {
+            "name": "short",
+            "queries": [
+              {
+                "path_length": 3,
+                "tx": 13,
+                "sy": 5,
+                "distance": 3,
+                "sx": 16,
+                "ty": 5
+              },
+              {
+                "path_length": 3,
+                "tx": 13,
+                "sy": 5,
+                "distance": 3,
+                "sx": 16,
+                "ty": 6
+              },
+              {
+                "path_length": 3,
+                "tx": 13,
+                "sy": 5,
+                "distance": 3,
+                "sx": 16,
+                "ty": 7
+              },
+              {
+                "path_length": 2,
+                "tx": 14,
+                "sy": 5,
+                "distance": 2,
+                "sx": 16,
+                "ty": 3
+              },
+              {
+                "path_length": 2,
+                "tx": 15,
+                "sy": 5,
+                "distance": 2,
+                "sx": 16,
+                "ty": 3
+              },
+              {
+                "path_length": 2,
+                "tx": 16,
+                "sy": 5,
+                "distance": 2,
+                "sx": 16,
+                "ty": 3
+              },
+              {
+                "path_length": 2,
+                "tx": 14,
+                "sy": 5,
+                "distance": 2,
+                "sx": 16,
+                "ty": 4
+              },
+              {
+                "path_length": 2,
+                "tx": 14,
+                "sy": 5,
+                "distance": 2,
+                "sx": 16,
+                "ty": 5
+              }
+            ]
+          },
+          {
+            "name": "medium",
+            "queries": [
+              {
+                "path_length": 15,
+                "tx": 10,
+                "sy": 5,
+                "distance": 14,
+                "sx": 16,
+                "ty": 19
+              },
+              {
+                "path_length": 15,
+                "tx": 11,
+                "sy": 5,
+                "distance": 14,
+                "sx": 16,
+                "ty": 19
+              },
+              {
+                "path_length": 15,
+                "tx": 12,
+                "sy": 5,
+                "distance": 14,
+                "sx": 16,
+                "ty": 19
+              },
+              {
+                "path_length": 15,
+                "tx": 13,
+                "sy": 5,
+                "distance": 14,
+                "sx": 16,
+                "ty": 19
+              },
+              {
+                "path_length": 15,
+                "tx": 14,
+                "sy": 5,
+                "distance": 14,
+                "sx": 16,
+                "ty": 19
+              },
+              {
+                "path_length": 14,
+                "tx": 10,
+                "sy": 5,
+                "distance": 13,
+                "sx": 16,
+                "ty": 18
+              },
+              {
+                "path_length": 14,
+                "tx": 11,
+                "sy": 5,
+                "distance": 13,
+                "sx": 16,
+                "ty": 18
+              },
+              {
+                "path_length": 14,
+                "tx": 12,
+                "sy": 5,
+                "distance": 13,
+                "sx": 16,
+                "ty": 18
+              }
+            ]
+          },
+          {
+            "name": "long",
+            "queries": [
+              {
+                "path_length": 51,
+                "tx": 19,
+                "sy": 5,
+                "distance": 41,
+                "sx": 16,
+                "ty": 46
+              },
+              {
+                "path_length": 63,
+                "tx": 41,
+                "sy": 5,
+                "distance": 41,
+                "sx": 16,
+                "ty": 46
+              },
+              {
+                "path_length": 60,
+                "tx": 42,
+                "sy": 5,
+                "distance": 41,
+                "sx": 16,
+                "ty": 46
+              },
+              {
+                "path_length": 60,
+                "tx": 43,
+                "sy": 5,
+                "distance": 41,
+                "sx": 16,
+                "ty": 46
+              },
+              {
+                "path_length": 60,
+                "tx": 44,
+                "sy": 5,
+                "distance": 41,
+                "sx": 16,
+                "ty": 46
+              },
+              {
+                "path_length": 60,
+                "tx": 45,
+                "sy": 5,
+                "distance": 41,
+                "sx": 16,
+                "ty": 46
+              },
+              {
+                "path_length": 60,
+                "tx": 46,
+                "sy": 5,
+                "distance": 41,
+                "sx": 16,
+                "ty": 46
+              },
+              {
+                "path_length": 63,
+                "tx": 47,
+                "sy": 5,
+                "distance": 41,
+                "sx": 16,
+                "ty": 46
+              }
+            ]
+          },
+          {
+            "name": "unreachable",
+            "queries": {}
+          }
+        ],
+        "path_cache": true,
+        "assertions": 96,
+        "effect_stats": {
+          "native_bytes": 0,
+          "max_entries": 32,
+          "entries": 0,
+          "max_grids": 4096,
+          "max_native_bytes": 4194304,
+          "hits": 0,
+          "draws": 0,
+          "extra_fbos": 0,
+          "saved_draws": 0,
+          "misses": 0,
+          "skips": 0
+        },
+        "fbo_guard": true,
+        "kind": "setup",
+        "before": {
+          "x": 16,
+          "paused": true,
+          "y": 5,
+          "turn": 1933440,
+          "actors": 14,
+          "life": 1103.8
+        },
+        "runtime": "LuaJIT 2.0.2",
+        "map_h": 50,
+        "targets": 818
+      },
+      "complete": {
+        "after": {
+          "x": 16,
+          "paused": true,
+          "y": 5,
+          "turn": 1933440,
+          "actors": 14,
+          "life": 1103.8
+        },
+        "kind": "complete",
+        "checksum": 479742,
+        "effect_stats": {
+          "native_bytes": 0,
+          "max_entries": 32,
+          "entries": 0,
+          "max_grids": 4096,
+          "max_native_bytes": 4194304,
+          "hits": 0,
+          "draws": 0,
+          "extra_fbos": 0,
+          "saved_draws": 0,
+          "misses": 0,
+          "skips": 0
+        },
+        "assertions": 96
+      }
+    },
+    {
+      "name": "formal-02",
+      "elapsed_s": 10.138650695007527,
+      "source_sha256": {
+        "run_game_bench.py": "efcaecb2b8bc9b0b49d74500bc33077428bdfe4aa42370eaabcd1dd743088297",
+        "runtime/game/addons/tome-faster/hooks/load.lua": "5b5a490b72d202100118eee4dfc847daab18b2e3f98d25d845dca20715df7ed8",
+        "runtime/game/addons/tome-faster/init.lua": "9031331764c760e9aabc111129553757a0331add23d486505fe6bf158a50fbe3",
+        "runtime/game/addons/tome-faster/overload/data/gfx/particles/dreamhammer.lua": "b7758e9ecc6e63328a60350919aacceb7fb56e1ecfdbe5eb84ecacfd11f66295",
+        "runtime/game/addons/tome-faster/overload/data/gfx/particles/notice_enemy.lua": "70e2d4f481e3f982cb7b963ed0a1cda6f5019c904f5522004a0c82a9d8c291b6",
+        "runtime/game/addons/tome-faster/overload/engine/CacheList.lua": "3194e47e6e67b3f0bcb0116458f107222dc9a26ef696eb18c2b3920efbb6b564",
+        "runtime/game/addons/tome-faster/overload/engine/FBOGCGuard.lua": "6ef95d4778863fdb1e8563d867a4d7d755afa715842d0e88f30fb18453aaf085",
+        "runtime/game/addons/tome-faster/overload/engine/FasterAI.lua": "ba41c2ef1a68969bb568cac1430e9bc23794737b6f50db1578b465e2a1614199",
+        "runtime/game/addons/tome-faster/overload/engine/FasterChardump.lua": "e9f36c1700f241987bd672562a98ee03ce15e0fba1bde9dea748e17104dc2fe1",
+        "runtime/game/addons/tome-faster/overload/engine/FasterClone.lua": "e9a897b8f63a790bfb42e33371b377a21039578a3cf07e8341de7527b09bf18c",
+        "runtime/game/addons/tome-faster/overload/engine/FasterCloneRefresh.lua": "c7d05a159ebf4b1cd13cf2b4fb689eb62e828f8f5ca60eca59d1e2ae483038e8",
+        "runtime/game/addons/tome-faster/overload/engine/FasterEffectMask.lua": "8dc8724f17943b63a87419f827685aa2e1aa2c015a0a6c5dbcbc18798a8b3033",
+        "runtime/game/addons/tome-faster/overload/engine/FasterExportCleanup.lua": "e3e9f1b6d18f94b872e85744b75d4718286066477ae21eae63ad982ea797abf6",
+        "runtime/game/addons/tome-faster/overload/engine/FasterGzip.lua": "93dd291c9c12d89f5ee78c51c34f08d6871563142c26e9ca89fe6eef42a59c0e",
+        "runtime/game/addons/tome-faster/overload/engine/FasterHotkeys.lua": "f69e468372567ce9d7af98839231632a5d9136a0011b96360e24ce6f1e52b4aa",
+        "runtime/game/addons/tome-faster/overload/engine/FasterProfile.lua": "74248114a34410eec068ce95006c13679ed03792f54ed831fbfd85926ba0e15f",
+        "runtime/game/addons/tome-faster/overload/engine/FasterRuntime.lua": "b9ab8757e16e959d701bede560f59a804cbaa8887aaa85adab1c294e3832d802",
+        "runtime/game/addons/tome-faster/overload/engine/FasterSave.lua": "07ee23e298cb937fe2150b0a1a87123b425318c7850dc3cba8a87d6089f638b2",
+        "runtime/game/addons/tome-faster/overload/engine/FasterSaveFollowup.lua": "6bdc0f668e1a265f4c57bbfeed1f7f2ce261f8520b7d4fce2b56e68790d86eb8",
+        "runtime/game/addons/tome-faster/overload/engine/FasterScreenshot.lua": "8e75c9c89d84ba9e502dc3f3b29f82841a0659f60d616c3e5044526115b8737d",
+        "runtime/game/addons/tome-faster/overload/engine/FasterSnapshotRefresh.lua": "18670b6dbe5cf81f3fadd7f44df690354b7c25aca32dc2a38603b3fbdd59e783",
+        "runtime/game/addons/tome-faster/superload/engine/Astar.lua": "40c1c4018956a3371dddac33eb11df7fb4b6915b7add4ecb3c52e24d5cf6bfc4",
+        "runtime/game/addons/tome-faster/superload/engine/HotkeysIconsDisplay.lua": "0a5e7300c9794b768ece0bc118c84ac8545a9399a02c8072d0752421e7008371",
+        "runtime/game/addons/tome-faster/superload/engine/Map.lua": "c9f0da08abe403ad63f4311dfe59ec52dffe0ede9d4b8e3317ca5eefa6cd5998",
+        "runtime/game/addons/tome-faster/superload/mod/class/Game.lua": "191fe266d58df42bf30c2cc1da25bc0d104394dd917c1e629d30f031ea5a96eb",
+        "runtime/game/addons/tome-faster/superload/mod/class/Player.lua": "d3b22c3244400d3fe7e1c2954af7f5bf8f6368c0ddedd0aecc31321d2a54ad6e",
+        "runtime/game/addons/tome-faster/superload/mod/dialogs/ShowChatLog.lua": "ef4e9f58e6ad53033ae26d9943df0b7895eaa61c0964c399246eee1963a6476d",
+        "runtime/game/addons/tome-faster-ai-bench/hooks/load.lua": "69a6202b4c1a4b90d347f1d987bc3c82d264102e7ed659758a3118c5888c4b93",
+        "runtime/game/addons/tome-faster-ai-bench/init.lua": "6f589c837a76843bfa2c58611465aab9df0959efb247420522baa903cc80fe34",
+        "runtime/game/addons/tome-faster-ai-bench/overload/engine/FasterAIBench.lua": "f9464183895c4ffddec1b7aba3d282db3c496de6e2a0cd0df0b2d8f5f634b963"
+      },
+      "save_files_unchanged": true,
+      "setup": {
+        "map_w": 50,
+        "jit": true,
+        "groups": [
+          {
+            "name": "short",
+            "queries": [
+              {
+                "path_length": 3,
+                "tx": 13,
+                "sy": 5,
+                "distance": 3,
+                "sx": 16,
+                "ty": 5
+              },
+              {
+                "path_length": 3,
+                "tx": 13,
+                "sy": 5,
+                "distance": 3,
+                "sx": 16,
+                "ty": 6
+              },
+              {
+                "path_length": 3,
+                "tx": 13,
+                "sy": 5,
+                "distance": 3,
+                "sx": 16,
+                "ty": 7
+              },
+              {
+                "path_length": 2,
+                "tx": 14,
+                "sy": 5,
+                "distance": 2,
+                "sx": 16,
+                "ty": 3
+              },
+              {
+                "path_length": 2,
+                "tx": 15,
+                "sy": 5,
+                "distance": 2,
+                "sx": 16,
+                "ty": 3
+              },
+              {
+                "path_length": 2,
+                "tx": 16,
+                "sy": 5,
+                "distance": 2,
+                "sx": 16,
+                "ty": 3
+              },
+              {
+                "path_length": 2,
+                "tx": 14,
+                "sy": 5,
+                "distance": 2,
+                "sx": 16,
+                "ty": 4
+              },
+              {
+                "path_length": 2,
+                "tx": 14,
+                "sy": 5,
+                "distance": 2,
+                "sx": 16,
+                "ty": 5
+              }
+            ]
+          },
+          {
+            "name": "medium",
+            "queries": [
+              {
+                "path_length": 15,
+                "tx": 10,
+                "sy": 5,
+                "distance": 14,
+                "sx": 16,
+                "ty": 19
+              },
+              {
+                "path_length": 15,
+                "tx": 11,
+                "sy": 5,
+                "distance": 14,
+                "sx": 16,
+                "ty": 19
+              },
+              {
+                "path_length": 15,
+                "tx": 12,
+                "sy": 5,
+                "distance": 14,
+                "sx": 16,
+                "ty": 19
+              },
+              {
+                "path_length": 15,
+                "tx": 13,
+                "sy": 5,
+                "distance": 14,
+                "sx": 16,
+                "ty": 19
+              },
+              {
+                "path_length": 15,
+                "tx": 14,
+                "sy": 5,
+                "distance": 14,
+                "sx": 16,
+                "ty": 19
+              },
+              {
+                "path_length": 14,
+                "tx": 10,
+                "sy": 5,
+                "distance": 13,
+                "sx": 16,
+                "ty": 18
+              },
+              {
+                "path_length": 14,
+                "tx": 11,
+                "sy": 5,
+                "distance": 13,
+                "sx": 16,
+                "ty": 18
+              },
+              {
+                "path_length": 14,
+                "tx": 12,
+                "sy": 5,
+                "distance": 13,
+                "sx": 16,
+                "ty": 18
+              }
+            ]
+          },
+          {
+            "name": "long",
+            "queries": [
+              {
+                "path_length": 51,
+                "tx": 19,
+                "sy": 5,
+                "distance": 41,
+                "sx": 16,
+                "ty": 46
+              },
+              {
+                "path_length": 63,
+                "tx": 41,
+                "sy": 5,
+                "distance": 41,
+                "sx": 16,
+                "ty": 46
+              },
+              {
+                "path_length": 60,
+                "tx": 42,
+                "sy": 5,
+                "distance": 41,
+                "sx": 16,
+                "ty": 46
+              },
+              {
+                "path_length": 60,
+                "tx": 43,
+                "sy": 5,
+                "distance": 41,
+                "sx": 16,
+                "ty": 46
+              },
+              {
+                "path_length": 60,
+                "tx": 44,
+                "sy": 5,
+                "distance": 41,
+                "sx": 16,
+                "ty": 46
+              },
+              {
+                "path_length": 60,
+                "tx": 45,
+                "sy": 5,
+                "distance": 41,
+                "sx": 16,
+                "ty": 46
+              },
+              {
+                "path_length": 60,
+                "tx": 46,
+                "sy": 5,
+                "distance": 41,
+                "sx": 16,
+                "ty": 46
+              },
+              {
+                "path_length": 63,
+                "tx": 47,
+                "sy": 5,
+                "distance": 41,
+                "sx": 16,
+                "ty": 46
+              }
+            ]
+          },
+          {
+            "name": "unreachable",
+            "queries": {}
+          }
+        ],
+        "path_cache": true,
+        "assertions": 96,
+        "effect_stats": {
+          "native_bytes": 0,
+          "max_entries": 32,
+          "entries": 0,
+          "max_grids": 4096,
+          "max_native_bytes": 4194304,
+          "hits": 0,
+          "draws": 0,
+          "extra_fbos": 0,
+          "saved_draws": 0,
+          "misses": 0,
+          "skips": 0
+        },
+        "fbo_guard": true,
+        "kind": "setup",
+        "before": {
+          "x": 16,
+          "paused": true,
+          "y": 5,
+          "turn": 1933440,
+          "actors": 14,
+          "life": 1103.8
+        },
+        "runtime": "LuaJIT 2.0.2",
+        "map_h": 50,
+        "targets": 818
+      },
+      "complete": {
+        "after": {
+          "x": 16,
+          "paused": true,
+          "y": 5,
+          "turn": 1933440,
+          "actors": 14,
+          "life": 1103.8
+        },
+        "kind": "complete",
+        "checksum": 444318,
+        "effect_stats": {
+          "native_bytes": 0,
+          "max_entries": 32,
+          "entries": 0,
+          "max_grids": 4096,
+          "max_native_bytes": 4194304,
+          "hits": 0,
+          "draws": 0,
+          "extra_fbos": 0,
+          "saved_draws": 0,
+          "misses": 0,
+          "skips": 0
+        },
+        "assertions": 96
+      }
+    },
+    {
+      "name": "formal-03",
+      "elapsed_s": 10.188699366000947,
+      "source_sha256": {
+        "run_game_bench.py": "efcaecb2b8bc9b0b49d74500bc33077428bdfe4aa42370eaabcd1dd743088297",
+        "runtime/game/addons/tome-faster/hooks/load.lua": "5b5a490b72d202100118eee4dfc847daab18b2e3f98d25d845dca20715df7ed8",
+        "runtime/game/addons/tome-faster/init.lua": "9031331764c760e9aabc111129553757a0331add23d486505fe6bf158a50fbe3",
+        "runtime/game/addons/tome-faster/overload/data/gfx/particles/dreamhammer.lua": "b7758e9ecc6e63328a60350919aacceb7fb56e1ecfdbe5eb84ecacfd11f66295",
+        "runtime/game/addons/tome-faster/overload/data/gfx/particles/notice_enemy.lua": "70e2d4f481e3f982cb7b963ed0a1cda6f5019c904f5522004a0c82a9d8c291b6",
+        "runtime/game/addons/tome-faster/overload/engine/CacheList.lua": "3194e47e6e67b3f0bcb0116458f107222dc9a26ef696eb18c2b3920efbb6b564",
+        "runtime/game/addons/tome-faster/overload/engine/FBOGCGuard.lua": "6ef95d4778863fdb1e8563d867a4d7d755afa715842d0e88f30fb18453aaf085",
+        "runtime/game/addons/tome-faster/overload/engine/FasterAI.lua": "ba41c2ef1a68969bb568cac1430e9bc23794737b6f50db1578b465e2a1614199",
+        "runtime/game/addons/tome-faster/overload/engine/FasterChardump.lua": "e9f36c1700f241987bd672562a98ee03ce15e0fba1bde9dea748e17104dc2fe1",
+        "runtime/game/addons/tome-faster/overload/engine/FasterClone.lua": "e9a897b8f63a790bfb42e33371b377a21039578a3cf07e8341de7527b09bf18c",
+        "runtime/game/addons/tome-faster/overload/engine/FasterCloneRefresh.lua": "c7d05a159ebf4b1cd13cf2b4fb689eb62e828f8f5ca60eca59d1e2ae483038e8",
+        "runtime/game/addons/tome-faster/overload/engine/FasterEffectMask.lua": "8dc8724f17943b63a87419f827685aa2e1aa2c015a0a6c5dbcbc18798a8b3033",
+        "runtime/game/addons/tome-faster/overload/engine/FasterExportCleanup.lua": "e3e9f1b6d18f94b872e85744b75d4718286066477ae21eae63ad982ea797abf6",
+        "runtime/game/addons/tome-faster/overload/engine/FasterGzip.lua": "93dd291c9c12d89f5ee78c51c34f08d6871563142c26e9ca89fe6eef42a59c0e",
+        "runtime/game/addons/tome-faster/overload/engine/FasterHotkeys.lua": "f69e468372567ce9d7af98839231632a5d9136a0011b96360e24ce6f1e52b4aa",
+        "runtime/game/addons/tome-faster/overload/engine/FasterProfile.lua": "74248114a34410eec068ce95006c13679ed03792f54ed831fbfd85926ba0e15f",
+        "runtime/game/addons/tome-faster/overload/engine/FasterRuntime.lua": "b9ab8757e16e959d701bede560f59a804cbaa8887aaa85adab1c294e3832d802",
+        "runtime/game/addons/tome-faster/overload/engine/FasterSave.lua": "07ee23e298cb937fe2150b0a1a87123b425318c7850dc3cba8a87d6089f638b2",
+        "runtime/game/addons/tome-faster/overload/engine/FasterSaveFollowup.lua": "6bdc0f668e1a265f4c57bbfeed1f7f2ce261f8520b7d4fce2b56e68790d86eb8",
+        "runtime/game/addons/tome-faster/overload/engine/FasterScreenshot.lua": "8e75c9c89d84ba9e502dc3f3b29f82841a0659f60d616c3e5044526115b8737d",
+        "runtime/game/addons/tome-faster/overload/engine/FasterSnapshotRefresh.lua": "18670b6dbe5cf81f3fadd7f44df690354b7c25aca32dc2a38603b3fbdd59e783",
+        "runtime/game/addons/tome-faster/superload/engine/Astar.lua": "40c1c4018956a3371dddac33eb11df7fb4b6915b7add4ecb3c52e24d5cf6bfc4",
+        "runtime/game/addons/tome-faster/superload/engine/HotkeysIconsDisplay.lua": "0a5e7300c9794b768ece0bc118c84ac8545a9399a02c8072d0752421e7008371",
+        "runtime/game/addons/tome-faster/superload/engine/Map.lua": "c9f0da08abe403ad63f4311dfe59ec52dffe0ede9d4b8e3317ca5eefa6cd5998",
+        "runtime/game/addons/tome-faster/superload/mod/class/Game.lua": "191fe266d58df42bf30c2cc1da25bc0d104394dd917c1e629d30f031ea5a96eb",
+        "runtime/game/addons/tome-faster/superload/mod/class/Player.lua": "d3b22c3244400d3fe7e1c2954af7f5bf8f6368c0ddedd0aecc31321d2a54ad6e",
+        "runtime/game/addons/tome-faster/superload/mod/dialogs/ShowChatLog.lua": "ef4e9f58e6ad53033ae26d9943df0b7895eaa61c0964c399246eee1963a6476d",
+        "runtime/game/addons/tome-faster-ai-bench/hooks/load.lua": "69a6202b4c1a4b90d347f1d987bc3c82d264102e7ed659758a3118c5888c4b93",
+        "runtime/game/addons/tome-faster-ai-bench/init.lua": "6f589c837a76843bfa2c58611465aab9df0959efb247420522baa903cc80fe34",
+        "runtime/game/addons/tome-faster-ai-bench/overload/engine/FasterAIBench.lua": "f9464183895c4ffddec1b7aba3d282db3c496de6e2a0cd0df0b2d8f5f634b963"
+      },
+      "save_files_unchanged": true,
+      "setup": {
+        "map_w": 50,
+        "jit": true,
+        "groups": [
+          {
+            "name": "short",
+            "queries": [
+              {
+                "path_length": 3,
+                "tx": 13,
+                "sy": 5,
+                "distance": 3,
+                "sx": 16,
+                "ty": 5
+              },
+              {
+                "path_length": 3,
+                "tx": 13,
+                "sy": 5,
+                "distance": 3,
+                "sx": 16,
+                "ty": 6
+              },
+              {
+                "path_length": 3,
+                "tx": 13,
+                "sy": 5,
+                "distance": 3,
+                "sx": 16,
+                "ty": 7
+              },
+              {
+                "path_length": 2,
+                "tx": 14,
+                "sy": 5,
+                "distance": 2,
+                "sx": 16,
+                "ty": 3
+              },
+              {
+                "path_length": 2,
+                "tx": 15,
+                "sy": 5,
+                "distance": 2,
+                "sx": 16,
+                "ty": 3
+              },
+              {
+                "path_length": 2,
+                "tx": 16,
+                "sy": 5,
+                "distance": 2,
+                "sx": 16,
+                "ty": 3
+              },
+              {
+                "path_length": 2,
+                "tx": 14,
+                "sy": 5,
+                "distance": 2,
+                "sx": 16,
+                "ty": 4
+              },
+              {
+                "path_length": 2,
+                "tx": 14,
+                "sy": 5,
+                "distance": 2,
+                "sx": 16,
+                "ty": 5
+              }
+            ]
+          },
+          {
+            "name": "medium",
+            "queries": [
+              {
+                "path_length": 15,
+                "tx": 10,
+                "sy": 5,
+                "distance": 14,
+                "sx": 16,
+                "ty": 19
+              },
+              {
+                "path_length": 15,
+                "tx": 11,
+                "sy": 5,
+                "distance": 14,
+                "sx": 16,
+                "ty": 19
+              },
+              {
+                "path_length": 15,
+                "tx": 12,
+                "sy": 5,
+                "distance": 14,
+                "sx": 16,
+                "ty": 19
+              },
+              {
+                "path_length": 15,
+                "tx": 13,
+                "sy": 5,
+                "distance": 14,
+                "sx": 16,
+                "ty": 19
+              },
+              {
+                "path_length": 15,
+                "tx": 14,
+                "sy": 5,
+                "distance": 14,
+                "sx": 16,
+                "ty": 19
+              },
+              {
+                "path_length": 14,
+                "tx": 10,
+                "sy": 5,
+                "distance": 13,
+                "sx": 16,
+                "ty": 18
+              },
+              {
+                "path_length": 14,
+                "tx": 11,
+                "sy": 5,
+                "distance": 13,
+                "sx": 16,
+                "ty": 18
+              },
+              {
+                "path_length": 14,
+                "tx": 12,
+                "sy": 5,
+                "distance": 13,
+                "sx": 16,
+                "ty": 18
+              }
+            ]
+          },
+          {
+            "name": "long",
+            "queries": [
+              {
+                "path_length": 51,
+                "tx": 19,
+                "sy": 5,
+                "distance": 41,
+                "sx": 16,
+                "ty": 46
+              },
+              {
+                "path_length": 63,
+                "tx": 41,
+                "sy": 5,
+                "distance": 41,
+                "sx": 16,
+                "ty": 46
+              },
+              {
+                "path_length": 60,
+                "tx": 42,
+                "sy": 5,
+                "distance": 41,
+                "sx": 16,
+                "ty": 46
+              },
+              {
+                "path_length": 60,
+                "tx": 43,
+                "sy": 5,
+                "distance": 41,
+                "sx": 16,
+                "ty": 46
+              },
+              {
+                "path_length": 60,
+                "tx": 44,
+                "sy": 5,
+                "distance": 41,
+                "sx": 16,
+                "ty": 46
+              },
+              {
+                "path_length": 60,
+                "tx": 45,
+                "sy": 5,
+                "distance": 41,
+                "sx": 16,
+                "ty": 46
+              },
+              {
+                "path_length": 60,
+                "tx": 46,
+                "sy": 5,
+                "distance": 41,
+                "sx": 16,
+                "ty": 46
+              },
+              {
+                "path_length": 63,
+                "tx": 47,
+                "sy": 5,
+                "distance": 41,
+                "sx": 16,
+                "ty": 46
+              }
+            ]
+          },
+          {
+            "name": "unreachable",
+            "queries": {}
+          }
+        ],
+        "path_cache": true,
+        "assertions": 96,
+        "effect_stats": {
+          "native_bytes": 0,
+          "max_entries": 32,
+          "entries": 0,
+          "max_grids": 4096,
+          "max_native_bytes": 4194304,
+          "hits": 0,
+          "draws": 0,
+          "extra_fbos": 0,
+          "saved_draws": 0,
+          "misses": 0,
+          "skips": 0
+        },
+        "fbo_guard": true,
+        "kind": "setup",
+        "before": {
+          "x": 16,
+          "paused": true,
+          "y": 5,
+          "turn": 1933440,
+          "actors": 14,
+          "life": 1103.8
+        },
+        "runtime": "LuaJIT 2.0.2",
+        "map_h": 50,
+        "targets": 818
+      },
+      "complete": {
+        "after": {
+          "x": 16,
+          "paused": true,
+          "y": 5,
+          "turn": 1933440,
+          "actors": 14,
+          "life": 1103.8
+        },
+        "kind": "complete",
+        "checksum": 475710,
+        "effect_stats": {
+          "native_bytes": 0,
+          "max_entries": 32,
+          "entries": 0,
+          "max_grids": 4096,
+          "max_native_bytes": 4194304,
+          "hits": 0,
+          "draws": 0,
+          "extra_fbos": 0,
+          "saved_draws": 0,
+          "misses": 0,
+          "skips": 0
+        },
+        "assertions": 96
+      }
+    }
+  ],
+  "raw": [
+    {
+      "session": "formal-01",
+      "variant": "original",
+      "round": 1,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 26.02679798007,
+      "cpu_ms": 25.974912,
+      "group": "short"
+    },
+    {
+      "session": "formal-01",
+      "variant": "neighbors",
+      "round": 1,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 22.698898017406,
+      "cpu_ms": 22.65219,
+      "group": "short"
+    },
+    {
+      "session": "formal-01",
+      "variant": "both",
+      "round": 1,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 23.021820992231,
+      "cpu_ms": 22.977716,
+      "group": "short"
+    },
+    {
+      "session": "formal-01",
+      "variant": "heap",
+      "round": 1,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 23.422765016556,
+      "cpu_ms": 23.378991,
+      "group": "short"
+    },
+    {
+      "session": "formal-01",
+      "variant": "neighbors",
+      "round": 2,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 23.379654020071,
+      "cpu_ms": 23.335202,
+      "group": "short"
+    },
+    {
+      "session": "formal-01",
+      "variant": "heap",
+      "round": 2,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 23.680856972933,
+      "cpu_ms": 23.635945,
+      "group": "short"
+    },
+    {
+      "session": "formal-01",
+      "variant": "original",
+      "round": 2,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 25.595964998007,
+      "cpu_ms": 25.547825,
+      "group": "short"
+    },
+    {
+      "session": "formal-01",
+      "variant": "both",
+      "round": 2,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 32.253944993019,
+      "cpu_ms": 32.179525,
+      "group": "short"
+    },
+    {
+      "session": "formal-01",
+      "variant": "heap",
+      "round": 3,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 30.093834996223,
+      "cpu_ms": 30.011579,
+      "group": "short"
+    },
+    {
+      "session": "formal-01",
+      "variant": "both",
+      "round": 3,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 24.623274981976,
+      "cpu_ms": 24.566672,
+      "group": "short"
+    },
+    {
+      "session": "formal-01",
+      "variant": "neighbors",
+      "round": 3,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 23.346002995968,
+      "cpu_ms": 23.286328,
+      "group": "short"
+    },
+    {
+      "session": "formal-01",
+      "variant": "original",
+      "round": 3,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 29.215317994356,
+      "cpu_ms": 29.150484,
+      "group": "short"
+    },
+    {
+      "session": "formal-01",
+      "variant": "both",
+      "round": 4,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 23.516835004091,
+      "cpu_ms": 23.463073,
+      "group": "short"
+    },
+    {
+      "session": "formal-01",
+      "variant": "original",
+      "round": 4,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 26.334002017975,
+      "cpu_ms": 26.280579,
+      "group": "short"
+    },
+    {
+      "session": "formal-01",
+      "variant": "heap",
+      "round": 4,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 23.656346976757,
+      "cpu_ms": 23.606865,
+      "group": "short"
+    },
+    {
+      "session": "formal-01",
+      "variant": "neighbors",
+      "round": 4,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 23.061370998621,
+      "cpu_ms": 23.012716,
+      "group": "short"
+    },
+    {
+      "session": "formal-01",
+      "variant": "original",
+      "round": 5,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 26.257919996977,
+      "cpu_ms": 26.204097,
+      "group": "short"
+    },
+    {
+      "session": "formal-01",
+      "variant": "neighbors",
+      "round": 5,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 23.574585974216,
+      "cpu_ms": 23.525723,
+      "group": "short"
+    },
+    {
+      "session": "formal-01",
+      "variant": "both",
+      "round": 5,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 23.138641983271,
+      "cpu_ms": 23.094446,
+      "group": "short"
+    },
+    {
+      "session": "formal-01",
+      "variant": "heap",
+      "round": 5,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 23.872229009867,
+      "cpu_ms": 23.819738,
+      "group": "short"
+    },
+    {
+      "session": "formal-01",
+      "variant": "neighbors",
+      "round": 6,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 23.350573986769,
+      "cpu_ms": 23.302339,
+      "group": "short"
+    },
+    {
+      "session": "formal-01",
+      "variant": "heap",
+      "round": 6,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 25.562463998795,
+      "cpu_ms": 25.518748,
+      "group": "short"
+    },
+    {
+      "session": "formal-01",
+      "variant": "original",
+      "round": 6,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 27.256009012461,
+      "cpu_ms": 27.202463,
+      "group": "short"
+    },
+    {
+      "session": "formal-01",
+      "variant": "both",
+      "round": 6,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 23.517075002193,
+      "cpu_ms": 23.469131,
+      "group": "short"
+    },
+    {
+      "session": "formal-01",
+      "variant": "heap",
+      "round": 7,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 23.545125991106,
+      "cpu_ms": 23.497333,
+      "group": "short"
+    },
+    {
+      "session": "formal-01",
+      "variant": "both",
+      "round": 7,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 23.000690996647,
+      "cpu_ms": 22.948004,
+      "group": "short"
+    },
+    {
+      "session": "formal-01",
+      "variant": "neighbors",
+      "round": 7,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 22.916819989681,
+      "cpu_ms": 22.871992,
+      "group": "short"
+    },
+    {
+      "session": "formal-01",
+      "variant": "original",
+      "round": 7,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 26.583012998104,
+      "cpu_ms": 26.534021,
+      "group": "short"
+    },
+    {
+      "session": "formal-01",
+      "variant": "both",
+      "round": 8,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 23.003401011229,
+      "cpu_ms": 22.957515,
+      "group": "short"
+    },
+    {
+      "session": "formal-01",
+      "variant": "original",
+      "round": 8,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 25.812345981598,
+      "cpu_ms": 25.76551,
+      "group": "short"
+    },
+    {
+      "session": "formal-01",
+      "variant": "heap",
+      "round": 8,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 23.484144985676,
+      "cpu_ms": 23.438002,
+      "group": "short"
+    },
+    {
+      "session": "formal-01",
+      "variant": "neighbors",
+      "round": 8,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 23.329824000597,
+      "cpu_ms": 23.273781,
+      "group": "short"
+    },
+    {
+      "session": "formal-01",
+      "variant": "original",
+      "kind": "allocation",
+      "queries": 8,
+      "allocated_kib": 29.2734375,
+      "group": "short"
+    },
+    {
+      "session": "formal-01",
+      "variant": "neighbors",
+      "kind": "allocation",
+      "queries": 8,
+      "allocated_kib": 22.5625,
+      "group": "short"
+    },
+    {
+      "session": "formal-01",
+      "variant": "heap",
+      "kind": "allocation",
+      "queries": 8,
+      "allocated_kib": 27.8671875,
+      "group": "short"
+    },
+    {
+      "session": "formal-01",
+      "variant": "both",
+      "kind": "allocation",
+      "queries": 8,
+      "allocated_kib": 22.5625,
+      "group": "short"
+    },
+    {
+      "session": "formal-01",
+      "variant": "original",
+      "round": 1,
+      "kind": "timing",
+      "queries": 336,
+      "wall_ms": 24.632075995207,
+      "cpu_ms": 24.578238,
+      "group": "medium"
+    },
+    {
+      "session": "formal-01",
+      "variant": "neighbors",
+      "round": 1,
+      "kind": "timing",
+      "queries": 336,
+      "wall_ms": 18.824372023344,
+      "cpu_ms": 18.780337,
+      "group": "medium"
+    },
+    {
+      "session": "formal-01",
+      "variant": "both",
+      "round": 1,
+      "kind": "timing",
+      "queries": 336,
+      "wall_ms": 18.973704010248,
+      "cpu_ms": 18.93543,
+      "group": "medium"
+    },
+    {
+      "session": "formal-01",
+      "variant": "heap",
+      "round": 1,
+      "kind": "timing",
+      "queries": 336,
+      "wall_ms": 27.402119994164,
+      "cpu_ms": 27.339665,
+      "group": "medium"
+    },
+    {
+      "session": "formal-01",
+      "variant": "neighbors",
+      "round": 2,
+      "kind": "timing",
+      "queries": 336,
+      "wall_ms": 18.804721981287,
+      "cpu_ms": 18.765829,
+      "group": "medium"
+    },
+    {
+      "session": "formal-01",
+      "variant": "heap",
+      "round": 2,
+      "kind": "timing",
+      "queries": 336,
+      "wall_ms": 29.601691007614,
+      "cpu_ms": 29.531309,
+      "group": "medium"
+    },
+    {
+      "session": "formal-01",
+      "variant": "original",
+      "round": 2,
+      "kind": "timing",
+      "queries": 336,
+      "wall_ms": 29.602011024952,
+      "cpu_ms": 29.536867,
+      "group": "medium"
+    },
+    {
+      "session": "formal-01",
+      "variant": "both",
+      "round": 2,
+      "kind": "timing",
+      "queries": 336,
+      "wall_ms": 19.423368006945,
+      "cpu_ms": 19.381057000001,
+      "group": "medium"
+    },
+    {
+      "session": "formal-01",
+      "variant": "heap",
+      "round": 3,
+      "kind": "timing",
+      "queries": 336,
+      "wall_ms": 22.445645004511,
+      "cpu_ms": 22.399687,
+      "group": "medium"
+    },
+    {
+      "session": "formal-01",
+      "variant": "both",
+      "round": 3,
+      "kind": "timing",
+      "queries": 336,
+      "wall_ms": 18.682951003313,
+      "cpu_ms": 18.642975,
+      "group": "medium"
+    },
+    {
+      "session": "formal-01",
+      "variant": "neighbors",
+      "round": 3,
+      "kind": "timing",
+      "queries": 336,
+      "wall_ms": 18.260527998209,
+      "cpu_ms": 18.221079,
+      "group": "medium"
+    },
+    {
+      "session": "formal-01",
+      "variant": "original",
+      "round": 3,
+      "kind": "timing",
+      "queries": 336,
+      "wall_ms": 22.945700019598,
+      "cpu_ms": 22.903013,
+      "group": "medium"
+    },
+    {
+      "session": "formal-01",
+      "variant": "both",
+      "round": 4,
+      "kind": "timing",
+      "queries": 336,
+      "wall_ms": 18.741681993008,
+      "cpu_ms": 18.700969,
+      "group": "medium"
+    },
+    {
+      "session": "formal-01",
+      "variant": "original",
+      "round": 4,
+      "kind": "timing",
+      "queries": 336,
+      "wall_ms": 22.62157702446,
+      "cpu_ms": 22.578288000001,
+      "group": "medium"
+    },
+    {
+      "session": "formal-01",
+      "variant": "heap",
+      "round": 4,
+      "kind": "timing",
+      "queries": 336,
+      "wall_ms": 22.386135011911,
+      "cpu_ms": 22.339943999999,
+      "group": "medium"
+    },
+    {
+      "session": "formal-01",
+      "variant": "neighbors",
+      "round": 4,
+      "kind": "timing",
+      "queries": 336,
+      "wall_ms": 18.620079994202,
+      "cpu_ms": 18.579055,
+      "group": "medium"
+    },
+    {
+      "session": "formal-01",
+      "variant": "original",
+      "round": 5,
+      "kind": "timing",
+      "queries": 336,
+      "wall_ms": 22.773328989744,
+      "cpu_ms": 22.728802,
+      "group": "medium"
+    },
+    {
+      "session": "formal-01",
+      "variant": "neighbors",
+      "round": 5,
+      "kind": "timing",
+      "queries": 336,
+      "wall_ms": 18.336497992277,
+      "cpu_ms": 18.299091,
+      "group": "medium"
+    },
+    {
+      "session": "formal-01",
+      "variant": "both",
+      "round": 5,
+      "kind": "timing",
+      "queries": 336,
+      "wall_ms": 18.664820998907,
+      "cpu_ms": 18.629277999999,
+      "group": "medium"
+    },
+    {
+      "session": "formal-01",
+      "variant": "heap",
+      "round": 5,
+      "kind": "timing",
+      "queries": 336,
+      "wall_ms": 21.968591988087,
+      "cpu_ms": 21.927046,
+      "group": "medium"
+    },
+    {
+      "session": "formal-01",
+      "variant": "neighbors",
+      "round": 6,
+      "kind": "timing",
+      "queries": 336,
+      "wall_ms": 18.323927998543,
+      "cpu_ms": 18.287878,
+      "group": "medium"
+    },
+    {
+      "session": "formal-01",
+      "variant": "heap",
+      "round": 6,
+      "kind": "timing",
+      "queries": 336,
+      "wall_ms": 22.344273984432,
+      "cpu_ms": 22.299092,
+      "group": "medium"
+    },
+    {
+      "session": "formal-01",
+      "variant": "original",
+      "round": 6,
+      "kind": "timing",
+      "queries": 336,
+      "wall_ms": 22.785869002342,
+      "cpu_ms": 22.742095,
+      "group": "medium"
+    },
+    {
+      "session": "formal-01",
+      "variant": "both",
+      "round": 6,
+      "kind": "timing",
+      "queries": 336,
+      "wall_ms": 18.854582995176,
+      "cpu_ms": 18.818291,
+      "group": "medium"
+    },
+    {
+      "session": "formal-01",
+      "variant": "heap",
+      "round": 7,
+      "kind": "timing",
+      "queries": 336,
+      "wall_ms": 24.152790993452,
+      "cpu_ms": 24.100096,
+      "group": "medium"
+    },
+    {
+      "session": "formal-01",
+      "variant": "both",
+      "round": 7,
+      "kind": "timing",
+      "queries": 336,
+      "wall_ms": 20.749529987574,
+      "cpu_ms": 20.640958,
+      "group": "medium"
+    },
+    {
+      "session": "formal-01",
+      "variant": "neighbors",
+      "round": 7,
+      "kind": "timing",
+      "queries": 336,
+      "wall_ms": 18.34599801898,
+      "cpu_ms": 18.309183,
+      "group": "medium"
+    },
+    {
+      "session": "formal-01",
+      "variant": "original",
+      "round": 7,
+      "kind": "timing",
+      "queries": 336,
+      "wall_ms": 22.452575981617,
+      "cpu_ms": 22.408926,
+      "group": "medium"
+    },
+    {
+      "session": "formal-01",
+      "variant": "both",
+      "round": 8,
+      "kind": "timing",
+      "queries": 336,
+      "wall_ms": 18.365497976542,
+      "cpu_ms": 18.329742999999,
+      "group": "medium"
+    },
+    {
+      "session": "formal-01",
+      "variant": "original",
+      "round": 8,
+      "kind": "timing",
+      "queries": 336,
+      "wall_ms": 22.051562011242,
+      "cpu_ms": 22.002862,
+      "group": "medium"
+    },
+    {
+      "session": "formal-01",
+      "variant": "heap",
+      "round": 8,
+      "kind": "timing",
+      "queries": 336,
+      "wall_ms": 23.126471996307,
+      "cpu_ms": 23.076545,
+      "group": "medium"
+    },
+    {
+      "session": "formal-01",
+      "variant": "neighbors",
+      "round": 8,
+      "kind": "timing",
+      "queries": 336,
+      "wall_ms": 19.915111988783,
+      "cpu_ms": 19.870206000001,
+      "group": "medium"
+    },
+    {
+      "session": "formal-01",
+      "variant": "original",
+      "kind": "allocation",
+      "queries": 8,
+      "allocated_kib": 165.5859375,
+      "group": "medium"
+    },
+    {
+      "session": "formal-01",
+      "variant": "neighbors",
+      "kind": "allocation",
+      "queries": 8,
+      "allocated_kib": 70.921875,
+      "group": "medium"
+    },
+    {
+      "session": "formal-01",
+      "variant": "heap",
+      "kind": "allocation",
+      "queries": 8,
+      "allocated_kib": 154.4296875,
+      "group": "medium"
+    },
+    {
+      "session": "formal-01",
+      "variant": "both",
+      "kind": "allocation",
+      "queries": 8,
+      "allocated_kib": 70.921875,
+      "group": "medium"
+    },
+    {
+      "session": "formal-01",
+      "variant": "original",
+      "round": 1,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 32.061033993959,
+      "cpu_ms": 32.002346,
+      "group": "long"
+    },
+    {
+      "session": "formal-01",
+      "variant": "neighbors",
+      "round": 1,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 24.838587015867,
+      "cpu_ms": 24.794734,
+      "group": "long"
+    },
+    {
+      "session": "formal-01",
+      "variant": "both",
+      "round": 1,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 25.770534992218,
+      "cpu_ms": 25.730108,
+      "group": "long"
+    },
+    {
+      "session": "formal-01",
+      "variant": "heap",
+      "round": 1,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 32.083213984966,
+      "cpu_ms": 32.028185,
+      "group": "long"
+    },
+    {
+      "session": "formal-01",
+      "variant": "neighbors",
+      "round": 2,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 24.689545989037,
+      "cpu_ms": 24.649023,
+      "group": "long"
+    },
+    {
+      "session": "formal-01",
+      "variant": "heap",
+      "round": 2,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 31.515388995409,
+      "cpu_ms": 31.460951,
+      "group": "long"
+    },
+    {
+      "session": "formal-01",
+      "variant": "original",
+      "round": 2,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 31.40184700489,
+      "cpu_ms": 31.34879,
+      "group": "long"
+    },
+    {
+      "session": "formal-01",
+      "variant": "both",
+      "round": 2,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 25.719105005264,
+      "cpu_ms": 25.678389,
+      "group": "long"
+    },
+    {
+      "session": "formal-01",
+      "variant": "heap",
+      "round": 3,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 32.169423997402,
+      "cpu_ms": 32.10642,
+      "group": "long"
+    },
+    {
+      "session": "formal-01",
+      "variant": "both",
+      "round": 3,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 25.729285985231,
+      "cpu_ms": 25.68811,
+      "group": "long"
+    },
+    {
+      "session": "formal-01",
+      "variant": "neighbors",
+      "round": 3,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 24.66276499629,
+      "cpu_ms": 24.622289,
+      "group": "long"
+    },
+    {
+      "session": "formal-01",
+      "variant": "original",
+      "round": 3,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 31.383897006512,
+      "cpu_ms": 31.334527999999,
+      "group": "long"
+    },
+    {
+      "session": "formal-01",
+      "variant": "both",
+      "round": 4,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 25.780566006899,
+      "cpu_ms": 25.74058,
+      "group": "long"
+    },
+    {
+      "session": "formal-01",
+      "variant": "original",
+      "round": 4,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 31.330056995153,
+      "cpu_ms": 31.276917,
+      "group": "long"
+    },
+    {
+      "session": "formal-01",
+      "variant": "heap",
+      "round": 4,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 31.66863900423,
+      "cpu_ms": 31.616534,
+      "group": "long"
+    },
+    {
+      "session": "formal-01",
+      "variant": "neighbors",
+      "round": 4,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 26.150259017944,
+      "cpu_ms": 26.105445,
+      "group": "long"
+    },
+    {
+      "session": "formal-01",
+      "variant": "original",
+      "round": 5,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 35.179221987724,
+      "cpu_ms": 35.111659,
+      "group": "long"
+    },
+    {
+      "session": "formal-01",
+      "variant": "neighbors",
+      "round": 5,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 25.26814198494,
+      "cpu_ms": 25.214220999999,
+      "group": "long"
+    },
+    {
+      "session": "formal-01",
+      "variant": "both",
+      "round": 5,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 26.153369009495,
+      "cpu_ms": 26.104117000001,
+      "group": "long"
+    },
+    {
+      "session": "formal-01",
+      "variant": "heap",
+      "round": 5,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 33.808649986982,
+      "cpu_ms": 33.742068,
+      "group": "long"
+    },
+    {
+      "session": "formal-01",
+      "variant": "neighbors",
+      "round": 6,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 24.85819798708,
+      "cpu_ms": 24.814413,
+      "group": "long"
+    },
+    {
+      "session": "formal-01",
+      "variant": "heap",
+      "round": 6,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 32.303784996271,
+      "cpu_ms": 32.211024,
+      "group": "long"
+    },
+    {
+      "session": "formal-01",
+      "variant": "original",
+      "round": 6,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 31.881242007017,
+      "cpu_ms": 31.815565000001,
+      "group": "long"
+    },
+    {
+      "session": "formal-01",
+      "variant": "both",
+      "round": 6,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 25.726685017347,
+      "cpu_ms": 25.679287000001,
+      "group": "long"
+    },
+    {
+      "session": "formal-01",
+      "variant": "heap",
+      "round": 7,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 31.752270013094,
+      "cpu_ms": 31.687195,
+      "group": "long"
+    },
+    {
+      "session": "formal-01",
+      "variant": "both",
+      "round": 7,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 26.698173999786,
+      "cpu_ms": 26.644415,
+      "group": "long"
+    },
+    {
+      "session": "formal-01",
+      "variant": "neighbors",
+      "round": 7,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 26.141119003296,
+      "cpu_ms": 26.088626,
+      "group": "long"
+    },
+    {
+      "session": "formal-01",
+      "variant": "original",
+      "round": 7,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 38.154928982258,
+      "cpu_ms": 38.078035,
+      "group": "long"
+    },
+    {
+      "session": "formal-01",
+      "variant": "both",
+      "round": 8,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 26.059579014778,
+      "cpu_ms": 26.014463,
+      "group": "long"
+    },
+    {
+      "session": "formal-01",
+      "variant": "original",
+      "round": 8,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 31.959412992001,
+      "cpu_ms": 31.901895999999,
+      "group": "long"
+    },
+    {
+      "session": "formal-01",
+      "variant": "heap",
+      "round": 8,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 32.060054004192,
+      "cpu_ms": 31.997987000001,
+      "group": "long"
+    },
+    {
+      "session": "formal-01",
+      "variant": "neighbors",
+      "round": 8,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 25.033778995275,
+      "cpu_ms": 24.992085,
+      "group": "long"
+    },
+    {
+      "session": "formal-01",
+      "variant": "original",
+      "kind": "allocation",
+      "queries": 8,
+      "allocated_kib": 2432.3359375,
+      "group": "long"
+    },
+    {
+      "session": "formal-01",
+      "variant": "neighbors",
+      "kind": "allocation",
+      "queries": 8,
+      "allocated_kib": 453.796875,
+      "group": "long"
+    },
+    {
+      "session": "formal-01",
+      "variant": "heap",
+      "kind": "allocation",
+      "queries": 8,
+      "allocated_kib": 2337.1796875,
+      "group": "long"
+    },
+    {
+      "session": "formal-01",
+      "variant": "both",
+      "kind": "allocation",
+      "queries": 8,
+      "allocated_kib": 453.796875,
+      "group": "long"
+    },
+    {
+      "session": "formal-02",
+      "variant": "original",
+      "round": 1,
+      "kind": "timing",
+      "queries": 2488,
+      "wall_ms": 24.15162101388,
+      "cpu_ms": 24.104316,
+      "group": "short"
+    },
+    {
+      "session": "formal-02",
+      "variant": "neighbors",
+      "round": 1,
+      "kind": "timing",
+      "queries": 2488,
+      "wall_ms": 22.662007004023,
+      "cpu_ms": 22.61759,
+      "group": "short"
+    },
+    {
+      "session": "formal-02",
+      "variant": "both",
+      "round": 1,
+      "kind": "timing",
+      "queries": 2488,
+      "wall_ms": 22.515136003494,
+      "cpu_ms": 22.471294,
+      "group": "short"
+    },
+    {
+      "session": "formal-02",
+      "variant": "heap",
+      "round": 1,
+      "kind": "timing",
+      "queries": 2488,
+      "wall_ms": 23.170922011137,
+      "cpu_ms": 23.12572,
+      "group": "short"
+    },
+    {
+      "session": "formal-02",
+      "variant": "neighbors",
+      "round": 2,
+      "kind": "timing",
+      "queries": 2488,
+      "wall_ms": 23.061931014061,
+      "cpu_ms": 23.020668,
+      "group": "short"
+    },
+    {
+      "session": "formal-02",
+      "variant": "heap",
+      "round": 2,
+      "kind": "timing",
+      "queries": 2488,
+      "wall_ms": 23.108692020178,
+      "cpu_ms": 23.063417,
+      "group": "short"
+    },
+    {
+      "session": "formal-02",
+      "variant": "original",
+      "round": 2,
+      "kind": "timing",
+      "queries": 2488,
+      "wall_ms": 24.72987601161,
+      "cpu_ms": 24.682894,
+      "group": "short"
+    },
+    {
+      "session": "formal-02",
+      "variant": "both",
+      "round": 2,
+      "kind": "timing",
+      "queries": 2488,
+      "wall_ms": 22.343095004559,
+      "cpu_ms": 22.302304,
+      "group": "short"
+    },
+    {
+      "session": "formal-02",
+      "variant": "heap",
+      "round": 3,
+      "kind": "timing",
+      "queries": 2488,
+      "wall_ms": 28.2348279953,
+      "cpu_ms": 28.175117,
+      "group": "short"
+    },
+    {
+      "session": "formal-02",
+      "variant": "both",
+      "round": 3,
+      "kind": "timing",
+      "queries": 2488,
+      "wall_ms": 23.037111014128,
+      "cpu_ms": 22.989765,
+      "group": "short"
+    },
+    {
+      "session": "formal-02",
+      "variant": "neighbors",
+      "round": 3,
+      "kind": "timing",
+      "queries": 2488,
+      "wall_ms": 24.177581012249,
+      "cpu_ms": 24.134104,
+      "group": "short"
+    },
+    {
+      "session": "formal-02",
+      "variant": "original",
+      "round": 3,
+      "kind": "timing",
+      "queries": 2488,
+      "wall_ms": 24.787916004658,
+      "cpu_ms": 24.737702,
+      "group": "short"
+    },
+    {
+      "session": "formal-02",
+      "variant": "both",
+      "round": 4,
+      "kind": "timing",
+      "queries": 2488,
+      "wall_ms": 22.202832996845,
+      "cpu_ms": 22.159402,
+      "group": "short"
+    },
+    {
+      "session": "formal-02",
+      "variant": "original",
+      "round": 4,
+      "kind": "timing",
+      "queries": 2488,
+      "wall_ms": 27.327479988337,
+      "cpu_ms": 27.262213,
+      "group": "short"
+    },
+    {
+      "session": "formal-02",
+      "variant": "heap",
+      "round": 4,
+      "kind": "timing",
+      "queries": 2488,
+      "wall_ms": 22.72694799304,
+      "cpu_ms": 22.67826,
+      "group": "short"
+    },
+    {
+      "session": "formal-02",
+      "variant": "neighbors",
+      "round": 4,
+      "kind": "timing",
+      "queries": 2488,
+      "wall_ms": 22.128582984209,
+      "cpu_ms": 22.08213,
+      "group": "short"
+    },
+    {
+      "session": "formal-02",
+      "variant": "original",
+      "round": 5,
+      "kind": "timing",
+      "queries": 2488,
+      "wall_ms": 28.265989005566,
+      "cpu_ms": 28.190508,
+      "group": "short"
+    },
+    {
+      "session": "formal-02",
+      "variant": "neighbors",
+      "round": 5,
+      "kind": "timing",
+      "queries": 2488,
+      "wall_ms": 21.793138980865,
+      "cpu_ms": 21.750616,
+      "group": "short"
+    },
+    {
+      "session": "formal-02",
+      "variant": "both",
+      "round": 5,
+      "kind": "timing",
+      "queries": 2488,
+      "wall_ms": 22.031311988831,
+      "cpu_ms": 21.990258,
+      "group": "short"
+    },
+    {
+      "session": "formal-02",
+      "variant": "heap",
+      "round": 5,
+      "kind": "timing",
+      "queries": 2488,
+      "wall_ms": 23.691235989332,
+      "cpu_ms": 23.643095,
+      "group": "short"
+    },
+    {
+      "session": "formal-02",
+      "variant": "neighbors",
+      "round": 6,
+      "kind": "timing",
+      "queries": 2488,
+      "wall_ms": 21.765268981457,
+      "cpu_ms": 21.722335,
+      "group": "short"
+    },
+    {
+      "session": "formal-02",
+      "variant": "heap",
+      "round": 6,
+      "kind": "timing",
+      "queries": 2488,
+      "wall_ms": 22.584616988897,
+      "cpu_ms": 22.539457,
+      "group": "short"
+    },
+    {
+      "session": "formal-02",
+      "variant": "original",
+      "round": 6,
+      "kind": "timing",
+      "queries": 2488,
+      "wall_ms": 28.177037000656,
+      "cpu_ms": 28.104754,
+      "group": "short"
+    },
+    {
+      "session": "formal-02",
+      "variant": "both",
+      "round": 6,
+      "kind": "timing",
+      "queries": 2488,
+      "wall_ms": 21.641306996346,
+      "cpu_ms": 21.600521,
+      "group": "short"
+    },
+    {
+      "session": "formal-02",
+      "variant": "heap",
+      "round": 7,
+      "kind": "timing",
+      "queries": 2488,
+      "wall_ms": 22.141552984715,
+      "cpu_ms": 22.096203,
+      "group": "short"
+    },
+    {
+      "session": "formal-02",
+      "variant": "both",
+      "round": 7,
+      "kind": "timing",
+      "queries": 2488,
+      "wall_ms": 22.321635007858,
+      "cpu_ms": 22.265724,
+      "group": "short"
+    },
+    {
+      "session": "formal-02",
+      "variant": "neighbors",
+      "round": 7,
+      "kind": "timing",
+      "queries": 2488,
+      "wall_ms": 21.26225399971,
+      "cpu_ms": 21.220168,
+      "group": "short"
+    },
+    {
+      "session": "formal-02",
+      "variant": "original",
+      "round": 7,
+      "kind": "timing",
+      "queries": 2488,
+      "wall_ms": 26.633664011955,
+      "cpu_ms": 26.568654,
+      "group": "short"
+    },
+    {
+      "session": "formal-02",
+      "variant": "both",
+      "round": 8,
+      "kind": "timing",
+      "queries": 2488,
+      "wall_ms": 21.727439016104,
+      "cpu_ms": 21.686204,
+      "group": "short"
+    },
+    {
+      "session": "formal-02",
+      "variant": "original",
+      "round": 8,
+      "kind": "timing",
+      "queries": 2488,
+      "wall_ms": 26.673503994942,
+      "cpu_ms": 26.612309,
+      "group": "short"
+    },
+    {
+      "session": "formal-02",
+      "variant": "heap",
+      "round": 8,
+      "kind": "timing",
+      "queries": 2488,
+      "wall_ms": 21.998171001673,
+      "cpu_ms": 21.955767,
+      "group": "short"
+    },
+    {
+      "session": "formal-02",
+      "variant": "neighbors",
+      "round": 8,
+      "kind": "timing",
+      "queries": 2488,
+      "wall_ms": 21.386875003576,
+      "cpu_ms": 21.347248,
+      "group": "short"
+    },
+    {
+      "session": "formal-02",
+      "variant": "original",
+      "kind": "allocation",
+      "queries": 8,
+      "allocated_kib": 29.2734375,
+      "group": "short"
+    },
+    {
+      "session": "formal-02",
+      "variant": "neighbors",
+      "kind": "allocation",
+      "queries": 8,
+      "allocated_kib": 22.5625,
+      "group": "short"
+    },
+    {
+      "session": "formal-02",
+      "variant": "heap",
+      "kind": "allocation",
+      "queries": 8,
+      "allocated_kib": 27.8671875,
+      "group": "short"
+    },
+    {
+      "session": "formal-02",
+      "variant": "both",
+      "kind": "allocation",
+      "queries": 8,
+      "allocated_kib": 22.5625,
+      "group": "short"
+    },
+    {
+      "session": "formal-02",
+      "variant": "original",
+      "round": 1,
+      "kind": "timing",
+      "queries": 272,
+      "wall_ms": 23.309893012047,
+      "cpu_ms": 23.264428,
+      "group": "medium"
+    },
+    {
+      "session": "formal-02",
+      "variant": "neighbors",
+      "round": 1,
+      "kind": "timing",
+      "queries": 272,
+      "wall_ms": 15.2209199965,
+      "cpu_ms": 15.184560000001,
+      "group": "medium"
+    },
+    {
+      "session": "formal-02",
+      "variant": "both",
+      "round": 1,
+      "kind": "timing",
+      "queries": 272,
+      "wall_ms": 14.843894988298,
+      "cpu_ms": 14.811596,
+      "group": "medium"
+    },
+    {
+      "session": "formal-02",
+      "variant": "heap",
+      "round": 1,
+      "kind": "timing",
+      "queries": 272,
+      "wall_ms": 18.108446002007,
+      "cpu_ms": 18.075558,
+      "group": "medium"
+    },
+    {
+      "session": "formal-02",
+      "variant": "neighbors",
+      "round": 2,
+      "kind": "timing",
+      "queries": 272,
+      "wall_ms": 15.881664991379,
+      "cpu_ms": 15.841711,
+      "group": "medium"
+    },
+    {
+      "session": "formal-02",
+      "variant": "heap",
+      "round": 2,
+      "kind": "timing",
+      "queries": 272,
+      "wall_ms": 18.471808999777,
+      "cpu_ms": 18.415065,
+      "group": "medium"
+    },
+    {
+      "session": "formal-02",
+      "variant": "original",
+      "round": 2,
+      "kind": "timing",
+      "queries": 272,
+      "wall_ms": 18.336867004633,
+      "cpu_ms": 18.295010000001,
+      "group": "medium"
+    },
+    {
+      "session": "formal-02",
+      "variant": "both",
+      "round": 2,
+      "kind": "timing",
+      "queries": 272,
+      "wall_ms": 14.708963990211,
+      "cpu_ms": 14.668081,
+      "group": "medium"
+    },
+    {
+      "session": "formal-02",
+      "variant": "heap",
+      "round": 3,
+      "kind": "timing",
+      "queries": 272,
+      "wall_ms": 17.634501993656,
+      "cpu_ms": 17.599811,
+      "group": "medium"
+    },
+    {
+      "session": "formal-02",
+      "variant": "both",
+      "round": 3,
+      "kind": "timing",
+      "queries": 272,
+      "wall_ms": 14.741074025631,
+      "cpu_ms": 14.707263,
+      "group": "medium"
+    },
+    {
+      "session": "formal-02",
+      "variant": "neighbors",
+      "round": 3,
+      "kind": "timing",
+      "queries": 272,
+      "wall_ms": 14.477162003517,
+      "cpu_ms": 14.443669,
+      "group": "medium"
+    },
+    {
+      "session": "formal-02",
+      "variant": "original",
+      "round": 3,
+      "kind": "timing",
+      "queries": 272,
+      "wall_ms": 18.565200001001,
+      "cpu_ms": 18.518844,
+      "group": "medium"
+    },
+    {
+      "session": "formal-02",
+      "variant": "both",
+      "round": 4,
+      "kind": "timing",
+      "queries": 272,
+      "wall_ms": 14.931595981121,
+      "cpu_ms": 14.885706999999,
+      "group": "medium"
+    },
+    {
+      "session": "formal-02",
+      "variant": "original",
+      "round": 4,
+      "kind": "timing",
+      "queries": 272,
+      "wall_ms": 18.597639977932,
+      "cpu_ms": 18.557056,
+      "group": "medium"
+    },
+    {
+      "session": "formal-02",
+      "variant": "heap",
+      "round": 4,
+      "kind": "timing",
+      "queries": 272,
+      "wall_ms": 17.661880999804,
+      "cpu_ms": 17.623281,
+      "group": "medium"
+    },
+    {
+      "session": "formal-02",
+      "variant": "neighbors",
+      "round": 4,
+      "kind": "timing",
+      "queries": 272,
+      "wall_ms": 14.430501013994,
+      "cpu_ms": 14.397878,
+      "group": "medium"
+    },
+    {
+      "session": "formal-02",
+      "variant": "original",
+      "round": 5,
+      "kind": "timing",
+      "queries": 272,
+      "wall_ms": 18.393597990274,
+      "cpu_ms": 18.355953,
+      "group": "medium"
+    },
+    {
+      "session": "formal-02",
+      "variant": "neighbors",
+      "round": 5,
+      "kind": "timing",
+      "queries": 272,
+      "wall_ms": 14.256630986929,
+      "cpu_ms": 14.228504999999,
+      "group": "medium"
+    },
+    {
+      "session": "formal-02",
+      "variant": "both",
+      "round": 5,
+      "kind": "timing",
+      "queries": 272,
+      "wall_ms": 14.559623003006,
+      "cpu_ms": 14.530188999999,
+      "group": "medium"
+    },
+    {
+      "session": "formal-02",
+      "variant": "heap",
+      "round": 5,
+      "kind": "timing",
+      "queries": 272,
+      "wall_ms": 18.38400799036,
+      "cpu_ms": 18.339462999999,
+      "group": "medium"
+    },
+    {
+      "session": "formal-02",
+      "variant": "neighbors",
+      "round": 6,
+      "kind": "timing",
+      "queries": 272,
+      "wall_ms": 15.293089002371,
+      "cpu_ms": 15.258723,
+      "group": "medium"
+    },
+    {
+      "session": "formal-02",
+      "variant": "heap",
+      "round": 6,
+      "kind": "timing",
+      "queries": 272,
+      "wall_ms": 19.446946978569,
+      "cpu_ms": 19.360519,
+      "group": "medium"
+    },
+    {
+      "session": "formal-02",
+      "variant": "original",
+      "round": 6,
+      "kind": "timing",
+      "queries": 272,
+      "wall_ms": 18.45204898715,
+      "cpu_ms": 18.414401999999,
+      "group": "medium"
+    },
+    {
+      "session": "formal-02",
+      "variant": "both",
+      "round": 6,
+      "kind": "timing",
+      "queries": 272,
+      "wall_ms": 14.562683016062,
+      "cpu_ms": 14.534321,
+      "group": "medium"
+    },
+    {
+      "session": "formal-02",
+      "variant": "heap",
+      "round": 7,
+      "kind": "timing",
+      "queries": 272,
+      "wall_ms": 17.466888993979,
+      "cpu_ms": 17.433118,
+      "group": "medium"
+    },
+    {
+      "session": "formal-02",
+      "variant": "both",
+      "round": 7,
+      "kind": "timing",
+      "queries": 272,
+      "wall_ms": 14.517922997475,
+      "cpu_ms": 14.485900000001,
+      "group": "medium"
+    },
+    {
+      "session": "formal-02",
+      "variant": "neighbors",
+      "round": 7,
+      "kind": "timing",
+      "queries": 272,
+      "wall_ms": 14.24511000514,
+      "cpu_ms": 14.218857,
+      "group": "medium"
+    },
+    {
+      "session": "formal-02",
+      "variant": "original",
+      "round": 7,
+      "kind": "timing",
+      "queries": 272,
+      "wall_ms": 18.522399008274,
+      "cpu_ms": 18.488315000001,
+      "group": "medium"
+    },
+    {
+      "session": "formal-02",
+      "variant": "both",
+      "round": 8,
+      "kind": "timing",
+      "queries": 272,
+      "wall_ms": 16.112226992846,
+      "cpu_ms": 16.080175,
+      "group": "medium"
+    },
+    {
+      "session": "formal-02",
+      "variant": "original",
+      "round": 8,
+      "kind": "timing",
+      "queries": 272,
+      "wall_ms": 19.311235994101,
+      "cpu_ms": 19.265227,
+      "group": "medium"
+    },
+    {
+      "session": "formal-02",
+      "variant": "heap",
+      "round": 8,
+      "kind": "timing",
+      "queries": 272,
+      "wall_ms": 17.697001993656,
+      "cpu_ms": 17.661551,
+      "group": "medium"
+    },
+    {
+      "session": "formal-02",
+      "variant": "neighbors",
+      "round": 8,
+      "kind": "timing",
+      "queries": 272,
+      "wall_ms": 14.532893002033,
+      "cpu_ms": 14.50252,
+      "group": "medium"
+    },
+    {
+      "session": "formal-02",
+      "variant": "original",
+      "kind": "allocation",
+      "queries": 8,
+      "allocated_kib": 165.5859375,
+      "group": "medium"
+    },
+    {
+      "session": "formal-02",
+      "variant": "neighbors",
+      "kind": "allocation",
+      "queries": 8,
+      "allocated_kib": 70.921875,
+      "group": "medium"
+    },
+    {
+      "session": "formal-02",
+      "variant": "heap",
+      "kind": "allocation",
+      "queries": 8,
+      "allocated_kib": 154.4296875,
+      "group": "medium"
+    },
+    {
+      "session": "formal-02",
+      "variant": "both",
+      "kind": "allocation",
+      "queries": 8,
+      "allocated_kib": 70.921875,
+      "group": "medium"
+    },
+    {
+      "session": "formal-02",
+      "variant": "original",
+      "round": 1,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 31.952841997147,
+      "cpu_ms": 31.896849,
+      "group": "long"
+    },
+    {
+      "session": "formal-02",
+      "variant": "neighbors",
+      "round": 1,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 24.281341999769,
+      "cpu_ms": 24.232594999999,
+      "group": "long"
+    },
+    {
+      "session": "formal-02",
+      "variant": "both",
+      "round": 1,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 25.262430995703,
+      "cpu_ms": 25.221621,
+      "group": "long"
+    },
+    {
+      "session": "formal-02",
+      "variant": "heap",
+      "round": 1,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 30.81707200408,
+      "cpu_ms": 30.761331000001,
+      "group": "long"
+    },
+    {
+      "session": "formal-02",
+      "variant": "neighbors",
+      "round": 2,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 24.518674015999,
+      "cpu_ms": 24.478308,
+      "group": "long"
+    },
+    {
+      "session": "formal-02",
+      "variant": "heap",
+      "round": 2,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 35.537665009499,
+      "cpu_ms": 35.467782,
+      "group": "long"
+    },
+    {
+      "session": "formal-02",
+      "variant": "original",
+      "round": 2,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 33.877160012722,
+      "cpu_ms": 33.806188,
+      "group": "long"
+    },
+    {
+      "session": "formal-02",
+      "variant": "both",
+      "round": 2,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 26.113758981228,
+      "cpu_ms": 26.062155000001,
+      "group": "long"
+    },
+    {
+      "session": "formal-02",
+      "variant": "heap",
+      "round": 3,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 32.610338002443,
+      "cpu_ms": 32.509526,
+      "group": "long"
+    },
+    {
+      "session": "formal-02",
+      "variant": "both",
+      "round": 3,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 25.428892999887,
+      "cpu_ms": 25.379581,
+      "group": "long"
+    },
+    {
+      "session": "formal-02",
+      "variant": "neighbors",
+      "round": 3,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 25.071079999208,
+      "cpu_ms": 25.021049999999,
+      "group": "long"
+    },
+    {
+      "session": "formal-02",
+      "variant": "original",
+      "round": 3,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 32.815818995237,
+      "cpu_ms": 32.74849,
+      "group": "long"
+    },
+    {
+      "session": "formal-02",
+      "variant": "both",
+      "round": 4,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 25.39682200551,
+      "cpu_ms": 25.346051,
+      "group": "long"
+    },
+    {
+      "session": "formal-02",
+      "variant": "original",
+      "round": 4,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 32.703668981791,
+      "cpu_ms": 32.629451,
+      "group": "long"
+    },
+    {
+      "session": "formal-02",
+      "variant": "heap",
+      "round": 4,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 31.546167999506,
+      "cpu_ms": 31.47772,
+      "group": "long"
+    },
+    {
+      "session": "formal-02",
+      "variant": "neighbors",
+      "round": 4,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 24.502763986588,
+      "cpu_ms": 24.459280999999,
+      "group": "long"
+    },
+    {
+      "session": "formal-02",
+      "variant": "original",
+      "round": 5,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 32.508286982775,
+      "cpu_ms": 32.423355,
+      "group": "long"
+    },
+    {
+      "session": "formal-02",
+      "variant": "neighbors",
+      "round": 5,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 24.515744000673,
+      "cpu_ms": 24.465628,
+      "group": "long"
+    },
+    {
+      "session": "formal-02",
+      "variant": "both",
+      "round": 5,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 25.422951996326,
+      "cpu_ms": 25.340203,
+      "group": "long"
+    },
+    {
+      "session": "formal-02",
+      "variant": "heap",
+      "round": 5,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 31.365967005491,
+      "cpu_ms": 31.307139,
+      "group": "long"
+    },
+    {
+      "session": "formal-02",
+      "variant": "neighbors",
+      "round": 6,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 24.319961994886,
+      "cpu_ms": 24.275945,
+      "group": "long"
+    },
+    {
+      "session": "formal-02",
+      "variant": "heap",
+      "round": 6,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 30.994403004646,
+      "cpu_ms": 30.934949,
+      "group": "long"
+    },
+    {
+      "session": "formal-02",
+      "variant": "original",
+      "round": 6,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 31.711699008942,
+      "cpu_ms": 31.652145,
+      "group": "long"
+    },
+    {
+      "session": "formal-02",
+      "variant": "both",
+      "round": 6,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 25.25065100193,
+      "cpu_ms": 25.206410000001,
+      "group": "long"
+    },
+    {
+      "session": "formal-02",
+      "variant": "heap",
+      "round": 7,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 30.920392006636,
+      "cpu_ms": 30.857812,
+      "group": "long"
+    },
+    {
+      "session": "formal-02",
+      "variant": "both",
+      "round": 7,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 25.215970993042,
+      "cpu_ms": 25.171883,
+      "group": "long"
+    },
+    {
+      "session": "formal-02",
+      "variant": "neighbors",
+      "round": 7,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 24.32138299942,
+      "cpu_ms": 24.279644,
+      "group": "long"
+    },
+    {
+      "session": "formal-02",
+      "variant": "original",
+      "round": 7,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 31.885390996933,
+      "cpu_ms": 31.818955,
+      "group": "long"
+    },
+    {
+      "session": "formal-02",
+      "variant": "both",
+      "round": 8,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 25.29317098856,
+      "cpu_ms": 25.248542,
+      "group": "long"
+    },
+    {
+      "session": "formal-02",
+      "variant": "original",
+      "round": 8,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 32.160714000463,
+      "cpu_ms": 32.100871000001,
+      "group": "long"
+    },
+    {
+      "session": "formal-02",
+      "variant": "heap",
+      "round": 8,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 31.842870980501,
+      "cpu_ms": 31.775855,
+      "group": "long"
+    },
+    {
+      "session": "formal-02",
+      "variant": "neighbors",
+      "round": 8,
+      "kind": "timing",
+      "queries": 24,
+      "wall_ms": 25.628273993731,
+      "cpu_ms": 25.576057,
+      "group": "long"
+    },
+    {
+      "session": "formal-02",
+      "variant": "original",
+      "kind": "allocation",
+      "queries": 8,
+      "allocated_kib": 2432.3359375,
+      "group": "long"
+    },
+    {
+      "session": "formal-02",
+      "variant": "neighbors",
+      "kind": "allocation",
+      "queries": 8,
+      "allocated_kib": 453.796875,
+      "group": "long"
+    },
+    {
+      "session": "formal-02",
+      "variant": "heap",
+      "kind": "allocation",
+      "queries": 8,
+      "allocated_kib": 2337.1796875,
+      "group": "long"
+    },
+    {
+      "session": "formal-02",
+      "variant": "both",
+      "kind": "allocation",
+      "queries": 8,
+      "allocated_kib": 453.796875,
+      "group": "long"
+    },
+    {
+      "session": "formal-03",
+      "variant": "original",
+      "round": 1,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 25.853596001863,
+      "cpu_ms": 25.80072,
+      "group": "short"
+    },
+    {
+      "session": "formal-03",
+      "variant": "neighbors",
+      "round": 1,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 22.326193988323,
+      "cpu_ms": 22.279035,
+      "group": "short"
+    },
+    {
+      "session": "formal-03",
+      "variant": "both",
+      "round": 1,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 22.45541498065,
+      "cpu_ms": 22.410468,
+      "group": "short"
+    },
+    {
+      "session": "formal-03",
+      "variant": "heap",
+      "round": 1,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 23.155641019344,
+      "cpu_ms": 23.108768,
+      "group": "short"
+    },
+    {
+      "session": "formal-03",
+      "variant": "neighbors",
+      "round": 2,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 22.739008009434,
+      "cpu_ms": 22.693744,
+      "group": "short"
+    },
+    {
+      "session": "formal-03",
+      "variant": "heap",
+      "round": 2,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 23.181051015854,
+      "cpu_ms": 23.133507,
+      "group": "short"
+    },
+    {
+      "session": "formal-03",
+      "variant": "original",
+      "round": 2,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 25.678263992071,
+      "cpu_ms": 25.613405,
+      "group": "short"
+    },
+    {
+      "session": "formal-03",
+      "variant": "both",
+      "round": 2,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 23.07133102417,
+      "cpu_ms": 23.027565,
+      "group": "short"
+    },
+    {
+      "session": "formal-03",
+      "variant": "heap",
+      "round": 3,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 23.075181007385,
+      "cpu_ms": 23.030265,
+      "group": "short"
+    },
+    {
+      "session": "formal-03",
+      "variant": "both",
+      "round": 3,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 25.643985003233,
+      "cpu_ms": 25.593194,
+      "group": "short"
+    },
+    {
+      "session": "formal-03",
+      "variant": "neighbors",
+      "round": 3,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 25.834506005049,
+      "cpu_ms": 25.78009,
+      "group": "short"
+    },
+    {
+      "session": "formal-03",
+      "variant": "original",
+      "round": 3,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 30.810831993818,
+      "cpu_ms": 30.74407,
+      "group": "short"
+    },
+    {
+      "session": "formal-03",
+      "variant": "both",
+      "round": 4,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 24.944866985083,
+      "cpu_ms": 24.884785,
+      "group": "short"
+    },
+    {
+      "session": "formal-03",
+      "variant": "original",
+      "round": 4,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 30.697369992733,
+      "cpu_ms": 30.614989,
+      "group": "short"
+    },
+    {
+      "session": "formal-03",
+      "variant": "heap",
+      "round": 4,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 24.663825005293,
+      "cpu_ms": 24.576323,
+      "group": "short"
+    },
+    {
+      "session": "formal-03",
+      "variant": "neighbors",
+      "round": 4,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 23.525954991579,
+      "cpu_ms": 23.459482,
+      "group": "short"
+    },
+    {
+      "session": "formal-03",
+      "variant": "original",
+      "round": 5,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 27.772603005171,
+      "cpu_ms": 27.713711,
+      "group": "short"
+    },
+    {
+      "session": "formal-03",
+      "variant": "neighbors",
+      "round": 5,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 23.012199997902,
+      "cpu_ms": 22.961873,
+      "group": "short"
+    },
+    {
+      "session": "formal-03",
+      "variant": "both",
+      "round": 5,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 24.55423399806,
+      "cpu_ms": 24.4899,
+      "group": "short"
+    },
+    {
+      "session": "formal-03",
+      "variant": "heap",
+      "round": 5,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 24.237720996141,
+      "cpu_ms": 24.184605,
+      "group": "short"
+    },
+    {
+      "session": "formal-03",
+      "variant": "neighbors",
+      "round": 6,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 27.137227982283,
+      "cpu_ms": 27.072692,
+      "group": "short"
+    },
+    {
+      "session": "formal-03",
+      "variant": "heap",
+      "round": 6,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 24.080479979515,
+      "cpu_ms": 24.028703,
+      "group": "short"
+    },
+    {
+      "session": "formal-03",
+      "variant": "original",
+      "round": 6,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 26.310889989138,
+      "cpu_ms": 26.253388,
+      "group": "short"
+    },
+    {
+      "session": "formal-03",
+      "variant": "both",
+      "round": 6,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 22.802267998457,
+      "cpu_ms": 22.752481,
+      "group": "short"
+    },
+    {
+      "session": "formal-03",
+      "variant": "heap",
+      "round": 7,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 23.34676399827,
+      "cpu_ms": 23.296303,
+      "group": "short"
+    },
+    {
+      "session": "formal-03",
+      "variant": "both",
+      "round": 7,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 22.59915599227,
+      "cpu_ms": 22.552915,
+      "group": "short"
+    },
+    {
+      "session": "formal-03",
+      "variant": "neighbors",
+      "round": 7,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 22.382564008236,
+      "cpu_ms": 22.340175,
+      "group": "short"
+    },
+    {
+      "session": "formal-03",
+      "variant": "original",
+      "round": 7,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 25.782924979925,
+      "cpu_ms": 25.730459,
+      "group": "short"
+    },
+    {
+      "session": "formal-03",
+      "variant": "both",
+      "round": 8,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 22.75615799427,
+      "cpu_ms": 22.709513,
+      "group": "short"
+    },
+    {
+      "session": "formal-03",
+      "variant": "original",
+      "round": 8,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 25.712554007769,
+      "cpu_ms": 25.662295,
+      "group": "short"
+    },
+    {
+      "session": "formal-03",
+      "variant": "heap",
+      "round": 8,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 22.913168996572,
+      "cpu_ms": 22.868633,
+      "group": "short"
+    },
+    {
+      "session": "formal-03",
+      "variant": "neighbors",
+      "round": 8,
+      "kind": "timing",
+      "queries": 2560,
+      "wall_ms": 22.383964002132,
+      "cpu_ms": 22.334675,
+      "group": "short"
+    },
+    {
+      "session": "formal-03",
+      "variant": "original",
+      "kind": "allocation",
+      "queries": 8,
+      "allocated_kib": 29.2734375,
+      "group": "short"
+    },
+    {
+      "session": "formal-03",
+      "variant": "neighbors",
+      "kind": "allocation",
+      "queries": 8,
+      "allocated_kib": 22.5625,
+      "group": "short"
+    },
+    {
+      "session": "formal-03",
+      "variant": "heap",
+      "kind": "allocation",
+      "queries": 8,
+      "allocated_kib": 27.8671875,
+      "group": "short"
+    },
+    {
+      "session": "formal-03",
+      "variant": "both",
+      "kind": "allocation",
+      "queries": 8,
+      "allocated_kib": 22.5625,
+      "group": "short"
+    },
+    {
+      "session": "formal-03",
+      "variant": "original",
+      "round": 1,
+      "kind": "timing",
+      "queries": 360,
+      "wall_ms": 24.077540010214,
+      "cpu_ms": 24.028563000001,
+      "group": "medium"
+    },
+    {
+      "session": "formal-03",
+      "variant": "neighbors",
+      "round": 1,
+      "kind": "timing",
+      "queries": 360,
+      "wall_ms": 19.811291009188,
+      "cpu_ms": 19.762973,
+      "group": "medium"
+    },
+    {
+      "session": "formal-03",
+      "variant": "both",
+      "round": 1,
+      "kind": "timing",
+      "queries": 360,
+      "wall_ms": 21.511566013098,
+      "cpu_ms": 21.459411,
+      "group": "medium"
+    },
+    {
+      "session": "formal-03",
+      "variant": "heap",
+      "round": 1,
+      "kind": "timing",
+      "queries": 360,
+      "wall_ms": 25.970826983452,
+      "cpu_ms": 25.911681,
+      "group": "medium"
+    },
+    {
+      "session": "formal-03",
+      "variant": "neighbors",
+      "round": 2,
+      "kind": "timing",
+      "queries": 360,
+      "wall_ms": 20.240524023771,
+      "cpu_ms": 20.19091,
+      "group": "medium"
+    },
+    {
+      "session": "formal-03",
+      "variant": "heap",
+      "round": 2,
+      "kind": "timing",
+      "queries": 360,
+      "wall_ms": 26.360211014748,
+      "cpu_ms": 26.29827,
+      "group": "medium"
+    },
+    {
+      "session": "formal-03",
+      "variant": "original",
+      "round": 2,
+      "kind": "timing",
+      "queries": 360,
+      "wall_ms": 27.302989006042,
+      "cpu_ms": 27.238174,
+      "group": "medium"
+    },
+    {
+      "session": "formal-03",
+      "variant": "both",
+      "round": 2,
+      "kind": "timing",
+      "queries": 360,
+      "wall_ms": 19.973993003368,
+      "cpu_ms": 19.927936999999,
+      "group": "medium"
+    },
+    {
+      "session": "formal-03",
+      "variant": "heap",
+      "round": 3,
+      "kind": "timing",
+      "queries": 360,
+      "wall_ms": 23.807186990976,
+      "cpu_ms": 23.753207999999,
+      "group": "medium"
+    },
+    {
+      "session": "formal-03",
+      "variant": "both",
+      "round": 3,
+      "kind": "timing",
+      "queries": 360,
+      "wall_ms": 19.678279995918,
+      "cpu_ms": 19.633183000001,
+      "group": "medium"
+    },
+    {
+      "session": "formal-03",
+      "variant": "neighbors",
+      "round": 3,
+      "kind": "timing",
+      "queries": 360,
+      "wall_ms": 19.102414995432,
+      "cpu_ms": 19.060842,
+      "group": "medium"
+    },
+    {
+      "session": "formal-03",
+      "variant": "original",
+      "round": 3,
+      "kind": "timing",
+      "queries": 360,
+      "wall_ms": 24.221060991287,
+      "cpu_ms": 24.17277,
+      "group": "medium"
+    },
+    {
+      "session": "formal-03",
+      "variant": "both",
+      "round": 4,
+      "kind": "timing",
+      "queries": 360,
+      "wall_ms": 19.652918994427,
+      "cpu_ms": 19.611129,
+      "group": "medium"
+    },
+    {
+      "session": "formal-03",
+      "variant": "original",
+      "round": 4,
+      "kind": "timing",
+      "queries": 360,
+      "wall_ms": 27.392189979553,
+      "cpu_ms": 27.323496,
+      "group": "medium"
+    },
+    {
+      "session": "formal-03",
+      "variant": "heap",
+      "round": 4,
+      "kind": "timing",
+      "queries": 360,
+      "wall_ms": 31.484558016062,
+      "cpu_ms": 31.407730999999,
+      "group": "medium"
+    },
+    {
+      "session": "formal-03",
+      "variant": "neighbors",
+      "round": 4,
+      "kind": "timing",
+      "queries": 360,
+      "wall_ms": 20.172834008932,
+      "cpu_ms": 20.117477,
+      "group": "medium"
+    },
+    {
+      "session": "formal-03",
+      "variant": "original",
+      "round": 5,
+      "kind": "timing",
+      "queries": 360,
+      "wall_ms": 25.081959009171,
+      "cpu_ms": 25.029639,
+      "group": "medium"
+    },
+    {
+      "session": "formal-03",
+      "variant": "neighbors",
+      "round": 5,
+      "kind": "timing",
+      "queries": 360,
+      "wall_ms": 19.245006024837,
+      "cpu_ms": 19.198155999999,
+      "group": "medium"
+    },
+    {
+      "session": "formal-03",
+      "variant": "both",
+      "round": 5,
+      "kind": "timing",
+      "queries": 360,
+      "wall_ms": 19.583889007568,
+      "cpu_ms": 19.540439,
+      "group": "medium"
+    },
+    {
+      "session": "formal-03",
+      "variant": "heap",
+      "round": 5,
+      "kind": "timing",
+      "queries": 360,
+      "wall_ms": 23.479804009199,
+      "cpu_ms": 23.423431,
+      "group": "medium"
+    },
+    {
+      "session": "formal-03",
+      "variant": "neighbors",
+      "round": 6,
+      "kind": "timing",
+      "queries": 360,
+      "wall_ms": 19.200325012207,
+      "cpu_ms": 19.151503,
+      "group": "medium"
+    },
+    {
+      "session": "formal-03",
+      "variant": "heap",
+      "round": 6,
+      "kind": "timing",
+      "queries": 360,
+      "wall_ms": 23.85125797987,
+      "cpu_ms": 23.791352,
+      "group": "medium"
+    },
+    {
+      "session": "formal-03",
+      "variant": "original",
+      "round": 6,
+      "kind": "timing",
+      "queries": 360,
+      "wall_ms": 23.725077003241,
+      "cpu_ms": 23.676198,
+      "group": "medium"
+    },
+    {
+      "session": "formal-03",
+      "variant": "both",
+      "round": 6,
+      "kind": "timing",
+      "queries": 360,
+      "wall_ms": 19.189844995737,
+      "cpu_ms": 19.152894999999,
+      "group": "medium"
+    },
+    {
+      "session": "formal-03",
+      "variant": "heap",
+      "round": 7,
+      "kind": "timing",
+      "queries": 360,
+      "wall_ms": 22.77221801877,
+      "cpu_ms": 22.72469,
+      "group": "medium"
+    },
+    {
+      "session": "formal-03",
+      "variant": "both",
+      "round": 7,
+      "kind": "timing",
+      "queries": 360,
+      "wall_ms": 19.32725700736,
+      "cpu_ms": 19.276597,
+      "group": "medium"
+    },
+    {
+      "session": "formal-03",
+      "variant": "neighbors",
+      "round": 7,
+      "kind": "timing",
+      "queries": 360,
+      "wall_ms": 19.135654985905,
+      "cpu_ms": 19.097223,
+      "group": "medium"
+    },
+    {
+      "session": "formal-03",
+      "variant": "original",
+      "round": 7,
+      "kind": "timing",
+      "queries": 360,
+      "wall_ms": 26.766635000706,
+      "cpu_ms": 26.696127,
+      "group": "medium"
+    },
+    {
+      "session": "formal-03",
+      "variant": "both",
+      "round": 8,
+      "kind": "timing",
+      "queries": 360,
+      "wall_ms": 19.615808993578,
+      "cpu_ms": 19.570782000001,
+      "group": "medium"
+    },
+    {
+      "session": "formal-03",
+      "variant": "original",
+      "round": 8,
+      "kind": "timing",
+      "queries": 360,
+      "wall_ms": 25.221760004759,
+      "cpu_ms": 25.170761,
+      "group": "medium"
+    },
+    {
+      "session": "formal-03",
+      "variant": "heap",
+      "round": 8,
+      "kind": "timing",
+      "queries": 360,
+      "wall_ms": 29.562819004059,
+      "cpu_ms": 29.503651,
+      "group": "medium"
+    },
+    {
+      "session": "formal-03",
+      "variant": "neighbors",
+      "round": 8,
+      "kind": "timing",
+      "queries": 360,
+      "wall_ms": 21.713037997484,
+      "cpu_ms": 21.665503,
+      "group": "medium"
+    },
+    {
+      "session": "formal-03",
+      "variant": "original",
+      "kind": "allocation",
+      "queries": 8,
+      "allocated_kib": 165.5859375,
+      "group": "medium"
+    },
+    {
+      "session": "formal-03",
+      "variant": "neighbors",
+      "kind": "allocation",
+      "queries": 8,
+      "allocated_kib": 70.921875,
+      "group": "medium"
+    },
+    {
+      "session": "formal-03",
+      "variant": "heap",
+      "kind": "allocation",
+      "queries": 8,
+      "allocated_kib": 154.4296875,
+      "group": "medium"
+    },
+    {
+      "session": "formal-03",
+      "variant": "both",
+      "kind": "allocation",
+      "queries": 8,
+      "allocated_kib": 70.921875,
+      "group": "medium"
+    },
+    {
+      "session": "formal-03",
+      "variant": "original",
+      "round": 1,
+      "kind": "timing",
+      "queries": 16,
+      "wall_ms": 21.542775988579,
+      "cpu_ms": 21.497083,
+      "group": "long"
+    },
+    {
+      "session": "formal-03",
+      "variant": "neighbors",
+      "round": 1,
+      "kind": "timing",
+      "queries": 16,
+      "wall_ms": 16.373578995466,
+      "cpu_ms": 16.341946,
+      "group": "long"
+    },
+    {
+      "session": "formal-03",
+      "variant": "both",
+      "round": 1,
+      "kind": "timing",
+      "queries": 16,
+      "wall_ms": 16.957695007324,
+      "cpu_ms": 16.925157000001,
+      "group": "long"
+    },
+    {
+      "session": "formal-03",
+      "variant": "heap",
+      "round": 1,
+      "kind": "timing",
+      "queries": 16,
+      "wall_ms": 21.278924018145,
+      "cpu_ms": 21.232489,
+      "group": "long"
+    },
+    {
+      "session": "formal-03",
+      "variant": "neighbors",
+      "round": 2,
+      "kind": "timing",
+      "queries": 16,
+      "wall_ms": 16.38124999404,
+      "cpu_ms": 16.349878999999,
+      "group": "long"
+    },
+    {
+      "session": "formal-03",
+      "variant": "heap",
+      "round": 2,
+      "kind": "timing",
+      "queries": 16,
+      "wall_ms": 21.375564992428,
+      "cpu_ms": 21.330628,
+      "group": "long"
+    },
+    {
+      "session": "formal-03",
+      "variant": "original",
+      "round": 2,
+      "kind": "timing",
+      "queries": 16,
+      "wall_ms": 26.9487169981,
+      "cpu_ms": 26.888839,
+      "group": "long"
+    },
+    {
+      "session": "formal-03",
+      "variant": "both",
+      "round": 2,
+      "kind": "timing",
+      "queries": 16,
+      "wall_ms": 17.994773983955,
+      "cpu_ms": 17.954426,
+      "group": "long"
+    },
+    {
+      "session": "formal-03",
+      "variant": "heap",
+      "round": 3,
+      "kind": "timing",
+      "queries": 16,
+      "wall_ms": 25.217420995235,
+      "cpu_ms": 25.162131,
+      "group": "long"
+    },
+    {
+      "session": "formal-03",
+      "variant": "both",
+      "round": 3,
+      "kind": "timing",
+      "queries": 16,
+      "wall_ms": 17.077155977488,
+      "cpu_ms": 17.043672,
+      "group": "long"
+    },
+    {
+      "session": "formal-03",
+      "variant": "neighbors",
+      "round": 3,
+      "kind": "timing",
+      "queries": 16,
+      "wall_ms": 16.292939007282,
+      "cpu_ms": 16.259746,
+      "group": "long"
+    },
+    {
+      "session": "formal-03",
+      "variant": "original",
+      "round": 3,
+      "kind": "timing",
+      "queries": 16,
+      "wall_ms": 21.522396981716,
+      "cpu_ms": 21.477811000001,
+      "group": "long"
+    },
+    {
+      "session": "formal-03",
+      "variant": "both",
+      "round": 4,
+      "kind": "timing",
+      "queries": 16,
+      "wall_ms": 16.804293990135,
+      "cpu_ms": 16.775438000001,
+      "group": "long"
+    },
+    {
+      "session": "formal-03",
+      "variant": "original",
+      "round": 4,
+      "kind": "timing",
+      "queries": 16,
+      "wall_ms": 21.119652986526,
+      "cpu_ms": 21.079714,
+      "group": "long"
+    },
+    {
+      "session": "formal-03",
+      "variant": "heap",
+      "round": 4,
+      "kind": "timing",
+      "queries": 16,
+      "wall_ms": 20.762410014868,
+      "cpu_ms": 20.72489,
+      "group": "long"
+    },
+    {
+      "session": "formal-03",
+      "variant": "neighbors",
+      "round": 4,
+      "kind": "timing",
+      "queries": 16,
+      "wall_ms": 16.175197988749,
+      "cpu_ms": 16.147483,
+      "group": "long"
+    },
+    {
+      "session": "formal-03",
+      "variant": "original",
+      "round": 5,
+      "kind": "timing",
+      "queries": 16,
+      "wall_ms": 21.253793984652,
+      "cpu_ms": 21.213068999999,
+      "group": "long"
+    },
+    {
+      "session": "formal-03",
+      "variant": "neighbors",
+      "round": 5,
+      "kind": "timing",
+      "queries": 16,
+      "wall_ms": 16.217357993126,
+      "cpu_ms": 16.189598,
+      "group": "long"
+    },
+    {
+      "session": "formal-03",
+      "variant": "both",
+      "round": 5,
+      "kind": "timing",
+      "queries": 16,
+      "wall_ms": 16.870864003897,
+      "cpu_ms": 16.839488,
+      "group": "long"
+    },
+    {
+      "session": "formal-03",
+      "variant": "heap",
+      "round": 5,
+      "kind": "timing",
+      "queries": 16,
+      "wall_ms": 21.563207000494,
+      "cpu_ms": 21.514933,
+      "group": "long"
+    },
+    {
+      "session": "formal-03",
+      "variant": "neighbors",
+      "round": 6,
+      "kind": "timing",
+      "queries": 16,
+      "wall_ms": 16.255807995796,
+      "cpu_ms": 16.219838,
+      "group": "long"
+    },
+    {
+      "session": "formal-03",
+      "variant": "heap",
+      "round": 6,
+      "kind": "timing",
+      "queries": 16,
+      "wall_ms": 21.084682017565,
+      "cpu_ms": 21.043756,
+      "group": "long"
+    },
+    {
+      "session": "formal-03",
+      "variant": "original",
+      "round": 6,
+      "kind": "timing",
+      "queries": 16,
+      "wall_ms": 21.168242990971,
+      "cpu_ms": 21.126508,
+      "group": "long"
+    },
+    {
+      "session": "formal-03",
+      "variant": "both",
+      "round": 6,
+      "kind": "timing",
+      "queries": 16,
+      "wall_ms": 16.885434001684,
+      "cpu_ms": 16.856477,
+      "group": "long"
+    },
+    {
+      "session": "formal-03",
+      "variant": "heap",
+      "round": 7,
+      "kind": "timing",
+      "queries": 16,
+      "wall_ms": 20.889091014862,
+      "cpu_ms": 20.851052,
+      "group": "long"
+    },
+    {
+      "session": "formal-03",
+      "variant": "both",
+      "round": 7,
+      "kind": "timing",
+      "queries": 16,
+      "wall_ms": 16.940163999796,
+      "cpu_ms": 16.911738,
+      "group": "long"
+    },
+    {
+      "session": "formal-03",
+      "variant": "neighbors",
+      "round": 7,
+      "kind": "timing",
+      "queries": 16,
+      "wall_ms": 16.397579997778,
+      "cpu_ms": 16.366298999999,
+      "group": "long"
+    },
+    {
+      "session": "formal-03",
+      "variant": "original",
+      "round": 7,
+      "kind": "timing",
+      "queries": 16,
+      "wall_ms": 24.257941991091,
+      "cpu_ms": 24.204094000001,
+      "group": "long"
+    },
+    {
+      "session": "formal-03",
+      "variant": "both",
+      "round": 8,
+      "kind": "timing",
+      "queries": 16,
+      "wall_ms": 17.174767017365,
+      "cpu_ms": 17.139192000001,
+      "group": "long"
+    },
+    {
+      "session": "formal-03",
+      "variant": "original",
+      "round": 8,
+      "kind": "timing",
+      "queries": 16,
+      "wall_ms": 22.192492008209,
+      "cpu_ms": 22.142343,
+      "group": "long"
+    },
+    {
+      "session": "formal-03",
+      "variant": "heap",
+      "round": 8,
+      "kind": "timing",
+      "queries": 16,
+      "wall_ms": 21.402125000954,
+      "cpu_ms": 21.328589000001,
+      "group": "long"
+    },
+    {
+      "session": "formal-03",
+      "variant": "neighbors",
+      "round": 8,
+      "kind": "timing",
+      "queries": 16,
+      "wall_ms": 16.500981003046,
+      "cpu_ms": 16.40998,
+      "group": "long"
+    },
+    {
+      "session": "formal-03",
+      "variant": "original",
+      "kind": "allocation",
+      "queries": 8,
+      "allocated_kib": 2432.3359375,
+      "group": "long"
+    },
+    {
+      "session": "formal-03",
+      "variant": "neighbors",
+      "kind": "allocation",
+      "queries": 8,
+      "allocated_kib": 453.796875,
+      "group": "long"
+    },
+    {
+      "session": "formal-03",
+      "variant": "heap",
+      "kind": "allocation",
+      "queries": 8,
+      "allocated_kib": 2337.1796875,
+      "group": "long"
+    },
+    {
+      "session": "formal-03",
+      "variant": "both",
+      "kind": "allocation",
+      "queries": 8,
+      "allocated_kib": 453.796875,
+      "group": "long"
+    }
+  ]
+}

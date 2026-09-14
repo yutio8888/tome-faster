@@ -1,0 +1,123 @@
+{
+  "declared_unix_ns": 1789355084535530661,
+  "purpose": "isolate transformed input effect on main-archive compression CPU; not complete save CPU",
+  "source": "/workspace/t-engine4/test-saves/save-compaction-20260914/baseline-01/home/.t-engine/4.0/tome/save/yron/game.teag",
+  "source_sha256": "16653d7bd510452f9c4f3b1a5bff957ae37f866cceaef54def6a52dba753b42b",
+  "script_sha256": "915d8e3460f7dba796176c9e4c05f71dd9921e9b2b8f0ce4941c61813aae5a5a",
+  "python": "3.11.2",
+  "zlib_build": "1.2.13",
+  "zlib_runtime": "1.2.13",
+  "parameters": {
+    "level": 4,
+    "method": "Z_DEFLATED",
+    "wbits": -15,
+    "memLevel": 8,
+    "strategy": "Z_DEFAULT_STRATEGY"
+  },
+  "warmup_rounds_per_variant": 2,
+  "fixed_pairs": 24,
+  "pair_order": [
+    [
+      "decimal",
+      "base62"
+    ],
+    [
+      "base62",
+      "decimal"
+    ],
+    [
+      "decimal",
+      "base62"
+    ],
+    [
+      "base62",
+      "decimal"
+    ],
+    [
+      "decimal",
+      "base62"
+    ],
+    [
+      "base62",
+      "decimal"
+    ],
+    [
+      "decimal",
+      "base62"
+    ],
+    [
+      "base62",
+      "decimal"
+    ],
+    [
+      "decimal",
+      "base62"
+    ],
+    [
+      "base62",
+      "decimal"
+    ],
+    [
+      "decimal",
+      "base62"
+    ],
+    [
+      "base62",
+      "decimal"
+    ],
+    [
+      "decimal",
+      "base62"
+    ],
+    [
+      "base62",
+      "decimal"
+    ],
+    [
+      "decimal",
+      "base62"
+    ],
+    [
+      "base62",
+      "decimal"
+    ],
+    [
+      "decimal",
+      "base62"
+    ],
+    [
+      "base62",
+      "decimal"
+    ],
+    [
+      "decimal",
+      "base62"
+    ],
+    [
+      "base62",
+      "decimal"
+    ],
+    [
+      "decimal",
+      "base62"
+    ],
+    [
+      "base62",
+      "decimal"
+    ],
+    [
+      "decimal",
+      "base62"
+    ],
+    [
+      "base62",
+      "decimal"
+    ]
+  ],
+  "measurement": "resource.getrusage(RUSAGE_SELF).ru_utime per full set of 2864 separate streams; setup/read/remap excluded",
+  "limitations": [
+    "System Python zlib build, not the game executable zlib; Python calls and allocation included identically in both variants.",
+    "No Lua allocator, object traversal, CRC, ZIP metadata, I/O, scheduling or rendering measured.",
+    "No exclusion, extension or sequential retesting; all 24 pairs retained."
+  ]
+}

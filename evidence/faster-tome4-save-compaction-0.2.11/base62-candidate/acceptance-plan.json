@@ -1,0 +1,285 @@
+{
+  "comparison": "Frozen previously delivered 0.2.10 package versus 0.2.11 candidate; same runtime, source save, diagnostics and pre-existing feature settings.",
+  "declared_before_measurement": true,
+  "sample_count": 30,
+  "added_user_cpu_limit_pct": 1,
+  "invariant_input_fields": [
+    "engine_sha256",
+    "save_sha256"
+  ],
+  "metrics": [
+    {
+      "field": "total_process_user_ms",
+      "role": "primary"
+    },
+    {
+      "field": "sync_thread_user_ms",
+      "role": "secondary"
+    }
+  ],
+  "rules": [
+    "Start timing immediately before game:saveGame(); end at original SavefilePipe.doThread return with pipe, waiton, saving and on_done drained.",
+    "Use getrusage RUSAGE_SELF ru_utime for primary total user CPU, RUSAGE_THREAD ru_utime for synchronous main-thread user CPU.",
+    "Exactly 30 fixed AB/BA pairs, AB for odd numbered pairs, BA for even numbered pairs; all valid samples kept.",
+    "Do not expand sample count based on results or use previous optimization savings as credit.",
+    "Invalid sessions invalidate this run; fix the reason, declare a new dataset before restarting, and preserve failed evidence.",
+    "Pass requires paired geomean user CPU one-sided 95 percent upper confidence bound strictly below plus 1 percent; otherwise not proven.",
+    "The baseline and candidate packages differ by declared manifests; each package and all its Lua source hashes remain fixed for all 30 corresponding samples. All diagnostic hashes stay identical across 60 samples."
+  ],
+  "pairs": [
+    {
+      "baseline": "baseline-01",
+      "candidate": "candidate-01",
+      "run_order": [
+        "baseline-01",
+        "candidate-01"
+      ]
+    },
+    {
+      "baseline": "baseline-02",
+      "candidate": "candidate-02",
+      "run_order": [
+        "candidate-02",
+        "baseline-02"
+      ]
+    },
+    {
+      "baseline": "baseline-03",
+      "candidate": "candidate-03",
+      "run_order": [
+        "baseline-03",
+        "candidate-03"
+      ]
+    },
+    {
+      "baseline": "baseline-04",
+      "candidate": "candidate-04",
+      "run_order": [
+        "candidate-04",
+        "baseline-04"
+      ]
+    },
+    {
+      "baseline": "baseline-05",
+      "candidate": "candidate-05",
+      "run_order": [
+        "baseline-05",
+        "candidate-05"
+      ]
+    },
+    {
+      "baseline": "baseline-06",
+      "candidate": "candidate-06",
+      "run_order": [
+        "candidate-06",
+        "baseline-06"
+      ]
+    },
+    {
+      "baseline": "baseline-07",
+      "candidate": "candidate-07",
+      "run_order": [
+        "baseline-07",
+        "candidate-07"
+      ]
+    },
+    {
+      "baseline": "baseline-08",
+      "candidate": "candidate-08",
+      "run_order": [
+        "candidate-08",
+        "baseline-08"
+      ]
+    },
+    {
+      "baseline": "baseline-09",
+      "candidate": "candidate-09",
+      "run_order": [
+        "baseline-09",
+        "candidate-09"
+      ]
+    },
+    {
+      "baseline": "baseline-10",
+      "candidate": "candidate-10",
+      "run_order": [
+        "candidate-10",
+        "baseline-10"
+      ]
+    },
+    {
+      "baseline": "baseline-11",
+      "candidate": "candidate-11",
+      "run_order": [
+        "baseline-11",
+        "candidate-11"
+      ]
+    },
+    {
+      "baseline": "baseline-12",
+      "candidate": "candidate-12",
+      "run_order": [
+        "candidate-12",
+        "baseline-12"
+      ]
+    },
+    {
+      "baseline": "baseline-13",
+      "candidate": "candidate-13",
+      "run_order": [
+        "baseline-13",
+        "candidate-13"
+      ]
+    },
+    {
+      "baseline": "baseline-14",
+      "candidate": "candidate-14",
+      "run_order": [
+        "candidate-14",
+        "baseline-14"
+      ]
+    },
+    {
+      "baseline": "baseline-15",
+      "candidate": "candidate-15",
+      "run_order": [
+        "baseline-15",
+        "candidate-15"
+      ]
+    },
+    {
+      "baseline": "baseline-16",
+      "candidate": "candidate-16",
+      "run_order": [
+        "candidate-16",
+        "baseline-16"
+      ]
+    },
+    {
+      "baseline": "baseline-17",
+      "candidate": "candidate-17",
+      "run_order": [
+        "baseline-17",
+        "candidate-17"
+      ]
+    },
+    {
+      "baseline": "baseline-18",
+      "candidate": "candidate-18",
+      "run_order": [
+        "candidate-18",
+        "baseline-18"
+      ]
+    },
+    {
+      "baseline": "baseline-19",
+      "candidate": "candidate-19",
+      "run_order": [
+        "baseline-19",
+        "candidate-19"
+      ]
+    },
+    {
+      "baseline": "baseline-20",
+      "candidate": "candidate-20",
+      "run_order": [
+        "candidate-20",
+        "baseline-20"
+      ]
+    },
+    {
+      "baseline": "baseline-21",
+      "candidate": "candidate-21",
+      "run_order": [
+        "baseline-21",
+        "candidate-21"
+      ]
+    },
+    {
+      "baseline": "baseline-22",
+      "candidate": "candidate-22",
+      "run_order": [
+        "candidate-22",
+        "baseline-22"
+      ]
+    },
+    {
+      "baseline": "baseline-23",
+      "candidate": "candidate-23",
+      "run_order": [
+        "baseline-23",
+        "candidate-23"
+      ]
+    },
+    {
+      "baseline": "baseline-24",
+      "candidate": "candidate-24",
+      "run_order": [
+        "candidate-24",
+        "baseline-24"
+      ]
+    },
+    {
+      "baseline": "baseline-25",
+      "candidate": "candidate-25",
+      "run_order": [
+        "baseline-25",
+        "candidate-25"
+      ]
+    },
+    {
+      "baseline": "baseline-26",
+      "candidate": "candidate-26",
+      "run_order": [
+        "candidate-26",
+        "baseline-26"
+      ]
+    },
+    {
+      "baseline": "baseline-27",
+      "candidate": "candidate-27",
+      "run_order": [
+        "baseline-27",
+        "candidate-27"
+      ]
+    },
+    {
+      "baseline": "baseline-28",
+      "candidate": "candidate-28",
+      "run_order": [
+        "candidate-28",
+        "baseline-28"
+      ]
+    },
+    {
+      "baseline": "baseline-29",
+      "candidate": "candidate-29",
+      "run_order": [
+        "baseline-29",
+        "candidate-29"
+      ]
+    },
+    {
+      "baseline": "baseline-30",
+      "candidate": "candidate-30",
+      "run_order": [
+        "candidate-30",
+        "baseline-30"
+      ]
+    }
+  ],
+  "production_archive_source_key": "runtime/game/addons/tome-faster.teaa",
+  "production_source_prefixes": [
+    "runtime/game/addons/tome-faster/"
+  ],
+  "variant_manifests": {
+    "baseline": {
+      "production_archive_sha256": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532"
+    },
+    "candidate": {
+      "production_archive_sha256": "79f21bebe235463de05b322899b9bd62d556532e382466e60a9b41b64e923a0b"
+    }
+  },
+  "diagnostic_scope": "Normal paused real-game save on the preserved combat-ready input. Inventory scenario and no-Faster reloads are separate acceptance runs, excluded from this timing cohort.",
+  "declared_unix_ns": 1789353980282400115
+}

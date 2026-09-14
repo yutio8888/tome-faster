@@ -1,0 +1,268 @@
+{
+  "sessions": [
+    {
+      "session": "baseline-check",
+      "input_sha256": "3a8173f1a429485eb448cbc1c965267a0d217099bd1b82db4efbe9bb97349ab3",
+      "result_sha256": "4f7692d93dd3307593077a2d2638ddaec2c3d007553287bc2e9ae27ed5c7c53e",
+      "measurement_sequence": null,
+      "started_unix_ns": 1789355613540412685,
+      "acceptance_plan_sha256": null,
+      "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+      "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+      "addon_sha256": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+      "source_sha256": {
+        "run.py": "5eed61876b60a17b0a0c9ec1df6fb42d32e16beaf85f8374401aa797cceecffd",
+        "runtime/game/addons/tome-faster.teaa": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+        "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+        "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/FearscapeScenario.lua": "e4153e43c3aa97d68dc51e4503ac7acd4bc2c73be9fc51904a6f0cf1ae33d5f7",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "566ed178ebf86c6c64aa93aba4818fe8b510b8baef9a8a9882f559b084f5e7b0"
+      },
+      "setup": {
+        "candidate": false,
+        "hit_warning_interval_ms": 500,
+        "production": true,
+        "fearscape_source": "@/data/talents/corruptions/shadowflame.lua",
+        "fbo_gc_guard": true,
+        "namer_first": 28,
+        "namer_last": 43,
+        "kind": "setup",
+        "compact": true,
+        "bare": false,
+        "namer_source": "@/engine/FasterSaveNames.lua",
+        "inventory_source": "@/mod/class/Player.lua"
+      },
+      "exit_code": 0,
+      "complete": true,
+      "lua_error": false,
+      "selected_game_state_equal": true,
+      "save_files_unchanged": false,
+      "main_archive": {
+        "bytes": 2337677,
+        "entries": 2727,
+        "raw_bytes": 5567397,
+        "compressed_bytes": 2110801,
+        "compact_names": true
+      },
+      "archive_count_crc_checked": 23,
+      "all_archives_bytes": 21087238,
+      "host_load_start": [
+        1.37109375,
+        1.4375,
+        1.24951171875
+      ],
+      "host_load_end": [
+        1.37109375,
+        1.4375,
+        1.24951171875
+      ],
+      "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+      "timings": {
+        "sync_thread_user_ms": 133.533,
+        "sync_thread_system_ms": 5.553,
+        "total_process_system_ms": 66.833,
+        "total_wall_ms": 519.43391799927,
+        "total_process_user_ms": 1171.946,
+        "runtime": "LuaJIT 2.0.2",
+        "kind": "complete",
+        "sync_cpu_ms": 139.063635,
+        "sync_wall_ms": 153.66533696651,
+        "total_main_cpu_ms": 430.786543
+      },
+      "scenario": {
+        "same_target_identity": true,
+        "same_source_identity": true,
+        "same_token_identity": true,
+        "token_count": 1,
+        "original_target_callback_identity": true,
+        "original_caster_callback_identity": true,
+        "target_death_wrapper_absent": true,
+        "returned_to_source_description": true,
+        "trapper_absent": false,
+        "source_and_plane_are_distinct": true,
+        "plane_source_retained": true,
+        "mode": "casterdead",
+        "stage": "complete",
+        "ok": true,
+        "expect_cleanup": false,
+        "manually_changes_trapper": false,
+        "pumps_game_ticks": false,
+        "turn_unchanged": true,
+        "inventory_count_before": 670,
+        "inventory_count_after": 670,
+        "ground_object_count_before": 5,
+        "ground_object_count_after": 6
+      }
+    },
+    {
+      "session": "candidate-check",
+      "input_sha256": "7fcbed33eae3f61e72ec3434905b73518d785862a42f00fd23cf142e7f4bdf9d",
+      "result_sha256": "2e0fddba34b089ed780ca9657d834d88841b99d087264a818734ebdef7618e1c",
+      "measurement_sequence": null,
+      "started_unix_ns": 1789355618573932331,
+      "acceptance_plan_sha256": null,
+      "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+      "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+      "addon_sha256": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+      "source_sha256": {
+        "run.py": "5eed61876b60a17b0a0c9ec1df6fb42d32e16beaf85f8374401aa797cceecffd",
+        "runtime/game/addons/tome-faster.teaa": "0f31439af8649b791ad8e30173dc2590365e65e33ec11d1a6cc0bb93d0d3ed01",
+        "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+        "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/FearscapeScenario.lua": "e4153e43c3aa97d68dc51e4503ac7acd4bc2c73be9fc51904a6f0cf1ae33d5f7",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+        "runtime/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "566ed178ebf86c6c64aa93aba4818fe8b510b8baef9a8a9882f559b084f5e7b0"
+      },
+      "setup": {
+        "candidate": true,
+        "hit_warning_interval_ms": 500,
+        "production": true,
+        "fearscape_source": "@/engine/FasterFearscape.lua",
+        "fbo_gc_guard": true,
+        "namer_first": 48,
+        "namer_last": 63,
+        "kind": "setup",
+        "compact": true,
+        "bare": false,
+        "namer_source": "@/engine/FasterSaveNames.lua",
+        "inventory_source": "@/engine/FasterInventory.lua"
+      },
+      "exit_code": 0,
+      "complete": true,
+      "lua_error": false,
+      "selected_game_state_equal": true,
+      "save_files_unchanged": false,
+      "main_archive": {
+        "bytes": 2335939,
+        "entries": 2726,
+        "raw_bytes": 5562397,
+        "compressed_bytes": 2109147,
+        "compact_names": true
+      },
+      "archive_count_crc_checked": 23,
+      "all_archives_bytes": 21085501,
+      "host_load_start": [
+        1.421875,
+        1.447265625,
+        1.25390625
+      ],
+      "host_load_end": [
+        1.3076171875,
+        1.4228515625,
+        1.2470703125
+      ],
+      "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+      "timings": {
+        "sync_thread_user_ms": 183.335,
+        "sync_thread_system_ms": 3.863,
+        "total_process_system_ms": 73.452,
+        "total_wall_ms": 1144.3819699883,
+        "total_process_user_ms": 1414.165,
+        "runtime": "LuaJIT 2.0.2",
+        "kind": "complete",
+        "sync_cpu_ms": 187.171318,
+        "sync_wall_ms": 448.40860897303,
+        "total_main_cpu_ms": 505.682698
+      },
+      "scenario": {
+        "same_target_identity": true,
+        "same_source_identity": true,
+        "same_token_identity": true,
+        "token_count": 1,
+        "original_target_callback_identity": true,
+        "original_caster_callback_identity": true,
+        "target_death_wrapper_absent": true,
+        "returned_to_source_description": true,
+        "trapper_absent": true,
+        "source_and_plane_are_distinct": true,
+        "plane_source_retained": true,
+        "mode": "casterdead",
+        "stage": "complete",
+        "ok": true,
+        "expect_cleanup": true,
+        "manually_changes_trapper": false,
+        "pumps_game_ticks": false,
+        "turn_unchanged": true,
+        "inventory_count_before": 670,
+        "inventory_count_after": 670,
+        "ground_object_count_before": 5,
+        "ground_object_count_after": 6
+      }
+    },
+    {
+      "session": "bare-candidate-check",
+      "input_sha256": "b6a4ddaf06de8d51a87937fe34e135f0277195c5f7f4ae9f8a83b7badb695a60",
+      "result_sha256": "7820ac0c46fdac8291f9c7d86d816a035a7fd76195a7c8be2a0de6b4bbf81023",
+      "measurement_sequence": null,
+      "started_unix_ns": 1789355624555904148,
+      "acceptance_plan_sha256": null,
+      "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+      "save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+      "addon_sha256": null,
+      "source_sha256": {
+        "run.py": "5eed61876b60a17b0a0c9ec1df6fb42d32e16beaf85f8374401aa797cceecffd",
+        "runtime-no-faster/game/addons/tome-save-size-probe/hooks/load.lua": "122f13e91724fc715ea0ee6a7aba9b2a9981e3975e8e719b8116835cfdb1dca4",
+        "runtime-no-faster/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+        "runtime-no-faster/game/addons/tome-save-size-probe/overload/engine/FearscapeScenario.lua": "e4153e43c3aa97d68dc51e4503ac7acd4bc2c73be9fc51904a6f0cf1ae33d5f7",
+        "runtime-no-faster/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "4f276801ae41ec4e69c24eaabcd9cb776ae611867eeeab6b992dde692d3b0861",
+        "runtime-no-faster/game/addons/tome-save-size-probe/overload/engine/SaveSizeProbe.lua": "566ed178ebf86c6c64aa93aba4818fe8b510b8baef9a8a9882f559b084f5e7b0"
+      },
+      "setup": {
+        "candidate": false,
+        "hit_warning_interval_ms": 500,
+        "production": true,
+        "fearscape_source": "@/data/talents/corruptions/shadowflame.lua",
+        "fbo_gc_guard": true,
+        "namer_first": 130,
+        "namer_last": 136,
+        "kind": "setup",
+        "compact": true,
+        "bare": true,
+        "namer_source": "@/engine/Savefile.lua",
+        "inventory_source": "@/mod/class/Player.lua"
+      },
+      "exit_code": 0,
+      "complete": true,
+      "lua_error": false,
+      "selected_game_state_equal": true,
+      "save_files_unchanged": true,
+      "main_archive": {
+        "bytes": 2335939,
+        "entries": 2726,
+        "raw_bytes": 5562397,
+        "compressed_bytes": 2109147,
+        "compact_names": true
+      },
+      "archive_count_crc_checked": 23,
+      "all_archives_bytes": 21085501,
+      "host_load_start": [
+        1.3076171875,
+        1.4228515625,
+        1.2470703125
+      ],
+      "host_load_end": [
+        1.3076171875,
+        1.4228515625,
+        1.2470703125
+      ],
+      "scope": "State comparison is a bounded projection with UID alias normalization, not a whole real-save graph proof.",
+      "reload": {
+        "no_faster": true,
+        "kind": "reload",
+        "runtime": "LuaJIT 2.0.2",
+        "original_loadReal": true
+      },
+      "scenario": {
+        "token_count": 1,
+        "target_death_wrapper_absent": true,
+        "returned_to_source_description": true,
+        "trapper_absent": true
+      }
+    }
+  ],
+  "main_bytes_reduced": 1738,
+  "main_entries_reduced": 1,
+  "scope": "One real caster-death scenario. Only one NPC entry was removed; no whole-plane or CPU saving claim.",
+  "astar_field_limit": "The fixture diagnostic astar_map_present checks ai_state.astar, not stock ai_state.safe_grid.Astar.map. It is excluded from conclusions."
+}

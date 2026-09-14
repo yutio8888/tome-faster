@@ -232,9 +232,24 @@ do
     local env = environment{config = {settings = {}}, print = function() end, class = {bindHook = function() end},
         get_printlog = function() return {} end, truncate_printlog = function() end}
     env._G = env
+    local experiments = {inventory = 0, fearscape = 0}
     env.require = function(name)
         if name == "engine.FasterSave" then return helper end
         if name == "engine.FasterSaveFollowup" then return {installClass=function() return true end} end
+        if name == "engine.FasterSaveNames" then return assert(loadfile(root .. "/overload/engine/FasterSaveNames.lua"))() end
+        if name == "engine.FasterInventory" then
+            experiments.inventory = experiments.inventory + 1
+            return {install=function(_, _, _, settings)
+                check(not settings or settings.compact_inventory == nil or settings.compact_inventory == true, "inventory installer receives default or explicit enable"); return true
+            end}
+        end
+        if name == "engine.FasterFearscape" then
+            experiments.fearscape = experiments.fearscape + 1
+            return {installTalents=function(_, settings)
+                check(not settings or settings.fearscape_cleanup == nil or settings.fearscape_cleanup == true, "Fearscape installer receives default or explicit enable"); return true
+            end}
+        end
+        if name == "engine.interface.ActorInventory" or name == "engine.interface.ActorTalents" or name == "mod.class.Actor" or name == "mod.class.Player" then return {} end
         if name == "engine.FBOGCGuard" then return assert(loadfile(root .. "/overload/engine/FBOGCGuard.lua"))() end
         if name == "engine.class" then return env.class end
         if name == "engine.FasterClone" then return assert(loadfile(root .. "/overload/engine/FasterClone.lua"))() end
@@ -249,6 +264,7 @@ do
         error(name)
     end
     setfenv(assert(loadfile(root .. "/hooks/load.lua")), env)()
+    check(w.save:getFileName({__CLASSNAME = "TestObject"}) == "1", "hooks install compact names on the already-cached Savefile")
     w.save:loadReal("main")
     check(w.head_inserts == 0 and order(w.save.delayLoad) == "main,b,a,c", "hooks patch an already-cached Savefile class")
     local g, ge, Game = gameWorld(false)
@@ -257,5 +273,21 @@ do
     local result = setfenv(assert(loadfile(root .. "/superload/mod/class/Game.lua")), ge)()
     g:onSavefilePushed("char", "level"); g:onSavefilePushed("char", "zone"); g:onTickEndExecute()
     check(result == Game and #g.saves == 1, "actual Game superload installs save coalescing")
+    check(experiments.inventory == 1 and experiments.fearscape == 1, "default Game startup loads inventory and Fearscape modules")
+    for _, settings in ipairs{
+        {}, {compact_inventory = false, fearscape_cleanup = false},
+        {compact_inventory = "true", fearscape_cleanup = 1},
+        {compact_inventory = true}, {fearscape_cleanup = true},
+        {compact_inventory = false}, {fearscape_cleanup = false},
+        {compact_inventory = true, fearscape_cleanup = true},
+    } do
+        local _, startup, Original = gameWorld(false)
+        local inventory, fearscape = experiments.inventory, experiments.fearscape
+        startup.require, startup.loadPrevious = env.require, function() return Original end
+        startup.config.settings.faster_tome = settings
+        setfenv(assert(loadfile(root .. "/superload/mod/class/Game.lua")), startup)()
+        check(experiments.inventory - inventory == ((settings.compact_inventory == nil or settings.compact_inventory == true) and 1 or 0), "independent default-on inventory startup gate")
+        check(experiments.fearscape - fearscape == ((settings.fearscape_cleanup == nil or settings.fearscape_cleanup == true) and 1 or 0), "independent default-on Fearscape startup gate")
+    end
 end
 print("PASS all " .. checks .. " save/load checks; " .. _VERSION .. " / " .. (jit and jit.version or "no JIT"))

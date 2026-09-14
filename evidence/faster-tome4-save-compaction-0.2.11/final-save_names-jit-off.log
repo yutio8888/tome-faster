@@ -1,0 +1,1 @@
+PASS 32788 compact save name checks; native serialization, stock full-graph reload, lifecycle and guards

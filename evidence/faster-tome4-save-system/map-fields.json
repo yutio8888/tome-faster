@@ -1,0 +1,126 @@
+{
+  "source_sha256": {
+    "cur.png": "768b33450fdb582ab33b23b94d8446aeec00ef6f8a0a6e057a8c0e02a4be7440",
+    "desc.lua": "f7611f28d870b226fcd77385015647a84f87baa1e823dc6da6578d7e928a401c",
+    "game.teag": "1a6fe5ed1ba1f772e8cfcd50493dab8b7ba744cdc692ea88e248807fa25fd07e",
+    "last_log.txt": "7a731497e79635dd66bfdbe041b787911cff3a5e0e53517b438c0531c454d7c9",
+    "zone-ashes-urhrok+searing-halls.teaz": "419ff8e71b46b580689b9696d57e5c21878498696df975eadc8ffa89635c5fff",
+    "zone-daikara.teaz": "1e73ffb64d164987a1d229569b3e487184a9570f6d6f162a1cef1f9fd41977d6",
+    "zone-heart-gloom.teaz": "6205ccc6733a699b0cbe65290220d613c48b0847311d852b2edad843d00ec713",
+    "zone-lake-nur.teaz": "276e28829be101fa452d02d53f2a5e797f414fd5f8e367e7e9b152b8f56f0e5f",
+    "zone-mark-spellblaze.teaz": "5ffe9fd9aab37345dd09f16a558405c84133c4aa202e807d6386bd13f2280d30",
+    "zone-maze.teaz": "e2afb39be08c1c3b6bf3ae80e7fdb7ac793b3b86d091a0e9ef0b5292a3fdd8b0",
+    "zone-norgos-lair.teaz": "218c5378aa9e33ad90dcacd2006f923828af88354b17a6f06bd3823b4d712b2b",
+    "zone-old-forest.teaz": "09b65cbb6bf679075140cb4f51d8105342e4de8763c5e459ac2338ebe309a551",
+    "zone-rhaloren-camp.teaz": "cb2701b789b3125f94bfbf1c11c89c6bf3be7810713c4924dc8b5ae314e5f6a9",
+    "zone-ruins-kor-pul.teaz": "737f4603da7d0265556118984434744663e56c94062a1dec825482adc36bf1b8",
+    "zone-sandworm-lair.teaz": "48b1e3432203f3022afcf97ce5b24232d6dc62d43a2276696a06623a6828108f",
+    "zone-scintillating-caves.teaz": "e12f2233170eaff90a59188d7ad619d38a858a2a1fc72fed7790005fa8114312",
+    "zone-shertul-fortress.teaz": "2f46e687e685ab6352d7fccb8471071c6534870ca6ed1fa8e508d01c7266a72f",
+    "zone-town-angolwen.teaz": "32cf2633d6323d6c1937efeffdc3ff96b3f7e5038cb1dea9024fbc702b57b438",
+    "zone-town-derth.teaz": "9bce7e99246477a26a8157d68ffd90c81578b39c9b4e47de8a87905e41d94d06",
+    "zone-town-elvala.teaz": "6de1969daddcb07b040a0df07f867a0d9d0088e48e2bac4316f2345325d75d46",
+    "zone-town-last-hope.teaz": "9e8dacdb5b13e6c5caa64bc64458799b5002212cf02e3abd460353e0efefc067",
+    "zone-town-shatur.teaz": "6b5f33e564bd01bc204747a50bc436154af01f6dab45f59d1b887dca946da387",
+    "zone-town-zigur.teaz": "55bd4a339848aad14c2a46ac7d05e6730017ad8aac50c41e919041ab572c62e1",
+    "zone-trollmire.teaz": "6d85191c5325cc0d38b608aad14261aaf4c58c1a9d0e8f22d33c57aaf34506b1",
+    "zone-wilderness.teaz": "34d5a90b6ae473ba817aabf1e5bf400300cf648861c3b7c6aaea4a8ce665ec4c"
+  },
+  "source_unchanged": true,
+  "fields": {
+    "map": {
+      "maps": 60,
+      "raw_assignment_bytes": 9120401,
+      "cells": 0,
+      "value_types": {},
+      "table_parse_complete": true
+    },
+    "attrs": {
+      "maps": 60,
+      "raw_assignment_bytes": 1338614,
+      "cells": 0,
+      "value_types": {},
+      "table_parse_complete": true
+    },
+    "lites": {
+      "maps": 60,
+      "raw_assignment_bytes": 1953095,
+      "cells": 151830,
+      "value_types": {
+        "true": 151670,
+        "false": 160
+      },
+      "table_parse_complete": true
+    },
+    "seens": {
+      "maps": 60,
+      "raw_assignment_bytes": 56378,
+      "cells": 3519,
+      "value_types": {
+        "number": 3519
+      },
+      "table_parse_complete": true
+    },
+    "infovs": {
+      "maps": 60,
+      "raw_assignment_bytes": 47822,
+      "cells": 3747,
+      "value_types": {
+        "true": 3747
+      },
+      "table_parse_complete": true
+    },
+    "has_seens": {
+      "maps": 60,
+      "raw_assignment_bytes": 963003,
+      "cells": 76372,
+      "value_types": {
+        "true": 76372
+      },
+      "table_parse_complete": true
+    },
+    "remembers": {
+      "maps": 60,
+      "raw_assignment_bytes": 1518084,
+      "cells": 117913,
+      "value_types": {
+        "true": 117904,
+        "false": 9
+      },
+      "table_parse_complete": true
+    },
+    "particles": {
+      "maps": 60,
+      "raw_assignment_bytes": 21762,
+      "cells": 0,
+      "value_types": {},
+      "table_parse_complete": true
+    },
+    "effects": {
+      "maps": 60,
+      "raw_assignment_bytes": 22196,
+      "cells": 0,
+      "value_types": {},
+      "table_parse_complete": true
+    }
+  },
+  "groups": {
+    "game": {
+      "maps": 10,
+      "raw_bytes": 1937875,
+      "compressed_bytes": 174674,
+      "without_visibility_raw_bytes": 1504707,
+      "without_visibility_compressed_bytes": 100766
+    },
+    "history": {
+      "maps": 50,
+      "raw_bytes": 13127242,
+      "compressed_bytes": 1437090,
+      "without_visibility_raw_bytes": 9022028,
+      "without_visibility_compressed_bytes": 689470
+    }
+  },
+  "protocol": "Original preserved 0.2.8 saves, exact pinned native field grammar; no Lua execution. Raw DEFLATE level4/mem8 matches every original Map compressed size.",
+  "counterfactual": "without_visibility deletes entire lites/seens/infovs/has_seens/remembers assignments in memory only. It destroys meaningful state, is not a proposed optimization or a measured packing saving, and is not a mathematical upper bound on compressibility.",
+  "limitations": "No encoding/decoding CPU benchmark; only one supplied character; historical map saves are not all rewritten by a normal main save."
+}

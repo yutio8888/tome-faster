@@ -1,0 +1,11 @@
+{
+  "version": "0.2.10",
+  "sha256": "36535ee910e57415c23503e6278c9611068dab0dff86de41d3eb481c47340532",
+  "bytes": 405316,
+  "entries": 105,
+  "crc_valid": true,
+  "all_entries_match_source": true,
+  "all_production_lua_match_measured_package": true,
+  "deterministic_rebuild": true,
+  "engine_source_modified": false
+}

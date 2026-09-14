@@ -1,0 +1,35 @@
+{
+  "reviewed_source_sha256": {
+    "game/addons/tome-faster/overload/engine/FasterInventory.lua": "5e9636c1e2644a8652ac9a28447f566f89d71d7993611f469e89f07dd9643052",
+    "game/addons/tome-faster/overload/engine/FasterFearscape.lua": "8fc014546ecf268e289509f8d185224562dbc9faafa2e01254f56e50961eb955",
+    "game/addons/tome-faster/overload/engine/FasterSaveNames.lua": "5ee66fd4a9a4e39ebf5c8edf8a2fafda373811baeee7c9f0748d1d52bcb52925",
+    "game/addons/tome-faster/tests/test_inventory_compact.lua": "e488b3b63228f6cffa51d03e30fde66ef11b430b5bec41aab4c02f7ce271a01c",
+    "game/addons/tome-faster/tests/test_fearscape_cleanup.lua": "e6569f503f673f588728160811b6bc95c210bed86a531352ab08af4cb22ba3a9",
+    "game/addons/tome-faster/tests/test_save_names.lua": "ffedd09e22a3302ede8ac52bae503f089eaf3a5a6e4cbb4562c3d1e659fea33a"
+  },
+  "blocking_findings": [],
+  "fixed_review_findings": [
+    "Fearscape clone early return now precedes any game access and has nil-game regression coverage.",
+    "Inventory unchanged class-method checks now use rawget, avoiding extra custom __index calls if a callback removes methods."
+  ],
+  "implementation_test_results_reported_by_implementers": {
+    "inventory": {
+      "checks": 453,
+      "differential_scenarios": 28
+    },
+    "fearscape": {
+      "checks": 2697,
+      "differential_scenarios": 69
+    }
+  },
+  "independently_executed": [
+    "Native rusage layout and worker/main CPU scope fixture.",
+    "Four paired-analysis unit checks.",
+    "77 escaped main / _main native-serializer + unchanged stock-reader checks."
+  ],
+  "not_executed_by_this_agent": [
+    "Full regression suite",
+    "Real game performance runs",
+    "Actual runtime without Faster addon"
+  ]
+}

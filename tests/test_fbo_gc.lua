@@ -58,6 +58,19 @@ local function main()
 
     local guard = assert(Guard.install())
     check(Guard.install() == guard, "installation is idempotent")
+    local wrapped_use, wrapped_gc = mt.__index.use, mt.__gc
+    check(Guard.originalUse(mt, wrapped_use) == use, "owned wrapper exposes its native identity for compatibility checks")
+    check(Guard.originalUse(mt, use) == nil, "native delegate is not mistaken for the live wrapper")
+    mt.__index.use = function(...) return wrapped_use(...) end
+    check(Guard.originalUse(mt, mt.__index.use) == nil, "unknown later use wrapper is not authorized")
+    mt.__index.use = wrapped_use
+    mt.__gc = function(...) return wrapped_gc(...) end
+    check(Guard.originalUse(mt, wrapped_use) == nil, "unknown later finalizer invalidates the bridge")
+    mt.__gc = wrapped_gc
+    mt.__fbo_gc_guard_v1 = {}
+    check(Guard.originalUse(mt, wrapped_use) == nil, "a registry marker alone cannot authorize a wrapper")
+    mt.__fbo_gc_guard_v1 = guard
+    check(Guard.originalUse(mt, wrapped_use) == use, "restoring both owned callbacks and marker restores compatibility")
     doomed = native.newFBO(4,4)
     doomed:use(true); local doomed_id = native.state().fbo; doomed:use(false)
     outer:use(true, 0.25, 0.5, 0.75, 1)
