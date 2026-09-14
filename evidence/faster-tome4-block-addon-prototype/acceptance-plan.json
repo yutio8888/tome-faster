@@ -1,0 +1,1048 @@
+{
+  "schema": 1,
+  "declared_unix_ns": 1789367398443498152,
+  "addon_version": "0.2.12",
+  "addon_sha256": "ef287cf882b9fcea6719440ec901cfa2768651de13148265e0e9b19459d64f6c",
+  "engine_sha256": "5aa8fe5cfa8f0cde3aa82deb4602be95d8f7668e7d5d2ea4ce450cae18248dc7",
+  "source_save_sha256": "51d998a74cd09093bea1a3d5fcacb7ae8f689b1dc19f30f7fabed4d3b33157be",
+  "source_sha256": {
+    "run.py": "d11c1dc361282e556d740484232b0443db00d97c72993e5f65662eac694157dc",
+    "archive.py": "2cd2af26ae805db018edda62e4196bcf172b36604afa7652b9fa47fbdd61ca77",
+    "save_literals.py": "8cf056f57b45e19f9b348507caed7fcb53852c78e0efd2d2f4fb198684da0c5c",
+    "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "0c86e4cb32b6969889a065659545712de7b9130912dddc8749e651ffd5f61090",
+    "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+    "runtime/game/addons/tome-save-size-probe/overload/engine/BlockLoadMetrics.lua": "e67951a1d58860fe3e080075a8e9d99864aee326cd2d7e83e3f816628154d009",
+    "runtime/game/addons/tome-save-size-probe/overload/engine/BlockPrototype.lua": "835ebaf04dbf47da2b53fb276dce9d4a093989e7c885dda0b503fe25d7b920c7",
+    "runtime/game/addons/tome-save-size-probe/overload/engine/CarrierEncoder.lua": "7197d78926b704c97c4893d7903308baf99f528d243ff0a44048be5240c7e2b6",
+    "runtime/game/addons/tome-save-size-probe/overload/engine/FearscapeScenario.lua": "5e0ae22f9371c40de2d89ca8717663e3cfc5bbd22e2b506b5008380cce1b8b56",
+    "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "94242c8b0dbac9acec047b4e5e8751a04c0eddaf95fcba3a9f8f8e0e45a0a55c",
+    "runtime/game/addons/tome-save-size-probe/overload/engine/SaveIsolatedProbe.lua": "990b700b053bc4265c55d942425baf44c8e6bd37da2b08327c41ac886c7fd8ec",
+    "runtime/game/addons/tome-faster.teaa": "ef287cf882b9fcea6719440ec901cfa2768651de13148265e0e9b19459d64f6c"
+  },
+  "cases": {
+    "block64": 65536,
+    "block256": 262144
+  },
+  "production_options": {
+    "profile": false,
+    "stutter": false,
+    "session": false,
+    "compact_save_names": true,
+    "fbo_gc_guard": true,
+    "hit_warning_interval_ms": 500
+  },
+  "production_effective_defaults": {
+    "compact_inventory": true,
+    "fearscape_cleanup": true,
+    "compact_save_names_base62": false
+  },
+  "save_pairs": [
+    {
+      "case": "block64",
+      "pair": 1,
+      "baseline": "block64--baseline--p01",
+      "candidate": "block64--candidate--p01",
+      "run_order": [
+        "block64--baseline--p01",
+        "block64--candidate--p01"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 1,
+      "baseline": "block256--baseline--p01",
+      "candidate": "block256--candidate--p01",
+      "run_order": [
+        "block256--baseline--p01",
+        "block256--candidate--p01"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 2,
+      "baseline": "block256--baseline--p02",
+      "candidate": "block256--candidate--p02",
+      "run_order": [
+        "block256--candidate--p02",
+        "block256--baseline--p02"
+      ]
+    },
+    {
+      "case": "block64",
+      "pair": 2,
+      "baseline": "block64--baseline--p02",
+      "candidate": "block64--candidate--p02",
+      "run_order": [
+        "block64--candidate--p02",
+        "block64--baseline--p02"
+      ]
+    },
+    {
+      "case": "block64",
+      "pair": 3,
+      "baseline": "block64--baseline--p03",
+      "candidate": "block64--candidate--p03",
+      "run_order": [
+        "block64--baseline--p03",
+        "block64--candidate--p03"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 3,
+      "baseline": "block256--baseline--p03",
+      "candidate": "block256--candidate--p03",
+      "run_order": [
+        "block256--baseline--p03",
+        "block256--candidate--p03"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 4,
+      "baseline": "block256--baseline--p04",
+      "candidate": "block256--candidate--p04",
+      "run_order": [
+        "block256--candidate--p04",
+        "block256--baseline--p04"
+      ]
+    },
+    {
+      "case": "block64",
+      "pair": 4,
+      "baseline": "block64--baseline--p04",
+      "candidate": "block64--candidate--p04",
+      "run_order": [
+        "block64--candidate--p04",
+        "block64--baseline--p04"
+      ]
+    },
+    {
+      "case": "block64",
+      "pair": 5,
+      "baseline": "block64--baseline--p05",
+      "candidate": "block64--candidate--p05",
+      "run_order": [
+        "block64--baseline--p05",
+        "block64--candidate--p05"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 5,
+      "baseline": "block256--baseline--p05",
+      "candidate": "block256--candidate--p05",
+      "run_order": [
+        "block256--baseline--p05",
+        "block256--candidate--p05"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 6,
+      "baseline": "block256--baseline--p06",
+      "candidate": "block256--candidate--p06",
+      "run_order": [
+        "block256--candidate--p06",
+        "block256--baseline--p06"
+      ]
+    },
+    {
+      "case": "block64",
+      "pair": 6,
+      "baseline": "block64--baseline--p06",
+      "candidate": "block64--candidate--p06",
+      "run_order": [
+        "block64--candidate--p06",
+        "block64--baseline--p06"
+      ]
+    },
+    {
+      "case": "block64",
+      "pair": 7,
+      "baseline": "block64--baseline--p07",
+      "candidate": "block64--candidate--p07",
+      "run_order": [
+        "block64--baseline--p07",
+        "block64--candidate--p07"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 7,
+      "baseline": "block256--baseline--p07",
+      "candidate": "block256--candidate--p07",
+      "run_order": [
+        "block256--baseline--p07",
+        "block256--candidate--p07"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 8,
+      "baseline": "block256--baseline--p08",
+      "candidate": "block256--candidate--p08",
+      "run_order": [
+        "block256--candidate--p08",
+        "block256--baseline--p08"
+      ]
+    },
+    {
+      "case": "block64",
+      "pair": 8,
+      "baseline": "block64--baseline--p08",
+      "candidate": "block64--candidate--p08",
+      "run_order": [
+        "block64--candidate--p08",
+        "block64--baseline--p08"
+      ]
+    },
+    {
+      "case": "block64",
+      "pair": 9,
+      "baseline": "block64--baseline--p09",
+      "candidate": "block64--candidate--p09",
+      "run_order": [
+        "block64--baseline--p09",
+        "block64--candidate--p09"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 9,
+      "baseline": "block256--baseline--p09",
+      "candidate": "block256--candidate--p09",
+      "run_order": [
+        "block256--baseline--p09",
+        "block256--candidate--p09"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 10,
+      "baseline": "block256--baseline--p10",
+      "candidate": "block256--candidate--p10",
+      "run_order": [
+        "block256--candidate--p10",
+        "block256--baseline--p10"
+      ]
+    },
+    {
+      "case": "block64",
+      "pair": 10,
+      "baseline": "block64--baseline--p10",
+      "candidate": "block64--candidate--p10",
+      "run_order": [
+        "block64--candidate--p10",
+        "block64--baseline--p10"
+      ]
+    },
+    {
+      "case": "block64",
+      "pair": 11,
+      "baseline": "block64--baseline--p11",
+      "candidate": "block64--candidate--p11",
+      "run_order": [
+        "block64--baseline--p11",
+        "block64--candidate--p11"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 11,
+      "baseline": "block256--baseline--p11",
+      "candidate": "block256--candidate--p11",
+      "run_order": [
+        "block256--baseline--p11",
+        "block256--candidate--p11"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 12,
+      "baseline": "block256--baseline--p12",
+      "candidate": "block256--candidate--p12",
+      "run_order": [
+        "block256--candidate--p12",
+        "block256--baseline--p12"
+      ]
+    },
+    {
+      "case": "block64",
+      "pair": 12,
+      "baseline": "block64--baseline--p12",
+      "candidate": "block64--candidate--p12",
+      "run_order": [
+        "block64--candidate--p12",
+        "block64--baseline--p12"
+      ]
+    },
+    {
+      "case": "block64",
+      "pair": 13,
+      "baseline": "block64--baseline--p13",
+      "candidate": "block64--candidate--p13",
+      "run_order": [
+        "block64--baseline--p13",
+        "block64--candidate--p13"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 13,
+      "baseline": "block256--baseline--p13",
+      "candidate": "block256--candidate--p13",
+      "run_order": [
+        "block256--baseline--p13",
+        "block256--candidate--p13"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 14,
+      "baseline": "block256--baseline--p14",
+      "candidate": "block256--candidate--p14",
+      "run_order": [
+        "block256--candidate--p14",
+        "block256--baseline--p14"
+      ]
+    },
+    {
+      "case": "block64",
+      "pair": 14,
+      "baseline": "block64--baseline--p14",
+      "candidate": "block64--candidate--p14",
+      "run_order": [
+        "block64--candidate--p14",
+        "block64--baseline--p14"
+      ]
+    },
+    {
+      "case": "block64",
+      "pair": 15,
+      "baseline": "block64--baseline--p15",
+      "candidate": "block64--candidate--p15",
+      "run_order": [
+        "block64--baseline--p15",
+        "block64--candidate--p15"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 15,
+      "baseline": "block256--baseline--p15",
+      "candidate": "block256--candidate--p15",
+      "run_order": [
+        "block256--baseline--p15",
+        "block256--candidate--p15"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 16,
+      "baseline": "block256--baseline--p16",
+      "candidate": "block256--candidate--p16",
+      "run_order": [
+        "block256--candidate--p16",
+        "block256--baseline--p16"
+      ]
+    },
+    {
+      "case": "block64",
+      "pair": 16,
+      "baseline": "block64--baseline--p16",
+      "candidate": "block64--candidate--p16",
+      "run_order": [
+        "block64--candidate--p16",
+        "block64--baseline--p16"
+      ]
+    },
+    {
+      "case": "block64",
+      "pair": 17,
+      "baseline": "block64--baseline--p17",
+      "candidate": "block64--candidate--p17",
+      "run_order": [
+        "block64--baseline--p17",
+        "block64--candidate--p17"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 17,
+      "baseline": "block256--baseline--p17",
+      "candidate": "block256--candidate--p17",
+      "run_order": [
+        "block256--baseline--p17",
+        "block256--candidate--p17"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 18,
+      "baseline": "block256--baseline--p18",
+      "candidate": "block256--candidate--p18",
+      "run_order": [
+        "block256--candidate--p18",
+        "block256--baseline--p18"
+      ]
+    },
+    {
+      "case": "block64",
+      "pair": 18,
+      "baseline": "block64--baseline--p18",
+      "candidate": "block64--candidate--p18",
+      "run_order": [
+        "block64--candidate--p18",
+        "block64--baseline--p18"
+      ]
+    },
+    {
+      "case": "block64",
+      "pair": 19,
+      "baseline": "block64--baseline--p19",
+      "candidate": "block64--candidate--p19",
+      "run_order": [
+        "block64--baseline--p19",
+        "block64--candidate--p19"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 19,
+      "baseline": "block256--baseline--p19",
+      "candidate": "block256--candidate--p19",
+      "run_order": [
+        "block256--baseline--p19",
+        "block256--candidate--p19"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 20,
+      "baseline": "block256--baseline--p20",
+      "candidate": "block256--candidate--p20",
+      "run_order": [
+        "block256--candidate--p20",
+        "block256--baseline--p20"
+      ]
+    },
+    {
+      "case": "block64",
+      "pair": 20,
+      "baseline": "block64--baseline--p20",
+      "candidate": "block64--candidate--p20",
+      "run_order": [
+        "block64--candidate--p20",
+        "block64--baseline--p20"
+      ]
+    },
+    {
+      "case": "block64",
+      "pair": 21,
+      "baseline": "block64--baseline--p21",
+      "candidate": "block64--candidate--p21",
+      "run_order": [
+        "block64--baseline--p21",
+        "block64--candidate--p21"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 21,
+      "baseline": "block256--baseline--p21",
+      "candidate": "block256--candidate--p21",
+      "run_order": [
+        "block256--baseline--p21",
+        "block256--candidate--p21"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 22,
+      "baseline": "block256--baseline--p22",
+      "candidate": "block256--candidate--p22",
+      "run_order": [
+        "block256--candidate--p22",
+        "block256--baseline--p22"
+      ]
+    },
+    {
+      "case": "block64",
+      "pair": 22,
+      "baseline": "block64--baseline--p22",
+      "candidate": "block64--candidate--p22",
+      "run_order": [
+        "block64--candidate--p22",
+        "block64--baseline--p22"
+      ]
+    },
+    {
+      "case": "block64",
+      "pair": 23,
+      "baseline": "block64--baseline--p23",
+      "candidate": "block64--candidate--p23",
+      "run_order": [
+        "block64--baseline--p23",
+        "block64--candidate--p23"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 23,
+      "baseline": "block256--baseline--p23",
+      "candidate": "block256--candidate--p23",
+      "run_order": [
+        "block256--baseline--p23",
+        "block256--candidate--p23"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 24,
+      "baseline": "block256--baseline--p24",
+      "candidate": "block256--candidate--p24",
+      "run_order": [
+        "block256--candidate--p24",
+        "block256--baseline--p24"
+      ]
+    },
+    {
+      "case": "block64",
+      "pair": 24,
+      "baseline": "block64--baseline--p24",
+      "candidate": "block64--candidate--p24",
+      "run_order": [
+        "block64--candidate--p24",
+        "block64--baseline--p24"
+      ]
+    },
+    {
+      "case": "block64",
+      "pair": 25,
+      "baseline": "block64--baseline--p25",
+      "candidate": "block64--candidate--p25",
+      "run_order": [
+        "block64--baseline--p25",
+        "block64--candidate--p25"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 25,
+      "baseline": "block256--baseline--p25",
+      "candidate": "block256--candidate--p25",
+      "run_order": [
+        "block256--baseline--p25",
+        "block256--candidate--p25"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 26,
+      "baseline": "block256--baseline--p26",
+      "candidate": "block256--candidate--p26",
+      "run_order": [
+        "block256--candidate--p26",
+        "block256--baseline--p26"
+      ]
+    },
+    {
+      "case": "block64",
+      "pair": 26,
+      "baseline": "block64--baseline--p26",
+      "candidate": "block64--candidate--p26",
+      "run_order": [
+        "block64--candidate--p26",
+        "block64--baseline--p26"
+      ]
+    },
+    {
+      "case": "block64",
+      "pair": 27,
+      "baseline": "block64--baseline--p27",
+      "candidate": "block64--candidate--p27",
+      "run_order": [
+        "block64--baseline--p27",
+        "block64--candidate--p27"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 27,
+      "baseline": "block256--baseline--p27",
+      "candidate": "block256--candidate--p27",
+      "run_order": [
+        "block256--baseline--p27",
+        "block256--candidate--p27"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 28,
+      "baseline": "block256--baseline--p28",
+      "candidate": "block256--candidate--p28",
+      "run_order": [
+        "block256--candidate--p28",
+        "block256--baseline--p28"
+      ]
+    },
+    {
+      "case": "block64",
+      "pair": 28,
+      "baseline": "block64--baseline--p28",
+      "candidate": "block64--candidate--p28",
+      "run_order": [
+        "block64--candidate--p28",
+        "block64--baseline--p28"
+      ]
+    },
+    {
+      "case": "block64",
+      "pair": 29,
+      "baseline": "block64--baseline--p29",
+      "candidate": "block64--candidate--p29",
+      "run_order": [
+        "block64--baseline--p29",
+        "block64--candidate--p29"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 29,
+      "baseline": "block256--baseline--p29",
+      "candidate": "block256--candidate--p29",
+      "run_order": [
+        "block256--baseline--p29",
+        "block256--candidate--p29"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 30,
+      "baseline": "block256--baseline--p30",
+      "candidate": "block256--candidate--p30",
+      "run_order": [
+        "block256--candidate--p30",
+        "block256--baseline--p30"
+      ]
+    },
+    {
+      "case": "block64",
+      "pair": 30,
+      "baseline": "block64--baseline--p30",
+      "candidate": "block64--candidate--p30",
+      "run_order": [
+        "block64--candidate--p30",
+        "block64--baseline--p30"
+      ]
+    }
+  ],
+  "load_pairs": [
+    {
+      "case": "block64",
+      "pair": 1,
+      "source": "block64--candidate--p01",
+      "baseline": "plain-block64--candidate--p01",
+      "candidate": "reload-block64--candidate--p01",
+      "run_order": [
+        "plain-block64--candidate--p01",
+        "reload-block64--candidate--p01"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 1,
+      "source": "block256--candidate--p01",
+      "baseline": "plain-block256--candidate--p01",
+      "candidate": "reload-block256--candidate--p01",
+      "run_order": [
+        "plain-block256--candidate--p01",
+        "reload-block256--candidate--p01"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 2,
+      "source": "block256--candidate--p02",
+      "baseline": "plain-block256--candidate--p02",
+      "candidate": "reload-block256--candidate--p02",
+      "run_order": [
+        "reload-block256--candidate--p02",
+        "plain-block256--candidate--p02"
+      ]
+    },
+    {
+      "case": "block64",
+      "pair": 2,
+      "source": "block64--candidate--p02",
+      "baseline": "plain-block64--candidate--p02",
+      "candidate": "reload-block64--candidate--p02",
+      "run_order": [
+        "reload-block64--candidate--p02",
+        "plain-block64--candidate--p02"
+      ]
+    },
+    {
+      "case": "block64",
+      "pair": 3,
+      "source": "block64--candidate--p03",
+      "baseline": "plain-block64--candidate--p03",
+      "candidate": "reload-block64--candidate--p03",
+      "run_order": [
+        "plain-block64--candidate--p03",
+        "reload-block64--candidate--p03"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 3,
+      "source": "block256--candidate--p03",
+      "baseline": "plain-block256--candidate--p03",
+      "candidate": "reload-block256--candidate--p03",
+      "run_order": [
+        "plain-block256--candidate--p03",
+        "reload-block256--candidate--p03"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 4,
+      "source": "block256--candidate--p04",
+      "baseline": "plain-block256--candidate--p04",
+      "candidate": "reload-block256--candidate--p04",
+      "run_order": [
+        "reload-block256--candidate--p04",
+        "plain-block256--candidate--p04"
+      ]
+    },
+    {
+      "case": "block64",
+      "pair": 4,
+      "source": "block64--candidate--p04",
+      "baseline": "plain-block64--candidate--p04",
+      "candidate": "reload-block64--candidate--p04",
+      "run_order": [
+        "reload-block64--candidate--p04",
+        "plain-block64--candidate--p04"
+      ]
+    },
+    {
+      "case": "block64",
+      "pair": 5,
+      "source": "block64--candidate--p05",
+      "baseline": "plain-block64--candidate--p05",
+      "candidate": "reload-block64--candidate--p05",
+      "run_order": [
+        "plain-block64--candidate--p05",
+        "reload-block64--candidate--p05"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 5,
+      "source": "block256--candidate--p05",
+      "baseline": "plain-block256--candidate--p05",
+      "candidate": "reload-block256--candidate--p05",
+      "run_order": [
+        "plain-block256--candidate--p05",
+        "reload-block256--candidate--p05"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 6,
+      "source": "block256--candidate--p06",
+      "baseline": "plain-block256--candidate--p06",
+      "candidate": "reload-block256--candidate--p06",
+      "run_order": [
+        "reload-block256--candidate--p06",
+        "plain-block256--candidate--p06"
+      ]
+    },
+    {
+      "case": "block64",
+      "pair": 6,
+      "source": "block64--candidate--p06",
+      "baseline": "plain-block64--candidate--p06",
+      "candidate": "reload-block64--candidate--p06",
+      "run_order": [
+        "reload-block64--candidate--p06",
+        "plain-block64--candidate--p06"
+      ]
+    },
+    {
+      "case": "block64",
+      "pair": 7,
+      "source": "block64--candidate--p07",
+      "baseline": "plain-block64--candidate--p07",
+      "candidate": "reload-block64--candidate--p07",
+      "run_order": [
+        "plain-block64--candidate--p07",
+        "reload-block64--candidate--p07"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 7,
+      "source": "block256--candidate--p07",
+      "baseline": "plain-block256--candidate--p07",
+      "candidate": "reload-block256--candidate--p07",
+      "run_order": [
+        "plain-block256--candidate--p07",
+        "reload-block256--candidate--p07"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 8,
+      "source": "block256--candidate--p08",
+      "baseline": "plain-block256--candidate--p08",
+      "candidate": "reload-block256--candidate--p08",
+      "run_order": [
+        "reload-block256--candidate--p08",
+        "plain-block256--candidate--p08"
+      ]
+    },
+    {
+      "case": "block64",
+      "pair": 8,
+      "source": "block64--candidate--p08",
+      "baseline": "plain-block64--candidate--p08",
+      "candidate": "reload-block64--candidate--p08",
+      "run_order": [
+        "reload-block64--candidate--p08",
+        "plain-block64--candidate--p08"
+      ]
+    },
+    {
+      "case": "block64",
+      "pair": 9,
+      "source": "block64--candidate--p09",
+      "baseline": "plain-block64--candidate--p09",
+      "candidate": "reload-block64--candidate--p09",
+      "run_order": [
+        "plain-block64--candidate--p09",
+        "reload-block64--candidate--p09"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 9,
+      "source": "block256--candidate--p09",
+      "baseline": "plain-block256--candidate--p09",
+      "candidate": "reload-block256--candidate--p09",
+      "run_order": [
+        "plain-block256--candidate--p09",
+        "reload-block256--candidate--p09"
+      ]
+    },
+    {
+      "case": "block256",
+      "pair": 10,
+      "source": "block256--candidate--p10",
+      "baseline": "plain-block256--candidate--p10",
+      "candidate": "reload-block256--candidate--p10",
+      "run_order": [
+        "reload-block256--candidate--p10",
+        "plain-block256--candidate--p10"
+      ]
+    },
+    {
+      "case": "block64",
+      "pair": 10,
+      "source": "block64--candidate--p10",
+      "baseline": "plain-block64--candidate--p10",
+      "candidate": "reload-block64--candidate--p10",
+      "run_order": [
+        "reload-block64--candidate--p10",
+        "plain-block64--candidate--p10"
+      ]
+    }
+  ],
+  "execution_order": [
+    "block64--baseline--p01",
+    "block64--candidate--p01",
+    "block256--baseline--p01",
+    "block256--candidate--p01",
+    "block256--candidate--p02",
+    "block256--baseline--p02",
+    "block64--candidate--p02",
+    "block64--baseline--p02",
+    "block64--baseline--p03",
+    "block64--candidate--p03",
+    "block256--baseline--p03",
+    "block256--candidate--p03",
+    "block256--candidate--p04",
+    "block256--baseline--p04",
+    "block64--candidate--p04",
+    "block64--baseline--p04",
+    "block64--baseline--p05",
+    "block64--candidate--p05",
+    "block256--baseline--p05",
+    "block256--candidate--p05",
+    "block256--candidate--p06",
+    "block256--baseline--p06",
+    "block64--candidate--p06",
+    "block64--baseline--p06",
+    "block64--baseline--p07",
+    "block64--candidate--p07",
+    "block256--baseline--p07",
+    "block256--candidate--p07",
+    "block256--candidate--p08",
+    "block256--baseline--p08",
+    "block64--candidate--p08",
+    "block64--baseline--p08",
+    "block64--baseline--p09",
+    "block64--candidate--p09",
+    "block256--baseline--p09",
+    "block256--candidate--p09",
+    "block256--candidate--p10",
+    "block256--baseline--p10",
+    "block64--candidate--p10",
+    "block64--baseline--p10",
+    "block64--baseline--p11",
+    "block64--candidate--p11",
+    "block256--baseline--p11",
+    "block256--candidate--p11",
+    "block256--candidate--p12",
+    "block256--baseline--p12",
+    "block64--candidate--p12",
+    "block64--baseline--p12",
+    "block64--baseline--p13",
+    "block64--candidate--p13",
+    "block256--baseline--p13",
+    "block256--candidate--p13",
+    "block256--candidate--p14",
+    "block256--baseline--p14",
+    "block64--candidate--p14",
+    "block64--baseline--p14",
+    "block64--baseline--p15",
+    "block64--candidate--p15",
+    "block256--baseline--p15",
+    "block256--candidate--p15",
+    "block256--candidate--p16",
+    "block256--baseline--p16",
+    "block64--candidate--p16",
+    "block64--baseline--p16",
+    "block64--baseline--p17",
+    "block64--candidate--p17",
+    "block256--baseline--p17",
+    "block256--candidate--p17",
+    "block256--candidate--p18",
+    "block256--baseline--p18",
+    "block64--candidate--p18",
+    "block64--baseline--p18",
+    "block64--baseline--p19",
+    "block64--candidate--p19",
+    "block256--baseline--p19",
+    "block256--candidate--p19",
+    "block256--candidate--p20",
+    "block256--baseline--p20",
+    "block64--candidate--p20",
+    "block64--baseline--p20",
+    "block64--baseline--p21",
+    "block64--candidate--p21",
+    "block256--baseline--p21",
+    "block256--candidate--p21",
+    "block256--candidate--p22",
+    "block256--baseline--p22",
+    "block64--candidate--p22",
+    "block64--baseline--p22",
+    "block64--baseline--p23",
+    "block64--candidate--p23",
+    "block256--baseline--p23",
+    "block256--candidate--p23",
+    "block256--candidate--p24",
+    "block256--baseline--p24",
+    "block64--candidate--p24",
+    "block64--baseline--p24",
+    "block64--baseline--p25",
+    "block64--candidate--p25",
+    "block256--baseline--p25",
+    "block256--candidate--p25",
+    "block256--candidate--p26",
+    "block256--baseline--p26",
+    "block64--candidate--p26",
+    "block64--baseline--p26",
+    "block64--baseline--p27",
+    "block64--candidate--p27",
+    "block256--baseline--p27",
+    "block256--candidate--p27",
+    "block256--candidate--p28",
+    "block256--baseline--p28",
+    "block64--candidate--p28",
+    "block64--baseline--p28",
+    "block64--baseline--p29",
+    "block64--candidate--p29",
+    "block256--baseline--p29",
+    "block256--candidate--p29",
+    "block256--candidate--p30",
+    "block256--baseline--p30",
+    "block64--candidate--p30",
+    "block64--baseline--p30",
+    "plain-block64--candidate--p01",
+    "reload-block64--candidate--p01",
+    "plain-block256--candidate--p01",
+    "reload-block256--candidate--p01",
+    "reload-block256--candidate--p02",
+    "plain-block256--candidate--p02",
+    "reload-block64--candidate--p02",
+    "plain-block64--candidate--p02",
+    "plain-block64--candidate--p03",
+    "reload-block64--candidate--p03",
+    "plain-block256--candidate--p03",
+    "reload-block256--candidate--p03",
+    "reload-block256--candidate--p04",
+    "plain-block256--candidate--p04",
+    "reload-block64--candidate--p04",
+    "plain-block64--candidate--p04",
+    "plain-block64--candidate--p05",
+    "reload-block64--candidate--p05",
+    "plain-block256--candidate--p05",
+    "reload-block256--candidate--p05",
+    "reload-block256--candidate--p06",
+    "plain-block256--candidate--p06",
+    "reload-block64--candidate--p06",
+    "plain-block64--candidate--p06",
+    "plain-block64--candidate--p07",
+    "reload-block64--candidate--p07",
+    "plain-block256--candidate--p07",
+    "reload-block256--candidate--p07",
+    "reload-block256--candidate--p08",
+    "plain-block256--candidate--p08",
+    "reload-block64--candidate--p08",
+    "plain-block64--candidate--p08",
+    "plain-block64--candidate--p09",
+    "reload-block64--candidate--p09",
+    "plain-block256--candidate--p09",
+    "reload-block256--candidate--p09",
+    "reload-block256--candidate--p10",
+    "plain-block256--candidate--p10",
+    "reload-block64--candidate--p10",
+    "plain-block64--candidate--p10"
+  ],
+  "rules": {
+    "primary_metric": "save_process_user_ms",
+    "save_pairs_per_case": 30,
+    "load_pairs_per_case": 10,
+    "save_cpu_gate": "paired log(candidate/baseline), Student t one-sided 95% upper bound strictly below log(1.01)",
+    "confidence_scope": "Individual per-case intervals, not a joint familywise claim",
+    "save_boundary": "Game.saveGame entry through returned save coroutine with pipe, waiton, and on_done drained",
+    "load_boundary": "Savefile.loadGame entry through execution of its delayed callback queue",
+    "load_control": "Exact candidate object programs materialized into stock per-object ZIP entries; same DLC/addons and source save",
+    "measurement": "Fresh home/process each session; Linux LuaJIT 2.0.2; Xvfb/llvmpipe; no trace audit, native verification, latency instrumentation, or profiler",
+    "memory": "ru_maxrss at before/after save is process-lifetime peak, including load; Lua values are boundary heap sizes, not peaks",
+    "other_metrics": [
+      "main-thread CPU",
+      "synchronous wall/CPU",
+      "full wall",
+      "game.teag bytes",
+      "process-lifetime peak RSS",
+      "load wall/CPU"
+    ],
+    "sample_policy": "Keep all valid pairs; no trimming, pooling, extending, or replacing samples after observing outcomes. Any invalid session stops this declared run.",
+    "scenarios": "64 KiB and 256 KiB targets compared separately; only game.teag changes layout; no inventory/Fearscape events",
+    "followups": "Separate correctness/fault/latency checks do not enter formal timing samples"
+  }
+}

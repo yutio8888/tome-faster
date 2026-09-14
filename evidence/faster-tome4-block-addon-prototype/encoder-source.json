@@ -1,0 +1,5 @@
+{
+  "serial_source_sha256": "51b9abbffea3a4a0e662dc0e6c27a91c6c063809acf5480d8c628110a9f4476f",
+  "encoder_sha256": "7197d78926b704c97c4893d7903308baf99f528d243ff0a44048be5240c7e2b6",
+  "scope": "Unchanged native serializer with in-memory queue sink; no compression or real game."
+}

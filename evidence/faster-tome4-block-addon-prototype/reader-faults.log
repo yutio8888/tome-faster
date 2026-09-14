@@ -1,0 +1,12 @@
+PASS	valid packed file with forced 17-byte reads
+PASS	legacy fallback with prototype installed
+PASS	missing referenced block	raised before the caller deletion path
+PASS	truncated block	raised before the caller deletion path
+PASS	unknown format version	raised before the caller deletion path
+PASS	missing index	raised before the caller deletion path
+PASS	invalid block path	raised before the caller deletion path
+PASS	missing logical main	raised before the caller deletion path
+KNOWN UNSAFE	reader absent	actual Module caller excerpt reached four mocked delete operations
+KNOWN UNSAFE	format marker absent	actual Module caller excerpt reached four mocked delete operations
+PASS: 18 assertions; six rejection cases; two explicitly unsafe cases reproduced
+Scope: pinned class/Savefile methods and Module load branch; md5_types={}, filesystem/UI mocked, not full Module instantiation.

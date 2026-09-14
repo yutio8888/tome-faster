@@ -1,0 +1,39 @@
+{
+  "files": {
+    "README.md": "62bb4a5448ebb1b6212ab910b813c686a33c53b05c1e8676853ce859f591003a",
+    "acceptance-plan.json": "c5c042163112c5dab89aa649f36e9eb268b8b26bd14c612bb33a98d59302ee0b",
+    "analyze_blocks.py": "3cd96b9ec3fc9f52afc789695a49c466ad41642b67d4c3a89d16c30df36c188c",
+    "archive.py": "2cd2af26ae805db018edda62e4196bcf172b36604afa7652b9fa47fbdd61ca77",
+    "auxiliary/BlockTiming.lua": "fae07bcf91309129835957d9c3e1af23d4bcc351e26ff141756cc4d06809b6fb",
+    "auxiliary/SaveIsolatedProbe.lua": "e198a3b77f76b1830189c0d5065d953abb84797c1c3a621d535f42151d440cfb",
+    "auxiliary/hooks-load.lua": "c2ad6a05bf9e8144c1fdadc7fb331980e61892990541169018fe35cf020ef1ba",
+    "auxiliary/run.py": "74f487b591c3f0a34c6223d8dda6679daadd1049734484772c5161725ae51e06",
+    "auxiliary-attribution.json": "d693464c219cc7b14250bc2fd3f2015467f61c721a24a0cfcd766ff3a35e90c1",
+    "build_fixture.py": "8a63f03cb4f3ee9406f9283f051920170ec64ae86d7828e49ed27aa01b2cbeef",
+    "correctness.json": "44f8ea0742451b691fd9eb2a435af0440db200ad0e15f27492be4b985a6ffb01",
+    "encoder-jit.log": "2bd509b18aa0b9db86f3fd96b93e35ce685bba9defc96e765af4af6bc3938e44",
+    "encoder-no-jit.log": "2bd509b18aa0b9db86f3fd96b93e35ce685bba9defc96e765af4af6bc3938e44",
+    "encoder-source.json": "f837c12a7240ff2c00fa7ed2ef7ff94a934a74fd04a53dc5c6fee5f3130ad480",
+    "reader-faults-no-jit.log": "295cc9c8aebe1b69430a5dcf88a64f5066a96a44f1509a3cfea939aef7180495",
+    "reader-faults.log": "295cc9c8aebe1b69430a5dcf88a64f5066a96a44f1509a3cfea939aef7180495",
+    "results.json": "b8450d0f0a1a2c9d258caa9296d8e1736c8eecccced50c78d774dcf2cbe66cfd",
+    "run.py": "d11c1dc361282e556d740484232b0443db00d97c72993e5f65662eac694157dc",
+    "runtime/game/addons/tome-save-size-probe/hooks/load.lua": "0c86e4cb32b6969889a065659545712de7b9130912dddc8749e651ffd5f61090",
+    "runtime/game/addons/tome-save-size-probe/init.lua": "904e5cfe2e85ce41b1b4256e969fb696e6726b5b066dd42a0c7b33792a6691eb",
+    "runtime/game/addons/tome-save-size-probe/overload/engine/BlockLoadMetrics.lua": "e67951a1d58860fe3e080075a8e9d99864aee326cd2d7e83e3f816628154d009",
+    "runtime/game/addons/tome-save-size-probe/overload/engine/BlockPrototype.lua": "835ebaf04dbf47da2b53fb276dce9d4a093989e7c885dda0b503fe25d7b920c7",
+    "runtime/game/addons/tome-save-size-probe/overload/engine/CarrierEncoder.lua": "7197d78926b704c97c4893d7903308baf99f528d243ff0a44048be5240c7e2b6",
+    "runtime/game/addons/tome-save-size-probe/overload/engine/FearscapeScenario.lua": "5e0ae22f9371c40de2d89ca8717663e3cfc5bbd22e2b506b5008380cce1b8b56",
+    "runtime/game/addons/tome-save-size-probe/overload/engine/SaveCompactionCPU.lua": "94242c8b0dbac9acec047b4e5e8751a04c0eddaf95fcba3a9f8f8e0e45a0a55c",
+    "runtime/game/addons/tome-save-size-probe/overload/engine/SaveIsolatedProbe.lua": "990b700b053bc4265c55d942425baf44c8e6bd37da2b08327c41ac886c7fd8ec",
+    "save_literals.py": "8cf056f57b45e19f9b348507caed7fcb53852c78e0efd2d2f4fb198684da0c5c",
+    "test_block_reader.lua": "7f5e478c7494fcaf7412a16962362b58f14cac864832d86f71adb733909d17f7",
+    "test_encoder.lua": "b38b595a71c2ffe62144e9daeae19054b1395625f7ef60e6508ccc802ce69e1f"
+  },
+  "contains_character_saves": false,
+  "contains_game_logs": false,
+  "baseline_addon_sha256": "ef287cf882b9fcea6719440ec901cfa2768651de13148265e0e9b19459d64f6c",
+  "external_inputs": {
+    "runtime/game/addons/tome-faster.teaa": "ef287cf882b9fcea6719440ec901cfa2768651de13148265e0e9b19459d64f6c"
+  }
+}

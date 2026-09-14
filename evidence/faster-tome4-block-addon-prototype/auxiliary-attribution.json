@@ -1,0 +1,335 @@
+{
+  "scope": "Separate instrumented runs; not formal performance evidence",
+  "sessions": [
+    {
+      "session": "block256--baseline--latency1",
+      "encode_cpu_ms": 0,
+      "native_tozip_cpu_ms": 43.00524300000181,
+      "full_main_cpu_ms": 408.988013,
+      "resume": {
+        "max_wall_ms": 62.213955998421,
+        "count": 17984,
+        "max_thread_cpu_ms": 56.041736
+      },
+      "top_encode": []
+    },
+    {
+      "session": "block256--baseline--latency2",
+      "encode_cpu_ms": 0,
+      "native_tozip_cpu_ms": 43.052626999992576,
+      "full_main_cpu_ms": 412.95039,
+      "resume": {
+        "max_wall_ms": 60.678623020649,
+        "count": 17761,
+        "max_thread_cpu_ms": 54.642179
+      },
+      "top_encode": []
+    },
+    {
+      "session": "block256--baseline--latency3",
+      "encode_cpu_ms": 0,
+      "native_tozip_cpu_ms": 43.44501799999987,
+      "full_main_cpu_ms": 427.74772,
+      "resume": {
+        "max_wall_ms": 61.813644945621,
+        "count": 18149,
+        "max_thread_cpu_ms": 55.408023
+      },
+      "top_encode": []
+    },
+    {
+      "session": "block256--candidate--latency1",
+      "encode_cpu_ms": 104.79474500000333,
+      "native_tozip_cpu_ms": 6.068107999999957,
+      "full_main_cpu_ms": 454.377328,
+      "resume": {
+        "max_wall_ms": 62.647131025791,
+        "count": 9288,
+        "max_thread_cpu_ms": 56.318694
+      },
+      "top_encode": [
+        [
+          "mod.class.Object",
+          {
+            "calls": 1526,
+            "wall_ms": 45.294621765614,
+            "max_thread_cpu_ms": 0.4063570000003,
+            "thread_cpu_ms": 35.912585,
+            "bytes": 2375013
+          }
+        ],
+        [
+          "engine.Map",
+          {
+            "calls": 10,
+            "wall_ms": 30.425407111645,
+            "max_thread_cpu_ms": 4.4687610000001,
+            "thread_cpu_ms": 30.281134,
+            "bytes": 1408729
+          }
+        ],
+        [
+          "mod.class.NPC",
+          {
+            "calls": 68,
+            "wall_ms": 11.473255932331,
+            "max_thread_cpu_ms": 0.70896099999982,
+            "thread_cpu_ms": 10.961478,
+            "bytes": 591936
+          }
+        ]
+      ]
+    },
+    {
+      "session": "block256--candidate--latency2",
+      "encode_cpu_ms": 134.68300699999935,
+      "native_tozip_cpu_ms": 6.271707999999307,
+      "full_main_cpu_ms": 526.715946,
+      "resume": {
+        "max_wall_ms": 61.657261013985,
+        "count": 9028,
+        "max_thread_cpu_ms": 55.649838
+      },
+      "top_encode": [
+        [
+          "mod.class.Object",
+          {
+            "calls": 1526,
+            "wall_ms": 46.635116934776,
+            "max_thread_cpu_ms": 0.72654199999988,
+            "thread_cpu_ms": 40.958127000004,
+            "bytes": 2375013
+          }
+        ],
+        [
+          "engine.Map",
+          {
+            "calls": 10,
+            "wall_ms": 33.444775879383,
+            "max_thread_cpu_ms": 4.5254439999999,
+            "thread_cpu_ms": 33.280193,
+            "bytes": 1408729
+          }
+        ],
+        [
+          "engine.Particles",
+          {
+            "calls": 210,
+            "wall_ms": 26.01114231348,
+            "max_thread_cpu_ms": 1.9481209999999,
+            "thread_cpu_ms": 24.746248999997,
+            "bytes": 345916
+          }
+        ]
+      ]
+    },
+    {
+      "session": "block256--candidate--latency3",
+      "encode_cpu_ms": 137.29971599999428,
+      "native_tozip_cpu_ms": 6.286591000000056,
+      "full_main_cpu_ms": 609.836448,
+      "resume": {
+        "max_wall_ms": 123.08724498749,
+        "count": 9247,
+        "max_thread_cpu_ms": 116.427539
+      },
+      "top_encode": [
+        [
+          "mod.class.Object",
+          {
+            "calls": 1526,
+            "wall_ms": 58.308782994747,
+            "max_thread_cpu_ms": 1.26487,
+            "thread_cpu_ms": 50.638652999994,
+            "bytes": 2375013
+          }
+        ],
+        [
+          "engine.Map",
+          {
+            "calls": 10,
+            "wall_ms": 34.51224386692,
+            "max_thread_cpu_ms": 4.5861829999999,
+            "thread_cpu_ms": 34.331923000001,
+            "bytes": 1408729
+          }
+        ],
+        [
+          "engine.Particles",
+          {
+            "calls": 210,
+            "wall_ms": 14.348848342896,
+            "max_thread_cpu_ms": 3.0736890000003,
+            "thread_cpu_ms": 12.733592999998,
+            "bytes": 345916
+          }
+        ]
+      ]
+    },
+    {
+      "session": "block64--baseline--latency1",
+      "encode_cpu_ms": 0,
+      "native_tozip_cpu_ms": 43.67294700001001,
+      "full_main_cpu_ms": 429.401973,
+      "resume": {
+        "max_wall_ms": 63.695059001446,
+        "count": 17844,
+        "max_thread_cpu_ms": 53.886954
+      },
+      "top_encode": []
+    },
+    {
+      "session": "block64--baseline--latency2",
+      "encode_cpu_ms": 0,
+      "native_tozip_cpu_ms": 43.68557699998703,
+      "full_main_cpu_ms": 431.881005,
+      "resume": {
+        "max_wall_ms": 63.325197994709,
+        "count": 18259,
+        "max_thread_cpu_ms": 57.118341
+      },
+      "top_encode": []
+    },
+    {
+      "session": "block64--baseline--latency3",
+      "encode_cpu_ms": 0,
+      "native_tozip_cpu_ms": 42.606639999997505,
+      "full_main_cpu_ms": 403.829959,
+      "resume": {
+        "max_wall_ms": 62.727391958237,
+        "count": 17719,
+        "max_thread_cpu_ms": 56.61804
+      },
+      "top_encode": []
+    },
+    {
+      "session": "block64--candidate--latency1",
+      "encode_cpu_ms": 105.59133000001077,
+      "native_tozip_cpu_ms": 6.588056000001909,
+      "full_main_cpu_ms": 496.66797,
+      "resume": {
+        "max_wall_ms": 62.04882401228,
+        "count": 8765,
+        "max_thread_cpu_ms": 55.906878
+      },
+      "top_encode": [
+        [
+          "mod.class.Object",
+          {
+            "calls": 1526,
+            "wall_ms": 47.595641493797,
+            "max_thread_cpu_ms": 0.48908799999981,
+            "thread_cpu_ms": 36.527364000012,
+            "bytes": 2375013
+          }
+        ],
+        [
+          "engine.Map",
+          {
+            "calls": 10,
+            "wall_ms": 30.575977921486,
+            "max_thread_cpu_ms": 4.3452500000003,
+            "thread_cpu_ms": 30.418325,
+            "bytes": 1408729
+          }
+        ],
+        [
+          "mod.class.NPC",
+          {
+            "calls": 68,
+            "wall_ms": 11.452961862087,
+            "max_thread_cpu_ms": 0.71824199999992,
+            "thread_cpu_ms": 10.372718000001,
+            "bytes": 591936
+          }
+        ]
+      ]
+    },
+    {
+      "session": "block64--candidate--latency2",
+      "encode_cpu_ms": 104.71130399997635,
+      "native_tozip_cpu_ms": 6.638863000001507,
+      "full_main_cpu_ms": 478.350315,
+      "resume": {
+        "max_wall_ms": 63.775551974773,
+        "count": 8880,
+        "max_thread_cpu_ms": 57.597435
+      },
+      "top_encode": [
+        [
+          "mod.class.Object",
+          {
+            "calls": 1526,
+            "wall_ms": 48.169815957546,
+            "max_thread_cpu_ms": 0.39831699999968,
+            "thread_cpu_ms": 36.219834999988,
+            "bytes": 2375013
+          }
+        ],
+        [
+          "engine.Map",
+          {
+            "calls": 10,
+            "wall_ms": 29.249407112598,
+            "max_thread_cpu_ms": 4.4167010000001,
+            "thread_cpu_ms": 29.112654,
+            "bytes": 1408729
+          }
+        ],
+        [
+          "mod.class.NPC",
+          {
+            "calls": 68,
+            "wall_ms": 11.138685643673,
+            "max_thread_cpu_ms": 0.72451199999978,
+            "thread_cpu_ms": 10.277365999999,
+            "bytes": 591936
+          }
+        ]
+      ]
+    },
+    {
+      "session": "block64--candidate--latency3",
+      "encode_cpu_ms": 226.18589699999765,
+      "native_tozip_cpu_ms": 6.821071000001709,
+      "full_main_cpu_ms": 668.090183,
+      "resume": {
+        "max_wall_ms": 63.113835990429,
+        "count": 9251,
+        "max_thread_cpu_ms": 56.563992
+      },
+      "top_encode": [
+        [
+          "mod.class.Object",
+          {
+            "calls": 1526,
+            "wall_ms": 71.916814744473,
+            "max_thread_cpu_ms": 1.6641969999996,
+            "thread_cpu_ms": 64.934395999994,
+            "bytes": 2375013
+          }
+        ],
+        [
+          "engine.Map",
+          {
+            "calls": 10,
+            "wall_ms": 52.112825930119,
+            "max_thread_cpu_ms": 15.996364,
+            "thread_cpu_ms": 51.901217,
+            "bytes": 1408729
+          }
+        ],
+        [
+          "engine.Particles",
+          {
+            "calls": 210,
+            "wall_ms": 41.75508159399,
+            "max_thread_cpu_ms": 1.6634260000001,
+            "thread_cpu_ms": 40.393644000005,
+            "bytes": 345916
+          }
+        ]
+      ]
+    }
+  ]
+}

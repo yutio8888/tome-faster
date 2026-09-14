@@ -18,6 +18,10 @@ workloads passed their individual gates. These are scoped measurements, not a
 new CPU benchmark of the combined 0.2.12 defaults. Implementation details and
 earlier compatibility checks remain in the [0.2.11 report](docs/save-compaction.md).
 
+Block compression remains an archived experiment and is excluded from the
+production addon. Both tested block sizes exceeded the save CPU limit; see the
+[experiment results and decision](docs/save-block-addon.md).
+
 Version 0.2.10 uses short decimal identifiers for internal save objects, keeping
 the `main` entry, original reader, native serializer and compression level.
 Existing region archives acquire the smaller names when naturally saved again;

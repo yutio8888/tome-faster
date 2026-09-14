@@ -1,0 +1,116 @@
+{
+  "scope": "Separate correctness runs, not formal performance samples",
+  "encoder_differential": {
+    "objects": 1005,
+    "assertions_per_mode": 250731,
+    "modes": [
+      "JIT",
+      "JIT disabled"
+    ]
+  },
+  "real_encoder": [
+    {
+      "case": "block64",
+      "objects": 2864,
+      "body_bytes": 5887169,
+      "blocks": 84,
+      "all_programs_byte_identical_to_native": true
+    },
+    {
+      "case": "block256",
+      "objects": 2864,
+      "body_bytes": 5887169,
+      "blocks": 25,
+      "all_programs_byte_identical_to_native": true
+    }
+  ],
+  "real_readback": [
+    {
+      "case": "block64",
+      "selected_state_identical": true,
+      "class_load_trace_identical": true,
+      "class_load_events": 5730,
+      "deferred_callback_order_identical": true,
+      "deferred_callbacks": 231,
+      "block_read_stats": [
+        {
+          "max_read_bytes": 200070,
+          "cache_hits": 2776,
+          "block_reads": 88,
+          "cache_peak_bytes": 4192341,
+          "objects": 2864
+        }
+      ]
+    },
+    {
+      "case": "block256",
+      "selected_state_identical": true,
+      "class_load_trace_identical": true,
+      "class_load_events": 5730,
+      "deferred_callback_order_identical": true,
+      "deferred_callbacks": 231,
+      "block_read_stats": [
+        {
+          "max_read_bytes": 308077,
+          "cache_hits": 2836,
+          "block_reads": 28,
+          "cache_peak_bytes": 4192418,
+          "objects": 2864
+        }
+      ]
+    }
+  ],
+  "legacy_recovery": [
+    {
+      "session": "rewrite-block64--candidate--preflight",
+      "passed": true,
+      "original_layout": true,
+      "prototype_absent": false
+    },
+    {
+      "session": "off-rewrite-block64--candidate--preflight",
+      "passed": true,
+      "original_layout": true,
+      "prototype_absent": true
+    },
+    {
+      "session": "rewrite-block256--candidate--preflight",
+      "passed": true,
+      "original_layout": true,
+      "prototype_absent": false
+    },
+    {
+      "session": "off-rewrite-block256--candidate--preflight",
+      "passed": true,
+      "original_layout": true,
+      "prototype_absent": true
+    }
+  ],
+  "missing_reader_real": {
+    "expected_failure": true,
+    "load_succeeded": false,
+    "character_files_preserved": 25,
+    "all_save_file_hashes_unchanged": true,
+    "deleted_files": 0,
+    "failure_stage": "class.load rejected missing __CLASSNAME; md5Check then raised at Game:getPlayer before the Module nil-load deletion branch",
+    "log_sha256": "6b1a90ab85f81e578ac181e3718a18b3a5ead71b2487702d0b3b6f1001d196fd",
+    "process_exit_code": -9,
+    "timed_out": true
+  },
+  "fault_fixture": {
+    "assertions_per_mode": 18,
+    "modes": [
+      "JIT",
+      "JIT disabled"
+    ],
+    "valid_cases": 2,
+    "malformed_cases_rejected_before_delete": 6,
+    "conditional_unsafe_cases": [
+      "reader absent",
+      "format marker absent"
+    ],
+    "conditional_unsafe_delete_calls_per_case": 4,
+    "scope": "Actual class/Savefile methods and Module load-branch excerpt; filesystem/UI mocked; engine-default md5_types={} (unlike live ToME checksum settings)"
+  },
+  "protected_files_unchanged": 37
+}
